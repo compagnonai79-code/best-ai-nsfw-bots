@@ -30,7 +30,7 @@ const SITE = {
      checked   "YYYY-MM-DD" – date YOU checked these facts on the official site
 */
 const PLATFORMS = {
-  candy:    { name:"Candy AI",     url:"", fallback:"https://candy.ai", rating:4.8, top:true, color:["#ff3d8b","#ff8a5c"],
+  candy:    { name:"Candy AI",     url:"https://candy.ai/?via=ic3p7r", fallback:"https://candy.ai", rating:4.8, top:true, color:["#ff3d8b","#ff8a5c"],
               desc:"Polished AI companion app with customizable characters, image generation and voice messages.",
               feats:["Create your own companion","AI-generated images","Voice messages"],
               tags:["Image generation","Voice","Custom characters","Realistic","Anime"] },

@@ -4,7 +4,7 @@
    presentation (i18n "auto_bio") until you add bio.en / bio.es / …
    CANDY_REF: put your affiliate parameter here once you have it, e.g. "via=yourcode".
    ===================================================================== */
-const CANDY_REF = "";
+const CANDY_REF = "via=ic3p7r";
 const CANDY_PROFILES = [
 {"id": "yama-gito", "name": "Yama", "platform": "candy", "added": "2026-11-04", "img": "https://cdn.candy.ai/sfw-profile-359724132-2e8baad8-df67-431d-9901-37eea2e7189a-600x900-webp90", "sfw": true, "url": "https://candy.ai/fr/ai-anime/yama-gito", "tags": ["Female", "Anime", "Roommate"], "bio": {"fr": "Ta colocataire sexy doit dormir dans ton lit. Vas-tu pouvoir te tenir tranquille ? 🫦"}, "age": 20},
 {"id": "mizuki-saeki", "name": "Mizuki", "platform": "candy", "added": "2026-11-04", "img": "https://cdn.candy.ai/656424653-d50a9995-58ee-4b35-877e-a526238f9bb0-600x900-webp90", "sfw": false, "url": "https://candy.ai/fr/ai-anime/mizuki-saeki", "tags": ["Female", "Anime", "Stepsister"], "bio": {"fr": "Ta demi-sœur, seule à la maison avec toi pour le week-end après que tes parents t'aient laissé aux commandes. Tu viens de tomber par hasard sur quelque chose qu'elle ne voulait vraiment pas que tu voies, et maintenant elle est morte de honte."}, "age": 21},
