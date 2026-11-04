@@ -1,0 +1,115 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Top AI NSFW Chatbot Platforms – Ranked & Compared</title>
+<meta name="description" content="Ranking of the best AI companion and NSFW chatbot platforms. Compare features, filter by tags and find the right app. 18+ only.">
+<meta name="rating" content="adult">
+<link rel="canonical" href="https://best-ai-nsfw-bots.com/platforms.html">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div id="gate" role="dialog" aria-modal="true" aria-labelledby="gate-title">
+  <div class="box">
+    <h2 id="gate-title">18+ only</h2>
+    <p>This website lists AI platforms with adult content. By entering, you confirm you are at least 18 years old (or the age of majority in your country) and agree to view such content.</p>
+    <div class="row">
+      <button class="btn btn-main" id="enter">I'm 18 or older – Enter</button>
+      <a class="btn btn-ghost" href="https://www.google.com">Leave</a>
+    </div>
+  </div>
+</div>
+
+<header>
+  <div class="wrap">
+    <a class="logo" href="index.html">best-ai-<span class="grad">nsfw-bots</span></a>
+    <nav>
+      <a href="index.html" class="hide-m">AI Girlfriends</a>
+      <a href="platforms.html" class="cur hide-m">Top Platforms</a>
+      <a class="new-pill" href="index.html#new" title="Show latest additions"><span class="dot"></span>New <b id="new-count">0</b></a>
+    </nav>
+  </div>
+</header>
+
+<main class="wrap">
+  <section class="hero">
+    <h1>Top <span class="grad">AI companion</span> platforms</h1>
+    <p>We test and rank the best AI chat and companion apps for adults. Compare features at a glance and pick the one that fits you.</p>
+  </section>
+
+  <h2 class="section-title">🔥 Top picks this month</h2>
+  <div class="picks" id="picks"></div>
+
+  <h2 class="section-title">All platforms</h2>
+  <div class="tags" id="tags" style="justify-content:flex-start"></div>
+  <div class="grid" id="grid"></div>
+
+  <section class="info">
+    <h2>How to choose an AI companion app</h2>
+    <ul>
+      <li><strong>Character variety:</strong> some platforms focus on a few polished characters, others host thousands made by the community.</li>
+      <li><strong>Media features:</strong> check whether you want image generation, voice messages or calls.</li>
+      <li><strong>Memory:</strong> better long-term memory means more consistent conversations.</li>
+      <li><strong>Pricing:</strong> most apps are freemium — try the free tier before subscribing.</li>
+      <li><strong>Privacy:</strong> read the privacy policy and avoid sharing personal details in chats.</li>
+    </ul>
+  </section>
+  <section class="info">
+    <h2>FAQ</h2>
+    <details><summary>Are these platforms free?</summary><p>Most offer a free tier or trial with limits. Images, voice or unlimited messages usually require a subscription or credits.</p></details>
+    <details><summary>How do you rank the platforms?</summary><p>Conversation quality, features, ease of use, pricing transparency and privacy. Rankings are updated regularly.</p></details>
+    <details><summary>Do you earn money from these links?</summary><p>Yes. Some links are affiliate links: if you sign up or subscribe, we may earn a commission at no extra cost to you.</p></details>
+  </section>
+  <section class="info" id="disclosure">
+    <h2>Affiliate disclosure</h2>
+    <p>best-ai-nsfw-bots.com is an independent directory. Some links are affiliate links, which means we may receive a commission if you make a purchase through them, at no extra cost to you. Ratings reflect our own opinion. Prices and features may change – always check the official website.</p>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <span>© <span id="yr"></span> best-ai-nsfw-bots.com · 18+ only · Contains affiliate links</span>
+    <span><a href="index.html">AI Girlfriends</a> · <a href="#disclosure">Affiliate disclosure</a> · <a href="mailto:contact@best-ai-nsfw-bots.com">Contact</a></span>
+  </div>
+</footer>
+
+<script src="data.js"></script>
+<script src="common.js"></script>
+<script>
+const LIST = Object.values(PLATFORMS);
+const ALL_TAGS = [...new Set(LIST.flatMap(p => p.tags))].sort();
+const active = new Set();
+const stars = r => "★".repeat(Math.round(r)) + "☆".repeat(5 - Math.round(r));
+const mono = p => `<div class="mono" style="background:${grad(p.color)}">${esc(p.name[0])}</div>`;
+
+$("#picks").innerHTML = LIST.filter(p => p.top).sort((a,b) => b.rating - a.rating).map((p,i) => `
+  <div class="pick"><span class="rank">#${i+1}</span>${mono(p)}
+    <h3>${esc(p.name)}</h3><div class="stars">${stars(p.rating)}<b>${p.rating}</b></div>
+    <p>${esc(p.desc)}</p>${ctaLink(p, "Try " + esc(p.name) + " →")}</div>`).join("");
+
+function renderTags(){
+  $("#tags").innerHTML = ALL_TAGS.map(t => `<span class="tag ${active.has(t)?"on":""}" data-t="${esc(t)}">${esc(t)}</span>`).join("");
+}
+function renderGrid(){
+  const list = LIST.filter(p => [...active].every(t => p.tags.includes(t))).sort((a,b) => b.rating - a.rating);
+  $("#grid").innerHTML = list.length ? list.map(p => `
+    <article class="card">
+      <div class="card-top">${mono(p)}<div><h3>${esc(p.name)}</h3><div class="stars">${stars(p.rating)}<b>${p.rating}</b></div></div></div>
+      <p>${esc(p.desc)}</p>
+      <ul class="feat">${p.feats.map(f => `<li>${esc(f)}</li>`).join("")}</ul>
+      <div class="mini">${p.tags.map(t => `<span>${esc(t)}</span>`).join("")}</div>
+      ${ctaLink(p, "Visit site →")}
+    </article>`).join("") : `<div class="empty">No platform matches these filters.</div>`;
+}
+$("#tags").addEventListener("click", e => {
+  const t = e.target.dataset.t; if (!t) return;
+  active.has(t) ? active.delete(t) : active.add(t); renderTags(); renderGrid();
+});
+renderTags(); renderGrid();
+</script>
+</body>
+</html>
