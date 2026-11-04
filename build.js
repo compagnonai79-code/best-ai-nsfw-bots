@@ -6,11 +6,11 @@
 const fs = require("fs"), path = require("path"), vm = require("vm");
 const SRC = path.join(__dirname, "src"), OUT = path.join(__dirname, "public");
 const imgExists = f => !!f && fs.existsSync(path.join(__dirname, f));
-const NOIMG = "\n;/* images not uploaded yet → placeholder */\nfor (const p of PROFILES) if (p.img && !IMG_OK.includes(p.img)) p.img = \"\";\nif (!IMG_OK.includes(PROMO.img)) PROMO.img = \"\";\n";
+const NOIMG = "\n;/* images not uploaded yet → placeholder */\nfor (const p of PROFILES) if (p.img && p.img.startsWith(\"images/\") && !IMG_OK.includes(p.img)) p.img = \"\";\nif (!IMG_OK.includes(PROMO.img)) PROMO.img = \"\";\n";
 const readRaw = f => fs.readFileSync(path.join(SRC, f), "utf8");
 let IMG_OK = [];
 const read = f => f === "data.js" ? readRaw(f) + `\n;const IMG_OK = ${JSON.stringify(IMG_OK)};` + NOIMG : readRaw(f);
-const CLIENT = ["data.js", "i18n.js", "i18n-pages.js", "i18n-tags.js", "app.js"];
+const CLIENT = ["data.js", "data-candy.js", "i18n.js", "i18n-pages.js", "i18n-tags.js", "app.js"];
 
 /* Load the client scripts in a sandbox for one language */
 { const src = readRaw("data.js"); IMG_OK = [...new Set([...src.matchAll(/"(images\/[^"]+)"/g)].map(m => m[1]))].filter(imgExists); }
@@ -215,8 +215,8 @@ for (const t of base.ALL_TAGS) pages.push({ file: "tag/" + base.slug(t) + ".html
 }});
 
 /* one page per profile */
-for (const g0 of base.PROFILES) pages.push({ file: "girl/" + base.slug(g0.name) + ".html", build: (X) => {
-  const g = X.PROFILES.find(p => p.name === g0.name);
+for (const g0 of base.PROFILES) pages.push({ file: "girl/" + (g0.id || base.slug(g0.name)) + ".html", build: (X) => {
+  const g = X.PROFILES.find(p => (p.id || p.name) === (g0.id || g0.name));
   const u = X.ui, e = X.esc, P = X.PLATFORMS[g.platform];
   const similar = X.PROFILES.filter(p => p !== g).map(p => [p, p.tags.filter(t => g.tags.includes(t)).length])
     .sort((a,b) => b[1] - a[1]).slice(0, 4).map(x => x[0]);
@@ -297,7 +297,7 @@ pages.push({ file: "sitemap.html", build: (X) => {
     <section><h2>${e(u("sm_pages"))}</h2>${a("index.html", u("nav_girls"))}${a("platforms.html", u("nav_platforms"))}${a("tags.html", u("nav_tags"))}
       ${a("how-we-rate.html", u("nav_how"))}${a("data.html", u("nav_data"))}${a("contact.html", u("nav_contact"))}</section>
     <section><h2>${e(u("sm_tags"))}</h2>${tags.map(t => a("tag/" + X.slug(t) + ".html", X.tr(t))).join("")}</section>
-    <section><h2>${e(u("sm_profiles"))}</h2>${girls.map(g => a("girl/" + X.slug(g.name) + ".html", g.name)).join("")}</section>
+    <section><h2>${e(u("sm_profiles"))}</h2>${girls.map(g => a("girl/" + (g.id || X.slug(g.name)) + ".html", g.name)).join("")}</section>
     <section><h2>${e(u("sm_legal"))}</h2>${LEGAL_PAGES.map(([f, k]) => a("legal/" + f + ".html", u(k))).join("")}</section>
   </div>` };
 }});

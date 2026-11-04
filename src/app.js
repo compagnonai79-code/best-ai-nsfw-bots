@@ -15,10 +15,13 @@ const tagCount = t => PROFILES.filter(p => p.tags.includes(t)).length;
 const R = () => (typeof ROOT !== "undefined" ? ROOT : "");
 const LR = () => (typeof LROOT !== "undefined" ? LROOT : "");
 const tagUrl = t => LR() + "tag/" + slug(t) + ".html";
-const bioOf = p => typeof p.bio === "string" ? tr(p.bio) : (p.bio[LANG] || p.bio.en);
+const autoBio = p => ui("auto_bio", { name: p.name, age: p.age ? ", " + p.age : "", p: pf(p.platform).name,
+  tags: p.tags.filter(t => t !== "Female" && t !== "Realistic").slice(0, 3).map(tr).join(", ") || tr("Realistic") });
+const bioOf = p => typeof p.bio === "string" ? tr(p.bio) : ((p.bio && (p.bio[LANG] || p.bio.en)) || autoBio(p));
 const linkFor = p => ({ url: p.link || pf(p.platform).url, fallback: pf(p.platform).fallback });   // character deep link, else platform link
 const withAge = p => esc(p.name) + (p.age ? ", " + p.age : "");
-const girlUrl = p => LR() + "girl/" + slug(p.name) + ".html";
+const girlId = p => p.id || slug(p.name);
+const girlUrl = p => LR() + "girl/" + girlId(p) + ".html";
 
 function ctaLink(p, label, cls = "btn btn-main") {
   const href = linkOf(p);
@@ -28,7 +31,7 @@ function ctaLink(p, label, cls = "btn btn-main") {
 }
 function visual(img, color, letter, alt = "") {
   return `<div class="ph" style="background:${grad(color)}">${esc(letter)}</div>` +
-    (img ? `<img src="${esc(R() + img)}" alt="${esc(alt)}" loading="lazy" onerror="this.remove()">` : "");
+    (img ? `<img src="${esc(/^https?:/.test(img) ? img : R() + img)}" alt="${esc(alt)}" loading="lazy" onerror="this.remove()">` : "");
 }
 
 /* ---------- cards ---------- */

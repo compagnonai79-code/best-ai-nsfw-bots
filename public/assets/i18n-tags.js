@@ -172,3 +172,13 @@ for (const l in TAG_T) for (const k in TAG_T[l]) if (!I18N[l].t[k]) I18N[l].t[k]
 
 const BTN_M = { en:"Chat with him", fr:"Parler avec lui", es:"Habla con él", de:"Mit ihm chatten", pt:"Converse com ele", hi:"उससे बात करें" };
 for (const l in BTN_M) I18N[l].ui.card_btn_m = BTN_M[l];
+
+const AUTO_BIO = {
+  en:"{name}{age} is an AI companion on {p} — {tags}. Open the chat and she answers in seconds.",
+  fr:"{name}{age} est une compagne IA sur {p} — {tags}. Ouvre le chat, elle te répond en quelques secondes.",
+  es:"{name}{age} es una compañera IA en {p} — {tags}. Abre el chat y te responde en segundos.",
+  de:"{name}{age} ist eine KI-Begleiterin auf {p} — {tags}. Öffne den Chat, sie antwortet in Sekunden.",
+  pt:"{name}{age} é uma companheira IA no {p} — {tags}. Abra o chat e ela responde em segundos.",
+  hi:"{name}{age} {p} पर एक AI साथी है — {tags}। चैट खोलें, वह कुछ ही सेकंड में जवाब देगी।"
+};
+for (const l in AUTO_BIO) I18N[l].ui.auto_bio = AUTO_BIO[l];

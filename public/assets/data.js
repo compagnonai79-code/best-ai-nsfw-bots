@@ -225,5 +225,5 @@ const PROFILES = [
 
 ;const IMG_OK = [];
 ;/* images not uploaded yet → placeholder */
-for (const p of PROFILES) if (p.img && !IMG_OK.includes(p.img)) p.img = "";
+for (const p of PROFILES) if (p.img && p.img.startsWith("images/") && !IMG_OK.includes(p.img)) p.img = "";
 if (!IMG_OK.includes(PROMO.img)) PROMO.img = "";
