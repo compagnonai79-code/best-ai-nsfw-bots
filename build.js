@@ -225,7 +225,7 @@ for (const g0 of base.PROFILES) pages.push({ file: "model/" + (g0.id || base.slu
   const gen = g.tags.includes("Male") && !g.tags.includes("Female") ? "_m" : "";
   const score = p => p.tags.filter(t => g.tags.includes(t)).length * 2 + (p.platform === g.platform ? 1 : 0)
     + (["Anime","Realistic","Male","Female"].every(t => p.tags.includes(t) === g.tags.includes(t)) ? 3 : 0);
-  const similar = X.PROFILES.filter(p => p !== g).map(p => [p, score(p)]).sort((a,b) => b[1] - a[1]).slice(0, 8).map(x => x[0]);
+  const similar = X.PROFILES.filter(p => p !== g).map(p => [p, score(p)]).sort((a,b) => b[1] - a[1]).slice(0, 4).map(x => x[0]);
   const yn = val => val === true ? u("yes") : val === false ? u("no") : u("pending");
   const cta = (cls) => X.ctaLink(X.linkFor(g), "💬 " + e(u("chat_with", {name: g.name})) + " →", cls);
   const rows = [[u("m_platform"), `<a href="../platforms.html">${e(P.name)}</a> · ★ ${P.rating}`],
@@ -263,10 +263,10 @@ for (const g0 of base.PROFILES) pages.push({ file: "model/" + (g0.id || base.slu
     <p class="hero-links" style="text-align:left"><a href="../platforms.html">${e(u("m_see_pl"))}</a> · <a href="../data.html">${e(u("nav_data"))} →</a> · <a href="../how-we-rate.html">${e(u("nav_how"))} →</a></p></section>
 
   <section class="info"><h2>${e(u("m_faq_t", v))}</h2>
-    ${faq.map(([q, a]) => `<details><summary>${e(q)}</summary><p>${e(a)}</p></details>`).join("")}</section>
+    <div class="mfaq">${faq.map(([q, a]) => `<div class="mq"><h3>${e(q)}</h3><p>${e(a)}</p></div>`).join("")}</div></section>
 
   <h2 class="section-title">${e(u("similar"))}</h2>
-  <div class="pgrid" id="grid">${similar.map(X.profileCard).join("")}</div>
+  <div class="pgrid sim4" id="grid">${similar.map(X.profileCard).join("")}</div>
   <p class="all-tags"><a href="../tag/${X.slug(main)}.html">${e(u("m_more_tag", {tag: X.tr(main)}))}</a></p>
 
   <div class="mbar"><span class="mb-img">${X.visual(g.img, P.color, g.name[0], g.name)}</span>

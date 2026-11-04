@@ -323,3 +323,14 @@ ol.steps li{color:#cfc9e6;margin-bottom:10px;font-size:15px}
 }
 
 .info a.btn-main,.legal a.btn-main{color:#fff}
+
+/* Model page: FAQ shown open, 4 bigger similar models */
+.mfaq{display:grid;gap:4px}
+.mq{border-top:1px solid var(--line);padding:14px 0}
+.mq:first-child{border-top:0;padding-top:4px}
+.mq h3{font-size:16px;margin-bottom:6px}
+.mq p{margin:0}
+.pgrid.sim4{grid-template-columns:repeat(4,1fr);gap:18px}
+.pgrid.sim4 .pcard h3{font-size:21px}
+.pgrid.sim4 .pcard .pchat{font-size:14.5px;padding:11px 12px}
+@media(max-width:900px){.pgrid.sim4{grid-template-columns:repeat(2,1fr);gap:10px}}
