@@ -182,3 +182,13 @@ const AUTO_BIO = {
   hi:"{name}{age} {p} पर एक AI साथी है — {tags}। चैट खोलें, वह कुछ ही सेकंड में जवाब देगी।"
 };
 for (const l in AUTO_BIO) I18N[l].ui.auto_bio = AUTO_BIO[l];
+
+const FILTER_UI = {
+  en:{ grp_age:"Age", grp_app:"App", f_more:"More filters +", f_less:"Fewer filters −" },
+  fr:{ grp_age:"Âge", grp_app:"Appli", f_more:"Plus de filtres +", f_less:"Moins de filtres −" },
+  es:{ grp_age:"Edad", grp_app:"App", f_more:"Más filtros +", f_less:"Menos filtros −" },
+  de:{ grp_age:"Alter", grp_app:"App", f_more:"Mehr Filter +", f_less:"Weniger Filter −" },
+  pt:{ grp_age:"Idade", grp_app:"App", f_more:"Mais filtros +", f_less:"Menos filtros −" },
+  hi:{ grp_age:"उम्र", grp_app:"ऐप", f_more:"और फ़िल्टर +", f_less:"कम फ़िल्टर −" }
+};
+for (const l in FILTER_UI) Object.assign(I18N[l].ui, FILTER_UI[l]);

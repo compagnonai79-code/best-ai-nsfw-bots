@@ -137,36 +137,72 @@ function wireProfileGrid() {
 
 /* Home page: search, tag filter, sort, "New" */
 function initHome() {
-  const active = new Set();
+  /* ---- dropdown filters: OR inside a group, AND between groups ---- */
+  const AGE_RANGES = [["18-21",18,21],["22-25",22,25],["26-30",26,30],["31-40",31,40],["41+",41,1e9]];
+  const MAIN = ["gender","style","age","origin","hair","body","app"];
+  const MORE = ["personality","vibe","role","relationship","fantasy","kink","features"];
+  const sel = {}; [...MAIN, ...MORE].forEach(g => sel[g] = new Set());
+  const groupOf = t => Object.keys(TAG_GROUPS).find(g => TAG_GROUPS[g].includes(t));
   const qp = new URLSearchParams(location.search).get("tag");
-  const pre = ALL_PROFILE_TAGS.find(t => slug(t) === qp); if (pre) active.add(pre);
-  let onlyNew = location.hash === "#new";
+  const pre = ALL_PROFILE_TAGS.find(t => slug(t) === qp); if (pre && sel[groupOf(pre)]) sel[groupOf(pre)].add(pre);
+  let onlyNew = location.hash === "#new", openG = null, showMore = false;
 
+  const inAge = (p, k) => { const r = AGE_RANGES.find(x => x[0] === k); return p.age && p.age >= r[1] && p.age <= r[2]; };
+  const matchGroup = (p, g) => !sel[g].size || [...sel[g]].some(v =>
+    g === "age" ? inAge(p, v) : g === "app" ? p.platform === v : p.tags.includes(v));
+  const options = g => {
+    if (g === "age") return AGE_RANGES.map(r => [r[0], r[0], PROFILES.filter(p => inAge(p, r[0])).length]);
+    if (g === "app") return Object.keys(PLATFORMS).map(k => [k, PLATFORMS[k].name, PROFILES.filter(p => p.platform === k).length]);
+    return TAG_GROUPS[g].map(t => [t, tr(t), tagCount(t)]).sort((a, b) => a[1].localeCompare(b[1], LANG));
+  };
+  const label = g => ui("grp_" + g);
+  const dropdown = g => {
+    const n = sel[g].size, opts = options(g).filter(o => o[2] > 0 || sel[g].has(o[0]));
+    if (!opts.length) return "";
+    return `<div class="fdrop${openG === g ? " open" : ""}${n ? " has" : ""}" data-g="${g}">
+      <button class="fbtn" type="button" aria-expanded="${openG === g}">${esc(label(g))}${n ? ` <b>${n}</b>` : ""} <span class="car">▾</span></button>
+      <div class="fpanel">${opts.map(o => `<label class="fopt"><input type="checkbox" data-v="${esc(o[0])}" ${sel[g].has(o[0]) ? "checked" : ""}>
+        <span>${esc(o[1])}</span><small>${o[2]}</small></label>`).join("")}</div></div>`;
+  };
   const renderTags = () => {
-    const sorted = [...ALL_PROFILE_TAGS].sort((a,b) => tr(a).localeCompare(tr(b), LANG));
-    $("#tags").innerHTML = sorted.map(t =>
-      `<span class="tag ${active.has(t)?"on":""}" data-t="${esc(t)}">${esc(tr(t))}<small>${tagCount(t)}</small></span>`).join("");
+    const chips = Object.entries(sel).flatMap(([g, set]) => [...set].map(v => [g, v,
+      g === "app" ? PLATFORMS[v].name : g === "age" ? ui("grp_age") + " " + v : tr(v)]));
+    $("#tags").innerHTML = `<div class="filters">${MAIN.map(dropdown).join("")}
+        <button class="fmore${showMore ? " on" : ""}" type="button" id="fmore">${esc(ui(showMore ? "f_less" : "f_more"))}</button></div>
+      ${showMore ? `<div class="filters more">${MORE.map(dropdown).join("")}</div>` : ""}
+      ${chips.length ? `<div class="fchips">${chips.map(([g, v, l]) => `<button class="fchip" data-g="${g}" data-v="${esc(v)}">${esc(l)} ×</button>`).join("")}
+        <button class="clear" id="freset">${esc(ui("clear"))}</button></div>` : ""}`;
   };
   const renderGrid = () => {
     const q = $("#q").value.trim().toLowerCase();
     let list = PROFILES.filter(p =>
-      (!onlyNew || isNew(p)) &&
-      [...active].every(t => p.tags.includes(t)) &&
+      (!onlyNew || isNew(p)) && Object.keys(sel).every(g => matchGroup(p, g)) &&
       (!q || [p.name, bioOf(p), pf(p.platform).name, ...p.tags, ...p.tags.map(tr)].join(" ").toLowerCase().includes(q)));
     list.sort($("#sort").value === "name" ? (a,b) => a.name.localeCompare(b.name) : (a,b) => b.added.localeCompare(a.added));
-    const filtered = onlyNew || active.size || q;
+    const filtered = onlyNew || Object.values(sel).some(s => s.size) || q;
     $("#count").innerHTML = `<b>${list.length}</b> ` + esc(ui(onlyNew ? "count_new" : "count", {n:""}).trim()) +
       (filtered ? `<button class="clear" id="clear">${esc(ui("clear"))}</button>` : "");
     $("#new-btn")?.classList.toggle("on", onlyNew);
     $("#grid").innerHTML = list.length ? list.map(profileCard).join("") : `<div class="empty">${esc(ui("empty"))}</div>`;
   };
+  const resetAll = () => { onlyNew = false; Object.values(sel).forEach(s => s.clear()); $("#q").value = ""; history.replaceState(null, "", location.pathname); renderTags(); renderGrid(); };
   $("#tags").addEventListener("click", e => {
-    const t = e.target.closest(".tag")?.dataset.t; if (!t) return;
-    active.has(t) ? active.delete(t) : active.add(t); renderTags(); renderGrid();
+    const btn = e.target.closest(".fbtn");
+    if (btn) { const g = btn.parentElement.dataset.g; openG = openG === g ? null : g; renderTags(); return; }
+    if (e.target.id === "fmore") { showMore = !showMore; openG = null; renderTags(); return; }
+    if (e.target.id === "freset") { resetAll(); return; }
+    const chip = e.target.closest(".fchip");
+    if (chip) { sel[chip.dataset.g].delete(chip.dataset.v); renderTags(); renderGrid(); }
   });
+  $("#tags").addEventListener("change", e => {
+    const cb = e.target.closest("input[type=checkbox]"); if (!cb) return;
+    const g = cb.closest(".fdrop").dataset.g; cb.checked ? sel[g].add(cb.dataset.v) : sel[g].delete(cb.dataset.v);
+    renderTags(); renderGrid();
+  });
+  document.addEventListener("click", e => { if (openG && !e.target.closest(".fdrop")) { openG = null; renderTags(); } });
   $("#new-btn")?.addEventListener("click", () => { onlyNew = !onlyNew; $("#sort").value = "new"; renderGrid(); window.scrollTo({top: $("#tags").offsetTop - 80, behavior: "smooth"}); });
   window.addEventListener("hashchange", () => { onlyNew = location.hash === "#new"; renderGrid(); });
-  $("#count").addEventListener("click", e => { if (e.target.id === "clear") { onlyNew = false; active.clear(); $("#q").value = ""; history.replaceState(null, "", location.pathname); renderTags(); renderGrid(); } });
+  $("#count").addEventListener("click", e => { if (e.target.id === "clear") resetAll(); });
   $("#q").addEventListener("input", renderGrid);
   $("#sort").addEventListener("change", renderGrid);
   renderTags(); renderGrid();
