@@ -214,29 +214,64 @@ for (const t of base.ALL_TAGS) pages.push({ file: "tag/" + base.slug(t) + ".html
   <p class="all-tags"><a href="../tags.html">${e(u("all_tags_link"))}</a></p>` };
 }});
 
-/* one page per profile */
-for (const g0 of base.PROFILES) pages.push({ file: "girl/" + (g0.id || base.slug(g0.name)) + ".html", build: (X) => {
+/* one page per model: /model/<id> */
+const GLANCE = ["gender","style","origin","hair","body","personality","role","relationship","fantasy"];
+for (const g0 of base.PROFILES) pages.push({ file: "model/" + (g0.id || base.slug(g0.name)) + ".html", build: (X) => {
   const g = X.PROFILES.find(p => (p.id || p.name) === (g0.id || g0.name));
-  const u = X.ui, e = X.esc, P = X.PLATFORMS[g.platform];
-  const similar = X.PROFILES.filter(p => p !== g).map(p => [p, p.tags.filter(t => g.tags.includes(t)).length])
-    .sort((a,b) => b[1] - a[1]).slice(0, 4).map(x => x[0]);
-  return { page:"girl", nav:"home", modal:true, title:u("girl_meta_t", {name:g.name, age:g.age || "", p:P.name}).replace(/, –/, " –").replace(/ ,/, ""),
-    desc:u("girl_meta_d", {name:g.name, age:g.age || "18+", p:P.name, bio:X.bioOf(g)}), body: `
-  <p class="crumb"><a href="../index.html">${e(u("back_all"))}</a></p>
+  const u = X.ui, e = X.esc, P = X.PLATFORMS[g.platform], D = X.PLATFORM_DATA[g.platform] || {};
+  const v = { name: g.name, p: P.name };
+  const groupOf = t => Object.keys(X.TAG_GROUPS).find(k => X.TAG_GROUPS[k].includes(t));
+  const main = g.tags.find(t => !["Female","Male","Realistic"].includes(t)) || g.tags[0];
+  const gen = g.tags.includes("Male") && !g.tags.includes("Female") ? "_m" : "";
+  const score = p => p.tags.filter(t => g.tags.includes(t)).length * 2 + (p.platform === g.platform ? 1 : 0)
+    + (["Anime","Realistic","Male","Female"].every(t => p.tags.includes(t) === g.tags.includes(t)) ? 3 : 0);
+  const similar = X.PROFILES.filter(p => p !== g).map(p => [p, score(p)]).sort((a,b) => b[1] - a[1]).slice(0, 8).map(x => x[0]);
+  const yn = val => val === true ? u("yes") : val === false ? u("no") : u("pending");
+  const cta = (cls) => X.ctaLink(X.linkFor(g), "💬 " + e(u("chat_with", {name: g.name})) + " →", cls);
+  const rows = [[u("m_platform"), `<a href="../platforms.html">${e(P.name)}</a> · ★ ${P.rating}`],
+    [u("grp_age"), g.age ? e(String(g.age)) : e(u("m_not_set"))],
+    ...GLANCE.map(k => [u("grp_" + k), g.tags.filter(t => groupOf(t) === k).map(t => `<a href="../tag/${X.slug(t)}.html">${e(X.tr(t))}</a>`).join(", ")]).filter(r => r[1]),
+    [u("m_features", {p: P.name}), `${e(u("col_images"))} : ${e(yn(D.images))} · ${e(u("col_voice"))} : ${e(yn(D.voice))} · ${e(u("col_video"))} : ${e(yn(D.video))}`],
+    [u("col_free"), e(yn(D.free))]];
+  const faq = [1,2,3,4].map(i => [u("fq" + i, v), u("fa" + i + (i === 1 ? gen : ""), {...v, img: yn(D.images).toLowerCase(), voice: yn(D.voice).toLowerCase()})]);
+  return { page:"model", nav:"home", title:u("girl_meta_t", {name:g.name, age:g.age || "", p:P.name}).replace(/, –/, " –").replace(/ ,/, ""),
+    desc:u("girl_meta_d", {name:g.name, age:g.age || "18+", p:P.name, bio:X.bioOf(g)}).slice(0, 300), body: `
+  <nav class="crumb"><a href="../index.html">${e(u("nav_girls"))}</a> › <a href="../tag/${X.slug(main)}.html">${e(X.tr(main))}</a> › <span>${e(g.name)}</span></nav>
   <section class="girl">
-    <div class="g-visual">${X.visual(g.img, P.color, g.name[0], g.name)}</div>
+    <div class="g-visual">${X.visual(g.img, P.color, g.name[0], g.name)}${X.isNew(g) ? `<span class="new">${e(u("new_badge"))}</span>` : ""}</div>
     <div class="g-body">
+      <div class="g-pf"><span class="mono-s" style="background:linear-gradient(135deg,${P.color[0]},${P.color[1]})">${e(P.name[0])}</span>${e(P.name)} <span class="stars">★ ${P.rating}</span></div>
       <h1>${X.withAge(g)}</h1>
-      <div class="sub">${e(u("char_on", {p: P.name}))}${X.isNew(g) ? " · 🆕 " + e(u("nav_new")) : ""}</div>
-      <p class="g-bio">${e(X.bioOf(g))}</p>
-      <h2>${e(u("categories"))}</h2>
       <div class="tags" style="justify-content:flex-start">${g.tags.map(t => `<a class="tag" href="../tag/${X.slug(t)}.html">${e(X.tr(t))}</a>`).join("")}</div>
-      ${X.ctaLink(X.linkFor(g), "💬 " + e(u("chat_with", {name: g.name})) + " →", "btn btn-main btn-xl")}
-      <div class="note">${e(u("opens", {p: P.name}))}</div>
+      <p class="g-bio">${e(X.bioOf(g))}</p>
+      ${cta("btn btn-main btn-xl")}
+      <div class="note">${e(u("m_fiction"))}</div>
     </div>
   </section>
+
+  <div class="mgrid">
+    <section class="info"><h2>${e(u("m_glance"))}</h2>
+      <table class="glance">${rows.map(r => `<tr><th>${e(r[0])}</th><td>${r[1]}</td></tr>`).join("")}</table></section>
+    <section class="info"><h2>${e(u("m_start_t", v))}</h2>
+      <ol class="steps">${[1,2,3].map(i => `<li>${e(u("m_s" + i, v))}</li>`).join("")}</ol>
+      ${cta("btn btn-main")}</section>
+  </div>
+
+  <section class="info"><h2>${e(u("m_about", v))}</h2>
+    <p>${e(X.tr(P.desc))}</p>
+    <ul class="feat">${P.feats.map(f => `<li>${e(X.tr(f))}</li>`).join("")}</ul>
+    <p class="hero-links" style="text-align:left"><a href="../platforms.html">${e(u("m_see_pl"))}</a> · <a href="../data.html">${e(u("nav_data"))} →</a> · <a href="../how-we-rate.html">${e(u("nav_how"))} →</a></p></section>
+
+  <section class="info"><h2>${e(u("m_faq_t", v))}</h2>
+    ${faq.map(([q, a]) => `<details><summary>${e(q)}</summary><p>${e(a)}</p></details>`).join("")}</section>
+
   <h2 class="section-title">${e(u("similar"))}</h2>
-  <div class="pgrid" id="grid">${similar.map(X.profileCard).join("")}</div>` };
+  <div class="pgrid" id="grid">${similar.map(X.profileCard).join("")}</div>
+  <p class="all-tags"><a href="../tag/${X.slug(main)}.html">${e(u("m_more_tag", {tag: X.tr(main)}))}</a></p>
+
+  <div class="mbar"><span class="mb-img">${X.visual(g.img, P.color, g.name[0], g.name)}</span>
+    <span class="mb-txt"><b>${e(g.name)}</b><small>${e(P.name)}</small></span>${cta("btn btn-main")}</div>
+  <script type="application/ld+json">${JSON.stringify({"@context":"https://schema.org","@type":"FAQPage","mainEntity":faq.map(([q,a]) => ({"@type":"Question","name":q,"acceptedAnswer":{"@type":"Answer","text":a}}))}).replace(/</g,"\\u003c")}</script>` };
 }});
 
 pages.push({ file: "how-we-rate.html", build: (X) => {
@@ -297,7 +332,7 @@ pages.push({ file: "sitemap.html", build: (X) => {
     <section><h2>${e(u("sm_pages"))}</h2>${a("index.html", u("nav_girls"))}${a("platforms.html", u("nav_platforms"))}${a("tags.html", u("nav_tags"))}
       ${a("how-we-rate.html", u("nav_how"))}${a("data.html", u("nav_data"))}${a("contact.html", u("nav_contact"))}</section>
     <section><h2>${e(u("sm_tags"))}</h2>${tags.map(t => a("tag/" + X.slug(t) + ".html", X.tr(t))).join("")}</section>
-    <section><h2>${e(u("sm_profiles"))}</h2>${girls.map(g => a("girl/" + (g.id || X.slug(g.name)) + ".html", g.name)).join("")}</section>
+    <section><h2>${e(u("sm_profiles"))}</h2>${girls.map(g => a("model/" + (g.id || X.slug(g.name)) + ".html", g.name)).join("")}</section>
     <section><h2>${e(u("sm_legal"))}</h2>${LEGAL_PAGES.map(([f, k]) => a("legal/" + f + ".html", u(k))).join("")}</section>
   </div>` };
 }});

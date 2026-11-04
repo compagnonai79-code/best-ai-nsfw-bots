@@ -21,7 +21,7 @@ const bioOf = p => typeof p.bio === "string" ? tr(p.bio) : ((p.bio && (p.bio[LAN
 const linkFor = p => ({ url: p.link || pf(p.platform).url, fallback: pf(p.platform).fallback });   // character deep link, else platform link
 const withAge = p => esc(p.name) + (p.age ? ", " + p.age : "");
 const girlId = p => p.id || slug(p.name);
-const girlUrl = p => LR() + "girl/" + girlId(p) + ".html";
+const girlUrl = p => LR() + "model/" + girlId(p) + ".html";
 
 function ctaLink(p, label, cls = "btn btn-main") {
   const href = linkOf(p);
@@ -37,8 +37,9 @@ function visual(img, color, letter, alt = "") {
 /* ---------- cards ---------- */
 function profileCard(p) {
   const P = pf(p.platform), i = PROFILES.indexOf(p);
-  return `<article class="pcard" data-i="${i}" tabindex="0" aria-label="${esc(p.name)}">
+  return `<article class="pcard" data-i="${i}">
     ${visual(p.img, P.color, p.name[0], p.name)}
+    <a class="pcover" href="${girlUrl(p)}" aria-label="${esc(p.name)}"></a>
     ${isNew(p) ? `<span class="new">${esc(ui("new_badge"))}</span>` : ""}<span class="online"></span>
     <div class="shade"></div>
     <div class="meta"><h3><a class="plink" href="${girlUrl(p)}">${esc(p.name)}</a>${p.age ? `<span>${p.age}</span>` : ""}</h3>
@@ -127,11 +128,7 @@ function openProfile(i) {
 }
 function wireProfileGrid() {
   const g = $("#grid"); if (!g) return;
-  g.addEventListener("click", e => {
-    if (e.target.closest(".pchat, .plink")) return;   // button → affiliate link, name → profile page
-    const c = e.target.closest(".pcard"); if (c) openProfile(+c.dataset.i);
-  });
-  g.addEventListener("keydown", e => { const c = e.target.closest(".pcard"); if (c && e.key === "Enter" && e.target === c) openProfile(+c.dataset.i); });
+  /* photo/name = link to /model/<id>, "Chat" button = affiliate link: nothing to intercept */
   $("#profile")?.addEventListener("click", e => { if (e.target.id === "profile" || e.target.classList.contains("x")) $("#profile").classList.remove("show"); });
 }
 
