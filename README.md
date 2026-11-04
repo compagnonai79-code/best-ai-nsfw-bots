@@ -7,7 +7,7 @@ Independent directory of AI girlfriend characters and companion platforms (18+).
 - `platforms.html` – ranking of the platforms (top picks + all platforms)
 
 ## Editing
-Everything is in `data.js`:
+Content is in `data.js`, translations in `i18n.js` (en, fr, es, de, pt, hi). Language: auto-detected, selectable in the header, or forced with `?lang=fr`.
 - `PLATFORMS` – affiliate links (`url`)
 - `PROMO` – promo pop-up text, image, delay
 - `PROFILES` – character profiles (name, age 18+, tags, platform, image, date added)

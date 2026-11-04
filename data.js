@@ -1,5 +1,7 @@
 /* =====================================================================
-   DATA — this is the only file you need to edit to update the site.
+   DATA — edit this file to update links, profiles and the promo.
+   Texts are written in English here; their translations live in i18n.js
+   (add a new bio/tag there too, otherwise it shows in English).
    ===================================================================== */
 
 /* ---------- PLATFORMS (affiliate links) ----------
@@ -45,12 +47,10 @@ const PLATFORMS = {
               tags:["Image generation","Video","Realistic","Anime"] },
 };
 
-/* ---------- PROMO POP-UP ---------- */
+/* ---------- PROMO POP-UP ----------
+   (pop-up texts are translated in i18n.js: promo_title, promo_text, promo_btn) */
 const PROMO = {
   platform: "candy",                 // which platform the pop-up promotes
-  title: "Meet your AI girlfriend",
-  text: "Create her look, her personality and chat with her anytime. Free to try.",
-  button: "Try Candy AI for free",
   img: "images/promo-candy.jpg",     // put your promo image here (portrait, ~600×800)
   delaySeconds: 8,                   // shown after X seconds…
   showOnExit: true                   // …or when the mouse leaves the page (desktop)

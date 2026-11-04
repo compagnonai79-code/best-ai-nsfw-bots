@@ -3,7 +3,7 @@
   --text:#ece9f7; --muted:#9a94b5; --accent:#ff3d8b; --accent2:#8b5cf6; --gold:#ffc24b; --green:#2ee6a0;
 }
 *{box-sizing:border-box;margin:0;padding:0}
-body{background:var(--bg);color:var(--text);font-family:Inter,system-ui,sans-serif;line-height:1.55}
+body{background:var(--bg);color:var(--text);font-family:Inter,"Noto Sans Devanagari",system-ui,sans-serif;line-height:1.55}
 a{color:inherit}
 .wrap{max-width:1280px;margin:0 auto;padding:0 16px}
 h1,h2,h3{font-family:"Space Grotesk",sans-serif;line-height:1.15}
@@ -73,7 +73,14 @@ nav a:hover,nav a.cur{color:var(--text)}
 .pcard .chips span{font-size:11px;background:rgba(255,255,255,.12);backdrop-filter:blur(4px);padding:2px 8px;border-radius:999px}
 .pcard .new{position:absolute;top:10px;left:10px;background:var(--green);color:#04140d;font:700 11px Inter;padding:3px 9px;border-radius:999px;z-index:2}
 .pcard .online{position:absolute;top:12px;right:12px;width:10px;height:10px;border-radius:50%;background:var(--green);box-shadow:0 0 0 3px rgba(46,230,160,.25);z-index:2}
+.pcard .pchat{display:block;margin-top:10px;text-align:center;padding:9px 12px;border-radius:999px;font:600 13.5px Inter,sans-serif;
+  color:#fff;text-decoration:none;background:linear-gradient(90deg,var(--accent),var(--accent2));box-shadow:0 6px 18px rgba(255,61,139,.3);transition:.15s}
+.pcard .pchat:hover{filter:brightness(1.15);transform:translateY(-1px)}
+.pcard .pchat[aria-disabled=true]{opacity:.5;pointer-events:none}
 .empty{grid-column:1/-1;text-align:center;color:var(--muted);padding:40px}
+
+/* Language switcher */
+.lang{background:var(--bg2);color:var(--text);border:1px solid var(--line);border-radius:999px;padding:7px 10px;font:500 13px Inter,sans-serif;cursor:pointer}
 
 /* Modals (profile + promo) */
 .overlay{position:fixed;inset:0;z-index:100;background:rgba(5,4,9,.8);backdrop-filter:blur(4px);display:none;align-items:center;justify-content:center;padding:16px}
@@ -99,7 +106,17 @@ nav a:hover,nav a.cur{color:var(--text)}
   .modal{grid-template-columns:1fr;max-height:92vh;overflow:auto}
   .modal .visual{min-height:260px}
   nav a.hide-m{display:none}
-  .logo{font-size:17px}
+  nav{gap:8px}
+  .logo{font-size:15px}
+  .new-pill{padding:6px 10px;font-size:12px;gap:6px}
+  .lang{padding:6px 6px;font-size:12px;max-width:92px}
+  .pgrid{grid-template-columns:repeat(2,1fr);gap:10px}
+  .pcard .meta{padding:10px}
+  .pcard h3{font-size:16px}
+  .pcard .chips span:nth-child(n+3){display:none}
+  .pcard .pchat{font-size:12px;padding:8px 6px}
+  .ph{font-size:44px}
+  .pcard .new{top:8px;left:8px;font-size:10px}
 }
 
 /* Platforms page */

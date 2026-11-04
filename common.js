@@ -1,4 +1,4 @@
-/* Shared helpers: age gate, links, promo pop-up, "New" counter */
+/* Shared helpers: age gate, links, promo pop-up, "New" counter, language */
 const $ = s => document.querySelector(s);
 const esc = s => String(s).replace(/[&<>"]/g, c => ({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));
 const pf = key => PLATFORMS[key] || {};
@@ -12,7 +12,7 @@ function ctaLink(p, label, cls = "btn btn-main") {
   const href = linkOf(p);
   return href
     ? `<a class="${cls}" href="${esc(href)}" target="_blank" rel="sponsored nofollow noopener">${label}</a>`
-    : `<a class="${cls}" aria-disabled="true">Coming soon</a>`;
+    : `<a class="${cls}" aria-disabled="true">${esc(ui("soon"))}</a>`;
 }
 function visual(img, color, letter) {
   return `<div class="ph" style="background:${grad(color)}">${esc(letter)}</div>` +
@@ -28,37 +28,31 @@ function passGate() {
   $("#gate")?.remove();
   armPromo();
 }
-document.addEventListener("DOMContentLoaded", () => {
-  if (ageOk) $("#gate")?.remove();
-  $("#enter")?.addEventListener("click", passGate);
-  const n = $("#new-count"); if (n) n.textContent = newCount();
-  const y = $("#yr"); if (y) y.textContent = new Date().getFullYear();
-  buildPromo();
-  if (ageOk) armPromo();
-});
 
 /* ---- Promo pop-up (once per visit) ---- */
-function buildPromo() {
+function renderPromo() {
   const p = pf(PROMO.platform); if (!p.name) return;
-  const el = document.createElement("div");
-  el.className = "overlay"; el.id = "promo";
+  let el = $("#promo");
+  if (!el) {
+    el = document.createElement("div"); el.className = "overlay"; el.id = "promo";
+    document.body.appendChild(el);
+    el.addEventListener("click", e => {
+      if (e.target === el || e.target.classList.contains("x") || e.target.closest(".btn-main")) el.classList.remove("show");
+    });
+  }
   el.innerHTML = `
-    <div class="modal promo" role="dialog" aria-modal="true" aria-label="${esc(PROMO.title)}">
+    <div class="modal promo" role="dialog" aria-modal="true" aria-label="${esc(ui("promo_title"))}">
       <button class="x" aria-label="Close">×</button>
       <div class="visual">${visual(PROMO.img, p.color, p.name[0])}</div>
       <div class="body">
-        <span class="sponsored">Sponsored</span>
-        <h2>${esc(PROMO.title)}</h2>
-        <p>${esc(PROMO.text)}</p>
-        <ul>${p.feats.map(f => `<li>${esc(f)}</li>`).join("")}</ul>
-        ${ctaLink(p, esc(PROMO.button) + " →")}
-        <div class="note">18+ only · Affiliate link</div>
+        <span class="sponsored">${esc(ui("sponsored"))}</span>
+        <h2>${esc(ui("promo_title"))}</h2>
+        <p>${esc(ui("promo_text"))}</p>
+        <ul>${p.feats.map(f => `<li>${esc(tr(f))}</li>`).join("")}</ul>
+        ${ctaLink(p, esc(ui("promo_btn", {p: p.name})) + " →")}
+        <div class="note">${esc(ui("promo_note"))}</div>
       </div>
     </div>`;
-  document.body.appendChild(el);
-  const close = () => el.classList.remove("show");
-  el.addEventListener("click", e => { if (e.target === el || e.target.classList.contains("x")) close(); });
-  el.querySelector(".btn-main")?.addEventListener("click", close);
 }
 let promoArmed = false;
 function showPromo() {
@@ -73,3 +67,16 @@ function armPromo() {
   if (PROMO.showOnExit) document.addEventListener("mouseout", e => { if (!e.relatedTarget && e.clientY <= 0) showPromo(); });
 }
 document.addEventListener("keydown", e => { if (e.key === "Escape") document.querySelectorAll(".overlay.show").forEach(o => o.classList.remove("show")); });
+
+/* ---- Page boot: call initPage(renderFn) from each page ---- */
+function initPage(render) {
+  applyStatic();
+  if (ageOk) $("#gate")?.remove();
+  $("#enter")?.addEventListener("click", passGate);
+  const n = $("#new-count"); if (n) n.textContent = newCount();
+  const y = $("#yr"); if (y) y.textContent = new Date().getFullYear();
+  renderPromo();
+  buildLangSelect(() => { renderPromo(); render(); });
+  render();
+  if (ageOk) armPromo();
+}

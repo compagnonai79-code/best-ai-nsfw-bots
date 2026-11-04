@@ -8,18 +8,18 @@
 <meta name="rating" content="adult">
 <link rel="canonical" href="https://best-ai-nsfw-bots.com/">
 <link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;700&family=Inter:wght@400;500;600;700&family=Noto+Sans+Devanagari:wght@400;600;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
 <div id="gate" role="dialog" aria-modal="true" aria-labelledby="gate-title">
   <div class="box">
-    <h2 id="gate-title">18+ only</h2>
-    <p>This website lists AI characters and platforms with adult content. By entering, you confirm you are at least 18 years old (or the age of majority in your country) and agree to view such content.</p>
+    <h2 id="gate-title" data-i18n="gate_title"></h2>
+    <p data-i18n="gate_text"></p>
     <div class="row">
-      <button class="btn btn-main" id="enter">I'm 18 or older – Enter</button>
-      <a class="btn btn-ghost" href="https://www.google.com">Leave</a>
+      <button class="btn btn-main" id="enter" data-i18n="gate_enter"></button>
+      <a class="btn btn-ghost" href="https://www.google.com" data-i18n="gate_leave"></a>
     </div>
   </div>
 </div>
@@ -28,41 +28,42 @@
   <div class="wrap">
     <a class="logo" href="index.html">best-ai-<span class="grad">nsfw-bots</span></a>
     <nav>
-      <a href="index.html" class="cur hide-m">AI Girlfriends</a>
-      <a href="platforms.html" class="hide-m">Top Platforms</a>
-      <button class="new-pill" id="new-btn" title="Show latest additions"><span class="dot"></span>New <b id="new-count">0</b></button>
+      <a href="index.html" class="cur hide-m" data-i18n="nav_girls"></a>
+      <a href="platforms.html" class="hide-m" data-i18n="nav_platforms"></a>
+      <button class="new-pill" id="new-btn"><span class="dot"></span><span data-i18n="nav_new"></span> <b id="new-count">0</b></button>
+      <select class="lang" id="lang" aria-label="Language"></select>
     </nav>
   </div>
 </header>
 
 <main class="wrap">
   <section class="hero">
-    <h1>Find your <span class="grad">AI girlfriend</span></h1>
-    <p>Hundreds of AI characters from the best companion apps, in one place. Pick a profile, start chatting in seconds.</p>
-    <div class="search"><input id="q" type="search" placeholder="Search a name, personality, style…" aria-label="Search"></div>
+    <h1 data-i18n="hero_title"></h1>
+    <p data-i18n="hero_sub"></p>
+    <div class="search"><input id="q" type="search" data-i18n-ph="search" aria-label="Search"></div>
   </section>
 
   <div class="tags" id="tags"></div>
   <div class="toolbar">
     <span class="count" id="count"></span>
     <select id="sort" aria-label="Sort">
-      <option value="new">Sort: Newest</option>
-      <option value="name">Sort: A → Z</option>
+      <option value="new" data-i18n="sort_new"></option>
+      <option value="name" data-i18n="sort_name"></option>
     </select>
   </div>
   <div class="pgrid" id="grid"></div>
 
   <section class="info">
-    <h2>How it works</h2>
+    <h2 data-i18n="how_title"></h2>
     <ul>
-      <li>Browse the profiles and filter by style or personality using the tags.</li>
-      <li>Click a profile to see more, then hit <strong>Chat with her</strong> to start on the platform that hosts the character.</li>
-      <li>New characters are added every week — click the <strong>New</strong> button at the top to see the latest ones.</li>
+      <li data-i18n="how_1"></li>
+      <li data-i18n="how_2"></li>
+      <li data-i18n="how_3"></li>
     </ul>
   </section>
   <section class="info" id="disclosure">
-    <h2>Affiliate disclosure</h2>
-    <p>best-ai-nsfw-bots.com is an independent directory. Some links are affiliate links, which means we may receive a commission if you sign up or subscribe through them, at no extra cost to you. All characters are fictional, AI-generated and adults (18+).</p>
+    <h2 data-i18n="disc_title"></h2>
+    <p data-i18n="disc_home"></p>
   </section>
 </main>
 
@@ -77,22 +78,24 @@
 
 <footer>
   <div class="wrap">
-    <span>© <span id="yr"></span> best-ai-nsfw-bots.com · 18+ only · All characters are fictional adults · Contains affiliate links</span>
-    <span><a href="platforms.html">Top Platforms</a> · <a href="#disclosure">Affiliate disclosure</a> · <a href="mailto:contact@best-ai-nsfw-bots.com">Contact</a></span>
+    <span>© <span id="yr"></span> best-ai-nsfw-bots.com · <span data-i18n="footer"></span></span>
+    <span><a href="platforms.html" data-i18n="nav_platforms"></a> · <a href="#disclosure" data-i18n="disc_title"></a> · <a href="mailto:contact@best-ai-nsfw-bots.com" data-i18n="contact"></a></span>
   </div>
 </footer>
 
 <script src="data.js"></script>
+<script src="i18n.js"></script>
 <script src="common.js"></script>
 <script>
-const ALL_TAGS = [...new Set(PROFILES.flatMap(p => p.tags))].sort();
+const ALL_TAGS = [...new Set(PROFILES.flatMap(p => p.tags))];
 const active = new Set();
 let onlyNew = location.hash === "#new";
 
 function renderTags(){
-  $("#tags").innerHTML = ALL_TAGS.map(t => {
+  const sorted = [...ALL_TAGS].sort((a,b) => tr(a).localeCompare(tr(b), LANG));
+  $("#tags").innerHTML = sorted.map(t => {
     const n = PROFILES.filter(p => p.tags.includes(t)).length;
-    return `<span class="tag ${active.has(t)?"on":""}" data-t="${esc(t)}">${esc(t)}<small>${n}</small></span>`;
+    return `<span class="tag ${active.has(t)?"on":""}" data-t="${esc(t)}">${esc(tr(t))}<small>${n}</small></span>`;
   }).join("");
 }
 
@@ -101,25 +104,27 @@ function renderGrid(){
   let list = PROFILES.filter(p =>
     (!onlyNew || isNew(p)) &&
     [...active].every(t => p.tags.includes(t)) &&
-    (!q || [p.name, p.bio, pf(p.platform).name, ...p.tags].join(" ").toLowerCase().includes(q)));
+    (!q || [p.name, p.bio, tr(p.bio), pf(p.platform).name, ...p.tags, ...p.tags.map(tr)].join(" ").toLowerCase().includes(q)));
   list.sort($("#sort").value === "name" ? (a,b) => a.name.localeCompare(b.name) : (a,b) => b.added.localeCompare(a.added));
 
   const filtered = onlyNew || active.size || q;
-  $("#count").innerHTML = `<b>${list.length}</b> ${onlyNew ? "new " : ""}profile${list.length>1?"s":""}` +
-    (filtered ? `<button class="clear" id="clear">Clear filters</button>` : "");
+  $("#count").innerHTML = `<b>${list.length}</b> ` + esc(ui(onlyNew ? "count_new" : "count", {n:""}).trim()) +
+    (filtered ? `<button class="clear" id="clear">${esc(ui("clear"))}</button>` : "");
   $("#new-btn").classList.toggle("on", onlyNew);
 
   $("#grid").innerHTML = list.length ? list.map(p => {
     const P = pf(p.platform), i = PROFILES.indexOf(p);
     return `<article class="pcard" data-i="${i}" tabindex="0" aria-label="${esc(p.name)}">
       ${visual(p.img, P.color, p.name[0])}
-      ${isNew(p) ? '<span class="new">NEW</span>' : ""}<span class="online" title="Online"></span>
+      ${isNew(p) ? `<span class="new">${esc(ui("new_badge"))}</span>` : ""}<span class="online"></span>
       <div class="shade"></div>
       <div class="meta"><h3>${esc(p.name)}<span>${p.age}</span></h3>
-        <div class="on-pf">on ${esc(P.name)}</div>
-        <div class="chips">${p.tags.slice(0,3).map(t => `<span>${esc(t)}</span>`).join("")}</div></div>
+        <div class="on-pf">${esc(ui("on", {p: P.name}))}</div>
+        <div class="chips">${p.tags.slice(0,3).map(t => `<span>${esc(tr(t))}</span>`).join("")}</div>
+        ${ctaLink(P, "💬 " + esc(ui("card_btn")), "pchat")}
+      </div>
     </article>`;
-  }).join("") : `<div class="empty">No profile matches these filters.</div>`;
+  }).join("") : `<div class="empty">${esc(ui("empty"))}</div>`;
 }
 
 function openProfile(i){
@@ -127,11 +132,11 @@ function openProfile(i){
   $("#pv").innerHTML = visual(p.img, P.color, p.name[0]);
   $("#pb").innerHTML = `
     <h2>${esc(p.name)}, ${p.age}</h2>
-    <div class="sub">AI character on <strong>${esc(P.name)}</strong>${isNew(p) ? " · 🆕 New" : ""}</div>
-    <p>${esc(p.bio)}</p>
-    <div class="chips">${p.tags.map(t => `<span>${esc(t)}</span>`).join("")}</div>
-    ${ctaLink(P, `💬 Chat with ${esc(p.name)} →`)}
-    <div class="note">Opens ${esc(P.name)} · 18+ · Affiliate link</div>`;
+    <div class="sub">${esc(ui("char_on", {p: P.name}))}${isNew(p) ? " · 🆕 " + esc(ui("nav_new")) : ""}</div>
+    <p>${esc(tr(p.bio))}</p>
+    <div class="chips">${p.tags.map(t => `<span>${esc(tr(t))}</span>`).join("")}</div>
+    ${ctaLink(P, "💬 " + esc(ui("chat_with", {name: p.name})) + " →")}
+    <div class="note">${esc(ui("opens", {p: P.name}))}</div>`;
   $("#profile").classList.add("show");
 }
 
@@ -139,15 +144,18 @@ $("#tags").addEventListener("click", e => {
   const t = e.target.closest(".tag")?.dataset.t; if (!t) return;
   active.has(t) ? active.delete(t) : active.add(t); renderTags(); renderGrid();
 });
-$("#grid").addEventListener("click", e => { const c = e.target.closest(".pcard"); if (c) openProfile(+c.dataset.i); });
-$("#grid").addEventListener("keydown", e => { const c = e.target.closest(".pcard"); if (c && e.key === "Enter") openProfile(+c.dataset.i); });
+$("#grid").addEventListener("click", e => {
+  if (e.target.closest(".pchat")) return;            // button → affiliate link directly
+  const c = e.target.closest(".pcard"); if (c) openProfile(+c.dataset.i);
+});
+$("#grid").addEventListener("keydown", e => { const c = e.target.closest(".pcard"); if (c && e.key === "Enter" && e.target === c) openProfile(+c.dataset.i); });
 $("#profile").addEventListener("click", e => { if (e.target.id === "profile" || e.target.classList.contains("x")) $("#profile").classList.remove("show"); });
 $("#new-btn").addEventListener("click", () => { onlyNew = !onlyNew; $("#sort").value = "new"; renderGrid(); window.scrollTo({top: $("#tags").offsetTop - 80, behavior:"smooth"}); });
 $("#count").addEventListener("click", e => { if (e.target.id === "clear") { onlyNew = false; active.clear(); $("#q").value = ""; renderTags(); renderGrid(); } });
 $("#q").addEventListener("input", renderGrid);
 $("#sort").addEventListener("change", renderGrid);
 
-renderTags(); renderGrid();
+initPage(() => { renderTags(); renderGrid(); $("#profile").classList.remove("show"); });
 </script>
 </body>
 </html>
