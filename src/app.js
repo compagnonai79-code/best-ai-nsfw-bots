@@ -15,7 +15,7 @@ const tagCount = t => PROFILES.filter(p => p.tags.includes(t)).length;
 const R = () => (typeof ROOT !== "undefined" ? ROOT : "");
 const LR = () => (typeof LROOT !== "undefined" ? LROOT : "");
 const tagUrl = t => LR() + "tag/" + slug(t) + ".html";
-const autoBio = p => ui("auto_bio", { name: p.name, age: p.age ? ", " + p.age : "", p: pf(p.platform).name,
+const autoBio = p => p.creator ? ui("creator_bio", { name: p.name, p: pf(p.platform).name }) : ui("auto_bio", { name: p.name, age: p.age ? ", " + p.age : "", p: pf(p.platform).name,
   tags: p.tags.filter(t => t !== "Female" && t !== "Realistic").slice(0, 3).map(tr).join(", ") || tr("Realistic") });
 const bioOf = p => typeof p.bio === "string" ? tr(p.bio) : ((p.bio && (p.bio[LANG] || p.bio.en)) || autoBio(p));
 const linkFor = p => ({ url: p.link || pf(p.platform).url, fallback: pf(p.platform).fallback });   // character deep link, else platform link
@@ -133,7 +133,16 @@ function wireProfileGrid() {
 }
 
 /* Home page: search, tag filter, sort, "New" */
+const BASES = {
+  women: p => p.tags.includes("Female") && !p.tags.includes("Anime"),
+  men:   p => p.tags.includes("Male"),
+  anime: p => p.tags.includes("Anime")
+};
+const inBase = (b, p) => !b || !BASES[b] || BASES[b](p);
 function initHome() {
+  const BASE_KEY = typeof PAGE_BASE !== "undefined" ? PAGE_BASE : "";
+  const LIST = PROFILES.filter(p => inBase(BASE_KEY, p));
+  const tagCount = t => LIST.filter(p => p.tags.includes(t)).length;
   /* ---- dropdown filters: OR inside a group, AND between groups ---- */
   const AGE_RANGES = [["18-21",18,21],["22-25",22,25],["26-30",26,30],["31-40",31,40],["41+",41,1e9]];
   const MAIN = ["gender","style","age","origin","hair","body","app"];
@@ -148,8 +157,8 @@ function initHome() {
   const matchGroup = (p, g) => !sel[g].size || [...sel[g]].some(v =>
     g === "age" ? inAge(p, v) : g === "app" ? p.platform === v : p.tags.includes(v));
   const options = g => {
-    if (g === "age") return AGE_RANGES.map(r => [r[0], r[0], PROFILES.filter(p => inAge(p, r[0])).length]);
-    if (g === "app") return Object.keys(PLATFORMS).map(k => [k, PLATFORMS[k].name, PROFILES.filter(p => p.platform === k).length]);
+    if (g === "age") return AGE_RANGES.map(r => [r[0], r[0], LIST.filter(p => inAge(p, r[0])).length]);
+    if (g === "app") return Object.keys(PLATFORMS).map(k => [k, PLATFORMS[k].name, LIST.filter(p => p.platform === k).length]);
     return TAG_GROUPS[g].map(t => [t, tr(t), tagCount(t)]).sort((a, b) => a[1].localeCompare(b[1], LANG));
   };
   const label = g => ui("grp_" + g);
@@ -172,7 +181,7 @@ function initHome() {
   };
   const renderGrid = () => {
     const q = $("#q").value.trim().toLowerCase();
-    let list = PROFILES.filter(p =>
+    let list = LIST.filter(p =>
       (!onlyNew || isNew(p)) && Object.keys(sel).every(g => matchGroup(p, g)) &&
       (!q || [p.name, bioOf(p), pf(p.platform).name, ...p.tags, ...p.tags.map(tr)].join(" ").toLowerCase().includes(q)));
     list.sort($("#sort").value === "name" ? (a,b) => a.name.localeCompare(b.name) : (a,b) => b.added.localeCompare(a.added));

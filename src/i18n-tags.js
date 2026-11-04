@@ -257,3 +257,52 @@ hi:{ m_glance:"एक नज़र में", m_platform:"प्लेटफ़
   m_more_tag:"और {tag} मॉडल →", m_fiction:"काल्पनिक AI किरदार · 18+ · एफ़िलिएट लिंक" }
 };
 for (const l in MODEL_UI) Object.assign(I18N[l].ui, MODEL_UI[l]);
+
+/* Women / Men / Anime pages + Candy Creators */
+const SECTION_UI = {
+en:{ nav_all:"All", nav_women:"Women", nav_men:"Men", nav_anime:"Anime",
+  hero_title_women:'AI <span class="grad">girlfriends</span>', hero_title_men:'AI <span class="grad">boyfriends</span>', hero_title_anime:'Anime <span class="grad">AI characters</span>',
+  hero_sub_b:"{n} profiles. Filter by style, origin, personality… and start chatting in seconds.",
+  meta_home_t_women:"AI Girlfriends – Realistic Female AI Characters", meta_home_d_women:"All realistic AI girlfriend profiles from the best companion platforms. Filter and chat in seconds. 18+ only.",
+  meta_home_t_men:"AI Boyfriends – Male AI Characters", meta_home_d_men:"All AI boyfriend profiles from the best companion platforms. Filter and chat in seconds. 18+ only.",
+  meta_home_t_anime:"Anime AI Characters – Anime Girlfriends & Waifus", meta_home_d_anime:"All anime AI characters from the best companion platforms. Filter and chat in seconds. 18+ only.",
+  creator_bio:"Official AI twin of the creator {name}, available on {p}. Open the chat to talk with her AI version." },
+fr:{ nav_all:"Tous", nav_women:"Femmes", nav_men:"Hommes", nav_anime:"Anime",
+  hero_title_women:'Copines <span class="grad">IA</span>', hero_title_men:'Petits amis <span class="grad">IA</span>', hero_title_anime:'Personnages <span class="grad">anime IA</span>',
+  hero_sub_b:"{n} profils. Filtre par style, origine, personnalité… et discute en quelques secondes.",
+  meta_home_t_women:"Copines IA – Personnages IA féminins réalistes", meta_home_d_women:"Tous les profils de copines IA réalistes des meilleures plateformes. Filtrez et discutez en quelques secondes. 18+.",
+  meta_home_t_men:"Petits amis IA – Personnages IA masculins", meta_home_d_men:"Tous les profils de petits amis IA des meilleures plateformes. Filtrez et discutez en quelques secondes. 18+.",
+  meta_home_t_anime:"Personnages anime IA – Copines anime et waifus", meta_home_d_anime:"Tous les personnages anime IA des meilleures plateformes. Filtrez et discutez en quelques secondes. 18+.",
+  creator_bio:"Jumelle IA officielle de la créatrice {name}, disponible sur {p}. Ouvre le chat pour discuter avec sa version IA." },
+es:{ nav_all:"Todos", nav_women:"Mujeres", nav_men:"Hombres", nav_anime:"Anime",
+  hero_title_women:'Novias <span class="grad">IA</span>', hero_title_men:'Novios <span class="grad">IA</span>', hero_title_anime:'Personajes <span class="grad">anime IA</span>',
+  hero_sub_b:"{n} perfiles. Filtra por estilo, origen, personalidad… y chatea en segundos.",
+  meta_home_t_women:"Novias IA – Personajes IA femeninos realistas", meta_home_d_women:"Todos los perfiles de novias IA realistas de las mejores plataformas. Filtra y chatea en segundos. Solo 18+.",
+  meta_home_t_men:"Novios IA – Personajes IA masculinos", meta_home_d_men:"Todos los perfiles de novios IA de las mejores plataformas. Filtra y chatea en segundos. Solo 18+.",
+  meta_home_t_anime:"Personajes anime IA – Novias anime y waifus", meta_home_d_anime:"Todos los personajes anime IA de las mejores plataformas. Filtra y chatea en segundos. Solo 18+.",
+  creator_bio:"Gemela IA oficial de la creadora {name}, disponible en {p}. Abre el chat para hablar con su versión IA." },
+de:{ nav_all:"Alle", nav_women:"Frauen", nav_men:"Männer", nav_anime:"Anime",
+  hero_title_women:'KI-<span class="grad">Freundinnen</span>', hero_title_men:'KI-<span class="grad">Freunde</span>', hero_title_anime:'Anime-<span class="grad">KI-Charaktere</span>',
+  hero_sub_b:"{n} Profile. Filtere nach Stil, Herkunft, Persönlichkeit… und chatte in Sekunden.",
+  meta_home_t_women:"KI-Freundinnen – realistische weibliche KI-Charaktere", meta_home_d_women:"Alle realistischen KI-Freundin-Profile der besten Plattformen. Filtern und sofort chatten. Ab 18.",
+  meta_home_t_men:"KI-Freunde – männliche KI-Charaktere", meta_home_d_men:"Alle KI-Freund-Profile der besten Plattformen. Filtern und sofort chatten. Ab 18.",
+  meta_home_t_anime:"Anime-KI-Charaktere – Anime-Freundinnen und Waifus", meta_home_d_anime:"Alle Anime-KI-Charaktere der besten Plattformen. Filtern und sofort chatten. Ab 18.",
+  creator_bio:"Offizieller KI-Zwilling der Creatorin {name}, verfügbar auf {p}. Öffne den Chat, um mit ihrer KI-Version zu sprechen." },
+pt:{ nav_all:"Todos", nav_women:"Mulheres", nav_men:"Homens", nav_anime:"Anime",
+  hero_title_women:'Namoradas <span class="grad">IA</span>', hero_title_men:'Namorados <span class="grad">IA</span>', hero_title_anime:'Personagens <span class="grad">anime IA</span>',
+  hero_sub_b:"{n} perfis. Filtre por estilo, origem, personalidade… e converse em segundos.",
+  meta_home_t_women:"Namoradas IA – Personagens IA femininas realistas", meta_home_d_women:"Todos os perfis de namoradas IA realistas das melhores plataformas. Filtre e converse em segundos. Somente 18+.",
+  meta_home_t_men:"Namorados IA – Personagens IA masculinos", meta_home_d_men:"Todos os perfis de namorados IA das melhores plataformas. Filtre e converse em segundos. Somente 18+.",
+  meta_home_t_anime:"Personagens anime IA – Namoradas anime e waifus", meta_home_d_anime:"Todos os personagens anime IA das melhores plataformas. Filtre e converse em segundos. Somente 18+.",
+  creator_bio:"Gêmea IA oficial da criadora {name}, disponível no {p}. Abra o chat para conversar com a versão IA dela." },
+hi:{ nav_all:"सभी", nav_women:"महिलाएँ", nav_men:"पुरुष", nav_anime:"एनीमे",
+  hero_title_women:'AI <span class="grad">गर्लफ्रेंड</span>', hero_title_men:'AI <span class="grad">बॉयफ़्रेंड</span>', hero_title_anime:'एनीमे <span class="grad">AI किरदार</span>',
+  hero_sub_b:"{n} प्रोफ़ाइल। स्टाइल, मूल, व्यक्तित्व के अनुसार फ़िल्टर करें… और तुरंत बात शुरू करें।",
+  meta_home_t_women:"AI गर्लफ्रेंड – रियलिस्टिक महिला AI किरदार", meta_home_d_women:"बेहतरीन प्लेटफ़ॉर्म की सभी रियलिस्टिक AI गर्लफ्रेंड प्रोफ़ाइल। फ़िल्टर करें और तुरंत बात करें। केवल 18+।",
+  meta_home_t_men:"AI बॉयफ़्रेंड – पुरुष AI किरदार", meta_home_d_men:"बेहतरीन प्लेटफ़ॉर्म की सभी AI बॉयफ़्रेंड प्रोफ़ाइल। फ़िल्टर करें और तुरंत बात करें। केवल 18+।",
+  meta_home_t_anime:"एनीमे AI किरदार – एनीमे गर्लफ्रेंड और वाइफ़ु", meta_home_d_anime:"बेहतरीन प्लेटफ़ॉर्म के सभी एनीमे AI किरदार। फ़िल्टर करें और तुरंत बात करें। केवल 18+।",
+  creator_bio:"क्रिएटर {name} का आधिकारिक AI ट्विन, {p} पर उपलब्ध। उसके AI वर्ज़न से बात करने के लिए चैट खोलें।" }
+};
+for (const l in SECTION_UI) Object.assign(I18N[l].ui, SECTION_UI[l]);
+const CT = { fr:"Jumelle IA de créatrice", es:"Gemela IA de creadora", de:"KI-Zwilling einer Creatorin", pt:"Gêmea IA de criadora", hi:"क्रिएटर AI ट्विन" };
+for (const l in CT) I18N[l].t["Creator Twin"] = CT[l];

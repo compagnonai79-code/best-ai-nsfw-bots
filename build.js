@@ -18,7 +18,7 @@ function context(lang) {
   const ctx = { PAGE_LANG: lang, console, Date, URLSearchParams };
   vm.createContext(ctx);
   vm.runInContext(CLIENT.map(read).join("\n;\n") +
-    "\n;this.X={SITE,PLATFORMS,PLATFORM_DATA,PROFILES,PROMO,NEW_DAYS,LANGS,ui,tr,esc,slug,isNew,newCount,tagCount,ALL_PROFILE_TAGS,TAG_GROUPS,ALL_TAGS,profileCard,pickCard,platformCard,visual,ctaLink,girlUrl,tagUrl,bioOf,linkFor,withAge,get LANG(){return LANG}};", ctx);
+    "\n;this.X={SITE,PLATFORMS,PLATFORM_DATA,PROFILES,PROMO,NEW_DAYS,LANGS,ui,tr,esc,slug,isNew,newCount,tagCount,ALL_PROFILE_TAGS,TAG_GROUPS,ALL_TAGS,profileCard,pickCard,platformCard,visual,ctaLink,girlUrl,tagUrl,inBase,bioOf,linkFor,withAge,get LANG(){return LANG}};", ctx);
   ctx.X._ctx = ctx;
   return ctx.X;
 }
@@ -91,7 +91,10 @@ ${alternates}
   <div class="wrap">
     <a class="logo" href="${L("index.html")}">best-ai-<span class="grad">nsfw-bots</span></a>
     <nav>
-      <a href="${L("index.html")}"${cur("home")}>${e(u("nav_girls"))}</a>
+      <a href="${L("index.html")}"${cur("home")}>${e(u("nav_all"))}</a>
+      <a href="${L("women.html")}"${cur("women")}>${e(u("nav_women"))}</a>
+      <a href="${L("men.html")}"${cur("men")}>${e(u("nav_men"))}</a>
+      <a href="${L("anime.html")}"${cur("anime")}>${e(u("nav_anime"))}</a>
       <a href="${L("platforms.html")}"${cur("platforms")}>${e(u("nav_platforms"))}</a>
       <a href="${L("tags.html")}"${cur("tags")}>${e(u("nav_tags"))}</a>
       ${newBtn}
@@ -117,7 +120,7 @@ ${o.modal ? `<div class="overlay" id="profile">
     <div><a class="logo" href="${L("index.html")}">best-ai-<span class="grad">nsfw-bots</span></a>
       <p class="fdesc">${e(u("footer"))}</p></div>
     <div><h4>${e(u("ft_explore"))}</h4>
-      <a href="${L("index.html")}">${e(u("nav_girls"))}</a><a href="${L("platforms.html")}">${e(u("nav_platforms"))}</a>
+      <a href="${L("index.html")}">${e(u("nav_all"))}</a><a href="${L("women.html")}">${e(u("nav_women"))}</a><a href="${L("men.html")}">${e(u("nav_men"))}</a><a href="${L("anime.html")}">${e(u("nav_anime"))}</a><a href="${L("platforms.html")}">${e(u("nav_platforms"))}</a>
       <a href="${L("tags.html")}">${e(u("nav_tags"))}</a><a href="${L("index.html#new")}">${e(u("nav_new"))}</a></div>
     <div><h4>${e(u("ft_site"))}</h4>
       <a href="${L("how-we-rate.html")}">${e(u("nav_how"))}</a><a href="${L("data.html")}">${e(u("nav_data"))}</a>
@@ -129,7 +132,7 @@ ${o.modal ? `<div class="overlay" id="profile">
   <div class="wrap copy">© ${new Date().getFullYear()} ${SITE.domain}</div>
 </footer>
 
-<script>var PAGE_LANG="${lang}",ROOT="${root}",LROOT="${lr}";</script>
+<script>var PAGE_LANG="${lang}",ROOT="${root}",LROOT="${lr}"${o.base ? `,PAGE_BASE="${o.base}"` : ""};</script>
 ${CLIENT.map(f => `<script src="${root}assets/${f}"></script>`).join("\n")}
 <script>boot("${o.page}");</script>
 </body>
@@ -139,14 +142,14 @@ ${CLIENT.map(f => `<script src="${root}assets/${f}"></script>`).join("\n")}
 /* ---------- page bodies ---------- */
 const pages = [];   // {file, build(X, lang) -> layout options, altLangs?}
 
-pages.push({ file: "index.html", build: (X) => {
-  const u = X.ui, e = X.esc;
-  const sorted = [...X.ALL_PROFILE_TAGS].sort((a,b) => X.tr(a).localeCompare(X.tr(b), X.LANG));
-  const list = [...X.PROFILES].sort((a,b) => b.added.localeCompare(a.added));
-  return { page:"home", nav:"home", modal:true, title:u("meta_home_t"), desc:u("meta_home_d"), body: `
+for (const [file, base] of [["index.html",""],["women.html","women"],["men.html","men"],["anime.html","anime"]]) pages.push({ file, build: (X) => {
+  const u = X.ui, e = X.esc, k = base ? "_" + base : "";
+  const list = [...X.PROFILES].filter(p => X.inBase(base, p)).sort((a,b) => b.added.localeCompare(a.added));
+  const sorted = [...X.ALL_PROFILE_TAGS].filter(t => list.some(p => p.tags.includes(t))).sort((a,b) => X.tr(a).localeCompare(X.tr(b), X.LANG));
+  return { page:"home", nav: base || "home", base, modal:true, title:u("meta_home_t" + k), desc:u("meta_home_d" + k), body: `
   <section class="hero">
-    <h1>${u("hero_title")}</h1>
-    <p>${e(u("hero_sub"))}</p>
+    <h1>${u("hero_title" + k)}</h1>
+    <p>${e(u(base ? "hero_sub_b" : "hero_sub", {n: list.length}))}</p>
     <div class="search"><input id="q" type="search" placeholder="${e(u("search"))}" aria-label="Search"></div>
   </section>
   <div class="tags" id="tags">${sorted.map(t => `<a class="tag" href="${X.tagUrl(t)}">${e(X.tr(t))}<small>${X.tagCount(t)}</small></a>`).join("")}</div>

@@ -105,7 +105,7 @@ const TAG_GROUPS = {
   fantasy:     ["Alien","Android","Angel","Bear","Bunny Girl","Catgirl","Demon","Elf","Fairy","Fantasy","Fox Girl","Furry","Goddess","Mermaid","Monster Girl","Princess","Queen","Robot","Sage","Succubus","Vampire","Witch"],
   gender:      ["Female","Male","Bisexual","BL","Femboy","Futa","Gay","Lesbian","Sissy","Trans","Twink"],
   kink:        ["BDSM","Bondage","Breast Expansion","Chastity","Cuckold","Exhibitionism","Feet","Femdom","Hypno","JOI","Netorare","Pet Play","POV","Public","Seduction","Threesome","Vore","Voyeur"],
-  features:    ["Comedy","Game","Group Chat","Image generation","Roleplay","Sexting","Video","Voice","VR"]
+  features:    ["Creator Twin","Comedy","Game","Group Chat","Image generation","Roleplay","Sexting","Video","Voice","VR"]
 };
 const ALL_TAGS = [...new Set(Object.values(TAG_GROUPS).flat())];
 

@@ -334,3 +334,6 @@ ol.steps li{color:#cfc9e6;margin-bottom:10px;font-size:15px}
 .pgrid.sim4 .pcard h3{font-size:21px}
 .pgrid.sim4 .pcard .pchat{font-size:14.5px;padding:11px 12px}
 @media(max-width:900px){.pgrid.sim4{grid-template-columns:repeat(2,1fr);gap:10px}}
+nav{gap:16px}
+@media(max-width:1180px){header nav a.hide-m{font-size:13px}nav{gap:12px}}
+@media(max-width:1000px){header nav a[href$="platforms.html"],header nav a[href$="tags.html"]{display:none}}
