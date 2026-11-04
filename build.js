@@ -6,19 +6,23 @@
 const fs = require("fs"), path = require("path"), vm = require("vm");
 const SRC = path.join(__dirname, "src"), OUT = path.join(__dirname, "public");
 const read = f => fs.readFileSync(path.join(SRC, f), "utf8");
-const CLIENT = ["data.js", "i18n.js", "i18n-pages.js", "app.js"];
+const CLIENT = ["data.js", "i18n.js", "i18n-pages.js", "i18n-tags.js", "app.js"];
 
 /* Load the client scripts in a sandbox for one language */
 function context(lang) {
   const ctx = { PAGE_LANG: lang, console, Date, URLSearchParams };
   vm.createContext(ctx);
   vm.runInContext(CLIENT.map(read).join("\n;\n") +
-    "\n;this.X={SITE,PLATFORMS,PLATFORM_DATA,PROFILES,PROMO,NEW_DAYS,LANGS,ui,tr,esc,slug,isNew,newCount,tagCount,ALL_PROFILE_TAGS,profileCard,pickCard,platformCard,visual,ctaLink,girlUrl,tagUrl,get LANG(){return LANG}};", ctx);
+    "\n;this.X={SITE,PLATFORMS,PLATFORM_DATA,PROFILES,PROMO,NEW_DAYS,LANGS,ui,tr,esc,slug,isNew,newCount,tagCount,ALL_PROFILE_TAGS,TAG_GROUPS,ALL_TAGS,profileCard,pickCard,platformCard,visual,ctaLink,girlUrl,tagUrl,get LANG(){return LANG}};", ctx);
   ctx.X._ctx = ctx;
   return ctx.X;
 }
 const base = context("en");
 const { SITE, LANGS } = base;
+for (const p of base.PROFILES) for (const t of p.tags)
+  if (!base.ALL_TAGS.includes(t)) console.warn(`⚠️  Profile "${p.name}": tag "${t}" is not in TAG_GROUPS (data.js)`);
+for (const l of Object.keys(LANGS)) if (l !== "en") { const X = context(l);
+  const miss = base.ALL_TAGS.filter(t => X.tr(t) === t && /[a-z]/.test(t) && l === "hi"); if (miss.length) console.warn(`ℹ️  hi: ${miss.length} tags shown in English`); }
 const LEGAL = require("./src/legal.js")(SITE);
 const LANG_LIST = Object.keys(LANGS);
 const prefix = l => (l === "en" ? "" : l + "/");
@@ -141,6 +145,7 @@ pages.push({ file: "index.html", build: (X) => {
     <div class="search"><input id="q" type="search" placeholder="${e(u("search"))}" aria-label="Search"></div>
   </section>
   <div class="tags" id="tags">${sorted.map(t => `<a class="tag" href="${X.tagUrl(t)}">${e(X.tr(t))}<small>${X.tagCount(t)}</small></a>`).join("")}</div>
+  <p class="all-tags"><a href="tags.html">${e(u("all_tags_link"))}</a></p>
   <div class="toolbar">
     <span class="count" id="count"><b>${list.length}</b> ${e(u("count", {n:""}).trim())}</span>
     <select id="sort" aria-label="Sort"><option value="new">${e(u("sort_new"))}</option><option value="name">${e(u("sort_name"))}</option></select>
@@ -168,27 +173,40 @@ pages.push({ file: "platforms.html", build: (X) => {
   <section class="info" id="disclosure"><h2>${e(u("disc_title"))}</h2><p>${e(u("disc_pl"))}</p></section>` };
 }});
 
+const GRP_COLORS = [["#ff3d8b","#ff8a5c"],["#8b5cf6","#ec4899"],["#ff5a36","#ffb03a"],["#06b6d4","#8b5cf6"],["#f59e0b","#ef4444"],["#a855f7","#f472b6"],
+  ["#e11d48","#9333ea"],["#f43f5e","#fb7185"],["#7c3aed","#06b6d4"],["#ec4899","#8b5cf6"],["#be123c","#7c3aed"],["#2ee6a0","#06b6d4"]];
+const groupOf = t => Object.keys(base.TAG_GROUPS).find(g => base.TAG_GROUPS[g].includes(t));
+
 pages.push({ file: "tags.html", build: (X) => {
-  const u = X.ui, e = X.esc;
-  const sorted = [...X.ALL_PROFILE_TAGS].sort((a,b) => X.tr(a).localeCompare(X.tr(b), X.LANG));
+  const u = X.ui, e = X.esc, groups = Object.entries(X.TAG_GROUPS);
+  const filled = X.ALL_TAGS.filter(t => X.tagCount(t) > 0).length;
   return { page:"tags", nav:"tags", title:u("meta_tags_t"), desc:u("meta_tags_d"), body: `
-  <section class="hero"><h1>${u("tags_title")}</h1><p>${e(u("tags_sub", {n: sorted.length}))}</p></section>
-  <div class="tagtiles">${sorted.map(t => {
-    const first = X.PROFILES.find(p => p.tags.includes(t)), P = X.PLATFORMS[first.platform];
-    return `<a class="tagtile" href="${X.tagUrl(t)}"><span class="tt-dot" style="background:linear-gradient(135deg,${P.color[0]},${P.color[1]})"></span>
-      <span class="tt-name">${e(X.tr(t))}</span><span class="tt-n">${X.tagCount(t)}</span></a>`; }).join("")}</div>` };
+  <section class="hero"><h1>${u("tags_title")}</h1><p>${e(u("tags_sub", {n: X.ALL_TAGS.length}))}</p>
+    <div class="search"><input id="tq" type="search" placeholder="${e(u("search"))}" aria-label="Search"></div></section>
+  <nav class="grpnav">${groups.map(([g]) => `<a href="#g-${g}">${e(u("grp_" + g))}</a>`).join("")}</nav>
+  ${groups.map(([g, tags], gi) => {
+    const sorted = [...tags].sort((a,b) => (X.tagCount(b) > 0) - (X.tagCount(a) > 0) || X.tr(a).localeCompare(X.tr(b), X.LANG));
+    const c = GRP_COLORS[gi % GRP_COLORS.length];
+    return `<section class="tgroup" id="g-${g}"><h2>${e(u("grp_" + g))} <small>${tags.length}</small></h2>
+    <div class="tagtiles">${sorted.map(t => { const n = X.tagCount(t);
+      return `<a class="tagtile${n ? "" : " zero"}" href="${X.tagUrl(t)}" data-n="${e((t + " " + X.tr(t)).toLowerCase())}"><span class="tt-dot" style="background:linear-gradient(135deg,${c[0]},${c[1]})"></span>
+      <span class="tt-name">${e(X.tr(t))}</span><span class="tt-n">${n}</span></a>`; }).join("")}</div></section>`; }).join("")}` };
 }});
 
-/* one page per tag */
-for (const t of base.ALL_PROFILE_TAGS) pages.push({ file: "tag/" + base.slug(t) + ".html", build: (X) => {
+/* one page per tag (all categories; empty ones are noindex and left out of sitemap.xml) */
+for (const t of base.ALL_TAGS) pages.push({ file: "tag/" + base.slug(t) + ".html", build: (X) => {
   const u = X.ui, e = X.esc, list = X.PROFILES.filter(p => p.tags.includes(t)).sort((a,b) => b.added.localeCompare(a.added));
-  const name = X.tr(t), others = X.ALL_PROFILE_TAGS.filter(x => x !== t).sort((a,b) => X.tr(a).localeCompare(X.tr(b), X.LANG));
-  return { page:"tag", nav:"tags", modal:true, title:u("meta_tag_t", {tag:name, n:list.length}), desc:u("meta_tag_d", {tag:name, n:list.length}), body: `
-  <p class="crumb"><a href="../tags.html">${e(u("tag_all"))}</a></p>
-  <section class="hero"><h1>${u("tag_h1", {tag: e(name)})}</h1><p>${e(u("tag_sub", {n:list.length, tag:name}))}</p></section>
-  <div class="pgrid" id="grid">${list.map(X.profileCard).join("")}</div>
+  const name = X.tr(t), grp = X.TAG_GROUPS[groupOf(t)];
+  const related = grp.filter(x => x !== t && X.tagCount(x) > 0).concat(X.ALL_PROFILE_TAGS.filter(x => x !== t && !grp.includes(x)))
+    .filter((x, i, a) => a.indexOf(x) === i).slice(0, 30);
+  return { page:"tag", nav:"tags", modal:true, noindex: list.length === 0,
+    title:u("meta_tag_t", {tag:name, n:list.length}), desc:u("meta_tag_d", {tag:name, n:list.length}), body: `
+  <p class="crumb"><a href="../tags.html">${e(u("tag_all"))}</a> · <a href="../tags.html#g-${groupOf(t)}">${e(u("grp_" + groupOf(t)))}</a></p>
+  <section class="hero"><h1>${u("tag_h1", {tag: e(name)})}</h1><p>${e(list.length ? u("tag_sub", {n:list.length, tag:name}) : u("tag_empty"))}</p></section>
+  ${list.length ? `<div class="pgrid" id="grid">${list.map(X.profileCard).join("")}</div>` : `<p class="hero-links"><a href="../index.html">${e(u("back_all"))}</a></p>`}
   <h2 class="section-title">${e(u("tags_title").replace(/<[^>]+>/g, ""))}</h2>
-  <div class="tags" style="justify-content:flex-start">${others.map(x => `<a class="tag" href="${X.slug(x)}.html">${e(X.tr(x))}<small>${X.tagCount(x)}</small></a>`).join("")}</div>` };
+  <div class="tags" style="justify-content:flex-start">${related.map(x => `<a class="tag" href="${X.slug(x)}.html">${e(X.tr(x))}<small>${X.tagCount(x)}</small></a>`).join("")}</div>
+  <p class="all-tags"><a href="../tags.html">${e(u("all_tags_link"))}</a></p>` };
 }});
 
 /* one page per profile */
@@ -266,7 +284,7 @@ pages.push({ file: "contact.html", build: (X) => {
 
 pages.push({ file: "sitemap.html", build: (X) => {
   const u = X.ui, e = X.esc, a = (h, t) => `<a href="${h}">${e(t)}</a>`;
-  const tags = [...X.ALL_PROFILE_TAGS].sort((x,y) => X.tr(x).localeCompare(X.tr(y), X.LANG));
+  const tags = X.ALL_TAGS.filter(t => X.tagCount(t) > 0).sort((x,y) => X.tr(x).localeCompare(X.tr(y), X.LANG));
   const girls = [...X.PROFILES].sort((x,y) => x.name.localeCompare(y.name));
   return { page:"sitemap", title:u("meta_sitemap_t") + " – " + SITE.domain, desc:u("meta_home_d"), body: `
   <section class="hero"><h1>${e(u("sitemap_title"))}</h1></section>
@@ -305,7 +323,7 @@ for (const lang of LANG_LIST) {
     let html = layout(X, lang, pg.file, o).replace(/ROOT_PLACEHOLDER/g, "../".repeat(depth));
     write(prefix(lang) + pg.file, html);
     const altLangs = o.altLangs || LANG_LIST;
-    if (!o.canonical) urls.push({ loc: absUrl(lang, pg.file), alts: altLangs.map(l => [l, absUrl(l, pg.file)]) });
+    if (!o.canonical && !o.noindex) urls.push({ loc: absUrl(lang, pg.file), alts: altLangs.map(l => [l, absUrl(l, pg.file)]) });
   }
 }
 /* assets */

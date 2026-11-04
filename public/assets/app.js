@@ -190,5 +190,10 @@ function boot(page) {
   wireProfileGrid();
   if (page === "home") initHome();
   if (page === "platforms") initPlatforms();
+  if (page === "tags") $("#tq")?.addEventListener("input", e => {
+    const q = e.target.value.trim().toLowerCase();
+    document.querySelectorAll(".tagtile").forEach(a => { a.style.display = !q || a.dataset.n.includes(q) ? "" : "none"; });
+    document.querySelectorAll(".tgroup").forEach(g => { g.style.display = [...g.querySelectorAll(".tagtile")].some(a => a.style.display !== "none") ? "" : "none"; });
+  });
   if (ageOk) armPromo();
 }
