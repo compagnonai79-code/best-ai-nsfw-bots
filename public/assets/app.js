@@ -15,6 +15,9 @@ const tagCount = t => PROFILES.filter(p => p.tags.includes(t)).length;
 const R = () => (typeof ROOT !== "undefined" ? ROOT : "");
 const LR = () => (typeof LROOT !== "undefined" ? LROOT : "");
 const tagUrl = t => LR() + "tag/" + slug(t) + ".html";
+const bioOf = p => typeof p.bio === "string" ? tr(p.bio) : (p.bio[LANG] || p.bio.en);
+const linkFor = p => ({ url: p.link || pf(p.platform).url, fallback: pf(p.platform).fallback });   // character deep link, else platform link
+const withAge = p => esc(p.name) + (p.age ? ", " + p.age : "");
 const girlUrl = p => LR() + "girl/" + slug(p.name) + ".html";
 
 function ctaLink(p, label, cls = "btn btn-main") {
@@ -35,10 +38,10 @@ function profileCard(p) {
     ${visual(p.img, P.color, p.name[0], p.name)}
     ${isNew(p) ? `<span class="new">${esc(ui("new_badge"))}</span>` : ""}<span class="online"></span>
     <div class="shade"></div>
-    <div class="meta"><h3><a class="plink" href="${girlUrl(p)}">${esc(p.name)}</a><span>${p.age}</span></h3>
+    <div class="meta"><h3><a class="plink" href="${girlUrl(p)}">${esc(p.name)}</a>${p.age ? `<span>${p.age}</span>` : ""}</h3>
       <div class="on-pf">${esc(ui("on", {p: P.name}))}</div>
       <div class="chips">${p.tags.slice(0,3).map(t => `<span>${esc(tr(t))}</span>`).join("")}</div>
-      ${ctaLink(P, "💬 " + esc(ui("card_btn")), "pchat")}
+      ${ctaLink(linkFor(p), "💬 " + esc(ui(p.tags.includes("Male") && !p.tags.includes("Female") ? "card_btn_m" : "card_btn")), "pchat")}
     </div>
   </article>`;
 }
@@ -111,11 +114,11 @@ function openProfile(i) {
   const p = PROFILES[i], P = pf(p.platform);
   $("#pv").innerHTML = visual(p.img, P.color, p.name[0], p.name);
   $("#pb").innerHTML = `
-    <h2>${esc(p.name)}, ${p.age}</h2>
+    <h2>${withAge(p)}</h2>
     <div class="sub">${esc(ui("char_on", {p: P.name}))}${isNew(p) ? " · 🆕 " + esc(ui("nav_new")) : ""}</div>
-    <p>${esc(tr(p.bio))}</p>
+    <p>${esc(bioOf(p))}</p>
     <div class="chips">${p.tags.map(t => `<a href="${tagUrl(t)}">${esc(tr(t))}</a>`).join("")}</div>
-    ${ctaLink(P, "💬 " + esc(ui("chat_with", {name: p.name})) + " →")}
+    ${ctaLink(linkFor(p), "💬 " + esc(ui("chat_with", {name: p.name})) + " →")}
     <div class="note">${esc(ui("opens", {p: P.name}))} · <a href="${girlUrl(p)}">${esc(ui("full_profile"))}</a></div>`;
   $("#profile").classList.add("show");
 }
@@ -146,7 +149,7 @@ function initHome() {
     let list = PROFILES.filter(p =>
       (!onlyNew || isNew(p)) &&
       [...active].every(t => p.tags.includes(t)) &&
-      (!q || [p.name, p.bio, tr(p.bio), pf(p.platform).name, ...p.tags, ...p.tags.map(tr)].join(" ").toLowerCase().includes(q)));
+      (!q || [p.name, bioOf(p), pf(p.platform).name, ...p.tags, ...p.tags.map(tr)].join(" ").toLowerCase().includes(q)));
     list.sort($("#sort").value === "name" ? (a,b) => a.name.localeCompare(b.name) : (a,b) => b.added.localeCompare(a.added));
     const filtered = onlyNew || active.size || q;
     $("#count").innerHTML = `<b>${list.length}</b> ` + esc(ui(onlyNew ? "count_new" : "count", {n:""}).trim()) +

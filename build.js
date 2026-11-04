@@ -5,15 +5,20 @@
    ===================================================================== */
 const fs = require("fs"), path = require("path"), vm = require("vm");
 const SRC = path.join(__dirname, "src"), OUT = path.join(__dirname, "public");
-const read = f => fs.readFileSync(path.join(SRC, f), "utf8");
+const imgExists = f => !!f && fs.existsSync(path.join(__dirname, f));
+const NOIMG = "\n;/* images not uploaded yet → placeholder */\nfor (const p of PROFILES) if (p.img && !IMG_OK.includes(p.img)) p.img = \"\";\nif (!IMG_OK.includes(PROMO.img)) PROMO.img = \"\";\n";
+const readRaw = f => fs.readFileSync(path.join(SRC, f), "utf8");
+let IMG_OK = [];
+const read = f => f === "data.js" ? readRaw(f) + `\n;const IMG_OK = ${JSON.stringify(IMG_OK)};` + NOIMG : readRaw(f);
 const CLIENT = ["data.js", "i18n.js", "i18n-pages.js", "i18n-tags.js", "app.js"];
 
 /* Load the client scripts in a sandbox for one language */
+{ const src = readRaw("data.js"); IMG_OK = [...new Set([...src.matchAll(/"(images\/[^"]+)"/g)].map(m => m[1]))].filter(imgExists); }
 function context(lang) {
   const ctx = { PAGE_LANG: lang, console, Date, URLSearchParams };
   vm.createContext(ctx);
   vm.runInContext(CLIENT.map(read).join("\n;\n") +
-    "\n;this.X={SITE,PLATFORMS,PLATFORM_DATA,PROFILES,PROMO,NEW_DAYS,LANGS,ui,tr,esc,slug,isNew,newCount,tagCount,ALL_PROFILE_TAGS,TAG_GROUPS,ALL_TAGS,profileCard,pickCard,platformCard,visual,ctaLink,girlUrl,tagUrl,get LANG(){return LANG}};", ctx);
+    "\n;this.X={SITE,PLATFORMS,PLATFORM_DATA,PROFILES,PROMO,NEW_DAYS,LANGS,ui,tr,esc,slug,isNew,newCount,tagCount,ALL_PROFILE_TAGS,TAG_GROUPS,ALL_TAGS,profileCard,pickCard,platformCard,visual,ctaLink,girlUrl,tagUrl,bioOf,linkFor,withAge,get LANG(){return LANG}};", ctx);
   ctx.X._ctx = ctx;
   return ctx.X;
 }
@@ -215,18 +220,18 @@ for (const g0 of base.PROFILES) pages.push({ file: "girl/" + base.slug(g0.name) 
   const u = X.ui, e = X.esc, P = X.PLATFORMS[g.platform];
   const similar = X.PROFILES.filter(p => p !== g).map(p => [p, p.tags.filter(t => g.tags.includes(t)).length])
     .sort((a,b) => b[1] - a[1]).slice(0, 4).map(x => x[0]);
-  return { page:"girl", nav:"home", modal:true, title:u("girl_meta_t", {name:g.name, age:g.age, p:P.name}),
-    desc:u("girl_meta_d", {name:g.name, age:g.age, p:P.name, bio:X.tr(g.bio)}), body: `
+  return { page:"girl", nav:"home", modal:true, title:u("girl_meta_t", {name:g.name, age:g.age || "", p:P.name}).replace(/, –/, " –").replace(/ ,/, ""),
+    desc:u("girl_meta_d", {name:g.name, age:g.age || "18+", p:P.name, bio:X.bioOf(g)}), body: `
   <p class="crumb"><a href="../index.html">${e(u("back_all"))}</a></p>
   <section class="girl">
     <div class="g-visual">${X.visual(g.img, P.color, g.name[0], g.name)}</div>
     <div class="g-body">
-      <h1>${e(g.name)}, ${g.age}</h1>
+      <h1>${X.withAge(g)}</h1>
       <div class="sub">${e(u("char_on", {p: P.name}))}${X.isNew(g) ? " · 🆕 " + e(u("nav_new")) : ""}</div>
-      <p class="g-bio">${e(X.tr(g.bio))}</p>
+      <p class="g-bio">${e(X.bioOf(g))}</p>
       <h2>${e(u("categories"))}</h2>
       <div class="tags" style="justify-content:flex-start">${g.tags.map(t => `<a class="tag" href="../tag/${X.slug(t)}.html">${e(X.tr(t))}</a>`).join("")}</div>
-      ${X.ctaLink(P, "💬 " + e(u("chat_with", {name: g.name})) + " →", "btn btn-main btn-xl")}
+      ${X.ctaLink(X.linkFor(g), "💬 " + e(u("chat_with", {name: g.name})) + " →", "btn btn-main btn-xl")}
       <div class="note">${e(u("opens", {p: P.name}))}</div>
     </div>
   </section>

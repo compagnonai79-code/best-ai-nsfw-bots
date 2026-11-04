@@ -169,3 +169,6 @@ hi: {
 }
 };
 for (const l in TAG_T) for (const k in TAG_T[l]) if (!I18N[l].t[k]) I18N[l].t[k] = TAG_T[l][k];
+
+const BTN_M = { en:"Chat with him", fr:"Parler avec lui", es:"Habla con él", de:"Mit ihm chatten", pt:"Converse com ele", hi:"उससे बात करें" };
+for (const l in BTN_M) I18N[l].ui.card_btn_m = BTN_M[l];
