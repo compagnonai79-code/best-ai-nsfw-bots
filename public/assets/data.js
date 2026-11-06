@@ -156,6 +156,14 @@ const PROFILES = [
           de:"Deine Frau und ihre beste Freundin haben gerade deinen Chatverlauf entdeckt. Jetzt musst du einiges erklären.",
           pt:"Sua esposa e a melhor amiga dela acabaram de achar seu histórico de conversas. Agora você vai ter que se explicar.",
           hi:"तुम्हारी पत्नी और उसकी बेस्ट फ़्रेंड ने तुम्हारी चैट हिस्ट्री देख ली है। अब तुम्हें बहुत कुछ समझाना पड़ेगा।" } },
+  { name:"Maisie Mckae", platform:"spicychat", added:"2026-11-06", img:"images/maisie-mckae.jpg", link:SC("09808294-ee37-4636-9353-bb25b24226c8"),
+    tags:["Female","Blonde","Tsundere","Romantic","Comedy"],
+    bio:{ en:"Your sister's best friend has never liked you. Tonight, movie night forces her to knock on your door — and the sparks fly.",
+          fr:"La meilleure amie de ta sœur ne t'a jamais supporté. Ce soir, la soirée film l'oblige à frapper à ta porte… et les étincelles fusent.",
+          es:"La mejor amiga de tu hermana nunca te ha soportado. Esta noche, la noche de películas la obliga a llamar a tu puerta… y saltan chispas.",
+          de:"Die beste Freundin deiner Schwester konnte dich nie leiden. Heute zwingt sie der Filmabend, an deine Tür zu klopfen – und es knistert.",
+          pt:"A melhor amiga da sua irmã nunca foi com a sua cara. Hoje, a noite de filmes a obriga a bater na sua porta… e saem faíscas.",
+          hi:"तुम्हारी बहन की बेस्ट फ़्रेंड तुम्हें कभी पसंद नहीं करती थी। आज मूवी नाइट की वजह से उसे तुम्हारा दरवाज़ा खटखटाना पड़ता है — और चिंगारियाँ उड़ती हैं।" } },
   { name:"Janice Cooper", platform:"spicychat", added:"2026-11-04", img:"images/janice-cooper.jpg", link:SC("0e6e2923-4d45-446b-bdb0-3c471f78bd38"),
     tags:["Female","MILF","Mature","Forbidden","Romantic","Submissive"],
     bio:{ en:"You run into your ex-girlfriend's mother at the supermarket — and she has no idea you two broke up.",
@@ -215,7 +223,7 @@ const PROFILES = [
 ];
 
 
-;const IMG_OK = ["images/promo-candy.jpg","images/avery-hughes.jpg","images/elizabeth-sinclair.jpg","images/her-pool-attendant.jpg","images/they-saw-my-chats.jpg","images/janice-cooper.jpg","images/malcolm.jpg","images/may.jpg","images/scaramouche.jpg","images/jade-bluebell.jpg","images/ava-and-harper.jpg","images/blair-sterling.jpg"];
+;const IMG_OK = ["images/promo-candy.jpg","images/avery-hughes.jpg","images/elizabeth-sinclair.jpg","images/her-pool-attendant.jpg","images/they-saw-my-chats.jpg","images/maisie-mckae.jpg","images/janice-cooper.jpg","images/malcolm.jpg","images/may.jpg","images/scaramouche.jpg","images/jade-bluebell.jpg","images/ava-and-harper.jpg","images/blair-sterling.jpg"];
 ;/* images not uploaded yet → placeholder */
 for (const p of PROFILES) if (p.img && p.img.startsWith("images/") && !IMG_OK.includes(p.img)) p.img = "";
 if (PROMO.img.startsWith("images/") && !IMG_OK.includes(PROMO.img)) PROMO.img = "";
