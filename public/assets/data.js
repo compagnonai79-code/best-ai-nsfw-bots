@@ -17,7 +17,7 @@ const SITE = {
   vat:      "[TO FILL: VAT number, or 'VAT not applicable, art. 293 B of the CGI']",
   director: "[TO FILL: publication director (usually you)]",
   host:     "[TO FILL: hosting company name, address and phone — e.g. Netlify, Inc., 512 2nd Street, Suite 200, San Francisco, CA 94107, USA]",
-  updated:  "2026-11-04"   // date shown on legal pages
+  updated:  "2026-11-07"   // date shown on legal pages
 };
 
 /* ---------- PLATFORMS (affiliate links + data) ----------
@@ -70,7 +70,7 @@ const PLATFORMS = {
 
 /* Facts for the Data page — verify each value on the official site, then set "checked". */
 const PLATFORM_DATA = {
-  candy:     { free:null, price:null, images:true,  voice:true,  video:null, app:null, checked:null },
+  candy:     { free:true, price:null, images:true,  voice:true,  video:true, app:null, checked:"2026-11-07" },  // seen on candy.ai chat pages: photos, video, voice & calls; free start, premium for unlimited
   spicychat: { free:true, price:null, images:null,  voice:null,  video:null, app:null, checked:null },
   gfgpt:     { free:null, price:null, images:true,  voice:null,  video:null, app:null, checked:null },
   aiallure:  { free:null, price:null, images:true,  voice:null,  video:null, app:null, checked:null },
@@ -80,6 +80,10 @@ const PLATFORM_DATA = {
   nectar:    { free:null, price:null, images:true,  voice:null,  video:null, app:null, checked:null },
   seduced:   { free:null, price:null, images:true,  voice:null,  video:true, app:null, checked:null },
 };
+
+/* ---------- TOP 10 OF THE WEEK (editor's picks) ----------
+   Profile ids, in order. Edit this list every week. Ids = the end of the /model/<id> URL. */
+const TOP_PICKS = ["riley-reid","pilar-ibarra","mizuki-saeki","mia-malkova","valeria-ochoa","lira","maisie-mckae","sp00kybby","victor-draven","lena-the-plug"];
 
 /* ---------- PROMO POP-UP ----------
    (pop-up texts are translated in i18n.js: promo_title, promo_text, promo_btn) */

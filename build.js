@@ -10,7 +10,7 @@ const NOIMG = "\n;/* images not uploaded yet → placeholder */\nfor (const p of
 const readRaw = f => fs.readFileSync(path.join(SRC, f), "utf8");
 let IMG_OK = [];
 const read = f => f === "data.js" ? readRaw(f) + `\n;const IMG_OK = ${JSON.stringify(IMG_OK)};` + NOIMG : readRaw(f);
-const CLIENT = ["data.js", "data-candy.js", "i18n.js", "i18n-pages.js", "i18n-tags.js", "i18n-tagpage.js", "app.js"];
+const CLIENT = ["data.js", "data-candy.js", "i18n.js", "i18n-pages.js", "i18n-tags.js", "i18n-tagpage.js", "i18n-extra.js", "app.js"];
 
 /* Load the client scripts in a sandbox for one language */
 { const src = readRaw("data.js"); IMG_OK = [...new Set([...src.matchAll(/"(images\/[^"]+)"/g)].map(m => m[1]))].filter(imgExists); }
@@ -18,7 +18,7 @@ function context(lang) {
   const ctx = { PAGE_LANG: lang, console, Date, URLSearchParams };
   vm.createContext(ctx);
   vm.runInContext(CLIENT.map(read).join("\n;\n") +
-    "\n;this.X={SITE,PLATFORMS,PLATFORM_DATA,PROFILES,PROMO,NEW_DAYS,LANGS,ui,tr,esc,slug,isNew,newCount,tagCount,ALL_PROFILE_TAGS,TAG_GROUPS,ALL_TAGS,profileCard,pickCard,platformCard,visual,ctaLink,girlUrl,tagUrl,inBase,byNew,bioOf,linkFor,withAge,get LANG(){return LANG}};", ctx);
+    "\n;this.X={SITE,PLATFORMS,PLATFORM_DATA,PROFILES,PROMO,NEW_DAYS,LANGS,ui,tr,esc,slug,isNew,newCount,tagCount,ALL_PROFILE_TAGS,TAG_GROUPS,ALL_TAGS,profileCard,pickCard,platformCard,visual,ctaLink,girlUrl,tagUrl,inBase,byNew,bioOf,linkFor,withAge,topList,bySel,pagerHtml,PER_PAGE,girlId,get LANG(){return LANG}};", ctx);
   ctx.X._ctx = ctx;
   return ctx.X;
 }
@@ -31,6 +31,9 @@ for (const l of Object.keys(LANGS)) if (l !== "en") { const X = context(l);
 const LEGAL = require("./src/legal.js")(SITE);
 const LANG_LIST = Object.keys(LANGS);
 const prefix = l => (l === "en" ? "" : l + "/");
+const OG_LOCALE = { en:"en_US", fr:"fr_FR", es:"es_ES", de:"de_DE", pt:"pt_BR", hi:"hi_IN" };
+const ogImage = img => !img ? SITE.url + "/images/og-default.jpg" : /^https?:/.test(img) ? img : SITE.url + "/" + img.replace(/^\.?\//, "");
+const fmtDate = (d, l) => { try { return new Intl.DateTimeFormat(l === "hi" ? "hi-IN" : l, {day:"numeric", month:"long", year:"numeric"}).format(new Date(d + "T12:00:00Z")); } catch (err) { return d; } };
 const absUrl = (l, file) => SITE.url + "/" + (prefix(l) + file).replace(/index\.html$/, "").replace(/\.html$/, "");
 const LEGAL_PAGES = [["terms","legal_terms"],["cookies","legal_cookies"],["dmca","legal_dmca"],["privacy","legal_privacy"],["ai-disclosure","legal_ai"],["legal-notice","legal_notice"]];
 const LEGAL_KEY = { "terms":"terms","cookies":"cookies","dmca":"dmca","privacy":"privacy","ai-disclosure":"ai","legal-notice":"notice" };
@@ -69,7 +72,16 @@ ${alternates}
 <meta property="og:title" content="${e(o.title)}">
 <meta property="og:description" content="${e(o.desc || "")}">
 <meta property="og:url" content="${canonical}">
-<meta property="og:type" content="website">
+<meta property="og:type" content="${o.ogType || "website"}">
+<meta property="og:site_name" content="${SITE.domain}">
+<meta property="og:locale" content="${OG_LOCALE[lang] || "en_US"}">
+<meta property="og:image" content="${e(ogImage(o.image))}">
+${o.image ? "" : '<meta property="og:image:width" content="1200">\n<meta property="og:image:height" content="630">'}
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="${e(o.title)}">
+<meta name="twitter:description" content="${e(o.desc || "")}">
+<meta name="twitter:image" content="${e(ogImage(o.image))}">
+<meta name="RATING" content="RTA-5042-1996-1400-1577-RTA">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;700&family=Inter:wght@400;500;600;700${lang === "hi" ? "&family=Noto+Sans+Devanagari:wght@400;600;700" : ""}&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="${root}assets/style.css">
@@ -144,26 +156,52 @@ const pages = [];   // {file, build(X, lang) -> layout options, altLangs?}
 
 for (const [file, base] of [["index.html",""],["women.html","women"],["men.html","men"],["anime.html","anime"]]) pages.push({ file, build: (X) => {
   const u = X.ui, e = X.esc, k = base ? "_" + base : "";
-  const list = [...X.PROFILES].filter(p => X.inBase(base, p)).sort(X.byNew);
-  const sorted = [...X.ALL_PROFILE_TAGS].filter(t => list.some(p => p.tags.includes(t))).sort((a,b) => X.tr(a).localeCompare(X.tr(b), X.LANG));
+  const list = [...X.PROFILES].filter(p => X.inBase(base, p)).sort(X.bySel);
+  const cnt = t => list.filter(p => p.tags.includes(t)).length;
+  const popular = [...X.ALL_PROFILE_TAGS].filter(t => !["Female","Male","Realistic","Image generation","Voice","Video"].includes(t) && cnt(t) >= 3)
+    .sort((a,b) => cnt(b) - cnt(a)).slice(0, 24);
+  const pages = Math.max(1, Math.ceil(list.length / X.PER_PAGE));
+  const top = X.topList().filter(p => X.inBase(base, p)).slice(0, 10);
+  const recent = [...list].sort((a,b) => b.added.localeCompare(a.added) || (!!b.img - !!a.img)).slice(0, 12);
+  const v = { site: SITE.domain, n: X.PROFILES.length, k: new Set(X.PROFILES.map(p => p.platform)).size, c: X.ALL_TAGS.length };
+  const faq = base ? [] : [1,2,3,4,5,6].map(i => [u("hq" + i, v), u("ha" + i, v)]);
+  const thumb = p => `<a class="rc" href="${X.girlUrl(p)}"><span class="rc-img">${X.visual(p.img, X.PLATFORMS[p.platform].color, p.name[0], p.name)}</span>
+      <span class="rc-t"><b>${e(p.name)}</b><small>${e(X.PLATFORMS[p.platform].name)}</small></span></a>`;
   return { page:"home", nav: base || "home", base, modal:true, title:u("meta_home_t" + k), desc:u("meta_home_d" + k), body: `
   <section class="hero">
     <h1>${u("hero_title" + k)}</h1>
     <p>${e(u(base ? "hero_sub_b" : "hero_sub", {n: list.length}))}</p>
     <div class="search"><input id="q" type="search" placeholder="${e(u("search"))}" aria-label="Search"></div>
   </section>
-  <div class="tags" id="tags">${sorted.map(t => `<a class="tag" href="${X.tagUrl(t)}">${e(X.tr(t))}<small>${X.tagCount(t)}</small></a>`).join("")}</div>
+  ${top.length >= 3 ? `<section class="top10"><div class="sec-head"><h2>${e(u("top_t"))}</h2><p>${e(u("top_sub"))}</p></div>
+    <ol class="t10">${top.map((p, i) => `<li><span class="t10-n">${i + 1}</span>${thumb(p)}</li>`).join("")}</ol></section>` : ""}
+  <div class="tags" id="tags">${popular.slice(0, 12).map(t => `<a class="tag" href="${X.tagUrl(t)}">${e(X.tr(t))}<small>${cnt(t)}</small></a>`).join("")}</div>
   <p class="all-tags"><a href="tags.html">${e(u("all_tags_link"))}</a></p>
   <div class="toolbar">
     <span class="count" id="count"><b>${list.length}</b> ${e(u("count", {n:""}).trim())}</span>
-    <select id="sort" aria-label="Sort"><option value="new">${e(u("sort_new"))}</option><option value="name">${e(u("sort_name"))}</option></select>
+    <div class="stabs" id="sort" role="tablist">${[["sel","sort_sel"],["new","sort_new_t"],["name","sort_az"]].map(([s2, key], i) =>
+      `<button type="button" data-s="${s2}" class="${i ? "" : "on"}">${e(u(key))}</button>`).join("")}</div>
   </div>
-  <div class="pgrid" id="grid">${list.map(X.profileCard).join("")}</div>
+  <div class="pgrid" id="grid">${list.slice(0, X.PER_PAGE).map(X.profileCard).join("")}</div>
+  <nav class="pager" id="pager" aria-label="Pagination">${pages > 1 ? X.pagerHtml(1, pages) : ""}</nav>
+  <section class="info"><h2>${e(u("recent_t"))}</h2>
+    <div class="recent">${recent.map(thumb).join("")}</div>
+    <p class="hero-links" style="text-align:left"><a href="index.html#new">${e(u("recent_all"))} →</a></p></section>
+  <section class="info"><h2>${e(u("popcat_t"))}</h2>
+    <div class="tags" style="justify-content:flex-start">${popular.map(t => `<a class="tag" href="${X.tagUrl(t)}">${e(X.tr(t))}<small>${cnt(t)}</small></a>`).join("")}</div>
+    <p class="hero-links" style="text-align:left"><a href="tags.html">${e(u("all_tags_link"))}</a></p></section>
   <section class="info">
     <h2>${e(u("how_title"))}</h2>
     <ul><li>${u("how_1")}</li><li>${u("how_2")}</li><li>${u("how_3")}</li></ul>
   </section>
-  <section class="info" id="disclosure"><h2>${e(u("disc_title"))}</h2><p>${e(u("disc_home"))}</p></section>` };
+  ${base ? "" : `<section class="info"><h2>${e(u("about_t", v))}</h2><p>${e(u("about_1", v))}</p><p>${e(u("about_2", v))}</p>
+    <p class="hero-links" style="text-align:left"><a href="how-we-rate.html">${e(u("nav_how"))} →</a> · <a href="data.html">${e(u("nav_data"))} →</a> · <a href="platforms.html">${e(u("nav_platforms"))} →</a></p></section>
+  <section class="info"><h2>${e(u("hfaq_t"))}</h2>
+    <div class="mfaq">${faq.map(([q, a]) => `<div class="mq"><h3>${e(q)}</h3><p>${e(a)}</p></div>`).join("")}</div></section>`}
+  <section class="info" id="disclosure"><h2>${e(u("disc_title"))}</h2><p>${e(u("disc_home"))}</p></section>
+  ${base ? "" : `<script type="application/ld+json">${JSON.stringify([
+    {"@context":"https://schema.org","@type":"WebSite","name":SITE.domain,"url":SITE.url + "/"},
+    {"@context":"https://schema.org","@type":"FAQPage","mainEntity":faq.map(([q,a]) => ({"@type":"Question","name":q,"acceptedAnswer":{"@type":"Answer","text":a}}))}]).replace(/</g,"\\u003c")}</script>`}` };
 }});
 
 pages.push({ file: "platforms.html", build: (X) => {
@@ -269,9 +307,20 @@ for (const g0 of base.PROFILES) pages.push({ file: "model/" + (g0.id || base.slu
     [u("grp_age"), g.age ? e(String(g.age)) : e(u("m_not_set"))],
     ...GLANCE.map(k => [u("grp_" + k), g.tags.filter(t => groupOf(t) === k).map(t => `<a href="../tag/${X.slug(t)}.html">${e(X.tr(t))}</a>`).join(", ")]).filter(r => r[1]),
     [u("m_features", {p: P.name}), `${e(u("col_images"))} : ${e(yn(D.images))} · ${e(u("col_voice"))} : ${e(yn(D.voice))} · ${e(u("col_video"))} : ${e(yn(D.video))}`],
-    [u("col_free"), e(yn(D.free))]];
+    [u("col_free"), e(yn(D.free))],
+    [u("m_checked"), e(fmtDate(SITE.updated, X.LANG))]];
+  /* "Our take": pros/cons built only from verified data (platform features, profile data) */
+  const nTags = g.tags.filter(t => !["Female","Male","Image generation","Voice","Video"].includes(t)).length;
+  const pros = [D.images && "pro_img", D.voice && "pro_voice", D.video && "pro_video", D.free && "pro_free", g.creator && "pro_creator",
+    nTags >= 6 && "pro_tags", (g.bio && (typeof g.bio === "string" || g.bio.fr || g.bio.en)) && !g.creator && "pro_bio"].filter(Boolean);
+  const cons = [g.platform === "candy" && "con_paid", g.platform !== "candy" && (D.images || D.voice || D.video) && "con_paid",
+    g.platform === "spicychat" && "con_comm", !g.img && "con_noimg", !g.age && !g.creator && "con_noage"].filter(Boolean);
+  const keyTags = g.tags.filter(t => !["Female","Male","Realistic","Anime","Image generation","Voice","Video","Sexting","Creator Twin"].includes(t)).slice(0, 4).map(X.tr);
+  const rv = { ...v, site: SITE.domain, d: fmtDate(SITE.updated, X.LANG), x: nTags, tags: keyTags.join(", ") || X.tr(main),
+    style: u(g.tags.includes("Anime") ? "rv_anime" : "rv_real") };
+  const cmpRows = [g, ...similar].map(p => [p, p.tags.filter(t => g.tags.includes(t) && !["Female","Male","Realistic","Image generation","Voice","Video"].includes(t))]);
   const faq = [1,2,3,4].map(i => [u("fq" + i, v), u("fa" + i + (i === 1 ? gen : ""), {...v, img: yn(D.images).toLowerCase(), voice: yn(D.voice).toLowerCase()})]);
-  return { page:"model", nav:"home", title:u("girl_meta_t", {name:g.name, age:g.age || "", p:P.name}).replace(/, –/, " –").replace(/ ,/, ""),
+  return { page:"model", nav:"home", image: g.img || "", ogType: "profile", title:u("girl_meta_t", {name:g.name, age:g.age || "", p:P.name}).replace(/, –/, " –").replace(/ ,/, ""),
     desc:u("girl_meta_d", {name:g.name, age:g.age || "18+", p:P.name, bio:X.bioOf(g)}).slice(0, 300), body: `
   <nav class="crumb"><a href="../index.html">${e(u("nav_girls"))}</a> › <a href="../tag/${X.slug(main)}.html">${e(X.tr(main))}</a> › <span>${e(g.name)}</span></nav>
   <section class="girl">
@@ -298,6 +347,20 @@ for (const g0 of base.PROFILES) pages.push({ file: "model/" + (g0.id || base.slu
     <p>${e(X.tr(P.desc))}</p>
     <ul class="feat">${P.feats.map(f => `<li>${e(X.tr(f))}</li>`).join("")}</ul>
     <p class="hero-links" style="text-align:left"><a href="../platforms.html">${e(u("m_see_pl"))}</a> · <a href="../data.html">${e(u("nav_data"))} →</a> · <a href="../how-we-rate.html">${e(u("nav_how"))} →</a></p></section>
+
+  <section class="info review"><h2>${e(u("rv_t"))}</h2>
+    <p class="rv-by">${e(u("rv_by", rv))} · ${e(u("rv_checked", rv))}</p>
+    <p>${e(u("rv_sum", rv))}</p>
+    <div class="tp-grid"><div><h3 class="pro-h">${e(u("rv_pros"))}</h3><ul class="pros">${pros.map(k => `<li>${e(u(k, rv))}</li>`).join("")}</ul></div>
+      ${cons.length ? `<div><h3 class="con-h">${e(u("rv_cons"))}</h3><ul class="cons">${cons.map(k => `<li>${e(u(k, rv))}</li>`).join("")}</ul></div>` : ""}</div></section>
+
+  <section class="info"><h2>${e(u("cmp_t", v))}</h2>
+    <div class="tablewrap"><table class="data cmp" style="min-width:0"><thead><tr><th>${e(u("cmp_name"))}</th><th>${e(u("col_platform"))}</th><th>${e(u("grp_age"))}</th><th>${e(u("cmp_common"))}</th><th></th></tr></thead><tbody>
+    ${cmpRows.map(([p, common], i) => `<tr${i ? "" : ' class="me"'}><td>${i ? `<a href="${X.girlUrl(p)}"><strong>${e(p.name)}</strong></a>` : `<strong>${e(p.name)}</strong> <small>(${e(u("cmp_this"))})</small>`}</td>
+      <td>${e(X.PLATFORMS[p.platform].name)}</td><td>${p.age ? e(String(p.age)) : "–"}</td>
+      <td>${i ? `${common.length} <small>${e(common.slice(0, 3).map(X.tr).join(", "))}</small>` : "–"}</td>
+      <td>${X.ctaLink(X.linkFor(p), e(u("tp_go")) + " →", "tbl-link")}</td></tr>`).join("")}
+    </tbody></table></div></section>
 
   <section class="info"><h2>${e(u("m_faq_t", v))}</h2>
     <div class="mfaq">${faq.map(([q, a]) => `<div class="mq"><h3>${e(q)}</h3><p>${e(a)}</p></div>`).join("")}</div></section>

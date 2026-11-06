@@ -30,6 +30,11 @@ const linkFor = p => ({ url: p.link || pf(p.platform).url, fallback: pf(p.platfo
 const withAge = p => esc(p.name) + (p.age ? ", " + p.age : "");
 const byNew = (a,b) => (!!b.img - !!a.img) || b.added.localeCompare(a.added);   // profiles with a photo first
 const girlId = p => p.id || slug(p.name);
+/* editor's picks (TOP_PICKS in data.js) and the default "Selection" order: picks first, then newest */
+const pickRank = p => { const i = (typeof TOP_PICKS !== "undefined" ? TOP_PICKS : []).indexOf(girlId(p)); return i < 0 ? 1e9 : i; };
+const topList = () => (typeof TOP_PICKS !== "undefined" ? TOP_PICKS : []).map(id => PROFILES.find(p => girlId(p) === id)).filter(Boolean);
+const bySel = (a, b) => (pickRank(a) - pickRank(b)) || byNew(a, b);
+const PER_PAGE = 36;
 const girlUrl = p => LR() + "model/" + girlId(p) + ".html";
 
 function ctaLink(p, label, cls = "btn btn-main") {
@@ -147,6 +152,13 @@ const BASES = {
   men:   p => p.tags.includes("Male"),
   anime: p => p.tags.includes("Anime")
 };
+const pagerHtml = (p, n) => {
+  const nums = [...new Set([1, p - 1, p, p + 1, n])].filter(x => x >= 1 && x <= n).sort((a, b) => a - b);
+  let out = "", last = 0;
+  for (const x of nums) { if (x - last > 1) out += `<span class="pg-gap">…</span>`; out += `<a href="#grid" data-p="${x}" class="pg-n${x === p ? " on" : ""}"${x === p ? ' aria-current="page"' : ""}>${x}</a>`; last = x; }
+  return `${p > 1 ? `<a href="#grid" data-p="${p - 1}" class="pg-btn">${esc(ui("pg_prev"))}</a>` : ""}${out}
+    ${p < n ? `<a href="#grid" data-p="${p + 1}" class="pg-btn">${esc(ui("pg_next"))}</a>` : ""}<span class="pg-info">${esc(ui("pg", {p, n}))}</span>`;
+};
 const inBase = (b, p) => !b || !BASES[b] || BASES[b](p);
 function initHome() {
   const BASE_KEY = typeof PAGE_BASE !== "undefined" ? PAGE_BASE : "";
@@ -160,7 +172,7 @@ function initHome() {
   const groupOf = t => Object.keys(TAG_GROUPS).find(g => TAG_GROUPS[g].includes(t));
   const qp = new URLSearchParams(location.search).get("tag");
   const pre = ALL_PROFILE_TAGS.find(t => slug(t) === qp); if (pre && sel[groupOf(pre)]) sel[groupOf(pre)].add(pre);
-  let onlyNew = location.hash === "#new", openG = null, showMore = false;
+  let onlyNew = location.hash === "#new", openG = null, showMore = false, sortMode = onlyNew ? "new" : "sel", page = 1;
 
   const inAge = (p, k) => { const r = AGE_RANGES.find(x => x[0] === k); return p.age && p.age >= r[1] && p.age <= r[2]; };
   const matchGroup = (p, g) => !sel[g].size || [...sel[g]].some(v =>
@@ -193,33 +205,39 @@ function initHome() {
     let list = LIST.filter(p =>
       (!onlyNew || isNew(p)) && Object.keys(sel).every(g => matchGroup(p, g)) &&
       (!q || [p.name, bioOf(p), pf(p.platform).name, ...p.tags, ...p.tags.map(tr)].join(" ").toLowerCase().includes(q)));
-    list.sort($("#sort").value === "name" ? (a,b) => a.name.localeCompare(b.name) : byNew);
+    list.sort(sortMode === "name" ? (a,b) => a.name.localeCompare(b.name) : sortMode === "new" ? byNew : bySel);
+    const pages = Math.max(1, Math.ceil(list.length / PER_PAGE)); if (page > pages) page = pages;
+    const shown = list.slice((page - 1) * PER_PAGE, page * PER_PAGE);
     const filtered = onlyNew || Object.values(sel).some(s => s.size) || q;
     $("#count").innerHTML = `<b>${list.length}</b> ` + esc(ui(onlyNew ? "count_new" : "count", {n:""}).trim()) +
       (filtered ? `<button class="clear" id="clear">${esc(ui("clear"))}</button>` : "");
     $("#new-btn")?.classList.toggle("on", onlyNew);
-    $("#grid").innerHTML = list.length ? list.map(profileCard).join("") : `<div class="empty">${esc(ui("empty"))}</div>`;
+    $("#grid").innerHTML = list.length ? shown.map(profileCard).join("") : `<div class="empty">${esc(ui("empty"))}</div>`;
+    document.querySelectorAll("#sort [data-s]").forEach(b => b.classList.toggle("on", b.dataset.s === sortMode));
+    $("#pager").innerHTML = pages > 1 ? pagerHtml(page, pages) : "";
   };
-  const resetAll = () => { onlyNew = false; Object.values(sel).forEach(s => s.clear()); $("#q").value = ""; history.replaceState(null, "", location.pathname); renderTags(); renderGrid(); };
+  const resetAll = () => { onlyNew = false; page = 1; Object.values(sel).forEach(s => s.clear()); $("#q").value = ""; history.replaceState(null, "", location.pathname); renderTags(); renderGrid(); };
   $("#tags").addEventListener("click", e => {
     const btn = e.target.closest(".fbtn");
     if (btn) { const g = btn.parentElement.dataset.g; openG = openG === g ? null : g; renderTags(); return; }
     if (e.target.id === "fmore") { showMore = !showMore; openG = null; renderTags(); return; }
     if (e.target.id === "freset") { resetAll(); return; }
     const chip = e.target.closest(".fchip");
-    if (chip) { sel[chip.dataset.g].delete(chip.dataset.v); renderTags(); renderGrid(); }
+    if (chip) { sel[chip.dataset.g].delete(chip.dataset.v); page = 1; renderTags(); renderGrid(); }
   });
   $("#tags").addEventListener("change", e => {
     const cb = e.target.closest("input[type=checkbox]"); if (!cb) return;
     const g = cb.closest(".fdrop").dataset.g; cb.checked ? sel[g].add(cb.dataset.v) : sel[g].delete(cb.dataset.v);
-    renderTags(); renderGrid();
+    page = 1; renderTags(); renderGrid();
   });
   document.addEventListener("click", e => { if (openG && !e.target.closest(".fdrop")) { openG = null; renderTags(); } });
-  $("#new-btn")?.addEventListener("click", () => { onlyNew = !onlyNew; $("#sort").value = "new"; renderGrid(); window.scrollTo({top: $("#tags").offsetTop - 80, behavior: "smooth"}); });
-  window.addEventListener("hashchange", () => { onlyNew = location.hash === "#new"; renderGrid(); });
+  const toList = () => window.scrollTo({top: $("#count").getBoundingClientRect().top + window.scrollY - 90, behavior: "smooth"});
+  $("#new-btn")?.addEventListener("click", () => { onlyNew = !onlyNew; sortMode = "new"; page = 1; renderGrid(); toList(); });
+  window.addEventListener("hashchange", () => { onlyNew = location.hash === "#new"; if (onlyNew) sortMode = "new"; page = 1; renderGrid(); });
   $("#count").addEventListener("click", e => { if (e.target.id === "clear") resetAll(); });
-  $("#q").addEventListener("input", renderGrid);
-  $("#sort").addEventListener("change", renderGrid);
+  $("#q").addEventListener("input", () => { page = 1; renderGrid(); });
+  $("#sort").addEventListener("click", e => { const b = e.target.closest("[data-s]"); if (!b) return; sortMode = b.dataset.s; page = 1; renderGrid(); });
+  $("#pager").addEventListener("click", e => { const b = e.target.closest("[data-p]"); if (!b) return; e.preventDefault(); page = +b.dataset.p; renderGrid(); toList(); });
   renderTags(); renderGrid();
 }
 
