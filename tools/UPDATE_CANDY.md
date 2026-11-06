@@ -1,0 +1,64 @@
+# Adding new Candy AI characters (procedure)
+
+Used by the recurring "new characters" task. Goal: every Candy AI character that is not on the site yet gets added, with its official data, as long as it passes the content rules below.
+
+## 0. Where things run
+- Candy pages can only be read from the **built-in browser on the owner's computer** (`mcp__remote-devices__Claude_Browser__*` tools). The cloud shell cannot reach candy.ai or cdn.candy.ai.
+- Open a tab on `https://candy.ai/fr/ai-girlfriend` (preview_start), then run `fetch()` calls from that tab with `javascript_tool`.
+- Candy rate-limits (HTTP 429 + `retry-after`). Wait at least 2.5 s between requests and honour `retry-after` (+5 s). Never hammer the site.
+
+## 1. List the full catalogue
+Paginate until a page adds no new id:
+- `/home/profiles?filter=female&locale=fr&page=N`
+- `/home/profiles?filter=anime&locale=fr&page=N`
+- `/home/profiles?filter=male&locale=fr&page=N`
+- `/home/featured_characters?category=all&locale=fr&page=N`
+- `/candy-creators?locale=fr` and `/fr/ai-girlfriend` (landing)
+
+Ids = the slug in links matching `/ai-(girlfriend|boyfriend|anime)/<slug>`.
+
+## 2. Find the new ones
+Compare with the `"id"` values in `src/data-candy.js`, and ignore:
+- `live-action` (a section, not a character);
+- the excluded ids in `tools/excluded.json`;
+- aliases: a slug that is an existing id without its `-2`/`-3` suffix (e.g. `lila-crazy` = `lila-crazy-2`). Confirm by comparing descriptions.
+
+## 3. Read each new character's official sheet
+`fetch('/conversations/<slug>/profile_panel', {headers:{Accept:'text/vnd.turbo-stream.html, text/html'}})`
+Strip `<template>` tags, parse with DOMParser, take `body.innerText`:
+- the line just before `À propos de moi` = description (French) → `bio.fr`;
+- after it: `Âge`, `Morphologie`, `Ethnicité`, `Relation`, `Profession`, `Loisirs`, `Personnalité`.
+- Image: the `https://cdn.candy.ai/<key>-788x966-webp90` URL in the raw HTML → use `<key>-600x900-webp90`. Check it loads (new Image()). `sfw` = key starts with `sfw-profile`.
+- The display name is the first name shown in the card; the page URL is `https://candy.ai/fr/ai-girlfriend/<slug>` (`ai-boyfriend` for men).
+
+## 4. Content rules (mandatory)
+**Do not add**, and list in the report instead:
+- any character whose age is under 18 or not clearly adult;
+- any character presented as a minor or in a school setting in a sexual context (schoolgirl, high school, uniform + school, "student" of a lycée/collège, childlike framing, "teen" emphasis);
+- anything you are unsure about → leave it out and flag it for the owner.
+Never add a "Teen", "Young", "Schoolgirl" or similar youth-focused tag.
+
+## 5. Tags (only what the official sheet or description supports)
+Use only tag names that exist in `TAG_GROUPS` (`src/data.js`). Always: `Female`/`Male`, `Realistic` or `Anime`, plus `Image generation`, `Voice`, `Video` (Candy offers these on every character). Then, only when explicit:
+- body from Morphologie (Mince→Slim, Pulpeuse/Voluptueuse→Curvy, poitrine généreuse→Big Boobs, Athlétique→Athletic, Tonique/En forme→Fit, Menue/Petite→Petite, Ronde→Chubby, sablier→Hourglass, musclé→Muscular);
+- origin from Ethnicité (Japonaise→Japanese+Asian, Libanaise→Middle Eastern+Arab, Mexicaine→Mexican+Latina, Française→French+European, …);
+- role from Profession (Barista, Waitress, Nurse, Teacher, Model, Streamer, CEO, Maid, …; "Barmaid" is NOT Maid; "étudiante en médecine" is NOT Doctor);
+- relationship only when the **character** is that relation to the user ("Ta demi-sœur" → Stepsister; "la sœur de ta femme" → NOT Wife);
+- personality from Personnalité (Timide→Shy, Soumise→Submissive, Joueuse→Playful, Dominante→Dominant, …).
+Hair colour only if the description says it (Blonde, Brunette, Redhead).
+
+## 6. Add to `src/data-candy.js`
+Insert a JSON object at the top of the girlfriend block (before the first existing girlfriend), same shape as the others:
+`{"id","name","platform":"candy","added":"YYYY-MM-DD","img","sfw","url","tags":[…],"bio":{"fr":"…"},"age":N}`
+(`creator: true` for creators.) `added` = today, so the profile shows as "New".
+
+## 7. Build, check, publish
+```
+node build.js
+node tools/check-links.js      # must say 0 broken
+git add -A
+git -c user.name="compagnonai79-code" -c user.email="compagnonai79-code@users.noreply.github.com" commit -m "Add N new Candy characters"
+git push
+```
+Commit message ends with the attribution lines required by the session.
+If nothing is new: no commit.

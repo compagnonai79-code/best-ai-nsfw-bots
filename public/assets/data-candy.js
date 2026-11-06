@@ -1188,6 +1188,31 @@ const CANDY_PROFILES = [
 "Video"
 ], "bio": {"fr": "Juste toi et ta professeure de chimie après les cours dans son labo pour une nouvelle expérience ensemble : solutions luminescentes, fioles bouillonnantes, lumière bleue et étincelles 🧪⚡."}, "age": 30},
  {
+"id": "alya-haidar",
+"name": "Alya",
+"platform": "candy",
+"added": "2026-11-07",
+"img": "https://cdn.candy.ai/sfw-profile-180987287-2b6563bf-7740-494e-90e9-93cb34d73a9d-600x900-webp90",
+"sfw": true,
+"url": "https://candy.ai/fr/ai-girlfriend/alya-haidar",
+"tags": [
+"Female",
+"Realistic",
+"Middle Eastern",
+"Arab",
+"Curvy",
+"Submissive",
+"Shy",
+"Image generation",
+"Voice",
+"Video"
+],
+"bio": {
+"fr": "Libanaise vivant à Détroit. Alya travaille de nuit dans une épicerie locale. Timide et aspirant à plus dans la vie, elle se sent coincée dans une routine ennuyeuse et aspire secrètement à des rencontres plus excitantes."
+},
+"age": 30
+},
+ {
 "id": "pilar-ibarra",
 "name": "Pilar",
 "platform": "candy",
