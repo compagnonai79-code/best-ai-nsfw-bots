@@ -6,7 +6,7 @@
 const fs = require("fs"), path = require("path"), vm = require("vm");
 const SRC = path.join(__dirname, "src"), OUT = path.join(__dirname, "public");
 const imgExists = f => !!f && fs.existsSync(path.join(__dirname, f));
-const NOIMG = "\n;/* images not uploaded yet → placeholder */\nfor (const p of PROFILES) if (p.img && p.img.startsWith(\"images/\") && !IMG_OK.includes(p.img)) p.img = \"\";\nif (!IMG_OK.includes(PROMO.img)) PROMO.img = \"\";\n";
+const NOIMG = "\n;/* images not uploaded yet → placeholder */\nfor (const p of PROFILES) if (p.img && p.img.startsWith(\"images/\") && !IMG_OK.includes(p.img)) p.img = \"\";\nif (PROMO.img.startsWith(\"images/\") && !IMG_OK.includes(PROMO.img)) PROMO.img = \"\";\n";
 const readRaw = f => fs.readFileSync(path.join(SRC, f), "utf8");
 let IMG_OK = [];
 const read = f => f === "data.js" ? readRaw(f) + `\n;const IMG_OK = ${JSON.stringify(IMG_OK)};` + NOIMG : readRaw(f);
