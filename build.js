@@ -10,7 +10,7 @@ const NOIMG = "\n;/* images not uploaded yet → placeholder */\nfor (const p of
 const readRaw = f => fs.readFileSync(path.join(SRC, f), "utf8");
 let IMG_OK = [];
 const read = f => f === "data.js" ? readRaw(f) + `\n;const IMG_OK = ${JSON.stringify(IMG_OK)};` + NOIMG : readRaw(f);
-const CLIENT = ["data.js", "data-candy.js", "i18n.js", "i18n-pages.js", "i18n-tags.js", "app.js"];
+const CLIENT = ["data.js", "data-candy.js", "i18n.js", "i18n-pages.js", "i18n-tags.js", "i18n-tagpage.js", "app.js"];
 
 /* Load the client scripts in a sandbox for one language */
 { const src = readRaw("data.js"); IMG_OK = [...new Set([...src.matchAll(/"(images\/[^"]+)"/g)].map(m => m[1]))].filter(imgExists); }
@@ -201,20 +201,54 @@ pages.push({ file: "tags.html", build: (X) => {
       <span class="tt-name">${e(X.tr(t))}</span><span class="tt-n">${n}</span></a>`; }).join("")}</div></section>`; }).join("")}` };
 }});
 
-/* one page per tag (all categories; empty ones are noindex and left out of sitemap.xml) */
-for (const t of base.ALL_TAGS) pages.push({ file: "tag/" + base.slug(t) + ".html", build: (X) => {
+/* one page per tag: profiles + article (empty ones are noindex and left out of sitemap.xml) */
+const listFmt = (arr, lang) => { try { return new Intl.ListFormat(lang, {type:"conjunction"}).format(arr); } catch (e) { return arr.join(", "); } };
+for (const t of base.ALL_TAGS) pages.push({ file: "tag/" + base.slug(t) + ".html", build: (X, lang) => {
   const u = X.ui, e = X.esc, list = X.PROFILES.filter(p => p.tags.includes(t)).sort(X.byNew);
-  const name = X.tr(t), grp = X.TAG_GROUPS[groupOf(t)];
-  const related = grp.filter(x => x !== t && X.tagCount(x) > 0).concat(X.ALL_PROFILE_TAGS.filter(x => x !== t && !grp.includes(x)))
-    .filter((x, i, a) => a.indexOf(x) === i).slice(0, 30);
-  return { page:"tag", nav:"tags", modal:true, noindex: list.length === 0,
-    title:u("meta_tag_t", {tag:name, n:list.length}), desc:u("meta_tag_d", {tag:name, n:list.length}), body: `
-  <p class="crumb"><a href="../tags.html">${e(u("tag_all"))}</a> · <a href="../tags.html#g-${groupOf(t)}">${e(u("grp_" + groupOf(t)))}</a></p>
-  <section class="hero"><h1>${u("tag_h1", {tag: e(name)})}</h1><p>${e(list.length ? u("tag_sub", {n:list.length, tag:name}) : u("tag_empty"))}</p></section>
-  ${list.length ? `<div class="pgrid" id="grid">${list.map(X.profileCard).join("")}</div>` : `<p class="hero-links"><a href="../index.html">${e(u("back_all"))}</a></p>`}
-  <h2 class="section-title">${e(u("tags_title").replace(/<[^>]+>/g, ""))}</h2>
-  <div class="tags" style="justify-content:flex-start">${related.map(x => `<a class="tag" href="${X.slug(x)}.html">${e(X.tr(x))}<small>${X.tagCount(x)}</small></a>`).join("")}</div>
-  <p class="all-tags"><a href="../tags.html">${e(u("all_tags_link"))}</a></p>` };
+  const name = X.tr(t), g = groupOf(t), grp = X.TAG_GROUPS[g], n = list.length;
+  const alts = grp.filter(x => x !== t && X.tagCount(x) > 0).sort((a,b) => X.tagCount(b) - X.tagCount(a)).slice(0, 24);
+  const co = {}; list.forEach(p => p.tags.forEach(x => { if (x !== t && !["Female","Realistic"].includes(x)) co[x] = (co[x] || 0) + 1; }));
+  const related = Object.entries(co).sort((a,b) => b[1] - a[1]).slice(0, 18).map(x => x[0]);
+  const crumb = `<p class="crumb"><a href="../tags.html">${e(u("tag_all"))}</a> · <a href="../tags.html#g-${g}">${e(u("grp_" + g))}</a></p>`;
+  const meta = { page:"tag", nav:"tags", modal:true, noindex: n === 0, title:u("meta_tag_t", {tag:name, n}), desc:u("meta_tag_d", {tag:name, n}) };
+  if (!n) return { ...meta, body: `${crumb}
+  <section class="hero"><h1>${u("tag_h1", {tag: e(name)})}</h1><p>${e(u("tag_empty"))}</p></section>
+  <p class="hero-links"><a href="../index.html">${e(u("back_all"))}</a></p>
+  <h2 class="section-title">${e(u("tp_alt_t", {g: u("grp_" + g)}))}</h2>
+  <div class="tags" style="justify-content:flex-start">${alts.map(x => `<a class="tag" href="${X.slug(x)}.html">${e(X.tr(x))}<small>${X.tagCount(x)}</small></a>`).join("")}</div>` };
+  /* platform stats */
+  const byPf = {}; list.forEach(p => byPf[p.platform] = (byPf[p.platform] || 0) + 1);
+  const pfs = Object.entries(byPf).sort((a,b) => b[1] - a[1]);
+  const pfNames = pfs.map(([k]) => X.PLATFORMS[k].name);
+  const imgPf = pfs.filter(([k]) => (X.PLATFORM_DATA[k] || {}).images).map(([k]) => X.PLATFORMS[k].name);
+  const v = { tag: name, n, k: pfs.length, d: SITE.updated, pls: listFmt(pfNames, lang), top: pfNames[0], topn: pfs[0][1], site: SITE.domain,
+              img: listFmt(imgPf.length ? imgPf : pfNames, lang), g: u("grp_" + g) };
+  v.grp = u("gi_" + g, v);
+  const faq = [1,2,3,4,5,6].map(i => [u("tq" + i, v), u("ta" + i, v)]);
+  return { ...meta, body: `${crumb}
+  <section class="hero tp-hero"><h1>${u("tag_h1", {tag: e(name)})}</h1>
+    <p class="tp-by">${e(u("tp_by", v))}</p>
+    <p class="tp-intro">${e(u("tp_intro", v))}</p></section>
+  <div class="pgrid" id="grid">${list.map(X.profileCard).join("")}</div>
+  <p class="tp-note">${e(u("tp_order"))}</p>
+  <article class="tp-article">
+    <section class="info"><h2>${e(u("tp_check_t"))}</h2><ol class="steps">${[1,2,3,4,5].map(i => `<li>${u("tp_c" + i)}</li>`).join("")}</ol></section>
+    <section class="info"><h2>${e(u("tp_expect_t", v))}</h2>
+      <div class="tp-grid">${[1,2,3,4].map(i => `<div><h3>${e(u("tp_e" + i + "_t"))}</h3><p>${e(u("tp_e" + i, v))}</p></div>`).join("")}</div>
+      <p class="hero-links" style="text-align:left"><a href="../data.html">${e(u("nav_data"))} →</a> · <a href="../how-we-rate.html">${e(u("nav_how"))} →</a></p></section>
+    <section class="info"><h2>${e(u("tp_pl_t", v))}</h2>
+      <div class="tablewrap"><table class="data" style="min-width:0"><thead><tr><th>${e(u("col_platform"))}</th><th>${e(u("tp_col_n", v))}</th><th>${e(u("col_score"))}</th><th></th></tr></thead><tbody>
+      ${pfs.map(([k, c]) => { const P = X.PLATFORMS[k]; return `<tr><td><strong>${e(P.name)}</strong></td><td>${c}</td><td>★ ${P.rating}</td><td>${X.ctaLink(P, e(u("tp_go")) + " →", "tbl-link")}</td></tr>`; }).join("")}
+      </tbody></table></div>
+      <p class="hero-links" style="text-align:left"><a href="../platforms.html">${e(u("m_see_pl"))}</a></p></section>
+    ${related.length ? `<section class="info"><h2>${e(u("tp_rel_t", v))}</h2><div class="tags" style="justify-content:flex-start">${related.map(x => `<a class="tag" href="${X.slug(x)}.html">${e(X.tr(x))}<small>${co[x]}</small></a>`).join("")}</div></section>` : ""}
+    ${alts.length ? `<section class="info"><h2>${e(u("tp_alt_t", v))}</h2><div class="tags" style="justify-content:flex-start">${alts.map(x => `<a class="tag" href="${X.slug(x)}.html">${e(X.tr(x))}<small>${X.tagCount(x)}</small></a>`).join("")}</div></section>` : ""}
+    <section class="info"><h2>${e(u("tp_faq_t", v))}</h2>
+      <div class="mfaq">${faq.map(([q, a]) => `<div class="mq"><h3>${e(q)}</h3><p>${e(a)}</p></div>`).join("")}</div></section>
+    <p class="tp-note">${e(u("tp_aff"))} <a href="../legal/terms.html">${e(u("legal_terms"))}</a></p>
+  </article>
+  <p class="all-tags"><a href="../tags.html">${e(u("all_tags_link"))}</a></p>
+  <script type="application/ld+json">${JSON.stringify({"@context":"https://schema.org","@type":"FAQPage","mainEntity":faq.map(([q,a]) => ({"@type":"Question","name":q,"acceptedAnswer":{"@type":"Answer","text":a}}))}).replace(/</g,"\\u003c")}</script>` };
 }});
 
 /* one page per model: /model/<id> */

@@ -341,3 +341,15 @@ nav{gap:16px}
 /* Promo pop-up: show the whole banner */
 .promo .visual{background:#2a1a20}
 .promo .visual img{object-fit:cover;object-position:left center}
+
+/* Category article */
+.tp-hero{padding-bottom:6px}
+.tp-by{font-size:13px;color:var(--muted);margin:-4px 0 12px}
+.tp-intro{max-width:760px}
+.tp-note{color:var(--muted);font-size:12.5px;text-align:center;margin:-30px 0 34px}
+.tp-article .tp-note{margin:0 0 24px;text-align:left}
+.tp-article .tp-note a{color:var(--muted)}
+.tp-grid{display:grid;grid-template-columns:1fr 1fr;gap:16px 26px;margin-bottom:6px}
+.tp-grid h3{font-size:16px;margin-bottom:4px}
+.tp-grid p{margin:0}
+@media(max-width:700px){.tp-grid{grid-template-columns:1fr}}
