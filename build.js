@@ -186,7 +186,7 @@ const GRP_COLORS = [["#ff3d8b","#ff8a5c"],["#8b5cf6","#ec4899"],["#ff5a36","#ffb
 const groupOf = t => Object.keys(base.TAG_GROUPS).find(g => base.TAG_GROUPS[g].includes(t));
 
 pages.push({ file: "tags.html", build: (X) => {
-  const u = X.ui, e = X.esc, groups = Object.entries(X.TAG_GROUPS);
+  const u = X.ui, e = X.esc, groups = Object.entries(X.TAG_GROUPS).filter(([, t]) => t.length);
   const filled = X.ALL_TAGS.filter(t => X.tagCount(t) > 0).length;
   return { page:"tags", nav:"tags", title:u("meta_tags_t"), desc:u("meta_tags_d"), body: `
   <section class="hero"><h1>${u("tags_title")}</h1><p>${e(u("tags_sub", {n: X.ALL_TAGS.length}))}</p>

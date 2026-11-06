@@ -10,6 +10,14 @@ const slug = t => t.toLowerCase().replace(/[^a-z0-9]+/g, "-").replace(/^-|-$/g, 
 const DAY = 864e5;
 const isNew = pr => (Date.now() - new Date(pr.added + "T00:00:00").getTime()) < NEW_DAYS * DAY;
 const newCount = () => PROFILES.filter(isNew).length;
+/* A category is only published once it has at least MIN_TAG bots. Smaller ones stay in the data
+   (data.js / data-candy.js) and show up automatically as soon as they reach the minimum. */
+const MIN_TAG = 3;
+{ const c = {}; PROFILES.forEach(p => p.tags.forEach(t => c[t] = (c[t] || 0) + 1));
+  const ok = t => (c[t] || 0) >= MIN_TAG;
+  for (const g of Object.keys(TAG_GROUPS)) TAG_GROUPS[g] = TAG_GROUPS[g].filter(ok);
+  ALL_TAGS.splice(0, ALL_TAGS.length, ...ALL_TAGS.filter(ok));
+  PROFILES.forEach(p => { p.tags = p.tags.filter(ok); }); }
 const ALL_PROFILE_TAGS = [...new Set(PROFILES.flatMap(p => p.tags))];
 const tagCount = t => PROFILES.filter(p => p.tags.includes(t)).length;
 const R = () => (typeof ROOT !== "undefined" ? ROOT : "");
