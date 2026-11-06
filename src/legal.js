@@ -96,7 +96,7 @@ ai: `
 <h2>2. All characters are adults</h2>
 <p>Every character is depicted as an adult aged 18 or over. We do not list, and will remove on sight, any character that is or appears to be a minor. Report any concern to <a href="mailto:${S.email}">${S.email}</a>.</p>
 <h2>3. Images</h2>
-<p>Character images are AI-generated or provided by the platforms. Except for Creator Twins, they do not show real people; we do not display photos of Creator Twins. Any other resemblance to a real person is unintentional; contact us and we will remove the image.</p>
+<p>Character images are AI-generated or provided by the platforms. Except for Creator Twins, they do not show real people. Creator Twin images are official promotional visuals provided by the platform, with the creators' consent. Any other resemblance to a real person is unintentional; contact us and we will remove the image.</p>
 <h2>4. Texts</h2>
 <p>Some descriptions and translations on this Site are written or translated with the help of AI tools, then reviewed by us.</p>
 <h2>5. Conversations happen on third-party platforms</h2>
@@ -212,7 +212,7 @@ ai: `
 <h2>2. Tous les personnages sont majeurs</h2>
 <p>Chaque personnage est représenté comme un adulte de 18 ans ou plus. Nous ne présentons pas, et retirons immédiatement, tout personnage qui est ou semble être mineur. Signalez tout problème à <a href="mailto:${S.email}">${S.email}</a>.</p>
 <h2>3. Images</h2>
-<p>Les images des personnages sont générées par IA ou fournies par les plateformes. À l'exception des jumelles IA de créatrices, elles ne représentent pas de personnes réelles ; nous n'affichons pas de photo des jumelles IA. Toute autre ressemblance est involontaire ; contactez-nous et nous retirerons l'image.</p>
+<p>Les images des personnages sont générées par IA ou fournies par les plateformes. À l'exception des jumelles IA de créatrices, elles ne représentent pas de personnes réelles. Les images des jumelles IA sont des visuels promotionnels officiels fournis par la plateforme, avec l'accord des créatrices. Toute autre ressemblance est involontaire ; contactez-nous et nous retirerons l'image.</p>
 <h2>4. Textes</h2>
 <p>Certaines descriptions et traductions de ce Site sont rédigées ou traduites à l'aide d'outils d'IA, puis relues par nos soins.</p>
 <h2>5. Les conversations ont lieu sur des plateformes tierces</h2>
