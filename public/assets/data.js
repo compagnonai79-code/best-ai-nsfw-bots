@@ -223,7 +223,7 @@ const PROFILES = [
 ];
 
 
-;const IMG_OK = ["images/promo-candy.jpg","images/her-pool-attendant.jpg","images/they-saw-my-chats.jpg","images/janice-cooper.jpg","images/malcolm.jpg","images/may.jpg","images/scaramouche.jpg","images/jade-bluebell.jpg","images/ava-and-harper.jpg","images/blair-sterling.jpg"];
+;const IMG_OK = ["images/promo-candy.jpg","images/avery-hughes.jpg","images/elizabeth-sinclair.jpg","images/her-pool-attendant.jpg","images/they-saw-my-chats.jpg","images/janice-cooper.jpg","images/malcolm.jpg","images/may.jpg","images/scaramouche.jpg","images/jade-bluebell.jpg","images/ava-and-harper.jpg","images/blair-sterling.jpg"];
 ;/* images not uploaded yet → placeholder */
 for (const p of PROFILES) if (p.img && p.img.startsWith("images/") && !IMG_OK.includes(p.img)) p.img = "";
 if (PROMO.img.startsWith("images/") && !IMG_OK.includes(PROMO.img)) PROMO.img = "";
