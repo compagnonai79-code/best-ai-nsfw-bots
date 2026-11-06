@@ -85,7 +85,7 @@ const PLATFORM_DATA = {
    (pop-up texts are translated in i18n.js: promo_title, promo_text, promo_btn) */
 const PROMO = {
   platform: "candy",                 // which platform the pop-up promotes
-  img: "https://cdn.candy.ai/sfw-profile-635918616-0c9f8478-f869-49d8-892b-9458d6141c0e-600x900-webp90",     // put your promo image here (portrait, ~600×800)
+  img: "images/promo-candy.jpg",     // put your promo image here (portrait, ~600×800)
   delaySeconds: 8,                   // shown after X seconds…
   showOnExit: true                   // …or when the mouse leaves the page (desktop)
 };
@@ -223,7 +223,7 @@ const PROFILES = [
 ];
 
 
-;const IMG_OK = [];
+;const IMG_OK = ["images/promo-candy.jpg"];
 ;/* images not uploaded yet → placeholder */
 for (const p of PROFILES) if (p.img && p.img.startsWith("images/") && !IMG_OK.includes(p.img)) p.img = "";
 if (PROMO.img.startsWith("images/") && !IMG_OK.includes(PROMO.img)) PROMO.img = "";
