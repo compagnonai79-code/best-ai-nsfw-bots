@@ -18,7 +18,7 @@ function context(lang) {
   const ctx = { PAGE_LANG: lang, console, Date, URLSearchParams };
   vm.createContext(ctx);
   vm.runInContext(CLIENT.map(read).join("\n;\n") +
-    "\n;this.X={SITE,PLATFORMS,PLATFORM_DATA,PROFILES,PROMO,NEW_DAYS,LANGS,ui,tr,esc,slug,isNew,newCount,tagCount,ALL_PROFILE_TAGS,TAG_GROUPS,ALL_TAGS,profileCard,pickCard,platformCard,visual,ctaLink,girlUrl,tagUrl,inBase,bioOf,linkFor,withAge,get LANG(){return LANG}};", ctx);
+    "\n;this.X={SITE,PLATFORMS,PLATFORM_DATA,PROFILES,PROMO,NEW_DAYS,LANGS,ui,tr,esc,slug,isNew,newCount,tagCount,ALL_PROFILE_TAGS,TAG_GROUPS,ALL_TAGS,profileCard,pickCard,platformCard,visual,ctaLink,girlUrl,tagUrl,inBase,byNew,bioOf,linkFor,withAge,get LANG(){return LANG}};", ctx);
   ctx.X._ctx = ctx;
   return ctx.X;
 }
@@ -144,7 +144,7 @@ const pages = [];   // {file, build(X, lang) -> layout options, altLangs?}
 
 for (const [file, base] of [["index.html",""],["women.html","women"],["men.html","men"],["anime.html","anime"]]) pages.push({ file, build: (X) => {
   const u = X.ui, e = X.esc, k = base ? "_" + base : "";
-  const list = [...X.PROFILES].filter(p => X.inBase(base, p)).sort((a,b) => b.added.localeCompare(a.added));
+  const list = [...X.PROFILES].filter(p => X.inBase(base, p)).sort(X.byNew);
   const sorted = [...X.ALL_PROFILE_TAGS].filter(t => list.some(p => p.tags.includes(t))).sort((a,b) => X.tr(a).localeCompare(X.tr(b), X.LANG));
   return { page:"home", nav: base || "home", base, modal:true, title:u("meta_home_t" + k), desc:u("meta_home_d" + k), body: `
   <section class="hero">
@@ -203,7 +203,7 @@ pages.push({ file: "tags.html", build: (X) => {
 
 /* one page per tag (all categories; empty ones are noindex and left out of sitemap.xml) */
 for (const t of base.ALL_TAGS) pages.push({ file: "tag/" + base.slug(t) + ".html", build: (X) => {
-  const u = X.ui, e = X.esc, list = X.PROFILES.filter(p => p.tags.includes(t)).sort((a,b) => b.added.localeCompare(a.added));
+  const u = X.ui, e = X.esc, list = X.PROFILES.filter(p => p.tags.includes(t)).sort(X.byNew);
   const name = X.tr(t), grp = X.TAG_GROUPS[groupOf(t)];
   const related = grp.filter(x => x !== t && X.tagCount(x) > 0).concat(X.ALL_PROFILE_TAGS.filter(x => x !== t && !grp.includes(x)))
     .filter((x, i, a) => a.indexOf(x) === i).slice(0, 30);

@@ -20,6 +20,7 @@ const autoBio = p => p.creator ? ui("creator_bio", { name: p.name, p: pf(p.platf
 const bioOf = p => typeof p.bio === "string" ? tr(p.bio) : ((p.bio && (p.bio[LANG] || p.bio.en)) || autoBio(p));
 const linkFor = p => ({ url: p.link || pf(p.platform).url, fallback: pf(p.platform).fallback });   // character deep link, else platform link
 const withAge = p => esc(p.name) + (p.age ? ", " + p.age : "");
+const byNew = (a,b) => (!!b.img - !!a.img) || b.added.localeCompare(a.added);   // profiles with a photo first
 const girlId = p => p.id || slug(p.name);
 const girlUrl = p => LR() + "model/" + girlId(p) + ".html";
 
@@ -184,7 +185,7 @@ function initHome() {
     let list = LIST.filter(p =>
       (!onlyNew || isNew(p)) && Object.keys(sel).every(g => matchGroup(p, g)) &&
       (!q || [p.name, bioOf(p), pf(p.platform).name, ...p.tags, ...p.tags.map(tr)].join(" ").toLowerCase().includes(q)));
-    list.sort($("#sort").value === "name" ? (a,b) => a.name.localeCompare(b.name) : (a,b) => b.added.localeCompare(a.added));
+    list.sort($("#sort").value === "name" ? (a,b) => a.name.localeCompare(b.name) : byNew);
     const filtered = onlyNew || Object.values(sel).some(s => s.size) || q;
     $("#count").innerHTML = `<b>${list.length}</b> ` + esc(ui(onlyNew ? "count_new" : "count", {n:""}).trim()) +
       (filtered ? `<button class="clear" id="clear">${esc(ui("clear"))}</button>` : "");
