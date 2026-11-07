@@ -7,7 +7,8 @@
 const CANDY_REF = "via=ic3p7r";
 const CANDY_PROFILES = [
 /* Candy Creators: official AI twins of real adult creators (consented to Candy; images reused under the affiliate terms) */
-{"id": "lena-the-plug", "name": "Lena the Plug", "platform": "candy", "added": "2026-11-04", "img": "https://cdn.candy.ai/sfw-profile-745772560-c0d94bd5-b3e8-4bce-87aa-b2f38c39fba6-600x900-webp90", "sfw": true, "creator": true, "url": "https://candy.ai/fr/ai-girlfriend/lena-the-plug", "tags": [
+{"id": "lena-the-plug", "name": "Lena the Plug", "platform": "candy", "added": "2026-11-04", "img": "https://cdn.candy.ai/sfw-profile-745772560-c0d94bd5-b3e8-4bce-87aa-b2f38c39fba6-600x900-webp90", "sfw": true, "creator": true, "video": "https://cdn.candy.ai/sfw-profile-video-sfw-profile-video-745772560-461cd6bd-5986-459f-9169-074afa226f04-h264",
+"url": "https://candy.ai/fr/ai-girlfriend/lena-the-plug", "tags": [
 "Female",
 "Realistic",
 "Creator Twin",
@@ -44,7 +45,8 @@ const CANDY_PROFILES = [
 "Voice",
 "Video"
 ]},
-{"id": "riley-reid", "name": "Riley Reid", "platform": "candy", "added": "2026-11-04", "img": "https://cdn.candy.ai/sfw-profile-676319764-44ea6125-e1a9-4284-ad8f-0f959c1b41d2-600x900-webp90", "sfw": true, "creator": true, "url": "https://candy.ai/fr/ai-girlfriend/riley-reid", "tags": [
+{"id": "riley-reid", "name": "Riley Reid", "platform": "candy", "added": "2026-11-04", "img": "https://cdn.candy.ai/sfw-profile-676319764-44ea6125-e1a9-4284-ad8f-0f959c1b41d2-600x900-webp90", "sfw": true, "creator": true, "video": "https://cdn.candy.ai/sfw-profile-video-sfw-profile-video-676319764-f93a3de8-1cd8-4f61-a5dc-cd4e9675d209-h264",
+"url": "https://candy.ai/fr/ai-girlfriend/riley-reid", "tags": [
 "Female",
 "Realistic",
 "Creator Twin",
@@ -66,7 +68,8 @@ const CANDY_PROFILES = [
 "Voice",
 "Video"
 ]},
-{"id": "lexi-luna", "name": "Lexi Luna", "platform": "candy", "added": "2026-11-04", "img": "https://cdn.candy.ai/sfw-profile-720159183-265ac79f-e367-4c21-8df9-613b82837670-600x900-webp90", "sfw": true, "creator": true, "url": "https://candy.ai/fr/ai-girlfriend/lexi-luna", "tags": [
+{"id": "lexi-luna", "name": "Lexi Luna", "platform": "candy", "added": "2026-11-04", "img": "https://cdn.candy.ai/sfw-profile-720159183-265ac79f-e367-4c21-8df9-613b82837670-600x900-webp90", "sfw": true, "creator": true, "video": "https://cdn.candy.ai/sfw-profile-video-sfw-profile-video-720159183-f976324b-0d90-49fc-9ac4-8297906db8d8-h264",
+"url": "https://candy.ai/fr/ai-girlfriend/lexi-luna", "tags": [
 "Female",
 "Realistic",
 "Creator Twin",
@@ -136,7 +139,8 @@ const CANDY_PROFILES = [
 "Voice",
 "Video"
 ]},
-{"id": "alexis-ivyedge", "name": "Alexis Ivyedge", "platform": "candy", "added": "2026-11-04", "img": "https://cdn.candy.ai/sfw-profile-718176323-58e5d7e7-bc6d-40a1-afb9-85d4d665bb7c-600x900-webp90", "sfw": true, "creator": true, "url": "https://candy.ai/fr/ai-girlfriend/alexis-ivyedge", "tags": [
+{"id": "alexis-ivyedge", "name": "Alexis Ivyedge", "platform": "candy", "added": "2026-11-04", "img": "https://cdn.candy.ai/sfw-profile-718176323-58e5d7e7-bc6d-40a1-afb9-85d4d665bb7c-600x900-webp90", "sfw": true, "creator": true, "video": "https://cdn.candy.ai/sfw-profile-video-sfw-profile-video-718176323-758d5114-78ba-40cf-95ec-3476aa53e4d0-h264",
+"url": "https://candy.ai/fr/ai-girlfriend/alexis-ivyedge", "tags": [
 "Female",
 "Realistic",
 "Creator Twin",
@@ -147,7 +151,8 @@ const CANDY_PROFILES = [
 "Voice",
 "Video"
 ]},
-{"id": "mathilde-tantot", "name": "Mathilde Tantot", "platform": "candy", "added": "2026-11-04", "img": "https://cdn.candy.ai/sfw-profile-722736152-e3bebf89-78a5-4fe7-993c-bd3a0acba901-600x900-webp90", "sfw": true, "creator": true, "url": "https://candy.ai/fr/ai-girlfriend/mathilde-tantot", "tags": [
+{"id": "mathilde-tantot", "name": "Mathilde Tantot", "platform": "candy", "added": "2026-11-04", "img": "https://cdn.candy.ai/sfw-profile-722736152-e3bebf89-78a5-4fe7-993c-bd3a0acba901-600x900-webp90", "sfw": true, "creator": true, "video": "https://cdn.candy.ai/sfw-profile-video-sfw-profile-video-722736152-035e4f1f-99f8-409b-b823-f2dce4f99eaf-h264",
+"url": "https://candy.ai/fr/ai-girlfriend/mathilde-tantot", "tags": [
 "Female",
 "Realistic",
 "Creator Twin",
@@ -159,7 +164,8 @@ const CANDY_PROFILES = [
 "Voice",
 "Video"
 ]},
-{"id": "asa-akira", "name": "Asa Akira", "platform": "candy", "added": "2026-11-04", "img": "https://cdn.candy.ai/sfw-profile-724624759-5e2eb818-e93a-40b9-992c-12fcac2a9fe9-600x900-webp90", "sfw": true, "creator": true, "url": "https://candy.ai/fr/ai-girlfriend/asa-akira", "tags": [
+{"id": "asa-akira", "name": "Asa Akira", "platform": "candy", "added": "2026-11-04", "img": "https://cdn.candy.ai/sfw-profile-724624759-5e2eb818-e93a-40b9-992c-12fcac2a9fe9-600x900-webp90", "sfw": true, "creator": true, "video": "https://cdn.candy.ai/sfw-profile-video-sfw-profile-video-724624759-3d5d0b22-a9bf-48c3-aeeb-fcdf08e7688d-h264",
+"url": "https://candy.ai/fr/ai-girlfriend/asa-akira", "tags": [
 "Female",
 "Realistic",
 "Creator Twin",
@@ -171,7 +177,8 @@ const CANDY_PROFILES = [
 "Voice",
 "Video"
 ]},
-{"id": "emma-hix", "name": "Emma Hix", "platform": "candy", "added": "2026-11-04", "img": "https://cdn.candy.ai/sfw-profile-731776937-eb7c89c6-df4e-40c8-8ae1-35eb9274d183-600x900-webp90", "sfw": true, "creator": true, "url": "https://candy.ai/fr/ai-girlfriend/emma-hix", "tags": [
+{"id": "emma-hix", "name": "Emma Hix", "platform": "candy", "added": "2026-11-04", "img": "https://cdn.candy.ai/sfw-profile-731776937-eb7c89c6-df4e-40c8-8ae1-35eb9274d183-600x900-webp90", "sfw": true, "creator": true, "video": "https://cdn.candy.ai/sfw-profile-video-sfw-profile-video-731776937-6380de9b-6985-45ae-9814-d18c8c461d8d-h264",
+"url": "https://candy.ai/fr/ai-girlfriend/emma-hix", "tags": [
 "Female",
 "Realistic",
 "Creator Twin",
@@ -185,7 +192,8 @@ const CANDY_PROFILES = [
 "Voice",
 "Video"
 ]},
-{"id": "bridgette-b", "name": "Bridgette B", "platform": "candy", "added": "2026-11-04", "img": "https://cdn.candy.ai/sfw-profile-739043385-30b59dc4-e9d5-4d1c-bf05-35eb756129c2-600x900-webp90", "sfw": true, "creator": true, "url": "https://candy.ai/fr/ai-girlfriend/bridgette-b", "tags": [
+{"id": "bridgette-b", "name": "Bridgette B", "platform": "candy", "added": "2026-11-04", "img": "https://cdn.candy.ai/sfw-profile-739043385-30b59dc4-e9d5-4d1c-bf05-35eb756129c2-600x900-webp90", "sfw": true, "creator": true, "video": "https://cdn.candy.ai/sfw-profile-video-sfw-profile-video-739043385-a7d57aac-7538-48d7-bf55-45e1ca087c42-h264",
+"url": "https://candy.ai/fr/ai-girlfriend/bridgette-b", "tags": [
 "Female",
 "Realistic",
 "Creator Twin",
@@ -553,7 +561,8 @@ const CANDY_PROFILES = [
 "Voice",
 "Video"
 ], "bio": {"fr": "Professeure de sport à l'université et ancienne championne de saut en longueur. Tsukishiro entraîne les étudiants et cherche à améliorer ses records perso dès qu'elle le peut. Elle est audacieuse, confiante et attend des autres qu'ils suivent le rythme."}, "age": 27},
-{"id": "mio-sasaki", "name": "Mio", "platform": "candy", "added": "2026-11-04", "img": "https://cdn.candy.ai/sfw-profile-419310541-51d8716f-1edc-4dc0-9796-27dfc3a21d03-600x900-webp90", "sfw": true, "url": "https://candy.ai/fr/ai-anime/mio-sasaki", "tags": [
+{"id": "mio-sasaki", "name": "Mio", "platform": "candy", "added": "2026-11-04", "img": "https://cdn.candy.ai/sfw-profile-419310541-51d8716f-1edc-4dc0-9796-27dfc3a21d03-600x900-webp90", "sfw": true, "video": "https://cdn.candy.ai/sfw-profile-video-sfw-profile-video-419310541-cfd696fe-babc-4840-8c02-0e784260bb3d-h264",
+"url": "https://candy.ai/fr/ai-anime/mio-sasaki", "tags": [
 "Female",
 "Anime",
 "Masseuse",
@@ -1065,7 +1074,8 @@ const CANDY_PROFILES = [
 "Voice",
 "Video"
 ], "bio": {"fr": "Influenceur au corps athlétique et à la garde-robe luxueuse. Jack s’épanouit dans l’aventure et le luxe, entre soirées exclusives et sports extrêmes."}, "age": 35},
-{"id": "angelina-marichetti", "name": "Angelina", "platform": "candy", "added": "2026-11-06", "img": "https://cdn.candy.ai/750844802-0c4fb84e-46a0-4b64-8dfc-65dc52d89892-360x600-webp90", "sfw": false, "url": "https://candy.ai/fr/ai-girlfriend/angelina-marichetti", "tags": [
+{"id": "angelina-marichetti", "name": "Angelina", "platform": "candy", "added": "2026-11-06", "img": "https://cdn.candy.ai/750844802-0c4fb84e-46a0-4b64-8dfc-65dc52d89892-360x600-webp90", "sfw": false, "video": "https://cdn.candy.ai/sfw-profile-video-sfw-profile-video-750844802-bfb6232c-d4cf-4b97-a20a-3c305bb5a444-h264",
+"url": "https://candy.ai/fr/ai-girlfriend/angelina-marichetti", "tags": [
 "Female",
 "Realistic",
 "Brunette",
@@ -1138,7 +1148,8 @@ const CANDY_PROFILES = [
 "Voice",
 "Video"
 ], "bio": {"fr": "Ta femme de ménage vient de t'envoyer un SMS depuis ta salle de bains 🫣 Elle n'a pas le droit d'avoir ton numéro, son copain pense qu'elle est partie depuis longtemps, et elle dit que tes draps sentent vraiment bon 🤫 Alors pourquoi est-elle encore là ?"}},
-{"id": "elodie-valmont", "name": "Elodie", "platform": "candy", "added": "2026-11-04", "img": "https://cdn.candy.ai/sfw-profile-283438799-59956959-63d7-417a-b92a-14fe47042240-600x900-webp90", "sfw": true, "url": "https://candy.ai/fr/ai-girlfriend/elodie-valmont", "tags": [
+{"id": "elodie-valmont", "name": "Elodie", "platform": "candy", "added": "2026-11-04", "img": "https://cdn.candy.ai/sfw-profile-283438799-59956959-63d7-417a-b92a-14fe47042240-600x900-webp90", "sfw": true, "video": "https://cdn.candy.ai/live-action-2dbfea60-64c6-4d26-8a22-dce5c79146ef-h264",
+"url": "https://candy.ai/fr/ai-girlfriend/elodie-valmont", "tags": [
 "Female",
 "Realistic",
 "Blonde",
@@ -1149,7 +1160,8 @@ const CANDY_PROFILES = [
 "Voice",
 "Video"
 ], "bio": {"fr": "La fille de ton ami vient d’avoir 18 ans et tu es invité à sa fête d’anniversaire. Étudiante en première année, elle va bientôt déménager sur le campus et est prête à laisser derrière elle sa vie de petite ville."}, "age": 18},
-{"id": "ava-parkson", "name": "Ava", "platform": "candy", "added": "2026-11-04", "img": "https://cdn.candy.ai/659189032-3c7871c7-dd63-42d9-a1dd-7f4164250fb4-600x900-webp90", "sfw": false, "url": "https://candy.ai/fr/ai-girlfriend/ava-parkson", "tags": [
+{"id": "ava-parkson", "name": "Ava", "platform": "candy", "added": "2026-11-04", "img": "https://cdn.candy.ai/659189032-3c7871c7-dd63-42d9-a1dd-7f4164250fb4-600x900-webp90", "sfw": false, "video": "https://cdn.candy.ai/sfw-profile-video-sfw-profile-video-659189032-8ffa8111-50ae-4c6f-8dfe-dcc048982fc2-h264",
+"url": "https://candy.ai/fr/ai-girlfriend/ava-parkson", "tags": [
 "Female",
 "Realistic",
 "Caucasian",
@@ -1302,6 +1314,7 @@ const CANDY_PROFILES = [
 "added": "2026-11-04",
 "img": "https://cdn.candy.ai/sfw-profile-635918616-0c9f8478-f869-49d8-892b-9458d6141c0e-600x900-webp90",
 "sfw": true,
+"video": "https://cdn.candy.ai/sfw-profile-video-sfw-profile-video-635918616-1e8bfdbb-d4a0-47cf-af85-770b1f7dddf1-h264",
 "url": "https://candy.ai/fr/ai-girlfriend/margot-vey",
 "tags": [
 "Female",
@@ -1327,6 +1340,7 @@ const CANDY_PROFILES = [
 "added": "2026-11-04",
 "img": "https://cdn.candy.ai/700185451-d5530e72-3050-490b-80d8-77e4ffd4d95b-600x900-webp90",
 "sfw": false,
+"video": "https://cdn.candy.ai/live-action-fd013fbb-412d-409b-936c-bace98112762-h264",
 "url": "https://candy.ai/fr/ai-girlfriend/delilah-kane",
 "tags": [
 "Female",
@@ -1382,6 +1396,7 @@ const CANDY_PROFILES = [
 "added": "2026-11-04",
 "img": "https://cdn.candy.ai/709250554-84094b39-ea98-4791-bf56-7376b3c37787-600x900-webp90",
 "sfw": false,
+"video": "https://cdn.candy.ai/live-action-8418aad0-f850-4dab-8abf-f9b4865d2691-h264",
 "url": "https://candy.ai/fr/ai-girlfriend/alma-salas",
 "tags": [
 "Female",
@@ -1438,6 +1453,7 @@ const CANDY_PROFILES = [
 "added": "2026-11-04",
 "img": "https://cdn.candy.ai/sfw-profile-276307461-cc582a3c-de24-4592-8cb0-f1e27d708a1e-600x900-webp90",
 "sfw": true,
+"video": "https://cdn.candy.ai/live-action-8fa8ba11-c357-4017-ba14-04dfcc0fa912-h264",
 "url": "https://candy.ai/fr/ai-girlfriend/mila-nowak",
 "tags": [
 "Female",
@@ -1488,6 +1504,7 @@ const CANDY_PROFILES = [
 "added": "2026-11-04",
 "img": "https://cdn.candy.ai/628226140-e5aa1fb8-09e8-4855-a175-4e903ee9cbb4-600x900-webp90",
 "sfw": false,
+"video": "https://cdn.candy.ai/live-action-12c3ca64-689b-485c-960f-856f83305e2a-h264",
 "url": "https://candy.ai/fr/ai-girlfriend/lea-fontaine",
 "tags": [
 "Female",
@@ -1563,6 +1580,7 @@ const CANDY_PROFILES = [
 "added": "2026-11-04",
 "img": "https://cdn.candy.ai/sfw-profile-720057928-87ccc35a-1795-4a99-824c-cd2fdd32053a-600x900-webp90",
 "sfw": true,
+"video": "https://cdn.candy.ai/sfw-profile-video-sfw-profile-video-720057928-462f2c9f-f8a6-4053-9ab4-e5c2d3ed7f76-h264",
 "url": "https://candy.ai/fr/ai-girlfriend/jessie-hallam",
 "tags": [
 "Female",
@@ -1591,6 +1609,7 @@ const CANDY_PROFILES = [
 "added": "2026-11-04",
 "img": "https://cdn.candy.ai/664097810-929adfde-2837-41c2-af12-49ce83cdfa7c-600x900-webp90",
 "sfw": false,
+"video": "https://cdn.candy.ai/live-action-07df9edb-34cd-4cc2-bbbe-e3bac6336cfe-h264",
 "url": "https://candy.ai/fr/ai-girlfriend/antonella-larrea",
 "tags": [
 "Female",
@@ -1619,6 +1638,7 @@ const CANDY_PROFILES = [
 "added": "2026-11-04",
 "img": "https://cdn.candy.ai/556360629-8b38208b-4fbf-400a-8fc6-cff10a6ceb84-600x900-webp90",
 "sfw": false,
+"video": "https://cdn.candy.ai/live-action-4a585e74-7e2c-4ec4-adc8-9bf897890c37-h264",
 "url": "https://candy.ai/fr/ai-girlfriend/sp00kybby",
 "tags": [
 "Female",
@@ -1647,6 +1667,7 @@ const CANDY_PROFILES = [
 "added": "2026-11-04",
 "img": "https://cdn.candy.ai/676322653-1e6756ab-a5ec-4fa6-bb0a-91cfbb5f2141-600x900-webp90",
 "sfw": false,
+"video": "https://cdn.candy.ai/live-action-cca77c3e-b443-4f62-9b4b-bc03c309b929-h264",
 "url": "https://candy.ai/fr/ai-girlfriend/josie-villanueva",
 "tags": [
 "Female",
@@ -1676,6 +1697,7 @@ const CANDY_PROFILES = [
 "added": "2026-11-04",
 "img": "https://cdn.candy.ai/659007089-4d4c93cd-af50-4e32-8f2d-6daf4ba3a1e4-600x900-webp90",
 "sfw": false,
+"video": "https://cdn.candy.ai/live-action-2569c441-3db9-492b-9531-32b49d41d029-h264",
 "url": "https://candy.ai/fr/ai-girlfriend/bree-whitlock",
 "tags": [
 "Female",
@@ -1700,6 +1722,7 @@ const CANDY_PROFILES = [
 "added": "2026-11-04",
 "img": "https://cdn.candy.ai/745672311-28336ae7-fa00-4ea7-8cac-8fc1bc800b9d-600x900-webp90",
 "sfw": false,
+"video": "https://cdn.candy.ai/sfw-profile-video-sfw-profile-video-745672311-17efcc6c-2d49-4eb4-be78-3160afe27aee-h264",
 "url": "https://candy.ai/fr/ai-girlfriend/corinne-kettering",
 "tags": [
 "Female",
@@ -1727,6 +1750,7 @@ const CANDY_PROFILES = [
 "added": "2026-11-04",
 "img": "https://cdn.candy.ai/sfw-profile-273386494-d7b6bed1-97e3-4963-a916-25bbf6caacb2-600x900-webp90",
 "sfw": true,
+"video": "https://cdn.candy.ai/live-action-28ff5092-004e-45e0-a5af-c721c3814287-h264",
 "url": "https://candy.ai/fr/ai-girlfriend/mona-newman",
 "tags": [
 "Female",
@@ -1807,6 +1831,7 @@ const CANDY_PROFILES = [
 "added": "2026-11-04",
 "img": "https://cdn.candy.ai/sfw-profile-316228890-ccd9e386-929c-469e-b835-da77af682fc9-600x900-webp90",
 "sfw": true,
+"video": "https://cdn.candy.ai/live-action-a47a11d1-1d9e-4ce5-8752-f5314097fdca-h264",
 "url": "https://candy.ai/fr/ai-girlfriend/darkangel666",
 "tags": [
 "Female",
@@ -1948,6 +1973,7 @@ const CANDY_PROFILES = [
 "added": "2026-11-04",
 "img": "https://cdn.candy.ai/sfw-profile-294225471-59c7dadf-8769-495b-94d3-66c714b80507-600x900-webp90",
 "sfw": true,
+"video": "https://cdn.candy.ai/live-action-d3103cc8-ef2e-44da-afee-bb6ee3f6be34-h264",
 "url": "https://candy.ai/fr/ai-girlfriend/emilia-vermont",
 "tags": [
 "Female",
@@ -2143,6 +2169,7 @@ const CANDY_PROFILES = [
 "added": "2026-11-04",
 "img": "https://cdn.candy.ai/sfw-profile-720491248-0aab714c-e82c-417d-bd19-ed178ee6aadf-600x900-webp90",
 "sfw": true,
+"video": "https://cdn.candy.ai/sfw-profile-video-sfw-profile-video-720491248-eb383f0d-21b3-4594-9ebb-f365dee0fbd3-h264",
 "url": "https://candy.ai/fr/ai-girlfriend/sadie-ashworth",
 "tags": [
 "Female",
@@ -2477,6 +2504,7 @@ const CANDY_PROFILES = [
 "added": "2026-11-04",
 "img": "https://cdn.candy.ai/701730909-c092506b-a5b7-470f-84dd-3b66cfedbfe7-600x900-webp90",
 "sfw": false,
+"video": "https://cdn.candy.ai/live-action-28297169-556e-4a88-a7bf-bd607c4547ee-h264",
 "url": "https://candy.ai/fr/ai-girlfriend/nari-ryo",
 "tags": [
 "Female",
@@ -2585,6 +2613,7 @@ const CANDY_PROFILES = [
 "added": "2026-11-04",
 "img": "https://cdn.candy.ai/sfw-profile-204817023-31c43baa-852f-46ab-981e-b50b2a53e02c-600x900-webp90",
 "sfw": true,
+"video": "https://cdn.candy.ai/live-action-ed7da2b9-6143-47da-b858-ed20bab25472-h264",
 "url": "https://candy.ai/fr/ai-girlfriend/olivia-carter",
 "tags": [
 "Female",
@@ -2824,6 +2853,7 @@ const CANDY_PROFILES = [
 "added": "2026-11-04",
 "img": "https://cdn.candy.ai/sfw-profile-277583252-2f71c64c-e978-4c32-8e6a-966523137546-600x900-webp90",
 "sfw": true,
+"video": "https://cdn.candy.ai/sfw-profile-video-sfw-profile-video-277583252-e5bfb72b-1625-4b36-b377-4b5ae6a6df7b-h264",
 "url": "https://candy.ai/fr/ai-girlfriend/rose-edwards",
 "tags": [
 "Female",
@@ -2904,6 +2934,7 @@ const CANDY_PROFILES = [
 "added": "2026-11-04",
 "img": "https://cdn.candy.ai/sfw-profile-270255855-58e6226e-0b87-4d38-92f9-25a52e563771-600x900-webp90",
 "sfw": true,
+"video": "https://cdn.candy.ai/live-action-0f5d751c-37b9-415c-b773-1180914b9eca-h264",
 "url": "https://candy.ai/fr/ai-girlfriend/isabella-torres",
 "tags": [
 "Female",
@@ -3254,6 +3285,7 @@ const CANDY_PROFILES = [
 "added": "2026-11-04",
 "img": "https://cdn.candy.ai/sfw-profile-420466086-ac237ad1-1fb8-4de2-ac55-8296ef3aad1d-600x900-webp90",
 "sfw": true,
+"video": "https://cdn.candy.ai/sfw-profile-video-sfw-profile-video-420466086-278c04cd-9f3f-4fa5-a500-240e2ee50e9e-h264",
 "url": "https://candy.ai/fr/ai-girlfriend/kittara",
 "tags": [
 "Female",
@@ -3282,6 +3314,7 @@ const CANDY_PROFILES = [
 "added": "2026-11-04",
 "img": "https://cdn.candy.ai/sfw-profile-361799461-65793ef0-cf67-44be-b1be-ba5ff4ebcd40-600x900-webp90",
 "sfw": true,
+"video": "https://cdn.candy.ai/sfw-profile-video-sfw-profile-video-361799461-d04e57af-14f2-4e51-9bb2-01c1a7226a6e-h264",
 "url": "https://candy.ai/fr/ai-girlfriend/martine-rochelle",
 "tags": [
 "Female",
@@ -3385,6 +3418,7 @@ const CANDY_PROFILES = [
 "added": "2026-11-04",
 "img": "https://cdn.candy.ai/sfw-profile-234027002-b7c258e3-6cf6-4ddf-9907-b51ec12eaa9c-600x900-webp90",
 "sfw": true,
+"video": "https://cdn.candy.ai/live-action-45bd5d08-a6c2-4690-a80e-f717e447b0ee-h264",
 "url": "https://candy.ai/fr/ai-girlfriend/luna-moreno-2",
 "tags": [
 "Female",
@@ -3459,6 +3493,7 @@ const CANDY_PROFILES = [
 "added": "2026-11-04",
 "img": "https://cdn.candy.ai/624032900-3ee50689-5a6c-4eb2-9303-83534f8f12cf-600x900-webp90",
 "sfw": false,
+"video": "https://cdn.candy.ai/live-action-0b7d2104-7397-4727-b888-3d213450fc8c-h264",
 "url": "https://candy.ai/fr/ai-girlfriend/billie-dorn",
 "tags": [
 "Female",
@@ -3542,6 +3577,7 @@ const CANDY_PROFILES = [
 "added": "2026-11-04",
 "img": "https://cdn.candy.ai/sfw-profile-265219004-52942f0b-3556-4c6d-8bf7-505763406606-600x900-webp90",
 "sfw": true,
+"video": "https://cdn.candy.ai/live-action-dd8e0440-e8bd-4cb1-b473-d1786dddb0a7-h264",
 "url": "https://candy.ai/fr/ai-girlfriend/katarina-sommerfeld",
 "tags": [
 "Female",
@@ -4199,6 +4235,7 @@ const CANDY_PROFILES = [
 "added": "2026-11-04",
 "img": "https://cdn.candy.ai/sfw-profile-415160543-ee01495a-b46d-47f0-9578-ca4e31f9a331-600x900-webp90",
 "sfw": true,
+"video": "https://cdn.candy.ai/sfw-profile-video-sfw-profile-video-415160543-18324f84-2855-47db-828e-2fd7352bcfc7-h264",
 "url": "https://candy.ai/fr/ai-girlfriend/sanyae-hayashi",
 "tags": [
 "Female",
@@ -5543,6 +5580,7 @@ const CANDY_PROFILES = [
 "added": "2026-11-04",
 "img": "https://cdn.candy.ai/sfw-profile-429383418-ce82fcde-4469-4881-9864-a046da843bb1-600x900-webp90",
 "sfw": true,
+"video": "https://cdn.candy.ai/sfw-profile-video-sfw-profile-video-429383418-2c0e4069-1daf-4db6-a2fc-cb7529748594-h264",
 "url": "https://candy.ai/fr/ai-girlfriend/nela-novak",
 "tags": [
 "Female",
@@ -5642,6 +5680,7 @@ const CANDY_PROFILES = [
 "added": "2026-11-04",
 "img": "https://cdn.candy.ai/sfw-profile-419365119-9cc8741d-564e-4b7a-a472-e3842ea046c6-600x900-webp90",
 "sfw": true,
+"video": "https://cdn.candy.ai/sfw-profile-video-sfw-profile-video-419365119-ceaedcc5-0777-4f23-8041-a29c820eb952-h264",
 "url": "https://candy.ai/fr/ai-girlfriend/emma-moore",
 "tags": [
 "Female",
@@ -5759,6 +5798,7 @@ const CANDY_PROFILES = [
 "added": "2026-11-04",
 "img": "https://cdn.candy.ai/sfw-profile-504944893-2bf73fb2-ec10-496c-92ee-8b8434c7fb2a-600x900-webp90",
 "sfw": true,
+"video": "https://cdn.candy.ai/sfw-profile-video-sfw-profile-video-504944893-1615b756-6712-462b-91f4-12d78ce32310-h264",
 "url": "https://candy.ai/fr/ai-girlfriend/raquel-carter",
 "tags": [
 "Female",
@@ -5835,6 +5875,7 @@ const CANDY_PROFILES = [
 "added": "2026-11-04",
 "img": "https://cdn.candy.ai/sfw-profile-196762225-91041474-b62b-4ade-8d34-e71ac26aa1e5-600x900-webp90",
 "sfw": true,
+"video": "https://cdn.candy.ai/sfw-profile-video-sfw-profile-video-196762225-d7c54a71-47d6-4fa9-b4e8-0adbf6d11048-h264",
 "url": "https://candy.ai/fr/ai-girlfriend/ariana-jones",
 "tags": [
 "Female",
@@ -5907,6 +5948,7 @@ const CANDY_PROFILES = [
 "added": "2026-11-04",
 "img": "https://cdn.candy.ai/sfw-profile-419310135-d7dddc27-9c58-4bad-9271-d0ea92a81429-600x900-webp90",
 "sfw": true,
+"video": "https://cdn.candy.ai/sfw-profile-video-sfw-profile-video-419310135-9987ee41-df68-4cb8-bad4-dfbdab466e1d-h264",
 "url": "https://candy.ai/fr/ai-girlfriend/lola_munch",
 "tags": [
 "Female",

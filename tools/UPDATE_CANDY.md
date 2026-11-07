@@ -29,6 +29,7 @@ Strip `<template>` tags, parse with DOMParser, take `body.innerText`:
 - the line just before `À propos de moi` = description (French) → `bio.fr`;
 - after it: `Âge`, `Morphologie`, `Ethnicité`, `Relation`, `Profession`, `Loisirs`, `Personnalité`.
 - Image: the `https://cdn.candy.ai/<key>-788x966-webp90` URL in the raw HTML → use `<key>-600x900-webp90`. Check it loads (new Image()). `sfw` = key starts with `sfw-profile`.
+- Video preview: in the same raw HTML, the first URL matching `https://cdn.candy.ai/…profile-video…-h264` → `"video"` field (leave it out if there is none). If there is no profile video, a `live-action-…-h264` preview from the "live" row of `/home/profiles` cards for the same character may be used. Never use `cams-show` clips.
 - The display name is the first name shown in the card; the page URL is `https://candy.ai/fr/ai-girlfriend/<slug>` (`ai-boyfriend` for men).
 
 ## 4. Content rules (mandatory)
@@ -49,7 +50,7 @@ Hair colour only if the description says it (Blonde, Brunette, Redhead).
 
 ## 6. Add to `src/data-candy.js`
 Insert a JSON object at the top of the girlfriend block (before the first existing girlfriend), same shape as the others:
-`{"id","name","platform":"candy","added":"YYYY-MM-DD","img","sfw","url","tags":[…],"bio":{"fr":"…"},"age":N}`
+`{"id","name","platform":"candy","added":"YYYY-MM-DD","img","sfw","url","tags":[…],"bio":{"fr":"…"},"age":N,"video":"…-h264"}`
 (`creator: true` for creators.) `added` = today, so the profile shows as "New".
 
 ## 7. Build, check, publish
