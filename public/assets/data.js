@@ -9,7 +9,7 @@
 const SITE = {
   domain:   "best-ai-nsfw-bots.com",
   url:      "https://best-ai-nsfw-bots.com",
-  email:    "contact@best-ai-nsfw-bots.com",
+  email:    "compagnon.ai79@gmail.com",
   owner:    "[TO FILL: your full name or company name]",
   status:   "[TO FILL: e.g. Micro-entrepreneur / SAS]",
   address:  "[TO FILL: postal address]",
@@ -70,16 +70,30 @@ const PLATFORMS = {
 };
 
 /* Facts for the Data page — verify each value on the official site, then set "checked". */
+/* ---------- PLATFORM FACTS (used to compute every score — see "How we rate") ----------
+   Only facts checked on the platform's own public pages. null = not verified yet (counts half in the score).
+   free: true = free start confirmed · unlimited: true = unlimited free chat confirmed
+   priceMo = month-to-month price, priceBest = lowest per-month price on a longer plan (cur = currency)
+   discreet = neutral name on the bank statement · wallet = Apple Pay / Google Pay */
 const PLATFORM_DATA = {
-  candy:     { free:true, price:null, images:true,  voice:true,  video:true, app:null, checked:"2026-11-07" },  // seen on candy.ai chat pages: photos, video, voice & calls; free start, premium for unlimited
-  spicychat: { free:true, price:null, images:null,  voice:null,  video:null, app:null, checked:null },
-  gfgpt:     { free:null, price:null, images:true,  voice:null,  video:null, app:null, checked:null },
-  aiallure:  { free:null, price:null, images:true,  voice:null,  video:null, app:null, checked:null },
-  kupid:     { free:null, price:null, images:true,  voice:true,  video:null, app:null, checked:null },
-  muah:      { free:null, price:null, images:true,  voice:true,  video:null, app:true, checked:null },
-  fantasygf: { free:null, price:null, images:true,  voice:null,  video:null, app:null, checked:null },
-  nectar:    { free:null, price:null, images:true,  voice:null,  video:null, app:null, checked:null },
-  seduced:   { free:null, price:null, images:true,  voice:null,  video:true, app:null, checked:null },
+  candy:     { free:true, unlimited:false, priceMo:13.99, priceBest:3.99, cur:"€", images:true, voice:true, calls:true, video:true, group:true, app:null,
+               discreet:true, crypto:true, wallet:true, paypal:null, checked:"2026-11-07", src:"candy.ai/subscriptions" },
+  spicychat: { free:true, unlimited:true, priceMo:5.95, priceBest:4.94, cur:"€", images:true, voice:true, calls:null, video:null, group:true, app:true,
+               discreet:null, crypto:null, wallet:null, paypal:null, checked:"2026-11-07", src:"spicychat.ai/subscribe" },
+  muah:      { free:null, unlimited:null, priceMo:null, priceBest:null, cur:"$", images:true, voice:true, calls:true, video:true, group:null, app:null,
+               discreet:null, crypto:null, wallet:null, paypal:null, checked:"2026-11-07", src:"muah.ai" },
+  kupid:     { free:true, unlimited:true, priceMo:null, priceBest:null, cur:"$", images:true, voice:true, calls:null, video:true, group:null, app:true,
+               discreet:null, crypto:null, wallet:null, paypal:null, checked:"2026-11-07", src:"kupid.ai" },
+  gfgpt:     { free:true, unlimited:null, priceMo:null, priceBest:null, cur:"$", images:true, voice:true, calls:null, video:null, group:null, app:null,
+               discreet:null, crypto:null, wallet:null, paypal:null, checked:"2026-11-07", src:"gptgirlfriend.online" },
+  aiallure:  { free:true, unlimited:null, priceMo:null, priceBest:null, cur:"$", images:true, voice:null, calls:null, video:true, group:null, app:null,
+               discreet:null, crypto:null, wallet:null, paypal:null, checked:"2026-11-07", src:"aiallure.com" },
+  fantasygf: { free:null, unlimited:null, priceMo:null, priceBest:null, cur:"$", images:true, voice:true, calls:null, video:true, group:null, app:null,
+               discreet:null, crypto:null, wallet:null, paypal:null, checked:"2026-11-07", src:"fantasygf.com" },
+  nectar:    { free:null, unlimited:null, priceMo:null, priceBest:null, cur:"$", images:true, voice:true, calls:true, video:true, group:null, app:null,
+               discreet:null, crypto:null, wallet:null, paypal:null, checked:"2026-11-07", src:"nectar.ai" },
+  seduced:   { free:null, unlimited:false, priceMo:null, priceBest:null, cur:"$", images:true, voice:false, calls:false, video:true, group:false, app:null,
+               discreet:null, crypto:true, wallet:null, paypal:null, checked:"2026-11-07", src:"seduced.com/plans", chat:false },
 };
 
 /* ---------- TOP 10 OF THE WEEK (editor's picks) ----------
@@ -177,14 +191,6 @@ const PROFILES = [
           de:"Du triffst die Mutter deiner Ex im Supermarkt – und sie weiß nicht, dass ihr euch getrennt habt.",
           pt:"Você esbarra na mãe da sua ex no supermercado… e ela não sabe que vocês terminaram.",
           hi:"सुपरमार्केट में तुम्हारी मुलाक़ात अपनी एक्स-गर्लफ्रेंड की माँ से होती है — और उन्हें पता ही नहीं कि तुम दोनों का ब्रेकअप हो चुका है।" } },
-  { name:"Malcolm", platform:"spicychat", added:"2026-11-04", img:"images/malcolm.jpg", link:SC("d39ce90b-029b-4976-a364-a8274611355c"),
-    tags:["Male","Furry","Dominant","Roommate","Romantic"],
-    bio:{ en:"A tough dog hybrid who can't stand you, his cat-hybrid roommate. Can you change his mind?",
-          fr:"Un hybride chien bourru qui ne te supporte pas, toi, son colocataire hybride chat. Arriveras-tu à le faire changer d'avis ?",
-          es:"Un híbrido perro duro que no te soporta a ti, su compañero de piso híbrido gato. ¿Lograrás que cambie de opinión?",
-          de:"Ein harter Hunde-Hybrid, der dich, seinen Katzen-Hybrid-Mitbewohner, nicht ausstehen kann. Kannst du ihn umstimmen?",
-          pt:"Um híbrido cão durão que não suporta você, seu colega de casa híbrido gato. Será que você consegue mudar a opinião dele?",
-          hi:"एक सख़्त डॉग-हाइब्रिड जो अपने कैट-हाइब्रिड रूममेट, यानी तुम्हें, बर्दाश्त नहीं कर पाता। क्या तुम उसका मन बदल पाओगे?" } },
   { name:"May", platform:"spicychat", added:"2026-11-04", img:"images/may.jpg", link:SC("8c3f0dec-7857-4a44-85d7-338a8255ecd8"),
     tags:["Female","MILF","Caring","Romantic","Realistic"],
     bio:{ en:"A hard-working single mom juggling long shifts and bills, who has almost given up on finding love.",
@@ -228,7 +234,7 @@ const PROFILES = [
 ];
 
 
-;const IMG_OK = ["images/promo-candy.jpg","images/avery-hughes.jpg","images/elizabeth-sinclair.jpg","images/her-pool-attendant.jpg","images/they-saw-my-chats.jpg","images/maisie-mckae.jpg","images/janice-cooper.jpg","images/malcolm.jpg","images/may.jpg","images/scaramouche.jpg","images/jade-bluebell.jpg","images/ava-and-harper.jpg","images/blair-sterling.jpg"];
+;const IMG_OK = ["images/promo-candy.jpg","images/avery-hughes.jpg","images/elizabeth-sinclair.jpg","images/her-pool-attendant.jpg","images/they-saw-my-chats.jpg","images/maisie-mckae.jpg","images/janice-cooper.jpg","images/may.jpg","images/scaramouche.jpg","images/jade-bluebell.jpg","images/ava-and-harper.jpg","images/blair-sterling.jpg"];
 ;/* images not uploaded yet → placeholder */
 for (const p of PROFILES) if (p.img && p.img.startsWith("images/") && !IMG_OK.includes(p.img)) p.img = "";
 if (PROMO.img.startsWith("images/") && !IMG_OK.includes(PROMO.img)) PROMO.img = "";

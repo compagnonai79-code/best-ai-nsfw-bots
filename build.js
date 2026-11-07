@@ -46,6 +46,10 @@ const tpfOk = (X, t, k) => { if (TPF_SKIP.includes(t)) return false; const all =
 const bcLd = (X, lang, items) => ({ "@context":"https://schema.org", "@type":"BreadcrumbList", "itemListElement": items.map(([name, f], i) =>
   ({ "@type":"ListItem", "position": i + 1, "name": name, "item": absUrl(lang, f) })) });
 const ldTag = obj => `<script type="application/ld+json">${JSON.stringify(obj).replace(/</g, "\\u003c")}</script>`;
+/* "13,99 €/mois · 3,99 €/mois (abonnement long)" from PLATFORM_DATA */
+const priceTxt = (X, d) => { if (!d || d.priceMo == null) return null;
+  const f = x => new Intl.NumberFormat(X.LANG === "hi" ? "en-IN" : X.LANG, {minimumFractionDigits: 2, maximumFractionDigits: 2}).format(x) + " " + (d.cur || "$");
+  return X.ui("px_mo", {x: f(d.priceMo)}) + (d.priceBest != null && d.priceBest !== d.priceMo ? " · " + X.ui("px_best", {x: f(d.priceBest)}) : ""); };
 const absUrl = (l, file) => SITE.url + "/" + (prefix(l) + file).replace(/index\.html$/, "").replace(/\.html$/, "");
 const LEGAL_PAGES = [["terms","legal_terms"],["cookies","legal_cookies"],["dmca","legal_dmca"],["privacy","legal_privacy"],["ai-disclosure","legal_ai"],["legal-notice","legal_notice"]];
 const LEGAL_KEY = { "terms":"terms","cookies":"cookies","dmca":"dmca","privacy":"privacy","ai-disclosure":"ai","legal-notice":"notice" };
@@ -188,7 +192,9 @@ for (const [file, base] of [["index.html",""],["women.html","women"],["men.html"
     <div class="search"><input id="q" type="search" placeholder="${e(u("search"))}" aria-label="Search"></div>
   </section>
   ${top.length >= 3 ? `<section class="top10"><div class="sec-head"><h2>${e(u("top_t"))}</h2><p>${e(u("top_sub"))}</p></div>
-    <ol class="t10">${top.map((p, i) => `<li><span class="t10-n">${i + 1}</span>${thumb(p)}</li>`).join("")}</ol></section>` : ""}
+    <div class="t10-wrap"><button class="t10-arr prev" type="button" aria-label="‹" hidden>‹</button>
+    <ol class="t10" id="t10">${top.map((p, i) => `<li><span class="t10-n">${i + 1}</span>${thumb(p)}</li>`).join("")}</ol>
+    <button class="t10-arr next" type="button" aria-label="›">›</button></div></section>` : ""}
   <div class="tags" id="tags">${popular.slice(0, 12).map(t => `<a class="tag" href="${X.tagUrl(t)}">${e(X.tr(t))}<small>${cnt(t)}</small></a>`).join("")}</div>
   <p class="all-tags"><a href="tags.html">${e(u("all_tags_link"))}</a></p>
   <div class="toolbar">
@@ -405,10 +411,14 @@ for (const key of Object.keys(base.PLATFORMS).filter(k => base.PLATFORMS[k].url)
   const v = { p: P.name, r: P.rating, n, site: SITE.domain, author: SITE.author, d: fmtDate(D.checked || SITE.updated, X.LANG), desc: X.tr(P.desc),
               feats: listFmt([...P.feats.map(X.tr), ...feats.map(x => x.toLowerCase())], lang) };
   const pros = [...P.feats.filter(f => !((D.images && /image|photo/i.test(f)) || (D.voice && /voice/i.test(f)) || (D.video && /video/i.test(f)))).map(f => X.tr(f)), D.images && u("pro_img"), D.voice && u("pro_voice"), D.video && u("pro_video"), D.free && u("pro_free")].filter(Boolean);
-  const cons = [(D.images || D.voice || D.video) && u("con_paid"), P.tags.includes("Community characters") && u("pl_con_comm"), !D.checked && u("pl_con_unv")].filter(Boolean);
+  const cons = [(D.images || D.voice || D.video) && u("con_paid"), P.tags.includes("Community characters") && u("pl_con_comm"), D.priceMo == null && u("pl_con_unv")].filter(Boolean);
   const cnt = {}; list.forEach(p => p.tags.forEach(t => { if (!["Female","Male","Realistic","Image generation","Voice","Video"].includes(t) && X.ALL_TAGS.includes(t)) cnt[t] = (cnt[t] || 0) + 1; }));
   const cats = Object.entries(cnt).sort((a,b) => b[1] - a[1]).slice(0, 18);
-  const rows = [[u("col_free"), yn(D.free)], [u("col_images"), yn(D.images)], [u("col_voice"), yn(D.voice)], [u("col_video"), yn(D.video)], [u("col_app"), yn(D.app)],
+  const px = priceTxt(X, D);
+  const rows = [[u("col_total"), `<strong>★ ${P.rating}</strong> <small><a href="../how-we-rate.html">${e(u("nav_how"))}</a></small>`],
+    [u("col_free"), D.unlimited ? `<span class="yes">${e(u("px_unl"))}</span>` : yn(D.free)], [u("col_price"), px ? e(px) : yn(null)],
+    [u("col_images"), yn(D.images)], [u("col_voice"), yn(D.voice)], [u("col_calls"), yn(D.calls)], [u("col_video"), yn(D.video)], [u("col_group"), yn(D.group)], [u("col_app"), yn(D.app)],
+    [u("col_discreet"), yn(D.discreet)], [u("col_crypto"), yn(D.crypto)],
     [u("col_checked"), D.checked ? e(fmtDate(D.checked, X.LANG)) : yn(null)]];
   const faq = [[u("pq1", v), u(D.free ? "pa1_yes" : "pa1_unk", v)], [u("pq2", v), u("pa2", v)], ...(n ? [[u("pq3", v), u("pa3", v)]] : []), [u("pq4", v), u("pa4", v)], [u("pq5", v), u("pa5", v)]];
   const cta = cls => X.ctaLink(P, e(u("try", {p: P.name})) + " →", cls);
@@ -482,15 +492,24 @@ pages.push({ file: "author.html", build: (X, lang) => {
 }});
 
 pages.push({ file: "how-we-rate.html", build: (X) => {
-  const u = X.ui, e = X.esc, W = [30, 25, 20, 15, 10];
+  const u = X.ui, e = X.esc;
+  const parts = [["free", 20], ["price", 25], ["feat", 35], ["priv", 20]];
+  const rows = Object.entries(X.PLATFORMS).sort((a,b) => b[1].rating - a[1].rating || ((X.PLATFORM_DATA[a[0]] || {}).priceMo || 99) - ((X.PLATFORM_DATA[b[0]] || {}).priceMo || 99));
   return { page:"how", title:u("meta_how_t"), desc:u("meta_how_d"), body: `
-  <section class="hero"><h1>${u("how_h1")}</h1><p>${e(u("how_intro"))}</p></section>
+  <section class="hero"><h1>${u("how_h1")}</h1><p>${e(u("sc_intro"))}</p>
+    <p class="tp-by">${byline(X, "")} · ${e(u("rv_checked", {d: fmtDate(SITE.updated, X.LANG)}))}</p></section>
   <section class="info"><h2>${e(u("crit_title"))}</h2>
-    <div class="crit">${[1,2,3,4,5].map((i, k) => `<div class="crit-row"><div class="crit-w">${W[k]}%</div>
-      <div><h3>${e(u("c" + i + "_t"))}</h3><p>${e(u("c" + i))}</p></div></div>`).join("")}</div></section>
+    <div class="crit">${parts.map(([k, w]) => `<div class="crit-row"><div class="crit-w">${w}%</div>
+      <div><h3>${e(u("sc_" + k + "_t"))}</h3><p>${e(u("sc_" + k))}</p></div></div>`).join("")}</div>
+    <p>${e(u("sc_half"))}</p><p>${e(u("sc_aff"))}</p></section>
+  <section class="info"><h2>${e(u("sc_table_t"))}</h2>
+    <div class="tablewrap"><table class="data" style="min-width:0"><thead><tr><th>${e(u("col_platform"))}</th>${parts.map(([k]) => `<th>${e(u("col_" + k + "_s"))}</th>`).join("")}<th>${e(u("col_total"))}</th></tr></thead><tbody>
+    ${rows.map(([k, P]) => `<tr><td><strong>${P.url ? `<a href="platform/${k}.html">${e(P.name)}</a>` : e(P.name)}</strong></td>${parts.map(([q]) => `<td>${P.score[q]}</td>`).join("")}<td><strong>★ ${P.rating}</strong></td></tr>`).join("")}
+    </tbody></table></div>
+    <p class="hero-links" style="text-align:left"><a href="data.html">${e(u("how_data_link"))} →</a></p></section>
+  <section class="info"><h2>${e(u("sc_chat_t"))}</h2><p>${e(u("sc_chat"))}</p></section>
   <section class="info"><h2>${e(u("how_ind_t"))}</h2><p>${e(u("how_ind"))}</p></section>
   <section class="info"><h2>${e(u("how_upd_t"))}</h2><p>${e(u("how_upd"))}</p>
-    <p><a class="btn btn-main" href="data.html">${e(u("how_data_link"))}</a></p>
     <p>${u("how_report", {contact: `<a href="contact.html">${e(u("contact_link"))}</a>`})}</p></section>` };
 }});
 
@@ -498,13 +517,13 @@ pages.push({ file: "data.html", build: (X) => {
   const u = X.ui, e = X.esc;
   const yn = v => v === true ? `<span class="yes">${e(u("yes"))}</span>` : v === false ? `<span class="no">${e(u("no"))}</span>` : `<span class="pend">${e(u("pending"))}</span>`;
   const rows = Object.entries(X.PLATFORMS).sort((a,b) => b[1].rating - a[1].rating).map(([k, p]) => {
-    const d = X.PLATFORM_DATA[k] || {};
-    return `<tr><td><strong>${e(p.name)}</strong></td><td>${p.rating}</td><td>${yn(d.free)}</td>
-      <td>${d.price ? e(d.price) : `<span class="pend">${e(u("pending"))}</span>`}</td>
-      <td>${yn(d.images)}</td><td>${yn(d.voice)}</td><td>${yn(d.video)}</td><td>${yn(d.app)}</td>
-      <td>${d.checked ? e(d.checked) : `<span class="pend">${e(u("pending"))}</span>`}</td>
+    const d = X.PLATFORM_DATA[k] || {}, px = priceTxt(X, d);
+    return `<tr><td><strong>${p.url ? `<a href="platform/${k}.html">${e(p.name)}</a>` : e(p.name)}</strong></td><td>${p.rating}</td>
+      <td>${d.unlimited ? `<span class="yes">${e(u("px_unl"))}</span>` : yn(d.free)}</td><td>${px ? e(px) : `<span class="pend">${e(u("pending"))}</span>`}</td>
+      ${["images","voice","calls","video","group","app","discreet","crypto"].map(f => `<td>${yn(d[f])}</td>`).join("")}
+      <td>${d.checked ? e(fmtDate(d.checked, X.LANG)) : `<span class="pend">${e(u("pending"))}</span>`}</td>
       <td>${X.ctaLink(p, e(u("visit")) + " →", "tbl-link")}</td></tr>`; }).join("");
-  const cols = ["col_platform","col_score","col_free","col_price","col_images","col_voice","col_video","col_app","col_checked"];
+  const cols = ["col_platform","col_score","col_free","col_price","col_images","col_voice","col_calls","col_video","col_group","col_app","col_discreet","col_crypto","col_checked"];
   return { page:"data", title:u("meta_data_t"), desc:u("meta_data_d"), body: `
   <section class="hero"><h1>${u("data_h1")}</h1><p>${e(u("data_sub"))}</p></section>
   <div class="tablewrap"><table class="data"><thead><tr>${cols.map(c => `<th>${e(u(c))}</th>`).join("")}<th></th></tr></thead><tbody>${rows}</tbody></table></div>
@@ -516,16 +535,12 @@ pages.push({ file: "contact.html", build: (X) => {
   const u = X.ui, e = X.esc;
   return { page:"contact", title:u("meta_contact_t") + " – " + SITE.domain, desc:u("meta_contact_d"), body: `
   <section class="hero"><h1>${u("contact_title")}</h1><p>${e(u("contact_sub"))}</p></section>
-  <form class="contact" name="contact" method="POST" data-netlify="true" netlify-honeypot="bot-field" action="contact.html?sent=1">
-    <input type="hidden" name="form-name" value="contact">
-    <p class="hp"><label>Leave empty <input name="bot-field"></label></p>
-    <label>${e(u("c_name"))}<input name="name" required></label>
-    <label>${e(u("c_mail"))}<input name="email" type="email" required></label>
-    <label>${e(u("c_subject"))}<select name="subject">${[1,2,3,4].map(i => `<option>${e(u("c_s" + i))}</option>`).join("")}</select></label>
-    <label>${e(u("c_msg"))}<textarea name="message" rows="6" required></textarea></label>
-    <button class="btn btn-main" type="submit">${e(u("c_send"))}</button>
-  </form>
-  <section class="info"><p>${e(u("c_or"))} <a href="mailto:${SITE.email}">${SITE.email}</a></p>
+  <section class="info ct-card"><h2>${e(u("ct_mail_t"))}</h2>
+    <p class="ct-mail"><a href="mailto:${SITE.email}">${SITE.email}</a></p>
+    <p><a class="btn btn-main" href="mailto:${SITE.email}">✉ ${e(u("ct_btn"))}</a></p>
+    <p>${e(u("ct_about"))}</p><ul class="feat">${[1,2,3,4].map(i => `<li>${e(u("c_s" + i))}</li>`).join("")}</ul>
+    <p class="tp-note" style="text-align:left">${e(u("ct_reply"))}</p></section>
+  <section class="info"><p>${e(u("ct_not", {site: SITE.domain}))}</p>
     <p>${u("c_note", {dmca: `<a href="legal/dmca.html">${e(u("legal_dmca"))}</a>`})}</p></section>` };
 }});
 
@@ -606,7 +621,7 @@ ${LANG_LIST.map(l => `  <sitemap><loc>${SITE.url}/sitemaps/${l}.xml</loc><lastmo
 write("robots.txt", `User-agent: *\nAllow: /\n\nSitemap: ${SITE.url}/sitemap.xml\n`);
 /* data.csv */
 const csvq = v => `"${String(v ?? "").replace(/"/g, '""')}"`;
-write("data.csv", ["platform,score,free_tier,paid_from,images,voice,video,mobile_app,checked",
+write("data.csv", ["platform,score,free_start,unlimited_free,price_month,price_best_month,currency,images,voice,calls,video,group_chat,mobile_app,discreet_billing,crypto,apple_google_pay,paypal,checked,source",
   ...Object.entries(base.PLATFORMS).map(([k, p]) => { const d = base.PLATFORM_DATA[k] || {};
-    return [p.name, p.rating, d.free, d.price, d.images, d.voice, d.video, d.app, d.checked].map(csvq).join(","); })].join("\n") + "\n");
+    return [p.name, p.rating, d.free, d.unlimited, d.priceMo, d.priceBest, d.cur, d.images, d.voice, d.calls, d.video, d.group, d.app, d.discreet, d.crypto, d.wallet, d.paypal, d.checked, d.src].map(csvq).join(","); })].join("\n") + "\n");
 console.log(`Built ${urls.length} indexable URLs, ${pages.length * LANG_LIST.length} pages in ${LANG_LIST.length} languages → public/`);

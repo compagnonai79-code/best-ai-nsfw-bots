@@ -10,6 +10,25 @@ const slug = t => t.toLowerCase().replace(/[^a-z0-9]+/g, "-").replace(/^-|-$/g, 
 const DAY = 864e5;
 const isNew = pr => (Date.now() - new Date(pr.added + "T00:00:00").getTime()) < NEW_DAYS * DAY;
 const newCount = () => PROFILES.filter(isNew).length;
+/* ---------- SCORES: computed from PLATFORM_DATA only (method on the "How we rate" page) ----------
+   Free access 20% · Price 25% · Features 35% · Privacy & payments 20%. Each part is out of 10, unverified facts count half.
+   Final score out of 5 = weighted average / 2, rounded to one decimal. Platforms cannot pay to change it. */
+const SCORE_W = { free: 0.20, price: 0.25, feat: 0.35, priv: 0.20 };
+const FEATS = ["images", "voice", "calls", "video", "group", "app"];
+const half = v => v === true ? 1 : v === false ? 0 : 0.5;
+const priceScore = x => x == null ? 5 : Math.max(2, Math.min(10, 10 - 0.35 * (x - 4)));
+function scoreOf(d) {
+  d = d || {};
+  const free = d.unlimited ? 10 : d.free === true ? 7 : d.free === false ? 2 : 5;
+  const price = (priceScore(d.priceMo) + priceScore(d.priceBest != null ? d.priceBest : d.priceMo)) / 2;
+  const feat = 2 + 8 * FEATS.reduce((a, f) => a + half(d[f]), 0) / FEATS.length;
+  const priv = 2 + 4 * half(d.discreet) + 2 * half(d.crypto) + 1 * half(d.wallet) + 1 * half(d.paypal);
+  const total = free * SCORE_W.free + price * SCORE_W.price + feat * SCORE_W.feat + priv * SCORE_W.priv;
+  const r1 = x => Math.round(x * 10) / 10;
+  return { free: r1(free), price: r1(price), feat: r1(feat), priv: r1(priv), total: r1(total), rating: r1(total / 2) };
+}
+for (const k in PLATFORMS) { PLATFORMS[k].score = scoreOf(PLATFORM_DATA[k]); PLATFORMS[k].rating = PLATFORMS[k].score.rating; }
+
 /* A category is only published once it has at least MIN_TAG bots. Smaller ones stay in the data
    (data.js / data-candy.js) and show up automatically as soon as they reach the minimum. */
 const MIN_TAG = 3;
@@ -163,8 +182,16 @@ function wireVideos() {
   document.addEventListener("mouseout", e => { const c = e.target.closest && e.target.closest(".pcard"); if (!c || (e.relatedTarget && c.contains(e.relatedTarget))) return;
     const v = c.querySelector("video.pvid"); delete c.dataset.playing; c.classList.remove("vplay"); if (v) v.pause(); });
 }
+/* Top 10 row: arrow buttons instead of a visible scrollbar */
+function wireTop10() {
+  const r = $("#t10"); if (!r) return; const prev = $(".t10-arr.prev"), next = $(".t10-arr.next");
+  const upd = () => { prev.hidden = r.scrollLeft < 8; next.hidden = r.scrollLeft + r.clientWidth >= r.scrollWidth - 8; };
+  prev.addEventListener("click", () => r.scrollBy({left: -r.clientWidth * 0.8}));
+  next.addEventListener("click", () => r.scrollBy({left: r.clientWidth * 0.8}));
+  r.addEventListener("scroll", upd, {passive: true}); window.addEventListener("resize", upd); upd();
+}
 function wireProfileGrid() {
-  wireVideos();
+  wireVideos(); wireTop10();
   const g = $("#grid"); if (!g) return;
   /* photo/name = link to /model/<id>, "Chat" button = affiliate link: nothing to intercept */
   $("#profile")?.addEventListener("click", e => { if (e.target.id === "profile" || e.target.classList.contains("x")) $("#profile").classList.remove("show"); });
