@@ -63,6 +63,35 @@ function ctaLink(p, label, cls = "btn btn-main") {
     ? `<a class="${cls}" href="${esc(href)}" target="_blank" rel="sponsored nofollow noopener">${label}</a>`
     : `<a class="${cls}" aria-disabled="true">${esc(ui("soon"))}</a>`;
 }
+/* ---------- current offer (OFFER in data.js) ---------- */
+const offerEnd = () => (typeof OFFER === "undefined" || !OFFER.active) ? 0 : new Date(OFFER.checked + "T00:00:00Z").getTime() + OFFER.days * 864e5;
+const offerOn = () => Date.now() < offerEnd();
+const eur = n => n.toLocaleString(LANG === "en" || LANG === "hi" ? "en-US" : LANG, { minimumFractionDigits: 2 }) + " €";
+const offerVars = () => ({ p: pf(OFFER.platform).name, pct: OFFER.pct, price: eur(OFFER.price), reg: eur(OFFER.regular) });
+function offerBar() {
+  if (!offerOn()) return "";
+  const P = pf(OFFER.platform); if (!linkOf(P)) return "";
+  return `<div class="offer-bar" id="offer-bar" data-end="${offerEnd()}"><div class="wrap">
+    <span class="ob-pct">-${OFFER.pct}%</span>
+    <span class="ob-txt"><strong class="ob-l">${esc(ui("of_bar", offerVars()))}</strong><strong class="ob-s">${esc(ui("of_bar_s", offerVars()))}</strong> <span class="ob-l">${esc(ui("of_bar2", offerVars()))}</span></span>
+    ${ctaLink(P, esc(ui("of_btn")) + " →", "ob-btn")}
+    <button class="ob-x" aria-label="Close">×</button></div></div>`;
+}
+function offerBox(rel) {
+  if (!offerOn()) return "";
+  const P = pf(OFFER.platform), v = Object.assign(offerVars(), { d: fmtD(OFFER.checked) });
+  return `<section class="offer-box" data-end="${offerEnd()}"><span class="ob-pct">-${OFFER.pct}%</span>
+    <div><h2>${esc(ui("of_box_t", v))}</h2><p>${esc(ui("of_box", v))}</p><p class="small">${esc(ui("of_note", v))}</p></div>
+    ${ctaLink(P, esc(ui("of_btn")) + " →", "btn btn-main")}</section>`;
+}
+function fmtD(d) { try { return new Date(d + "T12:00:00Z").toLocaleDateString(LANG === "hi" ? "hi-IN" : LANG, { day: "numeric", month: "long", year: "numeric" }); } catch (e) { return d; } }
+function wireOffer() {
+  document.querySelectorAll("[data-end]").forEach(el => { if (Date.now() >= +el.dataset.end) el.remove(); });
+  const bar = document.getElementById("offer-bar"); if (!bar) return;
+  try { if (sessionStorage.getItem("offer_x")) return bar.remove(); } catch (e) {}
+  bar.querySelector(".ob-x").addEventListener("click", () => { bar.remove(); try { sessionStorage.setItem("offer_x", "1"); } catch (e) {} });
+}
+
 function visual(img, color, letter, alt = "") {
   return `<div class="ph" style="background:${grad(color)}">${esc(letter)}</div>` +
     (img ? `<img src="${esc(/^https?:/.test(img) ? img : R() + img)}" alt="${esc(alt)}" loading="lazy" onerror="this.remove()">` : "");
@@ -137,8 +166,8 @@ function buildPromo() {
       <div class="visual">${visual(PROMO.img, p.color, p.name[0])}</div>
       <div class="body">
         <span class="sponsored">${esc(ui("sponsored"))}</span>
-        <h2>${esc(ui("promo_title"))}</h2>
-        <p>${esc(ui("promo_text"))}</p>
+        <h2>${esc(offerOn() && OFFER.platform === PROMO.platform ? ui("of_pop_t", offerVars()) : ui("promo_title"))}</h2>
+        <p>${esc(offerOn() && OFFER.platform === PROMO.platform ? ui("of_pop", offerVars()) : ui("promo_text"))}</p>
         <ul>${p.feats.map(f => `<li>${esc(tr(f))}</li>`).join("")}</ul>
         ${ctaLink(p, esc(ui("promo_btn", {p: p.name})) + " →")}
         <div class="note">${esc(ui("promo_note"))}</div>
@@ -315,6 +344,7 @@ function boot(page) {
   $("#enter")?.addEventListener("click", passGate);
   $("#lang")?.addEventListener("change", e => { location.href = e.target.value; });
   if (page !== "legal") buildPromo();
+  wireOffer();
   wireProfileGrid();
   if (page === "home") initHome();
   if (page === "platforms") initPlatforms();

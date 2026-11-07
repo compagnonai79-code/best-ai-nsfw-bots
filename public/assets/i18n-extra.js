@@ -532,3 +532,32 @@ hi: { sc_intro:"हर स्कोर हर प्लेटफ़ॉर्म 
   col_calls:"कॉल", col_group:"ग्रुप चैट", col_discreet:"गोपनीय बिलिंग", col_crypto:"क्रिप्टो", px_mo:"{x}/माह", px_best:"{x}/माह (लंबा प्लान)", px_unl:"अनलिमिटेड" }
 };
 for (const l in SCORE_UI) Object.assign(I18N[l].ui, SCORE_UI[l]);
+
+/* ---------- current offer banner (OFFER in data.js) ---------- */
+const OFFER_UI = {
+en: { of_bar_s:"{p}: up to -{pct}% on Premium", of_bar:"{p}: up to -{pct}% on Premium for new members", of_bar2:"· {price}/month instead of {reg} on the yearly plan", of_btn:"Get the offer",
+  of_box_t:"Current offer: up to -{pct}% on {p} Premium", of_box:"New members pay {price} a month on the 12-month plan, instead of {reg} month to month. No code needed: the discount is applied on {p}'s subscription page.",
+  of_note:"Offer seen on {p}'s site on {d}. Limited-time offers change often: the final price is the one shown before you pay.",
+  of_pop_t:"Up to -{pct}% on {p} Premium", of_pop:"Limited offer for new members: {price}/month on the yearly plan instead of {reg}. Free to try first." },
+fr: { of_bar_s:"{p} : jusqu'à -{pct} % sur Premium", of_bar:"{p} : jusqu'à -{pct} % sur Premium pour les nouveaux membres", of_bar2:"· {price}/mois au lieu de {reg} avec l'abonnement annuel", of_btn:"Profiter de l'offre",
+  of_box_t:"Offre en cours : jusqu'à -{pct} % sur {p} Premium", of_box:"Les nouveaux membres paient {price} par mois avec l'abonnement de 12 mois, au lieu de {reg} au mois. Aucun code à saisir : la réduction est appliquée sur la page d'abonnement de {p}.",
+  of_note:"Offre constatée sur le site de {p} le {d}. Les offres limitées changent souvent : le prix final est celui affiché avant le paiement.",
+  of_pop_t:"Jusqu'à -{pct} % sur {p} Premium", of_pop:"Offre limitée pour les nouveaux membres : {price}/mois avec l'abonnement annuel au lieu de {reg}. Essai gratuit d'abord." },
+es: { of_bar_s:"{p}: hasta -{pct} % en Premium", of_bar:"{p}: hasta -{pct} % en Premium para nuevos miembros", of_bar2:"· {price}/mes en lugar de {reg} con el plan anual", of_btn:"Ver la oferta",
+  of_box_t:"Oferta actual: hasta -{pct} % en {p} Premium", of_box:"Los nuevos miembros pagan {price} al mes con el plan de 12 meses, en lugar de {reg} mes a mes. Sin código: el descuento se aplica en la página de suscripción de {p}.",
+  of_note:"Oferta vista en el sitio de {p} el {d}. Las ofertas limitadas cambian a menudo: el precio final es el que se muestra antes de pagar.",
+  of_pop_t:"Hasta -{pct} % en {p} Premium", of_pop:"Oferta limitada para nuevos miembros: {price}/mes con el plan anual en lugar de {reg}. Pruébalo gratis primero." },
+de: { of_bar_s:"{p}: bis zu -{pct} % auf Premium", of_bar:"{p}: bis zu -{pct} % auf Premium für neue Mitglieder", of_bar2:"· {price}/Monat statt {reg} im Jahresabo", of_btn:"Zum Angebot",
+  of_box_t:"Aktuelles Angebot: bis zu -{pct} % auf {p} Premium", of_box:"Neue Mitglieder zahlen im 12-Monats-Abo {price} pro Monat statt {reg} monatlich. Kein Code nötig: Der Rabatt wird auf der Abo-Seite von {p} angewendet.",
+  of_note:"Angebot am {d} auf der Website von {p} gesehen. Befristete Angebote ändern sich oft: Es gilt der Preis, der vor der Zahlung angezeigt wird.",
+  of_pop_t:"Bis zu -{pct} % auf {p} Premium", of_pop:"Befristetes Angebot für neue Mitglieder: {price}/Monat im Jahresabo statt {reg}. Vorher kostenlos testen." },
+pt: { of_bar_s:"{p}: até -{pct}% no Premium", of_bar:"{p}: até -{pct}% no Premium para novos membros", of_bar2:"· {price}/mês em vez de {reg} no plano anual", of_btn:"Ver a oferta",
+  of_box_t:"Oferta atual: até -{pct}% no {p} Premium", of_box:"Novos membros pagam {price} por mês no plano de 12 meses, em vez de {reg} mês a mês. Sem código: o desconto é aplicado na página de assinatura do {p}.",
+  of_note:"Oferta vista no site do {p} em {d}. Ofertas limitadas mudam com frequência: o preço final é o exibido antes do pagamento.",
+  of_pop_t:"Até -{pct}% no {p} Premium", of_pop:"Oferta limitada para novos membros: {price}/mês no plano anual em vez de {reg}. Teste grátis primeiro." },
+hi: { of_bar_s:"{p}: Premium पर -{pct}% तक छूट", of_bar:"{p}: नए सदस्यों के लिए Premium पर -{pct}% तक की छूट", of_bar2:"· सालाना प्लान पर {reg} की जगह {price}/महीना", of_btn:"ऑफ़र देखें",
+  of_box_t:"मौजूदा ऑफ़र: {p} Premium पर -{pct}% तक की छूट", of_box:"नए सदस्य 12 महीने के प्लान पर {reg} मासिक की जगह {price} प्रति माह देते हैं। कोई कोड नहीं चाहिए: छूट {p} के सब्सक्रिप्शन पेज पर लागू होती है।",
+  of_note:"यह ऑफ़र {d} को {p} की साइट पर देखा गया। सीमित ऑफ़र अक्सर बदलते हैं: अंतिम कीमत वही है जो भुगतान से पहले दिखाई जाती है।",
+  of_pop_t:"{p} Premium पर -{pct}% तक की छूट", of_pop:"नए सदस्यों के लिए सीमित ऑफ़र: सालाना प्लान पर {reg} की जगह {price}/महीना। पहले मुफ़्त में आज़माएँ।" }
+};
+for (const l in OFFER_UI) Object.assign(I18N[l].ui, OFFER_UI[l]);

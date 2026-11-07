@@ -61,6 +61,13 @@ Edit `TOP_PICKS` in `src/data.js` (10 profile ids, in order). It is labelled on 
 - change at least 4 entries compared with last week; never use an excluded id.
 Only use ids that exist in the data (check with a quick `node -e` load of the data files).
 
+## 6c. Re-check the current offer (every run)
+`OFFER` in `src/data.js` drives the "-70 %" banner and the offer box on the Candy page. From the candy.ai tab:
+- `fetch('/fr/promotions/modal')` → read the discount ("Jusqu'à 70% de réduction…"), and open `/fr/premium` (or the subscription page) for the 12-month price per month and the month-to-month price.
+- Offer still there → update `pct`, `price`, `regular` if they changed, and set `checked` to today.
+- No offer any more → set `active: false`.
+Never invent a code or a discount. Without a fresh check the banner hides itself 30 days after `checked`.
+
 ## 7. Build, check, publish
 ```
 node build.js

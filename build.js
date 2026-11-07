@@ -18,7 +18,7 @@ function context(lang) {
   const ctx = { PAGE_LANG: lang, console, Date, URLSearchParams };
   vm.createContext(ctx);
   vm.runInContext(CLIENT.map(read).join("\n;\n") +
-    "\n;this.X={SITE,PLATFORMS,PLATFORM_DATA,PROFILES,PROMO,NEW_DAYS,LANGS,ui,tr,esc,slug,isNew,newCount,tagCount,ALL_PROFILE_TAGS,TAG_GROUPS,ALL_TAGS,profileCard,pickCard,platformCard,visual,ctaLink,girlUrl,tagUrl,inBase,byNew,bioOf,linkFor,withAge,topList,bySel,pagerHtml,PER_PAGE,girlId,plUrl,pfKey,gridHtml,get LANG(){return LANG}};", ctx);
+    "\n;this.X={SITE,PLATFORMS,PLATFORM_DATA,PROFILES,PROMO,OFFER,offerBar,offerBox,NEW_DAYS,LANGS,ui,tr,esc,slug,isNew,newCount,tagCount,ALL_PROFILE_TAGS,TAG_GROUPS,ALL_TAGS,profileCard,pickCard,platformCard,visual,ctaLink,girlUrl,tagUrl,inBase,byNew,bioOf,linkFor,withAge,topList,bySel,pagerHtml,PER_PAGE,girlId,plUrl,pfKey,gridHtml,get LANG(){return LANG}};", ctx);
   ctx.X._ctx = ctx;
   return ctx.X;
 }
@@ -117,6 +117,7 @@ ${o.image ? "" : '<meta property="og:image:width" content="1200">\n<meta propert
   </div>
 </div>
 
+${o.page === "legal" ? "" : X.offerBar()}
 <header>
   <div class="wrap">
     <a class="logo" href="${L("index.html")}">best-ai-<span class="grad">nsfw-bots</span></a>
@@ -429,6 +430,7 @@ for (const key of Object.keys(base.PLATFORMS).filter(k => base.PLATFORMS[k].url)
     <p class="tp-by">★ ${P.rating}/5 · ${byline(X, "../")} · ${e(u("rv_checked", v))}</p>
     <p class="tp-intro">${e(X.tr(P.desc))}</p>
     <p>${cta("btn btn-main btn-xl")}</p></section>
+  ${X.OFFER.platform === key ? X.offerBox() : ""}
   <div class="mgrid">
     <section class="info review"><h2>${e(u("rv_t"))}</h2>
       <p>${e(u("pl_sum", v))}</p>

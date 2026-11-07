@@ -100,6 +100,21 @@ const PLATFORM_DATA = {
    Profile ids, in order. Edit this list every week. Ids = the end of the /model/<id> URL. */
 const TOP_PICKS = ["riley-reid","pilar-ibarra","mizuki-saeki","mia-malkova","valeria-ochoa","lira","maisie-mckae","sp00kybby","victor-draven","lena-the-plug"];
 
+/* ---------- CURRENT CANDY OFFER (banner) ----------
+   Candy's public discount, copied from its own site (promotion window + subscription page).
+   checked = date we last saw it on candy.ai. The banner hides itself 30 days after that date
+   unless you re-check the offer and update the date (step 6c of tools/UPDATE_CANDY.md).
+   Set active:false to remove it everywhere. Never put an unverified code here. */
+const OFFER = {
+  active: true,
+  platform: "candy",
+  pct: 70,                 // "up to -70%"
+  price: 3.99,              // € per month on the 12-month plan
+  regular: 13.99,          // € month-to-month price
+  checked: "2026-11-07",
+  days: 30
+};
+
 /* ---------- PROMO POP-UP ----------
    (pop-up texts are translated in i18n.js: promo_title, promo_text, promo_btn) */
 const PROMO = {
