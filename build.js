@@ -28,7 +28,7 @@ for (const p of base.PROFILES) for (const t of p.tags)
   if (!base.ALL_TAGS.includes(t)) console.warn(`⚠️  Profile "${p.name}": tag "${t}" is not in TAG_GROUPS (data.js)`);
 for (const l of Object.keys(LANGS)) if (l !== "en") { const X = context(l);
   const miss = base.ALL_TAGS.filter(t => X.tr(t) === t && /[a-z]/.test(t) && l === "hi"); if (miss.length) console.warn(`ℹ️  hi: ${miss.length} tags shown in English`); }
-const LEGAL = require("./src/legal.js")(SITE);
+const LEGAL = Object.assign(require("./src/legal.js")(SITE), require("./src/legal-more.js")(SITE));
 const LANG_LIST = Object.keys(LANGS);
 const prefix = l => (l === "en" ? "" : l + "/");
 const OG_LOCALE = { en:"en_US", fr:"fr_FR", es:"es_ES", de:"de_DE", pt:"pt_BR", hi:"hi_IN" };
@@ -53,7 +53,7 @@ const priceTxt = (X, d) => { if (!d || d.priceMo == null) return null;
 const absUrl = (l, file) => SITE.url + "/" + (prefix(l) + file).replace(/index\.html$/, "").replace(/\.html$/, "");
 const LEGAL_PAGES = [["terms","legal_terms"],["cookies","legal_cookies"],["dmca","legal_dmca"],["privacy","legal_privacy"],["ai-disclosure","legal_ai"],["legal-notice","legal_notice"]];
 const LEGAL_KEY = { "terms":"terms","cookies":"cookies","dmca":"dmca","privacy":"privacy","ai-disclosure":"ai","legal-notice":"notice" };
-const LEGAL_LANGS = ["en", "fr"];
+const LEGAL_LANGS = ["en", "fr", "es", "de", "pt", "hi"];
 
 /* ---------- layout ---------- */
 function layout(X, lang, file, o) {
@@ -230,10 +230,10 @@ pages.push({ file: "platforms.html", build: (X) => {
   <section class="hero"><h1>${u("pl_title")}</h1><p>${e(u("pl_sub"))}</p>
     <p class="hero-links"><a href="how-we-rate.html">${e(u("nav_how"))} →</a> · <a href="data.html">${e(u("nav_data"))} →</a></p></section>
   <h2 class="section-title">${e(u("top_picks"))}</h2>
-  <div class="picks">${LIST.filter(p => p.top).sort((a,b) => b.rating - a.rating).map(X.pickCard).join("")}</div>
+  <div class="picks">${LIST.filter(p => p.top).sort((a,b) => b.rank - a.rank).map(X.pickCard).join("")}</div>
   <h2 class="section-title">${e(u("all_pl"))}</h2>
   <div class="tags" id="ptags" style="justify-content:flex-start"></div>
-  <div class="grid" id="pgrid">${[...LIST].sort((a,b) => b.rating - a.rating).map(X.platformCard).join("")}</div>
+  <div class="grid" id="pgrid">${[...LIST].sort((a,b) => b.rank - a.rank).map(X.platformCard).join("")}</div>
   <section class="info"><h2>${e(u("guide_title"))}</h2><ul>${[1,2,3,4,5].map(i => `<li>${u("g" + i)}</li>`).join("")}</ul></section>
   <section class="info"><h2>${e(u("faq_title"))}</h2>${[1,2,3].map(i => `<details><summary>${e(u("q" + i))}</summary><p>${e(u("a" + i))}</p></details>`).join("")}</section>
   <section class="info" id="disclosure"><h2>${e(u("disc_title"))}</h2><p>${e(u("disc_pl"))}</p></section>` };
@@ -477,7 +477,7 @@ for (const t of base.ALL_TAGS) for (const k of Object.keys(base.PLATFORMS)) if (
 /* author page */
 pages.push({ file: "author.html", build: (X, lang) => {
   const u = X.ui, e = X.esc, v = { author: SITE.author, site: SITE.domain };
-  const revs = Object.entries(X.PLATFORMS).filter(([, P]) => P.url).sort((a,b) => b[1].rating - a[1].rating);
+  const revs = Object.entries(X.PLATFORMS).filter(([, P]) => P.url).sort((a,b) => b[1].rank - a[1].rank);
   return { page:"author", title: SITE.author + " – " + SITE.domain, desc: u("au_meta_d", v), ogType: "profile", body: `
   <section class="hero tp-hero"><div class="pl-mono" style="background:linear-gradient(135deg,var(--accent),var(--accent2))">${e(SITE.author[0])}</div>
     <h1>${e(SITE.author)}</h1><p class="tp-by">${e(u("author_role").replace(/^./, c => c.toUpperCase()))} · ${e(SITE.domain)}</p>
@@ -494,7 +494,7 @@ pages.push({ file: "author.html", build: (X, lang) => {
 pages.push({ file: "how-we-rate.html", build: (X) => {
   const u = X.ui, e = X.esc;
   const parts = [["free", 20], ["price", 25], ["feat", 35], ["priv", 20]];
-  const rows = Object.entries(X.PLATFORMS).sort((a,b) => b[1].rating - a[1].rating || ((X.PLATFORM_DATA[a[0]] || {}).priceMo || 99) - ((X.PLATFORM_DATA[b[0]] || {}).priceMo || 99));
+  const rows = Object.entries(X.PLATFORMS).sort((a,b) => b[1].rank - a[1].rank);
   return { page:"how", title:u("meta_how_t"), desc:u("meta_how_d"), body: `
   <section class="hero"><h1>${u("how_h1")}</h1><p>${e(u("sc_intro"))}</p>
     <p class="tp-by">${byline(X, "")} · ${e(u("rv_checked", {d: fmtDate(SITE.updated, X.LANG)}))}</p></section>
@@ -506,7 +506,7 @@ pages.push({ file: "how-we-rate.html", build: (X) => {
     <div class="tablewrap"><table class="data" style="min-width:0"><thead><tr><th>${e(u("col_platform"))}</th>${parts.map(([k]) => `<th>${e(u("col_" + k + "_s"))}</th>`).join("")}<th>${e(u("col_total"))}</th></tr></thead><tbody>
     ${rows.map(([k, P]) => `<tr><td><strong>${P.url ? `<a href="platform/${k}.html">${e(P.name)}</a>` : e(P.name)}</strong></td>${parts.map(([q]) => `<td>${P.score[q]}</td>`).join("")}<td><strong>★ ${P.rating}</strong></td></tr>`).join("")}
     </tbody></table></div>
-    <p class="hero-links" style="text-align:left"><a href="data.html">${e(u("how_data_link"))} →</a></p></section>
+    <p class="hero-links" style="text-align:left"><a href="data.html">${e(u("how_data_link"))}</a></p></section>
   <section class="info"><h2>${e(u("sc_chat_t"))}</h2><p>${e(u("sc_chat"))}</p></section>
   <section class="info"><h2>${e(u("how_ind_t"))}</h2><p>${e(u("how_ind"))}</p></section>
   <section class="info"><h2>${e(u("how_upd_t"))}</h2><p>${e(u("how_upd"))}</p>
@@ -516,7 +516,7 @@ pages.push({ file: "how-we-rate.html", build: (X) => {
 pages.push({ file: "data.html", build: (X) => {
   const u = X.ui, e = X.esc;
   const yn = v => v === true ? `<span class="yes">${e(u("yes"))}</span>` : v === false ? `<span class="no">${e(u("no"))}</span>` : `<span class="pend">${e(u("pending"))}</span>`;
-  const rows = Object.entries(X.PLATFORMS).sort((a,b) => b[1].rating - a[1].rating).map(([k, p]) => {
+  const rows = Object.entries(X.PLATFORMS).sort((a,b) => b[1].rank - a[1].rank).map(([k, p]) => {
     const d = X.PLATFORM_DATA[k] || {}, px = priceTxt(X, d);
     return `<tr><td><strong>${p.url ? `<a href="platform/${k}.html">${e(p.name)}</a>` : e(p.name)}</strong></td><td>${p.rating}</td>
       <td>${d.unlimited ? `<span class="yes">${e(u("px_unl"))}</span>` : yn(d.free)}</td><td>${px ? e(px) : `<span class="pend">${e(u("pending"))}</span>`}</td>

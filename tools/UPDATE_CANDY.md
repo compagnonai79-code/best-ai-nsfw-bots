@@ -52,14 +52,22 @@ Hair colour only if the description says it (Blonde, Brunette, Redhead).
 Insert a JSON object at the top of the girlfriend block (before the first existing girlfriend), same shape as the others:
 `{"id","name","platform":"candy","added":"YYYY-MM-DD","img","sfw","url","tags":[…],"bio":{"fr":"…"},"age":N,"video":"…-h264"}`
 (`creator: true` for creators.) `added` = today, so the profile shows as "New".
+Also write the description in English, Spanish, German and Portuguese: `"bio":{"fr":"…","en":"…","es":"…","de":"…","pt":"…"}` (Hindi pages use the English text). Keep the meaning, the emojis and the tone; do not add details.
+
+## 6b. Refresh the Top 10 (every run, even if no character was added)
+Edit `TOP_PICKS` in `src/data.js` (10 profile ids, in order). It is labelled on the site as the editor's selection, so pick a varied, appealing mix:
+- about 5 realistic women (include at least one character added in the last 14 days if any, and at least one with a `video`),
+- 2 anime characters, 1 Creator Twin, 1 man, 1 SpicyChat profile with a photo;
+- change at least 4 entries compared with last week; never use an excluded id.
+Only use ids that exist in the data (check with a quick `node -e` load of the data files).
 
 ## 7. Build, check, publish
 ```
 node build.js
 node tools/check-links.js      # must say 0 broken
 git add -A
-git -c user.name="compagnonai79-code" -c user.email="compagnonai79-code@users.noreply.github.com" commit -m "Add N new Candy characters"
+git -c user.name="compagnonai79-code" -c user.email="compagnonai79-code@users.noreply.github.com" commit -m "Weekly update: N new Candy characters, Top 10 refreshed"
 git push
 ```
 Commit message ends with the attribution lines required by the session.
-If nothing is new: no commit.
+If no character is new, still commit and push the Top 10 refresh.

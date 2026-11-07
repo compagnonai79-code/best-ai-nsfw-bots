@@ -27,7 +27,8 @@ function scoreOf(d) {
   const r1 = x => Math.round(x * 10) / 10;
   return { free: r1(free), price: r1(price), feat: r1(feat), priv: r1(priv), total: r1(total), rating: r1(total / 2) };
 }
-for (const k in PLATFORMS) { PLATFORMS[k].score = scoreOf(PLATFORM_DATA[k]); PLATFORMS[k].rating = PLATFORMS[k].score.rating; }
+for (const k in PLATFORMS) { const d = PLATFORM_DATA[k] || {}; PLATFORMS[k].score = scoreOf(d); PLATFORMS[k].rating = PLATFORMS[k].score.rating;
+  PLATFORMS[k].rank = PLATFORMS[k].rating * 1000 - (d.priceMo != null ? d.priceMo : 99); }   /* ties: lower price first */
 
 /* A category is only published once it has at least MIN_TAG bots. Smaller ones stay in the data
    (data.js / data-candy.js) and show up automatically as soon as they reach the minimum. */
@@ -301,7 +302,7 @@ function initPlatforms() {
   const render = () => {
     $("#ptags").innerHTML = [...TAGS].sort((a,b) => tr(a).localeCompare(tr(b), LANG))
       .map(t => `<span class="tag ${active.has(t)?"on":""}" data-t="${esc(t)}">${esc(tr(t))}</span>`).join("");
-    const list = LIST.filter(p => [...active].every(t => p.tags.includes(t))).sort((a,b) => b.rating - a.rating);
+    const list = LIST.filter(p => [...active].every(t => p.tags.includes(t))).sort((a,b) => b.rank - a.rank);
     $("#pgrid").innerHTML = list.length ? list.map(platformCard).join("") : `<div class="empty">${esc(ui("empty_pl"))}</div>`;
   };
   $("#ptags").addEventListener("click", e => { const t = e.target.dataset.t; if (!t) return; active.has(t) ? active.delete(t) : active.add(t); render(); });
