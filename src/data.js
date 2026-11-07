@@ -17,6 +17,7 @@ const SITE = {
   vat:      "[TO FILL: VAT number, or 'VAT not applicable, art. 293 B of the CGI']",
   director: "[TO FILL: publication director (usually you)]",
   host:     "[TO FILL: hosting company name, address and phone — e.g. Netlify, Inc., 512 2nd Street, Suite 200, San Francisco, CA 94107, USA]",
+  author:   "Nicholas Simpson",   // name signing the reviews
   updated:  "2026-11-07"   // date shown on legal pages
 };
 

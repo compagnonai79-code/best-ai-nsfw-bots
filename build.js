@@ -18,7 +18,7 @@ function context(lang) {
   const ctx = { PAGE_LANG: lang, console, Date, URLSearchParams };
   vm.createContext(ctx);
   vm.runInContext(CLIENT.map(read).join("\n;\n") +
-    "\n;this.X={SITE,PLATFORMS,PLATFORM_DATA,PROFILES,PROMO,NEW_DAYS,LANGS,ui,tr,esc,slug,isNew,newCount,tagCount,ALL_PROFILE_TAGS,TAG_GROUPS,ALL_TAGS,profileCard,pickCard,platformCard,visual,ctaLink,girlUrl,tagUrl,inBase,byNew,bioOf,linkFor,withAge,topList,bySel,pagerHtml,PER_PAGE,girlId,get LANG(){return LANG}};", ctx);
+    "\n;this.X={SITE,PLATFORMS,PLATFORM_DATA,PROFILES,PROMO,NEW_DAYS,LANGS,ui,tr,esc,slug,isNew,newCount,tagCount,ALL_PROFILE_TAGS,TAG_GROUPS,ALL_TAGS,profileCard,pickCard,platformCard,visual,ctaLink,girlUrl,tagUrl,inBase,byNew,bioOf,linkFor,withAge,topList,bySel,pagerHtml,PER_PAGE,girlId,plUrl,pfKey,get LANG(){return LANG}};", ctx);
   ctx.X._ctx = ctx;
   return ctx.X;
 }
@@ -82,8 +82,7 @@ ${o.image ? "" : '<meta property="og:image:width" content="1200">\n<meta propert
 <meta name="twitter:description" content="${e(o.desc || "")}">
 <meta name="twitter:image" content="${e(ogImage(o.image))}">
 <meta name="RATING" content="RTA-5042-1996-1400-1577-RTA">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;700&family=Inter:wght@400;500;600;700${lang === "hi" ? "&family=Noto+Sans+Devanagari:wght@400;600;700" : ""}&display=swap" rel="stylesheet">
+<link rel="preload" href="${root}assets/fonts/inter-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="stylesheet" href="${root}assets/style.css">
 </head>
 <body>
@@ -265,7 +264,7 @@ for (const t of base.ALL_TAGS) pages.push({ file: "tag/" + base.slug(t) + ".html
   const faq = [1,2,3,4,5,6].map(i => [u("tq" + i, v), u("ta" + i, v)]);
   return { ...meta, body: `${crumb}
   <section class="hero tp-hero"><h1>${u("tag_h1", {tag: e(name)})}</h1>
-    <p class="tp-by">${e(u("tp_by", v))}</p>
+    <p class="tp-by">${e(u("tp_by", v))} · ${e(u("by_author", {author: SITE.author}))}</p>
     <p class="tp-intro">${e(u("tp_intro", v))}</p></section>
   <div class="pgrid" id="grid">${list.map(X.profileCard).join("")}</div>
   <p class="tp-note">${e(u("tp_order"))}</p>
@@ -303,7 +302,7 @@ for (const g0 of base.PROFILES) pages.push({ file: "model/" + (g0.id || base.slu
   const similar = X.PROFILES.filter(p => p !== g).map(p => [p, score(p)]).sort((a,b) => b[1] - a[1]).slice(0, 4).map(x => x[0]);
   const yn = val => val === true ? u("yes") : val === false ? u("no") : u("pending");
   const cta = (cls) => X.ctaLink(X.linkFor(g), "💬 " + e(u("chat_with", {name: g.name})) + " →", cls);
-  const rows = [[u("m_platform"), `<a href="../platforms.html">${e(P.name)}</a> · ★ ${P.rating}`],
+  const rows = [[u("m_platform"), `<a href="../${P.url ? "platform/" + g.platform : "platforms"}.html">${e(P.name)}</a> · ★ ${P.rating}`],
     [u("grp_age"), g.age ? e(String(g.age)) : e(u("m_not_set"))],
     ...GLANCE.map(k => [u("grp_" + k), g.tags.filter(t => groupOf(t) === k).map(t => `<a href="../tag/${X.slug(t)}.html">${e(X.tr(t))}</a>`).join(", ")]).filter(r => r[1]),
     [u("m_features", {p: P.name}), `${e(u("col_images"))} : ${e(yn(D.images))} · ${e(u("col_voice"))} : ${e(yn(D.voice))} · ${e(u("col_video"))} : ${e(yn(D.video))}`],
@@ -316,13 +315,13 @@ for (const g0 of base.PROFILES) pages.push({ file: "model/" + (g0.id || base.slu
   const cons = [g.platform === "candy" && "con_paid", g.platform !== "candy" && (D.images || D.voice || D.video) && "con_paid",
     g.platform === "spicychat" && "con_comm", !g.img && "con_noimg", !g.age && !g.creator && "con_noage"].filter(Boolean);
   const keyTags = g.tags.filter(t => !["Female","Male","Realistic","Anime","Image generation","Voice","Video","Sexting","Creator Twin"].includes(t)).slice(0, 4).map(X.tr);
-  const rv = { ...v, site: SITE.domain, d: fmtDate(SITE.updated, X.LANG), x: nTags, tags: keyTags.join(", ") || X.tr(main),
+  const rv = { ...v, site: SITE.domain, author: SITE.author, d: fmtDate(SITE.updated, X.LANG), x: nTags, tags: keyTags.join(", ") || X.tr(main),
     style: u(g.tags.includes("Anime") ? "rv_anime" : "rv_real") };
   const cmpRows = [g, ...similar].map(p => [p, p.tags.filter(t => g.tags.includes(t) && !["Female","Male","Realistic","Image generation","Voice","Video"].includes(t))]);
-  const faq = [1,2,3,4].map(i => [u("fq" + i, v), u("fa" + i + (i === 1 ? gen : ""), {...v, img: yn(D.images).toLowerCase(), voice: yn(D.voice).toLowerCase()})]);
+  const faq = [1,2,3,4,5,6].map(i => [u("fq" + i, v), u("fa" + i + (i === 1 ? gen : i === 6 && g.creator ? "_c" : ""), {...v, img: yn(D.images).toLowerCase(), voice: yn(D.voice).toLowerCase()})]);
   return { page:"model", nav:"home", image: g.img || "", ogType: "profile", title:u("girl_meta_t", {name:g.name, age:g.age || "", p:P.name}).replace(/, –/, " –").replace(/ ,/, ""),
     desc:u("girl_meta_d", {name:g.name, age:g.age || "18+", p:P.name, bio:X.bioOf(g)}).slice(0, 300), body: `
-  <nav class="crumb"><a href="../index.html">${e(u("nav_girls"))}</a> › <a href="../tag/${X.slug(main)}.html">${e(X.tr(main))}</a> › <span>${e(g.name)}</span></nav>
+  <nav class="crumb"><a href="../index.html">${e(u("nav_girls"))}</a> › ${P.url ? `<a href="../platform/${g.platform}.html">${e(P.name)}</a>` : e(P.name)} › <a href="../tag/${X.slug(main)}.html">${e(X.tr(main))}</a> › <span>${e(g.name)}</span></nav>
   <section class="girl">
     <div class="g-visual">${X.visual(g.img, P.color, g.name[0], g.name)}${X.isNew(g) ? `<span class="new">${e(u("new_badge"))}</span>` : ""}</div>
     <div class="g-body">
@@ -372,6 +371,53 @@ for (const g0 of base.PROFILES) pages.push({ file: "model/" + (g0.id || base.slu
   <div class="mbar"><span class="mb-img">${X.visual(g.img, P.color, g.name[0], g.name)}</span>
     <span class="mb-txt"><b>${e(g.name)}</b><small>${e(P.name)}</small></span>${cta("btn btn-main")}</div>
   <script type="application/ld+json">${JSON.stringify({"@context":"https://schema.org","@type":"FAQPage","mainEntity":faq.map(([q,a]) => ({"@type":"Question","name":q,"acceptedAnswer":{"@type":"Answer","text":a}}))}).replace(/</g,"\\u003c")}</script>` };
+}});
+
+/* one page per platform with an affiliate link: review, features, characters, FAQ */
+for (const key of Object.keys(base.PLATFORMS).filter(k => base.PLATFORMS[k].url)) pages.push({ file: "platform/" + key + ".html", build: (X, lang) => {
+  const u = X.ui, e = X.esc, P = X.PLATFORMS[key], D = X.PLATFORM_DATA[key] || {};
+  const list = X.PROFILES.filter(p => p.platform === key).sort(X.bySel), n = list.length;
+  const yn = val => val === true ? `<span class="yes">${e(u("yes"))}</span>` : val === false ? `<span class="no">${e(u("no"))}</span>` : `<span class="pend">${e(u("pending"))}</span>`;
+  const feats = [D.images && u("col_images"), D.voice && u("col_voice"), D.video && u("col_video")].filter(Boolean);
+  const v = { p: P.name, r: P.rating, n, site: SITE.domain, author: SITE.author, d: fmtDate(D.checked || SITE.updated, X.LANG), desc: X.tr(P.desc),
+              feats: listFmt([...P.feats.map(X.tr), ...feats.map(x => x.toLowerCase())], lang) };
+  const pros = [...P.feats.filter(f => !((D.images && /image|photo/i.test(f)) || (D.voice && /voice/i.test(f)) || (D.video && /video/i.test(f)))).map(f => X.tr(f)), D.images && u("pro_img"), D.voice && u("pro_voice"), D.video && u("pro_video"), D.free && u("pro_free")].filter(Boolean);
+  const cons = [(D.images || D.voice || D.video) && u("con_paid"), P.tags.includes("Community characters") && u("pl_con_comm"), !D.checked && u("pl_con_unv")].filter(Boolean);
+  const cnt = {}; list.forEach(p => p.tags.forEach(t => { if (!["Female","Male","Realistic","Image generation","Voice","Video"].includes(t) && X.ALL_TAGS.includes(t)) cnt[t] = (cnt[t] || 0) + 1; }));
+  const cats = Object.entries(cnt).sort((a,b) => b[1] - a[1]).slice(0, 18);
+  const rows = [[u("col_free"), yn(D.free)], [u("col_images"), yn(D.images)], [u("col_voice"), yn(D.voice)], [u("col_video"), yn(D.video)], [u("col_app"), yn(D.app)],
+    [u("col_checked"), D.checked ? e(fmtDate(D.checked, X.LANG)) : yn(null)]];
+  const faq = [[u("pq1", v), u(D.free ? "pa1_yes" : "pa1_unk", v)], [u("pq2", v), u("pa2", v)], ...(n ? [[u("pq3", v), u("pa3", v)]] : []), [u("pq4", v), u("pa4", v)], [u("pq5", v), u("pa5", v)]];
+  const cta = cls => X.ctaLink(P, e(u("try", {p: P.name})) + " →", cls);
+  return { page:"platform", nav:"platforms", modal:true, title: u("pl_h1", v) + " – " + SITE.domain, desc: (u("pl_sum", v)).slice(0, 300), body: `
+  <nav class="crumb"><a href="../platforms.html">${e(u("pl_back"))}</a> › <span>${e(P.name)}</span></nav>
+  <section class="hero tp-hero"><div class="pl-mono" style="background:linear-gradient(135deg,${P.color[0]},${P.color[1]})">${e(P.name[0])}</div>
+    <h1>${e(u("pl_h1", v))}</h1>
+    <p class="tp-by">★ ${P.rating}/5 · ${e(u("by_author", v))} · ${e(u("rv_checked", v))}</p>
+    <p class="tp-intro">${e(X.tr(P.desc))}</p>
+    <p>${cta("btn btn-main btn-xl")}</p></section>
+  <div class="mgrid">
+    <section class="info review"><h2>${e(u("rv_t"))}</h2>
+      <p>${e(u("pl_sum", v))}</p>
+      <h3 class="pro-h">${e(u("rv_pros"))}</h3><ul class="pros">${pros.map(x => `<li>${e(x)}</li>`).join("")}</ul>
+      ${cons.length ? `<h3 class="con-h">${e(u("rv_cons"))}</h3><ul class="cons">${cons.map(x => `<li>${e(x)}</li>`).join("")}</ul>` : ""}</section>
+    <section class="info"><h2>${e(u("pl_feat_t", v))}</h2>
+      <table class="glance">${rows.map(r => `<tr><th>${e(r[0])}</th><td>${r[1]}</td></tr>`).join("")}</table>
+      <p class="hero-links" style="text-align:left"><a href="../data.html">${e(u("nav_data"))} →</a> · <a href="../how-we-rate.html">${e(u("nav_how"))} →</a></p></section>
+  </div>
+  <h2 class="section-title">${e(u("pl_chars_t", v))} <small>${n}</small></h2>
+  ${n ? `<div class="pgrid" id="grid">${list.slice(0, 24).map(X.profileCard).join("")}</div>
+  ${n > 24 ? `<p class="all-tags"><a class="btn btn-main" href="../index.html?app=${key}">${e(u("pl_all", v))} →</a></p>` : ""}` : `<p class="tp-note">${e(u("pl_none", v))}</p>`}
+  ${cats.length ? `<section class="info"><h2>${e(u("pl_cats_t", v))}</h2><div class="tags" style="justify-content:flex-start">${cats.map(([t, c]) =>
+    `<a class="tag" href="../tag/${X.slug(t)}.html">${e(X.tr(t))}<small>${c}</small></a>`).join("")}</div></section>` : ""}
+  <section class="info"><h2>${e(u("faq_title"))}</h2>
+    <div class="mfaq">${faq.map(([q, a]) => `<div class="mq"><h3>${e(q)}</h3><p>${e(a)}</p></div>`).join("")}</div></section>
+  <p class="tp-note">${e(u("tp_aff"))} <a href="../legal/terms.html">${e(u("legal_terms"))}</a></p>
+  <script type="application/ld+json">${JSON.stringify([
+    {"@context":"https://schema.org","@type":"Review","itemReviewed":{"@type":"SoftwareApplication","name":P.name,"applicationCategory":"EntertainmentApplication","operatingSystem":"Web"},
+     "author":{"@type":"Person","name":SITE.author},"datePublished":D.checked || SITE.updated,"reviewRating":{"@type":"Rating","ratingValue":P.rating,"bestRating":5,"worstRating":1},
+     "publisher":{"@type":"Organization","name":SITE.domain}},
+    {"@context":"https://schema.org","@type":"FAQPage","mainEntity":faq.map(([q,a]) => ({"@type":"Question","name":q,"acceptedAnswer":{"@type":"Answer","text":a}}))}]).replace(/</g,"\\u003c")}</script>` };
 }});
 
 pages.push({ file: "how-we-rate.html", build: (X) => {
@@ -429,7 +475,7 @@ pages.push({ file: "sitemap.html", build: (X) => {
   return { page:"sitemap", title:u("meta_sitemap_t") + " – " + SITE.domain, desc:u("meta_home_d"), body: `
   <section class="hero"><h1>${e(u("sitemap_title"))}</h1></section>
   <div class="smap">
-    <section><h2>${e(u("sm_pages"))}</h2>${a("index.html", u("nav_girls"))}${a("platforms.html", u("nav_platforms"))}${a("tags.html", u("nav_tags"))}
+    <section><h2>${e(u("sm_pages"))}</h2>${a("index.html", u("nav_girls"))}${a("platforms.html", u("nav_platforms"))}${Object.entries(X.PLATFORMS).filter(([, P]) => P.url).map(([k, P]) => a("platform/" + k + ".html", P.name)).join("")}${a("tags.html", u("nav_tags"))}
       ${a("how-we-rate.html", u("nav_how"))}${a("data.html", u("nav_data"))}${a("contact.html", u("nav_contact"))}</section>
     <section><h2>${e(u("sm_tags"))}</h2>${tags.map(t => a("tag/" + X.slug(t) + ".html", X.tr(t))).join("")}</section>
     <section><h2>${e(u("sm_profiles"))}</h2>${girls.map(g => a("model/" + (g.id || X.slug(g.name)) + ".html", g.name)).join("")}</section>
@@ -467,7 +513,9 @@ for (const lang of LANG_LIST) {
   }
 }
 /* assets */
-for (const f of [...CLIENT, "style.css"]) write("assets/" + f, read(f));
+for (const f of CLIENT) write("assets/" + f, read(f));
+write("assets/style.css", read("fonts.css") + "\n" + read("style.css"));   /* self-hosted fonts first (GDPR: no Google Fonts request) */
+fs.cpSync(path.join(__dirname, "fonts"), path.join(OUT, "assets", "fonts"), { recursive: true });
 if (fs.existsSync(path.join(__dirname, "images"))) fs.cpSync(path.join(__dirname, "images"), path.join(OUT, "images"), { recursive: true });
 /* sitemap.xml + robots.txt */
 write("sitemap.xml", `<?xml version="1.0" encoding="UTF-8"?>

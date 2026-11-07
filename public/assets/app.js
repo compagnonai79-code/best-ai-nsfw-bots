@@ -70,6 +70,8 @@ function pickCard(p, i) {
     <h3>${esc(p.name)}</h3><div class="stars">${stars(p.rating)}<b>${p.rating}</b></div>
     <p>${esc(tr(p.desc))}</p>${ctaLink(p, esc(ui("try", {p: p.name})) + " →")}</div>`;
 }
+const pfKey = p => Object.keys(PLATFORMS).find(k => PLATFORMS[k] === p);
+const plUrl = p => p.url ? LR() + "platform/" + pfKey(p) + ".html" : "";
 function platformCard(p) {
   return `<article class="card">
     <div class="card-top">${mono(p)}<div><h3>${esc(p.name)}</h3><div class="stars">${stars(p.rating)}<b>${p.rating}</b></div></div></div>
@@ -77,6 +79,7 @@ function platformCard(p) {
     <ul class="feat">${p.feats.map(f => `<li>${esc(tr(f))}</li>`).join("")}</ul>
     <div class="mini">${p.tags.map(t => `<span>${esc(tr(t))}</span>`).join("")}</div>
     ${ctaLink(p, esc(ui("visit")) + " →")}
+    ${plUrl(p) ? `<a class="pl-rev" href="${plUrl(p)}">${esc(ui("pl_read"))} →</a>` : ""}
   </article>`;
 }
 
@@ -172,6 +175,7 @@ function initHome() {
   const groupOf = t => Object.keys(TAG_GROUPS).find(g => TAG_GROUPS[g].includes(t));
   const qp = new URLSearchParams(location.search).get("tag");
   const pre = ALL_PROFILE_TAGS.find(t => slug(t) === qp); if (pre && sel[groupOf(pre)]) sel[groupOf(pre)].add(pre);
+  const qa = new URLSearchParams(location.search).get("app"); if (qa && PLATFORMS[qa]) sel.app.add(qa);
   let onlyNew = location.hash === "#new", openG = null, showMore = false, sortMode = onlyNew ? "new" : "sel", page = 1;
 
   const inAge = (p, k) => { const r = AGE_RANGES.find(x => x[0] === k); return p.age && p.age >= r[1] && p.age <= r[2]; };

@@ -36,7 +36,7 @@ cookies: `
 </ul>
 <p>These items are necessary for the Site to work as you expect and do not require consent under the ePrivacy rules. They contain no personal data and are never sent to us.</p>
 <h2>2. Fonts</h2>
-<p>Fonts are loaded from Google Fonts, which may receive your IP address. See Google's privacy policy.</p>
+<p>Fonts are hosted on our own server: no request is sent to Google or any other font provider.</p>
 <h2>3. Third-party sites</h2>
 <p>When you click a link to a platform, that platform and its affiliate network may set their own cookies, for example to attribute your sign-up. Those cookies are governed by their own policies, not ours.</p>
 <h2>4. Managing storage</h2>
@@ -152,7 +152,7 @@ cookies: `
 </ul>
 <p>Ces éléments sont nécessaires au fonctionnement du Site et ne requièrent pas de consentement au sens de la réglementation ePrivacy. Ils ne contiennent aucune donnée personnelle et ne nous sont jamais transmis.</p>
 <h2>2. Polices</h2>
-<p>Les polices sont chargées depuis Google Fonts, qui peut recevoir votre adresse IP. Consultez la politique de confidentialité de Google.</p>
+<p>Les polices sont hébergées sur notre propre serveur : aucune requête n'est envoyée à Google ni à un autre fournisseur de polices.</p>
 <h2>3. Sites tiers</h2>
 <p>Lorsque vous cliquez sur un lien vers une plateforme, celle-ci et son réseau d'affiliation peuvent déposer leurs propres cookies, par exemple pour attribuer votre inscription. Ces cookies relèvent de leurs propres politiques.</p>
 <h2>4. Gérer le stockage</h2>
