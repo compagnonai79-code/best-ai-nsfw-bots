@@ -560,6 +560,8 @@ const CANDY_PROFILES = [
 "Image generation",
 "Voice",
 "Video"
+,
+"Professor"
 ], "bio": {"pt": "Professora de educação física na universidade e ex-campeã de salto em distância. Tsukishiro treina os alunos e tenta bater os próprios recordes sempre que pode. É ousada, confiante e espera que os outros acompanhem o ritmo.", "es": "Profesora de educación física en la universidad y excampeona de salto de longitud. Tsukishiro entrena a los estudiantes y busca batir sus marcas personales siempre que puede. Es atrevida, segura de sí misma y espera que los demás sigan su ritmo.", "en": "University PE teacher and former long-jump champion. Tsukishiro trains students and chases her personal bests whenever she can. She's bold, confident and expects others to keep up.", "de": "Sportdozentin an der Uni und ehemalige Weitsprung-Meisterin. Tsukishiro trainiert Studierende und jagt ihren persönlichen Bestleistungen hinterher, wann immer sie kann. Sie ist mutig, selbstbewusst und erwartet, dass andere mithalten.", "fr": "Professeure de sport à l'université et ancienne championne de saut en longueur. Tsukishiro entraîne les étudiants et cherche à améliorer ses records perso dès qu'elle le peut. Elle est audacieuse, confiante et attend des autres qu'ils suivent le rythme."}, "age": 27},
 {"id": "mio-sasaki", "name": "Mio", "platform": "candy", "added": "2026-11-04", "img": "https://cdn.candy.ai/sfw-profile-419310541-51d8716f-1edc-4dc0-9796-27dfc3a21d03-600x900-webp90", "sfw": true, "video": "https://cdn.candy.ai/sfw-profile-video-sfw-profile-video-419310541-cfd696fe-babc-4840-8c02-0e784260bb3d-h264",
 "url": "https://candy.ai/fr/ai-anime/mio-sasaki", "tags": [
@@ -798,6 +800,8 @@ const CANDY_PROFILES = [
 "Image generation",
 "Voice",
 "Video"
+,
+"Professor"
 ], "bio": {"pt": "Sua professora particular de inglês só dá aula para adultos… Ela trocou as salas lotadas por sessões íntimas a dois, nas quais se sente realmente valorizada. 😉", "es": "Tu profesora particular de inglés solo enseña a adultos… Dejó las aulas abarrotadas por sesiones íntimas cara a cara en las que se siente de verdad valorada. 😉", "en": "Your private English tutor only teaches adults… She left crowded classrooms for intimate one-on-one sessions where she feels truly appreciated. 😉", "de": "Deine private Englischlehrerin unterrichtet nur Erwachsene… Sie hat überfüllte Klassenzimmer gegen intime Einzelstunden getauscht, in denen sie sich wirklich wertgeschätzt fühlt. 😉", "fr": "Ta prof d'anglais privée n'enseigne qu'aux adultes… Elle a quitté les classes bondées pour des sessions intimes en tête-à-tête où elle se sent vraiment valorisée. 😉"}, "age": 32},
 {"id": "caelith-verdaine", "name": "Caelith", "platform": "candy", "added": "2026-11-04", "img": "https://cdn.candy.ai/588138270-7cab7663-29ab-4718-b7b2-1e04f725487e-600x900-webp90", "sfw": false, "url": "https://candy.ai/fr/ai-anime/caelith-verdaine", "tags": [
 "Female",
@@ -1654,6 +1658,8 @@ const CANDY_PROFILES = [
 "Image generation",
 "Voice",
 "Video"
+,
+"Mean"
 ],
 "bio": {"pt": "Sua meia-irmã gótica, uma verdadeira pestinha, foi mandada para uma instituição vigiada depois que descobriram a conta secreta de goon-bait dela. 😱 Agora ela te manda mensagem toda noite lá de dentro… 😈", "es": "Tu hermanastra gótica, una auténtica pequeña bruja, fue enviada a un centro vigilado después de que descubrieran su cuenta secreta de goon-bait. 😱 Ahora te escribe cada noche desde dentro… 😈", "en": "Your bratty goth stepsister was sent to a supervised facility after her secret goon-bait account was found. 😱 Now she texts you every night from inside… 😈", "de": "Deine freche Goth-Stiefschwester wurde in eine überwachte Einrichtung geschickt, nachdem ihr geheimer Goon-Bait-Account aufgeflogen ist. 😱 Jetzt schreibt sie dir jede Nacht von drinnen… 😈", 
 "fr": "Ta demi-sœur gothique, une vraie petite peste, a été envoyée dans un établissement spécialisé sous surveillance après que son compte goon-bait secret ait été découvert. 😱 Maintenant elle t’envoie des textos tous les soirs de l’intérieur… 😈"
@@ -2840,6 +2846,8 @@ const CANDY_PROFILES = [
 "Image generation",
 "Voice",
 "Video"
+,
+"Mean"
 ],
 "bio": {"pt": "Ela dá nota para o seu \"rizz\" ao vivo, de 0 a 5, na frente de 12 mil espectadores. São 2 da manhã, ela é barulhenta, malvada, vulgar e hilária. Em dois anos, nunca deu 5 para ninguém. Você está no zero. Você tem sessenta segundos. Faça ela mudar a nota.", "es": "Puntúa tu «rizz» en directo, de 0 a 5, delante de 12 000 espectadores. Son las 2 de la madrugada, habla alto, es mala, vulgar y graciosísima. En dos años nunca le ha dado un 5 a nadie. Estás en cero. Tienes sesenta segundos. Haz que cambie la nota.", "en": "She rates your \"rizz\" live, on a scale of 0 to 5, in front of 12,000 viewers. It's 2 a.m., she's loud, mean, vulgar and hilarious. In two years she's never given anyone a 5. You're at zero. You have sixty seconds. Make her change the score.", "de": "Sie bewertet deinen „Rizz“ live auf einer Skala von 0 bis 5, vor 12.000 Zuschauern. Es ist 2 Uhr nachts, sie ist laut, gemein, vulgär und urkomisch. In zwei Jahren hat sie noch nie jemandem eine 5 gegeben. Du stehst bei null. Du hast sechzig Sekunden. Bring sie dazu, die Note zu ändern.", 
 "fr": "Elle note ton « rizz » en direct, sur une échelle de 0 à 5, devant 12 000 spectateurs. Il est 2 heures du matin, elle parle fort, elle est méchante, vulgaire et hilarante. En deux ans, elle n’a jamais donné de 5 à personne. Tu es à zéro. Tu as soixante secondes. Fais-lui changer la note."
@@ -3564,6 +3572,8 @@ const CANDY_PROFILES = [
 "Image generation",
 "Voice",
 "Video"
+,
+"Forbidden"
 ],
 "bio": {"pt": "Brooke, uma dona de casa americana de 39 anos, aproveita uma vida luxuosa em Miami, bancada pelo marido quase sempre ausente. Por trás da aparência elegante, uma sede discreta por emoções proibidas a leva a buscar aventuras.", "es": "Brooke, ama de casa estadounidense de 39 años, disfruta de una vida de lujo en Miami, pagada por su marido, a menudo ausente. Tras su apariencia elegante, una discreta sed de sensaciones prohibidas la empuja a buscar aventuras.", "en": "Brooke, a 39-year-old American housewife, enjoys a lavish lifestyle in Miami, funded by her often-absent husband. Behind her elegant appearance, a quiet thirst for forbidden thrills pushes her to seek adventure.", "de": "Brooke, eine 39-jährige amerikanische Hausfrau, genießt einen luxuriösen Lebensstil in Miami, finanziert von ihrem oft abwesenden Mann. Hinter ihrer eleganten Fassade treibt sie ein stiller Durst nach verbotenen Reizen ins Abenteuer.", 
 "fr": "Brooke, une femme au foyer américaine de 39 ans, profite d'un mode de vie opulent à Miami, financé par son mari souvent absent. Derrière son apparence élégante, une discrète soif de sensations interdites la pousse à rechercher l’aventure."
@@ -3618,6 +3628,8 @@ const CANDY_PROFILES = [
 "Image generation",
 "Voice",
 "Video"
+,
+"Forbidden"
 ],
 "bio": {"pt": "Você acabou de conhecer sua nova sobrinha por afinidade pela primeira vez na villa do seu irmão numa ilha grega isolada. Ela é doce, animada e cheia de energia… mas há uma faísca proibida imediata no ar que nenhum dos dois consegue ignorar. 😈", "es": "Acabas de conocer a tu nueva sobrina política por primera vez en la villa de tu hermano en una isla griega aislada. Es dulce, chispeante y llena de energía… pero hay una chispa prohibida inmediata en el aire que ninguno de los dos puede ignorar. 😈", "en": "You've just met your new step-niece for the first time at your brother's villa on a remote Greek island. She's sweet, bubbly and full of energy… but there's an instant forbidden spark in the air that neither of you can ignore. 😈", "de": "Du hast deine neue angeheiratete Nichte gerade zum ersten Mal in der Villa deines Bruders auf einer abgelegenen griechischen Insel kennengelernt. Sie ist süß, quirlig und voller Energie… aber da liegt sofort ein verbotener Funke in der Luft, den keiner von euch ignorieren kann. 😈", 
 "fr": "Tu viens de rencontrer ta nouvelle belle-nièce pour la première fois à la villa de ton frère sur une île grecque isolée. Elle est douce, pétillante et pleine d’énergie… mais il y a une étincelle interdite instantanée dans l’air que ni toi ni elle ne pouvez ignorer. 😈"
@@ -3720,6 +3732,8 @@ const CANDY_PROFILES = [
 "Image generation",
 "Voice",
 "Video"
+,
+"Forbidden"
 ],
 "bio": {"pt": "Esta sexóloga online vai te guiar no JOI definitivo 💦 E ainda por cima é a melhor amiga da sua irmã, totalmente proibida! 😳", "es": "Esta sexóloga online te guiará en el JOI definitivo 💦 Y además es la mejor amiga de tu hermana, ¡totalmente prohibida! 😳", "en": "This online sexologist will guide you through the ultimate JOI 💦 And she's your sister's best friend, totally off-limits! 😳", "de": "Diese Online-Sexologin führt dich durch das ultimative JOI 💦 Und dazu ist sie die beste Freundin deiner Schwester, absolut tabu! 😳", 
 "fr": "Cette sexologue en ligne va te guider dans le JOI ultime 💦 Et en plus, c'est la meilleure amie de ta sœur, totalement interdite ! 😳"
@@ -5153,6 +5167,8 @@ const CANDY_PROFILES = [
 "Image generation",
 "Voice",
 "Video"
+,
+"Mean"
 ],
 "bio": {"pt": "Primeira da turma na escola de negócios. Rica, popular e uma verdadeira peste. Ela quer que você se curve e aplauda enquanto ela leva todas as melhores notas. Tente tomar o lugar dela, se tiver coragem. 😈", "es": "Primera de su promoción en la escuela de negocios. Rica, popular y una auténtica bruja. Quiere que te inclines y aplaudas mientras se lleva todas las mejores notas. Intenta quitarle el puesto si te atreves. 😈", "en": "Top of her class at business school. Rich, popular and a real brat. She wants you to bow and applaud while she grabs all the best grades. Try to take her spot if you dare. 😈", "de": "Jahrgangsbeste an der Business School. Reich, beliebt und ein echtes Biest. Sie will, dass du dich verbeugst und applaudierst, während sie alle Bestnoten abräumt. Versuch, ihr den Platz streitig zu machen, wenn du dich traust. 😈", 
 "fr": "Major de promo en école de commerce. Riche, populaire et vraie peste. Elle veut que tu t’inclines et applaudisses pendant qu’elle rafle toutes les meilleures notes. Essaie de lui piquer sa place si t’oses. 😈"

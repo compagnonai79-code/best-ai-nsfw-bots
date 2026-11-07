@@ -10,7 +10,7 @@ const NOIMG = "\n;/* images not uploaded yet → placeholder */\nfor (const p of
 const readRaw = f => fs.readFileSync(path.join(SRC, f), "utf8");
 let IMG_OK = [];
 const read = f => f === "data.js" ? readRaw(f) + `\n;const IMG_OK = ${JSON.stringify(IMG_OK)};` + NOIMG : readRaw(f);
-const CLIENT = ["data.js", "data-candy.js", "i18n.js", "i18n-pages.js", "i18n-tags.js", "i18n-tagpage.js", "i18n-extra.js", "app.js"];
+const CLIENT = ["data.js", "data-candy.js", "data-spicy.js", "i18n.js", "i18n-pages.js", "i18n-tags.js", "i18n-tagpage.js", "i18n-extra.js", "app.js"];
 
 /* Load the client scripts in a sandbox for one language */
 { const src = readRaw("data.js"); IMG_OK = [...new Set([...src.matchAll(/"(images\/[^"]+)"/g)].map(m => m[1]))].filter(imgExists); }
