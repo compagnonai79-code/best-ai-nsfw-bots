@@ -42,6 +42,10 @@ const TPF_MIN = 3;
 const TPF_SKIP = ["Female", "Male", "Realistic", "Anime", "Image generation", "Voice", "Video"];   /* too broad: same as the platform page */
 const tpfOk = (X, t, k) => { if (TPF_SKIP.includes(t)) return false; const all = X.PROFILES.filter(p => p.tags.includes(t)), n = all.filter(p => p.platform === k).length;
   return !!X.PLATFORMS[k].url && n >= TPF_MIN && all.length - n >= TPF_MIN; };   /* otherwise it would duplicate the tag page */
+/* BreadcrumbList JSON-LD: items = [[name, file-relative-to-language-root], …] */
+const bcLd = (X, lang, items) => ({ "@context":"https://schema.org", "@type":"BreadcrumbList", "itemListElement": items.map(([name, f], i) =>
+  ({ "@type":"ListItem", "position": i + 1, "name": name, "item": absUrl(lang, f) })) });
+const ldTag = obj => `<script type="application/ld+json">${JSON.stringify(obj).replace(/</g, "\\u003c")}</script>`;
 const absUrl = (l, file) => SITE.url + "/" + (prefix(l) + file).replace(/index\.html$/, "").replace(/\.html$/, "");
 const LEGAL_PAGES = [["terms","legal_terms"],["cookies","legal_cookies"],["dmca","legal_dmca"],["privacy","legal_privacy"],["ai-disclosure","legal_ai"],["legal-notice","legal_notice"]];
 const LEGAL_KEY = { "terms":"terms","cookies":"cookies","dmca":"dmca","privacy":"privacy","ai-disclosure":"ai","legal-notice":"notice" };
@@ -99,10 +103,13 @@ ${o.image ? "" : '<meta property="og:image:width" content="1200">\n<meta propert
   <div class="box">
     <h2 id="gate-title">${e(u("gate_title"))}</h2>
     <p>${e(u("gate_text"))}</p>
+    <p>${e(u("gate_text2"))}</p>
     <div class="row">
       <button class="btn btn-main" id="enter">${e(u("gate_enter"))}</button>
-      <a class="btn btn-ghost" href="https://www.google.com">${e(u("gate_leave"))}</a>
+      <a class="btn btn-ghost" href="https://www.google.com" rel="nofollow">${e(u("gate_leave"))}</a>
     </div>
+    <p class="gate-small">${e(u("gate_parents"))}</p>
+    <p class="gate-small">${e(u("gate_accept", {terms: "\u0001", privacy: "\u0002"})).replace("\u0001", `<a href="${L("legal/terms.html")}">${e(u("legal_terms"))}</a>`).replace("\u0002", `<a href="${L("legal/privacy.html")}">${e(u("legal_privacy"))}</a>`)}</p>
   </div>
 </div>
 
@@ -255,7 +262,7 @@ for (const t of base.ALL_TAGS) pages.push({ file: "tag/" + base.slug(t) + ".html
   const co = {}; list.forEach(p => p.tags.forEach(x => { if (x !== t && !["Female","Realistic"].includes(x)) co[x] = (co[x] || 0) + 1; }));
   const related = Object.entries(co).sort((a,b) => b[1] - a[1]).slice(0, 18).map(x => x[0]);
   const crumb = `<p class="crumb"><a href="../tags.html">${e(u("tag_all"))}</a> · <a href="../tags.html#g-${g}">${e(u("grp_" + g))}</a></p>`;
-  const meta = { page:"tag", nav:"tags", modal:true, noindex: n === 0, title:u("meta_tag_t", {tag:name, n}), desc:u("meta_tag_d", {tag:name, n}) };
+  const meta = { page:"tag", nav:"tags", modal:true, noindex: n === 0, title:u("tag_t2", {tag:name, n}), desc:u("tag_d2", {tag:name, n}) };
   if (!n) return { ...meta, body: `${crumb}
   <section class="hero"><h1>${u("tag_h1", {tag: e(name)})}</h1><p>${e(u("tag_empty"))}</p></section>
   <p class="hero-links"><a href="../index.html">${e(u("back_all"))}</a></p>
@@ -293,12 +300,15 @@ for (const t of base.ALL_TAGS) pages.push({ file: "tag/" + base.slug(t) + ".html
     <p class="tp-note">${e(u("tp_aff"))} <a href="../legal/terms.html">${e(u("legal_terms"))}</a></p>
   </article>
   <p class="all-tags"><a href="../tags.html">${e(u("all_tags_link"))}</a></p>
+  ${ldTag([bcLd(X, lang, [[u("bc_home"), "index.html"], [u("nav_tags"), "tags.html"], [name, "tag/" + X.slug(t) + ".html"]]),
+    {"@context":"https://schema.org","@type":"ItemList","name":u("tag_t2", {tag:name, n}),"numberOfItems":n,
+     "itemListElement":list.slice(0, 50).map((p, i) => ({"@type":"ListItem","position":i + 1,"url":absUrl(lang, "model/" + X.girlId(p) + ".html"),"name":p.name}))}])}
   <script type="application/ld+json">${JSON.stringify({"@context":"https://schema.org","@type":"FAQPage","mainEntity":faq.map(([q,a]) => ({"@type":"Question","name":q,"acceptedAnswer":{"@type":"Answer","text":a}}))}).replace(/</g,"\\u003c")}</script>` };
 }});
 
 /* one page per model: /model/<id> */
 const GLANCE = ["gender","style","origin","hair","body","personality","role","relationship","fantasy"];
-for (const g0 of base.PROFILES) pages.push({ file: "model/" + (g0.id || base.slug(g0.name)) + ".html", build: (X) => {
+for (const g0 of base.PROFILES) pages.push({ file: "model/" + (g0.id || base.slug(g0.name)) + ".html", build: (X, lang) => {
   const g = X.PROFILES.find(p => (p.id || p.name) === (g0.id || g0.name));
   const u = X.ui, e = X.esc, P = X.PLATFORMS[g.platform], D = X.PLATFORM_DATA[g.platform] || {};
   const v = { name: g.name, p: P.name };
@@ -327,11 +337,11 @@ for (const g0 of base.PROFILES) pages.push({ file: "model/" + (g0.id || base.slu
     style: u(g.tags.includes("Anime") ? "rv_anime" : "rv_real") };
   const cmpRows = [g, ...similar].map(p => [p, p.tags.filter(t => g.tags.includes(t) && !["Female","Male","Realistic","Image generation","Voice","Video"].includes(t))]);
   const faq = [1,2,3,4,5,6].map(i => [u("fq" + i, v), u("fa" + i + (i === 1 ? gen : i === 6 && g.creator ? "_c" : ""), {...v, img: yn(D.images).toLowerCase(), voice: yn(D.voice).toLowerCase()})]);
-  return { page:"model", nav:"home", image: g.img || "", ogType: "profile", title:u("girl_meta_t", {name:g.name, age:g.age || "", p:P.name}).replace(/, –/, " –").replace(/ ,/, ""),
+  return { page:"model", nav:"home", image: g.img || "", ogType: "profile", title:u("model_t", {name:g.name, p:P.name, agep: g.age ? u("age_sfx", {age: g.age}) : ""}), lastmod: g.added > SITE.updated ? g.added : SITE.updated,
     desc:u("girl_meta_d", {name:g.name, age:g.age || "18+", p:P.name, bio:X.bioOf(g)}).slice(0, 300), body: `
   <nav class="crumb"><a href="../index.html">${e(u("nav_girls"))}</a> › ${P.url ? `<a href="../platform/${g.platform}.html">${e(P.name)}</a>` : e(P.name)} › <a href="../tag/${X.slug(main)}.html">${e(X.tr(main))}</a> › <span>${e(g.name)}</span></nav>
   <section class="girl">
-    <div class="g-visual">${X.visual(g.img, P.color, g.name[0], g.name)}${X.isNew(g) ? `<span class="new">${e(u("new_badge"))}</span>` : ""}</div>
+    <div class="g-visual">${X.visual(g.img, P.color, g.name[0], g.name)}${g.video ? `<video autoplay muted loop playsinline preload="metadata"${g.img ? ` poster="${e(g.img)}"` : ""} src="${e(g.video)}"></video>` : ""}${X.isNew(g) ? `<span class="new">${e(u("new_badge"))}</span>` : ""}</div>
     <div class="g-body">
       <div class="g-pf"><span class="mono-s" style="background:linear-gradient(135deg,${P.color[0]},${P.color[1]})">${e(P.name[0])}</span>${e(P.name)} <span class="stars">★ ${P.rating}</span></div>
       <h1>${X.withAge(g)}</h1>
@@ -378,6 +388,11 @@ for (const g0 of base.PROFILES) pages.push({ file: "model/" + (g0.id || base.slu
 
   <div class="mbar"><span class="mb-img">${X.visual(g.img, P.color, g.name[0], g.name)}</span>
     <span class="mb-txt"><b>${e(g.name)}</b><small>${e(P.name)}</small></span>${cta("btn btn-main")}</div>
+  ${ldTag([bcLd(X, lang, [[u("bc_home"), "index.html"], ...(P.url ? [[P.name, "platform/" + g.platform + ".html"]] : []), [X.tr(main), "tag/" + X.slug(main) + ".html"], [g.name, "model/" + X.girlId(g) + ".html"]]),
+    {"@context":"https://schema.org","@type":"Article","headline":u("model_t", {name:g.name, p:P.name, agep: g.age ? u("age_sfx", {age: g.age}) : ""}),"description":X.bioOf(g).slice(0, 300),
+     ...(g.img ? {"image": /^https?:/.test(g.img) ? g.img : SITE.url + "/" + g.img} : {}),"datePublished":g.added,"dateModified":g.added > SITE.updated ? g.added : SITE.updated,"inLanguage":lang,
+     "author":{"@type":"Person","name":SITE.author,"url":absUrl(lang, "author.html")},"publisher":{"@type":"Organization","name":SITE.domain,"url":SITE.url}},
+    ...(g.video ? [{"@context":"https://schema.org","@type":"VideoObject","name":g.name + " – " + P.name,"description":X.bioOf(g).slice(0, 300),"thumbnailUrl":g.img || "","contentUrl":g.video,"uploadDate":g.added}] : [])])}
   <script type="application/ld+json">${JSON.stringify({"@context":"https://schema.org","@type":"FAQPage","mainEntity":faq.map(([q,a]) => ({"@type":"Question","name":q,"acceptedAnswer":{"@type":"Answer","text":a}}))}).replace(/</g,"\\u003c")}</script>` };
 }});
 
@@ -421,6 +436,7 @@ for (const key of Object.keys(base.PLATFORMS).filter(k => base.PLATFORMS[k].url)
   <section class="info"><h2>${e(u("faq_title"))}</h2>
     <div class="mfaq">${faq.map(([q, a]) => `<div class="mq"><h3>${e(q)}</h3><p>${e(a)}</p></div>`).join("")}</div></section>
   <p class="tp-note">${e(u("tp_aff"))} <a href="../legal/terms.html">${e(u("legal_terms"))}</a></p>
+  ${ldTag(bcLd(X, lang, [[u("bc_home"), "index.html"], [u("nav_platforms"), "platforms.html"], [P.name, "platform/" + key + ".html"]]))}
   <script type="application/ld+json">${JSON.stringify([
     {"@context":"https://schema.org","@type":"Review","itemReviewed":{"@type":"SoftwareApplication","name":P.name,"applicationCategory":"EntertainmentApplication","operatingSystem":"Web"},
      "author":{"@type":"Person","name":SITE.author},"datePublished":D.checked || SITE.updated,"reviewRating":{"@type":"Rating","ratingValue":P.rating,"bestRating":5,"worstRating":1},
@@ -444,11 +460,12 @@ for (const t of base.ALL_TAGS) for (const k of Object.keys(base.PLATFORMS)) if (
   <section class="info"><h2>${e(u("faq_title"))}</h2>
     <div class="mfaq">${faq.map(([q, a]) => `<div class="mq"><h3>${e(q)}</h3><p>${e(a)}</p></div>`).join("")}</div></section>
   <p class="tp-note">${e(u("tp_aff"))} <a href="../../legal/terms.html">${e(u("legal_terms"))}</a></p>
+  ${ldTag(bcLd(X, lang, [[u("bc_home"), "index.html"], [u("nav_tags"), "tags.html"], [X.tr(t), "tag/" + X.slug(t) + ".html"], [P.name, "tag/" + X.slug(t) + "/" + k + ".html"]]))}
   <script type="application/ld+json">${JSON.stringify({"@context":"https://schema.org","@type":"FAQPage","mainEntity":faq.map(([q,a]) => ({"@type":"Question","name":q,"acceptedAnswer":{"@type":"Answer","text":a}}))}).replace(/</g,"\\u003c")}</script>` };
 }});
 
 /* author page */
-pages.push({ file: "author.html", build: (X) => {
+pages.push({ file: "author.html", build: (X, lang) => {
   const u = X.ui, e = X.esc, v = { author: SITE.author, site: SITE.domain };
   const revs = Object.entries(X.PLATFORMS).filter(([, P]) => P.url).sort((a,b) => b[1].rating - a[1].rating);
   return { page:"author", title: SITE.author + " – " + SITE.domain, desc: u("au_meta_d", v), ogType: "profile", body: `
@@ -460,6 +477,7 @@ pages.push({ file: "author.html", build: (X) => {
   <section class="info"><h2>${e(u("au_reviews"))}</h2>
     <ul class="feat">${revs.map(([k, P]) => `<li><a href="platform/${k}.html">${e(u("pl_h1", {p: P.name}))}</a> · ★ ${P.rating}</li>`).join("")}</ul></section>
   <p class="tp-note">${e(u("au_contact"))} <a href="contact.html">${e(u("nav_contact"))}</a></p>
+  ${ldTag(bcLd(X, lang, [[u("bc_home"), "index.html"], [SITE.author, "author.html"]]))}
   <script type="application/ld+json">${JSON.stringify({"@context":"https://schema.org","@type":"Person","name":SITE.author,"jobTitle":X.ui("author_role"),"worksFor":{"@type":"Organization","name":SITE.domain,"url":SITE.url}}).replace(/</g,"\\u003c")}</script>` };
 }});
 
@@ -528,7 +546,7 @@ pages.push({ file: "sitemap.html", build: (X) => {
 
 for (const [f, k] of LEGAL_PAGES) pages.push({ file: "legal/" + f + ".html", legal: true, build: (X, lang) => {
   const u = X.ui, e = X.esc, tl = LEGAL_LANGS.includes(lang) ? lang : "en";
-  return { page:"legal", title:u(k) + " – " + SITE.domain, desc:u(k) + " – " + SITE.domain, altLangs: LEGAL_LANGS,
+  return { page:"legal", noindex: true, title:u(k) + " – " + SITE.domain, desc:u(k) + " – " + SITE.domain, altLangs: LEGAL_LANGS,
     canonical: tl !== lang ? absUrl("en", "legal/" + f + ".html") : null, body: `
   <article class="legal">
     <h1>${e(u(k))}</h1>
@@ -552,21 +570,38 @@ for (const lang of LANG_LIST) {
     let html = layout(X, lang, pg.file, o).replace(/ROOT_PLACEHOLDER/g, "../".repeat(depth));
     write(prefix(lang) + pg.file, html);
     const altLangs = o.altLangs || LANG_LIST;
-    if (!o.canonical && !o.noindex) urls.push({ loc: absUrl(lang, pg.file), alts: altLangs.map(l => [l, absUrl(l, pg.file)]) });
+    if (!o.canonical && !o.noindex) urls.push({ lang, loc: absUrl(lang, pg.file), lastmod: o.lastmod || SITE.updated, alts: altLangs.map(l => [l, absUrl(l, pg.file)]) });
   }
 }
+/* 404 page (served by Cloudflare Pages / Netlify for any unknown URL): absolute links, noindex */
+{ const X = context("en"); X._ctx.ROOT = "/"; X._ctx.LROOT = "/"; const u = X.ui, e = X.esc;
+  const top = X.ALL_TAGS.filter(t => !["Female","Male","Realistic","Image generation","Voice","Video"].includes(t)).sort((a,b) => X.tagCount(b) - X.tagCount(a)).slice(0, 12);
+  const o = { page:"404", noindex:true, title: u("nf_t") + " – " + SITE.domain, desc: u("nf_d"), body: `
+  <section class="nf"><h1>404</h1><h2>${e(u("nf_t"))}</h2><p class="tp-intro">${e(u("nf_d"))}</p>
+    <p><a class="btn btn-main" href="index.html">${e(u("nf_home"))} →</a></p>
+    <div class="tags">${top.map(t => `<a class="tag" href="tag/${X.slug(t)}.html">${e(X.tr(t))}</a>`).join("")}<a class="tag" href="tags.html">${e(u("nav_tags"))}</a><a class="tag" href="platforms.html">${e(u("nav_platforms"))}</a></div>
+    <p class="hero-links">${LANG_LIST.filter(l => l !== "en").map(l => `<a href="${prefix(l)}index.html">${LANGS[l]}</a>`).join(" · ")}</p></section>` };
+  const html = layout(X, "en", "404.html", o).replace(/(href|src)="(?!https?:|#|\/|mailto:|data:)/g, '$1="/');
+  write("404.html", html.replace(/"\/(?:([a-z]{2})\/)?404\.html"/g, (m, l) => `"/${l ? l + "/" : ""}index.html"`).replace(/<link rel="canonical"[^>]*>\n?/, "").replace(/<link rel="alternate"[^>]*>\n?/g, "")); }
 /* assets */
 for (const f of CLIENT) write("assets/" + f, read(f));
 write("assets/style.css", read("fonts.css") + "\n" + read("style.css"));   /* self-hosted fonts first (GDPR: no Google Fonts request) */
 fs.cpSync(path.join(__dirname, "fonts"), path.join(OUT, "assets", "fonts"), { recursive: true });
 if (fs.existsSync(path.join(__dirname, "images"))) fs.cpSync(path.join(__dirname, "images"), path.join(OUT, "images"), { recursive: true });
 /* sitemap.xml + robots.txt */
-write("sitemap.xml", `<?xml version="1.0" encoding="UTF-8"?>
+/* one sitemap per language + an index (sitemap.xml) */
+for (const lang of LANG_LIST) write("sitemaps/" + lang + ".xml", `<?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">
-${urls.map(x => `  <url><loc>${x.loc}</loc><lastmod>${SITE.updated}</lastmod>
+${urls.filter(x => x.lang === lang).map(x => `  <url><loc>${x.loc}</loc><lastmod>${x.lastmod}</lastmod>
 ${x.alts.map(([l, h]) => `    <xhtml:link rel="alternate" hreflang="${l}" href="${h}"/>`).join("\n")}
+    <xhtml:link rel="alternate" hreflang="x-default" href="${(x.alts.find(([l]) => l === "en") || x.alts[0])[1]}"/>
   </url>`).join("\n")}
 </urlset>
+`);
+write("sitemap.xml", `<?xml version="1.0" encoding="UTF-8"?>
+<sitemapindex xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+${LANG_LIST.map(l => `  <sitemap><loc>${SITE.url}/sitemaps/${l}.xml</loc><lastmod>${urls.filter(x => x.lang === l).map(x => x.lastmod).sort().pop()}</lastmod></sitemap>`).join("\n")}
+</sitemapindex>
 `);
 write("robots.txt", `User-agent: *\nAllow: /\n\nSitemap: ${SITE.url}/sitemap.xml\n`);
 /* data.csv */

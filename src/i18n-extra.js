@@ -379,3 +379,74 @@ hi: {
 }
 };
 for (const l in EXTRA3_UI) Object.assign(I18N[l].ui, EXTRA3_UI[l]);
+
+/* SEO titles, age gate, 404, breadcrumbs, video badge */
+const EXTRA4_UI = {
+en: {
+  model_t:"{name}{agep} – NSFW AI chat on {p}", age_sfx:", {age}",
+  tag_t2:"{tag} AI Sex Chat: {n} NSFW Chatbots", tag_d2:"Sex chat with {n} “{tag}” AI chatbots. Compare the characters by platform, free messages, photos and video, then start chatting. 18+ only.",
+  gate_text:"This site is a directory of AI companion services for adults. It contains adult themes and imagery.",
+  gate_text2:"By continuing, you confirm that you are at least 18 years old (or the age of majority where you live), that viewing adult content is legal in your country, and that you are doing so of your own free will.",
+  gate_enter:"I am 18 or older, continue", gate_leave:"I am under 18, leave",
+  gate_parents:"Parents: use parental-control software to block access to adult sites on devices minors can use. This site is labelled RTA (Restricted To Adults).",
+  gate_accept:"By continuing you also accept our {terms} and {privacy}.",
+  nf_t:"Page not found", nf_d:"This page does not exist or has moved. Here are a few ways back:", nf_home:"Browse all characters",
+  bc_home:"Home", video_badge:"Video"
+},
+fr: {
+  model_t:"{name}{agep} – Chat IA NSFW sur {p}", age_sfx:", {age} ans",
+  tag_t2:"Chat sexe IA {tag} : {n} chatbots NSFW", tag_d2:"Chat sexe avec {n} chatbots IA « {tag} ». Compare les personnages par plateforme, messages gratuits, photos et vidéo, puis lance la discussion. Réservé aux 18+.",
+  gate_text:"Ce site est un annuaire de services de compagnons IA pour adultes. Il contient des thèmes et des images pour adultes.",
+  gate_text2:"En continuant, tu confirmes avoir au moins 18 ans (ou l'âge de la majorité là où tu vis), que la consultation de contenus pour adultes est légale dans ton pays, et que tu le fais de ton plein gré.",
+  gate_enter:"J'ai 18 ans ou plus, continuer", gate_leave:"J'ai moins de 18 ans, quitter",
+  gate_parents:"Parents : utilisez un logiciel de contrôle parental pour bloquer les sites pour adultes sur les appareils accessibles aux mineurs. Ce site porte le label RTA (Restricted To Adults).",
+  gate_accept:"En continuant, tu acceptes aussi nos {terms} et notre {privacy}.",
+  nf_t:"Page introuvable", nf_d:"Cette page n'existe pas ou a été déplacée. Voici quelques pistes pour repartir :", nf_home:"Voir tous les personnages",
+  bc_home:"Accueil", video_badge:"Vidéo"
+},
+es: {
+  model_t:"{name}{agep} – Chat IA NSFW en {p}", age_sfx:", {age} años",
+  tag_t2:"Chat sexual IA {tag}: {n} chatbots NSFW", tag_d2:"Chat sexual con {n} chatbots de IA «{tag}». Compara los personajes por plataforma, mensajes gratis, fotos y vídeo, y empieza a chatear. Solo 18+.",
+  gate_text:"Este sitio es un directorio de servicios de compañía con IA para adultos. Contiene temas e imágenes para adultos.",
+  gate_text2:"Al continuar, confirmas que tienes al menos 18 años (o la mayoría de edad donde vives), que ver contenido para adultos es legal en tu país y que lo haces por voluntad propia.",
+  gate_enter:"Tengo 18 años o más, continuar", gate_leave:"Tengo menos de 18, salir",
+  gate_parents:"Padres: usad un software de control parental para bloquear los sitios para adultos en los dispositivos que usan menores. Este sitio lleva la etiqueta RTA (Restricted To Adults).",
+  gate_accept:"Al continuar, aceptas también nuestros {terms} y nuestra {privacy}.",
+  nf_t:"Página no encontrada", nf_d:"Esta página no existe o se ha movido. Algunas opciones para volver:", nf_home:"Ver todos los personajes",
+  bc_home:"Inicio", video_badge:"Vídeo"
+},
+de: {
+  model_t:"{name}{agep} – NSFW-KI-Chat auf {p}", age_sfx:", {age}",
+  tag_t2:"{tag} KI-Sexchat: {n} NSFW-Chatbots", tag_d2:"Sexchat mit {n} KI-Chatbots der Kategorie „{tag}“. Vergleiche die Charaktere nach Plattform, Gratis-Nachrichten, Fotos und Video und starte den Chat. Ab 18.",
+  gate_text:"Diese Seite ist ein Verzeichnis von KI-Begleitdiensten für Erwachsene. Sie enthält Themen und Bilder für Erwachsene.",
+  gate_text2:"Mit dem Fortfahren bestätigst du, dass du mindestens 18 Jahre alt bist (oder volljährig an deinem Wohnort), dass das Ansehen von Inhalten für Erwachsene in deinem Land legal ist und dass du das freiwillig tust.",
+  gate_enter:"Ich bin 18 oder älter, weiter", gate_leave:"Ich bin unter 18, verlassen",
+  gate_parents:"Eltern: Nutzen Sie eine Jugendschutz-Software, um Seiten für Erwachsene auf Geräten zu sperren, die Minderjährige nutzen. Diese Seite trägt das RTA-Label (Restricted To Adults).",
+  gate_accept:"Mit dem Fortfahren akzeptierst du auch unsere {terms} und unsere {privacy}.",
+  nf_t:"Seite nicht gefunden", nf_d:"Diese Seite existiert nicht oder wurde verschoben. Hier geht es weiter:", nf_home:"Alle Charaktere ansehen",
+  bc_home:"Startseite", video_badge:"Video"
+},
+pt: {
+  model_t:"{name}{agep} – Chat IA NSFW no {p}", age_sfx:", {age} anos",
+  tag_t2:"Chat de sexo IA {tag}: {n} chatbots NSFW", tag_d2:"Chat de sexo com {n} chatbots de IA «{tag}». Compare os personagens por plataforma, mensagens grátis, fotos e vídeo, e comece a conversar. Somente 18+.",
+  gate_text:"Este site é um diretório de serviços de companhia com IA para adultos. Contém temas e imagens para adultos.",
+  gate_text2:"Ao continuar, você confirma que tem pelo menos 18 anos (ou a maioridade onde mora), que ver conteúdo adulto é legal no seu país e que faz isso por vontade própria.",
+  gate_enter:"Tenho 18 anos ou mais, continuar", gate_leave:"Tenho menos de 18, sair",
+  gate_parents:"Pais: usem um software de controle parental para bloquear sites adultos nos dispositivos que menores usam. Este site tem o selo RTA (Restricted To Adults).",
+  gate_accept:"Ao continuar, você também aceita nossos {terms} e nossa {privacy}.",
+  nf_t:"Página não encontrada", nf_d:"Esta página não existe ou mudou de lugar. Algumas opções para voltar:", nf_home:"Ver todos os personagens",
+  bc_home:"Início", video_badge:"Vídeo"
+},
+hi: {
+  model_t:"{name}{agep} – {p} पर NSFW AI चैट", age_sfx:", {age}",
+  tag_t2:"{tag} AI सेक्स चैट: {n} NSFW चैटबॉट", tag_d2:"„{tag}“ कैटेगरी के {n} AI चैटबॉट के साथ सेक्स चैट। प्लेटफ़ॉर्म, मुफ़्त मैसेज, फ़ोटो और वीडियो के हिसाब से किरदारों की तुलना करें और चैट शुरू करें। केवल 18+।",
+  gate_text:"यह साइट वयस्कों के लिए AI साथी सेवाओं की डायरेक्टरी है। इसमें वयस्क विषय और तस्वीरें हैं।",
+  gate_text2:"आगे बढ़कर आप पुष्टि करते हैं कि आपकी उम्र कम से कम 18 साल है (या आपके यहाँ की बालिग उम्र), आपके देश में वयस्क सामग्री देखना कानूनी है, और आप यह अपनी मर्ज़ी से कर रहे हैं।",
+  gate_enter:"मेरी उम्र 18 या ज़्यादा है, आगे बढ़ें", gate_leave:"मेरी उम्र 18 से कम है, बाहर जाएँ",
+  gate_parents:"माता-पिता: नाबालिगों के इस्तेमाल वाले डिवाइस पर वयस्क साइटें ब्लॉक करने के लिए पैरेंटल-कंट्रोल सॉफ़्टवेयर इस्तेमाल करें। इस साइट पर RTA (Restricted To Adults) लेबल है।",
+  gate_accept:"आगे बढ़कर आप हमारी {terms} और {privacy} भी स्वीकार करते हैं।",
+  nf_t:"पेज नहीं मिला", nf_d:"यह पेज मौजूद नहीं है या हट गया है। वापस जाने के कुछ रास्ते:", nf_home:"सभी किरदार देखें",
+  bc_home:"होम", video_badge:"वीडियो"
+}
+};
+for (const l in EXTRA4_UI) Object.assign(I18N[l].ui, EXTRA4_UI[l]);

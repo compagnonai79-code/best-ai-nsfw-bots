@@ -53,8 +53,9 @@ function profileCard(p) {
   const P = pf(p.platform), i = PROFILES.indexOf(p);
   return `<article class="pcard" data-i="${i}">
     ${visual(p.img, P.color, p.name[0], p.name)}
+    ${p.video ? `<video class="pvid" muted loop playsinline preload="none" data-src="${esc(p.video)}" aria-hidden="true"></video>` : ""}
     <a class="pcover" href="${girlUrl(p)}" aria-label="${esc(p.name)}"></a>
-    ${isNew(p) ? `<span class="new">${esc(ui("new_badge"))}</span>` : ""}<span class="online"></span>
+    ${isNew(p) ? `<span class="new">${esc(ui("new_badge"))}</span>` : ""}${p.video ? `<span class="vbadge">▶ ${esc(ui("video_badge"))}</span>` : `<span class="online"></span>`}
     <div class="shade"></div>
     <div class="meta"><h3><a class="plink" href="${girlUrl(p)}">${esc(p.name)}</a>${p.age ? `<span>${p.age}</span>` : ""}</h3>
       <div class="on-pf">${esc(ui("on", {p: P.name}))}</div>
@@ -154,7 +155,16 @@ function openProfile(i) {
     <div class="note">${esc(ui("opens", {p: P.name}))} · <a href="${girlUrl(p)}">${esc(ui("full_profile"))}</a></div>`;
   $("#profile").classList.add("show");
 }
+/* video previews: play on hover (mouse only), loaded only when first hovered */
+function wireVideos() {
+  if (!window.matchMedia || !matchMedia("(hover: hover)").matches) return;
+  document.addEventListener("mouseover", e => { const c = e.target.closest && e.target.closest(".pcard"); const v = c && c.querySelector("video.pvid"); if (!v || c.dataset.playing) return;
+    c.dataset.playing = "1"; if (!v.src) v.src = v.dataset.src; v.play().then(() => c.classList.add("vplay")).catch(() => {}); });
+  document.addEventListener("mouseout", e => { const c = e.target.closest && e.target.closest(".pcard"); if (!c || (e.relatedTarget && c.contains(e.relatedTarget))) return;
+    const v = c.querySelector("video.pvid"); delete c.dataset.playing; c.classList.remove("vplay"); if (v) v.pause(); });
+}
 function wireProfileGrid() {
+  wireVideos();
   const g = $("#grid"); if (!g) return;
   /* photo/name = link to /model/<id>, "Chat" button = affiliate link: nothing to intercept */
   $("#profile")?.addEventListener("click", e => { if (e.target.id === "profile" || e.target.classList.contains("x")) $("#profile").classList.remove("show"); });
