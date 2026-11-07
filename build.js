@@ -18,7 +18,7 @@ function context(lang) {
   const ctx = { PAGE_LANG: lang, console, Date, URLSearchParams };
   vm.createContext(ctx);
   vm.runInContext(CLIENT.map(read).join("\n;\n") +
-    "\n;this.X={SITE,PLATFORMS,PLATFORM_DATA,PROFILES,PROMO,NEW_DAYS,LANGS,ui,tr,esc,slug,isNew,newCount,tagCount,ALL_PROFILE_TAGS,TAG_GROUPS,ALL_TAGS,profileCard,pickCard,platformCard,visual,ctaLink,girlUrl,tagUrl,inBase,byNew,bioOf,linkFor,withAge,topList,bySel,pagerHtml,PER_PAGE,girlId,plUrl,pfKey,get LANG(){return LANG}};", ctx);
+    "\n;this.X={SITE,PLATFORMS,PLATFORM_DATA,PROFILES,PROMO,NEW_DAYS,LANGS,ui,tr,esc,slug,isNew,newCount,tagCount,ALL_PROFILE_TAGS,TAG_GROUPS,ALL_TAGS,profileCard,pickCard,platformCard,visual,ctaLink,girlUrl,tagUrl,inBase,byNew,bioOf,linkFor,withAge,topList,bySel,pagerHtml,PER_PAGE,girlId,plUrl,pfKey,gridHtml,get LANG(){return LANG}};", ctx);
   ctx.X._ctx = ctx;
   return ctx.X;
 }
@@ -34,6 +34,14 @@ const prefix = l => (l === "en" ? "" : l + "/");
 const OG_LOCALE = { en:"en_US", fr:"fr_FR", es:"es_ES", de:"de_DE", pt:"pt_BR", hi:"hi_IN" };
 const ogImage = img => !img ? SITE.url + "/images/og-default.jpg" : /^https?:/.test(img) ? img : SITE.url + "/" + img.replace(/^\.?\//, "");
 const fmtDate = (d, l) => { try { return new Intl.DateTimeFormat(l === "hi" ? "hi-IN" : l, {day:"numeric", month:"long", year:"numeric"}).format(new Date(d + "T12:00:00Z")); } catch (err) { return d; } };
+/* "By Nicholas Simpson, editor and tester" with a link to the author page; rel = path back to the language root */
+const byline = (X, rel) => { const parts = X.ui("by_author_r", {author: "\u0001", role: X.ui("author_role")}).split("\u0001");
+  return X.esc(parts[0]) + `<a href="${rel}author.html">${X.esc(SITE.author)}</a>` + X.esc(parts[1] || ""); };
+/* tag × platform pages exist when the platform has ≥3 bots in the tag AND the other platforms have ≥3 too */
+const TPF_MIN = 3;
+const TPF_SKIP = ["Female", "Male", "Realistic", "Anime", "Image generation", "Voice", "Video"];   /* too broad: same as the platform page */
+const tpfOk = (X, t, k) => { if (TPF_SKIP.includes(t)) return false; const all = X.PROFILES.filter(p => p.tags.includes(t)), n = all.filter(p => p.platform === k).length;
+  return !!X.PLATFORMS[k].url && n >= TPF_MIN && all.length - n >= TPF_MIN; };   /* otherwise it would duplicate the tag page */
 const absUrl = (l, file) => SITE.url + "/" + (prefix(l) + file).replace(/index\.html$/, "").replace(/\.html$/, "");
 const LEGAL_PAGES = [["terms","legal_terms"],["cookies","legal_cookies"],["dmca","legal_dmca"],["privacy","legal_privacy"],["ai-disclosure","legal_ai"],["legal-notice","legal_notice"]];
 const LEGAL_KEY = { "terms":"terms","cookies":"cookies","dmca":"dmca","privacy":"privacy","ai-disclosure":"ai","legal-notice":"notice" };
@@ -181,7 +189,7 @@ for (const [file, base] of [["index.html",""],["women.html","women"],["men.html"
     <div class="stabs" id="sort" role="tablist">${[["sel","sort_sel"],["new","sort_new_t"],["name","sort_az"]].map(([s2, key], i) =>
       `<button type="button" data-s="${s2}" class="${i ? "" : "on"}">${e(u(key))}</button>`).join("")}</div>
   </div>
-  <div class="pgrid" id="grid">${list.slice(0, X.PER_PAGE).map(X.profileCard).join("")}</div>
+  <div class="pgrid" id="grid">${X.gridHtml(list.slice(0, X.PER_PAGE))}</div>
   <nav class="pager" id="pager" aria-label="Pagination">${pages > 1 ? X.pagerHtml(1, pages) : ""}</nav>
   <section class="info"><h2>${e(u("recent_t"))}</h2>
     <div class="recent">${recent.map(thumb).join("")}</div>
@@ -261,12 +269,12 @@ for (const t of base.ALL_TAGS) pages.push({ file: "tag/" + base.slug(t) + ".html
   const v = { tag: name, n, k: pfs.length, d: SITE.updated, pls: listFmt(pfNames, lang), top: pfNames[0], topn: pfs[0][1], site: SITE.domain,
               img: listFmt(imgPf.length ? imgPf : pfNames, lang), g: u("grp_" + g) };
   v.grp = u("gi_" + g, v);
-  const faq = [1,2,3,4,5,6].map(i => [u("tq" + i, v), u("ta" + i, v)]);
+  const faq = [1,2,3,4,5,6,7,8].map(i => [u("tq" + i, v), u("ta" + i, v)]);
   return { ...meta, body: `${crumb}
   <section class="hero tp-hero"><h1>${u("tag_h1", {tag: e(name)})}</h1>
-    <p class="tp-by">${e(u("tp_by", v))} · ${e(u("by_author", {author: SITE.author}))}</p>
+    <p class="tp-by">${e(u("tp_by", v))} · ${byline(X, "../")}</p>
     <p class="tp-intro">${e(u("tp_intro", v))}</p></section>
-  <div class="pgrid" id="grid">${list.map(X.profileCard).join("")}</div>
+  <div class="pgrid" id="grid">${X.gridHtml(list)}</div>
   <p class="tp-note">${e(u("tp_order"))}</p>
   <article class="tp-article">
     <section class="info"><h2>${e(u("tp_check_t"))}</h2><ol class="steps">${[1,2,3,4,5].map(i => `<li>${u("tp_c" + i)}</li>`).join("")}</ol></section>
@@ -275,7 +283,7 @@ for (const t of base.ALL_TAGS) pages.push({ file: "tag/" + base.slug(t) + ".html
       <p class="hero-links" style="text-align:left"><a href="../data.html">${e(u("nav_data"))} →</a> · <a href="../how-we-rate.html">${e(u("nav_how"))} →</a></p></section>
     <section class="info"><h2>${e(u("tp_pl_t", v))}</h2>
       <div class="tablewrap"><table class="data" style="min-width:0"><thead><tr><th>${e(u("col_platform"))}</th><th>${e(u("tp_col_n", v))}</th><th>${e(u("col_score"))}</th><th></th></tr></thead><tbody>
-      ${pfs.map(([k, c]) => { const P = X.PLATFORMS[k]; return `<tr><td><strong>${e(P.name)}</strong></td><td>${c}</td><td>★ ${P.rating}</td><td>${X.ctaLink(P, e(u("tp_go")) + " →", "tbl-link")}</td></tr>`; }).join("")}
+      ${pfs.map(([k, c]) => { const P = X.PLATFORMS[k]; return `<tr><td><strong>${tpfOk(X, t, k) ? `<a href="${X.slug(t)}/${k}.html">${e(P.name)}</a>` : P.url ? `<a href="../platform/${k}.html">${e(P.name)}</a>` : e(P.name)}</strong></td><td>${c}</td><td>★ ${P.rating}</td><td>${X.ctaLink(P, e(u("tp_go")) + " →", "tbl-link")}</td></tr>`; }).join("")}
       </tbody></table></div>
       <p class="hero-links" style="text-align:left"><a href="../platforms.html">${e(u("m_see_pl"))}</a></p></section>
     ${related.length ? `<section class="info"><h2>${e(u("tp_rel_t", v))}</h2><div class="tags" style="justify-content:flex-start">${related.map(x => `<a class="tag" href="${X.slug(x)}.html">${e(X.tr(x))}<small>${co[x]}</small></a>`).join("")}</div></section>` : ""}
@@ -348,7 +356,7 @@ for (const g0 of base.PROFILES) pages.push({ file: "model/" + (g0.id || base.slu
     <p class="hero-links" style="text-align:left"><a href="../platforms.html">${e(u("m_see_pl"))}</a> · <a href="../data.html">${e(u("nav_data"))} →</a> · <a href="../how-we-rate.html">${e(u("nav_how"))} →</a></p></section>
 
   <section class="info review"><h2>${e(u("rv_t"))}</h2>
-    <p class="rv-by">${e(u("rv_by", rv))} · ${e(u("rv_checked", rv))}</p>
+    <p class="rv-by">${byline(X, "../")} · ${e(u("rv_checked", rv))}</p>
     <p>${e(u("rv_sum", rv))}</p>
     <div class="tp-grid"><div><h3 class="pro-h">${e(u("rv_pros"))}</h3><ul class="pros">${pros.map(k => `<li>${e(u(k, rv))}</li>`).join("")}</ul></div>
       ${cons.length ? `<div><h3 class="con-h">${e(u("rv_cons"))}</h3><ul class="cons">${cons.map(k => `<li>${e(u(k, rv))}</li>`).join("")}</ul></div>` : ""}</div></section>
@@ -393,7 +401,7 @@ for (const key of Object.keys(base.PLATFORMS).filter(k => base.PLATFORMS[k].url)
   <nav class="crumb"><a href="../platforms.html">${e(u("pl_back"))}</a> › <span>${e(P.name)}</span></nav>
   <section class="hero tp-hero"><div class="pl-mono" style="background:linear-gradient(135deg,${P.color[0]},${P.color[1]})">${e(P.name[0])}</div>
     <h1>${e(u("pl_h1", v))}</h1>
-    <p class="tp-by">★ ${P.rating}/5 · ${e(u("by_author", v))} · ${e(u("rv_checked", v))}</p>
+    <p class="tp-by">★ ${P.rating}/5 · ${byline(X, "../")} · ${e(u("rv_checked", v))}</p>
     <p class="tp-intro">${e(X.tr(P.desc))}</p>
     <p>${cta("btn btn-main btn-xl")}</p></section>
   <div class="mgrid">
@@ -406,7 +414,7 @@ for (const key of Object.keys(base.PLATFORMS).filter(k => base.PLATFORMS[k].url)
       <p class="hero-links" style="text-align:left"><a href="../data.html">${e(u("nav_data"))} →</a> · <a href="../how-we-rate.html">${e(u("nav_how"))} →</a></p></section>
   </div>
   <h2 class="section-title">${e(u("pl_chars_t", v))} <small>${n}</small></h2>
-  ${n ? `<div class="pgrid" id="grid">${list.slice(0, 24).map(X.profileCard).join("")}</div>
+  ${n ? `<div class="pgrid" id="grid">${X.gridHtml(list.slice(0, 24))}</div>
   ${n > 24 ? `<p class="all-tags"><a class="btn btn-main" href="../index.html?app=${key}">${e(u("pl_all", v))} →</a></p>` : ""}` : `<p class="tp-note">${e(u("pl_none", v))}</p>`}
   ${cats.length ? `<section class="info"><h2>${e(u("pl_cats_t", v))}</h2><div class="tags" style="justify-content:flex-start">${cats.map(([t, c]) =>
     `<a class="tag" href="../tag/${X.slug(t)}.html">${e(X.tr(t))}<small>${c}</small></a>`).join("")}</div></section>` : ""}
@@ -418,6 +426,41 @@ for (const key of Object.keys(base.PLATFORMS).filter(k => base.PLATFORMS[k].url)
      "author":{"@type":"Person","name":SITE.author},"datePublished":D.checked || SITE.updated,"reviewRating":{"@type":"Rating","ratingValue":P.rating,"bestRating":5,"worstRating":1},
      "publisher":{"@type":"Organization","name":SITE.domain}},
     {"@context":"https://schema.org","@type":"FAQPage","mainEntity":faq.map(([q,a]) => ({"@type":"Question","name":q,"acceptedAnswer":{"@type":"Answer","text":a}}))}]).replace(/</g,"\\u003c")}</script>` };
+}});
+
+/* tag × platform pages: /tag/<slug>/<platform>.html */
+for (const t of base.ALL_TAGS) for (const k of Object.keys(base.PLATFORMS)) if (tpfOk(base, t, k)) pages.push({ file: "tag/" + base.slug(t) + "/" + k + ".html", build: (X, lang) => {
+  const u = X.ui, e = X.esc, P = X.PLATFORMS[k], D = X.PLATFORM_DATA[k] || {};
+  const list = X.PROFILES.filter(p => p.tags.includes(t) && p.platform === k).sort(X.bySel);
+  const v = { tag: X.tr(t), p: P.name, n: list.length, total: X.tagCount(t), site: SITE.domain, pdesc: X.tr(P.desc) };
+  const faq = [[u("tpp_q1", v), u("tpp_a1", v)], [u("pq1", v), u(D.free ? "pa1_yes" : "pa1_unk", v)], [u("tpp_q2", v), u("tpp_a2", v)]];
+  return { page:"tag", nav:"tags", modal:true, title: u("tpp_h1", v) + " – " + SITE.domain, desc: u("tpp_intro", v).slice(0, 300), body: `
+  <nav class="crumb"><a href="../../tags.html">${e(u("tag_all"))}</a> › <a href="../${X.slug(t)}.html">${e(X.tr(t))}</a> › <span>${e(P.name)}</span></nav>
+  <section class="hero tp-hero"><h1>${e(u("tpp_h1", v))}</h1>
+    <p class="tp-by">${byline(X, "../../")} · ${e(u("rv_checked", {d: fmtDate(SITE.updated, X.LANG)}))}</p>
+    <p class="tp-intro">${e(u("tpp_intro", v))}</p></section>
+  <div class="pgrid" id="grid">${X.gridHtml(list)}</div>
+  <p class="hero-links"><a href="../${X.slug(t)}.html">${e(u("tpp_back", v))} →</a> · <a href="../../platform/${k}.html">${e(u("tpp_rev", v))} →</a></p>
+  <section class="info"><h2>${e(u("faq_title"))}</h2>
+    <div class="mfaq">${faq.map(([q, a]) => `<div class="mq"><h3>${e(q)}</h3><p>${e(a)}</p></div>`).join("")}</div></section>
+  <p class="tp-note">${e(u("tp_aff"))} <a href="../../legal/terms.html">${e(u("legal_terms"))}</a></p>
+  <script type="application/ld+json">${JSON.stringify({"@context":"https://schema.org","@type":"FAQPage","mainEntity":faq.map(([q,a]) => ({"@type":"Question","name":q,"acceptedAnswer":{"@type":"Answer","text":a}}))}).replace(/</g,"\\u003c")}</script>` };
+}});
+
+/* author page */
+pages.push({ file: "author.html", build: (X) => {
+  const u = X.ui, e = X.esc, v = { author: SITE.author, site: SITE.domain };
+  const revs = Object.entries(X.PLATFORMS).filter(([, P]) => P.url).sort((a,b) => b[1].rating - a[1].rating);
+  return { page:"author", title: SITE.author + " – " + SITE.domain, desc: u("au_meta_d", v), ogType: "profile", body: `
+  <section class="hero tp-hero"><div class="pl-mono" style="background:linear-gradient(135deg,var(--accent),var(--accent2))">${e(SITE.author[0])}</div>
+    <h1>${e(SITE.author)}</h1><p class="tp-by">${e(u("author_role").replace(/^./, c => c.toUpperCase()))} · ${e(SITE.domain)}</p>
+    <p class="tp-intro">${e(u("au_intro", v))}</p></section>
+  <section class="info"><p>${e(u("au_p1", v))}</p><p>${e(u("au_p2", v))}</p>
+    <p class="hero-links" style="text-align:left"><a href="how-we-rate.html">${e(u("nav_how"))} →</a> · <a href="data.html">${e(u("nav_data"))} →</a></p></section>
+  <section class="info"><h2>${e(u("au_reviews"))}</h2>
+    <ul class="feat">${revs.map(([k, P]) => `<li><a href="platform/${k}.html">${e(u("pl_h1", {p: P.name}))}</a> · ★ ${P.rating}</li>`).join("")}</ul></section>
+  <p class="tp-note">${e(u("au_contact"))} <a href="contact.html">${e(u("nav_contact"))}</a></p>
+  <script type="application/ld+json">${JSON.stringify({"@context":"https://schema.org","@type":"Person","name":SITE.author,"jobTitle":X.ui("author_role"),"worksFor":{"@type":"Organization","name":SITE.domain,"url":SITE.url}}).replace(/</g,"\\u003c")}</script>` };
 }});
 
 pages.push({ file: "how-we-rate.html", build: (X) => {
@@ -476,7 +519,7 @@ pages.push({ file: "sitemap.html", build: (X) => {
   <section class="hero"><h1>${e(u("sitemap_title"))}</h1></section>
   <div class="smap">
     <section><h2>${e(u("sm_pages"))}</h2>${a("index.html", u("nav_girls"))}${a("platforms.html", u("nav_platforms"))}${Object.entries(X.PLATFORMS).filter(([, P]) => P.url).map(([k, P]) => a("platform/" + k + ".html", P.name)).join("")}${a("tags.html", u("nav_tags"))}
-      ${a("how-we-rate.html", u("nav_how"))}${a("data.html", u("nav_data"))}${a("contact.html", u("nav_contact"))}</section>
+      ${a("how-we-rate.html", u("nav_how"))}${a("author.html", SITE.author)}${a("data.html", u("nav_data"))}${a("contact.html", u("nav_contact"))}</section>
     <section><h2>${e(u("sm_tags"))}</h2>${tags.map(t => a("tag/" + X.slug(t) + ".html", X.tr(t))).join("")}</section>
     <section><h2>${e(u("sm_profiles"))}</h2>${girls.map(g => a("model/" + (g.id || X.slug(g.name)) + ".html", g.name)).join("")}</section>
     <section><h2>${e(u("sm_legal"))}</h2>${LEGAL_PAGES.map(([f, k]) => a("legal/" + f + ".html", u(k))).join("")}</section>

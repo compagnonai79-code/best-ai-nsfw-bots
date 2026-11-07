@@ -83,6 +83,17 @@ function platformCard(p) {
   </article>`;
 }
 
+/* sponsored cards inserted in profile grids (after the 6th and 18th card); clearly labelled "Sponsored" */
+const AD_SLOTS = [5, 17];
+function adCard(k) {
+  const P = pf(PROMO.platform); if (!linkOf(P)) return "";
+  const img = k === 0 && PROMO.img ? `<img src="${esc(/^https?:/.test(PROMO.img) ? PROMO.img : R() + PROMO.img)}" alt="" loading="lazy" onerror="this.remove()">` : "";
+  return `<aside class="adcard ad${k}"><span class="ad-lbl">${esc(ui("sponsored"))}</span>${img}
+    <div class="ad-body"><div class="ad-ic">${k ? "✨" : "💬"}</div><h3>${esc(ui("ad" + (k + 1) + "_t", {p: P.name}))}</h3><p>${esc(ui("ad" + (k + 1) + "_d", {p: P.name}))}</p>
+    ${ctaLink(P, esc(ui("ad" + (k + 1) + "_btn", {p: P.name})) + " →", "btn btn-main")}<small>${esc(ui("promo_note"))}</small></div></aside>`;
+}
+const gridHtml = list => list.map((p, i) => profileCard(p) + (AD_SLOTS.includes(i) && i < list.length - 1 ? adCard(AD_SLOTS.indexOf(i)) : "")).join("");
+
 /* ---------- browser only ---------- */
 let ageOk = false;
 if (HAS_DOM) {
@@ -216,7 +227,7 @@ function initHome() {
     $("#count").innerHTML = `<b>${list.length}</b> ` + esc(ui(onlyNew ? "count_new" : "count", {n:""}).trim()) +
       (filtered ? `<button class="clear" id="clear">${esc(ui("clear"))}</button>` : "");
     $("#new-btn")?.classList.toggle("on", onlyNew);
-    $("#grid").innerHTML = list.length ? shown.map(profileCard).join("") : `<div class="empty">${esc(ui("empty"))}</div>`;
+    $("#grid").innerHTML = list.length ? gridHtml(shown) : `<div class="empty">${esc(ui("empty"))}</div>`;
     document.querySelectorAll("#sort [data-s]").forEach(b => b.classList.toggle("on", b.dataset.s === sortMode));
     $("#pager").innerHTML = pages > 1 ? pagerHtml(page, pages) : "";
   };

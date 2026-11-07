@@ -278,3 +278,104 @@ hi: {
 }
 };
 for (const l in EXTRA2_UI) Object.assign(I18N[l].ui, EXTRA2_UI[l]);
+
+/* Sponsored grid cards, author page, category × platform pages, category FAQ 7–8 */
+const EXTRA3_UI = {
+en: {
+  ad1_t:"Try {p} for free", ad1_d:"Hundreds of characters, with photos, voice and video.", ad1_btn:"Try for free",
+  ad2_t:"Create your own AI companion", ad2_d:"Pick the look and the personality in a few clicks on {p}.", ad2_btn:"Create mine",
+  author_role:"editor and tester", by_author_r:"By {author}, {role}",
+  au_meta_d:"Who writes the reviews on {site} and how characters and platforms are checked.",
+  au_intro:"{author} writes the reviews, character profiles and category guides on {site}.",
+  au_p1:"For each platform, he checks the advertised features directly on the official site (photos, voice, video, free plan), makes sure the chat links work, and reads each character's official profile before sorting it into categories.",
+  au_p2:"Ratings follow the method published on our “How we rate” page. Platforms cannot pay for a better rating or a place in the Top 10.",
+  au_reviews:"Platform reviews", au_contact:"Spotted a mistake or have a suggestion? Use the contact page.",
+  tpp_h1:"{tag} characters on {p}", tpp_intro:"Discover {n} “{tag}” AI characters available on {p}. {pdesc}",
+  tpp_back:"All “{tag}” characters ({total})", tpp_rev:"Our {p} review",
+  tpp_q1:"Does {p} have “{tag}” characters?", tpp_a1:"Yes: {n} “{tag}” characters from {p} are listed here, each with a profile page and a direct chat link.",
+  tpp_q2:"Where can I find more “{tag}” characters?", tpp_a2:"Our “{tag}” page gathers {total} characters from every platform we list.",
+  tq7:"Can I create my own “{tag}” character?", ta7:"Yes. Some platforms, such as Candy AI, let you design your own character: look, personality and scenario. You can then chat with it like with the characters listed here.",
+  tq8:"Are my chats with a “{tag}” character private?", ta8:"Chats are stored by the platform, not by {site}. Read the platform's privacy policy, use a separate email address, and avoid sharing personal information in the conversation."
+},
+fr: {
+  ad1_t:"Essaie {p} gratuitement", ad1_d:"Des centaines de personnages, avec photos, voix et vidéo.", ad1_btn:"Essayer gratuitement",
+  ad2_t:"Crée ton propre personnage IA", ad2_d:"Choisis son look et sa personnalité en quelques clics sur {p}.", ad2_btn:"Créer le mien",
+  author_role:"rédacteur et testeur", by_author_r:"Par {author}, {role}",
+  au_meta_d:"Qui rédige les avis de {site} et comment les personnages et les plateformes sont vérifiés.",
+  au_intro:"{author} rédige les avis, les fiches personnages et les guides de catégories de {site}.",
+  au_p1:"Pour chaque plateforme, il vérifie les fonctionnalités annoncées directement sur le site officiel (photos, voix, vidéo, offre gratuite), contrôle que les liens de chat fonctionnent et lit la fiche officielle de chaque personnage avant de la classer dans les catégories.",
+  au_p2:"Les notes suivent la méthode publiée sur notre page « Notre méthode ». Les plateformes ne peuvent pas payer pour obtenir une meilleure note ou une place dans le Top 10.",
+  au_reviews:"Avis sur les plateformes", au_contact:"Une erreur ou une suggestion ? Passe par la page Contact.",
+  tpp_h1:"Personnages « {tag} » sur {p}", tpp_intro:"Découvre {n} personnages IA « {tag} » disponibles sur {p}. {pdesc}",
+  tpp_back:"Tous les personnages « {tag} » ({total})", tpp_rev:"Notre avis sur {p}",
+  tpp_q1:"{p} propose-t-il des personnages « {tag} » ?", tpp_a1:"Oui : {n} personnages « {tag} » de {p} sont listés ici, chacun avec une fiche et un lien direct vers le chat.",
+  tpp_q2:"Où trouver d'autres personnages « {tag} » ?", tpp_a2:"Notre page « {tag} » regroupe {total} personnages de toutes les plateformes que nous référençons.",
+  tq7:"Puis-je créer mon propre personnage « {tag} » ?", ta7:"Oui. Certaines plateformes, comme Candy AI, permettent de créer son propre personnage : look, personnalité et scénario. Tu peux ensuite discuter avec lui comme avec les personnages listés ici.",
+  tq8:"Mes conversations avec un personnage « {tag} » sont-elles privées ?", ta8:"Les conversations sont stockées par la plateforme, pas par {site}. Lis la politique de confidentialité de la plateforme, utilise une adresse e-mail dédiée et évite de partager des informations personnelles dans la conversation."
+},
+es: {
+  ad1_t:"Prueba {p} gratis", ad1_d:"Cientos de personajes, con fotos, voz y vídeo.", ad1_btn:"Probar gratis",
+  ad2_t:"Crea tu propio personaje de IA", ad2_d:"Elige su aspecto y su personalidad en unos clics en {p}.", ad2_btn:"Crear el mío",
+  author_role:"redactor y probador", by_author_r:"Por {author}, {role}",
+  au_meta_d:"Quién escribe las opiniones de {site} y cómo se revisan los personajes y las plataformas.",
+  au_intro:"{author} escribe las opiniones, las fichas de personajes y las guías de categorías de {site}.",
+  au_p1:"En cada plataforma revisa las funciones anunciadas directamente en el sitio oficial (fotos, voz, vídeo, plan gratuito), comprueba que los enlaces de chat funcionan y lee la ficha oficial de cada personaje antes de clasificarlo.",
+  au_p2:"Las notas siguen el método publicado en nuestra página «Cómo puntuamos». Las plataformas no pueden pagar por una mejor nota ni por un puesto en el Top 10.",
+  au_reviews:"Opiniones sobre plataformas", au_contact:"¿Has visto un error o tienes una sugerencia? Usa la página de contacto.",
+  tpp_h1:"Personajes «{tag}» en {p}", tpp_intro:"Descubre {n} personajes de IA «{tag}» disponibles en {p}. {pdesc}",
+  tpp_back:"Todos los personajes «{tag}» ({total})", tpp_rev:"Nuestra opinión sobre {p}",
+  tpp_q1:"¿{p} tiene personajes «{tag}»?", tpp_a1:"Sí: aquí aparecen {n} personajes «{tag}» de {p}, cada uno con su ficha y un enlace directo al chat.",
+  tpp_q2:"¿Dónde encuentro más personajes «{tag}»?", tpp_a2:"Nuestra página «{tag}» reúne {total} personajes de todas las plataformas que listamos.",
+  tq7:"¿Puedo crear mi propio personaje «{tag}»?", ta7:"Sí. Algunas plataformas, como Candy AI, permiten diseñar tu propio personaje: aspecto, personalidad y escenario. Después puedes chatear con él como con los personajes de esta lista.",
+  tq8:"¿Mis chats con un personaje «{tag}» son privados?", ta8:"Los chats los guarda la plataforma, no {site}. Lee la política de privacidad de la plataforma, usa un correo aparte y evita compartir datos personales en la conversación."
+},
+de: {
+  ad1_t:"{p} kostenlos testen", ad1_d:"Hunderte Charaktere mit Fotos, Stimme und Video.", ad1_btn:"Kostenlos testen",
+  ad2_t:"Erstelle deinen eigenen KI-Charakter", ad2_d:"Wähle Aussehen und Persönlichkeit mit wenigen Klicks auf {p}.", ad2_btn:"Meinen erstellen",
+  author_role:"Redakteur und Tester", by_author_r:"Von {author}, {role}",
+  au_meta_d:"Wer die Tests auf {site} schreibt und wie Charaktere und Plattformen geprüft werden.",
+  au_intro:"{author} schreibt die Tests, Charakterprofile und Kategorie-Guides auf {site}.",
+  au_p1:"Bei jeder Plattform prüft er die beworbenen Funktionen direkt auf der offiziellen Seite (Fotos, Stimme, Video, Gratis-Angebot), testet, ob die Chat-Links funktionieren, und liest das offizielle Profil jedes Charakters, bevor er ihn einordnet.",
+  au_p2:"Die Bewertungen folgen der Methode auf unserer Seite „So bewerten wir“. Plattformen können nicht für eine bessere Note oder einen Platz in der Top 10 bezahlen.",
+  au_reviews:"Plattform-Tests", au_contact:"Fehler entdeckt oder einen Vorschlag? Nutze die Kontaktseite.",
+  tpp_h1:"{tag}-Charaktere auf {p}", tpp_intro:"Entdecke {n} KI-Charaktere der Kategorie „{tag}“ auf {p}. {pdesc}",
+  tpp_back:"Alle „{tag}“-Charaktere ({total})", tpp_rev:"Unser Test zu {p}",
+  tpp_q1:"Gibt es auf {p} „{tag}“-Charaktere?", tpp_a1:"Ja: Hier sind {n} „{tag}“-Charaktere von {p} gelistet, jeweils mit Profilseite und direktem Chat-Link.",
+  tpp_q2:"Wo finde ich weitere „{tag}“-Charaktere?", tpp_a2:"Unsere Seite „{tag}“ bündelt {total} Charaktere von allen Plattformen, die wir listen.",
+  tq7:"Kann ich meinen eigenen „{tag}“-Charakter erstellen?", ta7:"Ja. Einige Plattformen wie Candy AI lassen dich einen eigenen Charakter gestalten: Aussehen, Persönlichkeit und Szenario. Danach chattest du mit ihm wie mit den Charakteren hier.",
+  tq8:"Sind meine Chats mit einem „{tag}“-Charakter privat?", ta8:"Die Chats speichert die Plattform, nicht {site}. Lies die Datenschutzerklärung der Plattform, nutze eine eigene E-Mail-Adresse und teile keine persönlichen Daten im Gespräch."
+},
+pt: {
+  ad1_t:"Experimente o {p} grátis", ad1_d:"Centenas de personagens, com fotos, voz e vídeo.", ad1_btn:"Experimentar grátis",
+  ad2_t:"Crie seu próprio personagem de IA", ad2_d:"Escolha a aparência e a personalidade em poucos cliques no {p}.", ad2_btn:"Criar o meu",
+  author_role:"redator e testador", by_author_r:"Por {author}, {role}",
+  au_meta_d:"Quem escreve as avaliações do {site} e como os personagens e as plataformas são verificados.",
+  au_intro:"{author} escreve as avaliações, os perfis de personagens e os guias de categorias do {site}.",
+  au_p1:"Em cada plataforma, ele verifica os recursos anunciados diretamente no site oficial (fotos, voz, vídeo, plano gratuito), confere se os links de chat funcionam e lê o perfil oficial de cada personagem antes de classificá-lo.",
+  au_p2:"As notas seguem o método publicado na nossa página «Como avaliamos». As plataformas não podem pagar por uma nota melhor nem por um lugar no Top 10.",
+  au_reviews:"Avaliações de plataformas", au_contact:"Viu um erro ou tem uma sugestão? Use a página de contato.",
+  tpp_h1:"Personagens «{tag}» no {p}", tpp_intro:"Descubra {n} personagens de IA «{tag}» disponíveis no {p}. {pdesc}",
+  tpp_back:"Todos os personagens «{tag}» ({total})", tpp_rev:"Nossa avaliação do {p}",
+  tpp_q1:"O {p} tem personagens «{tag}»?", tpp_a1:"Sim: {n} personagens «{tag}» do {p} estão listados aqui, cada um com perfil e link direto para o chat.",
+  tpp_q2:"Onde encontro mais personagens «{tag}»?", tpp_a2:"Nossa página «{tag}» reúne {total} personagens de todas as plataformas que listamos.",
+  tq7:"Posso criar meu próprio personagem «{tag}»?", ta7:"Sim. Algumas plataformas, como o Candy AI, permitem criar seu próprio personagem: aparência, personalidade e cenário. Depois você conversa com ele como com os personagens desta lista.",
+  tq8:"Minhas conversas com um personagem «{tag}» são privadas?", ta8:"As conversas ficam guardadas na plataforma, não no {site}. Leia a política de privacidade da plataforma, use um e-mail separado e evite compartilhar dados pessoais na conversa."
+},
+hi: {
+  ad1_t:"{p} मुफ़्त में आज़माएँ", ad1_d:"सैकड़ों किरदार, फ़ोटो, आवाज़ और वीडियो के साथ।", ad1_btn:"मुफ़्त आज़माएँ",
+  ad2_t:"अपना खुद का AI किरदार बनाएँ", ad2_d:"{p} पर कुछ क्लिक में लुक और पर्सनैलिटी चुनें।", ad2_btn:"मेरा बनाएँ",
+  author_role:"संपादक और टेस्टर", by_author_r:"{author} द्वारा, {role}",
+  au_meta_d:"{site} पर रिव्यू कौन लिखता है और किरदारों व प्लेटफ़ॉर्म की जाँच कैसे होती है।",
+  au_intro:"{author} {site} के रिव्यू, किरदार प्रोफ़ाइल और कैटेगरी गाइड लिखते हैं।",
+  au_p1:"हर प्लेटफ़ॉर्म के लिए वे आधिकारिक साइट पर बताई गई सुविधाएँ (फ़ोटो, आवाज़, वीडियो, मुफ़्त प्लान) खुद जाँचते हैं, चैट लिंक काम करते हैं या नहीं देखते हैं, और हर किरदार की आधिकारिक प्रोफ़ाइल पढ़कर ही उसे कैटेगरी में रखते हैं।",
+  au_p2:"रेटिंग हमारे „हम कैसे रेट करते हैं“ पेज पर बताए तरीके से दी जाती है। प्लेटफ़ॉर्म बेहतर रेटिंग या टॉप 10 में जगह के लिए पैसे नहीं दे सकते।",
+  au_reviews:"प्लेटफ़ॉर्म रिव्यू", au_contact:"कोई गलती दिखी या सुझाव है? संपर्क पेज इस्तेमाल करें।",
+  tpp_h1:"{p} पर „{tag}“ किरदार", tpp_intro:"{p} पर उपलब्ध „{tag}“ कैटेगरी के {n} AI किरदार देखें। {pdesc}",
+  tpp_back:"सभी „{tag}“ किरदार ({total})", tpp_rev:"{p} का हमारा रिव्यू",
+  tpp_q1:"क्या {p} पर „{tag}“ किरदार हैं?", tpp_a1:"हाँ: {p} के {n} „{tag}“ किरदार यहाँ हैं, हर एक का प्रोफ़ाइल पेज और सीधा चैट लिंक है।",
+  tpp_q2:"और „{tag}“ किरदार कहाँ मिलेंगे?", tpp_a2:"हमारा „{tag}“ पेज हमारे सभी प्लेटफ़ॉर्म के {total} किरदार एक जगह दिखाता है।",
+  tq7:"क्या मैं अपना खुद का „{tag}“ किरदार बना सकता हूँ?", ta7:"हाँ। Candy AI जैसे कुछ प्लेटफ़ॉर्म पर आप अपना किरदार बना सकते हैं: लुक, पर्सनैलिटी और कहानी। फिर उससे यहाँ के किरदारों की तरह चैट कर सकते हैं।",
+  tq8:"क्या „{tag}“ किरदार से मेरी चैट निजी है?", ta8:"चैट प्लेटफ़ॉर्म पर सेव होती है, {site} पर नहीं। प्लेटफ़ॉर्म की प्राइवेसी पॉलिसी पढ़ें, अलग ईमेल इस्तेमाल करें और बातचीत में निजी जानकारी साझा न करें।"
+}
+};
+for (const l in EXTRA3_UI) Object.assign(I18N[l].ui, EXTRA3_UI[l]);
