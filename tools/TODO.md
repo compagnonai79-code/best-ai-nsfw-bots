@@ -8,7 +8,10 @@
 - [ ] Remove `netlify.toml` once Cloudflare is live.
 
 ## Waiting for information from the owner
-- [ ] Affiliate links: Kupid AI, FantasyGF, Nectar AI, a real GirlfriendGPT referral link (the current one points to their affiliate page). Then add their characters.
+- [ ] Affiliate links: Kupid AI, FantasyGF, Nectar AI, GirlfriendGPT (removed for now: no affiliate link). Then add their characters.
+- [x] Candy and SpicyChat affiliate accounts approved.
+- [ ] Hands-on tests (see tools/PROTOCOLE_TEST.md): owner sends videos/transcripts → add the "Conversation quality" criterion to the score.
+- [ ] Have the legal pages reviewed by a professional (owner).
 - [x] Ratings now computed from verified facts (PLATFORM_DATA). To improve them: fill prices/payments hidden behind sign-up, and add a hands-on chat-quality test.
 - [ ] Legal info marked `[TO FILL]` in `src/data.js` (owner, address, SIRET, host…).
 

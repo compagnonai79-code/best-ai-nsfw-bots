@@ -39,7 +39,7 @@ const PLATFORMS = {
               desc:"Huge community library of characters for roleplay, with a generous free tier.",
               feats:["Thousands of community characters","Strong roleplay focus","Free tier available"],
               tags:["Roleplay","Free tier","Community characters","Anime"] },
-  gfgpt:    { name:"GirlfriendGPT", url:"https://www.gptgirlfriend.online/affiliates", rating:4.4, color:["#8b5cf6","#ec4899"],
+  gfgpt:    { name:"GirlfriendGPT", url:"", rating:4.4, color:["#8b5cf6","#ec4899"],
               desc:"Community-driven platform to chat with or create AI characters.",
               feats:["Community character creator","Roleplay scenarios","Image features"],
               tags:["Roleplay","Community characters","Custom characters","Image generation"] },
