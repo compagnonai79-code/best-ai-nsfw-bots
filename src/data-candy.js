@@ -1660,6 +1660,8 @@ const CANDY_PROFILES = [
 "Video"
 ,
 "Mean"
+,
+"Pigtails"
 ],
 "bio": {"pt": "Sua meia-irmã gótica, uma verdadeira pestinha, foi mandada para uma instituição vigiada depois que descobriram a conta secreta de goon-bait dela. 😱 Agora ela te manda mensagem toda noite lá de dentro… 😈", "es": "Tu hermanastra gótica, una auténtica pequeña bruja, fue enviada a un centro vigilado después de que descubrieran su cuenta secreta de goon-bait. 😱 Ahora te escribe cada noche desde dentro… 😈", "en": "Your bratty goth stepsister was sent to a supervised facility after her secret goon-bait account was found. 😱 Now she texts you every night from inside… 😈", "de": "Deine freche Goth-Stiefschwester wurde in eine überwachte Einrichtung geschickt, nachdem ihr geheimer Goon-Bait-Account aufgeflogen ist. 😱 Jetzt schreibt sie dir jede Nacht von drinnen… 😈", 
 "fr": "Ta demi-sœur gothique, une vraie petite peste, a été envoyée dans un établissement spécialisé sous surveillance après que son compte goon-bait secret ait été découvert. 😱 Maintenant elle t’envoie des textos tous les soirs de l’intérieur… 😈"
@@ -3601,6 +3603,8 @@ const CANDY_PROFILES = [
 "Image generation",
 "Voice",
 "Video"
+,
+"Pigtails"
 ],
 "bio": {"pt": "Katarina Sommerfeld é uma estudante de medicina alemã conhecida pelo charme e pelo sorriso. Sociável e inteligente, é o centro das atenções em todas as festas, principalmente quando tem cerveja! Katarina adora conhecer gente e sempre tenta deixar uma impressão marcante.", "es": "Katarina Sommerfeld es una estudiante de medicina alemana conocida por su encanto y su sonrisa. Sociable e inteligente, es el centro de atención en todas las fiestas, ¡sobre todo si hay cerveza! A Katarina le encanta conocer gente y siempre intenta dejar huella.", "en": "Katarina Sommerfeld is a German medical student known for her charm and smile. Sociable and smart, she's the center of attention at every party, especially when there's beer! Katarina loves meeting people and always tries to leave a lasting impression.", "de": "Katarina Sommerfeld ist eine deutsche Medizinstudentin, bekannt für ihren Charme und ihr Lächeln. Gesellig und klug, ist sie auf jeder Party der Mittelpunkt, vor allem, wenn es Bier gibt! Katarina lernt gern Leute kennen und will immer einen bleibenden Eindruck hinterlassen.", 
 "fr": "Katarina Sommerfeld est une étudiante en médecine allemande connue pour son charme et son sourire. Sociable et intelligente, c'est le centre d'attention de toutes les fêtes, surtout quand il y a de la bière ! Katarina aime rencontrer du monde et essaie toujours de laisser une impression durable."
@@ -3867,6 +3871,8 @@ const CANDY_PROFILES = [
 "Image generation",
 "Voice",
 "Video"
+,
+"Pigtails"
 ],
 "bio": {"pt": "Pixie reparou que você ficou até tarde de novo hoje… 😈 A funcionária do turno da noite do fliperama fechou mais cedo, trancou a porta e te manteve lá dentro com ela.", "es": "Pixie se ha dado cuenta de que te has vuelto a quedar hasta tarde… 😈 La empleada del turno de noche de los recreativos cerró antes, echó la llave y te dejó dentro con ella.", "en": "Pixie noticed you stayed late again tonight… 😈 The arcade's night-shift employee closed early, locked the door and kept you inside with her.", "de": "Pixie hat bemerkt, dass du heute Abend wieder lange geblieben bist… 😈 Die Nachtschicht-Mitarbeiterin der Spielhalle hat früher geschlossen, die Tür abgesperrt und dich bei sich drinnen behalten.", 
 "fr": "Pixie a remarqué que tu es encore resté tard ce soir… 😈 L’employée de nuit de l’arcade a fermé plus tôt, verrouillé la porte et t’a gardé à l’intérieur avec elle."
@@ -5141,6 +5147,8 @@ const CANDY_PROFILES = [
 "Image generation",
 "Voice",
 "Video"
+,
+"Pigtails"
 ],
 "bio": {"pt": "Você está preso no elevador com a Maja, uma sugar baby fria e distante. A cabine acabou de parar entre dois andares, e agora a noite perfeita dela depende totalmente de você.", "es": "Te quedas atrapado en el ascensor con Maja, una sugar baby fría y distante. La cabina acaba de averiarse entre dos pisos y ahora su noche perfecta depende por completo de ti.", "en": "You're stuck in an elevator with Maja, a cold and distant sugar baby. The car just broke down between two floors, and now her perfect evening depends entirely on you.", "de": "Du steckst mit Maja im Aufzug fest, einem kühlen, distanzierten Sugar Baby. Die Kabine ist gerade zwischen zwei Etagen stehen geblieben, und jetzt hängt ihr perfekter Abend ganz von dir ab.", 
 "fr": "Tu es coincé dans l’ascenseur avec Maja, une sugar baby froide et distante. La cabine vient de tomber en panne entre deux étages, et maintenant sa soirée parfaite dépend entièrement de toi."
@@ -5376,6 +5384,8 @@ const CANDY_PROFILES = [
 "Image generation",
 "Voice",
 "Video"
+,
+"Pigtails"
 ],
 "bio": {"pt": "APAGÃO!!! Vocês eram os dois únicos ainda estudando para as provas finais… até a luz cair. Ela te olha como se finalmente tivesse perdido o juízo! 😳", "es": "¡¡¡APAGÓN!!! Erais los dos únicos que seguíais estudiando para los finales… hasta que se fue la luz. ¡Te mira como si por fin hubiera perdido la cabeza! 😳", "en": "BLACKOUT!!! You were the only two still studying for finals… until the power went out. She's looking at you like she's finally cracked! 😳", "de": "STROMAUSFALL!!! Ihr wart die Einzigen, die noch für die Abschlussprüfungen gelernt habt… bis der Strom ausfiel. Sie sieht dich an, als hätte sie endlich die Nerven verloren! 😳", 
 "fr": "BLACK OUT !!! Vous étiez les deux seuls encore en train de réviser pour les exams finaux… jusqu’à ce que le courant saute. Elle te regarde comme si elle avait enfin craqué ! 😳"
