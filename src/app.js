@@ -137,7 +137,7 @@ function platformCard(p) {
 const AD_SLOTS = [5, 17];
 function adCard(k) {
   const P = pf(PROMO.platform); if (!linkOf(P)) return "";
-  const img = k === 0 && PROMO.img ? `<img src="${esc(/^https?:/.test(PROMO.img) ? PROMO.img : R() + PROMO.img)}" alt="" loading="lazy" onerror="this.remove()">` : "";
+  const img = k === 0 && PROMO.img ? `<img src="${esc(/^https?:/.test(PROMO.img) ? PROMO.img : R() + PROMO.img)}" alt="${esc(P.name)}" loading="lazy" onerror="this.remove()">` : "";
   return `<aside class="adcard ad${k}"><span class="ad-lbl">${esc(ui("sponsored"))}</span>${img}
     <div class="ad-body"><div class="ad-ic">${k ? "✨" : "💬"}</div><h3>${esc(ui("ad" + (k + 1) + "_t", {p: P.name}))}</h3><p>${esc(ui("ad" + (k + 1) + "_d", {p: P.name}))}</p>
     ${ctaLink(P, esc(ui("ad" + (k + 1) + "_btn", {p: P.name})) + " →", "btn btn-main")}<small>${esc(ui("promo_note"))}</small></div></aside>`;
