@@ -1444,6 +1444,8 @@ const CANDY_PROFILES = [
 "Image generation",
 "Voice",
 "Video"
+,
+"Flat Chested"
 ],
 "bio": {"pt": "A namorada gata do seu amigo, flagrada no meio do treino, sozinha em casa. Você nunca tinha conhecido ela… e com certeza não desse jeito. 🙈", "es": "La novia guapísima de tu colega, sorprendida en pleno entrenamiento, sola en casa. Nunca la habías visto antes… y desde luego no así. 🙈", "en": "Your buddy's gorgeous girlfriend, caught mid-workout, home alone. You'd never met her before… and definitely not like this. 🙈", "de": "Die heiße Freundin deines Kumpels, mitten im Training erwischt, allein zu Hause. Du hattest sie noch nie getroffen… und schon gar nicht so. 🙈", 
 "fr": "La copine canon de ton pote, surprise en plein entraînement, seule à la maison. Tu ne l’avais jamais rencontrée avant… et sûrement pas comme ça. 🙈"
@@ -1773,6 +1775,8 @@ const CANDY_PROFILES = [
 "Image generation",
 "Voice",
 "Video"
+,
+"Pigtails"
 ],
 "bio": {"pt": "Sua meia-irmã rebelde. Seus pais viajaram no fim de semana e vocês estão sozinhos em casa. Ela te odeia e quer ser independente.", "es": "Tu hermanastra rebelde. Tus padres se han ido el fin de semana y estáis solos en casa. Te odia y quiere ser independiente.", "en": "Your rebellious stepsister. Your parents are away for the weekend and you're home alone together. She hates you and wants to be independent.", "de": "Deine rebellische Stiefschwester. Eure Eltern sind übers Wochenende weg, und ihr seid allein zu Hause. Sie hasst dich und will unabhängig sein.", 
 "fr": "Votre demi-sœur rebelle. Vos parents sont partis pour le week-end et vous êtes seuls à la maison. Elle vous déteste et veut être indépendante."
@@ -4270,6 +4274,8 @@ const CANDY_PROFILES = [
 "Image generation",
 "Voice",
 "Video"
+,
+"Flat Chested"
 ],
 "bio": {"pt": "Sua chefe mandona e perfeccionista te segura perto dela numa sexta à noite. Ela é casada com o CEO e não segura o lado safado nem quando deveria. Tem mais coisa rolando do que parece.", "es": "Tu jefa mandona y perfeccionista te retiene a su lado un viernes por la noche. Está casada con el director general y no modera su lado travieso ni cuando debería. Pasan más cosas de las que parece.", "en": "Your bossy, perfectionist boss keeps you close on a Friday night. She's married to the CEO and doesn't tone down her naughty side, even when she should. There's more going on than meets the eye.", "de": "Deine herrische, perfektionistische Chefin hält dich an einem Freitagabend bei sich. Sie ist mit dem CEO verheiratet und zügelt ihre freche Seite nicht, selbst wenn sie es sollte. Da läuft mehr, als man denkt.", 
 "fr": "Ta boss autoritaire et perfectionniste qui te garde près d'elle un vendredi soir. Elle est mariée au PDG et ne tempère pas son côté coquin, même quand elle le devrait. Il se passe plus de choses qu'il n'y paraît."
@@ -4996,6 +5002,8 @@ const CANDY_PROFILES = [
 "Image generation",
 "Voice",
 "Video"
+,
+"Flat Chested"
 ],
 "bio": {"pt": "Sua nova vizinha precisava de ajuda para mudar o sofá de lugar… agora vocês dividem uma parede, e as paredes são finas 😏", "es": "Tu nueva vecina necesitaba ayuda para mover su sofá… ahora compartís pared, y las paredes son finas 😏", "en": "Your new neighbor needed help moving her couch… now you share a wall, and the walls are thin 😏", "de": "Deine neue Nachbarin brauchte Hilfe beim Verrücken ihres Sofas… jetzt teilt ihr euch eine Wand, und die Wände sind dünn 😏", 
 "fr": "Votre nouvelle voisine avait besoin d’aide pour déplacer son canapé… maintenant, vous partagez un mur, et les murs sont fins 😏"
@@ -5834,6 +5842,8 @@ const CANDY_PROFILES = [
 "Image generation",
 "Voice",
 "Video"
+,
+"Flat Chested"
 ],
 "bio": {"pt": "Ela acabou de bater em você dando ré em Barcelona, e agora não faz a menor ideia do que fazer… 🙈", "es": "Acaba de chocar contigo dando marcha atrás en Barcelona, y ahora no sabe qué hacer… 🙈", "en": "She just backed into you in Barcelona, and now she has no idea what to do… 🙈", "de": "Sie ist dir in Barcelona gerade beim Rückwärtsfahren reingefahren, und jetzt weiß sie überhaupt nicht mehr, was sie tun soll… 🙈", 
 "fr": "Elle vient juste de te rentrer dedans en faisant marche arrière à Barcelone, et maintenant elle ne sait plus du tout quoi faire… 🙈"
@@ -6012,6 +6022,8 @@ const CANDY_PROFILES = [
 "Image generation",
 "Voice",
 "Video"
+,
+"Flat Chested"
 ],
 "bio": {"pt": "Selina é uma soldado omanense de 26 anos, famosa pelo domínio das artes marciais. Moldada pela dureza do deserto e por um treinamento exigente, ela é tão temível quanto fascinante.", "es": "Selina es una soldado omaní de 26 años, famosa por su dominio de las artes marciales. Forjada por la dureza del desierto y un entrenamiento exigente, es tan temible como fascinante.", "en": "Selina is a 26-year-old Omani soldier known for her mastery of martial arts. Shaped by the harsh desert and demanding training, she's as formidable as she is fascinating.", "de": "Selina ist eine 26-jährige omanische Soldatin, bekannt für ihr Können in Kampfkünsten. Geprägt von der rauen Wüste und hartem Training, ist sie ebenso gefährlich wie faszinierend.", 
 "fr": "Selina est une soldate omanaise de 26 ans, réputée pour sa maîtrise des arts martiaux. Façonnée par la rigueur du désert et un entraînement exigeant, elle est aussi redoutable que fascinante."

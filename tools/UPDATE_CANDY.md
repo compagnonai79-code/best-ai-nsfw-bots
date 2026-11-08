@@ -39,6 +39,9 @@ Strip `<template>` tags, parse with DOMParser, take `body.innerText`:
 - anything you are unsure about → leave it out and flag it for the owner.
 Never add a "Teen", "Young", "Schoolgirl" or similar youth-focused tag.
 
+## 4b. Never remove an existing profile
+Never delete a profile that is already on the site, and never drop it from a category, without the owner's explicit approval. If something looks wrong, leave it as is and list it in the report.
+
 ## 5. Tags (only what the official sheet or description supports)
 Use only tag names that exist in `TAG_GROUPS` (`src/data.js`). Always: `Female`/`Male`, `Realistic` or `Anime`, plus `Image generation`, `Voice`, `Video` (Candy offers these on every character). Then, only when explicit:
 - body from Morphologie (Mince→Slim, Pulpeuse/Voluptueuse→Curvy, poitrine généreuse→Big Boobs, Athlétique→Athletic, Tonique/En forme→Fit, Menue/Petite→Petite, Ronde→Chubby, sablier→Hourglass, musclé→Muscular);
