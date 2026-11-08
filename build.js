@@ -110,6 +110,11 @@ ${o.image ? "" : '<meta property="og:image:width" content="1200">\n<meta propert
 <meta name="twitter:description" content="${e(o.desc || "")}">
 <meta name="twitter:image" content="${e(ogImage(o.image))}">
 <meta name="RATING" content="RTA-5042-1996-1400-1577-RTA">
+<link rel="icon" href="/favicon.ico" sizes="48x48">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<link rel="manifest" href="/site.webmanifest">
+<meta name="theme-color" content="#0b0a12">
 <link rel="preload" href="${root}assets/fonts/inter-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="stylesheet" href="${root}assets/style.css">
 </head>
@@ -616,6 +621,8 @@ for (const lang of LANG_LIST) {
 for (const f of CLIENT) write("assets/" + f, read(f));
 write("assets/style.css", read("fonts.css") + "\n" + read("style.css"));   /* self-hosted fonts first (GDPR: no Google Fonts request) */
 fs.cpSync(path.join(__dirname, "fonts"), path.join(OUT, "assets", "fonts"), { recursive: true });
+/* favicon & app icons (icons/) → site root */
+fs.cpSync(path.join(__dirname, "icons"), OUT, { recursive: true });
 if (fs.existsSync(path.join(__dirname, "images"))) fs.cpSync(path.join(__dirname, "images"), path.join(OUT, "images"), { recursive: true });
 /* sitemap.xml + robots.txt */
 /* one sitemap per language + an index (sitemap.xml) */
