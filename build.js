@@ -11,6 +11,14 @@ const readRaw = f => fs.readFileSync(path.join(SRC, f), "utf8");
 let IMG_OK = [];
 const read = f => f === "data.js" ? readRaw(f) + `\n;const IMG_OK = ${JSON.stringify(IMG_OK)};` + NOIMG : readRaw(f);
 const ASSET_V = require("crypto").createHash("md5").update(["fonts.css","style.css","data.js","data-candy.js","data-spicy.js","i18n.js","i18n-pages.js","i18n-tags.js","i18n-tagpage.js","i18n-extra.js","app.js"].map(f => fs.readFileSync(path.join(__dirname, "src", f), "utf8")).join("")).digest("hex").slice(0, 8);
+/* CSS inlined in every page (≈9 KB gzipped): no render-blocking request on mobile */
+const CSS_INLINE = fs.readFileSync(path.join(__dirname, "src", "fonts.css"), "utf8") + "\n" + fs.readFileSync(path.join(__dirname, "src", "style.css"), "utf8");
+/* preconnect + preload the first image of the page (the LCP image) */
+function lcpHints(body) {
+  const m = body.match(/<img src="([^"]+)"/); if (!m) return "";
+  const src = m[1].replace(/&amp;/g, "&"), origin = (src.match(/^https:\/\/[^/]+/) || [""])[0];
+  return (origin ? `<link rel="preconnect" href="${origin}">\n` : "") + `<link rel="preload" as="image" href="${m[1]}" fetchpriority="high">`;
+}
 const CLIENT = ["data.js", "data-candy.js", "data-spicy.js", "i18n.js", "i18n-pages.js", "i18n-tags.js", "i18n-tagpage.js", "i18n-extra.js", "app.js"];
 
 /* Load the client scripts in a sandbox for one language */
@@ -119,7 +127,8 @@ ${o.image ? "" : '<meta property="og:image:width" content="1200">\n<meta propert
 <meta name="theme-color" content="#0b0a12">
 <link rel="preload" href="${root}assets/fonts/inter-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="preload" href="${root}assets/fonts/space-grotesk-latin-700-normal.woff2" as="font" type="font/woff2" crossorigin>
-<link rel="stylesheet" href="${root}assets/style.css?v=${ASSET_V}">
+<style>${CSS_INLINE.replace(/url\(fonts\//g, "url(" + root + "assets/fonts/")}</style>
+${lcpHints(o.body)}
 </head>
 <body>
 
@@ -635,7 +644,7 @@ write("_headers", `/assets/*
 /icon-*
   Cache-Control: public, max-age=604800
 /images/*
-  Cache-Control: public, max-age=604800
+  Cache-Control: public, max-age=2592000
 `);
 /* favicon & app icons (icons/) → site root */
 fs.cpSync(path.join(__dirname, "icons"), OUT, { recursive: true });
