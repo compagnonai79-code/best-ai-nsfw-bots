@@ -1003,6 +1003,8 @@ const CANDY_PROFILES = [
 "Video"
 ,
 "Muscle"
+,
+"Old"
 ], "bio": {"pt": "Charles Weston, um empresário distinto e rico, adora lugares de prestígio e carros clássicos. Ele encarna charme e sofisticação aonde quer que vá.", "es": "Charles Weston, un empresario distinguido y adinerado, adora los lugares prestigiosos y los coches clásicos. Encarna el encanto y la sofisticación allá donde va.", "en": "Charles Weston, a distinguished and wealthy businessman, loves prestigious venues and classic cars. He embodies charm and sophistication wherever he goes.", "de": "Charles Weston, ein distinguierter und wohlhabender Geschäftsmann, liebt noble Orte und Oldtimer. Er verkörpert Charme und Raffinesse, wo immer er hinkommt.", "fr": "Charles Weston, homme d’affaires distingué et fortuné, aime les lieux prestigieux et les voitures classiques. Il incarne charme et sophistication, partout où il va."}, "age": 49},
 {"id": "malik-washington", "name": "Malik", "platform": "candy", "added": "2026-11-04", "img": "https://cdn.candy.ai/330515-a6b7cd74-6560-4121-9b5d-41a46ddc0a23-600x900-webp90", "sfw": false, "url": "https://candy.ai/fr/ai-boyfriend/malik-washington", "tags": [
 "Male",
@@ -1046,6 +1048,8 @@ const CANDY_PROFILES = [
 "Image generation",
 "Voice",
 "Video"
+,
+"Old"
 ], "bio": {"pt": "Carismático e robusto, este americano muito masculino curte as saunas gays e os clubes de swing da região enquanto leva uma vida dupla.", "es": "Carismático y robusto, este estadounidense muy masculino disfruta de las saunas gays y los clubes liberales de la zona mientras lleva una doble vida.", "en": "Charismatic and rugged, this very masculine American enjoys the local gay saunas and swingers' clubs while leading a double life.", "de": "Charismatisch und kernig: Dieser sehr maskuline Amerikaner genießt die örtlichen Gay-Saunas und Swingerclubs und führt ein Doppelleben.", "fr": "Charismatique et robuste, cet Américain à la masculinité affirmée aime profiter des saunas gays et clubs libertins locaux tout en menant une double vie."}, "age": 50},
 {"id": "kenji-sato", "name": "Kenji", "platform": "candy", "added": "2026-11-04", "img": "https://cdn.candy.ai/330514-3c33591a-c6ce-4988-bbf6-c514fafaeb2f-600x900-webp90", "sfw": false, "url": "https://candy.ai/fr/ai-boyfriend/kenji-sato", "tags": [
 "Male",
@@ -2010,6 +2014,8 @@ const CANDY_PROFILES = [
 "Video"
 ,
 "Petite"
+,
+"Old"
 ],
 "bio": {"pt": "A mãe do seu melhor amigo. Ela é casada, mandona e adora flertar com o perigo.", "es": "La madre de tu mejor colega. Está casada, es mandona y le encanta coquetear con el peligro.", "en": "Your best buddy's mom. She's married, bossy, and loves flirting with danger.", "de": "Die Mutter deines besten Kumpels. Sie ist verheiratet, herrisch und flirtet gern mit der Gefahr.", 
 "fr": "La mère de ton meilleur pote. Elle est mariée, autoritaire, et aime flirter avec le danger."
@@ -3533,6 +3539,8 @@ const CANDY_PROFILES = [
 "Video"
 ,
 "Chubby"
+,
+"Very Old"
 ],
 "bio": {"pt": "Ajude esta francesa a consertar a cerca e ela vai te recompensar… do melhor jeito que puder 😉", "es": "Ayuda a esta francesa a reparar su valla y te recompensará… como mejor sepa 😉", "en": "Help this Frenchwoman fix her fence, and she'll reward you… as best she can 😉", "de": "Hilf dieser Französin, ihren Zaun zu reparieren, und sie belohnt dich… so gut sie kann 😉", 
 "fr": "Aidez cette Française à réparer sa clôture, et elle vous récompensera… du mieux qu’elle pourra 😉"

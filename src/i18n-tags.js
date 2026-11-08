@@ -24,6 +24,7 @@ for (const l in TAG_UI) Object.assign(I18N[l].ui, TAG_UI[l]);
 
 const TAG_T = {
 fr: {
+  "Old":"Âgé(e)s","Very Old":"Très âgé(e)s",
   "Flat Chested":"Poitrine plate","Pigtails":"Couettes",
   "Cartoon":"Cartoon","Alt":"Alternative","E-girl":"E-girl","Emo":"Emo","Gyaru":"Gyaru","Kawaii":"Kawaii","Punk":"Punk","Tomboy":"Garçon manqué","Waifu":"Waifu",
   "Bad Girl":"Mauvaise fille","Brat":"Insolente","Caring":"Attentionnée","Clingy":"Collante","Experienced":"Expérimentée","Horny":"Excitée","Innocent":"Innocente",
@@ -56,6 +57,7 @@ fr: {
   "Comedy":"Humour","Game":"Jeu","Group Chat":"Chat de groupe","Sexting":"Sexting"
 },
 es: {
+  "Old":"Mayores","Very Old":"Muy mayores",
   "Flat Chested":"Pecho plano","Pigtails":"Coletas",
   "Alt":"Alternativa","Tomboy":"Marimacho","Bad Girl":"Chica mala","Brat":"Malcriada","Caring":"Cariñosa","Clingy":"Pegajosa","Experienced":"Experimentada",
   "Horny":"Cachonda","Innocent":"Inocente","Jealous":"Celosa","Loyal":"Leal","Mean":"Mala","Nympho":"Ninfómana","Rebel":"Rebelde","Sadistic":"Sádica",
@@ -84,6 +86,7 @@ es: {
   "Seduction":"Seducción","Threesome":"Trío","Voyeur":"Voyeurismo","Comedy":"Comedia","Game":"Juego","Group Chat":"Chat grupal"
 },
 de: {
+  "Old":"Älter","Very Old":"Sehr alt",
   "Flat Chested":"Flachbrüstig","Pigtails":"Zöpfe",
   "Alt":"Alternativ","Bad Girl":"Böses Mädchen","Brat":"Göre","Caring":"Fürsorglich","Clingy":"Anhänglich","Experienced":"Erfahren","Horny":"Geil",
   "Innocent":"Unschuldig","Jealous":"Eifersüchtig","Loyal":"Treu","Mean":"Gemein","Nympho":"Nymphomanin","Rebel":"Rebellin","Sadistic":"Sadistisch",
@@ -113,6 +116,7 @@ de: {
   "Seduction":"Verführung","Threesome":"Dreier","Voyeur":"Voyeurismus","Comedy":"Comedy","Game":"Spiel","Group Chat":"Gruppenchat"
 },
 pt: {
+  "Old":"Mais velhos","Very Old":"Idosos",
   "Flat Chested":"Peito reto","Pigtails":"Maria-chiquinha",
   "Alt":"Alternativa","Tomboy":"Moleca","Bad Girl":"Garota má","Brat":"Mimada","Caring":"Carinhosa","Clingy":"Grudenta","Experienced":"Experiente",
   "Horny":"Excitada","Innocent":"Inocente","Jealous":"Ciumenta","Loyal":"Leal","Mean":"Malvada","Nympho":"Ninfomaníaca","Rebel":"Rebelde","Sadistic":"Sádica",
@@ -141,6 +145,7 @@ pt: {
   "Seduction":"Sedução","Threesome":"Ménage","Voyeur":"Voyeurismo","Comedy":"Comédia","Game":"Jogo","Group Chat":"Chat em grupo"
 },
 hi: {
+  "Old":"उम्रदराज़","Very Old":"बहुत उम्रदराज़",
   "Flat Chested":"सपाट छाती","Pigtails":"दो चोटियाँ",
   "2.5D":"2.5D","Cartoon":"कार्टून","Hentai":"हेनताई","Alt":"ऑल्ट","E-girl":"ई-गर्ल","Emo":"इमो","Gyaru":"ग्यारू","Kawaii":"कवाई","Punk":"पंक","Tomboy":"टॉमबॉय","Waifu":"वाइफ़ु",
   "Bad Girl":"बैड गर्ल","Brat":"नखरेबाज़","Caring":"परवाह करने वाली","Clingy":"चिपकू","Dandere":"डांडेरे","Experienced":"अनुभवी","Horny":"उत्तेजित",
