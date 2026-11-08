@@ -90,6 +90,7 @@ function layout(X, lang, file, o) {
   return `<!doctype html>
 <html lang="${lang}">
 <head>
+<script>try{var a=localStorage.getItem("age_ok");if(a&&Date.now()-+a<2592e6)document.documentElement.className+=" age-ok"}catch(e){}</script>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>${e(o.title)}</title>
@@ -154,7 +155,7 @@ ${o.page === "legal" ? "" : X.offerBar()}
 </header>
 
 <main class="wrap">
-${o.body}
+${o.body.replace(' loading="lazy"', ' fetchpriority="high"')}
 </main>
 
 ${o.modal ? `<div class="overlay" id="profile">
@@ -183,8 +184,8 @@ ${o.modal ? `<div class="overlay" id="profile">
 </footer>
 
 <script>var PAGE_LANG="${lang}",ROOT="${root}",LROOT="${lr}"${o.base ? `,PAGE_BASE="${o.base}"` : ""};</script>
-${CLIENT.map(f => `<script src="${root}assets/${f}?v=${ASSET_V}"></script>`).join("\n")}
-<script>boot("${o.page}");</script>
+<script defer src="${root}assets/bundle.js?v=${ASSET_V}"></script>
+<script>document.addEventListener("DOMContentLoaded",function(){boot("${o.page}")});</script>
 </body>
 </html>`;
 }
@@ -621,6 +622,7 @@ for (const lang of LANG_LIST) {
   write("404.html", html.replace(/"\/(?:([a-z]{2})\/)?404\.html"/g, (m, l) => `"/${l ? l + "/" : ""}index.html"`).replace(/<link rel="canonical"[^>]*>\n?/, "").replace(/<link rel="alternate"[^>]*>\n?/g, "")); }
 /* assets */
 for (const f of CLIENT) write("assets/" + f, read(f));
+write("assets/bundle.js", CLIENT.map(read).join("\n;\n"));   /* one deferred request instead of 9 blocking ones */
 write("assets/style.css", read("fonts.css") + "\n" + read("style.css"));   /* self-hosted fonts first (GDPR: no Google Fonts request) */
 fs.cpSync(path.join(__dirname, "fonts"), path.join(OUT, "assets", "fonts"), { recursive: true });
 /* Cloudflare Pages cache rules (assets are versioned with ?v=) */
