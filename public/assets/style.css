@@ -485,3 +485,4 @@ table.cmp small{color:var(--muted);font-size:12px}
 @media(max-width:420px){header .wrap{gap:8px}header nav{gap:6px;min-width:0}.logo{font-size:14px}.new-pill{padding:5px 8px;gap:5px}.new-pill .dot{display:none}.lang{max-width:78px}}
 .tablewrap{position:relative}
 .age-ok #gate{display:none}
+html:not([lang="hi"]) [lang="hi"]{font-family:Inter,system-ui,sans-serif}
