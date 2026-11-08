@@ -110,8 +110,8 @@ ${o.image ? "" : '<meta property="og:image:width" content="1200">\n<meta propert
 <meta name="twitter:description" content="${e(o.desc || "")}">
 <meta name="twitter:image" content="${e(ogImage(o.image))}">
 <meta name="RATING" content="RTA-5042-1996-1400-1577-RTA">
-<link rel="icon" href="/favicon.ico" sizes="48x48">
-<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="icon" href="/favicon.ico" sizes="16x16 32x32 48x48">
+<link rel="icon" href="/icon-192.png" type="image/png" sizes="192x192">
 <link rel="apple-touch-icon" href="/apple-touch-icon.png">
 <link rel="manifest" href="/site.webmanifest">
 <meta name="theme-color" content="#0b0a12">
