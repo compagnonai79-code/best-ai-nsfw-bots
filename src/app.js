@@ -30,9 +30,9 @@ function scoreOf(d) {
 for (const k in PLATFORMS) { const d = PLATFORM_DATA[k] || {}; PLATFORMS[k].score = scoreOf(d); PLATFORMS[k].rating = PLATFORMS[k].score.rating;
   PLATFORMS[k].rank = PLATFORMS[k].rating * 1000 - (d.priceMo != null ? d.priceMo : 99); }   /* ties: lower price first */
 
-/* A category is only published once it has at least MIN_TAG bots. Smaller ones stay in the data
+/* A category is published as soon as it has at least MIN_TAG bot(s) (owner choice: 1). Smaller ones stay in the data
    (data.js / data-candy.js) and show up automatically as soon as they reach the minimum. */
-const MIN_TAG = 3;
+const MIN_TAG = 1;
 { const c = {}; PROFILES.forEach(p => p.tags.forEach(t => c[t] = (c[t] || 0) + 1));
   const ok = t => (c[t] || 0) >= MIN_TAG;
   for (const g of Object.keys(TAG_GROUPS)) TAG_GROUPS[g] = TAG_GROUPS[g].filter(ok);
