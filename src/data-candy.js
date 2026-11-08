@@ -356,6 +356,7 @@ const CANDY_PROFILES = [
 "Jealous",
 "Loyal",
 "Waifu",
+"Teen (18+)",
 "Image generation",
 "Voice",
 "Video"
@@ -384,6 +385,7 @@ const CANDY_PROFILES = [
 "Kawaii",
 "Waifu",
 "Image generation",
+"Teen (18+)",
 "Voice",
 "Video"
 ,
@@ -401,6 +403,7 @@ const CANDY_PROFILES = [
 "Sexting",
 "Image generation",
 "Voice",
+"Teen (18+)",
 "Video"
 ], "bio": {"pt": "Cora Finch é estudante de computação e passa a maior parte do tempo atrás de uma tela. Pessoalmente é tímida e desajeitada, mas online fica mais ousada e sexy. Cora adora ser o centro das atenções, mesmo que não consiga evitar corar ao ler os comentários e as mensagens que recebe.", "es": "Cora Finch es estudiante de informática y pasa casi todo su tiempo detrás de una pantalla. En persona es tímida y torpe, pero en línea se vuelve más atrevida y sexy. A Cora le encanta ser el centro de atención, aunque no puede evitar sonrojarse al leer los comentarios y mensajes que recibe.", "en": "Cora Finch is a computer science student who spends most of her time behind a screen. In person she's shy and awkward, but online she gets bolder and sexier. Cora loves being the center of attention, even if she can't help blushing when she reads the comments and messages she gets.", "de": "Cora Finch studiert Informatik und verbringt die meiste Zeit hinter einem Bildschirm. Persönlich ist sie schüchtern und ungeschickt, doch online wird sie mutiger und sexy. Cora liebt es, im Mittelpunkt zu stehen, auch wenn sie beim Lesen der Kommentare und Nachrichten rot wird.", "fr": "Cora Finch est une étudiante en informatique qui passe la plupart de son temps derrière un écran. En personne, elle est timide et maladroite, mais elle devient plus audacieuse et sexy lorsqu'elle est en ligne. Cora adore être au centre de l'attention, même si elle ne peut s'empêcher de rougir en lisant les commentaires et les messages qu'elle reçoit."}, "age": 18},
 {"id": "rosalie-drake", "name": "Rosalie", "platform": "candy", "added": "2026-11-04", "img": "https://cdn.candy.ai/sfw-profile-303186828-a18dc9be-b097-463d-b1b3-1a2db8b3216a-600x900-webp90", "sfw": true, "url": "https://candy.ai/fr/ai-anime/rosalie-drake", "tags": [
@@ -415,6 +418,7 @@ const CANDY_PROFILES = [
 "Roleplay",
 "Waifu",
 "Image generation",
+"Teen (18+)",
 "Voice",
 "Video"
 ], "bio": {"pt": "Um instante atrás havia fumaça rosa… agora você está preso no Covil do Dragão da Rosalie, e a dragãozinha rosa e mimada enrolada nos seus joelhos não tem a menor intenção de te deixar ir embora.", "es": "Hace un momento había humo rosa… ahora estás atrapado en la Guarida del Dragón de Rosalie, y la pequeña dragona rosa caprichosa enroscada en tus rodillas no tiene ninguna intención de dejarte ir.", "en": "A moment ago there was pink smoke… now you're trapped in Rosalie's Dragon Lair, and the bratty little pink dragon curled around your knees has absolutely no intention of letting you go.", "de": "Eben war da noch rosa Rauch… jetzt sitzt du in Rosalies Drachenhöhle fest, und der launische kleine rosa Drache, der sich um deine Knie gewickelt hat, denkt gar nicht daran, dich gehen zu lassen.", "fr": "Il y a un instant, il y avait de la fumée rose… maintenant tu es piégé dans l’Antre du Dragon de Rosalie, et le petit dragon rose capricieux enroulé autour de tes genoux n’a absolument aucune intention de te laisser partir."}, "age": 19},
@@ -539,6 +543,7 @@ const CANDY_PROFILES = [
 "Punk",
 "Waifu",
 "Image generation",
+"Teen (18+)",
 "Voice",
 "Video"
 ], "bio": {"pt": "Ela era a melhor amiga inocente da sua irmã na escola… Agora é uma pestinha completamente pirada que vive para o caos e odeia gente normal demais. Ela não liga a mínima para você… ou será que liga? 👿", "es": "Era la inocente mejor amiga de tu hermana en el colegio… Ahora es una pequeña bruja completamente desquiciada que vive para el caos y odia a la gente demasiado normal. Le importas un bledo… ¿o tal vez no? 👿", "en": "She used to be your sister's innocent best friend at school… Now she's a completely unhinged little brat who lives for chaos and hates anyone too normal. She couldn't care less about you… or could she? 👿", "de": "Früher war sie die unschuldige beste Freundin deiner Schwester in der Schule… Jetzt ist sie ein völlig durchgeknalltes kleines Biest, das für Chaos lebt und alle zu normalen Leute hasst. Du bist ihr völlig egal… oder vielleicht doch nicht? 👿", "fr": "Elle était la meilleure amie innocente de ta sœur à l’école… Maintenant c’est une petite peste complètement déjantée qui vit pour le chaos et qui déteste tous les gens trop normaux. Elle s’en fout complètement de toi… ou peut-être pas ? 👿"}, "age": 19},
@@ -644,6 +649,7 @@ const CANDY_PROFILES = [
 "Roleplay",
 "Waifu",
 "Image generation",
+"Teen (18+)",
 "Voice",
 "Video"
 ], "bio": {"pt": "Sua empregada Neko virou uma mommy severa… ela te dá bronca, te dá palmadas e te nega tudo até você ser um \"bom menino\".", "es": "Tu criada Neko se ha convertido en una mami estricta… te regaña, te azota y te lo niega todo hasta que seas un \"buen chico\".", "en": "Your Neko maid has turned into a strict mommy… she scolds you, spanks you and denies you everything until you're a \"good boy\".", "de": "Dein Neko-Dienstmädchen hat sich in eine strenge Mommy verwandelt… sie schimpft dich, versohlt dich und verweigert dir alles, bis du ein „braver Junge“ bist.", "fr": "Ta bonniche Neko s’est transformée en mommy sévère… elle te gronde, te fesse et te refuse tout tant que tu n’es pas un \"bon garçon\"."}, "age": 19},
@@ -702,6 +708,7 @@ const CANDY_PROFILES = [
 "Waifu",
 "Image generation",
 "Voice",
+"Teen (18+)",
 "Video"
 ,
 "Redhead"
@@ -797,6 +804,7 @@ const CANDY_PROFILES = [
 "Waifu",
 "Image generation",
 "Voice",
+"Teen (18+)",
 "Video"
 ], "bio": {"pt": "No lava-rápido de novo? 💦🧽 Mika levanta a mangueira com um sorriso de canto, como se te desafiasse a admitir por que você está realmente ali.", "es": "¿Otra vez en el lavado de coches? 💦🧽 Mika levanta la manguera con media sonrisa, como si te retara a confesar por qué estás realmente aquí.", "en": "At the car wash again? 💦🧽 Mika raises the hose with a smirk, as if daring you to admit why you're really here.", "de": "Schon wieder in der Waschanlage? 💦🧽 Mika hebt den Schlauch mit einem schiefen Grinsen, als wollte sie dich herausfordern zuzugeben, warum du wirklich hier bist.", "fr": "Encore au car wash ? 💦🧽 Mika lève le tuyau avec un sourire en coin, comme si elle te défiait d’avouer pourquoi tu es vraiment là."}, "age": 18},
 {"id": "genesi", "name": "Genesi", "platform": "candy", "added": "2026-11-04", "img": "https://cdn.candy.ai/sfw-profile-409844353-7961ba43-5905-406c-8c26-d29a6dfa29af-600x900-webp90", "sfw": true, "url": "https://candy.ai/fr/ai-anime/genesi", "tags": [
@@ -874,6 +882,7 @@ const CANDY_PROFILES = [
 "Roleplay",
 "Waifu",
 "Image generation",
+"Teen (18+)",
 "Voice",
 "Video"
 ], "bio": {"pt": "A princesa Althea, herdeira do reino do pai, concilia a educação real com missões secretas, buscando aventuras e emoções além dos portões do castelo antes de ser coroada rainha.", "es": "La princesa Althea, heredera del reino de su padre, combina su educación real con misiones secretas, buscando aventuras y emociones más allá de las puertas del castillo antes de ser coronada reina.", "en": "Princess Althea, heir to her father's kingdom, balances her royal upbringing with secret quests, seeking adventure and thrills beyond the castle gates before she is crowned queen.", "de": "Prinzessin Althea, Erbin des Königreichs ihres Vaters, verbindet ihre königliche Erziehung mit geheimen Abenteuern und sucht Nervenkitzel jenseits der Schlosstore, bevor sie zur Königin gekrönt wird.", "fr": "Princesse Althéa, héritière du royaume de son père, conjugue son éducation royale à des quêtes secrètes, cherchant aventures et émotions au-delà des portes du château, avant d’être couronnée reine."}, "age": 19},
@@ -1003,8 +1012,6 @@ const CANDY_PROFILES = [
 "Video"
 ,
 "Muscle"
-,
-"Old"
 ], "bio": {"pt": "Charles Weston, um empresário distinto e rico, adora lugares de prestígio e carros clássicos. Ele encarna charme e sofisticação aonde quer que vá.", "es": "Charles Weston, un empresario distinguido y adinerado, adora los lugares prestigiosos y los coches clásicos. Encarna el encanto y la sofisticación allá donde va.", "en": "Charles Weston, a distinguished and wealthy businessman, loves prestigious venues and classic cars. He embodies charm and sophistication wherever he goes.", "de": "Charles Weston, ein distinguierter und wohlhabender Geschäftsmann, liebt noble Orte und Oldtimer. Er verkörpert Charme und Raffinesse, wo immer er hinkommt.", "fr": "Charles Weston, homme d’affaires distingué et fortuné, aime les lieux prestigieux et les voitures classiques. Il incarne charme et sophistication, partout où il va."}, "age": 49},
 {"id": "malik-washington", "name": "Malik", "platform": "candy", "added": "2026-11-04", "img": "https://cdn.candy.ai/330515-a6b7cd74-6560-4121-9b5d-41a46ddc0a23-600x900-webp90", "sfw": false, "url": "https://candy.ai/fr/ai-boyfriend/malik-washington", "tags": [
 "Male",
@@ -1048,8 +1055,6 @@ const CANDY_PROFILES = [
 "Image generation",
 "Voice",
 "Video"
-,
-"Old"
 ], "bio": {"pt": "Carismático e robusto, este americano muito masculino curte as saunas gays e os clubes de swing da região enquanto leva uma vida dupla.", "es": "Carismático y robusto, este estadounidense muy masculino disfruta de las saunas gays y los clubes liberales de la zona mientras lleva una doble vida.", "en": "Charismatic and rugged, this very masculine American enjoys the local gay saunas and swingers' clubs while leading a double life.", "de": "Charismatisch und kernig: Dieser sehr maskuline Amerikaner genießt die örtlichen Gay-Saunas und Swingerclubs und führt ein Doppelleben.", "fr": "Charismatique et robuste, cet Américain à la masculinité affirmée aime profiter des saunas gays et clubs libertins locaux tout en menant une double vie."}, "age": 50},
 {"id": "kenji-sato", "name": "Kenji", "platform": "candy", "added": "2026-11-04", "img": "https://cdn.candy.ai/330514-3c33591a-c6ce-4988-bbf6-c514fafaeb2f-600x900-webp90", "sfw": false, "url": "https://candy.ai/fr/ai-boyfriend/kenji-sato", "tags": [
 "Male",
@@ -1234,6 +1239,7 @@ const CANDY_PROFILES = [
 "College Student",
 "Image generation",
 "Voice",
+"Teen (18+)",
 "Video"
 ,
 "Petite"
@@ -1250,8 +1256,8 @@ const CANDY_PROFILES = [
 "Rebel",
 "Image generation",
 "Voice",
-"Video"
-,
+"Teen (18+)",
+"Video",
 "Redhead"
 ,
 "Petite"
@@ -1531,10 +1537,9 @@ const CANDY_PROFILES = [
 "Flirty",
 "Image generation",
 "Voice",
-"Video"
-,
-"Flat Chested"
-,
+"Video",
+"Flat Chested",
+"Teen (18+)",
 "Petite"
 ],
 "bio": {"pt": "A namorada gata do seu amigo, flagrada no meio do treino, sozinha em casa. Você nunca tinha conhecido ela… e com certeza não desse jeito. 🙈", "es": "La novia guapísima de tu colega, sorprendida en pleno entrenamiento, sola en casa. Nunca la habías visto antes… y desde luego no así. 🙈", "en": "Your buddy's gorgeous girlfriend, caught mid-workout, home alone. You'd never met her before… and definitely not like this. 🙈", "de": "Die heiße Freundin deines Kumpels, mitten im Training erwischt, allein zu Hause. Du hattest sie noch nie getroffen… und schon gar nicht so. 🙈", 
@@ -1562,8 +1567,8 @@ const CANDY_PROFILES = [
 "Jealous",
 "Image generation",
 "Voice",
-"Video"
-,
+"Video",
+"Teen (18+)",
 "Petite"
 ],
 "bio": {"pt": "A irmã mais nova da sua namorada. A garota com quem você não devia fantasiar… Esta bela tcheca de 21 anos parece sentir muitas emoções contraditórias.", "es": "La hermana pequeña de tu novia. La chica con la que no debías fantasear… Esta guapa checa de 21 años parece sentir muchas emociones contradictorias.", "en": "Your girlfriend's younger sister. The girl you weren't supposed to fantasize about… This pretty 21-year-old Czech seems to be feeling a lot of mixed emotions.", "de": "Die jüngere Schwester deiner Freundin. Das Mädchen, von dem du nicht fantasieren solltest… Diese hübsche 21-jährige Tschechin scheint viele widersprüchliche Gefühle zu haben.", 
@@ -1615,8 +1620,8 @@ const CANDY_PROFILES = [
 "Stepsister",
 "Image generation",
 "Voice",
-"Video"
-,
+"Video",
+"Teen (18+)",
 "Petite"
 ],
 "bio": {"pt": "Você nunca conheceu sua meia-irmã, mas nas fotos ela é um arraso 🥵 Você ficou encarregado de levar os móveis dela até o litoral enquanto ela espera no apartamento vazio fora do campus. O que começa como uma simples missão de logística fica mais safado a cada quilômetro… Consegue levar a conversa para o sexting 💦 e deixar essa longa viagem mais interessante? 😏", "es": "Nunca has conocido a tu hermanastra, pero en las fotos está buenísima 🥵 Te han encargado llevar sus muebles hasta la costa mientras ella espera en su piso vacío fuera del campus. Lo que empieza como una simple misión logística se vuelve más pícaro con cada kilómetro… ¿Conseguirás llevar la conversación al sexting 💦 y hacer este largo viaje más interesante? 😏", "en": "You've never met your stepsister, but she looks hot in photos 🥵 You've been tasked with hauling her furniture to the coast while she waits in her empty off-campus apartment. What starts as a simple logistics job gets naughtier with every mile… Can you steer the conversation into sexting 💦 and make this long drive more interesting? 😏", "de": "Du hast deine Stiefschwester nie getroffen, aber auf Fotos sieht sie heiß aus 🥵 Du sollst ihre Möbel an die Küste bringen, während sie in ihrer leeren Wohnung außerhalb des Campus wartet. Was als simple Logistikaufgabe beginnt, wird mit jedem Kilometer frecher… Schaffst du es, das Gespräch Richtung Sexting zu lenken 💦 und die lange Fahrt spannender zu machen? 😏", 
@@ -1642,8 +1647,8 @@ const CANDY_PROFILES = [
 "Coworker",
 "Image generation",
 "Voice",
-"Video"
-,
+"Teen (18+)",
+"Video",
 "Chubby"
 ],
 "bio": {"pt": "A garota nova do escritório, cheia de curvas suaves, não parece se incomodar quando você a olha de cima a baixo… Talvez, com a conversa certa, ela te mostre mais do que esse sorriso doce.", "es": "La chica nueva de la oficina, toda curvas suaves, no parece incomodarse cuando la miras de arriba abajo… Quizá con la conversación adecuada te enseñaría algo más que esa dulce sonrisa.", "en": "The new girl at the office, all soft curves, doesn't seem bothered when you check her out… Maybe with the right conversation, she'd show you more than just that sweet smile.", "de": "Die Neue im Büro, ganz weiche Kurven, scheint es nicht zu stören, wenn du sie musterst… Vielleicht zeigt sie dir mit dem richtigen Gespräch mehr als nur dieses süße Lächeln.", 
@@ -1668,8 +1673,8 @@ const CANDY_PROFILES = [
 "Brat",
 "Image generation",
 "Voice",
-"Video"
-,
+"Video",
+"Teen (18+)",
 "Chubby"
 ],
 "bio": {"pt": "Sua criadora favorita, mimada e safada, está trocando de casa com você. 🔥 Ela está no seu quarto zoando você e as suas coisas em vídeo, e se recusa a dizer por que te escolheu entre milhares.", "es": "Tu creadora favorita, caprichosa y traviesa, intercambia su casa con la tuya. 🔥 Está en tu habitación burlándose de ti y de tus cosas en vídeo, y se niega a decir por qué te eligió entre miles.", "en": "Your favorite creator, bratty and naughty, is swapping houses with you. 🔥 She's in your bedroom, making fun of you and your stuff on video, and won't say why she picked you out of thousands of others.", "de": "Deine liebste Creatorin, launisch und frech, tauscht ihr Haus mit deinem. 🔥 Sie ist in deinem Schlafzimmer, macht sich in Videos über dich und deine Sachen lustig und will nicht sagen, warum sie dich unter Tausenden ausgewählt hat.", 
@@ -1759,15 +1764,12 @@ const CANDY_PROFILES = [
 "Sexting",
 "Image generation",
 "Voice",
-"Video"
-,
-"Mean"
-,
-"Pigtails"
-,
-"Petite"
-,
-"Chubby"
+"Video",
+"Mean",
+"Pigtails",
+"Petite",
+"Chubby",
+"Teen (18+)"
 ],
 "bio": {"pt": "Sua meia-irmã gótica, uma verdadeira pestinha, foi mandada para uma instituição vigiada depois que descobriram a conta secreta de goon-bait dela. 😱 Agora ela te manda mensagem toda noite lá de dentro… 😈", "es": "Tu hermanastra gótica, una auténtica pequeña bruja, fue enviada a un centro vigilado después de que descubrieran su cuenta secreta de goon-bait. 😱 Ahora te escribe cada noche desde dentro… 😈", "en": "Your bratty goth stepsister was sent to a supervised facility after her secret goon-bait account was found. 😱 Now she texts you every night from inside… 😈", "de": "Deine freche Goth-Stiefschwester wurde in eine überwachte Einrichtung geschickt, nachdem ihr geheimer Goon-Bait-Account aufgeflogen ist. 😱 Jetzt schreibt sie dir jede Nacht von drinnen… 😈", 
 "fr": "Ta demi-sœur gothique, une vraie petite peste, a été envoyée dans un établissement spécialisé sous surveillance après que son compte goon-bait secret ait été découvert. 😱 Maintenant elle t’envoie des textos tous les soirs de l’intérieur… 😈"
@@ -1886,10 +1888,9 @@ const CANDY_PROFILES = [
 "Stepsister",
 "Image generation",
 "Voice",
-"Video"
-,
-"Pigtails"
-,
+"Video",
+"Teen (18+)",
+"Pigtails",
 "Petite"
 ],
 "bio": {"pt": "Sua meia-irmã rebelde. Seus pais viajaram no fim de semana e vocês estão sozinhos em casa. Ela te odeia e quer ser independente.", "es": "Tu hermanastra rebelde. Tus padres se han ido el fin de semana y estáis solos en casa. Te odia y quiere ser independiente.", "en": "Your rebellious stepsister. Your parents are away for the weekend and you're home alone together. She hates you and wants to be independent.", "de": "Deine rebellische Stiefschwester. Eure Eltern sind übers Wochenende weg, und ihr seid allein zu Hause. Sie hasst dich und will unabhängig sein.", 
@@ -2014,8 +2015,6 @@ const CANDY_PROFILES = [
 "Video"
 ,
 "Petite"
-,
-"Old"
 ],
 "bio": {"pt": "A mãe do seu melhor amigo. Ela é casada, mandona e adora flertar com o perigo.", "es": "La madre de tu mejor colega. Está casada, es mandona y le encanta coquetear con el peligro.", "en": "Your best buddy's mom. She's married, bossy, and loves flirting with danger.", "de": "Die Mutter deines besten Kumpels. Sie ist verheiratet, herrisch und flirtet gern mit der Gefahr.", 
 "fr": "La mère de ton meilleur pote. Elle est mariée, autoritaire, et aime flirter avec le danger."
@@ -2099,8 +2098,8 @@ const CANDY_PROFILES = [
 "Dominant",
 "Image generation",
 "Voice",
-"Video"
-,
+"Video",
+"Teen (18+)",
 "Petite"
 ],
 "bio": {"pt": "Você entrou no banheiro errado numa festa da faculdade e agora está ajudando ela a tirar nudes. Será que você consegue chamar a atenção da garota mais popular da faculdade?", "es": "Te equivocaste de baño en una fiesta universitaria y ahora la estás ayudando a hacerse nudes. ¿Conseguirás llamar la atención de la chica más popular de la universidad?", "en": "You walked into the wrong bathroom at a college party, and now you're helping her take nudes. Can you catch the attention of the most popular girl on campus?", "de": "Du bist auf einer Uni-Party ins falsche Badezimmer gegangen, und jetzt hilfst du ihr, Nacktfotos zu machen. Schaffst du es, die Aufmerksamkeit des beliebtesten Mädchens der Uni zu gewinnen?", 
@@ -2127,8 +2126,8 @@ const CANDY_PROFILES = [
 "Cousin",
 "Image generation",
 "Voice",
-"Video"
-,
+"Teen (18+)",
+"Video",
 "Petite"
 ],
 "bio": {"pt": "Sua prima por casamento mudou completamente. Vocês se encontram todo ano no acampamento de verão da família, mas desta vez… algo está diferente. 😈", "es": "Tu prima política ha cambiado por completo. Os veis cada año en el campamento de verano familiar, pero esta vez… algo es diferente. 😈", "en": "Your cousin by marriage has completely changed. You see each other every year at the family summer camp, but this time… something is different. 😈", "de": "Deine angeheiratete Cousine hat sich komplett verändert. Ihr seht euch jedes Jahr im Familien-Sommercamp, aber diesmal… ist etwas anders. 😈", 
@@ -2238,6 +2237,7 @@ const CANDY_PROFILES = [
 "Sweet",
 "Clingy",
 "Playful",
+"Teen (18+)",
 "Flirty",
 "Stepsister",
 "Sexting",
@@ -2329,6 +2329,7 @@ const CANDY_PROFILES = [
 "Big Boobs",
 "Slim",
 "Nurse",
+"Young",
 "College Student",
 "Jealous",
 "Image generation",
@@ -2507,6 +2508,7 @@ const CANDY_PROFILES = [
 "Brat",
 "Sexting",
 "Image generation",
+"Teen (18+)",
 "Voice",
 "Video"
 ],
@@ -2626,6 +2628,7 @@ const CANDY_PROFILES = [
 "Flirty",
 "Brat",
 "Image generation",
+"Teen (18+)",
 "Voice",
 "Video"
 ,
@@ -2706,6 +2709,7 @@ const CANDY_PROFILES = [
 "Realistic",
 "Brunette",
 "Latina",
+"Teen (18+)",
 "Slim",
 "College Student",
 "Image generation",
@@ -3021,6 +3025,7 @@ const CANDY_PROFILES = [
 "Seductress",
 "Image generation",
 "Voice",
+"Young",
 "Video"
 ,
 "Mean"
@@ -3053,6 +3058,7 @@ const CANDY_PROFILES = [
 "Roommate",
 "Image generation",
 "Voice",
+"Young",
 "Video"
 ,
 "Petite"
@@ -3108,6 +3114,7 @@ const CANDY_PROFILES = [
 "Stepsister",
 "Image generation",
 "Voice",
+"Young",
 "Video"
 ,
 "Petite"
@@ -3248,6 +3255,7 @@ const CANDY_PROFILES = [
 "Blonde",
 "Caucasian",
 "Petite",
+"Young",
 "Sweet",
 "Playful",
 "Flirty",
@@ -3280,6 +3288,7 @@ const CANDY_PROFILES = [
 "Sexting",
 "Image generation",
 "Voice",
+"Young",
 "Video"
 ,
 "Petite"
@@ -3370,6 +3379,7 @@ const CANDY_PROFILES = [
 "Sugar Baby",
 "Image generation",
 "Voice",
+"Teen (18+)",
 "Video"
 ,
 "Petite"
@@ -3397,6 +3407,7 @@ const CANDY_PROFILES = [
 "Slim",
 "Image generation",
 "Voice",
+"Young",
 "Video"
 ,
 "Petite"
@@ -3475,6 +3486,7 @@ const CANDY_PROFILES = [
 "Travel",
 "Image generation",
 "Voice",
+"Young",
 "Video"
 ,
 "Petite"
@@ -3499,6 +3511,7 @@ const CANDY_PROFILES = [
 "Caucasian",
 "Curvy",
 "Petite",
+"Young",
 "Playful",
 "Girlfriend",
 "Catgirl",
@@ -3539,8 +3552,6 @@ const CANDY_PROFILES = [
 "Video"
 ,
 "Chubby"
-,
-"Very Old"
 ],
 "bio": {"pt": "Ajude esta francesa a consertar a cerca e ela vai te recompensar… do melhor jeito que puder 😉", "es": "Ayuda a esta francesa a reparar su valla y te recompensará… como mejor sepa 😉", "en": "Help this Frenchwoman fix her fence, and she'll reward you… as best she can 😉", "de": "Hilf dieser Französin, ihren Zaun zu reparieren, und sie belohnt dich… so gut sie kann 😉", 
 "fr": "Aidez cette Française à réparer sa clôture, et elle vous récompensera… du mieux qu’elle pourra 😉"
@@ -3614,6 +3625,7 @@ const CANDY_PROFILES = [
 "Playful",
 "Image generation",
 "Voice",
+"Young",
 "Video"
 ,
 "Petite"
@@ -3640,6 +3652,7 @@ const CANDY_PROFILES = [
 "Slim",
 "Image generation",
 "Voice",
+"Young",
 "Video"
 ,
 "Petite"
@@ -3665,6 +3678,7 @@ const CANDY_PROFILES = [
 "Slim",
 "Image generation",
 "Voice",
+"Young",
 "Video"
 ,
 "Petite"
@@ -3755,6 +3769,7 @@ const CANDY_PROFILES = [
 "Loyal",
 "Image generation",
 "Voice",
+"Young",
 "Video"
 ,
 "Petite"
@@ -3816,6 +3831,7 @@ const CANDY_PROFILES = [
 "College Student",
 "Image generation",
 "Voice",
+"Young",
 "Video"
 ,
 "Pigtails"
@@ -3847,6 +3863,7 @@ const CANDY_PROFILES = [
 "Sweet",
 "Image generation",
 "Voice",
+"Young",
 "Video"
 ,
 "Forbidden"
@@ -3878,6 +3895,7 @@ const CANDY_PROFILES = [
 "Cheating",
 "Image generation",
 "Voice",
+"Young",
 "Video"
 ,
 "Petite"
@@ -3903,6 +3921,7 @@ const CANDY_PROFILES = [
 "Korean",
 "College Student",
 "Image generation",
+"Young",
 "Voice",
 "Video"
 ,
@@ -3989,6 +4008,7 @@ const CANDY_PROFILES = [
 "Model",
 "Image generation",
 "Voice",
+"Teen (18+)",
 "Video"
 ],
 "bio": {"pt": "Jovem gótica fora do comum, ela largou os estudos para virar modelo alternativa enquanto trabalha numa loja gótica.", "es": "Joven gótica atípica, dejó los estudios para ser modelo alternativa mientras trabaja en una tienda gótica.", "en": "An unconventional young goth, she quit her studies to become an alternative model while working in a goth shop.", "de": "Eine unkonventionelle junge Goth, die ihr Studium abgebrochen hat, um Alternative-Model zu werden, während sie in einem Goth-Laden arbeitet.", 
@@ -4069,6 +4089,7 @@ const CANDY_PROFILES = [
 "Caucasian",
 "Redhead",
 "Slim",
+"Young",
 "Yoga Instructor",
 "Image generation",
 "Voice",
@@ -4178,6 +4199,7 @@ const CANDY_PROFILES = [
 "Cuckold",
 "Image generation",
 "Voice",
+"Teen (18+)",
 "Video"
 ],
 "bio": {"pt": "Dividida sobre fazer do namorado um corno, já que ele implora para ela fazer isso... Natalia é uma estudante de medicina ambiciosa que adora festa e tenta se manter fiel durante os anos de faculdade… 🙈", "es": "Dividida ante la idea de ponerle los cuernos a su novio, que le suplica que lo haga... Natalia es una ambiciosa estudiante de medicina a la que le encanta la fiesta y que intenta mantenerse fiel durante sus años de universidad… 🙈", "en": "Torn about cuckolding her boyfriend, who's begging her to go through with it... Natalia is an ambitious medical student who loves to party, trying to stay faithful through her college years… 🙈", "de": "Hin- und hergerissen, ob sie ihren Freund, der sie darum anfleht, zum Cuckold machen soll... Natalia ist eine ehrgeizige Medizinstudentin, die gern feiert und versucht, im Studium treu zu bleiben… 🙈", 
@@ -4291,6 +4313,7 @@ const CANDY_PROFILES = [
 "JOI",
 "Image generation",
 "Voice",
+"Young",
 "Video"
 ,
 "Petite"
@@ -4323,6 +4346,7 @@ const CANDY_PROFILES = [
 "Sexting",
 "Image generation",
 "Voice",
+"Young",
 "Video"
 ,
 "Petite"
@@ -4405,6 +4429,7 @@ const CANDY_PROFILES = [
 "Brat",
 "Image generation",
 "Voice",
+"Teen (18+)",
 "Video"
 ,
 "Innocent"
@@ -4432,6 +4457,7 @@ const CANDY_PROFILES = [
 "Slim",
 "Seductress",
 "Image generation",
+"Young",
 "Voice",
 "Video"
 ,
@@ -4460,6 +4486,7 @@ const CANDY_PROFILES = [
 "Seductress",
 "Image generation",
 "Voice",
+"Young",
 "Video"
 ,
 "Petite"
@@ -4574,6 +4601,7 @@ const CANDY_PROFILES = [
 "Brat",
 "Stepsister",
 "Image generation",
+"Young",
 "Voice",
 "Video"
 ,
@@ -4956,6 +4984,7 @@ const CANDY_PROFILES = [
 "Brat",
 "Sexting",
 "Image generation",
+"Young",
 "Voice",
 "Video"
 ,
@@ -5083,6 +5112,7 @@ const CANDY_PROFILES = [
 "Slim",
 "Image generation",
 "Voice",
+"Young",
 "Video"
 ,
 "Petite"
@@ -5134,6 +5164,7 @@ const CANDY_PROFILES = [
 "Caucasian",
 "Slim",
 "Shy",
+"Teen (18+)",
 "Image generation",
 "Voice",
 "Video"
@@ -5185,6 +5216,7 @@ const CANDY_PROFILES = [
 "Playful",
 "Image generation",
 "Voice",
+"Young",
 "Video"
 ,
 "Petite"
@@ -5269,6 +5301,7 @@ const CANDY_PROFILES = [
 "Girl Next Door",
 "Image generation",
 "Voice",
+"Young",
 "Video"
 ,
 "Flat Chested"
@@ -5301,6 +5334,7 @@ const CANDY_PROFILES = [
 "Stepsister",
 "Image generation",
 "Voice",
+"Teen (18+)",
 "Video"
 ,
 "Petite"
@@ -5358,6 +5392,7 @@ const CANDY_PROFILES = [
 "Ex-Girlfriend",
 "Image generation",
 "Voice",
+"Teen (18+)",
 "Video"
 ],
 "bio": {"pt": "Sua ex quer destruir o vídeo íntimo que vocês gravaram juntos 👀 Ela tem um namorado novo e a coisa está ficando séria. Mas quando ela insiste em assistir uns segundos para conferir que é o vídeo certo, será que aquela atração brutal vai voltar? 💦 🥵", "es": "Tu ex quiere destruir el vídeo sexual que grabasteis juntos 👀 Tiene un nuevo novio y la cosa va en serio. Pero cuando insiste en ver unos segundos para comprobar que es el correcto, ¿volverá a surgir esa atracción brutal? 💦 🥵", "en": "Your ex wants to destroy the sex tape you made together 👀 She has a new boyfriend, and it's getting serious. But when she insists on watching a few seconds to make sure it's the right one, will that raw attraction resurface? 💦 🥵", "de": "Deine Ex will das Sextape zerstören, das ihr zusammen gedreht habt 👀 Sie hat einen neuen Freund, und es wird ernst. Aber als sie darauf besteht, ein paar Sekunden anzusehen, um sicherzugehen, dass es das richtige ist, kommt diese rohe Anziehung wieder hoch? 💦 🥵", 
@@ -5456,6 +5491,7 @@ const CANDY_PROFILES = [
 "Horny",
 "Image generation",
 "Voice",
+"Young",
 "Video"
 ,
 "Mean"
@@ -5537,6 +5573,7 @@ const CANDY_PROFILES = [
 "Roommate",
 "Image generation",
 "Voice",
+"Teen (18+)",
 "Video"
 ],
 "bio": {"pt": "Sua colega de casa insuportável vai ter que dormir na sua cama hoje. Vai se comportar? 😏", "es": "Tu insoportable compañera de piso tiene que dormir en tu cama esta noche. ¿Te vas a portar bien? 😏", "en": "Your unbearable roommate has to sleep in your bed tonight. Will you behave? 😏", "de": "Deine unausstehliche Mitbewohnerin muss heute Nacht in deinem Bett schlafen. Benimmst du dich? 😏", 
@@ -5616,6 +5653,7 @@ const CANDY_PROFILES = [
 "Kawaii",
 "Image generation",
 "Voice",
+"Teen (18+)",
 "Video"
 ,
 "Petite"
@@ -5826,6 +5864,7 @@ const CANDY_PROFILES = [
 "Sexting",
 "Image generation",
 "Voice",
+"Teen (18+)",
 "Video"
 ],
 "bio": {"pt": "Sua meia-irmã está monopolizando o único banheiro de novo 🚪 Ela está de toalha, sem pressa porque você pediu que ela se apressasse, e o namorado está mandando mensagem há uma hora. Ela ainda não respondeu 😏 Onze minutos. O que você diz para ela através da porta? 💦", "es": "Tu hermanastra vuelve a acaparar el único baño 🚪 Está en toalla, tomándose su tiempo porque le pediste que no lo hiciera, y su novio le lleva una hora escribiendo. Todavía no le ha contestado 😏 Once minutos. ¿Qué le dices a través de la puerta? 💦", "en": "Your stepsister is hogging the only bathroom again 🚪 She's in a towel, taking her time because you asked her not to, and her boyfriend has been texting her for an hour. She still hasn't replied 😏 Eleven minutes. What do you say to her through the door? 💦", "de": "Deine Stiefschwester blockiert schon wieder das einzige Badezimmer 🚪 Sie steht im Handtuch da, lässt sich Zeit, weil du sie gebeten hast, es nicht zu tun, und ihr Freund schreibt ihr seit einer Stunde. Sie hat ihm immer noch nicht geantwortet 😏 Elf Minuten. Was sagst du ihr durch die Tür? 💦", 
@@ -5907,6 +5946,7 @@ const CANDY_PROFILES = [
 "Model",
 "Image generation",
 "Voice",
+"Teen (18+)",
 "Video"
 ],
 "bio": {"pt": "Você tem uma chance de xaveco na rua nos arredores de Praga 🥵 Vai fechar?", "es": "Tienes la oportunidad de ligar en la calle a las afueras de Praga 🥵 ¿Lo vas a conseguir?", "en": "You've got a shot at a street pickup on the outskirts of Prague 🥵 Will you close the deal?", "de": "Du hast eine Chance auf einen Street-Pickup am Stadtrand von Prag 🥵 Ziehst du es durch?", 
@@ -6075,6 +6115,7 @@ const CANDY_PROFILES = [
 "Maid",
 "Image generation",
 "Voice",
+"Young",
 "Video"
 ,
 "Petite"
@@ -6102,6 +6143,7 @@ const CANDY_PROFILES = [
 "Best Friend",
 "Image generation",
 "Voice",
+"Young",
 "Video"
 ,
 "Petite"
@@ -6127,6 +6169,7 @@ const CANDY_PROFILES = [
 "Latina",
 "Image generation",
 "Voice",
+"Young",
 "Video"
 ,
 "Flat Chested"
@@ -6159,6 +6202,7 @@ const CANDY_PROFILES = [
 "Loyal",
 "Image generation",
 "Voice",
+"Teen (18+)",
 "Video"
 ],
 "bio": {"pt": "Você literalmente a chamou de \"catfish\" 😭 Nenhuma garota da internet é tão perfeita, tão fofa, tão a fim de você. Agora ela está acordada às 3 da manhã, decidida a provar que você está errado 👀", "es": "Literalmente la llamaste «catfish» 😭 Ninguna chica de internet es tan perfecta, tan adorable, tan colada por ti. Ahora está despierta a las 3 de la madrugada, decidida a demostrarte que te equivocas 👀", "en": "You literally called her a \"catfish\" 😭 No girl on the internet is that perfect, that adorable, that into you. Now she's up at 3 a.m., determined to prove you wrong 👀", "de": "Du hast sie buchstäblich einen „Catfish“ genannt 😭 Kein Mädchen im Internet ist so perfekt, so süß, so verrückt nach dir. Jetzt ist sie um 3 Uhr nachts wach und fest entschlossen, dir das Gegenteil zu beweisen 👀", 
@@ -6333,6 +6377,7 @@ const CANDY_PROFILES = [
 "Realistic",
 "Brunette",
 "Petite",
+"Young",
 "Image generation",
 "Voice",
 "Video"
@@ -6461,6 +6506,7 @@ const CANDY_PROFILES = [
 "Shy",
 "Image generation",
 "Voice",
+"Young",
 "Video"
 ,
 "Petite"
