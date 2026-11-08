@@ -128,7 +128,7 @@ const PROMO = {
    Every tag used on a profile must be listed here (build.js warns otherwise).
    Translations: src/i18n-tags.js. A category with 0 profiles gets a page that is not indexed until you add a profile. */
 const TAG_GROUPS = {
-  age:         [],   /* tags shown in the "Age" filter next to the age ranges (e.g. "Old","Very Old") */
+  age:         ["Young","Teen (18+)" ],   /* tags shown in the "Age" filter next to the age ranges (e.g. "Old","Very Old") */
   style:       ["2.5D","Anime","Cartoon","Hentai","Realistic"],
   vibe:        ["Alt","Cosplay","E-girl","Emo","Goth","Gyaru","Kawaii","Punk","Tomboy","Waifu"],
   personality: ["Bad Girl","Brat","Caring","Clingy","Dandere","Dominant","Experienced","Flirty","Horny","Innocent","Jealous","Kuudere","Loyal","Mean","Mysterious","Nympho","Playful","Rebel","Romantic","Sadistic","Seductress","Shy","Submissive","Sweet","Temptress","Tsundere","Virgin","Yandere"],
@@ -136,7 +136,7 @@ const TAG_GROUPS = {
   hair:        ["Black Hair","Blonde","Blue Hair","Brunette","Long Hair","Pigtails","Pink Hair","Purple Hair","Redhead","Short Hair","White Hair"],
   origin:      ["Arab","Asian","Brazilian","British","Caucasian","Chinese","Colombian","Ebony","European","Filipina","French","German","Indian","Italian","Japanese","Korean","Latina","Mexican","Middle Eastern","Mixed Race","Russian","Thai","Ukrainian","Vietnamese"],
   role:        ["Barista","Biker","Boss","Cam Girl","Caregiver","CEO","College Student","Coworker","Doctor","Escort","Fitness","Flight Attendant","Gamer","Gamer Girl","Gym Trainer","Influencer","Jester","K-pop","Lawyer","Librarian","Maid","Masseuse","Model","Nun","Nurse","OnlyFans","Police Officer","Professor","Secretary","Streamer","Stripper","Teacher","Travel","VTuber","Waitress","Yoga Instructor"],
-  relationship:["Best Friend","Boyfriend","Bully","Cheating","Cougar","Cousin","Daddy","DILF","Ex-Girlfriend","Forbidden","Friends w/ Benefits","Girl Next Door","Girlfriend","Granny","Husband","Mature","MILF","Neighbor","Teen (18+)","One Night Stand","Roommate","Slow Burn","Stepbrother","Stepdad","Stepmom","Stepsister","Stranger","Sugar Baby","Twins","Young","Wife"],
+  relationship:["Best Friend","Boyfriend","Bully","Cheating","Cougar","Cousin","Daddy","DILF","Ex-Girlfriend","Forbidden","Friends w/ Benefits","Girl Next Door","Girlfriend","Granny","Husband","Mature","MILF","Neighbor","One Night Stand","Roommate","Slow Burn","Stepbrother","Stepdad","Stepmom","Stepsister","Stranger","Sugar Baby","Twins","Wife"],
   fantasy:     ["Alien","Android","Angel","Bear","Bunny Girl","Catgirl","Demon","Elf","Fairy","Fantasy","Fox Girl","Furry","Goddess","Mermaid","Monster Girl","Princess","Queen","Robot","Sage","Succubus","Vampire","Witch"],
   gender:      ["Female","Male","Bisexual","BL","Femboy","Futa","Gay","Lesbian","Sissy","Trans","Twink"],
   kink:        ["BDSM","Bondage","Breast Expansion","Chastity","Cuckold","Exhibitionism","Feet","Femdom","Hypno","JOI","Netorare","Pet Play","POV","Public","Seduction","Threesome","Vore","Voyeur"],
