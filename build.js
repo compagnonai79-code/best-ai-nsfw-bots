@@ -28,7 +28,19 @@ for (const p of base.PROFILES) for (const t of p.tags)
   if (!base.ALL_TAGS.includes(t)) console.warn(`⚠️  Profile "${p.name}": tag "${t}" is not in TAG_GROUPS (data.js)`);
 for (const l of Object.keys(LANGS)) if (l !== "en") { const X = context(l);
   const miss = base.ALL_TAGS.filter(t => X.tr(t) === t && /[a-z]/.test(t) && l === "hi"); if (miss.length) console.warn(`ℹ️  hi: ${miss.length} tags shown in English`); }
-const LEGAL = Object.assign(require("./src/legal.js")(SITE), require("./src/legal-more.js")(SITE));
+/* Legal pages: fields still marked [TO FILL] are hidden until the owner fills them in data.js. */
+const LEGAL = (() => {
+  const Z = "\u0000", S = Object.assign({}, SITE);
+  for (const k of Object.keys(S)) if (typeof S[k] === "string" && S[k].includes("TO FILL")) S[k] = Z;
+  const L = Object.assign(require("./src/legal.js")(S), require("./src/legal-more.js")(S));
+  const clean = h => h
+    .replace(new RegExp(Z + ", " + Z + "\\. ", "g"), "")                       /* "owner, address. Contact:" → "Contact:" */
+    .replace(new RegExp("<h2>[^<]*</h2>\\s*<p>" + Z + "</p>", "g"), "")          /* empty section (publication director) */
+    .replace(new RegExp("(?:<br>)?[^<>]*" + Z + "[^<>]*(?=<br>|</p>)", "g"), "") /* "SIRET: …", "VAT: …" lines */
+    .replace(/<p><br>/g, "<p>").replace(new RegExp(Z, "g"), "");
+  for (const l in L) for (const k in L[l]) if (typeof L[l][k] === "string") L[l][k] = clean(L[l][k]);
+  return L;
+})();
 const LANG_LIST = Object.keys(LANGS);
 const prefix = l => (l === "en" ? "" : l + "/");
 const OG_LOCALE = { en:"en_US", fr:"fr_FR", es:"es_ES", de:"de_DE", pt:"pt_BR", hi:"hi_IN" };
