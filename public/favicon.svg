@@ -1,6 +1,15 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
-  <defs><linearGradient id="g" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#ff3d8b"/><stop offset="1" stop-color="#8b5cf6"/></linearGradient></defs>
-  <rect width="64" height="64" rx="14" fill="url(#g)"/>
-  <path d="M14 18c0-3.3 2.7-6 6-6h24c3.3 0 6 2.7 6 6v17c0 3.3-2.7 6-6 6H30l-9 8v-8h-1c-3.3 0-6-2.7-6-6z" fill="#fff"/>
-  <path d="M32 35.5l-7.2-7a4.6 4.6 0 0 1 6.4-6.6l.8.8.8-.8a4.6 4.6 0 0 1 6.4 6.6z" fill="#ff3d8b"/>
+  <rect width="64" height="64" rx="14" fill="#0b0a12"/>
+  <!-- upper lip -->
+  <path d="M6 39 C12 33 18 25 24 25 C27.5 25 29.5 27 31.5 27.5 C33.5 27 35.5 25 39 25 C45 25 51 33 57 39 C50 37.5 44 36.5 31.5 38.5 C19 36.5 13 37.5 6 39 Z" fill="#ff2d7f"/>
+  <!-- lower lip -->
+  <path d="M6 40.5 C14 40 22 41.5 31.5 41.5 C41 41.5 49 40 57 40.5 C53 49 44 55 31.5 55 C19 55 10 49 6 40.5 Z" fill="#ff2d7f"/>
+  <!-- teeth hint -->
+  <path d="M21 38.6 C26 37.9 37 37.9 42 38.6 C37 40 26 40 21 38.6 Z" fill="#fde7f1"/>
+  <!-- highlights -->
+  <path d="M15 34 C18 30 21 28 24 28" stroke="#ffd2e5" stroke-width="2" stroke-linecap="round" fill="none"/>
+  <ellipse cx="25" cy="47.5" rx="5" ry="1.6" fill="#ffd2e5"/>
+  <!-- AI bubble -->
+  <path d="M45.5 4 C53.5 4 60 9.2 60 16 C60 22.8 53.5 28 45.5 28 C44 28 42.6 27.8 41.3 27.5 L36.5 32 L37.3 25.4 C33.6 23.3 31 19.9 31 16 C31 9.2 37.5 4 45.5 4 Z" fill="#fff" stroke="#ff2d7f" stroke-width="2.4"/>
+  <text x="45.5" y="20.6" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-weight="900" font-size="13" fill="#0b0a12">AI</text>
 </svg>
