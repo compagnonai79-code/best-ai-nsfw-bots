@@ -31,7 +31,7 @@ nav{display:flex;align-items:center;gap:20px}
 nav a{color:var(--muted);text-decoration:none;font-size:14px}
 nav a:hover,nav a.cur{color:var(--text)}
 .new-pill{display:inline-flex;align-items:center;gap:8px;background:rgba(46,230,160,.1);border:1px solid rgba(46,230,160,.35);color:var(--green);
-  padding:7px 14px;border-radius:999px;font:600 13px Inter;cursor:pointer;transition:.15s}
+  padding:7px 14px;border-radius:999px;font:600 13px Inter,sans-serif;cursor:pointer;transition:.15s}
 .new-pill:hover,.new-pill.on{background:var(--green);color:#04140d}
 .new-pill .dot{width:7px;height:7px;border-radius:50%;background:currentColor;animation:pulse 1.6s infinite}
 .new-pill b{background:rgba(0,0,0,.25);padding:0 7px;border-radius:999px}
@@ -66,12 +66,12 @@ nav a:hover,nav a.cur{color:var(--text)}
 .pcard img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
 .pcard .shade{position:absolute;inset:0;background:linear-gradient(180deg,transparent 45%,rgba(8,6,14,.95))}
 .pcard .meta{position:absolute;left:0;right:0;bottom:0;padding:14px}
-.pcard h3{font-size:19px}
-.pcard h3 span{font:500 15px Inter;color:#d8d2ee;margin-left:4px}
+.pcard h3,.pcard h2.pname{font-size:19px}
+.pcard h3 span,.pcard h2.pname span{font:500 15px Inter,sans-serif;color:#d8d2ee;margin-left:4px}
 .pcard .on-pf{font-size:12px;color:#c7bfe6;margin:2px 0 8px}
 .pcard .chips{display:flex;flex-wrap:wrap;gap:5px}
 .pcard .chips span{font-size:11px;background:rgba(255,255,255,.12);backdrop-filter:blur(4px);padding:2px 8px;border-radius:999px}
-.pcard .new{position:absolute;top:10px;left:10px;background:var(--green);color:#04140d;font:700 11px Inter;padding:3px 9px;border-radius:999px;z-index:2}
+.pcard .new{position:absolute;top:10px;left:10px;background:var(--green);color:#04140d;font:700 11px Inter,sans-serif;padding:3px 9px;border-radius:999px;z-index:2}
 .pcard .online{position:absolute;top:12px;right:12px;width:10px;height:10px;border-radius:50%;background:var(--green);box-shadow:0 0 0 3px rgba(46,230,160,.25);z-index:2}
 .pcard .pchat{display:block;margin-top:10px;text-align:center;padding:9px 12px;border-radius:999px;font:600 13.5px Inter,sans-serif;
   color:#fff;text-decoration:none;background:linear-gradient(90deg,var(--accent),var(--accent2));box-shadow:0 6px 18px rgba(255,61,139,.3);transition:.15s}
@@ -88,7 +88,7 @@ nav a:hover,nav a.cur{color:var(--text)}
 @keyframes fade{from{opacity:0}}
 .modal{position:relative;display:grid;grid-template-columns:1fr 1fr;max-width:760px;width:100%;background:var(--bg2);border:1px solid var(--line);border-radius:20px;overflow:hidden;animation:pop .25s}
 @keyframes pop{from{transform:scale(.94)}}
-.modal .visual{position:relative;min-height:380px;display:flex;align-items:center;justify-content:center;font:700 90px "Space Grotesk";color:rgba(255,255,255,.85)}
+.modal .visual{position:relative;min-height:380px;display:flex;align-items:center;justify-content:center;font:700 90px "Space Grotesk",sans-serif;color:rgba(255,255,255,.85)}
 .modal .visual img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
 .modal .body{padding:30px 26px;display:flex;flex-direction:column;justify-content:center}
 .modal h2{font-size:28px;margin-bottom:4px}
@@ -98,7 +98,7 @@ nav a:hover,nav a.cur{color:var(--text)}
 .modal .chips span{font-size:12px;background:#221d34;color:#c7bfe6;padding:3px 10px;border-radius:999px}
 .modal .note{font-size:11.5px;color:var(--muted);margin-top:10px;text-align:center}
 .x{position:absolute;top:10px;right:12px;z-index:3;width:34px;height:34px;border-radius:50%;border:0;background:rgba(0,0,0,.45);color:#fff;font-size:20px;cursor:pointer}
-.sponsored{display:inline-block;font:600 10.5px Inter;letter-spacing:.08em;text-transform:uppercase;color:var(--gold);border:1px solid rgba(255,194,75,.4);padding:2px 8px;border-radius:999px;margin-bottom:12px;align-self:flex-start}
+.sponsored{display:inline-block;font:600 10.5px Inter,sans-serif;letter-spacing:.08em;text-transform:uppercase;color:var(--gold);border:1px solid rgba(255,194,75,.4);padding:2px 8px;border-radius:999px;margin-bottom:12px;align-self:flex-start}
 .promo .body ul{list-style:none;margin-bottom:20px;font-size:14px}
 .promo .body li{margin-bottom:5px}
 .promo .body li:before{content:"✓ ";color:var(--accent)}
@@ -112,7 +112,7 @@ nav a:hover,nav a.cur{color:var(--text)}
   .lang{padding:6px 6px;font-size:12px;max-width:92px}
   .pgrid{grid-template-columns:repeat(2,1fr);gap:10px}
   .pcard .meta{padding:10px}
-  .pcard h3{font-size:16px}
+  .pcard h3,.pcard h2.pname{font-size:16px}
   .pcard .chips span:nth-child(n+3){display:none}
   .pcard .pchat{font-size:12px;padding:8px 6px}
   .ph{font-size:44px}
@@ -123,14 +123,14 @@ nav a:hover,nav a.cur{color:var(--text)}
 .section-title{font-size:24px;margin:34px 0 16px}
 .picks{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:14px}
 .pick{background:linear-gradient(160deg,#241a3a,var(--card));border:1px solid var(--line);border-radius:16px;padding:20px;position:relative}
-.pick .rank{position:absolute;top:14px;right:16px;font:700 30px "Space Grotesk";color:rgba(255,255,255,.08)}
+.pick .rank{position:absolute;top:14px;right:16px;font:700 30px "Space Grotesk",sans-serif;color:rgba(255,255,255,.08)}
 .pick h3{font-size:19px;margin:10px 0 4px}
 .pick p{color:var(--muted);font-size:14px;margin-bottom:14px}
 .grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:16px;margin-bottom:50px}
 .card{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:20px;display:flex;flex-direction:column;transition:.15s}
 .card:hover{border-color:var(--accent2);transform:translateY(-2px)}
 .card-top{display:flex;gap:14px;align-items:center;margin-bottom:12px}
-.mono{width:52px;height:52px;border-radius:14px;display:flex;align-items:center;justify-content:center;font:700 22px "Space Grotesk";color:#fff;flex-shrink:0}
+.mono{width:52px;height:52px;border-radius:14px;display:flex;align-items:center;justify-content:center;font:700 22px "Space Grotesk",sans-serif;color:#fff;flex-shrink:0}
 .card h3{font-size:19px}
 .stars{color:var(--gold);font-size:13px}
 .stars b{color:var(--text);margin-left:4px}
@@ -168,7 +168,7 @@ a.tag{text-decoration:none}
 
 /* Footer */
 footer .cols{display:grid;grid-template-columns:1.4fr repeat(4,1fr);gap:24px;align-items:start}
-footer h4{font:600 13px Inter,sans-serif;color:var(--text);margin-bottom:10px;text-transform:uppercase;letter-spacing:.06em}
+footer .fh{font:600 13px Inter,sans-serif;color:var(--text);margin-bottom:10px;text-transform:uppercase;letter-spacing:.06em}
 footer .cols a{display:block;color:var(--muted);text-decoration:none;margin-bottom:6px;font-size:13.5px}
 footer .cols a:hover{color:var(--text)}
 footer .cols .logo{font-size:17px;color:var(--text);margin-bottom:8px}
@@ -295,7 +295,7 @@ nav.crumb{margin:22px 0 -18px;font-size:13.5px;color:var(--muted)}
 nav.crumb a{color:var(--muted);text-decoration:none}
 nav.crumb a:hover{color:var(--text)}
 nav.crumb span{color:var(--text)}
-.g-visual .new{position:absolute;top:14px;left:14px;z-index:2;background:var(--green);color:#04140d;font:700 11px Inter;padding:3px 10px;border-radius:999px}
+.g-visual .new{position:absolute;top:14px;left:14px;z-index:2;background:var(--green);color:#04140d;font:700 11px Inter,sans-serif;padding:3px 10px;border-radius:999px}
 .g-pf{display:flex;align-items:center;gap:8px;color:var(--muted);font-size:14px;margin-bottom:8px}
 .mono-s{width:24px;height:24px;border-radius:7px;display:inline-flex;align-items:center;justify-content:center;color:#fff;font:700 12px "Space Grotesk",sans-serif}
 .g-body .tags{margin:10px 0 16px}
@@ -331,7 +331,7 @@ ol.steps li{color:#cfc9e6;margin-bottom:10px;font-size:15px}
 .mq h3{font-size:16px;margin-bottom:6px}
 .mq p{margin:0}
 .pgrid.sim4{grid-template-columns:repeat(4,1fr);gap:18px}
-.pgrid.sim4 .pcard h3{font-size:21px}
+.pgrid.sim4 .pcard h3,.pgrid.sim4 .pcard h2.pname{font-size:21px}
 .pgrid.sim4 .pcard .pchat{font-size:14.5px;padding:11px 12px}
 @media(max-width:900px){.pgrid.sim4{grid-template-columns:repeat(2,1fr);gap:10px}}
 nav{gap:16px}
@@ -460,3 +460,10 @@ table.cmp small{color:var(--muted);font-size:12px}
 @media (max-width:640px){.offer-box{flex-direction:column;align-items:flex-start}}
 .offer-bar .ob-s{display:none}
 @media (max-width:640px){.offer-bar .ob-l{display:none}.offer-bar .ob-s{display:inline}.offer-bar .ob-pct{display:none}}
+
+/* a11y: readable counters on tag chips */
+.tag small,a.tag small,.info .tags a.tag small{opacity:1!important;color:#b9b3d1!important}
+.vh{position:absolute!important;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+/* small phones: keep the header inside the screen */
+@media(max-width:420px){header .wrap{gap:8px}header nav{gap:6px;min-width:0}.logo{font-size:14px}.new-pill{padding:5px 8px;gap:5px}.new-pill .dot{display:none}.lang{max-width:78px}}
+.tablewrap{position:relative}

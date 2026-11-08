@@ -92,6 +92,9 @@ function wireOffer() {
   bar.querySelector(".ob-x").addEventListener("click", () => { bar.remove(); try { sessionStorage.setItem("offer_x", "1"); } catch (e) {} });
 }
 
+/* smaller Candy images for cards (Candy's CDN resizes on the fly) */
+const thumb = img => typeof img === "string" && img.startsWith("https://cdn.candy.ai/") && !img.includes("/cdn-cgi/")
+  ? img.replace("https://cdn.candy.ai/", "https://cdn.candy.ai/cdn-cgi/image/width=360,format=webp,quality=80/") : img;
 function visual(img, color, letter, alt = "") {
   return `<div class="ph" style="background:${grad(color)}">${esc(letter)}</div>` +
     (img ? `<img src="${esc(/^https?:/.test(img) ? img : R() + img)}" alt="${esc(alt)}" loading="lazy" onerror="this.remove()">` : "");
@@ -101,12 +104,12 @@ function visual(img, color, letter, alt = "") {
 function profileCard(p) {
   const P = pf(p.platform), i = PROFILES.indexOf(p);
   return `<article class="pcard" data-i="${i}">
-    ${visual(p.img, P.color, p.name[0], p.name)}
+    ${visual(thumb(p.img), P.color, p.name[0], p.name)}
     ${p.video ? `<video class="pvid" muted loop playsinline preload="none" data-src="${esc(p.video)}" aria-hidden="true"></video>` : ""}
     <a class="pcover" href="${girlUrl(p)}" aria-label="${esc(p.name)}"></a>
     ${isNew(p) ? `<span class="new">${esc(ui("new_badge"))}</span>` : ""}${p.video ? `<span class="vbadge">▶ ${esc(ui("video_badge"))}</span>` : `<span class="online"></span>`}
     <div class="shade"></div>
-    <div class="meta"><h3><a class="plink" href="${girlUrl(p)}">${esc(p.name)}</a>${p.age ? `<span>${p.age}</span>` : ""}</h3>
+    <div class="meta"><h2 class="pname"><a class="plink" href="${girlUrl(p)}">${esc(p.name)}</a>${p.age ? `<span>${p.age}</span>` : ""}</h2>
       <div class="on-pf">${esc(ui("on", {p: P.name}))}</div>
       <div class="chips">${p.tags.slice(0,3).map(t => `<span>${esc(tr(t))}</span>`).join("")}</div>
       ${ctaLink(linkFor(p), "💬 " + esc(ui(p.tags.includes("Male") && !p.tags.includes("Female") ? "card_btn_m" : "card_btn")), "pchat")}
@@ -240,14 +243,25 @@ const pagerHtml = (p, n) => {
   return `${p > 1 ? `<a href="#grid" data-p="${p - 1}" class="pg-btn">${esc(ui("pg_prev"))}</a>` : ""}${out}
     ${p < n ? `<a href="#grid" data-p="${p + 1}" class="pg-btn">${esc(ui("pg_next"))}</a>` : ""}<span class="pg-info">${esc(ui("pg", {p, n}))}</span>`;
 };
+const AGE_RANGES = [["18-21",18,21],["22-25",22,25],["26-30",26,30],["31-40",31,40],["41+",41,1e9]];
+const FILTER_MAIN = ["gender","style","age","origin","hair","body","app"];
+/* same collapsed filter bar as initHome() draws, rendered at build time so nothing moves on load */
+function filterBarHtml(LIST) {
+  const has = g => g === "age" ? AGE_RANGES.some(r => LIST.some(p => p.age >= r[1] && p.age <= r[2])) || (TAG_GROUPS.age || []).some(t => LIST.some(p => p.tags.includes(t)))
+    : g === "app" ? Object.keys(PLATFORMS).some(k => LIST.some(p => p.platform === k))
+    : (TAG_GROUPS[g] || []).some(t => LIST.some(p => p.tags.includes(t)));
+  return `<div class="filters">${FILTER_MAIN.filter(has).map(g => `<div class="fdrop" data-g="${g}">
+      <button class="fbtn" type="button" aria-expanded="false">${esc(ui("grp_" + g))} <span class="car">▾</span></button>
+      <div class="fpanel"></div></div>`).join("")}
+        <button class="fmore" type="button" id="fmore">${esc(ui("f_more"))}</button></div>`;
+}
 const inBase = (b, p) => !b || !BASES[b] || BASES[b](p);
 function initHome() {
   const BASE_KEY = typeof PAGE_BASE !== "undefined" ? PAGE_BASE : "";
   const LIST = PROFILES.filter(p => inBase(BASE_KEY, p));
   const tagCount = t => LIST.filter(p => p.tags.includes(t)).length;
   /* ---- dropdown filters: OR inside a group, AND between groups ---- */
-  const AGE_RANGES = [["18-21",18,21],["22-25",22,25],["26-30",26,30],["31-40",31,40],["41+",41,1e9]];
-  const MAIN = ["gender","style","age","origin","hair","body","app"];
+  const MAIN = FILTER_MAIN;
   const MORE = ["personality","vibe","role","relationship","fantasy","kink","features"];
   const sel = {}; [...MAIN, ...MORE].forEach(g => sel[g] = new Set());
   const groupOf = t => Object.keys(TAG_GROUPS).find(g => TAG_GROUPS[g].includes(t));
@@ -297,7 +311,7 @@ function initHome() {
       (filtered ? `<button class="clear" id="clear">${esc(ui("clear"))}</button>` : "");
     $("#new-btn")?.classList.toggle("on", onlyNew);
     $("#grid").innerHTML = list.length ? gridHtml(shown) : `<div class="empty">${esc(ui("empty"))}</div>`;
-    document.querySelectorAll("#sort [data-s]").forEach(b => b.classList.toggle("on", b.dataset.s === sortMode));
+    document.querySelectorAll("#sort [data-s]").forEach(b => { b.classList.toggle("on", b.dataset.s === sortMode); b.setAttribute("aria-selected", b.dataset.s === sortMode); });
     $("#pager").innerHTML = pages > 1 ? pagerHtml(page, pages) : "";
   };
   const resetAll = () => { onlyNew = false; page = 1; Object.values(sel).forEach(s => s.clear()); $("#q").value = ""; history.replaceState(null, "", location.pathname); renderTags(); renderGrid(); };

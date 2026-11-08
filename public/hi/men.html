@@ -35,7 +35,8 @@
 <link rel="manifest" href="/site.webmanifest">
 <meta name="theme-color" content="#0b0a12">
 <link rel="preload" href="../assets/fonts/inter-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin>
-<link rel="stylesheet" href="../assets/style.css">
+<link rel="preload" href="../assets/fonts/space-grotesk-latin-700-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="../assets/style.css?v=2a947879">
 </head>
 <body>
 
@@ -82,19 +83,34 @@
     <div class="search"><input id="q" type="search" placeholder="नाम, व्यक्तित्व या स्टाइल खोजें…" aria-label="Search"></div>
   </section>
   
-  <div class="tags" id="tags"><a class="tag" href="../hi/tag/gay.html">गे<small>18</small></a><a class="tag" href="../hi/tag/muscle.html">मसल्स<small>16</small></a><a class="tag" href="../hi/tag/boyfriend.html">बॉयफ़्रेंड<small>14</small></a><a class="tag" href="../hi/tag/romantic.html">रोमांटिक<small>11</small></a><a class="tag" href="../hi/tag/anime.html">एनीमे<small>9</small></a><a class="tag" href="../hi/tag/muscular.html">मस्कुलर<small>8</small></a><a class="tag" href="../hi/tag/dominant.html">डॉमिनेंट<small>6</small></a><a class="tag" href="../hi/tag/comedy.html">कॉमेडी<small>5</small></a><a class="tag" href="../hi/tag/athletic.html">एथलेटिक<small>5</small></a><a class="tag" href="../hi/tag/fantasy.html">फ़ैंटेसी<small>5</small></a><a class="tag" href="../hi/tag/fit.html">फ़िट<small>4</small></a><a class="tag" href="../hi/tag/boss.html">बॉस<small>3</small></a></div>
+  <div class="tags" id="tags"><div class="filters"><div class="fdrop" data-g="gender">
+      <button class="fbtn" type="button" aria-expanded="false">जेंडर और ओरिएंटेशन <span class="car">▾</span></button>
+      <div class="fpanel"></div></div><div class="fdrop" data-g="style">
+      <button class="fbtn" type="button" aria-expanded="false">आर्ट स्टाइल <span class="car">▾</span></button>
+      <div class="fpanel"></div></div><div class="fdrop" data-g="age">
+      <button class="fbtn" type="button" aria-expanded="false">उम्र <span class="car">▾</span></button>
+      <div class="fpanel"></div></div><div class="fdrop" data-g="origin">
+      <button class="fbtn" type="button" aria-expanded="false">मूल <span class="car">▾</span></button>
+      <div class="fpanel"></div></div><div class="fdrop" data-g="hair">
+      <button class="fbtn" type="button" aria-expanded="false">बाल <span class="car">▾</span></button>
+      <div class="fpanel"></div></div><div class="fdrop" data-g="body">
+      <button class="fbtn" type="button" aria-expanded="false">बॉडी टाइप <span class="car">▾</span></button>
+      <div class="fpanel"></div></div><div class="fdrop" data-g="app">
+      <button class="fbtn" type="button" aria-expanded="false">ऐप <span class="car">▾</span></button>
+      <div class="fpanel"></div></div>
+        <button class="fmore" type="button" id="fmore">और फ़िल्टर +</button></div></div>
   <p class="all-tags"><a href="tags.html">सभी श्रेणियाँ →</a></p>
   <div class="toolbar">
     <span class="count" id="count"><b>30</b> प्रोफ़ाइल</span>
-    <div class="stabs" id="sort" role="tablist"><button type="button" data-s="sel" class="on">चयन</button><button type="button" data-s="new" class="">नए</button><button type="button" data-s="name" class="">A–Z</button></div>
+    <div class="stabs" id="sort" role="tablist"><button type="button" role="tab" aria-selected="true" data-s="sel" class="on">चयन</button><button type="button" role="tab" aria-selected="false" data-s="new" class="">नए</button><button type="button" role="tab" aria-selected="false" data-s="name" class="">A–Z</button></div>
   </div>
   <div class="pgrid" id="grid"><article class="pcard" data-i="90">
-    <div class="ph" style="background:linear-gradient(135deg,#ff3d8b,#ff8a5c)">V</div><img src="https://cdn.candy.ai/20343571-4bcea640-b475-42b8-94f7-7340fd5602c1-600x900-webp90" alt="Victor" loading="lazy" onerror="this.remove()">
+    <div class="ph" style="background:linear-gradient(135deg,#ff3d8b,#ff8a5c)">V</div><img src="https://cdn.candy.ai/cdn-cgi/image/width=360,format=webp,quality=80/20343571-4bcea640-b475-42b8-94f7-7340fd5602c1-600x900-webp90" alt="Victor" loading="lazy" onerror="this.remove()">
     
     <a class="pcover" href="../hi/model/victor-draven.html" aria-label="Victor"></a>
     <span class="new">नया</span><span class="online"></span>
     <div class="shade"></div>
-    <div class="meta"><h3><a class="plink" href="../hi/model/victor-draven.html">Victor</a><span>29</span></h3>
+    <div class="meta"><h2 class="pname"><a class="plink" href="../hi/model/victor-draven.html">Victor</a><span>29</span></h2>
       <div class="on-pf">Candy AI पर</div>
       <div class="chips"><span>पुरुष</span><span>रियलिस्टिक</span><span>बॉयफ़्रेंड</span></div>
       <a class="pchat" href="https://candy.ai/fr/ai-boyfriend/victor-draven?via=ic3p7r" target="_blank" rel="sponsored nofollow noopener">💬 उससे बात करें</a>
@@ -105,7 +121,7 @@
     <a class="pcover" href="../hi/model/odo-harkness.html" aria-label="Odo Harkness"></a>
     <span class="new">नया</span><span class="online"></span>
     <div class="shade"></div>
-    <div class="meta"><h3><a class="plink" href="../hi/model/odo-harkness.html">Odo Harkness</a></h3>
+    <div class="meta"><h2 class="pname"><a class="plink" href="../hi/model/odo-harkness.html">Odo Harkness</a></h2>
       <div class="on-pf">SpicyChat AI पर</div>
       <div class="chips"><span>पुरुष</span><span>गे</span><span>फ़ैंटेसी</span></div>
       <a class="pchat" href="https://spicychat.ai/chat/685f7988-7a73-473b-88f5-434187120777?ref=mze1zjm" target="_blank" rel="sponsored nofollow noopener">💬 उससे बात करें</a>
@@ -116,7 +132,7 @@
     <a class="pcover" href="../hi/model/marlowe-senn.html" aria-label="Marlowe Senn"></a>
     <span class="new">नया</span><span class="online"></span>
     <div class="shade"></div>
-    <div class="meta"><h3><a class="plink" href="../hi/model/marlowe-senn.html">Marlowe Senn</a></h3>
+    <div class="meta"><h2 class="pname"><a class="plink" href="../hi/model/marlowe-senn.html">Marlowe Senn</a></h2>
       <div class="on-pf">SpicyChat AI पर</div>
       <div class="chips"><span>पुरुष</span><span>गे</span><span>लंबी</span></div>
       <a class="pchat" href="https://spicychat.ai/chat/84ee200d-ff31-49af-a113-7d65d5606b56?ref=mze1zjm" target="_blank" rel="sponsored nofollow noopener">💬 उससे बात करें</a>
@@ -127,7 +143,7 @@
     <a class="pcover" href="../hi/model/valen-droste.html" aria-label="Valen Droste"></a>
     <span class="new">नया</span><span class="online"></span>
     <div class="shade"></div>
-    <div class="meta"><h3><a class="plink" href="../hi/model/valen-droste.html">Valen Droste</a></h3>
+    <div class="meta"><h2 class="pname"><a class="plink" href="../hi/model/valen-droste.html">Valen Droste</a></h2>
       <div class="on-pf">SpicyChat AI पर</div>
       <div class="chips"><span>पुरुष</span><span>गे</span><span>वैम्पायर</span></div>
       <a class="pchat" href="https://spicychat.ai/chat/4a40234f-c2b1-42d6-bf54-41ce31b9d457?ref=mze1zjm" target="_blank" rel="sponsored nofollow noopener">💬 उससे बात करें</a>
@@ -138,7 +154,7 @@
     <a class="pcover" href="../hi/model/alaric-dain.html" aria-label="Alaric Dain"></a>
     <span class="new">नया</span><span class="online"></span>
     <div class="shade"></div>
-    <div class="meta"><h3><a class="plink" href="../hi/model/alaric-dain.html">Alaric Dain</a></h3>
+    <div class="meta"><h2 class="pname"><a class="plink" href="../hi/model/alaric-dain.html">Alaric Dain</a></h2>
       <div class="on-pf">SpicyChat AI पर</div>
       <div class="chips"><span>पुरुष</span><span>गे</span><span>फ़ैंटेसी</span></div>
       <a class="pchat" href="https://spicychat.ai/chat/940c5492-f59c-4984-8522-d2b3b0518497?ref=mze1zjm" target="_blank" rel="sponsored nofollow noopener">💬 उससे बात करें</a>
@@ -149,7 +165,7 @@
     <a class="pcover" href="../hi/model/niles-varden.html" aria-label="Niles Varden"></a>
     <span class="new">नया</span><span class="online"></span>
     <div class="shade"></div>
-    <div class="meta"><h3><a class="plink" href="../hi/model/niles-varden.html">Niles Varden</a></h3>
+    <div class="meta"><h2 class="pname"><a class="plink" href="../hi/model/niles-varden.html">Niles Varden</a></h2>
       <div class="on-pf">SpicyChat AI पर</div>
       <div class="chips"><span>पुरुष</span><span>गे</span><span>बेस्ट फ़्रेंड</span></div>
       <a class="pchat" href="https://spicychat.ai/chat/d189d4ec-bed9-4f9e-8b5e-1d073f783789?ref=mze1zjm" target="_blank" rel="sponsored nofollow noopener">💬 उससे बात करें</a>
@@ -162,7 +178,7 @@
     <a class="pcover" href="../hi/model/cynwulf-hargrave.html" aria-label="Cynwulf Hargrave"></a>
     <span class="new">नया</span><span class="online"></span>
     <div class="shade"></div>
-    <div class="meta"><h3><a class="plink" href="../hi/model/cynwulf-hargrave.html">Cynwulf Hargrave</a></h3>
+    <div class="meta"><h2 class="pname"><a class="plink" href="../hi/model/cynwulf-hargrave.html">Cynwulf Hargrave</a></h2>
       <div class="on-pf">SpicyChat AI पर</div>
       <div class="chips"><span>पुरुष</span><span>गे</span><span>पति</span></div>
       <a class="pchat" href="https://spicychat.ai/chat/8e444b50-82c4-4e50-a6ff-1ee73d636c3f?ref=mze1zjm" target="_blank" rel="sponsored nofollow noopener">💬 उससे बात करें</a>
@@ -173,7 +189,7 @@
     <a class="pcover" href="../hi/model/baxter-saltonstall.html" aria-label="Baxter Saltonstall"></a>
     <span class="new">नया</span><span class="online"></span>
     <div class="shade"></div>
-    <div class="meta"><h3><a class="plink" href="../hi/model/baxter-saltonstall.html">Baxter Saltonstall</a></h3>
+    <div class="meta"><h2 class="pname"><a class="plink" href="../hi/model/baxter-saltonstall.html">Baxter Saltonstall</a></h2>
       <div class="on-pf">SpicyChat AI पर</div>
       <div class="chips"><span>पुरुष</span><span>गे</span><span>पति</span></div>
       <a class="pchat" href="https://spicychat.ai/chat/95d557e2-0457-4a41-bc11-5d5eeff01811?ref=mze1zjm" target="_blank" rel="sponsored nofollow noopener">💬 उससे बात करें</a>
@@ -184,7 +200,7 @@
     <a class="pcover" href="../hi/model/bruno-ferri.html" aria-label="Bruno Ferri"></a>
     <span class="new">नया</span><span class="online"></span>
     <div class="shade"></div>
-    <div class="meta"><h3><a class="plink" href="../hi/model/bruno-ferri.html">Bruno Ferri</a></h3>
+    <div class="meta"><h2 class="pname"><a class="plink" href="../hi/model/bruno-ferri.html">Bruno Ferri</a></h2>
       <div class="on-pf">SpicyChat AI पर</div>
       <div class="chips"><span>पुरुष</span><span>गे</span><span>बॉस</span></div>
       <a class="pchat" href="https://spicychat.ai/chat/213db14b-57ee-4c4f-be91-380b1ef1cf94?ref=mze1zjm" target="_blank" rel="sponsored nofollow noopener">💬 उससे बात करें</a>
@@ -195,7 +211,7 @@
     <a class="pcover" href="../hi/model/valerio-neri.html" aria-label="Valerio Neri"></a>
     <span class="new">नया</span><span class="online"></span>
     <div class="shade"></div>
-    <div class="meta"><h3><a class="plink" href="../hi/model/valerio-neri.html">Valerio Neri</a></h3>
+    <div class="meta"><h2 class="pname"><a class="plink" href="../hi/model/valerio-neri.html">Valerio Neri</a></h2>
       <div class="on-pf">SpicyChat AI पर</div>
       <div class="chips"><span>पुरुष</span><span>गे</span><span>बॉस</span></div>
       <a class="pchat" href="https://spicychat.ai/chat/8b21f6ad-ca15-438b-86da-4ce24ecdac99?ref=mze1zjm" target="_blank" rel="sponsored nofollow noopener">💬 उससे बात करें</a>
@@ -206,7 +222,7 @@
     <a class="pcover" href="../hi/model/sayer-knox.html" aria-label="Sayer Knox"></a>
     <span class="new">नया</span><span class="online"></span>
     <div class="shade"></div>
-    <div class="meta"><h3><a class="plink" href="../hi/model/sayer-knox.html">Sayer Knox</a></h3>
+    <div class="meta"><h2 class="pname"><a class="plink" href="../hi/model/sayer-knox.html">Sayer Knox</a></h2>
       <div class="on-pf">SpicyChat AI पर</div>
       <div class="chips"><span>पुरुष</span><span>गे</span><span>रोमांटिक</span></div>
       <a class="pchat" href="https://spicychat.ai/chat/222bbfee-f74e-4375-ba20-87f6d0991988?ref=mze1zjm" target="_blank" rel="sponsored nofollow noopener">💬 उससे बात करें</a>
@@ -217,7 +233,7 @@
     <a class="pcover" href="../hi/model/nolan-riley.html" aria-label="Nolan Riley"></a>
     <span class="new">नया</span><span class="online"></span>
     <div class="shade"></div>
-    <div class="meta"><h3><a class="plink" href="../hi/model/nolan-riley.html">Nolan Riley</a></h3>
+    <div class="meta"><h2 class="pname"><a class="plink" href="../hi/model/nolan-riley.html">Nolan Riley</a></h2>
       <div class="on-pf">SpicyChat AI पर</div>
       <div class="chips"><span>पुरुष</span><span>ट्रांस</span><span>गे</span></div>
       <a class="pchat" href="https://spicychat.ai/chat/60306c7f-8104-485e-a67b-0548e2378af8?ref=mze1zjm" target="_blank" rel="sponsored nofollow noopener">💬 उससे बात करें</a>
@@ -228,7 +244,7 @@
     <a class="pcover" href="../hi/model/ren-ellery.html" aria-label="Ren Ellery"></a>
     <span class="new">नया</span><span class="online"></span>
     <div class="shade"></div>
-    <div class="meta"><h3><a class="plink" href="../hi/model/ren-ellery.html">Ren Ellery</a></h3>
+    <div class="meta"><h2 class="pname"><a class="plink" href="../hi/model/ren-ellery.html">Ren Ellery</a></h2>
       <div class="on-pf">SpicyChat AI पर</div>
       <div class="chips"><span>पुरुष</span><span>फ़ेमबॉय</span><span>गे</span></div>
       <a class="pchat" href="https://spicychat.ai/chat/ed161a36-e07d-443d-89d9-af965fd38a11?ref=mze1zjm" target="_blank" rel="sponsored nofollow noopener">💬 उससे बात करें</a>
@@ -239,7 +255,7 @@
     <a class="pcover" href="../hi/model/elijah-elf-prince.html" aria-label="Elijah"></a>
     <span class="new">नया</span><span class="online"></span>
     <div class="shade"></div>
-    <div class="meta"><h3><a class="plink" href="../hi/model/elijah-elf-prince.html">Elijah</a></h3>
+    <div class="meta"><h2 class="pname"><a class="plink" href="../hi/model/elijah-elf-prince.html">Elijah</a></h2>
       <div class="on-pf">SpicyChat AI पर</div>
       <div class="chips"><span>पुरुष</span><span>फ़ेमबॉय</span><span>गे</span></div>
       <a class="pchat" href="https://spicychat.ai/chat/12ec288e-6b51-4739-b3ac-3d7e384de771?ref=mze1zjm" target="_blank" rel="sponsored nofollow noopener">💬 उससे बात करें</a>
@@ -250,7 +266,7 @@
     <a class="pcover" href="../hi/model/bennett.html" aria-label="Bennett"></a>
     <span class="new">नया</span><span class="online"></span>
     <div class="shade"></div>
-    <div class="meta"><h3><a class="plink" href="../hi/model/bennett.html">Bennett</a></h3>
+    <div class="meta"><h2 class="pname"><a class="plink" href="../hi/model/bennett.html">Bennett</a></h2>
       <div class="on-pf">SpicyChat AI पर</div>
       <div class="chips"><span>पुरुष</span><span>गे</span><span>पड़ोसन</span></div>
       <a class="pchat" href="https://spicychat.ai/chat/43200a0c-be3a-4044-9fef-a46248e74baa?ref=mze1zjm" target="_blank" rel="sponsored nofollow noopener">💬 उससे बात करें</a>
@@ -261,7 +277,7 @@
     <a class="pcover" href="../hi/model/macon.html" aria-label="Macon"></a>
     <span class="new">नया</span><span class="online"></span>
     <div class="shade"></div>
-    <div class="meta"><h3><a class="plink" href="../hi/model/macon.html">Macon</a></h3>
+    <div class="meta"><h2 class="pname"><a class="plink" href="../hi/model/macon.html">Macon</a></h2>
       <div class="on-pf">SpicyChat AI पर</div>
       <div class="chips"><span>पुरुष</span><span>गे</span><span>जिम ट्रेनर</span></div>
       <a class="pchat" href="https://spicychat.ai/chat/f3a7e516-9fb9-4b5f-aba9-e1db18233ed5?ref=mze1zjm" target="_blank" rel="sponsored nofollow noopener">💬 उससे बात करें</a>
@@ -272,7 +288,7 @@
     <a class="pcover" href="../hi/model/soren-wolf.html" aria-label="Soren"></a>
     <span class="new">नया</span><span class="online"></span>
     <div class="shade"></div>
-    <div class="meta"><h3><a class="plink" href="../hi/model/soren-wolf.html">Soren</a></h3>
+    <div class="meta"><h2 class="pname"><a class="plink" href="../hi/model/soren-wolf.html">Soren</a></h2>
       <div class="on-pf">SpicyChat AI पर</div>
       <div class="chips"><span>पुरुष</span><span>फ़री</span><span>गे</span></div>
       <a class="pchat" href="https://spicychat.ai/chat/4a2ac9e8-fd7b-4eb0-8905-f78c6cfced2d?ref=mze1zjm" target="_blank" rel="sponsored nofollow noopener">💬 उससे बात करें</a>
@@ -283,7 +299,7 @@
     <a class="pcover" href="../hi/model/elliot-professor.html" aria-label="Elliot"></a>
     <span class="new">नया</span><span class="online"></span>
     <div class="shade"></div>
-    <div class="meta"><h3><a class="plink" href="../hi/model/elliot-professor.html">Elliot</a></h3>
+    <div class="meta"><h2 class="pname"><a class="plink" href="../hi/model/elliot-professor.html">Elliot</a></h2>
       <div class="on-pf">SpicyChat AI पर</div>
       <div class="chips"><span>पुरुष</span><span>गे</span><span>प्रोफ़ेसर</span></div>
       <a class="pchat" href="https://spicychat.ai/chat/3c19a936-27a8-4945-ae24-2cda0422b477?ref=mze1zjm" target="_blank" rel="sponsored nofollow noopener">💬 उससे बात करें</a>
@@ -296,128 +312,128 @@
     <a class="pcover" href="../hi/model/scaramouche.html" aria-label="Scaramouche"></a>
     <span class="new">नया</span><span class="online"></span>
     <div class="shade"></div>
-    <div class="meta"><h3><a class="plink" href="../hi/model/scaramouche.html">Scaramouche</a></h3>
+    <div class="meta"><h2 class="pname"><a class="plink" href="../hi/model/scaramouche.html">Scaramouche</a></h2>
       <div class="on-pf">SpicyChat AI पर</div>
       <div class="chips"><span>पुरुष</span><span>बॉयफ़्रेंड</span><span>कॉलेज स्टूडेंट</span></div>
       <a class="pchat" href="https://spicychat.ai/chat/2c0f5f67-dad0-4c24-9bf7-f767d29d5bd5?ref=mze1zjm" target="_blank" rel="sponsored nofollow noopener">💬 उससे बात करें</a>
     </div>
   </article><article class="pcard" data-i="80">
-    <div class="ph" style="background:linear-gradient(135deg,#ff3d8b,#ff8a5c)">C</div><img src="https://cdn.candy.ai/2105870-9ae5a310-43bc-4d0b-bcda-add2e19c9d3d-600x900-webp90" alt="Charles" loading="lazy" onerror="this.remove()">
+    <div class="ph" style="background:linear-gradient(135deg,#ff3d8b,#ff8a5c)">C</div><img src="https://cdn.candy.ai/cdn-cgi/image/width=360,format=webp,quality=80/2105870-9ae5a310-43bc-4d0b-bcda-add2e19c9d3d-600x900-webp90" alt="Charles" loading="lazy" onerror="this.remove()">
     
     <a class="pcover" href="../hi/model/charles-weston.html" aria-label="Charles"></a>
     <span class="new">नया</span><span class="online"></span>
     <div class="shade"></div>
-    <div class="meta"><h3><a class="plink" href="../hi/model/charles-weston.html">Charles</a><span>49</span></h3>
+    <div class="meta"><h2 class="pname"><a class="plink" href="../hi/model/charles-weston.html">Charles</a><span>49</span></h2>
       <div class="on-pf">Candy AI पर</div>
       <div class="chips"><span>पुरुष</span><span>रियलिस्टिक</span><span>बॉयफ़्रेंड</span></div>
       <a class="pchat" href="https://candy.ai/fr/ai-boyfriend/charles-weston?via=ic3p7r" target="_blank" rel="sponsored nofollow noopener">💬 उससे बात करें</a>
     </div>
   </article><article class="pcard" data-i="81">
-    <div class="ph" style="background:linear-gradient(135deg,#ff3d8b,#ff8a5c)">M</div><img src="https://cdn.candy.ai/330515-a6b7cd74-6560-4121-9b5d-41a46ddc0a23-600x900-webp90" alt="Malik" loading="lazy" onerror="this.remove()">
+    <div class="ph" style="background:linear-gradient(135deg,#ff3d8b,#ff8a5c)">M</div><img src="https://cdn.candy.ai/cdn-cgi/image/width=360,format=webp,quality=80/330515-a6b7cd74-6560-4121-9b5d-41a46ddc0a23-600x900-webp90" alt="Malik" loading="lazy" onerror="this.remove()">
     
     <a class="pcover" href="../hi/model/malik-washington.html" aria-label="Malik"></a>
     <span class="new">नया</span><span class="online"></span>
     <div class="shade"></div>
-    <div class="meta"><h3><a class="plink" href="../hi/model/malik-washington.html">Malik</a><span>30</span></h3>
+    <div class="meta"><h2 class="pname"><a class="plink" href="../hi/model/malik-washington.html">Malik</a><span>30</span></h2>
       <div class="on-pf">Candy AI पर</div>
       <div class="chips"><span>पुरुष</span><span>रियलिस्टिक</span><span>बॉयफ़्रेंड</span></div>
       <a class="pchat" href="https://candy.ai/fr/ai-boyfriend/malik-washington?via=ic3p7r" target="_blank" rel="sponsored nofollow noopener">💬 उससे बात करें</a>
     </div>
   </article><article class="pcard" data-i="82">
-    <div class="ph" style="background:linear-gradient(135deg,#ff3d8b,#ff8a5c)">E</div><img src="https://cdn.candy.ai/330509-7525a5f1-0513-4179-9c19-b00259ec8868-600x900-webp90" alt="Erik" loading="lazy" onerror="this.remove()">
+    <div class="ph" style="background:linear-gradient(135deg,#ff3d8b,#ff8a5c)">E</div><img src="https://cdn.candy.ai/cdn-cgi/image/width=360,format=webp,quality=80/330509-7525a5f1-0513-4179-9c19-b00259ec8868-600x900-webp90" alt="Erik" loading="lazy" onerror="this.remove()">
     
     <a class="pcover" href="../hi/model/erik-johansson.html" aria-label="Erik"></a>
     <span class="new">नया</span><span class="online"></span>
     <div class="shade"></div>
-    <div class="meta"><h3><a class="plink" href="../hi/model/erik-johansson.html">Erik</a><span>27</span></h3>
+    <div class="meta"><h2 class="pname"><a class="plink" href="../hi/model/erik-johansson.html">Erik</a><span>27</span></h2>
       <div class="on-pf">Candy AI पर</div>
       <div class="chips"><span>पुरुष</span><span>रियलिस्टिक</span><span>बॉयफ़्रेंड</span></div>
       <a class="pchat" href="https://candy.ai/fr/ai-boyfriend/erik-johansson?via=ic3p7r" target="_blank" rel="sponsored nofollow noopener">💬 उससे बात करें</a>
     </div>
   </article><article class="pcard" data-i="83">
-    <div class="ph" style="background:linear-gradient(135deg,#ff3d8b,#ff8a5c)">J</div><img src="https://cdn.candy.ai/9243930-4ec77652-d617-49a5-bd5e-13e4c20287a2-600x900-webp90" alt="John" loading="lazy" onerror="this.remove()">
+    <div class="ph" style="background:linear-gradient(135deg,#ff3d8b,#ff8a5c)">J</div><img src="https://cdn.candy.ai/cdn-cgi/image/width=360,format=webp,quality=80/9243930-4ec77652-d617-49a5-bd5e-13e4c20287a2-600x900-webp90" alt="John" loading="lazy" onerror="this.remove()">
     
     <a class="pcover" href="../hi/model/john-terry.html" aria-label="John"></a>
     <span class="new">नया</span><span class="online"></span>
     <div class="shade"></div>
-    <div class="meta"><h3><a class="plink" href="../hi/model/john-terry.html">John</a><span>50</span></h3>
+    <div class="meta"><h2 class="pname"><a class="plink" href="../hi/model/john-terry.html">John</a><span>50</span></h2>
       <div class="on-pf">Candy AI पर</div>
       <div class="chips"><span>पुरुष</span><span>रियलिस्टिक</span><span>बॉयफ़्रेंड</span></div>
       <a class="pchat" href="https://candy.ai/fr/ai-boyfriend/john-terry?via=ic3p7r" target="_blank" rel="sponsored nofollow noopener">💬 उससे बात करें</a>
     </div>
   </article><article class="pcard" data-i="84">
-    <div class="ph" style="background:linear-gradient(135deg,#ff3d8b,#ff8a5c)">K</div><img src="https://cdn.candy.ai/330514-3c33591a-c6ce-4988-bbf6-c514fafaeb2f-600x900-webp90" alt="Kenji" loading="lazy" onerror="this.remove()">
+    <div class="ph" style="background:linear-gradient(135deg,#ff3d8b,#ff8a5c)">K</div><img src="https://cdn.candy.ai/cdn-cgi/image/width=360,format=webp,quality=80/330514-3c33591a-c6ce-4988-bbf6-c514fafaeb2f-600x900-webp90" alt="Kenji" loading="lazy" onerror="this.remove()">
     
     <a class="pcover" href="../hi/model/kenji-sato.html" aria-label="Kenji"></a>
     <span class="new">नया</span><span class="online"></span>
     <div class="shade"></div>
-    <div class="meta"><h3><a class="plink" href="../hi/model/kenji-sato.html">Kenji</a><span>33</span></h3>
+    <div class="meta"><h2 class="pname"><a class="plink" href="../hi/model/kenji-sato.html">Kenji</a><span>33</span></h2>
       <div class="on-pf">Candy AI पर</div>
       <div class="chips"><span>पुरुष</span><span>रियलिस्टिक</span><span>बॉयफ़्रेंड</span></div>
       <a class="pchat" href="https://candy.ai/fr/ai-boyfriend/kenji-sato?via=ic3p7r" target="_blank" rel="sponsored nofollow noopener">💬 उससे बात करें</a>
     </div>
   </article><article class="pcard" data-i="85">
-    <div class="ph" style="background:linear-gradient(135deg,#ff3d8b,#ff8a5c)">M</div><img src="https://cdn.candy.ai/13834483-7ca5be62-b6bc-44ad-a282-4f4d6828aeea-600x900-webp90" alt="Marcus" loading="lazy" onerror="this.remove()">
+    <div class="ph" style="background:linear-gradient(135deg,#ff3d8b,#ff8a5c)">M</div><img src="https://cdn.candy.ai/cdn-cgi/image/width=360,format=webp,quality=80/13834483-7ca5be62-b6bc-44ad-a282-4f4d6828aeea-600x900-webp90" alt="Marcus" loading="lazy" onerror="this.remove()">
     
     <a class="pcover" href="../hi/model/marcus-musan.html" aria-label="Marcus"></a>
     <span class="new">नया</span><span class="online"></span>
     <div class="shade"></div>
-    <div class="meta"><h3><a class="plink" href="../hi/model/marcus-musan.html">Marcus</a><span>32</span></h3>
+    <div class="meta"><h2 class="pname"><a class="plink" href="../hi/model/marcus-musan.html">Marcus</a><span>32</span></h2>
       <div class="on-pf">Candy AI पर</div>
       <div class="chips"><span>पुरुष</span><span>रियलिस्टिक</span><span>बॉयफ़्रेंड</span></div>
       <a class="pchat" href="https://candy.ai/fr/ai-boyfriend/marcus-musan?via=ic3p7r" target="_blank" rel="sponsored nofollow noopener">💬 उससे बात करें</a>
     </div>
   </article><article class="pcard" data-i="86">
-    <div class="ph" style="background:linear-gradient(135deg,#ff3d8b,#ff8a5c)">J</div><img src="https://cdn.candy.ai/41988968-51bdd839-ec73-4772-b504-3ae5bd32ef03-600x900-webp90" alt="Jaxon" loading="lazy" onerror="this.remove()">
+    <div class="ph" style="background:linear-gradient(135deg,#ff3d8b,#ff8a5c)">J</div><img src="https://cdn.candy.ai/cdn-cgi/image/width=360,format=webp,quality=80/41988968-51bdd839-ec73-4772-b504-3ae5bd32ef03-600x900-webp90" alt="Jaxon" loading="lazy" onerror="this.remove()">
     
     <a class="pcover" href="../hi/model/jaxon-reed.html" aria-label="Jaxon"></a>
     <span class="new">नया</span><span class="online"></span>
     <div class="shade"></div>
-    <div class="meta"><h3><a class="plink" href="../hi/model/jaxon-reed.html">Jaxon</a><span>32</span></h3>
+    <div class="meta"><h2 class="pname"><a class="plink" href="../hi/model/jaxon-reed.html">Jaxon</a><span>32</span></h2>
       <div class="on-pf">Candy AI पर</div>
       <div class="chips"><span>पुरुष</span><span>रियलिस्टिक</span><span>बॉयफ़्रेंड</span></div>
       <a class="pchat" href="https://candy.ai/fr/ai-boyfriend/jaxon-reed?via=ic3p7r" target="_blank" rel="sponsored nofollow noopener">💬 उससे बात करें</a>
     </div>
   </article><article class="pcard" data-i="87">
-    <div class="ph" style="background:linear-gradient(135deg,#ff3d8b,#ff8a5c)">E</div><img src="https://cdn.candy.ai/11886614-38c7b240-37f9-43ca-b701-5319a02fdd11-600x900-webp90" alt="Ethan" loading="lazy" onerror="this.remove()">
+    <div class="ph" style="background:linear-gradient(135deg,#ff3d8b,#ff8a5c)">E</div><img src="https://cdn.candy.ai/cdn-cgi/image/width=360,format=webp,quality=80/11886614-38c7b240-37f9-43ca-b701-5319a02fdd11-600x900-webp90" alt="Ethan" loading="lazy" onerror="this.remove()">
     
     <a class="pcover" href="../hi/model/ethan-vale.html" aria-label="Ethan"></a>
     <span class="new">नया</span><span class="online"></span>
     <div class="shade"></div>
-    <div class="meta"><h3><a class="plink" href="../hi/model/ethan-vale.html">Ethan</a><span>25</span></h3>
+    <div class="meta"><h2 class="pname"><a class="plink" href="../hi/model/ethan-vale.html">Ethan</a><span>25</span></h2>
       <div class="on-pf">Candy AI पर</div>
       <div class="chips"><span>पुरुष</span><span>रियलिस्टिक</span><span>बॉयफ़्रेंड</span></div>
       <a class="pchat" href="https://candy.ai/fr/ai-boyfriend/ethan-vale?via=ic3p7r" target="_blank" rel="sponsored nofollow noopener">💬 उससे बात करें</a>
     </div>
   </article><article class="pcard" data-i="88">
-    <div class="ph" style="background:linear-gradient(135deg,#ff3d8b,#ff8a5c)">J</div><img src="https://cdn.candy.ai/31924372-1388f444-e83c-4fb4-8ff5-b7f54ba84405-600x900-webp90" alt="Jin" loading="lazy" onerror="this.remove()">
+    <div class="ph" style="background:linear-gradient(135deg,#ff3d8b,#ff8a5c)">J</div><img src="https://cdn.candy.ai/cdn-cgi/image/width=360,format=webp,quality=80/31924372-1388f444-e83c-4fb4-8ff5-b7f54ba84405-600x900-webp90" alt="Jin" loading="lazy" onerror="this.remove()">
     
     <a class="pcover" href="../hi/model/jin-park.html" aria-label="Jin"></a>
     <span class="new">नया</span><span class="online"></span>
     <div class="shade"></div>
-    <div class="meta"><h3><a class="plink" href="../hi/model/jin-park.html">Jin</a><span>32</span></h3>
+    <div class="meta"><h2 class="pname"><a class="plink" href="../hi/model/jin-park.html">Jin</a><span>32</span></h2>
       <div class="on-pf">Candy AI पर</div>
       <div class="chips"><span>पुरुष</span><span>रियलिस्टिक</span><span>बॉयफ़्रेंड</span></div>
       <a class="pchat" href="https://candy.ai/fr/ai-boyfriend/jin-park?via=ic3p7r" target="_blank" rel="sponsored nofollow noopener">💬 उससे बात करें</a>
     </div>
   </article><article class="pcard" data-i="89">
-    <div class="ph" style="background:linear-gradient(135deg,#ff3d8b,#ff8a5c)">R</div><img src="https://cdn.candy.ai/330516-f3b6adbc-3eb9-4fe5-9a02-7ba2e064d8b9-600x900-webp90" alt="Rafael" loading="lazy" onerror="this.remove()">
+    <div class="ph" style="background:linear-gradient(135deg,#ff3d8b,#ff8a5c)">R</div><img src="https://cdn.candy.ai/cdn-cgi/image/width=360,format=webp,quality=80/330516-f3b6adbc-3eb9-4fe5-9a02-7ba2e064d8b9-600x900-webp90" alt="Rafael" loading="lazy" onerror="this.remove()">
     
     <a class="pcover" href="../hi/model/rafael-mendoza.html" aria-label="Rafael"></a>
     <span class="new">नया</span><span class="online"></span>
     <div class="shade"></div>
-    <div class="meta"><h3><a class="plink" href="../hi/model/rafael-mendoza.html">Rafael</a><span>32</span></h3>
+    <div class="meta"><h2 class="pname"><a class="plink" href="../hi/model/rafael-mendoza.html">Rafael</a><span>32</span></h2>
       <div class="on-pf">Candy AI पर</div>
       <div class="chips"><span>पुरुष</span><span>रियलिस्टिक</span><span>बॉयफ़्रेंड</span></div>
       <a class="pchat" href="https://candy.ai/fr/ai-boyfriend/rafael-mendoza?via=ic3p7r" target="_blank" rel="sponsored nofollow noopener">💬 उससे बात करें</a>
     </div>
   </article><article class="pcard" data-i="91">
-    <div class="ph" style="background:linear-gradient(135deg,#ff3d8b,#ff8a5c)">J</div><img src="https://cdn.candy.ai/13073782-9f3ac7ed-aa3b-4a40-bb1e-4ec214634bb0-600x900-webp90" alt="Jack" loading="lazy" onerror="this.remove()">
+    <div class="ph" style="background:linear-gradient(135deg,#ff3d8b,#ff8a5c)">J</div><img src="https://cdn.candy.ai/cdn-cgi/image/width=360,format=webp,quality=80/13073782-9f3ac7ed-aa3b-4a40-bb1e-4ec214634bb0-600x900-webp90" alt="Jack" loading="lazy" onerror="this.remove()">
     
     <a class="pcover" href="../hi/model/jack-blackwood.html" aria-label="Jack"></a>
     <span class="new">नया</span><span class="online"></span>
     <div class="shade"></div>
-    <div class="meta"><h3><a class="plink" href="../hi/model/jack-blackwood.html">Jack</a><span>35</span></h3>
+    <div class="meta"><h2 class="pname"><a class="plink" href="../hi/model/jack-blackwood.html">Jack</a><span>35</span></h2>
       <div class="on-pf">Candy AI पर</div>
       <div class="chips"><span>पुरुष</span><span>रियलिस्टिक</span><span>बॉयफ़्रेंड</span></div>
       <a class="pchat" href="https://candy.ai/fr/ai-boyfriend/jack-blackwood?via=ic3p7r" target="_blank" rel="sponsored nofollow noopener">💬 उससे बात करें</a>
@@ -463,28 +479,28 @@
   <div class="wrap cols">
     <div><a class="logo" href="../hi/index.html">best-ai-<span class="grad">nsfw-bots</span></a>
       <p class="fdesc">केवल 18+ · सभी किरदार काल्पनिक वयस्क हैं · इसमें एफ़िलिएट लिंक हैं</p></div>
-    <div><h4>देखें</h4>
+    <div><h2 class="fh">देखें</h2>
       <a href="../hi/index.html">सभी</a><a href="../hi/women.html">महिलाएँ</a><a href="../hi/men.html">पुरुष</a><a href="../hi/anime.html">एनीमे</a><a href="../hi/platforms.html">टॉप प्लेटफ़ॉर्म</a>
       <a href="../hi/tags.html">श्रेणियाँ</a><a href="../hi/index.html#new">नए</a></div>
-    <div><h4>साइट</h4>
+    <div><h2 class="fh">साइट</h2>
       <a href="../hi/how-we-rate.html">हम रेटिंग कैसे देते हैं</a><a href="../hi/data.html">डेटा</a>
       <a href="../hi/sitemap.html">साइटमैप</a><a href="../hi/contact.html">संपर्क</a></div>
-    <div><h4>कानूनी</h4><a href="../hi/legal/terms.html">सेवा की शर्तें</a><a href="../hi/legal/cookies.html">कुकी नीति</a><a href="../hi/legal/dmca.html">कॉपीराइट / DMCA</a><a href="../hi/legal/privacy.html">गोपनीयता नीति</a><a href="../hi/legal/ai-disclosure.html">AI पारदर्शिता</a><a href="../hi/legal/legal-notice.html">कानूनी सूचना</a></div>
-    <div><h4>भाषाएँ</h4><a href="../men.html" hreflang="en" lang="en">English</a><a href="../fr/men.html" hreflang="fr" lang="fr">Français</a><a href="../es/men.html" hreflang="es" lang="es">Español</a><a href="../de/men.html" hreflang="de" lang="de">Deutsch</a><a href="../pt/men.html" hreflang="pt" lang="pt">Português</a><a href="../hi/men.html" hreflang="hi" lang="hi">हिन्दी</a></div>
+    <div><h2 class="fh">कानूनी</h2><a href="../hi/legal/terms.html">सेवा की शर्तें</a><a href="../hi/legal/cookies.html">कुकी नीति</a><a href="../hi/legal/dmca.html">कॉपीराइट / DMCA</a><a href="../hi/legal/privacy.html">गोपनीयता नीति</a><a href="../hi/legal/ai-disclosure.html">AI पारदर्शिता</a><a href="../hi/legal/legal-notice.html">कानूनी सूचना</a></div>
+    <div><h2 class="fh">भाषाएँ</h2><a href="../men.html" hreflang="en" lang="en">English</a><a href="../fr/men.html" hreflang="fr" lang="fr">Français</a><a href="../es/men.html" hreflang="es" lang="es">Español</a><a href="../de/men.html" hreflang="de" lang="de">Deutsch</a><a href="../pt/men.html" hreflang="pt" lang="pt">Português</a><a href="../hi/men.html" hreflang="hi" lang="hi">हिन्दी</a></div>
   </div>
   <div class="wrap copy">© 2026 best-ai-nsfw-bots.com</div>
 </footer>
 
 <script>var PAGE_LANG="hi",ROOT="../",LROOT="../hi/",PAGE_BASE="men";</script>
-<script src="../assets/data.js"></script>
-<script src="../assets/data-candy.js"></script>
-<script src="../assets/data-spicy.js"></script>
-<script src="../assets/i18n.js"></script>
-<script src="../assets/i18n-pages.js"></script>
-<script src="../assets/i18n-tags.js"></script>
-<script src="../assets/i18n-tagpage.js"></script>
-<script src="../assets/i18n-extra.js"></script>
-<script src="../assets/app.js"></script>
+<script src="../assets/data.js?v=2a947879"></script>
+<script src="../assets/data-candy.js?v=2a947879"></script>
+<script src="../assets/data-spicy.js?v=2a947879"></script>
+<script src="../assets/i18n.js?v=2a947879"></script>
+<script src="../assets/i18n-pages.js?v=2a947879"></script>
+<script src="../assets/i18n-tags.js?v=2a947879"></script>
+<script src="../assets/i18n-tagpage.js?v=2a947879"></script>
+<script src="../assets/i18n-extra.js?v=2a947879"></script>
+<script src="../assets/app.js?v=2a947879"></script>
 <script>boot("home");</script>
 </body>
 </html>

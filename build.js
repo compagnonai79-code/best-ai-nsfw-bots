@@ -10,6 +10,7 @@ const NOIMG = "\n;/* images not uploaded yet → placeholder */\nfor (const p of
 const readRaw = f => fs.readFileSync(path.join(SRC, f), "utf8");
 let IMG_OK = [];
 const read = f => f === "data.js" ? readRaw(f) + `\n;const IMG_OK = ${JSON.stringify(IMG_OK)};` + NOIMG : readRaw(f);
+const ASSET_V = require("crypto").createHash("md5").update(["fonts.css","style.css","data.js","data-candy.js","data-spicy.js","i18n.js","i18n-pages.js","i18n-tags.js","i18n-tagpage.js","i18n-extra.js","app.js"].map(f => fs.readFileSync(path.join(__dirname, "src", f), "utf8")).join("")).digest("hex").slice(0, 8);
 const CLIENT = ["data.js", "data-candy.js", "data-spicy.js", "i18n.js", "i18n-pages.js", "i18n-tags.js", "i18n-tagpage.js", "i18n-extra.js", "app.js"];
 
 /* Load the client scripts in a sandbox for one language */
@@ -18,7 +19,7 @@ function context(lang) {
   const ctx = { PAGE_LANG: lang, console, Date, URLSearchParams };
   vm.createContext(ctx);
   vm.runInContext(CLIENT.map(read).join("\n;\n") +
-    "\n;this.X={SITE,PLATFORMS,PLATFORM_DATA,PROFILES,PROMO,OFFER,offerBar,offerBox,NEW_DAYS,LANGS,ui,tr,esc,slug,isNew,newCount,tagCount,ALL_PROFILE_TAGS,TAG_GROUPS,ALL_TAGS,profileCard,pickCard,platformCard,visual,ctaLink,girlUrl,tagUrl,inBase,byNew,bioOf,linkFor,withAge,topList,bySel,pagerHtml,PER_PAGE,girlId,plUrl,pfKey,gridHtml,get LANG(){return LANG}};", ctx);
+    "\n;this.X={SITE,PLATFORMS,PLATFORM_DATA,PROFILES,PROMO,OFFER,offerBar,offerBox,NEW_DAYS,LANGS,ui,tr,esc,slug,isNew,newCount,tagCount,ALL_PROFILE_TAGS,TAG_GROUPS,ALL_TAGS,profileCard,pickCard,platformCard,visual,ctaLink,girlUrl,tagUrl,inBase,byNew,bioOf,linkFor,withAge,topList,bySel,pagerHtml,PER_PAGE,girlId,plUrl,pfKey,gridHtml,filterBarHtml,thumb,get LANG(){return LANG}};", ctx);
   ctx.X._ctx = ctx;
   return ctx.X;
 }
@@ -116,7 +117,8 @@ ${o.image ? "" : '<meta property="og:image:width" content="1200">\n<meta propert
 <link rel="manifest" href="/site.webmanifest">
 <meta name="theme-color" content="#0b0a12">
 <link rel="preload" href="${root}assets/fonts/inter-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin>
-<link rel="stylesheet" href="${root}assets/style.css">
+<link rel="preload" href="${root}assets/fonts/space-grotesk-latin-700-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="${root}assets/style.css?v=${ASSET_V}">
 </head>
 <body>
 
@@ -167,21 +169,21 @@ ${o.modal ? `<div class="overlay" id="profile">
   <div class="wrap cols">
     <div><a class="logo" href="${L("index.html")}">best-ai-<span class="grad">nsfw-bots</span></a>
       <p class="fdesc">${e(u("footer"))}</p></div>
-    <div><h4>${e(u("ft_explore"))}</h4>
+    <div><h2 class="fh">${e(u("ft_explore"))}</h2>
       <a href="${L("index.html")}">${e(u("nav_all"))}</a><a href="${L("women.html")}">${e(u("nav_women"))}</a><a href="${L("men.html")}">${e(u("nav_men"))}</a><a href="${L("anime.html")}">${e(u("nav_anime"))}</a><a href="${L("platforms.html")}">${e(u("nav_platforms"))}</a>
       <a href="${L("tags.html")}">${e(u("nav_tags"))}</a><a href="${L("index.html#new")}">${e(u("nav_new"))}</a></div>
-    <div><h4>${e(u("ft_site"))}</h4>
+    <div><h2 class="fh">${e(u("ft_site"))}</h2>
       <a href="${L("how-we-rate.html")}">${e(u("nav_how"))}</a><a href="${L("data.html")}">${e(u("nav_data"))}</a>
       <a href="${L("sitemap.html")}">${e(u("nav_sitemap"))}</a><a href="${L("contact.html")}">${e(u("nav_contact"))}</a></div>
-    <div><h4>${e(u("ft_legal"))}</h4>${legalLinks}</div>
-    <div><h4>${e(u("ft_lang"))}</h4>${LANG_LIST.map(l =>
+    <div><h2 class="fh">${e(u("ft_legal"))}</h2>${legalLinks}</div>
+    <div><h2 class="fh">${e(u("ft_lang"))}</h2>${LANG_LIST.map(l =>
       `<a href="${root + prefix(l) + (altLangs.includes(l) ? file : "index.html")}" hreflang="${l}" lang="${l}">${LANGS[l]}</a>`).join("")}</div>
   </div>
   <div class="wrap copy">© ${new Date().getFullYear()} ${SITE.domain}</div>
 </footer>
 
 <script>var PAGE_LANG="${lang}",ROOT="${root}",LROOT="${lr}"${o.base ? `,PAGE_BASE="${o.base}"` : ""};</script>
-${CLIENT.map(f => `<script src="${root}assets/${f}"></script>`).join("\n")}
+${CLIENT.map(f => `<script src="${root}assets/${f}?v=${ASSET_V}"></script>`).join("\n")}
 <script>boot("${o.page}");</script>
 </body>
 </html>`;
@@ -201,7 +203,7 @@ for (const [file, base] of [["index.html",""],["women.html","women"],["men.html"
   const recent = [...list].sort((a,b) => b.added.localeCompare(a.added) || (!!b.img - !!a.img)).slice(0, 12);
   const v = { site: SITE.domain, n: X.PROFILES.length, k: new Set(X.PROFILES.map(p => p.platform)).size, c: X.ALL_TAGS.length };
   const faq = base ? [] : [1,2,3,4,5,6].map(i => [u("hq" + i, v), u("ha" + i, v)]);
-  const thumb = p => `<a class="rc" href="${X.girlUrl(p)}"><span class="rc-img">${X.visual(p.img, X.PLATFORMS[p.platform].color, p.name[0], p.name)}</span>
+  const thumb = p => `<a class="rc" href="${X.girlUrl(p)}"><span class="rc-img">${X.visual(X.thumb(p.img), X.PLATFORMS[p.platform].color, p.name[0], p.name)}</span>
       <span class="rc-t"><b>${e(p.name)}</b><small>${e(X.PLATFORMS[p.platform].name)}</small></span></a>`;
   return { page:"home", nav: base || "home", base, modal:true, title:u("meta_home_t" + k), desc:u("meta_home_d" + k), body: `
   <section class="hero">
@@ -213,12 +215,12 @@ for (const [file, base] of [["index.html",""],["women.html","women"],["men.html"
     <div class="t10-wrap"><button class="t10-arr prev" type="button" aria-label="‹" hidden>‹</button>
     <ol class="t10" id="t10">${top.map((p, i) => `<li><span class="t10-n">${i + 1}</span>${thumb(p)}</li>`).join("")}</ol>
     <button class="t10-arr next" type="button" aria-label="›">›</button></div></section>` : ""}
-  <div class="tags" id="tags">${popular.slice(0, 12).map(t => `<a class="tag" href="${X.tagUrl(t)}">${e(X.tr(t))}<small>${cnt(t)}</small></a>`).join("")}</div>
+  <div class="tags" id="tags">${X.filterBarHtml(list)}</div>
   <p class="all-tags"><a href="tags.html">${e(u("all_tags_link"))}</a></p>
   <div class="toolbar">
     <span class="count" id="count"><b>${list.length}</b> ${e(u("count", {n:""}).trim())}</span>
     <div class="stabs" id="sort" role="tablist">${[["sel","sort_sel"],["new","sort_new_t"],["name","sort_az"]].map(([s2, key], i) =>
-      `<button type="button" data-s="${s2}" class="${i ? "" : "on"}">${e(u(key))}</button>`).join("")}</div>
+      `<button type="button" role="tab" aria-selected="${i ? "false" : "true"}" data-s="${s2}" class="${i ? "" : "on"}">${e(u(key))}</button>`).join("")}</div>
   </div>
   <div class="pgrid" id="grid">${X.gridHtml(list.slice(0, X.PER_PAGE))}</div>
   <nav class="pager" id="pager" aria-label="Pagination">${pages > 1 ? X.pagerHtml(1, pages) : ""}</nav>
@@ -313,7 +315,7 @@ for (const t of base.ALL_TAGS) pages.push({ file: "tag/" + base.slug(t) + ".html
       <div class="tp-grid">${[1,2,3,4].map(i => `<div><h3>${e(u("tp_e" + i + "_t"))}</h3><p>${e(u("tp_e" + i, v))}</p></div>`).join("")}</div>
       <p class="hero-links" style="text-align:left"><a href="../data.html">${e(u("nav_data"))} →</a> · <a href="../how-we-rate.html">${e(u("nav_how"))} →</a></p></section>
     <section class="info"><h2>${e(u("tp_pl_t", v))}</h2>
-      <div class="tablewrap"><table class="data" style="min-width:0"><thead><tr><th>${e(u("col_platform"))}</th><th>${e(u("tp_col_n", v))}</th><th>${e(u("col_score"))}</th><th></th></tr></thead><tbody>
+      <div class="tablewrap"><table class="data" style="min-width:0"><thead><tr><th>${e(u("col_platform"))}</th><th>${e(u("tp_col_n", v))}</th><th>${e(u("col_score"))}</th><th><span class="vh">${e(u("tp_go"))}</span></th></tr></thead><tbody>
       ${pfs.map(([k, c]) => { const P = X.PLATFORMS[k]; return `<tr><td><strong>${tpfOk(X, t, k) ? `<a href="${X.slug(t)}/${k}.html">${e(P.name)}</a>` : P.url ? `<a href="../platform/${k}.html">${e(P.name)}</a>` : e(P.name)}</strong></td><td>${c}</td><td>★ ${P.rating}</td><td>${X.ctaLink(P, e(u("tp_go")) + " →", "tbl-link")}</td></tr>`; }).join("")}
       </tbody></table></div>
       <p class="hero-links" style="text-align:left"><a href="../platforms.html">${e(u("m_see_pl"))}</a></p></section>
@@ -396,7 +398,7 @@ for (const g0 of base.PROFILES) pages.push({ file: "model/" + (g0.id || base.slu
       ${cons.length ? `<div><h3 class="con-h">${e(u("rv_cons"))}</h3><ul class="cons">${cons.map(k => `<li>${e(u(k, rv))}</li>`).join("")}</ul></div>` : ""}</div></section>
 
   <section class="info"><h2>${e(u("cmp_t", v))}</h2>
-    <div class="tablewrap"><table class="data cmp" style="min-width:0"><thead><tr><th>${e(u("cmp_name"))}</th><th>${e(u("col_platform"))}</th><th>${e(u("grp_age"))}</th><th>${e(u("cmp_common"))}</th><th></th></tr></thead><tbody>
+    <div class="tablewrap"><table class="data cmp" style="min-width:0"><thead><tr><th>${e(u("cmp_name"))}</th><th>${e(u("col_platform"))}</th><th>${e(u("grp_age"))}</th><th>${e(u("cmp_common"))}</th><th><span class="vh">${e(u("tp_go"))}</span></th></tr></thead><tbody>
     ${cmpRows.map(([p, common], i) => `<tr${i ? "" : ' class="me"'}><td>${i ? `<a href="${X.girlUrl(p)}"><strong>${e(p.name)}</strong></a>` : `<strong>${e(p.name)}</strong> <small>(${e(u("cmp_this"))})</small>`}</td>
       <td>${e(X.PLATFORMS[p.platform].name)}</td><td>${p.age ? e(String(p.age)) : "–"}</td>
       <td>${i ? `${common.length} <small>${e(common.slice(0, 3).map(X.tr).join(", "))}</small>` : "–"}</td>
@@ -410,7 +412,7 @@ for (const g0 of base.PROFILES) pages.push({ file: "model/" + (g0.id || base.slu
   <div class="pgrid sim4" id="grid">${similar.map(X.profileCard).join("")}</div>
   <p class="all-tags"><a href="../tag/${X.slug(main)}.html">${e(u("m_more_tag", {tag: X.tr(main)}))}</a></p>
 
-  <div class="mbar"><span class="mb-img">${X.visual(g.img, P.color, g.name[0], g.name)}</span>
+  <div class="mbar"><span class="mb-img">${X.visual(X.thumb(g.img), P.color, g.name[0], g.name)}</span>
     <span class="mb-txt"><b>${e(g.name)}</b><small>${e(P.name)}</small></span>${cta("btn btn-main")}</div>
   ${ldTag([bcLd(X, lang, [[u("bc_home"), "index.html"], ...(P.url ? [[P.name, "platform/" + g.platform + ".html"]] : []), [X.tr(main), "tag/" + X.slug(main) + ".html"], [g.name, "model/" + X.girlId(g) + ".html"]]),
     {"@context":"https://schema.org","@type":"Article","headline":u("model_t", {name:g.name, p:P.name, agep: g.age ? u("age_sfx", {age: g.age}) : ""}),"description":X.bioOf(g).slice(0, 300),
@@ -545,7 +547,7 @@ pages.push({ file: "data.html", build: (X) => {
   const cols = ["col_platform","col_score","col_free","col_price","col_images","col_voice","col_calls","col_video","col_group","col_app","col_discreet","col_crypto","col_checked"];
   return { page:"data", title:u("meta_data_t"), desc:u("meta_data_d"), body: `
   <section class="hero"><h1>${u("data_h1")}</h1><p>${e(u("data_sub"))}</p></section>
-  <div class="tablewrap"><table class="data"><thead><tr>${cols.map(c => `<th>${e(u(c))}</th>`).join("")}<th></th></tr></thead><tbody>${rows}</tbody></table></div>
+  <div class="tablewrap"><table class="data"><thead><tr>${cols.map(c => `<th>${e(u(c))}</th>`).join("")}<th><span class="vh">${e(u("tp_go"))}</span></th></tr></thead><tbody>${rows}</tbody></table></div>
   <p class="data-note">${e(u("data_note"))}</p>
   <p class="hero-links"><a href="ROOT_PLACEHOLDERdata.csv" download>⬇ ${e(u("data_csv"))}</a> · <a href="how-we-rate.html">${e(u("data_how"))}</a></p>` };
 }});
@@ -621,6 +623,18 @@ for (const lang of LANG_LIST) {
 for (const f of CLIENT) write("assets/" + f, read(f));
 write("assets/style.css", read("fonts.css") + "\n" + read("style.css"));   /* self-hosted fonts first (GDPR: no Google Fonts request) */
 fs.cpSync(path.join(__dirname, "fonts"), path.join(OUT, "assets", "fonts"), { recursive: true });
+/* Cloudflare Pages cache rules (assets are versioned with ?v=) */
+write("_headers", `/assets/*
+  Cache-Control: public, max-age=31536000, immutable
+/favicon.ico
+  Cache-Control: public, max-age=604800
+/apple-touch-icon.png
+  Cache-Control: public, max-age=604800
+/icon-*
+  Cache-Control: public, max-age=604800
+/images/*
+  Cache-Control: public, max-age=604800
+`);
 /* favicon & app icons (icons/) → site root */
 fs.cpSync(path.join(__dirname, "icons"), OUT, { recursive: true });
 if (fs.existsSync(path.join(__dirname, "images"))) fs.cpSync(path.join(__dirname, "images"), path.join(OUT, "images"), { recursive: true });
