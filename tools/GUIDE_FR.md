@@ -56,6 +56,16 @@ Règles :
 
 > Le nom de l'URL vient du nom anglais : `Very Old` → `tag/very-old.html`. Choisis-le bien dès le départ, le changer plus tard casse les liens déjà indexés.
 
+## 2b. Mettre une catégorie dans le filtre « Âge »
+Le filtre « Âge » de la page d'accueil montre les tranches d'âge (18-21, 22-25…) **plus** les catégories listées dans `age` de `TAG_GROUPS`.
+Pour y mettre une catégorie : dans `src/data.js`, **coupe** son nom de son groupe actuel et **colle-le** dans `age` :
+```
+  age:         ["Old","Very Old"],
+  …
+  relationship:["Best Friend", … ,"Neighbor","One Night Stand", …],
+```
+Une catégorie ne doit être que dans **un seul** groupe. Sa page et son URL ne changent pas ; sur la page « Catégories », elle apparaît dans la section « Âge ».
+
 ## 3. Ajouter un personnage SpicyChat
 Dans `src/data-spicy.js`, copie un bloc existant juste avant `];` d'une des deux listes, et adapte :
 ```

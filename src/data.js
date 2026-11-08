@@ -128,6 +128,7 @@ const PROMO = {
    Every tag used on a profile must be listed here (build.js warns otherwise).
    Translations: src/i18n-tags.js. A category with 0 profiles gets a page that is not indexed until you add a profile. */
 const TAG_GROUPS = {
+  age:         [],   /* tags shown in the "Age" filter next to the age ranges (e.g. "Old","Very Old") */
   style:       ["2.5D","Anime","Cartoon","Hentai","Realistic"],
   vibe:        ["Alt","Cosplay","E-girl","Emo","Goth","Gyaru","Kawaii","Punk","Tomboy","Waifu"],
   personality: ["Bad Girl","Brat","Caring","Clingy","Dandere","Dominant","Experienced","Flirty","Horny","Innocent","Jealous","Kuudere","Loyal","Mean","Mysterious","Nympho","Playful","Rebel","Romantic","Sadistic","Seductress","Shy","Submissive","Sweet","Temptress","Tsundere","Virgin","Yandere"],

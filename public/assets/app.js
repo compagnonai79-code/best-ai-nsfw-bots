@@ -256,11 +256,13 @@ function initHome() {
   const qa = new URLSearchParams(location.search).get("app"); if (qa && PLATFORMS[qa]) sel.app.add(qa);
   let onlyNew = location.hash === "#new", openG = null, showMore = false, sortMode = onlyNew ? "new" : "sel", page = 1;
 
-  const inAge = (p, k) => { const r = AGE_RANGES.find(x => x[0] === k); return p.age && p.age >= r[1] && p.age <= r[2]; };
+  const isRange = k => AGE_RANGES.some(x => x[0] === k);
+  const inAge = (p, k) => { const r = AGE_RANGES.find(x => x[0] === k); return r ? !!p.age && p.age >= r[1] && p.age <= r[2] : p.tags.includes(k); };
   const matchGroup = (p, g) => !sel[g].size || [...sel[g]].some(v =>
     g === "age" ? inAge(p, v) : g === "app" ? p.platform === v : p.tags.includes(v));
   const options = g => {
-    if (g === "age") return AGE_RANGES.map(r => [r[0], r[0], LIST.filter(p => inAge(p, r[0])).length]);
+    if (g === "age") return [...AGE_RANGES.map(r => [r[0], r[0], LIST.filter(p => inAge(p, r[0])).length]),
+      ...(TAG_GROUPS.age || []).map(t => [t, tr(t), tagCount(t)])];
     if (g === "app") return Object.keys(PLATFORMS).map(k => [k, PLATFORMS[k].name, LIST.filter(p => p.platform === k).length]);
     return TAG_GROUPS[g].map(t => [t, tr(t), tagCount(t)]).sort((a, b) => a[1].localeCompare(b[1], LANG));
   };
@@ -275,7 +277,7 @@ function initHome() {
   };
   const renderTags = () => {
     const chips = Object.entries(sel).flatMap(([g, set]) => [...set].map(v => [g, v,
-      g === "app" ? PLATFORMS[v].name : g === "age" ? ui("grp_age") + " " + v : tr(v)]));
+      g === "app" ? PLATFORMS[v].name : g === "age" && isRange(v) ? ui("grp_age") + " " + v : tr(v)]));
     $("#tags").innerHTML = `<div class="filters">${MAIN.map(dropdown).join("")}
         <button class="fmore${showMore ? " on" : ""}" type="button" id="fmore">${esc(ui(showMore ? "f_less" : "f_more"))}</button></div>
       ${showMore ? `<div class="filters more">${MORE.map(dropdown).join("")}</div>` : ""}
