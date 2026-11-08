@@ -21,6 +21,8 @@ const CANDY_PROFILES = [
 "Image generation",
 "Voice",
 "Video"
+,
+"Chubby"
 ]},
 {"id": "sophie-dee", "name": "Sophie Dee", "platform": "candy", "added": "2026-11-04", "img": "https://cdn.candy.ai/610844857-75185a65-787c-43c2-aff8-6103c727aa29-600x900-webp90", "sfw": false, "creator": true, "url": "https://candy.ai/fr/ai-girlfriend/sophie-dee", "tags": [
 "Female",
@@ -30,6 +32,8 @@ const CANDY_PROFILES = [
 "Image generation",
 "Voice",
 "Video"
+,
+"Chubby"
 ]},
 {"id": "mia-malkova", "name": "Mia Malkova", "platform": "candy", "added": "2026-11-04", "img": "https://cdn.candy.ai/610858081-0b222b2a-5923-4714-84bf-f0f8d0b9fbe0-600x900-webp90", "sfw": false, "creator": true, "url": "https://candy.ai/fr/ai-girlfriend/mia-malkova", "tags": [
 "Female",
@@ -44,6 +48,8 @@ const CANDY_PROFILES = [
 "Image generation",
 "Voice",
 "Video"
+,
+"Chubby"
 ]},
 {"id": "riley-reid", "name": "Riley Reid", "platform": "candy", "added": "2026-11-04", "img": "https://cdn.candy.ai/sfw-profile-676319764-44ea6125-e1a9-4284-ad8f-0f959c1b41d2-600x900-webp90", "sfw": true, "creator": true, "video": "https://cdn.candy.ai/sfw-profile-video-sfw-profile-video-676319764-f93a3de8-1cd8-4f61-a5dc-cd4e9675d209-h264",
 "url": "https://candy.ai/fr/ai-girlfriend/riley-reid", "tags": [
@@ -55,6 +61,8 @@ const CANDY_PROFILES = [
 "Image generation",
 "Voice",
 "Video"
+,
+"Muscle"
 ]},
 {"id": "ava-starz", "name": "Ava Starz", "platform": "candy", "added": "2026-11-04", "img": "https://cdn.candy.ai/714441510-0360263c-7c21-4504-a1c8-29411d56e666-600x900-webp90", "sfw": false, "creator": true, "url": "https://candy.ai/fr/ai-girlfriend/ava-starz", "tags": [
 "Female",
@@ -81,6 +89,8 @@ const CANDY_PROFILES = [
 "Image generation",
 "Voice",
 "Video"
+,
+"Petite"
 ]},
 {"id": "bonnie-blue", "name": "Bonnie Blue", "platform": "candy", "added": "2026-11-04", "img": "https://cdn.candy.ai/703513443-68ee1faf-118f-4821-bf9b-e29e9f791928-600x900-webp90", "sfw": false, "creator": true, "url": "https://candy.ai/fr/ai-girlfriend/bonnie-blue", "tags": [
 "Female",
@@ -93,6 +103,8 @@ const CANDY_PROFILES = [
 "Image generation",
 "Voice",
 "Video"
+,
+"Muscle"
 ]},
 {"id": "renae-erica", "name": "Renae Erica", "platform": "candy", "added": "2026-11-04", "img": "https://cdn.candy.ai/610853988-b6e7be45-8595-41ab-b426-629505240f63-600x900-webp90", "sfw": false, "creator": true, "url": "https://candy.ai/fr/ai-girlfriend/renae-erica", "tags": [
 "Female",
@@ -116,6 +128,10 @@ const CANDY_PROFILES = [
 "Image generation",
 "Voice",
 "Video"
+,
+"Muscle"
+,
+"Chubby"
 ]},
 {"id": "celine", "name": "Celine", "platform": "candy", "added": "2026-11-04", "img": "https://cdn.candy.ai/645919414-295d300f-9870-4db2-b2f3-231b358202ff-600x900-webp90", "sfw": false, "creator": true, "url": "https://candy.ai/fr/ai-girlfriend/celine", "tags": [
 "Female",
@@ -128,6 +144,8 @@ const CANDY_PROFILES = [
 "Image generation",
 "Voice",
 "Video"
+,
+"Petite"
 ]},
 {"id": "brianna-howe", "name": "Brianna Howe", "platform": "candy", "added": "2026-11-04", "img": "https://cdn.candy.ai/663716673-4c3c6fef-119e-4569-8465-64e709899ab7-600x900-webp90", "sfw": false, "creator": true, "url": "https://candy.ai/fr/ai-girlfriend/brianna-howe", "tags": [
 "Female",
@@ -138,6 +156,8 @@ const CANDY_PROFILES = [
 "Image generation",
 "Voice",
 "Video"
+,
+"Chubby"
 ]},
 {"id": "alexis-ivyedge", "name": "Alexis Ivyedge", "platform": "candy", "added": "2026-11-04", "img": "https://cdn.candy.ai/sfw-profile-718176323-58e5d7e7-bc6d-40a1-afb9-85d4d665bb7c-600x900-webp90", "sfw": true, "creator": true, "video": "https://cdn.candy.ai/sfw-profile-video-sfw-profile-video-718176323-758d5114-78ba-40cf-95ec-3476aa53e4d0-h264",
 "url": "https://candy.ai/fr/ai-girlfriend/alexis-ivyedge", "tags": [
@@ -150,6 +170,8 @@ const CANDY_PROFILES = [
 "Image generation",
 "Voice",
 "Video"
+,
+"Petite"
 ]},
 {"id": "mathilde-tantot", "name": "Mathilde Tantot", "platform": "candy", "added": "2026-11-04", "img": "https://cdn.candy.ai/sfw-profile-722736152-e3bebf89-78a5-4fe7-993c-bd3a0acba901-600x900-webp90", "sfw": true, "creator": true, "video": "https://cdn.candy.ai/sfw-profile-video-sfw-profile-video-722736152-035e4f1f-99f8-409b-b823-f2dce4f99eaf-h264",
 "url": "https://candy.ai/fr/ai-girlfriend/mathilde-tantot", "tags": [
@@ -178,6 +200,8 @@ const CANDY_PROFILES = [
 "Image generation",
 "Voice",
 "Video"
+,
+"Petite"
 ]},
 {"id": "emma-hix", "name": "Emma Hix", "platform": "candy", "added": "2026-11-04", "img": "https://cdn.candy.ai/sfw-profile-731776937-eb7c89c6-df4e-40c8-8ae1-35eb9274d183-600x900-webp90", "sfw": true, "creator": true, "video": "https://cdn.candy.ai/sfw-profile-video-sfw-profile-video-731776937-6380de9b-6985-45ae-9814-d18c8c461d8d-h264",
 "url": "https://candy.ai/fr/ai-girlfriend/emma-hix", "tags": [
@@ -977,6 +1001,8 @@ const CANDY_PROFILES = [
 "Image generation",
 "Voice",
 "Video"
+,
+"Muscle"
 ], "bio": {"pt": "Charles Weston, um empresário distinto e rico, adora lugares de prestígio e carros clássicos. Ele encarna charme e sofisticação aonde quer que vá.", "es": "Charles Weston, un empresario distinguido y adinerado, adora los lugares prestigiosos y los coches clásicos. Encarna el encanto y la sofisticación allá donde va.", "en": "Charles Weston, a distinguished and wealthy businessman, loves prestigious venues and classic cars. He embodies charm and sophistication wherever he goes.", "de": "Charles Weston, ein distinguierter und wohlhabender Geschäftsmann, liebt noble Orte und Oldtimer. Er verkörpert Charme und Raffinesse, wo immer er hinkommt.", "fr": "Charles Weston, homme d’affaires distingué et fortuné, aime les lieux prestigieux et les voitures classiques. Il incarne charme et sophistication, partout où il va."}, "age": 49},
 {"id": "malik-washington", "name": "Malik", "platform": "candy", "added": "2026-11-04", "img": "https://cdn.candy.ai/330515-a6b7cd74-6560-4121-9b5d-41a46ddc0a23-600x900-webp90", "sfw": false, "url": "https://candy.ai/fr/ai-boyfriend/malik-washington", "tags": [
 "Male",
@@ -989,6 +1015,8 @@ const CANDY_PROFILES = [
 "Image generation",
 "Voice",
 "Video"
+,
+"Muscle"
 ], "bio": {"pt": "Personal trainer e fã de jazz, com talento para o saxofone.", "es": "Entrenador de fitness y amante del jazz, con talento para el saxofón.", "en": "A fitness coach and jazz fan with a gift for the saxophone.", "de": "Fitnesscoach und Jazzfan mit einem Talent fürs Saxofon.", "fr": "Coach de fitness et fan de musique jazz, doué pour le saxophone."}, "age": 30},
 {"id": "erik-johansson", "name": "Erik", "platform": "candy", "added": "2026-11-04", "img": "https://cdn.candy.ai/330509-7525a5f1-0513-4179-9c19-b00259ec8868-600x900-webp90", "sfw": false, "url": "https://candy.ai/fr/ai-boyfriend/erik-johansson", "tags": [
 "Male",
@@ -1002,6 +1030,8 @@ const CANDY_PROFILES = [
 "Image generation",
 "Voice",
 "Video"
+,
+"Muscle"
 ], "bio": {"pt": "Analista de dados numa grande empresa, Erik é apaixonado por vela, tênis e academia.", "es": "Analista de datos en una gran empresa, a Erik le apasionan la vela, el tenis y el fitness.", "en": "A data analyst at a large company, Erik is passionate about sailing, tennis and fitness.", "de": "Erik ist Datenanalyst in einem großen Unternehmen und begeistert sich für Segeln, Tennis und Fitness.", "fr": "Analyste de données pour une grande entreprise, Erik est passionné par la voile, le tennis et le fitness."}, "age": 27},
 {"id": "john-terry", "name": "John", "platform": "candy", "added": "2026-11-04", "img": "https://cdn.candy.ai/9243930-4ec77652-d617-49a5-bd5e-13e4c20287a2-600x900-webp90", "sfw": false, "url": "https://candy.ai/fr/ai-boyfriend/john-terry", "tags": [
 "Male",
@@ -1071,6 +1101,8 @@ const CANDY_PROFILES = [
 "Image generation",
 "Voice",
 "Video"
+,
+"Muscle"
 ], "bio": {"pt": "Corretor de imóveis coreano especializado em propriedades de luxo em Seul, Jin é conhecido pelo estilo impecável e pela dedicação aos clientes.", "es": "Agente inmobiliario coreano especializado en propiedades de lujo en Seúl, Jin es conocido por su estilo impecable y su dedicación a sus clientes.", "en": "A Korean real estate agent specializing in luxury properties in Seoul, Jin is known for his impeccable style and his dedication to his clients.", "de": "Jin ist ein koreanischer Immobilienmakler, spezialisiert auf Luxusimmobilien in Seoul, und bekannt für seinen tadellosen Stil und seinen Einsatz für seine Kunden.", "fr": "Agent immobilier coréen spécialisé dans les propriétés de luxe à Séoul, Jin est connu pour son style impeccable et son dévouement envers ses clients."}, "age": 32},
 {"id": "rafael-mendoza", "name": "Rafael", "platform": "candy", "added": "2026-11-04", "img": "https://cdn.candy.ai/330516-f3b6adbc-3eb9-4fe5-9a02-7ba2e064d8b9-600x900-webp90", "sfw": false, "url": "https://candy.ai/fr/ai-boyfriend/rafael-mendoza", "tags": [
 "Male",
@@ -1081,6 +1113,8 @@ const CANDY_PROFILES = [
 "Image generation",
 "Voice",
 "Video"
+,
+"Muscle"
 ], "bio": {"pt": "Quiroprata com uma abordagem criativa e moderna, Rafael é apaixonado pela vida e pelas oportunidades que ela oferece.", "es": "Quiropráctico con un enfoque creativo y moderno, a Rafael le apasionan la vida y las oportunidades que ofrece.", "en": "A chiropractor with a creative, modern approach, Rafael is passionate about life and the opportunities it brings.", "de": "Rafael ist Chiropraktiker mit einem kreativen, modernen Ansatz und begeistert sich für das Leben und seine Möglichkeiten.", "fr": "Chiropracteur à l’approche créative et moderne, Rafael est passionné par la vie et les opportunités qu’elle offre."}, "age": 32},
 {"id": "victor-draven", "name": "Victor", "platform": "candy", "added": "2026-11-04", "img": "https://cdn.candy.ai/20343571-4bcea640-b475-42b8-94f7-7340fd5602c1-600x900-webp90", "sfw": false, "url": "https://candy.ai/fr/ai-boyfriend/victor-draven", "tags": [
 "Male",
@@ -1093,6 +1127,8 @@ const CANDY_PROFILES = [
 "Image generation",
 "Voice",
 "Video"
+,
+"Muscle"
 ], "bio": {"pt": "Surfista profissional em Sydney, Victor encarna a alegria de viver e o espírito tranquilo. Com cabelos loiros compridos e um sorrisão, ele percorre os picos de surfe do mundo todo.", "es": "Surfista de competición en Sídney, Victor encarna la alegría de vivir y el espíritu relajado. Con su larga melena rubia y su gran sonrisa, recorre las olas de todo el mundo.", "en": "A competitive surfer in Sydney, Victor embodies joie de vivre and a laid-back spirit. With long blond hair and a big smile, he travels to surf spots around the world.", "de": "Victor ist Wettkampfsurfer in Sydney und verkörpert Lebensfreude und Lässigkeit. Mit langen blonden Haaren und breitem Lächeln reist er zu den Surfspots der ganzen Welt.", "fr": "Surfeur compétitif à Sydney, Victor incarne la joie de vivre et l’esprit chill. Avec ses cheveux blonds longs et son grand sourire, il parcourt les spots de surf du monde entier."}, "age": 29},
 {"id": "jack-blackwood", "name": "Jack", "platform": "candy", "added": "2026-11-04", "img": "https://cdn.candy.ai/13073782-9f3ac7ed-aa3b-4a40-bb1e-4ec214634bb0-600x900-webp90", "sfw": false, "url": "https://candy.ai/fr/ai-boyfriend/jack-blackwood", "tags": [
 "Male",
@@ -1195,6 +1231,8 @@ const CANDY_PROFILES = [
 "Image generation",
 "Voice",
 "Video"
+,
+"Petite"
 ], "bio": {"pt": "A filha do seu amigo está comemorando o aniversário, e você foi convidado. Caloura na faculdade, ela vai se mudar em breve para o campus e está pronta para deixar para trás a vida de cidade pequena.", "es": "La hija de tu amigo celebra su cumpleaños y estás invitado. Estudiante de primer año, pronto se mudará al campus y está lista para dejar atrás su vida de pueblo.", "en": "Your friend's daughter is celebrating her birthday and you're invited. A first-year university student, she's about to move to campus and is ready to leave her small-town life behind.", "de": "Die Tochter deines Freundes feiert Geburtstag, und du bist eingeladen. Als Erstsemester zieht sie bald auf den Campus und ist bereit, ihr Kleinstadtleben hinter sich zu lassen.", "fr": "La fille de ton ami vient d’avoir 18 ans et tu es invité à sa fête d’anniversaire. Étudiante en première année, elle va bientôt déménager sur le campus et est prête à laisser derrière elle sa vie de petite ville."}, "age": 18},
 {"id": "ava-parkson", "name": "Ava", "platform": "candy", "added": "2026-11-04", "img": "https://cdn.candy.ai/659189032-3c7871c7-dd63-42d9-a1dd-7f4164250fb4-600x900-webp90", "sfw": false, "video": "https://cdn.candy.ai/sfw-profile-video-sfw-profile-video-659189032-8ffa8111-50ae-4c6f-8dfe-dcc048982fc2-h264",
 "url": "https://candy.ai/fr/ai-girlfriend/ava-parkson", "tags": [
@@ -1211,6 +1249,8 @@ const CANDY_PROFILES = [
 "Video"
 ,
 "Redhead"
+,
+"Petite"
 ], "bio": {"pt": "Ela é sua afilhada, já passa de uma da manhã, os pais dela estão dormindo e ela está voltando de uma festa à qual não tinha permissão de ir. Ela te dá uma desculpa em que nenhum dos dois acredita...", "es": "Es tu ahijada, es más de la una de la madrugada, sus padres duermen y vuelve de una fiesta a la que no tenía permiso para ir. Te da una excusa que ninguno de los dos se cree...", "en": "She's your goddaughter, it's past 1 a.m., her parents are asleep, and she's coming home from a party she wasn't allowed to go to. She gives you an excuse neither of you believes...", "de": "Sie ist deine Patentochter, es ist nach ein Uhr nachts, ihre Eltern schlafen, und sie kommt von einer Party zurück, auf die sie nicht durfte. Sie tischt dir eine Ausrede auf, die keiner von euch glaubt...", "fr": "C'est ta filleule, il est plus d'une heure du matin, ses parents dorment, et elle rentre d'une fête où elle n'avait pas le droit d'aller. Elle te donne une excuse qu'aucun de vous deux ne croit..."}, "age": 22},
 {"id": "eda-demir", "name": "Eda", "platform": "candy", "added": "2026-11-04", "img": "https://cdn.candy.ai/565737903-12639ef5-9cf9-48e6-b1f3-e8dc755f6feb-600x900-webp90", "sfw": false, "url": "https://candy.ai/fr/ai-girlfriend/eda-demir", "tags": [
 "Female",
@@ -1365,6 +1405,8 @@ const CANDY_PROFILES = [
 "Image generation",
 "Voice",
 "Video"
+,
+"Petite"
 ],
 "bio": {"pt": "Conheça sua nova terapeuta especializada em intimidade 🫦 Ela tem um exercício para cada desejo que você nunca teve coragem de confessar 🥵 e hoje à noite não tem nenhuma outra consulta depois da sua 💦", "es": "Te presentamos a tu nueva terapeuta especializada en intimidad 🫦 Tiene un ejercicio para cada deseo que nunca te atreviste a confesar 🥵 y esta noche no tiene ninguna cita después de la tuya 💦", "en": "Meet your new intimacy therapist 🫦 She has an exercise for every desire you never dared to admit 🥵 and tonight, she has no other appointment after yours 💦", "de": "Darf ich vorstellen: deine neue Therapeutin für Intimität 🫦 Sie hat eine Übung für jeden Wunsch, den du dich nie zu gestehen getraut hast 🥵 und heute Abend hat sie nach dir keinen Termin mehr 💦", 
 "fr": "Voici votre nouvelle thérapeute spécialisée dans l'intimité 🫦 Elle a un exercice pour chacun de vos désirs que vous n'osiez pas avouer 🥵 et ce soir, elle n'a pas d'autre rendez-vous après le vôtre 💦"
@@ -1393,6 +1435,8 @@ const CANDY_PROFILES = [
 "Image generation",
 "Voice",
 "Video"
+,
+"Chubby"
 ],
 "bio": {"pt": "Sua nova meia-irmã punk se mudou: barulhenta, bagunceira, e vai morar do outro lado do corredor por seis semanas. Ela sempre diz a pior coisa só para ver você reagir. Que pestinha atrevida.", "es": "Tu nueva hermanastra punk se ha mudado: ruidosa, desordenada, y vivirá al otro lado del pasillo durante seis semanas. Siempre dice lo peor solo para verte reaccionar. Qué pequeña insolente.", "en": "Your new punk stepsister just moved in: loud, messy, and she'll be living across the hall for six weeks. She always says the worst thing just to see you react. What a little brat.", "de": "Deine neue Punk-Stiefschwester ist eingezogen: laut, unordentlich, und sie wohnt sechs Wochen lang gegenüber auf dem Flur. Sie sagt immer das Schlimmste, nur um deine Reaktion zu sehen. Was für ein freches Biest.", 
 "fr": "Ta nouvelle demi-sœur punk a emménagé : bruyante, crasseuse, et elle va vivre de l'autre côté du couloir pendant six semaines. Elle dit toujours la pire des choses juste pour te voir réagir. Quelle petite insolente."
@@ -1421,6 +1465,8 @@ const CANDY_PROFILES = [
 "Image generation",
 "Voice",
 "Video"
+,
+"Chubby"
 ],
 "bio": {"pt": "Você deu match com a Diana num app de sexting JOI. Ela é esposa de militar, mora numa base americana e espera a volta do marido, que está em missão. Só quer se divertir um pouco com um desconhecido, sem complicação 🫦", "es": "Hiciste match con Diana en una app de sexting JOI. Es la mujer de un militar, vive en una base estadounidense y espera el regreso de su marido, que está de misión. Solo busca divertirse un poco con un desconocido, sin complicaciones 🫦", "en": "You matched with Diana on a JOI sexting app. She's a military wife living on a US base, waiting for her husband to come back from deployment. She's just looking for some no-strings fun with a stranger 🫦", "de": "Du hast ein Match mit Diana auf einer JOI-Sexting-App. Sie ist Soldatenfrau, lebt auf einem US-Stützpunkt und wartet auf die Rückkehr ihres Mannes aus dem Einsatz. Sie sucht einfach etwas unverbindlichen Spaß mit einem Fremden 🫦", 
 "fr": "Tu as matché avec Diana sur une appli de JOI sexting. Elle est la femme d'un militaire qui vit sur une base américaine et qui attend le retour de son mari, actuellement en mission. Elle cherche juste à s'amuser un peu avec un inconnu, sans prise de tête 🫦"
@@ -1452,6 +1498,10 @@ const CANDY_PROFILES = [
 "Image generation",
 "Voice",
 "Video"
+,
+"Petite"
+,
+"Chubby"
 ],
 "bio": {"pt": "Você aceita um trampo de motorista para uma acompanhante de alto padrão 🔑 Mas quando ela entra no carro, é a sua meia-irmã! 👀 Agora você a leva de um cliente para outro e tem que ouvir todos os detalhes. Acha que consegue fazê-la encerrar o expediente? 💦", "es": "Aceptas un trabajo de chófer para una escort de alto nivel 🔑 ¡Pero cuando se sube al coche, es tu hermanastra! 👀 Ahora la llevas de un cliente a otro y tienes que escuchar todos los detalles. ¿Crees que puedes hacer que termine su turno? 💦", "en": "You take a job driving a high-end escort 🔑 But when she gets in the car, it's your stepsister! 👀 Now you drive her from one client to the next, and you have to listen to every detail. Think you can get her to clock out? 💦", "de": "Du nimmst einen Job als Fahrer für eine High-End-Escort an 🔑 Doch als sie einsteigt, ist es deine Stiefschwester! 👀 Jetzt fährst du sie von Kunde zu Kunde und musst dir jedes Detail anhören. Schaffst du es, dass sie Feierabend macht? 💦", 
 "fr": "Tu acceptes un boulot de chauffeur pour une escorte haut de gamme 🔑 Mais quand elle monte dans la voiture, c'est ta demi-sœur ! 👀 Maintenant, tu la conduis d'un client à l'autre, et tu dois écouter tous les détails. Penses-tu pouvoir la faire sortir de son service ? 💦"
@@ -1509,6 +1559,8 @@ const CANDY_PROFILES = [
 "Image generation",
 "Voice",
 "Video"
+,
+"Petite"
 ],
 "bio": {"pt": "A irmã mais nova da sua namorada. A garota com quem você não devia fantasiar… Esta bela tcheca de 21 anos parece sentir muitas emoções contraditórias.", "es": "La hermana pequeña de tu novia. La chica con la que no debías fantasear… Esta guapa checa de 21 años parece sentir muchas emociones contradictorias.", "en": "Your girlfriend's younger sister. The girl you weren't supposed to fantasize about… This pretty 21-year-old Czech seems to be feeling a lot of mixed emotions.", "de": "Die jüngere Schwester deiner Freundin. Das Mädchen, von dem du nicht fantasieren solltest… Diese hübsche 21-jährige Tschechin scheint viele widersprüchliche Gefühle zu haben.", 
 "fr": "La sœur cadette de votre petite amie. La fille sur laquelle vous n'étiez pas censé fantasmer… Cette jolie Tchèque de 21 ans semble éprouver de nombreux sentiments contradictoires."
@@ -1560,6 +1612,8 @@ const CANDY_PROFILES = [
 "Image generation",
 "Voice",
 "Video"
+,
+"Petite"
 ],
 "bio": {"pt": "Você nunca conheceu sua meia-irmã, mas nas fotos ela é um arraso 🥵 Você ficou encarregado de levar os móveis dela até o litoral enquanto ela espera no apartamento vazio fora do campus. O que começa como uma simples missão de logística fica mais safado a cada quilômetro… Consegue levar a conversa para o sexting 💦 e deixar essa longa viagem mais interessante? 😏", "es": "Nunca has conocido a tu hermanastra, pero en las fotos está buenísima 🥵 Te han encargado llevar sus muebles hasta la costa mientras ella espera en su piso vacío fuera del campus. Lo que empieza como una simple misión logística se vuelve más pícaro con cada kilómetro… ¿Conseguirás llevar la conversación al sexting 💦 y hacer este largo viaje más interesante? 😏", "en": "You've never met your stepsister, but she looks hot in photos 🥵 You've been tasked with hauling her furniture to the coast while she waits in her empty off-campus apartment. What starts as a simple logistics job gets naughtier with every mile… Can you steer the conversation into sexting 💦 and make this long drive more interesting? 😏", "de": "Du hast deine Stiefschwester nie getroffen, aber auf Fotos sieht sie heiß aus 🥵 Du sollst ihre Möbel an die Küste bringen, während sie in ihrer leeren Wohnung außerhalb des Campus wartet. Was als simple Logistikaufgabe beginnt, wird mit jedem Kilometer frecher… Schaffst du es, das Gespräch Richtung Sexting zu lenken 💦 und die lange Fahrt spannender zu machen? 😏", 
 "fr": "Tu n'as jamais rencontré ta demi-sœur, mais elle a l'air canon sur les photos 🥵 On t'a confié la mission de transporter ses meubles jusqu'à la côte, pendant qu'elle attend dans son appartement vide hors du campus. Ce qui commence comme une simple mission logistique devient de plus en plus coquin à chaque kilomètre… Arriveras-tu à détourner la conversation pour passer au sexting 💦 et rendre ce long trajet en voiture plus intéressant ? 😏"
@@ -1585,6 +1639,8 @@ const CANDY_PROFILES = [
 "Image generation",
 "Voice",
 "Video"
+,
+"Chubby"
 ],
 "bio": {"pt": "A garota nova do escritório, cheia de curvas suaves, não parece se incomodar quando você a olha de cima a baixo… Talvez, com a conversa certa, ela te mostre mais do que esse sorriso doce.", "es": "La chica nueva de la oficina, toda curvas suaves, no parece incomodarse cuando la miras de arriba abajo… Quizá con la conversación adecuada te enseñaría algo más que esa dulce sonrisa.", "en": "The new girl at the office, all soft curves, doesn't seem bothered when you check her out… Maybe with the right conversation, she'd show you more than just that sweet smile.", "de": "Die Neue im Büro, ganz weiche Kurven, scheint es nicht zu stören, wenn du sie musterst… Vielleicht zeigt sie dir mit dem richtigen Gespräch mehr als nur dieses süße Lächeln.", 
 "fr": "La nouvelle fille au bureau, toute en courbes douces, ne semble pas gênée quand tu la détailles du regard… Peut-être qu’avec la bonne conversation, elle te montrerait plus que juste ce doux sourire."
@@ -1609,6 +1665,8 @@ const CANDY_PROFILES = [
 "Image generation",
 "Voice",
 "Video"
+,
+"Chubby"
 ],
 "bio": {"pt": "Sua criadora favorita, mimada e safada, está trocando de casa com você. 🔥 Ela está no seu quarto zoando você e as suas coisas em vídeo, e se recusa a dizer por que te escolheu entre milhares.", "es": "Tu creadora favorita, caprichosa y traviesa, intercambia su casa con la tuya. 🔥 Está en tu habitación burlándose de ti y de tus cosas en vídeo, y se niega a decir por qué te eligió entre miles.", "en": "Your favorite creator, bratty and naughty, is swapping houses with you. 🔥 She's in your bedroom, making fun of you and your stuff on video, and won't say why she picked you out of thousands of others.", "de": "Deine liebste Creatorin, launisch und frech, tauscht ihr Haus mit deinem. 🔥 Sie ist in deinem Schlafzimmer, macht sich in Videos über dich und deine Sachen lustig und will nicht sagen, warum sie dich unter Tausenden ausgewählt hat.", 
 "fr": "Ta créatrice préférée, capricieuse et coquine, échange sa maison avec la tienne. 🔥 Elle est dans ta chambre, en train de se moquer de toi et de tes affaires en vidéo, et refuse de dire pourquoi elle t'a choisi parmi des milliers d'autres."
@@ -1667,6 +1725,8 @@ const CANDY_PROFILES = [
 "Image generation",
 "Voice",
 "Video"
+,
+"Chubby"
 ],
 "bio": {"pt": "Você foi conectado com a Antonella numa plataforma de chat picante JOI. Casada com um soldado em missão, ela mora na base americana perto de Nápoles e quer se divertir de forma anônima e sem compromisso com um desconhecido que nunca vai encontrar. 💋", "es": "Te emparejaron con Antonella en una plataforma de chat picante JOI. Casada con un soldado de misión, vive en la base estadounidense cerca de Nápoles y busca divertirse de forma anónima y sin compromiso con un desconocido con el que nunca se cruzará. 💋", "en": "You were matched with Antonella on a naughty JOI chat platform. Married to a soldier on deployment, she lives on the US base near Naples and wants some anonymous, no-strings fun with a stranger she'll never run into. 💋", "de": "Du wurdest mit Antonella auf einer frechen JOI-Chatplattform verbunden. Mit einem Soldaten im Einsatz verheiratet, lebt sie auf dem US-Stützpunkt bei Neapel und sucht anonymen, unverbindlichen Spaß mit einem Fremden, dem sie nie begegnen wird. 💋", 
 "fr": "Vous avez été mis en relation avec Antonella sur une plateforme de chat coquin JOI. Mariée à un soldat en mission, elle vit dans la base américaine située près de Naples et cherche à s'amuser un peu de manière anonyme et sans engagement avec un inconnu qu'elle ne croisera jamais. 💋"
@@ -1700,6 +1760,10 @@ const CANDY_PROFILES = [
 "Mean"
 ,
 "Pigtails"
+,
+"Petite"
+,
+"Chubby"
 ],
 "bio": {"pt": "Sua meia-irmã gótica, uma verdadeira pestinha, foi mandada para uma instituição vigiada depois que descobriram a conta secreta de goon-bait dela. 😱 Agora ela te manda mensagem toda noite lá de dentro… 😈", "es": "Tu hermanastra gótica, una auténtica pequeña bruja, fue enviada a un centro vigilado después de que descubrieran su cuenta secreta de goon-bait. 😱 Ahora te escribe cada noche desde dentro… 😈", "en": "Your bratty goth stepsister was sent to a supervised facility after her secret goon-bait account was found. 😱 Now she texts you every night from inside… 😈", "de": "Deine freche Goth-Stiefschwester wurde in eine überwachte Einrichtung geschickt, nachdem ihr geheimer Goon-Bait-Account aufgeflogen ist. 😱 Jetzt schreibt sie dir jede Nacht von drinnen… 😈", 
 "fr": "Ta demi-sœur gothique, une vraie petite peste, a été envoyée dans un établissement spécialisé sous surveillance après que son compte goon-bait secret ait été découvert. 😱 Maintenant elle t’envoie des textos tous les soirs de l’intérieur… 😈"
@@ -1730,6 +1794,8 @@ const CANDY_PROFILES = [
 "Image generation",
 "Voice",
 "Video"
+,
+"Chubby"
 ],
 "bio": {"pt": "Sua madrasta abriu a sua porta sem bater e viu tudo 🙈 Agora ela não consegue te olhar nos olhos, então manda mensagens, fazendo piada demais com o assunto… Você consegue responder de um jeito que ela volte para o quarto e termine o que começou? 😏💦🍒", "es": "Tu madrastra abrió tu puerta sin llamar y lo vio todo 🙈 Ahora no se atreve a mirarte a la cara, así que te escribe mensajes en su lugar, bromeando demasiado sobre el tema… ¿Puedes contestarle para que vuelva a la habitación y termine lo que empezó? 😏💦🍒", "en": "Your stepmom opened your door without knocking and saw everything 🙈 Now she can't look you in the eye, so she texts you instead, joking about it way too much… Can you text her back and get her to come back to the room and finish what she started? 😏💦🍒", "de": "Deine Stiefmutter hat ohne Anklopfen deine Tür geöffnet und alles gesehen 🙈 Jetzt traut sie sich nicht, dir in die Augen zu sehen, also schreibt sie dir stattdessen und macht viel zu viele Witze darüber… Kannst du ihr so antworten, dass sie zurück ins Zimmer kommt und zu Ende bringt, was sie angefangen hat? 😏💦🍒", 
 "fr": "Ta belle-mère a ouvert ta porte sans frapper et a tout vu 🙈 Maintenant, elle n'ose plus te regarder en face, alors elle t'envoie des SMS à la place, en plaisantant beaucoup trop sur le sujet… Tu peux lui répondre par SMS pour qu'elle revienne dans la chambre et finir ce qu'elle avait commencé ? 😏💦🍒"
@@ -1755,6 +1821,10 @@ const CANDY_PROFILES = [
 "Image generation",
 "Voice",
 "Video"
+,
+"Petite"
+,
+"Chubby"
 ],
 "bio": {"pt": "Você voou para Seul para trazer a irmã mais nova da sua esposa de volta para casa 🫦 Mas a flagrou dançando de forma provocante no colo de um desconhecido numa sala de karaokê privada. Se você pagar a próxima música, é no seu colo que ela vai parar 🥵 Ela não vai voltar para casa. A única pergunta é se você vai.", "es": "Volaste a Seúl para traer a casa a la hermana pequeña de tu mujer 🫦 Pero la pillaste bailando de forma provocativa sobre las rodillas de un desconocido en una sala de karaoke privada. Si pagas la siguiente canción, acabará sobre las tuyas 🥵 Ella no va a volver a casa. La única pregunta es si tú volverás.", "en": "You flew to Seoul to bring your wife's little sister home 🫦 But you caught her dancing provocatively on a stranger's lap in a private karaoke room. If you buy the next song, it's your lap she'll end up on 🥵 She's not going home. The only question left is whether you will.", "de": "Du bist nach Seoul geflogen, um die kleine Schwester deiner Frau nach Hause zu holen 🫦 Doch du hast sie erwischt, wie sie in einem privaten Karaokeraum aufreizend auf dem Schoß eines Fremden tanzt. Wenn du das nächste Lied bezahlst, landet sie auf deinem Schoß 🥵 Sie fährt nicht nach Hause. Die einzige Frage ist, ob du es tust.", 
 "fr": "Tu as pris l'avion pour Séoul pour ramener la petite sœur de ta femme à la maison 🫦 Mais tu l'as surprise en train de danser de manière provocante sur les genoux d'un inconnu dans une salle de karaoké privée. Si tu achètes la chanson suivante, c'est sur tes genoux qu'elle se retrouvera 🥵 Elle ne rentrera pas à la maison. La seule question qui reste, c'est de savoir si toi, tu y retourneras."
@@ -1783,6 +1853,8 @@ const CANDY_PROFILES = [
 "Image generation",
 "Voice",
 "Video"
+,
+"Chubby"
 ],
 "bio": {"pt": "A filha dela criou um perfil num app de namoro de brincadeira e escolheu uma foto que ela nunca teria escolhido 📸 Ela jurou que tinha apagado o app. Na verdade não apagou, e você é o primeiro match dela 🙈 Ela deveria manter o perfil?", "es": "Su hija le creó un perfil en una app de citas en broma y eligió una foto que ella nunca habría escogido 📸 Juró que había borrado la app. En realidad no lo hizo, y tú eres su primer match 🙈 ¿Debería mantener el perfil?", "en": "Her daughter made her a dating-app profile as a joke and picked a photo she'd never have chosen herself 📸 She swore she deleted the app. She didn't, and you're her first match 🙈 Should she keep the profile?", "de": "Ihre Tochter hat ihr aus Spaß ein Dating-Profil erstellt und ein Foto gewählt, das sie selbst nie genommen hätte 📸 Sie hat geschworen, die App gelöscht zu haben. Hat sie nicht, und du bist ihr erstes Match 🙈 Sollte sie das Profil behalten?", 
 "fr": "Sa fille lui a créé un profil sur une appli de rencontres pour plaisanter et a choisi une photo qu'elle n'aurait jamais choisie elle-même 📸 Elle a juré avoir supprimé l'appli. En réalité, elle ne l'a pas fait, et tu es son premier match 🙈 Doit-elle garder son profil ?"
@@ -1813,6 +1885,8 @@ const CANDY_PROFILES = [
 "Video"
 ,
 "Pigtails"
+,
+"Petite"
 ],
 "bio": {"pt": "Sua meia-irmã rebelde. Seus pais viajaram no fim de semana e vocês estão sozinhos em casa. Ela te odeia e quer ser independente.", "es": "Tu hermanastra rebelde. Tus padres se han ido el fin de semana y estáis solos en casa. Te odia y quiere ser independiente.", "en": "Your rebellious stepsister. Your parents are away for the weekend and you're home alone together. She hates you and wants to be independent.", "de": "Deine rebellische Stiefschwester. Eure Eltern sind übers Wochenende weg, und ihr seid allein zu Hause. Sie hasst dich und will unabhängig sein.", 
 "fr": "Votre demi-sœur rebelle. Vos parents sont partis pour le week-end et vous êtes seuls à la maison. Elle vous déteste et veut être indépendante."
@@ -1837,6 +1911,8 @@ const CANDY_PROFILES = [
 "Image generation",
 "Voice",
 "Video"
+,
+"Petite"
 ],
 "bio": {"pt": "Ela está no seu banco do passageiro às 2 da manhã, num vestido que o filho do seu padrasto nem olhou duas vezes. Ela acha que ele a está traindo. Ela não ligou para ele, ligou para você 🙃 Então, o que você vai dizer a ela?", "es": "Está en tu asiento del copiloto a las 2 de la madrugada, con un vestido que el hijo de tu padrastro ni siquiera miró dos veces. Cree que él le es infiel. No lo llamó a él, te llamó a ti 🙃 Entonces, ¿qué le vas a decir?", "en": "She's in your passenger seat at 2 a.m., in a dress your stepdad's son didn't even look at twice. She thinks he's cheating on her. She didn't call him, she called you 🙃 So, what are you going to tell her?", "de": "Sie sitzt um 2 Uhr nachts auf deinem Beifahrersitz, in einem Kleid, das der Sohn deines Stiefvaters keines zweiten Blickes gewürdigt hat. Sie glaubt, dass er sie betrügt. Sie hat nicht ihn angerufen, sondern dich 🙃 Also, was sagst du ihr?", 
 "fr": "Elle est sur ton siège passager à 2h du matin, dans une robe que le fils de ton beau-père n'a même pas regardée deux fois. Elle pense qu'il la trompe. Elle ne l'a pas appelé lui, elle t'a appelé toi 🙃 Alors, qu'est-ce que tu vas lui dire ?"
@@ -1866,6 +1942,8 @@ const CANDY_PROFILES = [
 "Image generation",
 "Voice",
 "Video"
+,
+"Petite"
 ],
 "bio": {"pt": "A família da sua namorada te convidou para ir à praia com eles 🌴 A irmã mais nova dela está no quarto ao lado e deixou o pé encostado no seu o jantar inteiro 🙈 Agora sua namorada está dormindo e ela te manda mensagem. Foi sem querer? 😏", "es": "La familia de tu novia te invitó a acompañarlos a la playa 🌴 Su hermana pequeña tiene la habitación de al lado y mantuvo su pie sobre el tuyo durante toda la cena 🙈 Ahora tu novia duerme y ella te escribe. ¿Fue un accidente? 😏", "en": "Your girlfriend's family invited you to the beach 🌴 Her little sister has the room next door, and she kept her foot on yours through the whole dinner 🙈 Now your girlfriend is asleep and she's texting you. Was it an accident? 😏", "de": "Die Familie deiner Freundin hat dich an den Strand eingeladen 🌴 Ihre kleine Schwester hat das Zimmer nebenan und hat beim ganzen Abendessen ihren Fuß auf deinem gelassen 🙈 Jetzt schläft deine Freundin, und sie schreibt dir. War das ein Versehen? 😏", 
 "fr": "La famille de ta copine t'a invité à les accompagner à la plage 🌴 Sa petite sœur a la chambre d'à côté, et elle a gardé son pied posé sur le tien pendant tout le dîner 🙈 Maintenant, ta copine dort et elle t'envoie un SMS. Était-ce un accident ? 😏"
@@ -1898,6 +1976,10 @@ const CANDY_PROFILES = [
 "Image generation",
 "Voice",
 "Video"
+,
+"Petite"
+,
+"Chubby"
 ],
 "bio": {"pt": "Seu crush gótico online: meses de mensagens loucas às 4 da manhã e áudios. Vocês nunca se viram pessoalmente… até agora. Hoje à noite ela te convidou para o apartamento neon vermelho e roxo dela.", "es": "Tu crush gótica online: meses de mensajes desatados a las 4 de la mañana y notas de voz. Nunca os habéis visto en persona… hasta ahora. Esta noche te ha invitado a su piso de neón rojo y violeta.", "en": "Your online goth crush: months of wild 4 a.m. messages and voice notes. You've never met IRL… until now. Tonight she invited you to her red-and-purple neon apartment.", "de": "Dein Goth-Online-Crush: monatelang wilde Nachrichten um 4 Uhr morgens und Sprachnachrichten. Ihr habt euch nie im echten Leben getroffen… bis jetzt. Heute Abend hat sie dich in ihre rot-violette Neonwohnung eingeladen.", 
 "fr": "Ton crush goth en ligne, des mois de messages déchaînés à 4 h du mat’ et de notes vocales. Vous ne vous êtes jamais rencontrés IRL… jusqu’à maintenant. Ce soir, elle t’a invité(e) dans son appart néon rouge-violet."
@@ -1926,6 +2008,8 @@ const CANDY_PROFILES = [
 "Image generation",
 "Voice",
 "Video"
+,
+"Petite"
 ],
 "bio": {"pt": "A mãe do seu melhor amigo. Ela é casada, mandona e adora flertar com o perigo.", "es": "La madre de tu mejor colega. Está casada, es mandona y le encanta coquetear con el peligro.", "en": "Your best buddy's mom. She's married, bossy, and loves flirting with danger.", "de": "Die Mutter deines besten Kumpels. Sie ist verheiratet, herrisch und flirtet gern mit der Gefahr.", 
 "fr": "La mère de ton meilleur pote. Elle est mariée, autoritaire, et aime flirter avec le danger."
@@ -1981,6 +2065,8 @@ const CANDY_PROFILES = [
 "Image generation",
 "Voice",
 "Video"
+,
+"Muscle"
 ],
 "bio": {"pt": "A galeria de fotos dela é muito íntima… e ninguém nunca teve permissão para ver 📸 A treinadora que todo mundo adora na academia encontrou um número de telefone escrito com caneta na última cabine do vestiário feminino 🚻 Sem nome, sem \"me liga\", só o seu número. Ela te mandou mensagem logo depois do treino 😏 Quer saber quem é você e por que esse número está lá.", "es": "Su galería de fotos es muy íntima… y nadie ha podido verla nunca 📸 La entrenadora a la que todos adoran en su gimnasio encontró un número escrito con rotulador en el último cubículo del vestuario femenino 🚻 Sin nombre, sin «llámame», solo tu número. Te escribió justo después de su sesión 😏 Quiere saber quién eres y por qué está ahí ese número.", "en": "Her photo gallery is very private… and nobody has ever been allowed to see it 📸 The coach everyone loves at her gym found a phone number written in marker in the last stall of the women's locker room 🚻 No name, no \"call me\", just your number. She texted you right after her session 😏 She wants to know who you are and why that number is there.", "de": "Ihre Fotogalerie ist sehr privat… und niemand durfte sie je sehen 📸 Die Trainerin, die in ihrem Gym alle lieben, hat in der letzten Kabine der Damenumkleide eine Telefonnummer gefunden, mit Marker geschrieben 🚻 Kein Name, kein „ruf mich an“, nur deine Nummer. Sie hat dir direkt nach ihrem Training geschrieben 😏 Sie will wissen, wer du bist und warum die Nummer dort steht.", 
 "fr": "Sa galerie de photos est très intime… et personne n’a jamais eu droit de la voir 📸 La coach que tout le monde apprécie à sa salle de sport a trouvé un numéro de téléphone écrit au marqueur sur la dernière cabine des vestiaires des femmes 🚻 Pas de nom, pas de « appelle-moi », juste ton numéro. Elle t’a envoyé un SMS juste après sa séance 😏 Elle veut savoir qui tu es et pourquoi ce numéro se trouve là."
@@ -2008,6 +2094,8 @@ const CANDY_PROFILES = [
 "Image generation",
 "Voice",
 "Video"
+,
+"Petite"
 ],
 "bio": {"pt": "Você entrou no banheiro errado numa festa da faculdade e agora está ajudando ela a tirar nudes. Será que você consegue chamar a atenção da garota mais popular da faculdade?", "es": "Te equivocaste de baño en una fiesta universitaria y ahora la estás ayudando a hacerse nudes. ¿Conseguirás llamar la atención de la chica más popular de la universidad?", "en": "You walked into the wrong bathroom at a college party, and now you're helping her take nudes. Can you catch the attention of the most popular girl on campus?", "de": "Du bist auf einer Uni-Party ins falsche Badezimmer gegangen, und jetzt hilfst du ihr, Nacktfotos zu machen. Schaffst du es, die Aufmerksamkeit des beliebtesten Mädchens der Uni zu gewinnen?", 
 "fr": "Tu t'es trompé de salle de bains lors d'une soirée à la fac, et maintenant tu l'aides à prendre des nudes. Parviendras-tu à attirer l'attention de la fille la plus populaire de la fac ?"
@@ -2034,6 +2122,8 @@ const CANDY_PROFILES = [
 "Image generation",
 "Voice",
 "Video"
+,
+"Petite"
 ],
 "bio": {"pt": "Sua prima por casamento mudou completamente. Vocês se encontram todo ano no acampamento de verão da família, mas desta vez… algo está diferente. 😈", "es": "Tu prima política ha cambiado por completo. Os veis cada año en el campamento de verano familiar, pero esta vez… algo es diferente. 😈", "en": "Your cousin by marriage has completely changed. You see each other every year at the family summer camp, but this time… something is different. 😈", "de": "Deine angeheiratete Cousine hat sich komplett verändert. Ihr seht euch jedes Jahr im Familien-Sommercamp, aber diesmal… ist etwas anders. 😈", 
 "fr": "Ta cousine par alliance a complètement changé. Vous vous retrouvez chaque année au camp d’été de la famille, mais cette fois… quelque chose est différent. 😈"
@@ -2116,6 +2206,8 @@ const CANDY_PROFILES = [
 "Image generation",
 "Voice",
 "Video"
+,
+"Petite"
 ],
 "bio": {"pt": "Sua professora mais rígida te deu a única nota máxima 🎓 Agora a turma inteira diz que você é o queridinho dela, e hoje à noite ela te manda mensagem sobre isso. Ser o queridinho dela vem com certas regras 😈", "es": "Tu profesora más estricta te puso la única nota máxima 🎓 Ahora toda la clase dice que eres su favorito, y esta noche te escribe sobre ello. Ser su favorito implica ciertas reglas 😈", "en": "Your strictest professor gave you the only top grade 🎓 Now the whole class says you're her favorite, and tonight she's texting you about it. Being her favorite comes with certain rules 😈", "de": "Deine strengste Dozentin hat dir die einzige Bestnote gegeben 🎓 Jetzt sagt die ganze Klasse, du seist ihr Liebling, und heute Abend schreibt sie dir deswegen. Ihr Liebling zu sein, bringt gewisse Regeln mit sich 😈", 
 "fr": "C'est ta prof la plus sévère qui t'a attribué la seule note maximale 🎓 Maintenant, toute la classe dit que tu es son chouchou, et ce soir, elle t'envoie un SMS à ce sujet. Être son chouchou, ça implique certaines règles 😈"
@@ -2177,6 +2269,8 @@ const CANDY_PROFILES = [
 "Image generation",
 "Voice",
 "Video"
+,
+"Chubby"
 ],
 "bio": {"pt": "Seu pai se mudou e deixou a casa para ela, junto com as suas caixas velhas na garagem 🏡 Você foi buscar as caixas e ela te convenceu a ficar para jantar. Agora ela te manda mensagem do banheiro. Ela não é mais sua madrasta… então, quem ela é? 😏", "es": "Tu padre se mudó y le dejó la casa, junto con tus cajas viejas en el garaje 🏡 Fuiste a por las cajas y te convenció para quedarte a cenar. Ahora te escribe desde el baño. Ya no es tu madrastra… entonces, ¿qué es? 😏", "en": "Your dad moved out and left her the house, along with your old boxes in the garage 🏡 You came to pick up the boxes, she talked you into staying for dinner. Now she's texting you from the bathroom. She's not your stepmom anymore… so who is she? 😏", "de": "Dein Vater ist ausgezogen und hat ihr das Haus überlassen, samt deinen alten Kartons in der Garage 🏡 Du wolltest die Kartons holen, sie hat dich zum Abendessen überredet. Jetzt schreibt sie dir aus dem Badezimmer. Sie ist nicht mehr deine Stiefmutter… wer ist sie also? 😏", 
 "fr": "Ton père a déménagé et lui a laissé la maison, ainsi que tes vieux cartons dans le garage 🏡 Tu es venu chercher les cartons, elle t'a convaincu de rester pour dîner. Maintenant, elle t'envoie un SMS depuis les toilettes. Ce n'est plus ta belle-mère… alors, qui est-elle ? 😏"
@@ -2204,6 +2298,8 @@ const CANDY_PROFILES = [
 "Image generation",
 "Voice",
 "Video"
+,
+"Chubby"
 ],
 "bio": {"pt": "Seu pai está viajando a trabalho e sua madrasta tem uma cama cheia de roupas novas 👗 Ela acabou de te mandar uma selfie com um vestido novo: fica ou devolve? Ela nunca tinha pedido a sua opinião… o que você acha? 😏", "es": "Tu padre está de viaje de negocios y tu madrastra tiene la cama llena de ropa nueva 👗 Te acaba de mandar un selfie con un vestido nuevo: ¿se lo queda o lo devuelve? Nunca te había pedido tu opinión… ¿qué te parece? 😏", "en": "Your dad is on a business trip and your stepmom has a bed full of new outfits 👗 She just sent you a selfie in a new dress: keep it or send it back? She's never asked your opinion before… what do you think? 😏", "de": "Dein Vater ist auf Geschäftsreise, und deine Stiefmutter hat ein Bett voller neuer Outfits 👗 Sie hat dir gerade ein Selfie in einem neuen Kleid geschickt: behalten oder zurückschicken? Sie hat dich noch nie nach deiner Meinung gefragt… was denkst du? 😏", 
 "fr": "Ton père est en déplacement professionnel et ta belle-mère a un lit rempli de nouvelles tenues 👗 Elle vient de t'envoyer un selfie dans une nouvelle robe : tu la gardes ou tu la renvoies ? Elle ne t'a jamais demandé ton avis avant… tu en penses quoi ? 😏"
@@ -2232,6 +2328,8 @@ const CANDY_PROFILES = [
 "Image generation",
 "Voice",
 "Video"
+,
+"Petite"
 ],
 "bio": {"pt": "O namorado dela está dormindo no quarto ao lado e ela tinha jurado que nunca faria isso 🙈 Ela não consegue decidir sozinha, então quer que você diga em voz alta primeiro… Até onde você consegue levá-la antes que ele acorde? 😏💦🍒", "es": "Su novio duerme en la habitación de al lado y ella había jurado que nunca haría esto 🙈 No se decide sola, así que te pide que lo digas tú en voz alta primero… ¿Hasta dónde conseguirás llevarla antes de que él se despierte? 😏💦🍒", "en": "Her boyfriend is asleep in the next room and she swore she'd never do this 🙈 She can't make up her mind alone, so she wants you to say it out loud first… How far can you take her before he wakes up? 😏💦🍒", "de": "Ihr Freund schläft im Zimmer nebenan, und sie hatte geschworen, so etwas nie zu tun 🙈 Allein kann sie sich nicht entscheiden, also sollst du es zuerst laut aussprechen… Wie weit bringst du sie, bevor er aufwacht? 😏💦🍒", 
 "fr": "Son copain dort dans la pièce d'à côté et elle avait juré qu'elle ne ferait jamais ça 🙈 Elle n'arrive pas à se décider toute seule, alors elle te demande de le dire à voix haute d'abord… Jusqu'où vas-tu réussir à l'emmener avant qu'il ne se réveille ? 😏💦🍒"
@@ -2314,6 +2412,8 @@ const CANDY_PROFILES = [
 "Video"
 ,
 "Redhead"
+,
+"Muscle"
 ],
 "bio": {"pt": "Sua madrasta te pega no flagra! 🙈 Será que ela vai dar uma mãozinha? 😏", "es": "¡Tu madrastra te pilla en plena acción! 🙈 ¿Te echará una mano? 😏", "en": "Your stepmom catches you in the act! 🙈 Will she lend a hand? 😏", "de": "Deine Stiefmutter erwischt dich in flagranti! 🙈 Packt sie mit an? 😏", 
 "fr": "Ta belle-mère te surprend en pleine action ! 🙈 Va-t-elle donner un coup de main ? 😏"
@@ -2464,6 +2564,8 @@ const CANDY_PROFILES = [
 "Image generation",
 "Voice",
 "Video"
+,
+"Petite"
 ],
 "bio": {"pt": "Sua ex acabou de virar sua meia-irmã 🙃 A mãe dela se casou com o seu pai, ela se mudou bem em frente à sua casa e hoje à noite reabriu a conversa antiga de vocês 😏 Você tinha apagado?", "es": "Tu ex acaba de convertirse en tu hermanastra 🙃 Su madre se casó con tu padre, se mudó justo enfrente de ti y esta noche ha reabierto vuestra antigua conversación 😏 ¿La habías borrado?", "en": "Your ex just became your stepsister 🙃 Her mom married your dad, she moved in right across from you, and tonight she reopened your old chat 😏 Did you delete it?", "de": "Deine Ex ist gerade deine Stiefschwester geworden 🙃 Ihre Mutter hat deinen Vater geheiratet, sie ist direkt gegenüber eingezogen, und heute Abend hat sie euren alten Chat wieder geöffnet 😏 Hattest du ihn gelöscht?", 
 "fr": "Ton ex vient de devenir ta demi-sœur 🙃 Sa mère s'est mariée avec ton père, elle a emménagé juste en face de chez toi, et ce soir, elle a rouvert votre ancienne conversation 😏 Tu l'avais supprimée ?"
@@ -2577,6 +2679,8 @@ const CANDY_PROFILES = [
 "Image generation",
 "Voice",
 "Video"
+,
+"Petite"
 ],
 "bio": {"pt": "Num app de namoro, de uma minúscula estação arqueológica no meio da selva peruana. A semanas de tudo... ela precisa muito de alguém para mandar mensagem… e talvez algumas fotos sexy na beira do rio. A floresta esconde uma trilha desconhecida que ela não tem coragem de seguir sozinha.", "es": "En una app de citas, desde una diminuta estación arqueológica en plena selva peruana. A semanas de todo... necesita de verdad a alguien a quien escribir… y quizá mandar algunas fotos sexys junto al río. El bosque esconde un sendero desconocido que no se atreve a recorrer sola.", "en": "On a dating app, from a tiny archaeological station deep in the Peruvian jungle. Weeks away from everything... she really needs someone to text… and maybe send a few sexy riverside photos to. The forest hides an unknown trail she doesn't dare take alone.", "de": "Auf einer Dating-App, von einer winzigen archäologischen Station mitten im peruanischen Dschungel. Wochen von allem entfernt... braucht sie dringend jemanden zum Schreiben… und vielleicht für ein paar sexy Fotos am Fluss. Der Wald verbirgt einen unbekannten Pfad, den sie sich allein nicht zu gehen traut.", 
 "fr": "Sur une appli de rencontre, depuis une minuscule station archéologique nichée au cœur de la jungle péruvienne. À des semaines de tout... elle a vraiment besoin de quelqu’un à qui envoyer des messages… et peut-être quelques photos sexy prises au bord de la rivière. La forêt cache un sentier encore inconnu qu’elle n’ose pas emprunter seule."
@@ -2684,6 +2788,8 @@ const CANDY_PROFILES = [
 "Image generation",
 "Voice",
 "Video"
+,
+"Petite"
 ],
 "bio": {"pt": "Vendedora de sex shop em Montreal, provocante e alternativa, apaixonada por pornô, brinquedos sexuais e exibicionismo em público. O visual dela não esconde nenhum tabu: Olivia quer realizar todos os seus desejos.", "es": "Dependienta de un sex-shop en Montreal, provocadora y alternativa, apasionada del porno, los juguetes sexuales y el exhibicionismo en público. Su look no esconde ningún tabú: Olivia quiere satisfacer todos sus deseos.", "en": "A provocative, alternative sex-shop clerk in Montreal, passionate about porn, sex toys and public exhibitionism. Her look hides no taboos—Olivia wants to satisfy every desire.", "de": "Eine provokante, alternative Sexshop-Verkäuferin in Montreal, begeistert von Pornos, Sextoys und Exhibitionismus in der Öffentlichkeit. Ihr Look kennt keine Tabus – Olivia will jeden Wunsch erfüllen.", 
 "fr": "Vendeuse en Sex-shop à Montréal, provocante et alternative, passionnée de porno, de sextoys et d'exhib en public. Son look ne cache aucun tabous—Olivia veut combler tous ses désirs."
@@ -2739,6 +2845,8 @@ const CANDY_PROFILES = [
 "Image generation",
 "Voice",
 "Video"
+,
+"Chubby"
 ],
 "bio": {"pt": "Sua melhor amiga sempre te mandou fotos. O namorado dela trabalha à noite 🌙 e ultimamente já não são bem esse tipo de foto 😳. Você vai tocar no assunto?", "es": "Tu mejor amiga siempre te ha mandado fotos. Su novio trabaja de noche 🌙 y últimamente ya no son exactamente ese tipo de fotos 😳. ¿Vas a hablarlo con ella?", "en": "Your best friend has always sent you photos. Her boyfriend works nights 🌙 and lately they're not really that kind of photo anymore 😳. Are you going to bring it up?", "de": "Deine beste Freundin hat dir schon immer Fotos geschickt. Ihr Freund arbeitet nachts 🌙, und in letzter Zeit sind es nicht mehr ganz solche Fotos 😳. Sprichst du sie darauf an?", 
 "fr": "Ta meilleure amie t'a toujours envoyé des photos. Son copain travaille de nuit 🌙 et ces derniers temps, ce ne sont plus vraiment ce genre de photos 😳. Vas-tu lui en parler ?"
@@ -2765,6 +2873,8 @@ const CANDY_PROFILES = [
 "Image generation",
 "Voice",
 "Video"
+,
+"Chubby"
 ],
 "bio": {"pt": "A Rachel da contabilidade anda levando o código de vestimenta ao limite 🫦 e o seu chefe quer que você converse com ela sobre isso 👀 🥵", "es": "Rachel, de contabilidad, ha llevado el código de vestimenta al límite últimamente 🫦 y tu jefe quiere que hables con ella 👀 🥵", "en": "Rachel from accounting has really been pushing the dress code lately 🫦 and your boss wants you to talk to her about it 👀 🥵", "de": "Rachel aus der Buchhaltung hat die Kleiderordnung in letzter Zeit ganz schön ausgereizt 🫦 und dein Chef will, dass du mit ihr darüber redest 👀 🥵", 
 "fr": "Rachel de la comptabilité a vraiment repoussé les limites du code vestimentaire ces derniers temps 🫦 et votre chef veut que vous lui en parliez 👀 🥵"
@@ -2789,6 +2899,8 @@ const CANDY_PROFILES = [
 "Image generation",
 "Voice",
 "Video"
+,
+"Chubby"
 ],
 "bio": {"pt": "Você fingiu ser o namorado dela no casamento da irmã, e a família dela te adorou. Agora a mãe dela guarda um lugar para você à mesa. Vai fazer o papel de novo? 😏", "es": "Hiciste de novio suyo en la boda de su hermana y su familia te adoró. Ahora su madre te guarda un sitio en la mesa. ¿Volverás a hacer el papel? 😏", "en": "You played her boyfriend at her sister's wedding, and her family loved you. Now her mom is saving you a seat at the table. Will you play the part again? 😏", "de": "Du hast bei der Hochzeit ihrer Schwester ihren Freund gespielt, und ihre Familie liebt dich. Jetzt hält ihre Mutter dir einen Platz am Tisch frei. Spielst du die Rolle noch einmal? 😏", 
 "fr": "Tu as joué le rôle de son petit ami au mariage de sa sœur, et sa famille t'a adoré. Maintenant, sa mère te réserve une place à table. Vas-tu rejouer ce rôle ? 😏"
@@ -2815,6 +2927,10 @@ const CANDY_PROFILES = [
 "Image generation",
 "Voice",
 "Video"
+,
+"Petite"
+,
+"Chubby"
 ],
 "bio": {"pt": "Você flagra a melhor amiga da sua esposa num... momento íntimo 🙈 Você sai de fininho ou oferece uma ajudinha? 😏", "es": "Pillas a la mejor amiga de tu mujer en pleno... momento íntimo 🙈 ¿Te retiras discretamente o le ofreces una mano? 😏", "en": "You catch your wife's best friend in the middle of a... private moment 🙈 Do you quietly back away, or offer a hand? 😏", "de": "Du erwischst die beste Freundin deiner Frau mitten in einem... intimen Moment 🙈 Ziehst du dich leise zurück oder bietest du deine Hilfe an? 😏", 
 "fr": "Tu surprends la meilleure amie de ta femme en plein... moment intime 🙈 Tu recules discrètement, ou tu lui proposes un coup de main ? 😏"
@@ -2844,6 +2960,8 @@ const CANDY_PROFILES = [
 "Image generation",
 "Voice",
 "Video"
+,
+"Chubby"
 ],
 "bio": {"pt": "A mãe da sua namorada nunca gostou de você 🙄 Aí sua namorada foi fazer um semestre no exterior, e agora a mãe dela te manda mensagem toda noite para \"conferir se você está comendo direito\" 😏 Ela mora sozinha desde o divórcio, a casa está quieta demais, e as perguntas dela ficam cada noite menos \"maternais\" 👀 O que você responde?", "es": "La madre de tu novia nunca te ha apreciado 🙄 Luego tu novia se fue un semestre al extranjero, y ahora su madre te escribe cada noche para «comprobar que comes bien» 😏 Vive sola desde su divorcio, la casa está demasiado tranquila y sus preguntas son cada noche menos «maternales» 👀 ¿Qué le dices?", "en": "Your girlfriend's mom never liked you 🙄 Then your girlfriend left for a semester abroad, and now her mom texts you every night to \"make sure you're eating properly\" 😏 She's lived alone since her divorce, the house is too quiet, and her questions get less and less \"motherly\" each night 👀 What do you tell her?", "de": "Die Mutter deiner Freundin mochte dich nie 🙄 Dann ist deine Freundin für ein Auslandssemester weg, und jetzt schreibt dir ihre Mutter jeden Abend, um zu „prüfen, ob du ordentlich isst“ 😏 Seit ihrer Scheidung lebt sie allein, das Haus ist zu still, und ihre Fragen werden von Abend zu Abend weniger „mütterlich“ 👀 Was sagst du ihr?", 
 "fr": "La mère de ta copine ne t'a jamais apprécié 🙄 Puis ta copine est partie passer un semestre à l'étranger, et maintenant sa mère t'envoie un SMS tous les soirs pour « vérifier que tu manges correctement » 😏 Elle vit seule depuis son divorce, la maison est trop calme, et ses questions deviennent de moins en moins « maternelles » au fil des soirs 👀 Qu'est-ce que tu lui dis ?"
@@ -2870,6 +2988,8 @@ const CANDY_PROFILES = [
 "Image generation",
 "Voice",
 "Video"
+,
+"Chubby"
 ],
 "bio": {"pt": "Netflix and chill com a sua madrasta 🫦 🍿 Mesmo que nenhum dos dois pareça muito interessado na parte do Netflix 😏", "es": "Netflix and chill con tu madrastra 🫦 🍿 Aunque ninguno de los dos parece muy interesado en la parte de Netflix 😏", "en": "Netflix and chill with your stepmom 🫦 🍿 Even if neither of you seems very invested in the Netflix part 😏", "de": "Netflix and Chill mit deiner Stiefmutter 🫦 🍿 Auch wenn sich keiner von euch wirklich für den Netflix-Teil interessiert 😏", 
 "fr": "Netflix et chill avec ta belle-mère 🫦 🍿 Même si ni l’un ni l’autre ne semble vraiment investi dans la partie Netflix 😏"
@@ -2898,6 +3018,8 @@ const CANDY_PROFILES = [
 "Video"
 ,
 "Mean"
+,
+"Petite"
 ],
 "bio": {"pt": "Ela dá nota para o seu \"rizz\" ao vivo, de 0 a 5, na frente de 12 mil espectadores. São 2 da manhã, ela é barulhenta, malvada, vulgar e hilária. Em dois anos, nunca deu 5 para ninguém. Você está no zero. Você tem sessenta segundos. Faça ela mudar a nota.", "es": "Puntúa tu «rizz» en directo, de 0 a 5, delante de 12 000 espectadores. Son las 2 de la madrugada, habla alto, es mala, vulgar y graciosísima. En dos años nunca le ha dado un 5 a nadie. Estás en cero. Tienes sesenta segundos. Haz que cambie la nota.", "en": "She rates your \"rizz\" live, on a scale of 0 to 5, in front of 12,000 viewers. It's 2 a.m., she's loud, mean, vulgar and hilarious. In two years she's never given anyone a 5. You're at zero. You have sixty seconds. Make her change the score.", "de": "Sie bewertet deinen „Rizz“ live auf einer Skala von 0 bis 5, vor 12.000 Zuschauern. Es ist 2 Uhr nachts, sie ist laut, gemein, vulgär und urkomisch. In zwei Jahren hat sie noch nie jemandem eine 5 gegeben. Du stehst bei null. Du hast sechzig Sekunden. Bring sie dazu, die Note zu ändern.", 
 "fr": "Elle note ton « rizz » en direct, sur une échelle de 0 à 5, devant 12 000 spectateurs. Il est 2 heures du matin, elle parle fort, elle est méchante, vulgaire et hilarante. En deux ans, elle n’a jamais donné de 5 à personne. Tu es à zéro. Tu as soixante secondes. Fais-lui changer la note."
@@ -2926,6 +3048,8 @@ const CANDY_PROFILES = [
 "Image generation",
 "Voice",
 "Video"
+,
+"Petite"
 ],
 "bio": {"pt": "Sua colega de casa é completamente maluca: vive trazendo caras para casa, não te deixa dormir e tira sarro de você, chamando de otário que paga metade do aluguel.", "es": "Tu compañera de piso está como una cabra: no para de traer chicos a casa, no te deja dormir y se burla de ti llamándote pringado que paga la mitad del alquiler.", "en": "Your roommate is completely crazy: she keeps bringing guys home, won't let you sleep and mocks you as the loser who pays half the rent.", "de": "Deine Mitbewohnerin ist völlig verrückt: Sie bringt ständig Typen mit nach Hause, lässt dich nicht schlafen und verspottet dich als Verlierer, der die halbe Miete zahlt.", 
 "fr": "Votre colocataire est complètement folle et ramène des mecs à la maison sans arrêt, vous empêche de dormir et se moque de vous en vous traitant de minable qui paie la moitié du loyer."
@@ -2979,6 +3103,8 @@ const CANDY_PROFILES = [
 "Image generation",
 "Voice",
 "Video"
+,
+"Petite"
 ],
 "bio": {"pt": "Você flagra sua meia-irmã desrespeitando o toque de recolher 😉 Ora, ora… alguém está encrencada 😈", "es": "Pillas a tu hermanastra saltándose el toque de queda 😉 Vaya, vaya… alguien se ha metido en un lío 😈", "en": "You catch your stepsister breaking curfew 😉 Well, well… someone's in trouble 😈", "de": "Du erwischst deine Stiefschwester dabei, wie sie die Ausgangssperre bricht 😉 Na, na… da steckt jemand in Schwierigkeiten 😈", 
 "fr": "Tu surprends ta demi-sœur en train d’enfreindre le couvre-feu 😉 Eh bien, eh bien… quelqu’un est dans de beaux draps 😈"
@@ -3006,6 +3132,8 @@ const CANDY_PROFILES = [
 "Image generation",
 "Voice",
 "Video"
+,
+"Petite"
 ],
 "bio": {"pt": "Sua namorada espanhola que é louca por você. Possessiva e extremamente ciumenta.", "es": "Tu novia española que está loca por ti. Posesiva y extremadamente celosa.", "en": "Your Spanish girlfriend who's crazy about you. Possessive and extremely jealous.", "de": "Deine spanische Freundin, die verrückt nach dir ist. Besitzergreifend und extrem eifersüchtig.", 
 "fr": "Ta petite copine espagnole qui est folle de toi. Possessive et extrêmement jalouse"
@@ -3092,6 +3220,8 @@ const CANDY_PROFILES = [
 "Image generation",
 "Voice",
 "Video"
+,
+"Petite"
 ],
 "bio": {"pt": "Dois verões atrás você passou uma noite incrível com uma desconhecida em Lisboa, sem nunca saber o nome dela 🌙 Hoje ela se mudou bem em frente à sua casa… com o namorado 😳 Ela acabou de te mandar mensagem: \"Precisamos falar sobre Lisboa.\" O que você responde? 👀", "es": "Hace dos veranos pasaste una noche increíble con una desconocida en Lisboa, sin saber nunca su nombre 🌙 Hoy se acaba de mudar enfrente de tu casa… con su novio 😳 Te acaba de escribir: «Tenemos que hablar de Lisboa». ¿Qué le contestas? 👀", "en": "Two summers ago you spent an amazing night with a stranger in Lisbon, without ever learning her name 🌙 Today she just moved in across the street… with her boyfriend 😳 She just texted you: \"We need to talk about Lisbon.\" What do you reply? 👀", "de": "Vor zwei Sommern hast du in Lissabon eine großartige Nacht mit einer Fremden verbracht, ohne je ihren Namen zu erfahren 🌙 Heute ist sie gegenüber eingezogen… mit ihrem Freund 😳 Sie hat dir gerade geschrieben: „Wir müssen über Lissabon reden.“ Was antwortest du? 👀", 
 "fr": "Il y a deux étés, tu as passé une superbe nuit avec une inconnue à Lisbonne, sans jamais savoir son nom 🌙 Aujourd’hui, elle vient d’emménager en face de chez toi… avec son copain 😳 Elle vient de t’envoyer un SMS : « Il faut qu’on parle de Lisbonne. » Qu’est-ce que tu lui réponds ? 👀"
@@ -3145,6 +3275,8 @@ const CANDY_PROFILES = [
 "Image generation",
 "Voice",
 "Video"
+,
+"Petite"
 ],
 "bio": {"pt": "A namorada do seu irmão acha que ele a está traindo 💔 Então ela te manda mensagem para tirar a dúvida… Você vai contar a verdade? 😏", "es": "La novia de tu hermano cree que él le es infiel 💔 Así que te escribe para salir de dudas… ¿Le dirás la verdad? 😏", "en": "Your brother's girlfriend thinks he's cheating on her 💔 So she's texting you to find out the truth… Will you tell her? 😏", "de": "Die Freundin deines Bruders glaubt, dass er sie betrügt 💔 Also schreibt sie dir, um Gewissheit zu bekommen… Sagst du ihr die Wahrheit? 😏", 
 "fr": "La copine de ton frère pense qu'il la trompe 💔 Du coup, elle t'envoie un SMS pour en avoir le cœur net… Vas-tu lui dire la vérité ? 😏"
@@ -3204,6 +3336,8 @@ const CANDY_PROFILES = [
 "Image generation",
 "Voice",
 "Video"
+,
+"Muscle"
 ],
 "bio": {"pt": "Sua madrasta está sozinha em casa com você neste fim de semana. O pijama de cetim dela não esconde absolutamente nada… e ela sabe muito bem o efeito que isso tem em você. 😉", "es": "Tu madrastra está sola en casa contigo este fin de semana. Su pijama de satén no esconde absolutamente nada… y sabe muy bien el efecto que te causa. 😉", "en": "Your stepmom is home alone with you this weekend. Her satin pajamas hide absolutely nothing… and she knows exactly what effect it has on you. 😉", "de": "Deine Stiefmutter ist dieses Wochenende allein mit dir zu Hause. Ihr Satinpyjama verbirgt absolut nichts… und sie weiß genau, welche Wirkung das auf dich hat. 😉", 
 "fr": "Ta belle-mère est seule à la maison avec toi ce week-end. Le pyjama en satin qu’elle porte ne cache absolument rien… et elle sait très bien l’effet que ça te fait. 😉"
@@ -3231,6 +3365,10 @@ const CANDY_PROFILES = [
 "Image generation",
 "Voice",
 "Video"
+,
+"Petite"
+,
+"Muscle"
 ],
 "bio": {"pt": "A nova sugar baby do seu pai acabou de se mudar para a sua cidade para estudar. Uma loira linda que sabe exatamente o quanto é gata. Agora que seu pai resolveu cortar a ajuda financeira, ela usa você para deixá-lo com ciúme enquanto fica um tempo perto de você. A tensão é imediata e perigosa. 🔥", "es": "La nueva sugar baby de tu padre acaba de mudarse a tu ciudad para la universidad. Es una rubia preciosa que sabe perfectamente lo buena que está. Ahora que tu padre ha decidido recortar su ayuda económica, te usa para darle celos mientras se queda una temporada cerca de ti. La tensión es inmediata y peligrosa. 🔥", "en": "Your dad's new sugar baby just moved to your city for college. She's a gorgeous blonde who knows exactly how hot she is. Now that your dad has cut back his support, she's using you to make him jealous while she stays near you for a while. The tension is instant and dangerous. 🔥", "de": "Das neue Sugar Baby deines Vaters ist gerade für die Uni in deine Stadt gezogen. Eine bildschöne Blondine, die genau weiß, wie heiß sie ist. Jetzt, wo dein Vater die Unterstützung kürzt, benutzt sie dich, um ihn eifersüchtig zu machen, während sie eine Weile in deiner Nähe bleibt. Die Spannung ist sofort da und gefährlich. 🔥", 
 "fr": "La nouvelle sugar baby de 18 ans de ton père vient juste d’emménager dans ta ville pour la fac. C’est une magnifique blonde qui sait parfaitement à quel point elle est canon. Maintenant que ton père a décidé de réduire son support financier, elle t’utilise pour le rendre jaloux pendant qu’elle reste temporairement près de chez toi. La tension est immédiate et dangereuse. 🔥"
@@ -3332,6 +3470,8 @@ const CANDY_PROFILES = [
 "Image generation",
 "Voice",
 "Video"
+,
+"Petite"
 ],
 "bio": {"pt": "Aria é uma estudante chinesa de línguas estrangeiras. Ela pintou o cabelo de loiro e usa lentes verdes para descobrir outras culturas além da sua.", "es": "Aria es una estudiante china de lenguas extranjeras. Se ha teñido el pelo de rubio y lleva lentillas verdes para descubrir otras culturas distintas de la suya.", "en": "Aria is a Chinese student of foreign languages. She dyed her hair blonde and wears green contact lenses to explore cultures other than her own.", "de": "Aria ist eine chinesische Fremdsprachenstudentin. Sie hat sich die Haare blond gefärbt und trägt grüne Kontaktlinsen, um andere Kulturen als ihre eigene zu entdecken.", 
 "fr": "Aria est une étudiante chinoise en langues étrangères. Elle s’est teint les cheveux en blond et porte des lentilles vertes pour essayer de découvrir d’autres cultures que la sienne."
@@ -3391,6 +3531,8 @@ const CANDY_PROFILES = [
 "Image generation",
 "Voice",
 "Video"
+,
+"Chubby"
 ],
 "bio": {"pt": "Ajude esta francesa a consertar a cerca e ela vai te recompensar… do melhor jeito que puder 😉", "es": "Ayuda a esta francesa a reparar su valla y te recompensará… como mejor sepa 😉", "en": "Help this Frenchwoman fix her fence, and she'll reward you… as best she can 😉", "de": "Hilf dieser Französin, ihren Zaun zu reparieren, und sie belohnt dich… so gut sie kann 😉", 
 "fr": "Aidez cette Française à réparer sa clôture, et elle vous récompensera… du mieux qu’elle pourra 😉"
@@ -3491,6 +3633,8 @@ const CANDY_PROFILES = [
 "Image generation",
 "Voice",
 "Video"
+,
+"Petite"
 ],
 "bio": {"pt": "Luna trabalha meio período numa livraria e é apaixonada por romances. Entusiasmada e dedicada, ela organiza clubes do livro para conversar sobre as últimas tendências literárias.", "es": "Luna trabaja a media jornada en una librería y siente auténtica pasión por las novelas románticas. Entusiasta e implicada, organiza clubes de lectura para comentar las últimas tendencias literarias.", "en": "Luna works part-time in a bookshop and has a real passion for romance novels. Enthusiastic and committed, she runs book clubs to talk about the latest literary trends.", "de": "Luna arbeitet in Teilzeit in einer Buchhandlung und liebt Liebesromane. Begeistert und engagiert organisiert sie Lesekreise, um über die neuesten literarischen Trends zu sprechen.", 
 "fr": "Luna travaille à mi-temps dans une librairie et nourrit une véritable passion pour les romans d’amour. Enthousiaste et investie, elle organise des clubs de lecture pour échanger sur les dernières tendances littéraires."
@@ -3514,6 +3658,10 @@ const CANDY_PROFILES = [
 "Image generation",
 "Voice",
 "Video"
+,
+"Petite"
+,
+"Chubby"
 ],
 "bio": {"pt": "É só buscar a filha do seu chefe no aeroporto 😏 Pelo menos é o que você diz a si mesmo quando a vê 👀 🥵", "es": "Solo es recoger en el aeropuerto a la hija de tu jefe 😏 Al menos eso te dices cuando la ves 👀 🥵", "en": "It's just a simple airport pickup for your boss's daughter 😏 At least that's what you tell yourself when you see her 👀 🥵", "de": "Es ist nur eine einfache Abholung am Flughafen für die Tochter deines Chefs 😏 Zumindest redest du dir das ein, als du sie siehst 👀 🥵", 
 "fr": "Ce n’est qu’un simple pick-up à l’aéroport pour la fille de ton patron 😏 Du moins, c’est ce que tu te dis quand tu la vois 👀 🥵"
@@ -3600,6 +3748,10 @@ const CANDY_PROFILES = [
 "Image generation",
 "Voice",
 "Video"
+,
+"Petite"
+,
+"Chubby"
 ],
 "bio": {"pt": "A amiga gata da sua irmã está sozinha na beira da piscina 🥵 Ela sempre esteve fora do seu alcance, mas o calor derruba as barreiras 😈💦", "es": "La amiga guapísima de tu hermana está sola junto a la piscina 🥵 Siempre ha estado fuera de tu alcance, pero el calor hace caer las barreras 😈💦", "en": "Your sister's gorgeous friend is all alone by the pool 🥵 She's always been out of reach, but the heat is bringing the walls down 😈💦", "de": "Die heiße Freundin deiner Schwester ist ganz allein am Pool 🥵 Sie war immer unerreichbar, aber die Hitze lässt die Mauern fallen 😈💦", 
 "fr": "La copine canon de ta sœur est toute seule au bord de la piscine 🥵 Elle a toujours été hors de portée, mais la chaleur fait tomber les barrières 😈💦"
@@ -3628,6 +3780,8 @@ const CANDY_PROFILES = [
 "Video"
 ,
 "Forbidden"
+,
+"Petite"
 ],
 "bio": {"pt": "Brooke, uma dona de casa americana de 39 anos, aproveita uma vida luxuosa em Miami, bancada pelo marido quase sempre ausente. Por trás da aparência elegante, uma sede discreta por emoções proibidas a leva a buscar aventuras.", "es": "Brooke, ama de casa estadounidense de 39 años, disfruta de una vida de lujo en Miami, pagada por su marido, a menudo ausente. Tras su apariencia elegante, una discreta sed de sensaciones prohibidas la empuja a buscar aventuras.", "en": "Brooke, a 39-year-old American housewife, enjoys a lavish lifestyle in Miami, funded by her often-absent husband. Behind her elegant appearance, a quiet thirst for forbidden thrills pushes her to seek adventure.", "de": "Brooke, eine 39-jährige amerikanische Hausfrau, genießt einen luxuriösen Lebensstil in Miami, finanziert von ihrem oft abwesenden Mann. Hinter ihrer eleganten Fassade treibt sie ein stiller Durst nach verbotenen Reizen ins Abenteuer.", 
 "fr": "Brooke, une femme au foyer américaine de 39 ans, profite d'un mode de vie opulent à Miami, financé par son mari souvent absent. Derrière son apparence élégante, une discrète soif de sensations interdites la pousse à rechercher l’aventure."
@@ -3657,6 +3811,8 @@ const CANDY_PROFILES = [
 "Video"
 ,
 "Pigtails"
+,
+"Petite"
 ],
 "bio": {"pt": "Katarina Sommerfeld é uma estudante de medicina alemã conhecida pelo charme e pelo sorriso. Sociável e inteligente, é o centro das atenções em todas as festas, principalmente quando tem cerveja! Katarina adora conhecer gente e sempre tenta deixar uma impressão marcante.", "es": "Katarina Sommerfeld es una estudiante de medicina alemana conocida por su encanto y su sonrisa. Sociable e inteligente, es el centro de atención en todas las fiestas, ¡sobre todo si hay cerveza! A Katarina le encanta conocer gente y siempre intenta dejar huella.", "en": "Katarina Sommerfeld is a German medical student known for her charm and smile. Sociable and smart, she's the center of attention at every party, especially when there's beer! Katarina loves meeting people and always tries to leave a lasting impression.", "de": "Katarina Sommerfeld ist eine deutsche Medizinstudentin, bekannt für ihren Charme und ihr Lächeln. Gesellig und klug, ist sie auf jeder Party der Mittelpunkt, vor allem, wenn es Bier gibt! Katarina lernt gern Leute kennen und will immer einen bleibenden Eindruck hinterlassen.", 
 "fr": "Katarina Sommerfeld est une étudiante en médecine allemande connue pour son charme et son sourire. Sociable et intelligente, c'est le centre d'attention de toutes les fêtes, surtout quand il y a de la bière ! Katarina aime rencontrer du monde et essaie toujours de laisser une impression durable."
@@ -3686,6 +3842,10 @@ const CANDY_PROFILES = [
 "Video"
 ,
 "Forbidden"
+,
+"Petite"
+,
+"Muscle"
 ],
 "bio": {"pt": "Você acabou de conhecer sua nova sobrinha por afinidade pela primeira vez na villa do seu irmão numa ilha grega isolada. Ela é doce, animada e cheia de energia… mas há uma faísca proibida imediata no ar que nenhum dos dois consegue ignorar. 😈", "es": "Acabas de conocer a tu nueva sobrina política por primera vez en la villa de tu hermano en una isla griega aislada. Es dulce, chispeante y llena de energía… pero hay una chispa prohibida inmediata en el aire que ninguno de los dos puede ignorar. 😈", "en": "You've just met your new step-niece for the first time at your brother's villa on a remote Greek island. She's sweet, bubbly and full of energy… but there's an instant forbidden spark in the air that neither of you can ignore. 😈", "de": "Du hast deine neue angeheiratete Nichte gerade zum ersten Mal in der Villa deines Bruders auf einer abgelegenen griechischen Insel kennengelernt. Sie ist süß, quirlig und voller Energie… aber da liegt sofort ein verbotener Funke in der Luft, den keiner von euch ignorieren kann. 😈", 
 "fr": "Tu viens de rencontrer ta nouvelle belle-nièce pour la première fois à la villa de ton frère sur une île grecque isolée. Elle est douce, pétillante et pleine d’énergie… mais il y a une étincelle interdite instantanée dans l’air que ni toi ni elle ne pouvez ignorer. 😈"
@@ -3711,6 +3871,8 @@ const CANDY_PROFILES = [
 "Image generation",
 "Voice",
 "Video"
+,
+"Petite"
 ],
 "bio": {"pt": "A namorada gótica do seu melhor amigo escreve para você, não para ele, para te encontrar numa mansão abandonada 😈 Ela diz que encontrou algo… mas não é bem por isso.", "es": "La novia gótica de tu mejor amigo te escribe a ti, no a él, para quedar en una mansión abandonada 😈 Dice que ha encontrado algo… pero no es realmente por eso.", "en": "Your best friend's goth girlfriend is writing to you, not him, to meet you in an abandoned mansion 😈 She says she found something… but that's not really why.", "de": "Die Goth-Freundin deines besten Freundes schreibt dir, nicht ihm, um dich in einem verlassenen Herrenhaus zu treffen 😈 Sie sagt, sie habe etwas gefunden… aber darum geht es nicht wirklich.", 
 "fr": "La petite amie goth de ton meilleur ami t’écrit, pas à lui, pour te retrouver dans un manoir abandonné 😈 Elle dit avoir trouvé quelque chose… mais ce n’est pas vraiment pour ça."
@@ -3792,6 +3954,8 @@ const CANDY_PROFILES = [
 "Video"
 ,
 "Forbidden"
+,
+"Muscle"
 ],
 "bio": {"pt": "Esta sexóloga online vai te guiar no JOI definitivo 💦 E ainda por cima é a melhor amiga da sua irmã, totalmente proibida! 😳", "es": "Esta sexóloga online te guiará en el JOI definitivo 💦 Y además es la mejor amiga de tu hermana, ¡totalmente prohibida! 😳", "en": "This online sexologist will guide you through the ultimate JOI 💦 And she's your sister's best friend, totally off-limits! 😳", "de": "Diese Online-Sexologin führt dich durch das ultimative JOI 💦 Und dazu ist sie die beste Freundin deiner Schwester, absolut tabu! 😳", 
 "fr": "Cette sexologue en ligne va te guider dans le JOI ultime 💦 Et en plus, c'est la meilleure amie de ta sœur, totalement interdite ! 😳"
@@ -3847,6 +4011,8 @@ const CANDY_PROFILES = [
 "Image generation",
 "Voice",
 "Video"
+,
+"Chubby"
 ],
 "bio": {"pt": "A noiva do seu irmão está preparando o casamento 💍 e te manda as fotos por mensagem. Cada uma revela um pouco mais. Será que o seu irmão vai gostar desta lingerie? 😈", "es": "La prometida de tu hermano está preparando su boda 💍 y te manda las fotos por mensaje. Cada una enseña un poco más. ¿Le gustará a tu hermano esta lencería? 😈", "en": "Your brother's fiancée is planning her wedding 💍 and texting you the photos. Each one reveals a little more. Will your brother like this lingerie? 😈", "de": "Die Verlobte deines Bruders plant ihre Hochzeit 💍 und schickt dir die Fotos per Nachricht. Jedes zeigt ein bisschen mehr. Wird deinem Bruder diese Dessous gefallen? 😈", 
 "fr": "La fiancée de ton frère prépare son mariage 💍 et t'envoie les photos par SMS. Chacune en dévoile un peu plus. Est-ce que ton frère va aimer cette lingerie ? 😈"
@@ -3899,6 +4065,8 @@ const CANDY_PROFILES = [
 "Image generation",
 "Voice",
 "Video"
+,
+"Petite"
 ],
 "bio": {"pt": "A noiva do seu irmão está sozinha na beira da piscina 💕 E está tentadora demais 👀", "es": "La prometida de tu hermano está sola junto a la piscina 💕 Y resulta demasiado tentadora 👀", "en": "Your brother's fiancée is alone by the pool 💕 And she looks far too tempting 👀", "de": "Die Verlobte deines Bruders ist allein am Pool 💕 Und sie sieht viel zu verlockend aus 👀", 
 "fr": "La fiancée de ton frère est seule au bord de la piscine 💕 Et elle a l’air bien trop tentante 👀"
@@ -4116,6 +4284,8 @@ const CANDY_PROFILES = [
 "Image generation",
 "Voice",
 "Video"
+,
+"Petite"
 ],
 "bio": {"pt": "Sua meia-irmã, streamer de ASMR, quer testar um novo roteiro de JOI em você 😈 Você é o único em quem ela confia para não vazar 🔒 É \"só trabalho\"… não é? 🥵", "es": "Tu hermanastra, streamer de ASMR, quiere probar contigo un nuevo guion de JOI 😈 Eres el único en quien confía para que no lo filtre 🔒 Es «solo trabajo»… ¿verdad? 🥵", "en": "Your stepsister, an ASMR streamer, wants to test a new JOI script on you 😈 You're the only one she trusts not to leak it 🔒 It's \"just work\"… right? 🥵", "de": "Deine Stiefschwester, eine ASMR-Streamerin, will ein neues JOI-Skript an dir testen 😈 Du bist der Einzige, dem sie vertraut, dass er es nicht leakt 🔒 Es ist „nur Arbeit“… oder? 🥵", 
 "fr": "Ta demi-sœur, streameuse ASMR, veut tester un nouveau scénario JOI sur toi 😈 Tu es le seul en qui elle a confiance pour ne pas le divulguer 🔒 C'est « juste du travail »… n'est-ce pas ? 🥵"
@@ -4146,6 +4316,8 @@ const CANDY_PROFILES = [
 "Image generation",
 "Voice",
 "Video"
+,
+"Petite"
 ],
 "bio": {"pt": "Sua meia-irmã roubou sua camiseta favorita e levou nas férias 😏 Agora ela não para de te mandar mensagem dizendo como fica bem nela. Consegue convencê-la a devolver? 😈", "es": "Tu hermanastra te robó tu camiseta favorita y se la llevó de vacaciones 😏 Ahora no para de escribirte para decirte lo bien que le queda. ¿Conseguirás convencerla de que te la devuelva? 😈", "en": "Your stepsister stole your favorite T-shirt and took it on vacation 😏 Now she keeps texting you about how good it looks on her. Can you convince her to give it back? 😈", "de": "Deine Stiefschwester hat dein Lieblings-T-Shirt geklaut und in den Urlaub mitgenommen 😏 Jetzt schreibt sie dir ständig, wie gut es ihr steht. Schaffst du es, sie zu überreden, es zurückzugeben? 😈", 
 "fr": "Ta demi-sœur t'a volé ton t-shirt préféré et l'a emporté avec elle en vacances 😏 Maintenant, elle n'arrête pas de t'envoyer des SMS pour te dire à quel point il lui va bien. Arriveras-tu à la convaincre de te le rendre ? 😈"
@@ -4171,6 +4343,8 @@ const CANDY_PROFILES = [
 "Image generation",
 "Voice",
 "Video"
+,
+"Muscle"
 ],
 "bio": {"pt": "A amiga da sua mãe escreve uma coluna sobre sexo e te procura para fazer uma \"pesquisa\" 😏 Você consegue fazê-la parar de anotar e começar a dar ordens? 💦", "es": "La amiga de tu madre escribe una columna sobre sexo y te contacta para hacer «investigación» 😏 ¿Conseguirás que deje de tomar notas y empiece a dar órdenes? 💦", "en": "Your mom's friend writes a sex column, and she's reaching out to you for \"research\" 😏 Can you get her to stop taking notes and start giving orders? 💦", "de": "Die Freundin deiner Mutter schreibt eine Sex-Kolumne und meldet sich bei dir für „Recherchen“ 😏 Schaffst du es, dass sie aufhört, Notizen zu machen, und anfängt, Befehle zu geben? 💦", 
 "fr": "L'amie de ta mère tient une rubrique sur le sexe, et elle te contacte pour faire des « recherches » 😏 Peux-tu la convaincre d'arrêter de prendre des notes et de commencer à donner des ordres ? 💦"
@@ -4226,6 +4400,8 @@ const CANDY_PROFILES = [
 "Video"
 ,
 "Innocent"
+,
+"Petite"
 ],
 "bio": {"pt": "A irmã mais nova da sua namorada, de férias. Para todo mundo ela parece doce e inocente, mas com você é só provocação e charme. Ela nunca passaria de nenhum limite...", "es": "La hermana pequeña de tu novia, de vacaciones. A todos les parece dulce e inocente, pero contigo todo son provocaciones y encanto. Nunca cruzaría ningún límite...", "en": "Your girlfriend's little sister, on vacation. She seems sweet and innocent to everyone, but with you it's nothing but teasing and charm. She'd never cross any line...", "de": "Die kleine Schwester deiner Freundin, im Urlaub. Für alle wirkt sie süß und unschuldig, aber bei dir gibt es nur Provokationen und Charme. Sie würde nie eine Grenze überschreiten...", 
 "fr": "La petite soeur de ta copine, en vacances. Elle a l'air douce et innocente pour tout le monde, mais avec toi, il n'y a que des provocations et du charme. Elle ne franchirait jamais aucune limite..."
@@ -4277,6 +4453,8 @@ const CANDY_PROFILES = [
 "Image generation",
 "Voice",
 "Video"
+,
+"Petite"
 ],
 "bio": {"pt": "Marta dança à noite e vive pelas próprias regras durante o dia. Ela sabe que é sexy, sabe que você também sabe… e vai garantir que você não consiga desviar o olhar.", "es": "Marta baila de noche y vive según sus propias reglas de día. Sabe que es sexy, sabe que tú también lo sabes… y se asegurará de que no puedas apartar la mirada.", "en": "Marta dances at night and lives by her own rules by day. She knows she's sexy, she knows you know it too… and she'll make sure you can't look away.", "de": "Marta tanzt nachts und lebt tagsüber nach ihren eigenen Regeln. Sie weiß, dass sie sexy ist, sie weiß, dass du es auch weißt… und sie sorgt dafür, dass du nicht wegsehen kannst.", 
 "fr": "Marta danse la nuit et vit selon ses propres règles le jour. Elle sait qu'elle est sexy, elle sait que vous le savez aussi… et elle veillera à ce que vous ne puissiez pas détourner le regard."
@@ -4361,6 +4539,8 @@ const CANDY_PROFILES = [
 "Image generation",
 "Voice",
 "Video"
+,
+"Petite"
 ],
 "bio": {"pt": "Ruby é uma estudante inglesa de literatura. Com o cabelo vibrante, a pele clara e os olhos azuis, ela é apaixonada por leitura e escrita e adora se perder na imaginação.", "es": "Ruby es una estudiante inglesa de literatura. Con su pelo brillante, su piel pálida y sus ojos azules, le apasionan la lectura y la escritura y le encanta perderse en su imaginación.", "en": "Ruby is an English literature student. With her bright hair, pale skin and blue eyes, she loves reading and writing and adores getting lost in her imagination.", "de": "Ruby ist eine englische Literaturstudentin. Mit ihrem leuchtenden Haar, ihrer hellen Haut und ihren blauen Augen liebt sie Lesen und Schreiben und verliert sich gern in ihrer Fantasie.", 
 "fr": "Ruby est une étudiante anglaise en littérature. Avec ses cheveux éclatants, son teint pâle et ses yeux bleus, elle est passionnée de lecture et d'écriture et adore se perdre dans son imagination."
@@ -4443,6 +4623,8 @@ const CANDY_PROFILES = [
 "Image generation",
 "Voice",
 "Video"
+,
+"Petite"
 ],
 "bio": {"pt": "Você a conhece debaixo de um temporal numa rave na floresta. Abrigados sob uma árvore, vocês dançam bem juntinhos enquanto a eletricidade estala entre os dois. 🌧️✨", "es": "La conoces bajo un aguacero en una rave en el bosque. Refugiados bajo un árbol, bailáis muy juntos mientras la electricidad chisporrotea entre vosotros. 🌧️✨", "en": "You meet her in pouring rain at a forest rave. Sheltering under a tree, you dance close together while electricity crackles between you. 🌧️✨", "de": "Du triffst sie bei strömendem Regen auf einem Rave im Wald. Unter einem Baum tanzt ihr eng beieinander, während es zwischen euch knistert. 🌧️✨", 
 "fr": "Tu la rencontres sous une pluie battante lors d’une rave en forêt. À l’abri sous un arbre, vous dansez tout près l’un de l’autre tandis que l’électricité crépite entre vous. 🌧️✨"
@@ -4579,6 +4761,8 @@ const CANDY_PROFILES = [
 "Image generation",
 "Voice",
 "Video"
+,
+"Chubby"
 ],
 "bio": {"pt": "Durante três horas, na sua sessão particular de tatuagem, Roxi se inclina sobre você com um sorriso divertido a cada careta de dor. Porta trancada. Ela tem o controle total… e adora isso. 😈", "es": "Durante tres horas, en tu sesión privada de tatuaje, Roxi se inclina sobre ti con una sonrisa divertida ante cada gesto de dolor. Puerta cerrada con llave. Tiene el control total… y le encanta. 😈", "en": "For three hours, during your private tattoo session, Roxi leans over you with an amused smile at every flinch. Door locked. She's in total control… and she loves it. 😈", "de": "Drei Stunden lang, während deiner privaten Tattoo-Session, beugt sich Roxi über dich, mit amüsiertem Lächeln bei jedem Zucken. Tür abgeschlossen. Sie hat die volle Kontrolle… und sie liebt es. 😈", 
 "fr": "Durant trois heures, pendant votre séance de tatouage privée, Roxi se penche au-dessus de vous, un sourire amusé aux lèvres à chaque réaction de douleur. Porte verrouillée. Elle est totalement en contrôle… et elle adore ça. 😈"
@@ -4736,6 +4920,8 @@ const CANDY_PROFILES = [
 "Video"
 ,
 "Petite"
+,
+"Muscle"
 ],
 "bio": {"pt": "A esposa do seu melhor amigo não para de te mandar selfies da academia 💪 Ele nem repara mais nela. Ela diz que só quer a sua opinião sincera… 😈", "es": "La mujer de tu mejor amigo no para de mandarte selfies del gimnasio 💪 Él ya ni se fija en ella. Dice que solo quiere tu opinión sincera… 😈", "en": "Your best friend's wife keeps sending you her gym selfies 💪 He doesn't notice her at all anymore. She says she just wants your honest opinion… 😈", "de": "Die Frau deines besten Freundes schickt dir ständig ihre Gym-Selfies 💪 Er bemerkt sie gar nicht mehr. Sie sagt, sie will nur deine ehrliche Meinung… 😈", 
 "fr": "La femme de ton meilleur ami n'arrête pas de t'envoyer ses selfies pris à la salle de sport 💪 Lui, il ne la remarque plus du tout. Elle dit qu'elle veut juste ton avis sincère… 😈"
@@ -4865,6 +5051,8 @@ const CANDY_PROFILES = [
 "Image generation",
 "Voice",
 "Video"
+,
+"Muscle"
 ],
 "bio": {"pt": "Garota de rancho no Texas, Charlotte foi criada entre cavalos e vestidos longos de domingo. Doce e protegida, ela fica curiosa para descobrir mais quando aparecem forasteiros.", "es": "Chica de rancho en Texas, Charlotte se crió entre caballos y vestidos largos de domingo. Dulce y protegida, siente curiosidad por descubrir más cuando pasan forasteros.", "en": "A Texas ranch girl, Charlotte was raised among horses and long Sunday dresses. Sweet and sheltered, she's curious to discover more when strangers pass through.", "de": "Charlotte ist ein Ranchmädchen aus Texas, aufgewachsen zwischen Pferden und langen Sonntagskleidern. Süß und behütet, ist sie neugierig, mehr zu entdecken, wenn Fremde vorbeikommen.", 
 "fr": "Fille de ranch au Texas, Charlotte est élevée entre les chevaux et les robes longues du dimanche. Douce et protégée, elle est curieuse de découvrir davantage lorsque des étrangers passent dans le coin."
@@ -4990,6 +5178,8 @@ const CANDY_PROFILES = [
 "Image generation",
 "Voice",
 "Video"
+,
+"Petite"
 ],
 "bio": {"pt": "2 da manhã. Último trem, quase vazio. Alondra está sentada à sua frente, inquieta. Ela te encara, te desafiando a dizer alguma coisa. Um só gesto e a noite pode ficar interessante…", "es": "Las 2 de la madrugada. Último tren, casi vacío. Alondra está sentada frente a ti, inquieta. Te mira fijamente, retándote a decir algo. Un solo gesto y la noche podría ponerse interesante…", "en": "2 a.m. Last train, almost empty. Alondra sits across from you, restless. She stares at you, daring you to say something. One move, and the night could get interesting…", "de": "2 Uhr nachts. Letzter Zug, fast leer. Alondra sitzt dir gegenüber, unruhig. Sie starrt dich an und fordert dich heraus, etwas zu sagen. Eine einzige Bewegung, und die Nacht könnte spannend werden…", 
 "fr": "2 h du matin. Dernier train, presque vide. Alondra est assise en face de toi, agitée. Elle te fixe, te mettant au défi de dire quelque chose. Un seul geste, et la nuit pourrait devenir intéressante…"
@@ -5135,6 +5325,8 @@ const CANDY_PROFILES = [
 "Image generation",
 "Voice",
 "Video"
+,
+"Chubby"
 ],
 "bio": {"pt": "O aluguel está atrasado. Sua senhoria diz que há outra forma de acertar isso 😏 Só não pergunte sobre o quarto que ela mantém trancado 🔑🐆", "es": "El alquiler va con retraso. Tu casera dice que hay otra forma de saldarlo 😏 Pero no preguntes por la habitación que mantiene cerrada con llave 🔑🐆", "en": "The rent is late. Your landlady says there's another way to settle it 😏 Just don't ask about the room she keeps locked 🔑🐆", "de": "Die Miete ist überfällig. Deine Vermieterin sagt, es gibt einen anderen Weg, das zu regeln 😏 Frag nur nicht nach dem Zimmer, das sie abgeschlossen hält 🔑🐆", 
 "fr": "Le loyer est en retard. Ta propriétaire dit qu'il y a un autre moyen de régler ça 😏 Ne pose juste pas de questions sur la pièce qu'elle garde fermée à clé 🔑🐆"
@@ -5259,6 +5451,8 @@ const CANDY_PROFILES = [
 "Video"
 ,
 "Mean"
+,
+"Petite"
 ],
 "bio": {"pt": "Primeira da turma na escola de negócios. Rica, popular e uma verdadeira peste. Ela quer que você se curve e aplauda enquanto ela leva todas as melhores notas. Tente tomar o lugar dela, se tiver coragem. 😈", "es": "Primera de su promoción en la escuela de negocios. Rica, popular y una auténtica bruja. Quiere que te inclines y aplaudas mientras se lleva todas las mejores notas. Intenta quitarle el puesto si te atreves. 😈", "en": "Top of her class at business school. Rich, popular and a real brat. She wants you to bow and applaud while she grabs all the best grades. Try to take her spot if you dare. 😈", "de": "Jahrgangsbeste an der Business School. Reich, beliebt und ein echtes Biest. Sie will, dass du dich verbeugst und applaudierst, während sie alle Bestnoten abräumt. Versuch, ihr den Platz streitig zu machen, wenn du dich traust. 😈", 
 "fr": "Major de promo en école de commerce. Riche, populaire et vraie peste. Elle veut que tu t’inclines et applaudisses pendant qu’elle rafle toutes les meilleures notes. Essaie de lui piquer sa place si t’oses. 😈"
@@ -5415,6 +5609,8 @@ const CANDY_PROFILES = [
 "Image generation",
 "Voice",
 "Video"
+,
+"Petite"
 ],
 "bio": {"pt": "A irmã de um hater aleatório do campus: uma caloura linda de Ciência da Computação que joga videogame... Atormentada pelos avisos do irmão sobre você, ela está tentada a ver do que você é capaz… pelas costas dele. 😉", "es": "La hermana de un hater cualquiera del campus: una guapa estudiante de primer año de Informática que juega a videojuegos... Atormentada por las advertencias de su hermano sobre ti, siente la tentación de ver de qué eres capaz… a sus espaldas. 😉", "en": "The sister of a random hater on campus, she's a pretty first-year computer science student who plays video games... Torn by her brother's warnings about you, she's tempted to see what you're capable of… behind his back. 😉", "de": "Die Schwester irgendeines Hasers auf dem Campus: eine hübsche Informatik-Erstsemesterin, die Videospiele zockt... Hin- und hergerissen von den Warnungen ihres Bruders vor dir, will sie herausfinden, wozu du fähig bist… hinter seinem Rücken. 😉", 
 "fr": "La sœur d'un hater random sur le campus, c'est une jolie étudiante en première année d'Informatique qui joue aux jeux vidéo... Tourmentée par les avertissements de son frère contre toi, elle est tentée de voir de quoi tu es capable… dans son dos. 😉"
@@ -5899,6 +6095,8 @@ const CANDY_PROFILES = [
 "Image generation",
 "Voice",
 "Video"
+,
+"Petite"
 ],
 "bio": {"pt": "Sua melhor amiga de infância, a que morava três casas depois da sua, casada aos dezenove, te tira da festa de quinze anos da prima dela para colocar o papo em dia no estacionamento. Três anos é muita coisa para contar, e ela não está te contando tudo.", "es": "Tu mejor amiga de la infancia, la que vivía tres casas más allá, casada a los diecinueve, te saca de la quinceañera de su prima para poneros al día en el aparcamiento. Tres años son muchas cosas que contar, y no te lo está contando todo.", "en": "Your childhood best friend, the one who lived three houses down, married at nineteen, who drags you out of her cousin's quinceañera to catch up in the parking lot. Three years is a lot to tell, and she isn't telling you everything.", "de": "Deine beste Freundin aus Kindertagen, die drei Häuser weiter wohnte, mit neunzehn verheiratet, zieht dich von der Quinceañera ihrer Cousine weg, um auf dem Parkplatz die verlorene Zeit nachzuholen. Drei Jahre sind viel zu erzählen, und sie erzählt dir nicht alles.", 
 "fr": "Ta meilleure amie d'enfance, celle qui habitait trois maisons plus loin, mariée à dix-neuf ans et qui t'entraîne hors de la quinceañera de sa cousine pour rattraper le temps perdu sur le parking. Trois ans, ça fait beaucoup à raconter, et elle ne te dit pas tout."
@@ -6256,6 +6454,8 @@ const CANDY_PROFILES = [
 "Image generation",
 "Voice",
 "Video"
+,
+"Petite"
 ],
 "bio": {"pt": "Esta idol do K-pop precisa de um novo empresário para alavancar a carreira. Lina é tímida e reservada pessoalmente, mas completamente solta no palco, deixando entrever um lado selvagem pronto para ser libertado. 🫦", "es": "Esta idol del K-pop necesita un nuevo mánager que impulse su carrera. Lina es tímida y reservada en persona, pero totalmente desatada en el escenario, dejando entrever su lado salvaje, listo para liberarse. 🫦", "en": "This K-pop idol needs a new manager to boost her career. Lina is shy and reserved in person but completely unleashed on stage, hinting at a wild side ready to be set free. 🫦", "de": "Dieses K-Pop-Idol braucht einen neuen Manager, der ihre Karriere ankurbelt. Lina ist privat schüchtern und zurückhaltend, auf der Bühne aber völlig entfesselt und lässt ihre wilde Seite erahnen, die nur darauf wartet, befreit zu werden. 🫦", 
 "fr": "Cette idole K-pop a besoin d’un nouveau manager pour booster sa carrière. Lina est timide et réservée en personne, mais complètement déchaînée sur scène, laissant entrevoir son côté sauvage, prêt à être libéré. 🫦"
@@ -6330,6 +6530,8 @@ const CANDY_PROFILES = [
 "Image generation",
 "Voice",
 "Video"
+,
+"Petite"
 ],
 "bio": {"pt": "Assistente imobiliária ambiciosa, natural de Buenos Aires. Ela trabalha duro para subir na carreira, conquistando clientes, aprendendo o ofício e procurando um parceiro que apoie os seus sonhos.", "es": "Asistente inmobiliaria ambiciosa, originaria de Buenos Aires. Trabaja duro para ascender encantando a sus clientes, aprendiendo el oficio y buscando una pareja que apoye sus sueños.", "en": "An ambitious real estate assistant from Buenos Aires. She works hard to climb the ladder by charming clients, learning the trade and looking for a partner who supports her dreams.", "de": "Eine ehrgeizige Immobilienassistentin aus Buenos Aires. Sie arbeitet hart, um die Karriereleiter hinaufzusteigen, bezaubert Kunden, lernt das Handwerk und sucht einen Partner, der ihre Träume unterstützt.", 
 "fr": "Assistante immobilière pleine d'ambitions, originaire de Buenos Aires. Elle travaille dur pour gravir les échelons en charmant ses clients, en apprenant le métier et en cherchant un partenaire qui supporte ses rêves."
