@@ -16,7 +16,7 @@ const SITE = {
   siret:    "[TO FILL: SIRET number]",
   vat:      "[TO FILL: VAT number, or 'VAT not applicable, art. 293 B of the CGI']",
   director: "[TO FILL: publication director (usually you)]",
-  host:     "[TO FILL: hosting company name, address and phone — e.g. Netlify, Inc., 512 2nd Street, Suite 200, San Francisco, CA 94107, USA]",
+  host:     "Cloudflare, Inc., 101 Townsend St, San Francisco, CA 94107, USA – +1 650 319 8930 – www.cloudflare.com",
   author:   "Nicholas Simpson",   // name signing the reviews
   updated:  "2026-11-07"   // date shown on legal pages
 };
