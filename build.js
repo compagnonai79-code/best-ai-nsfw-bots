@@ -206,7 +206,7 @@ ${o.modal ? `<div class="overlay" id="profile">
 </footer>
 
 <script>var PAGE_LANG="${lang}",ROOT="${root}",LROOT="${lr}"${o.base ? `,PAGE_BASE="${o.base}"` : ""};</script>
-<script defer src="${root}assets/bundle.js?v=${ASSET_V}"></script>
+<script defer src="${root}assets/app-${lang}.js?v=${ASSET_V}"></script>
 <script>document.addEventListener("DOMContentLoaded",function(){boot("${o.page}")});</script>
 </body>
 </html>`;
@@ -645,6 +645,21 @@ for (const lang of LANG_LIST) {
 /* assets */
 for (const f of CLIENT) write("assets/" + f, read(f));
 write("assets/bundle.js", CLIENT.map(read).join("\n;\n"));   /* one deferred request instead of 9 blocking ones */
+/* One small bundle per language: the data the browser needs, with the other languages' texts removed
+   (bios, UI strings…), then the i18n engine and app.js. Same behaviour, about 3x lighter. */
+for (const l of LANG_LIST) {
+  const ctx = { PAGE_LANG: l, console, Date, URLSearchParams }; vm.createContext(ctx);
+  const NAMES = ["PLATFORMS","PLATFORM_DATA","TOP_PICKS","OFFER","PROMO","TAG_GROUPS","ALL_TAGS","NEW_DAYS","PROFILES","LANGS","I18N"];
+  vm.runInContext(CLIENT.filter(f => f !== "app.js").map(read).join("\n;\n") + `\n;this.D={${NAMES}};`, ctx);
+  /* {en,fr,…} objects keep only this language (or English if it is missing); I18N keeps English too (ui() falls back to it) */
+  const prune = (v, both) => Array.isArray(v) ? v.map(x => prune(x))
+    : v && typeof v === "object" ? (() => { const k = Object.keys(v), langObj = k.length >= 2 && k.every(x => LANG_LIST.includes(x));
+        const keep = both ? [l, "en"] : [l in v ? l : "en"];
+        const o = {}; for (const x of k) if (!langObj || keep.includes(x)) o[x] = prune(v[x]); return o; })()
+    : typeof v === "function" ? (() => { throw new Error("function in client data"); })() : v;
+  const engine = read("i18n.js").slice(read("i18n.js").indexOf("let LANG"));
+  write(`assets/app-${l}.js`, NAMES.map(n => `const ${n}=${JSON.stringify(prune(ctx.D[n], n === "I18N"))};`).join("\n") + "\n" + engine + "\n;\n" + read("app.js"));
+}
 write("assets/style.css", read("fonts.css") + "\n" + read("style.css"));   /* self-hosted fonts first (GDPR: no Google Fonts request) */
 fs.cpSync(path.join(__dirname, "fonts"), path.join(OUT, "assets", "fonts"), { recursive: true });
 /* Cloudflare Pages cache rules (assets are versioned with ?v=) */

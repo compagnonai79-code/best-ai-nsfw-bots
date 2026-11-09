@@ -221,7 +221,7 @@ function wireTop10() {
   const upd = () => { prev.hidden = r.scrollLeft < 8; next.hidden = r.scrollLeft + r.clientWidth >= r.scrollWidth - 8; };
   prev.addEventListener("click", () => r.scrollBy({left: -r.clientWidth * 0.8}));
   next.addEventListener("click", () => r.scrollBy({left: r.clientWidth * 0.8}));
-  r.addEventListener("scroll", upd, {passive: true}); window.addEventListener("resize", upd); upd();
+  r.addEventListener("scroll", upd, {passive: true}); window.addEventListener("resize", upd); requestAnimationFrame(upd);   /* after first paint: no forced layout */
 }
 function wireProfileGrid() {
   wireVideos(); wireTop10();
@@ -336,7 +336,9 @@ function initHome() {
   $("#q").addEventListener("input", () => { page = 1; renderGrid(); });
   $("#sort").addEventListener("click", e => { const b = e.target.closest("[data-s]"); if (!b) return; sortMode = b.dataset.s; page = 1; renderGrid(); });
   $("#pager").addEventListener("click", e => { const b = e.target.closest("[data-p]"); if (!b) return; e.preventDefault(); page = +b.dataset.p; renderGrid(); toList(); });
-  renderTags(); renderGrid();
+  /* The page already arrives with the default list (same HTML, built by build.js): only redraw when a filter
+     comes from the URL. Redrawing anyway would recreate every image and push back the page's LCP. */
+  if (onlyNew || Object.values(sel).some(s => s.size) || $("#q").value.trim()) { renderTags(); renderGrid(); }
 }
 
 /* Platforms page: tag filter */
