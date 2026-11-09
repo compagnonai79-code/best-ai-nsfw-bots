@@ -356,6 +356,8 @@ function initPlatforms() {
 
 /* Boot (every page) */
 function boot(page) {
+  /* close the mobile menu when tapping outside it */
+  document.addEventListener("click", e => { const m = document.querySelector(".mmenu[open]"); if (m && !m.contains(e.target)) m.removeAttribute("open"); });
   if (ageOk) $("#gate")?.remove();
   $("#enter")?.addEventListener("click", passGate);
   $("#lang")?.addEventListener("change", e => { location.href = e.target.value; });

@@ -561,3 +561,7 @@ hi: { of_bar_s:"{p}: Premium पर -{pct}% तक छूट", of_bar:"{p}: न�
   of_pop_t:"{p} Premium पर -{pct}% तक की छूट", of_pop:"नए सदस्यों के लिए सीमित ऑफ़र: सालाना प्लान पर {reg} की जगह {price}/महीना। पहले मुफ़्त में आज़माएँ।" }
 };
 for (const l in OFFER_UI) Object.assign(I18N[l].ui, OFFER_UI[l]);
+
+/* mobile menu button */
+const MENU_UI = { en:"Menu", fr:"Menu", es:"Menú", de:"Menü", pt:"Menu", hi:"मेन्यू" };
+for (const l in MENU_UI) I18N[l].ui.menu = MENU_UI[l];

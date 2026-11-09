@@ -159,6 +159,19 @@ ${o.page === "legal" ? "" : X.offerBar()}
       <a href="${L("tags.html")}"${cur("tags")}>${e(u("nav_tags"))}</a>
       ${newBtn}
       <select class="lang" id="lang" aria-label="Language">${langOptions}</select>
+      <details class="mmenu">
+        <summary aria-label="${e(u("menu"))}"><svg class="i-open" viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg><svg class="i-close" viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg><span>${e(u("menu"))}</span></summary>
+        <div class="mpanel">
+          <a href="${L("index.html")}">${e(u("nav_all"))}</a>
+          <a href="${L("tags.html")}">${e(u("nav_tags"))}</a>
+          <a href="${L("women.html")}">${e(u("nav_women"))}</a>
+          <a href="${L("men.html")}">${e(u("nav_men"))}</a>
+          <a href="${L("anime.html")}">${e(u("nav_anime"))}</a>
+          <a href="${L("platforms.html")}">${e(u("nav_platforms"))}</a>
+          <a href="${L("index.html#new")}">${e(u("nav_new"))}</a>
+          <a href="${L("how-we-rate.html")}">${e(u("nav_how"))}</a>
+        </div>
+      </details>
     </nav>
   </div>
 </header>

@@ -9235,6 +9235,10 @@ hi: { of_bar_s:"{p}: Premium पर -{pct}% तक छूट", of_bar:"{p}: न�
 };
 for (const l in OFFER_UI) Object.assign(I18N[l].ui, OFFER_UI[l]);
 
+/* mobile menu button */
+const MENU_UI = { en:"Menu", fr:"Menu", es:"Menú", de:"Menü", pt:"Menu", hi:"मेन्यू" };
+for (const l in MENU_UI) I18N[l].ui.menu = MENU_UI[l];
+
 ;
 /* Client code shared by all pages (also used by build.js to pre-render the HTML).
    Globals set by each page: PAGE_LANG, ROOT (path to site root), LROOT (path to the language root). */
@@ -9594,6 +9598,8 @@ function initPlatforms() {
 
 /* Boot (every page) */
 function boot(page) {
+  /* close the mobile menu when tapping outside it */
+  document.addEventListener("click", e => { const m = document.querySelector(".mmenu[open]"); if (m && !m.contains(e.target)) m.removeAttribute("open"); });
   if (ageOk) $("#gate")?.remove();
   $("#enter")?.addEventListener("click", passGate);
   $("#lang")?.addEventListener("change", e => { location.href = e.target.value; });
