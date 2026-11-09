@@ -99,6 +99,7 @@ const CF_IMG = "https://best-ai-nsfw-bots.com/cdn-cgi/image/width=360,format=aut
 const thumb = img => typeof img !== "string" || img.includes("/cdn-cgi/") ? img
   : img.startsWith("https://cdn.candy.ai/") ? img.replace("https://cdn.candy.ai/", "https://cdn.candy.ai/cdn-cgi/image/width=360,format=webp,quality=80/")
   : img.startsWith("https://cdn.nd-api.com/") ? CF_IMG + img.split("?")[0]
+  : /^images\/[\w.-]+\.(jpe?g|png|webp)$/.test(img) ? CF_IMG + img   /* our own photos: same resizing (WebP/AVIF) */
   : img;
 function visual(img, color, letter, alt = "") {
   return `<div class="ph" style="background:${grad(color)}">${esc(letter)}</div>` +
@@ -145,7 +146,7 @@ function platformCard(p) {
 const AD_SLOTS = [5, 17];
 function adCard(k) {
   const P = pf(PROMO.platform); if (!linkOf(P)) return "";
-  const img = k === 0 && PROMO.img ? `<img src="${esc(/^https?:/.test(PROMO.img) ? PROMO.img : R() + PROMO.img)}" alt="${esc(P.name)}" loading="lazy" onerror="this.remove()">` : "";
+  const img = k === 0 && PROMO.img ? `<img src="${esc(thumb(PROMO.img))}" alt="${esc(P.name)}" loading="lazy" onerror="this.remove()">` : "";
   return `<aside class="adcard ad${k}"><span class="ad-lbl">${esc(ui("sponsored"))}</span>${img}
     <div class="ad-body"><div class="ad-ic">${k ? "✨" : "💬"}</div><h3>${esc(ui("ad" + (k + 1) + "_t", {p: P.name}))}</h3><p>${esc(ui("ad" + (k + 1) + "_d", {p: P.name}))}</p>
     ${ctaLink(P, esc(ui("ad" + (k + 1) + "_btn", {p: P.name})) + " →", "btn btn-main")}<small>${esc(ui("promo_note"))}</small></div></aside>`;
@@ -171,7 +172,7 @@ function buildPromo() {
   el.innerHTML = `
     <div class="modal promo" role="dialog" aria-modal="true" aria-label="${esc(ui("promo_title"))}">
       <button class="x" aria-label="Close">×</button>
-      <div class="visual">${visual(PROMO.img, p.color, p.name[0])}</div>
+      <div class="visual">${visual(thumb(PROMO.img), p.color, p.name[0])}</div>
       <div class="body">
         <span class="sponsored">${esc(ui("sponsored"))}</span>
         <h2>${esc(offerOn() && OFFER.platform === PROMO.platform ? ui("of_pop_t", offerVars()) : ui("promo_title"))}</h2>
