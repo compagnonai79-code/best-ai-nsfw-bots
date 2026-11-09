@@ -93,8 +93,13 @@ function wireOffer() {
 }
 
 /* smaller Candy images for cards (Candy's CDN resizes on the fly) */
-const thumb = img => typeof img === "string" && img.startsWith("https://cdn.candy.ai/") && !img.includes("/cdn-cgi/")
-  ? img.replace("https://cdn.candy.ai/", "https://cdn.candy.ai/cdn-cgi/image/width=360,format=webp,quality=80/") : img;
+/* Card thumbnails at 360 px: Candy resizes on its own CDN; SpicyChat avatars are resized by Cloudflare
+   on our domain (Images → Transformations, origin cdn.nd-api.com allowed). */
+const CF_IMG = "https://best-ai-nsfw-bots.com/cdn-cgi/image/width=360,format=auto,quality=80/";
+const thumb = img => typeof img !== "string" || img.includes("/cdn-cgi/") ? img
+  : img.startsWith("https://cdn.candy.ai/") ? img.replace("https://cdn.candy.ai/", "https://cdn.candy.ai/cdn-cgi/image/width=360,format=webp,quality=80/")
+  : img.startsWith("https://cdn.nd-api.com/") ? CF_IMG + img.split("?")[0]
+  : img;
 function visual(img, color, letter, alt = "") {
   return `<div class="ph" style="background:${grad(color)}">${esc(letter)}</div>` +
     (img ? `<img src="${esc(/^https?:/.test(img) ? img : R() + img)}" alt="${esc(alt)}" loading="lazy" onerror="this.remove()">` : "");
