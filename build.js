@@ -436,7 +436,7 @@ for (const g0 of base.PROFILES) pages.push({ file: "model/" + (g0.id || base.slu
   <p class="all-tags"><a href="../tag/${X.slug(main)}.html">${e(u("m_more_tag", {tag: X.tr(main)}))}</a></p>
 
   <div class="mbar"><span class="mb-img">${X.visual(X.thumb(g.img), P.color, g.name[0], g.name)}</span>
-    <span class="mb-txt"><b>${e(g.name)}</b><small>${e(P.name)}</small></span>${cta("btn btn-main")}</div>
+    <span class="mb-txt"><b>${e(g.name)}</b><small>${e(P.name)}</small></span>${X.ctaLink(X.linkFor(g), "💬 " + e(u(g.tags.includes("Male") && !g.tags.includes("Female") ? "card_btn_m" : "card_btn")) + " →", "btn btn-main")}</div>
   ${ldTag([bcLd(X, lang, [[u("bc_home"), "index.html"], ...(P.url ? [[P.name, "platform/" + g.platform + ".html"]] : []), [X.tr(main), "tag/" + X.slug(main) + ".html"], [g.name, "model/" + X.girlId(g) + ".html"]]),
     {"@context":"https://schema.org","@type":"Article","headline":u("model_t", {name:g.name, p:P.name, agep: g.age ? u("age_sfx", {age: g.age}) : ""}),"description":X.bioOf(g).slice(0, 300),
      ...(g.img ? {"image": /^https?:/.test(g.img) ? g.img : SITE.url + "/" + g.img} : {}),"datePublished":g.added,"dateModified":g.added > SITE.updated ? g.added : SITE.updated,"inLanguage":lang,

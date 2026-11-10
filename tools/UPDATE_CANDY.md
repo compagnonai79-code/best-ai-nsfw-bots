@@ -30,7 +30,7 @@ Strip `<template>` tags, parse with DOMParser, take `body.innerText`:
 - after it: `Âge`, `Morphologie`, `Ethnicité`, `Relation`, `Profession`, `Loisirs`, `Personnalité`.
 - Image: the `https://cdn.candy.ai/<key>-788x966-webp90` URL in the raw HTML → use `<key>-600x900-webp90`. Check it loads (new Image()). `sfw` = key starts with `sfw-profile`.
 - Video preview: in the same raw HTML, the first URL matching `https://cdn.candy.ai/…profile-video…-h264` → `"video"` field (leave it out if there is none). If there is no profile video, a `live-action-…-h264` preview from the "live" row of `/home/profiles` cards for the same character may be used. Never use `cams-show` clips.
-- The display name is the first name shown in the card; the page URL is `https://candy.ai/fr/ai-girlfriend/<slug>` (`ai-boyfriend` for men).
+- The display name is the character's **full name (first name + last name)**, taken from the page `<title>` ("Chat avec **Mona Newman** - AI Girlfriend | Candy.AI"), with its accents; for duos written "A, B" use "A & B". If the title gives no last name (handles like "Sp00kybby"), keep the name as shown. Never use the first name alone when a last name exists. The page URL is `https://candy.ai/fr/ai-girlfriend/<slug>` (`ai-boyfriend` for men).
 
 ## 4. Content rules (mandatory)
 **Do not add**, and list in the report instead:
@@ -61,7 +61,8 @@ Also write the description in English, Spanish, German and Portuguese: `"bio":{"
 Edit `TOP_PICKS` in `src/data.js` (10 profile ids, in order). It is labelled on the site as the editor's selection, so pick a varied, appealing mix:
 - about 5 realistic women (include at least one character added in the last 14 days if any, and at least one with a `video`),
 - 2 anime characters, 1 Creator Twin, 1 man, 1 SpicyChat profile with a photo;
-- change at least 4 entries compared with last week; never use an excluded id.
+- change at least 4 entries compared with last week; never use an excluded id;
+- `mona-newman` always stays in the Top 10, in first position (owner's choice: the best-rated Candy character).
 Only use ids that exist in the data (check with a quick `node -e` load of the data files).
 
 ## 6c. Re-check the current offer (every run)
