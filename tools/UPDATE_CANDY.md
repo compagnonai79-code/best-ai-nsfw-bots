@@ -57,13 +57,8 @@ Insert a JSON object at the top of the girlfriend block (before the first existi
 (`creator: true` for creators.) `added` = today, so the profile shows as "New".
 Also write the description in English, Spanish, German and Portuguese: `"bio":{"fr":"…","en":"…","es":"…","de":"…","pt":"…"}` (Hindi pages use the English text). Keep the meaning, the emojis and the tone; do not add details.
 
-## 6b. Refresh the Top 10 (every run, even if no character was added)
-Edit `TOP_PICKS` in `src/data.js` (10 profile ids, in order). It is labelled on the site as the editor's selection, so pick a varied, appealing mix:
-- about 5 realistic women (include at least one character added in the last 14 days if any, and at least one with a `video`),
-- 2 anime characters, 1 Creator Twin, 1 man, 1 SpicyChat profile with a photo;
-- change at least 4 entries compared with last week; never use an excluded id;
-- `mona-newman` always stays in the Top 10, in first position (owner's choice: the best-rated Candy character).
-Only use ids that exist in the data (check with a quick `node -e` load of the data files).
+## 6b. Top 10: do not change it
+`TOP_PICKS` in `src/data.js` was chosen by the owner (Riley Reid, Sp00kybby, Mona Newman, Harriet Seagrave, Mia Malkova, Mila Nowak, Holly Donovan, Diana Demont, Josie Villanueva, Bonnie Blue). Never edit it during the weekly update. If one of these ids no longer exists, leave the list as is and mention it in the report.
 
 ## 6c. Re-check the current offer (every run)
 `OFFER` in `src/data.js` drives the "-70 %" banner and the offer box on the Candy page. From the candy.ai tab:
@@ -77,8 +72,8 @@ Never invent a code or a discount. Without a fresh check the banner hides itself
 node build.js
 node tools/check-links.js      # must say 0 broken
 git add -A
-git -c user.name="compagnonai79-code" -c user.email="compagnonai79-code@users.noreply.github.com" commit -m "Weekly update: N new Candy characters, Top 10 refreshed"
+git -c user.name="compagnonai79-code" -c user.email="compagnonai79-code@users.noreply.github.com" commit -m "Weekly update: N new Candy characters"
 git push
 ```
 Commit message ends with the attribution lines required by the session.
-If no character is new, still commit and push the Top 10 refresh.
+If no character is new and nothing else changed (offer), do not commit.

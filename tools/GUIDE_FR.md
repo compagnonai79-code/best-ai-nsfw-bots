@@ -91,7 +91,7 @@ Dans son bloc : `bio` (description par langue), `tags`, `img` (photo), `age`, `n
 - SpicyChat : supprime son bloc.
 
 ## 7. Changer le Top 10
-`src/data.js` → `const TOP_PICKS = [ … ]` : 10 `id` dans l'ordre. (La mise à jour du mercredi le renouvelle aussi.)
+`src/data.js` → `const TOP_PICKS = [ … ]` : 10 `id` dans l'ordre. La mise à jour du mercredi n'y touche plus : c'est toi qui le choisis.
 
 ## 8. Offre Candy, pop-up
 `src/data.js` → `const OFFER = { … }` : `active: false` pour enlever le bandeau ; `pct`, `price`, `regular`, `checked` pour les chiffres. Le pop-up : `const PROMO`.

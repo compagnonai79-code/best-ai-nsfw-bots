@@ -98,7 +98,7 @@ const PLATFORM_DATA = {
 
 /* ---------- TOP 10 OF THE WEEK (editor's picks) ----------
    Profile ids, in order. Edit this list every week. Ids = the end of the /model/<id> URL. */
-const TOP_PICKS = ["mona-newman","riley-reid","pilar-ibarra","mizuki-saeki","mia-malkova","valeria-ochoa","lira","maisie-mckae","sp00kybby","victor-draven"];
+const TOP_PICKS = ["riley-reid","sp00kybby","mona-newman","harriet-seagrave","mia-malkova","mila-nowak","holly-donovan","diana-demont","josie-villanueva","bonnie-blue"];   // chosen by the owner: do not change without asking
 
 /* ---------- CURRENT CANDY OFFER (banner) ----------
    Candy's public discount, copied from its own site (promotion window + subscription page).
