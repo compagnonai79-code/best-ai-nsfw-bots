@@ -2,7 +2,7 @@
    Placeholders: {n} profiles, {k} platforms, {c} categories, {site}, {d} date, {name}, {p} platform, {tags}, {style}, {x} count */
 const EXTRA_UI = {
 en: {
-  top_t:"Top 10 this week", top_sub:"Editor's picks, refreshed every week.",
+  top_t:"Our Top 10", top_sub:"The editors' favourite characters.",
   sort_sel:"Editor's picks", sort_new_t:"Newest", sort_az:"A–Z",
   pg:"Page {p} of {n}", pg_prev:"← Previous", pg_next:"Next →",
   recent_t:"Recently added", recent_all:"See all new profiles",
@@ -14,7 +14,7 @@ en: {
   hq1:"What is {site}?", ha1:"A free directory of {n} adult AI chatbot characters from {k} platforms, sorted into {c} categories. We do not host any chat ourselves: each profile sends you to the official platform.",
   hq2:"Are the characters real people?", ha2:"No. All characters are fictional AIs presented as adults (18+). The only exception is Creator Twins: official AI versions of adult creators, published by the platform with their consent.",
   hq3:"Is it free?", ha3:"Browsing {site} is free and needs no account. Most platforms let you start chatting for free with limits; unlimited messages, photos, voice and video usually require a subscription or credits.",
-  hq4:"How do you choose the Top 10?", ha4:"The Top 10 is an editor's selection, refreshed every week. It mixes popular styles and new characters. Platforms do not pay to appear in it.",
+  hq4:"How do you choose the Top 10?", ha4:"The Top 10 is the editors' selection of their favourite characters, across popular styles. Platforms do not pay to appear in it.",
   hq5:"How do you rate the platforms?", ha5:"We score each platform on conversation quality, media (photos, voice, video), price, privacy and ease of use. The full method is on our “How we rate” page.",
   hq6:"How do I find a specific type of character?", ha6:"Use the filters at the top of the list (gender, style, origin, age, hair, body, platform and more), the search bar, or browse the {c} categories.",
   rv_t:"Our take", rv_by:"By the {site} editorial team", rv_checked:"Checked on {d}",
@@ -31,7 +31,7 @@ en: {
   m_checked:"Last checked"
 },
 fr: {
-  top_t:"Top 10 de la semaine", top_sub:"La sélection de la rédaction, mise à jour chaque semaine.",
+  top_t:"Notre Top 10", top_sub:"Les personnages préférés de la rédaction.",
   sort_sel:"Sélection", sort_new_t:"Nouveaux", sort_az:"A–Z",
   pg:"Page {p} sur {n}", pg_prev:"← Précédent", pg_next:"Suivant →",
   recent_t:"Ajoutés récemment", recent_all:"Voir toutes les nouveautés",
@@ -43,7 +43,7 @@ fr: {
   hq1:"Qu'est-ce que {site} ?", ha1:"Un annuaire gratuit de {n} personnages de chatbots IA pour adultes, issus de {k} plateformes et classés dans {c} catégories. Nous n'hébergeons aucun chat : chaque profil t'envoie vers la plateforme officielle.",
   hq2:"Les personnages sont-ils de vraies personnes ?", ha2:"Non. Tous les personnages sont des IA fictives présentées comme majeures (18+). Seule exception : les jumelles IA de créatrices, versions IA officielles de créatrices adultes, publiées par la plateforme avec leur accord.",
   hq3:"Est-ce gratuit ?", ha3:"Parcourir {site} est gratuit et sans compte. La plupart des plateformes permettent de commencer à discuter gratuitement avec des limites ; les messages illimités, les photos, la voix et la vidéo demandent en général un abonnement ou des crédits.",
-  hq4:"Comment est choisi le Top 10 ?", ha4:"Le Top 10 est une sélection de la rédaction, mise à jour chaque semaine. Il mélange des styles populaires et des nouveaux personnages. Les plateformes ne paient pas pour y figurer.",
+  hq4:"Comment est choisi le Top 10 ?", ha4:"Le Top 10 est la sélection des personnages préférés de la rédaction, dans des styles populaires. Les plateformes ne paient pas pour y figurer.",
   hq5:"Comment notez-vous les plateformes ?", ha5:"Nous notons chaque plateforme sur la qualité des conversations, les médias (photos, voix, vidéo), le prix, la confidentialité et la facilité d'utilisation. La méthode complète est sur notre page « Notre méthode ».",
   hq6:"Comment trouver un type de personnage précis ?", ha6:"Utilise les filtres en haut de la liste (genre, style, origine, âge, cheveux, corps, plateforme…), la barre de recherche, ou parcours les {c} catégories.",
   rv_t:"Notre avis", rv_by:"Par l'équipe éditoriale de {site}", rv_checked:"Vérifié le {d}",
@@ -60,7 +60,7 @@ fr: {
   m_checked:"Dernière vérification"
 },
 es: {
-  top_t:"Top 10 de la semana", top_sub:"Selección de la redacción, actualizada cada semana.",
+  top_t:"Nuestro Top 10", top_sub:"Los personajes favoritos de la redacción.",
   sort_sel:"Selección", sort_new_t:"Nuevos", sort_az:"A–Z",
   pg:"Página {p} de {n}", pg_prev:"← Anterior", pg_next:"Siguiente →",
   recent_t:"Añadidos recientemente", recent_all:"Ver todas las novedades",
@@ -72,7 +72,7 @@ es: {
   hq1:"¿Qué es {site}?", ha1:"Un directorio gratuito de {n} personajes de chatbots de IA para adultos de {k} plataformas, clasificados en {c} categorías. No alojamos ningún chat: cada perfil te lleva a la plataforma oficial.",
   hq2:"¿Los personajes son personas reales?", ha2:"No. Todos los personajes son IA ficticias presentadas como adultas (18+). La única excepción son los gemelos IA de creadoras: versiones IA oficiales de creadoras adultas, publicadas por la plataforma con su consentimiento.",
   hq3:"¿Es gratis?", ha3:"Navegar por {site} es gratis y sin cuenta. La mayoría de las plataformas permiten empezar a chatear gratis con límites; los mensajes ilimitados, las fotos, la voz y el vídeo suelen requerir suscripción o créditos.",
-  hq4:"¿Cómo se elige el Top 10?", ha4:"El Top 10 es una selección de la redacción que se actualiza cada semana. Mezcla estilos populares y personajes nuevos. Las plataformas no pagan por aparecer.",
+  hq4:"¿Cómo se elige el Top 10?", ha4:"El Top 10 es la selección de los personajes favoritos de la redacción, en estilos populares. Las plataformas no pagan por aparecer.",
   hq5:"¿Cómo puntuáis las plataformas?", ha5:"Puntuamos cada plataforma según la calidad de las conversaciones, los medios (fotos, voz, vídeo), el precio, la privacidad y la facilidad de uso. El método completo está en nuestra página «Cómo puntuamos».",
   hq6:"¿Cómo encuentro un tipo de personaje concreto?", ha6:"Usa los filtros de la parte superior de la lista (género, estilo, origen, edad, pelo, cuerpo, plataforma…), la barra de búsqueda o recorre las {c} categorías.",
   rv_t:"Nuestra opinión", rv_by:"Por el equipo editorial de {site}", rv_checked:"Revisado el {d}",
@@ -89,7 +89,7 @@ es: {
   m_checked:"Última revisión"
 },
 de: {
-  top_t:"Top 10 der Woche", top_sub:"Auswahl der Redaktion, jede Woche aktualisiert.",
+  top_t:"Unsere Top 10", top_sub:"Die Lieblingsfiguren der Redaktion.",
   sort_sel:"Auswahl", sort_new_t:"Neueste", sort_az:"A–Z",
   pg:"Seite {p} von {n}", pg_prev:"← Zurück", pg_next:"Weiter →",
   recent_t:"Neu hinzugefügt", recent_all:"Alle neuen Profile ansehen",
@@ -101,7 +101,7 @@ de: {
   hq1:"Was ist {site}?", ha1:"Ein kostenloses Verzeichnis von {n} KI-Chatbot-Charakteren für Erwachsene von {k} Plattformen in {c} Kategorien. Wir hosten keinen Chat: Jedes Profil führt dich zur offiziellen Plattform.",
   hq2:"Sind die Charaktere echte Personen?", ha2:"Nein. Alle Charaktere sind fiktive KIs, die als volljährig (18+) dargestellt werden. Einzige Ausnahme sind Creator Twins: offizielle KI-Versionen erwachsener Creatorinnen, von der Plattform mit ihrer Zustimmung veröffentlicht.",
   hq3:"Ist das kostenlos?", ha3:"Das Stöbern auf {site} ist kostenlos und ohne Konto möglich. Die meisten Plattformen lassen dich mit Einschränkungen kostenlos chatten; unbegrenzte Nachrichten, Fotos, Stimme und Video erfordern meist ein Abo oder Credits.",
-  hq4:"Wie wird die Top 10 ausgewählt?", ha4:"Die Top 10 ist eine Auswahl der Redaktion und wird jede Woche aktualisiert. Sie mischt beliebte Stile und neue Charaktere. Plattformen zahlen nicht für einen Platz.",
+  hq4:"Wie wird die Top 10 ausgewählt?", ha4:"Die Top 10 ist die Auswahl der Lieblingsfiguren der Redaktion, in beliebten Stilen. Plattformen zahlen nicht für einen Platz.",
   hq5:"Wie bewertet ihr die Plattformen?", ha5:"Wir bewerten jede Plattform nach Gesprächsqualität, Medien (Fotos, Stimme, Video), Preis, Datenschutz und Bedienbarkeit. Die vollständige Methode steht auf unserer Seite „So bewerten wir“.",
   hq6:"Wie finde ich einen bestimmten Charaktertyp?", ha6:"Nutze die Filter oben in der Liste (Geschlecht, Stil, Herkunft, Alter, Haare, Körper, Plattform …), die Suche oder stöbere in den {c} Kategorien.",
   rv_t:"Unsere Einschätzung", rv_by:"Von der Redaktion von {site}", rv_checked:"Geprüft am {d}",
@@ -118,7 +118,7 @@ de: {
   m_checked:"Zuletzt geprüft"
 },
 pt: {
-  top_t:"Top 10 da semana", top_sub:"Seleção da redação, atualizada toda semana.",
+  top_t:"Nosso Top 10", top_sub:"Os personagens favoritos da redação.",
   sort_sel:"Seleção", sort_new_t:"Novos", sort_az:"A–Z",
   pg:"Página {p} de {n}", pg_prev:"← Anterior", pg_next:"Próxima →",
   recent_t:"Adicionados recentemente", recent_all:"Ver todas as novidades",
@@ -130,7 +130,7 @@ pt: {
   hq1:"O que é o {site}?", ha1:"Um diretório gratuito de {n} personagens de chatbots de IA para adultos, de {k} plataformas, organizados em {c} categorias. Não hospedamos nenhum chat: cada perfil leva você à plataforma oficial.",
   hq2:"Os personagens são pessoas reais?", ha2:"Não. Todos os personagens são IAs fictícias apresentadas como adultas (18+). A única exceção são os gêmeos de IA de criadoras: versões de IA oficiais de criadoras adultas, publicadas pela plataforma com o consentimento delas.",
   hq3:"É grátis?", ha3:"Navegar pelo {site} é grátis e sem conta. A maioria das plataformas permite começar a conversar de graça com limites; mensagens ilimitadas, fotos, voz e vídeo geralmente exigem assinatura ou créditos.",
-  hq4:"Como o Top 10 é escolhido?", ha4:"O Top 10 é uma seleção da redação, atualizada toda semana. Ele mistura estilos populares e personagens novos. As plataformas não pagam para aparecer.",
+  hq4:"Como o Top 10 é escolhido?", ha4:"O Top 10 é a seleção dos personagens favoritos da redação, em estilos populares. As plataformas não pagam para aparecer.",
   hq5:"Como vocês avaliam as plataformas?", ha5:"Avaliamos cada plataforma pela qualidade das conversas, mídia (fotos, voz, vídeo), preço, privacidade e facilidade de uso. O método completo está na nossa página «Como avaliamos».",
   hq6:"Como encontro um tipo específico de personagem?", ha6:"Use os filtros no topo da lista (gênero, estilo, origem, idade, cabelo, corpo, plataforma…), a busca ou navegue pelas {c} categorias.",
   rv_t:"Nossa opinião", rv_by:"Pela equipe editorial do {site}", rv_checked:"Verificado em {d}",
@@ -147,7 +147,7 @@ pt: {
   m_checked:"Última verificação"
 },
 hi: {
-  top_t:"इस हफ़्ते के टॉप 10", top_sub:"संपादकीय टीम का चयन, हर हफ़्ते अपडेट।",
+  top_t:"हमारे टॉप 10", top_sub:"संपादकीय टीम के पसंदीदा किरदार।",
   sort_sel:"चयन", sort_new_t:"नए", sort_az:"A–Z",
   pg:"पेज {p} / {n}", pg_prev:"← पिछला", pg_next:"अगला →",
   recent_t:"हाल ही में जोड़े गए", recent_all:"सभी नए प्रोफ़ाइल देखें",
@@ -159,7 +159,7 @@ hi: {
   hq1:"{site} क्या है?", ha1:"{k} प्लेटफ़ॉर्म के {n} वयस्क AI चैटबॉट किरदारों की मुफ़्त डायरेक्टरी, {c} कैटेगरी में। हम खुद कोई चैट होस्ट नहीं करते: हर प्रोफ़ाइल आपको आधिकारिक प्लेटफ़ॉर्म पर ले जाती है।",
   hq2:"क्या किरदार असली लोग हैं?", ha2:"नहीं। सभी किरदार काल्पनिक AI हैं जिन्हें वयस्क (18+) दिखाया गया है। अपवाद सिर्फ़ क्रिएटर ट्विन हैं: वयस्क क्रिएटर्स के आधिकारिक AI वर्ज़न, जिन्हें प्लेटफ़ॉर्म ने उनकी सहमति से प्रकाशित किया है।",
   hq3:"क्या यह मुफ़्त है?", ha3:"{site} देखना मुफ़्त है और अकाउंट की ज़रूरत नहीं। ज़्यादातर प्लेटफ़ॉर्म पर सीमाओं के साथ मुफ़्त चैट शुरू की जा सकती है; अनलिमिटेड मैसेज, फ़ोटो, आवाज़ और वीडियो के लिए आम तौर पर सब्सक्रिप्शन या क्रेडिट चाहिए।",
-  hq4:"टॉप 10 कैसे चुना जाता है?", ha4:"टॉप 10 संपादकीय टीम का चयन है, जो हर हफ़्ते अपडेट होता है। इसमें लोकप्रिय स्टाइल और नए किरदार दोनों होते हैं। प्लेटफ़ॉर्म इसमें आने के लिए पैसे नहीं देते।",
+  hq4:"टॉप 10 कैसे चुना जाता है?", ha4:"टॉप 10 संपादकीय टीम के पसंदीदा किरदारों का चयन है, लोकप्रिय स्टाइल में। प्लेटफ़ॉर्म इसमें आने के लिए पैसे नहीं देते।",
   hq5:"आप प्लेटफ़ॉर्म को रेटिंग कैसे देते हैं?", ha5:"हम हर प्लेटफ़ॉर्म को बातचीत की गुणवत्ता, मीडिया (फ़ोटो, आवाज़, वीडियो), कीमत, प्राइवेसी और इस्तेमाल में आसानी पर परखते हैं। पूरा तरीका हमारे „हम कैसे रेट करते हैं“ पेज पर है।",
   hq6:"किसी खास तरह का किरदार कैसे ढूँढें?", ha6:"लिस्ट के ऊपर के फ़िल्टर (जेंडर, स्टाइल, मूल, उम्र, बाल, शरीर, प्लेटफ़ॉर्म…), सर्च बार, या {c} कैटेगरी इस्तेमाल करें।",
   rv_t:"हमारी राय", rv_by:"{site} की संपादकीय टीम द्वारा", rv_checked:"{d} को जाँचा गया",
@@ -565,3 +565,20 @@ for (const l in OFFER_UI) Object.assign(I18N[l].ui, OFFER_UI[l]);
 /* mobile menu button */
 const MENU_UI = { en:"Menu", fr:"Menu", es:"Menú", de:"Menü", pt:"Menu", hi:"मेन्यू" };
 for (const l in MENU_UI) I18N[l].ui.menu = MENU_UI[l];
+
+/* Candy AI full-width banner in the profile grids */
+const CBANNER_UI = {
+  en:{cb_t_f:"Create your own AI girlfriend",cb_d_f:"Choose her look, her personality and what she's into.",cb_btn_f:"Create my girl",
+      cb_t_m:"Create your own AI boyfriend",cb_d_m:"Choose his look, his personality and what he's into.",cb_btn_m:"Create my guy"},
+  fr:{cb_t_f:"Crée ta propre copine IA",cb_d_f:"Choisis son look, sa personnalité et ses envies.",cb_btn_f:"Créer ma copine",
+      cb_t_m:"Crée ton propre copain IA",cb_d_m:"Choisis son look, sa personnalité et ses envies.",cb_btn_m:"Créer mon copain"},
+  es:{cb_t_f:"Crea tu propia novia IA",cb_d_f:"Elige su aspecto, su personalidad y sus deseos.",cb_btn_f:"Crear mi chica",
+      cb_t_m:"Crea tu propio novio IA",cb_d_m:"Elige su aspecto, su personalidad y sus deseos.",cb_btn_m:"Crear mi chico"},
+  de:{cb_t_f:"Erstelle deine eigene KI-Freundin",cb_d_f:"Wähle ihr Aussehen, ihre Persönlichkeit und ihre Vorlieben.",cb_btn_f:"Meine Freundin erstellen",
+      cb_t_m:"Erstelle deinen eigenen KI-Freund",cb_d_m:"Wähle sein Aussehen, seine Persönlichkeit und seine Vorlieben.",cb_btn_m:"Meinen Freund erstellen"},
+  pt:{cb_t_f:"Crie sua própria namorada IA",cb_d_f:"Escolha a aparência, a personalidade e os desejos dela.",cb_btn_f:"Criar minha garota",
+      cb_t_m:"Crie seu próprio namorado IA",cb_d_m:"Escolha a aparência, a personalidade e os desejos dele.",cb_btn_m:"Criar meu namorado"},
+  hi:{cb_t_f:"अपनी खुद की AI गर्लफ्रेंड बनाएं",cb_d_f:"उसका लुक, व्यक्तित्व और पसंद खुद चुनें।",cb_btn_f:"अपनी गर्लफ्रेंड बनाएं",
+      cb_t_m:"अपना खुद का AI बॉयफ्रेंड बनाएं",cb_d_m:"उसका लुक, व्यक्तित्व और पसंद खुद चुनें।",cb_btn_m:"अपना बॉयफ्रेंड बनाएं"}
+};
+for (const l in CBANNER_UI) Object.assign(I18N[l].ui, CBANNER_UI[l]);

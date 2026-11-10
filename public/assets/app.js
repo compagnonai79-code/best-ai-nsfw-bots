@@ -107,15 +107,18 @@ function visual(img, color, letter, alt = "") {
 }
 
 /* ---------- cards ---------- */
+/* Cards show the short name used on the platform ("Mona"); the profile page shows the full name ("Mona Newman"). */
+const cardName = p => p.short || p.name;
+const isTop = p => (typeof TOP_PICKS !== "undefined" ? TOP_PICKS : []).includes(girlId(p));
 function profileCard(p) {
   const P = pf(p.platform), i = PROFILES.indexOf(p);
   return `<article class="pcard" data-i="${i}">
     ${visual(thumb(p.img), P.color, p.name[0], p.name)}
     ${p.video ? `<video class="pvid" muted loop playsinline preload="none" data-src="${esc(p.video)}" aria-hidden="true"></video>` : ""}
     <a class="pcover" href="${girlUrl(p)}" aria-label="${esc(p.name)}"></a>
-    ${isNew(p) ? `<span class="new">${esc(ui("new_badge"))}</span>` : ""}${p.video ? `<span class="vbadge">▶ ${esc(ui("video_badge"))}</span>` : `<span class="online"></span>`}
+    ${isNew(p) ? `<span class="new">${esc(ui("new_badge"))}</span>` : ""}${isTop(p) ? `<span class="hot">🔥 Top 10</span>` : ""}${p.video ? `<span class="vbadge">▶ ${esc(ui("video_badge"))}</span>` : `<span class="online"></span>`}
     <div class="shade"></div>
-    <div class="meta"><h2 class="pname"><a class="plink" href="${girlUrl(p)}">${esc(p.name)}</a>${p.age ? `<span>${p.age}</span>` : ""}</h2>
+    <div class="meta"><h2 class="pname"><a class="plink" href="${girlUrl(p)}">${esc(cardName(p))}</a>${p.age ? `<span>${p.age}</span>` : ""}</h2>
       <div class="on-pf">${esc(ui("on", {p: P.name}))}</div>
       <div class="chips">${p.tags.slice(0,3).map(t => `<span>${esc(tr(t))}</span>`).join("")}</div>
       ${ctaLink(linkFor(p), "💬 " + esc(ui(p.tags.includes("Male") && !p.tags.includes("Female") ? "card_btn_m" : "card_btn")), "pchat")}
@@ -151,7 +154,22 @@ function adCard(k) {
     <div class="ad-body"><div class="ad-ic">${k ? "✨" : "💬"}</div><h3>${esc(ui("ad" + (k + 1) + "_t", {p: P.name}))}</h3><p>${esc(ui("ad" + (k + 1) + "_d", {p: P.name}))}</p>
     ${ctaLink(P, esc(ui("ad" + (k + 1) + "_btn", {p: P.name})) + " →", "btn btn-main")}<small>${esc(ui("promo_note"))}</small></div></aside>`;
 }
-const gridHtml = list => list.map((p, i) => profileCard(p) + (AD_SLOTS.includes(i) && i < list.length - 1 ? adCard(AD_SLOTS.indexOf(i)) : "")).join("");
+/* Full-width Candy AI banner, once per page of profiles (after the 12th card, or after the last one on short lists) */
+const BANNER_AFTER = 11;
+function bannerHtml(list) {
+  const P = pf("candy"); if (!linkOf(P)) return "";
+  const men = list.length > 0 && list.every(p => p.tags.includes("Male") && !p.tags.includes("Female")), g = men ? "m" : "f";
+  const pool = PROFILES.filter(p => p.platform === "candy" && p.sfw && p.img && (men ? p.tags.includes("Male") : p.tags.includes("Female")));
+  const picks = [...topList(), ...pool].filter(p => pool.includes(p));
+  const real = picks.filter(p => !p.tags.includes("Anime")), anime = picks.filter(p => p.tags.includes("Anime"));
+  const faces = [...new Set([real[0], anime[0], real[1], real[2]].filter(Boolean))];
+  return `<aside class="cbanner"><span class="ad-lbl">${esc(ui("sponsored"))}</span>
+    <div class="cb-txt"><div class="cb-brand">${esc(P.name)}</div><h3>${esc(ui("cb_t_" + g))}</h3><p>${esc(ui("cb_d_" + g))}</p></div>
+    <div class="cb-faces" aria-hidden="true">${faces.map(p => `<img src="${esc(thumb(p.img))}" alt="" loading="lazy" onerror="this.remove()">`).join("")}</div>
+    ${ctaLink(P, esc(ui("cb_btn_" + g)) + " →", "btn btn-main cb-btn")}</aside>`;
+}
+const gridHtml = list => list.map((p, i) => profileCard(p) + (AD_SLOTS.includes(i) && i < list.length - 1 ? adCard(AD_SLOTS.indexOf(i)) : "")
+  + (i === Math.min(BANNER_AFTER, list.length - 1) ? bannerHtml(list) : "")).join("");
 
 /* ---------- browser only ---------- */
 let ageOk = false;

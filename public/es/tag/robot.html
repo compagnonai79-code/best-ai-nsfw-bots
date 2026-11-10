@@ -538,6 +538,27 @@ html:not([lang="hi"]) [lang="hi"]{font-family:Inter,system-ui,sans-serif}
 .mpanel a:hover{border-color:var(--accent)}
 @media(max-width:1000px){header nav > a.hide-m,header nav > a.cur{display:none}.mmenu{display:block}}
 @media(max-width:420px){.mmenu summary span{display:none}.mmenu summary{padding:7px 9px}}
+
+/* Top 10: bigger cards + flame badge; Top 10 profiles marked in the grids */
+.t10{grid-auto-columns:minmax(200px,1fr)}
+.t10-hot{position:absolute;z-index:2;top:8px;right:8px;width:30px;height:30px;border-radius:999px;display:flex;align-items:center;justify-content:center;font-size:16px;background:rgba(11,10,18,.7);pointer-events:none}
+.rc-t b{font-size:15px}
+.pcard .hot{position:absolute;top:10px;left:10px;z-index:2;background:linear-gradient(135deg,#ff7a18,#ff3d8b);color:#fff;font:700 11px Inter,sans-serif;padding:3px 9px;border-radius:999px;pointer-events:none}
+.pcard .new + .hot{top:36px}
+@media(max-width:640px){.t10{grid-auto-columns:58%}.pcard .hot{top:8px;left:8px;font-size:10px}.pcard .new + .hot{top:32px}}
+/* Candy AI full-width banner */
+.cbanner{grid-column:1/-1;position:relative;display:flex;align-items:center;gap:24px;min-height:150px;padding:22px 28px;border-radius:18px;overflow:hidden;
+  background:linear-gradient(100deg,#3a1328 0%,#1d1220 45%,#121019 100%);border:1px solid rgba(255,61,139,.45)}
+.cbanner .ad-lbl{position:absolute;top:8px;right:12px;font:500 11px Inter,sans-serif;color:var(--muted)}
+.cb-txt{flex:1 1 auto;min-width:0}
+.cb-brand{font:700 15px "Space Grotesk",sans-serif;color:var(--accent);margin-bottom:4px}
+.cbanner h3{font:700 26px/1.15 "Space Grotesk",sans-serif;color:#fff;margin:0 0 6px}
+.cbanner p{color:#cfc8e6;font-size:14px;margin:0}
+.cb-faces{display:flex;flex:0 0 auto;align-self:stretch;margin:-22px 0}
+.cb-faces img{width:92px;height:100%;min-height:150px;object-fit:cover;object-position:top;-webkit-mask-image:linear-gradient(to bottom,#000 70%,transparent);mask-image:linear-gradient(to bottom,#000 70%,transparent)}
+.cb-btn{flex:0 0 auto;white-space:nowrap}
+@media(max-width:900px){.cb-faces img:nth-child(n+3){display:none}}
+@media(max-width:640px){.cbanner{flex-wrap:wrap;padding:18px;gap:14px}.cbanner h3{font-size:21px}.cb-faces{display:none}.cb-btn{width:100%;text-align:center}}
 </style>
 <link rel="preconnect" href="https://cdn.candy.ai">
 <link rel="preload" as="image" href="https://cdn.candy.ai/cdn-cgi/image/width=360,format=webp,quality=80/sfw-profile-288857935-6185e9b2-9e46-4208-830f-b524483c663c-600x900-webp90" fetchpriority="high">
@@ -608,7 +629,10 @@ html:not([lang="hi"]) [lang="hi"]{font-family:Inter,system-ui,sans-serif}
       <div class="chips"><span>Mujer</span><span>Anime</span><span>Androide</span></div>
       <a class="pchat" href="https://candy.ai/fr/ai-anime/iona?via=ic3p7r" target="_blank" rel="sponsored nofollow noopener">💬 Habla con ella</a>
     </div>
-  </article></div>
+  </article><aside class="cbanner"><span class="ad-lbl">Patrocinado</span>
+    <div class="cb-txt"><div class="cb-brand">Candy AI</div><h3>Crea tu propia novia IA</h3><p>Elige su aspecto, su personalidad y sus deseos.</p></div>
+    <div class="cb-faces" aria-hidden="true"><img src="https://cdn.candy.ai/cdn-cgi/image/width=360,format=webp,quality=80/sfw-profile-676319764-44ea6125-e1a9-4284-ad8f-0f959c1b41d2-600x900-webp90" alt="" loading="lazy" onerror="this.remove()"><img src="https://cdn.candy.ai/cdn-cgi/image/width=360,format=webp,quality=80/sfw-profile-359724132-2e8baad8-df67-431d-9901-37eea2e7189a-600x900-webp90" alt="" loading="lazy" onerror="this.remove()"><img src="https://cdn.candy.ai/cdn-cgi/image/width=360,format=webp,quality=80/sfw-profile-273386494-d7b6bed1-97e3-4963-a916-25bbf6caacb2-600x900-webp90" alt="" loading="lazy" onerror="this.remove()"><img src="https://cdn.candy.ai/cdn-cgi/image/width=360,format=webp,quality=80/sfw-profile-305669999-98528ad5-04e9-4409-bc39-233131fbf03e-600x900-webp90" alt="" loading="lazy" onerror="this.remove()"></div>
+    <a class="btn btn-main cb-btn" href="https://candy.ai/?via=ic3p7r" target="_blank" rel="sponsored nofollow noopener">Crear mi chica →</a></aside></div>
   <p class="tp-note">Primero se muestran los personajes con foto y las últimas novedades.</p>
   <article class="tp-article">
     <section class="info"><h2>5 cosas que comprobar antes de pagar</h2><ol class="steps"><li><strong>Versión gratuita:</strong> cuántos mensajes tienes antes de pagar.</li><li><strong>Imágenes:</strong> si el personaje puede enviar fotos generadas y cuánto cuestan.</li><li><strong>Voz:</strong> mensajes de voz o llamadas, si quieres algo más que texto.</li><li><strong>Memoria:</strong> si recuerda vuestra historia de una sesión a otra.</li><li><strong>Privacidad y cobro:</strong> nombre discreto en el extracto y borrado fácil de la cuenta.</li></ol></section>
@@ -656,7 +680,7 @@ html:not([lang="hi"]) [lang="hi"]{font-family:Inter,system-ui,sans-serif}
 </footer>
 
 <script>var PAGE_LANG="es",ROOT="../../",LROOT="../../es/";</script>
-<script defer src="../../assets/app-es.js?v=f158603f"></script>
+<script defer src="../../assets/app-es.js?v=b1073d0c"></script>
 <script>document.addEventListener("DOMContentLoaded",function(){boot("tag")});</script>
 </body>
 </html>

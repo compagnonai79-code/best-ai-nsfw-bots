@@ -538,6 +538,27 @@ html:not([lang="hi"]) [lang="hi"]{font-family:Inter,system-ui,sans-serif}
 .mpanel a:hover{border-color:var(--accent)}
 @media(max-width:1000px){header nav > a.hide-m,header nav > a.cur{display:none}.mmenu{display:block}}
 @media(max-width:420px){.mmenu summary span{display:none}.mmenu summary{padding:7px 9px}}
+
+/* Top 10: bigger cards + flame badge; Top 10 profiles marked in the grids */
+.t10{grid-auto-columns:minmax(200px,1fr)}
+.t10-hot{position:absolute;z-index:2;top:8px;right:8px;width:30px;height:30px;border-radius:999px;display:flex;align-items:center;justify-content:center;font-size:16px;background:rgba(11,10,18,.7);pointer-events:none}
+.rc-t b{font-size:15px}
+.pcard .hot{position:absolute;top:10px;left:10px;z-index:2;background:linear-gradient(135deg,#ff7a18,#ff3d8b);color:#fff;font:700 11px Inter,sans-serif;padding:3px 9px;border-radius:999px;pointer-events:none}
+.pcard .new + .hot{top:36px}
+@media(max-width:640px){.t10{grid-auto-columns:58%}.pcard .hot{top:8px;left:8px;font-size:10px}.pcard .new + .hot{top:32px}}
+/* Candy AI full-width banner */
+.cbanner{grid-column:1/-1;position:relative;display:flex;align-items:center;gap:24px;min-height:150px;padding:22px 28px;border-radius:18px;overflow:hidden;
+  background:linear-gradient(100deg,#3a1328 0%,#1d1220 45%,#121019 100%);border:1px solid rgba(255,61,139,.45)}
+.cbanner .ad-lbl{position:absolute;top:8px;right:12px;font:500 11px Inter,sans-serif;color:var(--muted)}
+.cb-txt{flex:1 1 auto;min-width:0}
+.cb-brand{font:700 15px "Space Grotesk",sans-serif;color:var(--accent);margin-bottom:4px}
+.cbanner h3{font:700 26px/1.15 "Space Grotesk",sans-serif;color:#fff;margin:0 0 6px}
+.cbanner p{color:#cfc8e6;font-size:14px;margin:0}
+.cb-faces{display:flex;flex:0 0 auto;align-self:stretch;margin:-22px 0}
+.cb-faces img{width:92px;height:100%;min-height:150px;object-fit:cover;object-position:top;-webkit-mask-image:linear-gradient(to bottom,#000 70%,transparent);mask-image:linear-gradient(to bottom,#000 70%,transparent)}
+.cb-btn{flex:0 0 auto;white-space:nowrap}
+@media(max-width:900px){.cb-faces img:nth-child(n+3){display:none}}
+@media(max-width:640px){.cbanner{flex-wrap:wrap;padding:18px;gap:14px}.cbanner h3{font-size:21px}.cb-faces{display:none}.cb-btn{width:100%;text-align:center}}
 </style>
 <link rel="preconnect" href="https://cdn.candy.ai">
 <link rel="preload" as="image" href="https://cdn.candy.ai/cdn-cgi/image/width=360,format=webp,quality=80/sfw-profile-720491248-0aab714c-e82c-417d-bd19-ed178ee6aadf-600x900-webp90" fetchpriority="high">
@@ -603,7 +624,7 @@ html:not([lang="hi"]) [lang="hi"]{font-family:Inter,system-ui,sans-serif}
     <a class="pcover" href="../../es/model/sadie-ashworth.html" aria-label="Sadie Ashworth"></a>
     <span class="new">NUEVA</span><span class="vbadge">▶ Vídeo</span>
     <div class="shade"></div>
-    <div class="meta"><h2 class="pname"><a class="plink" href="../../es/model/sadie-ashworth.html">Sadie Ashworth</a><span>22</span></h2>
+    <div class="meta"><h2 class="pname"><a class="plink" href="../../es/model/sadie-ashworth.html">Sadie</a><span>22</span></h2>
       <div class="on-pf">en Candy AI</div>
       <div class="chips"><span>Mujer</span><span>Realista</span><span>Caucásica</span></div>
       <a class="pchat" href="https://candy.ai/fr/ai-girlfriend/sadie-ashworth?via=ic3p7r" target="_blank" rel="sponsored nofollow noopener">💬 Habla con ella</a>
@@ -625,7 +646,7 @@ html:not([lang="hi"]) [lang="hi"]{font-family:Inter,system-ui,sans-serif}
     <a class="pcover" href="../../es/model/rose-edwards.html" aria-label="Rose Edwards"></a>
     <span class="new">NUEVA</span><span class="vbadge">▶ Vídeo</span>
     <div class="shade"></div>
-    <div class="meta"><h2 class="pname"><a class="plink" href="../../es/model/rose-edwards.html">Rose Edwards</a><span>20</span></h2>
+    <div class="meta"><h2 class="pname"><a class="plink" href="../../es/model/rose-edwards.html">Rose</a><span>20</span></h2>
       <div class="on-pf">en Candy AI</div>
       <div class="chips"><span>Mujer</span><span>Realista</span><span>Pelirroja</span></div>
       <a class="pchat" href="https://candy.ai/fr/ai-girlfriend/rose-edwards?via=ic3p7r" target="_blank" rel="sponsored nofollow noopener">💬 Habla con ella</a>
@@ -636,7 +657,7 @@ html:not([lang="hi"]) [lang="hi"]{font-family:Inter,system-ui,sans-serif}
     <a class="pcover" href="../../es/model/simona-rossi.html" aria-label="Simona Rossi"></a>
     <span class="new">NUEVA</span><span class="online"></span>
     <div class="shade"></div>
-    <div class="meta"><h2 class="pname"><a class="plink" href="../../es/model/simona-rossi.html">Simona Rossi</a><span>21</span></h2>
+    <div class="meta"><h2 class="pname"><a class="plink" href="../../es/model/simona-rossi.html">Simona</a><span>21</span></h2>
       <div class="on-pf">en Candy AI</div>
       <div class="chips"><span>Mujer</span><span>Realista</span><span>Morena</span></div>
       <a class="pchat" href="https://candy.ai/fr/ai-girlfriend/simona-rossi?via=ic3p7r" target="_blank" rel="sponsored nofollow noopener">💬 Habla con ella</a>
@@ -647,7 +668,7 @@ html:not([lang="hi"]) [lang="hi"]{font-family:Inter,system-ui,sans-serif}
     <a class="pcover" href="../../es/model/coco-bailey.html" aria-label="Coco Bailey"></a>
     <span class="new">NUEVA</span><span class="online"></span>
     <div class="shade"></div>
-    <div class="meta"><h2 class="pname"><a class="plink" href="../../es/model/coco-bailey.html">Coco Bailey</a><span>21</span></h2>
+    <div class="meta"><h2 class="pname"><a class="plink" href="../../es/model/coco-bailey.html">Coco</a><span>21</span></h2>
       <div class="on-pf">en Candy AI</div>
       <div class="chips"><span>Mujer</span><span>Realista</span><span>Rubia</span></div>
       <a class="pchat" href="https://candy.ai/fr/ai-girlfriend/coco-bailey?via=ic3p7r" target="_blank" rel="sponsored nofollow noopener">💬 Habla con ella</a>
@@ -658,7 +679,7 @@ html:not([lang="hi"]) [lang="hi"]{font-family:Inter,system-ui,sans-serif}
     <a class="pcover" href="../../es/model/nika-voronskaya.html" aria-label="Nika Voronskaya"></a>
     <span class="new">NUEVA</span><span class="online"></span>
     <div class="shade"></div>
-    <div class="meta"><h2 class="pname"><a class="plink" href="../../es/model/nika-voronskaya.html">Nika Voronskaya</a><span>21</span></h2>
+    <div class="meta"><h2 class="pname"><a class="plink" href="../../es/model/nika-voronskaya.html">Nika</a><span>21</span></h2>
       <div class="on-pf">en Candy AI</div>
       <div class="chips"><span>Mujer</span><span>Realista</span><span>Morena</span></div>
       <a class="pchat" href="https://candy.ai/fr/ai-girlfriend/nika-voronskaya?via=ic3p7r" target="_blank" rel="sponsored nofollow noopener">💬 Habla con ella</a>
@@ -671,7 +692,7 @@ html:not([lang="hi"]) [lang="hi"]{font-family:Inter,system-ui,sans-serif}
     <a class="pcover" href="../../es/model/kasia-michalska.html" aria-label="Kasia Michalska"></a>
     <span class="new">NUEVA</span><span class="online"></span>
     <div class="shade"></div>
-    <div class="meta"><h2 class="pname"><a class="plink" href="../../es/model/kasia-michalska.html">Kasia Michalska</a><span>22</span></h2>
+    <div class="meta"><h2 class="pname"><a class="plink" href="../../es/model/kasia-michalska.html">Kasia</a><span>22</span></h2>
       <div class="on-pf">en Candy AI</div>
       <div class="chips"><span>Mujer</span><span>Realista</span><span>Morena</span></div>
       <a class="pchat" href="https://candy.ai/fr/ai-girlfriend/kasia-michalska?via=ic3p7r" target="_blank" rel="sponsored nofollow noopener">💬 Habla con ella</a>
@@ -682,7 +703,7 @@ html:not([lang="hi"]) [lang="hi"]{font-family:Inter,system-ui,sans-serif}
     <a class="pcover" href="../../es/model/aria-chen.html" aria-label="Aria Chen"></a>
     <span class="new">NUEVA</span><span class="online"></span>
     <div class="shade"></div>
-    <div class="meta"><h2 class="pname"><a class="plink" href="../../es/model/aria-chen.html">Aria Chen</a><span>21</span></h2>
+    <div class="meta"><h2 class="pname"><a class="plink" href="../../es/model/aria-chen.html">Aria</a><span>21</span></h2>
       <div class="on-pf">en Candy AI</div>
       <div class="chips"><span>Mujer</span><span>Realista</span><span>Asiática</span></div>
       <a class="pchat" href="https://candy.ai/fr/ai-girlfriend/aria-chen?via=ic3p7r" target="_blank" rel="sponsored nofollow noopener">💬 Habla con ella</a>
@@ -704,7 +725,7 @@ html:not([lang="hi"]) [lang="hi"]{font-family:Inter,system-ui,sans-serif}
     <a class="pcover" href="../../es/model/talia-reed.html" aria-label="Talia Reed"></a>
     <span class="new">NUEVA</span><span class="online"></span>
     <div class="shade"></div>
-    <div class="meta"><h2 class="pname"><a class="plink" href="../../es/model/talia-reed.html">Talia Reed</a><span>20</span></h2>
+    <div class="meta"><h2 class="pname"><a class="plink" href="../../es/model/talia-reed.html">Talia</a><span>20</span></h2>
       <div class="on-pf">en Candy AI</div>
       <div class="chips"><span>Mujer</span><span>Realista</span><span>Morena</span></div>
       <a class="pchat" href="https://candy.ai/fr/ai-girlfriend/talia-reed?via=ic3p7r" target="_blank" rel="sponsored nofollow noopener">💬 Habla con ella</a>
@@ -715,7 +736,7 @@ html:not([lang="hi"]) [lang="hi"]{font-family:Inter,system-ui,sans-serif}
     <a class="pcover" href="../../es/model/luna-moreno-2.html" aria-label="Luna Moreno"></a>
     <span class="new">NUEVA</span><span class="vbadge">▶ Vídeo</span>
     <div class="shade"></div>
-    <div class="meta"><h2 class="pname"><a class="plink" href="../../es/model/luna-moreno-2.html">Luna Moreno</a><span>23</span></h2>
+    <div class="meta"><h2 class="pname"><a class="plink" href="../../es/model/luna-moreno-2.html">Luna</a><span>23</span></h2>
       <div class="on-pf">en Candy AI</div>
       <div class="chips"><span>Mujer</span><span>Realista</span><span>Morena</span></div>
       <a class="pchat" href="https://candy.ai/fr/ai-girlfriend/luna-moreno-2?via=ic3p7r" target="_blank" rel="sponsored nofollow noopener">💬 Habla con ella</a>
@@ -726,18 +747,21 @@ html:not([lang="hi"]) [lang="hi"]{font-family:Inter,system-ui,sans-serif}
     <a class="pcover" href="../../es/model/solene-yoon.html" aria-label="Solene Yoon"></a>
     <span class="new">NUEVA</span><span class="online"></span>
     <div class="shade"></div>
-    <div class="meta"><h2 class="pname"><a class="plink" href="../../es/model/solene-yoon.html">Solene Yoon</a><span>19</span></h2>
+    <div class="meta"><h2 class="pname"><a class="plink" href="../../es/model/solene-yoon.html">Solene</a><span>19</span></h2>
       <div class="on-pf">en Candy AI</div>
       <div class="chips"><span>Mujer</span><span>Realista</span><span>Asiática</span></div>
       <a class="pchat" href="https://candy.ai/fr/ai-girlfriend/solene-yoon?via=ic3p7r" target="_blank" rel="sponsored nofollow noopener">💬 Habla con ella</a>
     </div>
-  </article><article class="pcard" data-i="186">
+  </article><aside class="cbanner"><span class="ad-lbl">Patrocinado</span>
+    <div class="cb-txt"><div class="cb-brand">Candy AI</div><h3>Crea tu propia novia IA</h3><p>Elige su aspecto, su personalidad y sus deseos.</p></div>
+    <div class="cb-faces" aria-hidden="true"><img src="https://cdn.candy.ai/cdn-cgi/image/width=360,format=webp,quality=80/sfw-profile-676319764-44ea6125-e1a9-4284-ad8f-0f959c1b41d2-600x900-webp90" alt="" loading="lazy" onerror="this.remove()"><img src="https://cdn.candy.ai/cdn-cgi/image/width=360,format=webp,quality=80/sfw-profile-359724132-2e8baad8-df67-431d-9901-37eea2e7189a-600x900-webp90" alt="" loading="lazy" onerror="this.remove()"><img src="https://cdn.candy.ai/cdn-cgi/image/width=360,format=webp,quality=80/sfw-profile-273386494-d7b6bed1-97e3-4963-a916-25bbf6caacb2-600x900-webp90" alt="" loading="lazy" onerror="this.remove()"><img src="https://cdn.candy.ai/cdn-cgi/image/width=360,format=webp,quality=80/sfw-profile-305669999-98528ad5-04e9-4409-bc39-233131fbf03e-600x900-webp90" alt="" loading="lazy" onerror="this.remove()"></div>
+    <a class="btn btn-main cb-btn" href="https://candy.ai/?via=ic3p7r" target="_blank" rel="sponsored nofollow noopener">Crear mi chica →</a></aside><article class="pcard" data-i="186">
     <div class="ph" style="background:linear-gradient(135deg,#ff3d8b,#ff8a5c)">P</div><img src="https://cdn.candy.ai/cdn-cgi/image/width=360,format=webp,quality=80/495612666-050b73a0-5e5c-4e7d-a41f-4d83ea058791-600x900-webp90" alt="Paola Montoya" loading="lazy" onerror="this.remove()">
     
     <a class="pcover" href="../../es/model/paola-montoya.html" aria-label="Paola Montoya"></a>
     <span class="new">NUEVA</span><span class="online"></span>
     <div class="shade"></div>
-    <div class="meta"><h2 class="pname"><a class="plink" href="../../es/model/paola-montoya.html">Paola Montoya</a><span>19</span></h2>
+    <div class="meta"><h2 class="pname"><a class="plink" href="../../es/model/paola-montoya.html">Paola</a><span>19</span></h2>
       <div class="on-pf">en Candy AI</div>
       <div class="chips"><span>Mujer</span><span>Realista</span><span>Morena</span></div>
       <a class="pchat" href="https://candy.ai/fr/ai-girlfriend/paola-montoya?via=ic3p7r" target="_blank" rel="sponsored nofollow noopener">💬 Habla con ella</a>
@@ -748,7 +772,7 @@ html:not([lang="hi"]) [lang="hi"]{font-family:Inter,system-ui,sans-serif}
     <a class="pcover" href="../../es/model/katarina-sommerfeld.html" aria-label="Katarina Sommerfeld"></a>
     <span class="new">NUEVA</span><span class="vbadge">▶ Vídeo</span>
     <div class="shade"></div>
-    <div class="meta"><h2 class="pname"><a class="plink" href="../../es/model/katarina-sommerfeld.html">Katarina Sommerfeld</a><span>23</span></h2>
+    <div class="meta"><h2 class="pname"><a class="plink" href="../../es/model/katarina-sommerfeld.html">Katarina</a><span>23</span></h2>
       <div class="on-pf">en Candy AI</div>
       <div class="chips"><span>Mujer</span><span>Realista</span><span>Rubia</span></div>
       <a class="pchat" href="https://candy.ai/fr/ai-girlfriend/katarina-sommerfeld?via=ic3p7r" target="_blank" rel="sponsored nofollow noopener">💬 Habla con ella</a>
@@ -759,7 +783,7 @@ html:not([lang="hi"]) [lang="hi"]{font-family:Inter,system-ui,sans-serif}
     <a class="pcover" href="../../es/model/evangelina-kontos.html" aria-label="Evangelina Kontos"></a>
     <span class="new">NUEVA</span><span class="online"></span>
     <div class="shade"></div>
-    <div class="meta"><h2 class="pname"><a class="plink" href="../../es/model/evangelina-kontos.html">Evangelina Kontos</a><span>21</span></h2>
+    <div class="meta"><h2 class="pname"><a class="plink" href="../../es/model/evangelina-kontos.html">Evangelina</a><span>21</span></h2>
       <div class="on-pf">en Candy AI</div>
       <div class="chips"><span>Mujer</span><span>Realista</span><span>Morena</span></div>
       <a class="pchat" href="https://candy.ai/fr/ai-girlfriend/evangelina-kontos?via=ic3p7r" target="_blank" rel="sponsored nofollow noopener">💬 Habla con ella</a>
@@ -781,7 +805,7 @@ html:not([lang="hi"]) [lang="hi"]{font-family:Inter,system-ui,sans-serif}
     <a class="pcover" href="../../es/model/yuna-kim.html" aria-label="Yuna Kim"></a>
     <span class="new">NUEVA</span><span class="online"></span>
     <div class="shade"></div>
-    <div class="meta"><h2 class="pname"><a class="plink" href="../../es/model/yuna-kim.html">Yuna Kim</a><span>18</span></h2>
+    <div class="meta"><h2 class="pname"><a class="plink" href="../../es/model/yuna-kim.html">Yuna</a><span>18</span></h2>
       <div class="on-pf">en Candy AI</div>
       <div class="chips"><span>Mujer</span><span>Realista</span><span>Asiática</span></div>
       <a class="pchat" href="https://candy.ai/fr/ai-girlfriend/yuna-kim?via=ic3p7r" target="_blank" rel="sponsored nofollow noopener">💬 Habla con ella</a>
@@ -792,7 +816,7 @@ html:not([lang="hi"]) [lang="hi"]{font-family:Inter,system-ui,sans-serif}
     <a class="pcover" href="../../es/model/molly-ellery.html" aria-label="Molly Ellery"></a>
     <span class="new">NUEVA</span><span class="online"></span>
     <div class="shade"></div>
-    <div class="meta"><h2 class="pname"><a class="plink" href="../../es/model/molly-ellery.html">Molly Ellery</a><span>21</span></h2>
+    <div class="meta"><h2 class="pname"><a class="plink" href="../../es/model/molly-ellery.html">Molly</a><span>21</span></h2>
       <div class="on-pf">en Candy AI</div>
       <div class="chips"><span>Mujer</span><span>Realista</span><span>Morena</span></div>
       <a class="pchat" href="https://candy.ai/fr/ai-girlfriend/molly-ellery?via=ic3p7r" target="_blank" rel="sponsored nofollow noopener">💬 Habla con ella</a>
@@ -816,7 +840,7 @@ html:not([lang="hi"]) [lang="hi"]{font-family:Inter,system-ui,sans-serif}
     <a class="pcover" href="../../es/model/sonya-gromova.html" aria-label="Sonya Gromova"></a>
     <span class="new">NUEVA</span><span class="online"></span>
     <div class="shade"></div>
-    <div class="meta"><h2 class="pname"><a class="plink" href="../../es/model/sonya-gromova.html">Sonya Gromova</a><span>24</span></h2>
+    <div class="meta"><h2 class="pname"><a class="plink" href="../../es/model/sonya-gromova.html">Sonya</a><span>24</span></h2>
       <div class="on-pf">en Candy AI</div>
       <div class="chips"><span>Mujer</span><span>Realista</span><span>Morena</span></div>
       <a class="pchat" href="https://candy.ai/fr/ai-girlfriend/sonya-gromova?via=ic3p7r" target="_blank" rel="sponsored nofollow noopener">💬 Habla con ella</a>
@@ -827,7 +851,7 @@ html:not([lang="hi"]) [lang="hi"]{font-family:Inter,system-ui,sans-serif}
     <a class="pcover" href="../../es/model/alexia-costa.html" aria-label="Alexia Costa"></a>
     <span class="new">NUEVA</span><span class="online"></span>
     <div class="shade"></div>
-    <div class="meta"><h2 class="pname"><a class="plink" href="../../es/model/alexia-costa.html">Alexia Costa</a><span>23</span></h2>
+    <div class="meta"><h2 class="pname"><a class="plink" href="../../es/model/alexia-costa.html">Alexia</a><span>23</span></h2>
       <div class="on-pf">en Candy AI</div>
       <div class="chips"><span>Mujer</span><span>Realista</span><span>Morena</span></div>
       <a class="pchat" href="https://candy.ai/fr/ai-girlfriend/alexia-costa?via=ic3p7r" target="_blank" rel="sponsored nofollow noopener">💬 Habla con ella</a>
@@ -838,7 +862,7 @@ html:not([lang="hi"]) [lang="hi"]{font-family:Inter,system-ui,sans-serif}
     <a class="pcover" href="../../es/model/marta-doyle.html" aria-label="Marta Doyle"></a>
     <span class="new">NUEVA</span><span class="online"></span>
     <div class="shade"></div>
-    <div class="meta"><h2 class="pname"><a class="plink" href="../../es/model/marta-doyle.html">Marta Doyle</a><span>21</span></h2>
+    <div class="meta"><h2 class="pname"><a class="plink" href="../../es/model/marta-doyle.html">Marta</a><span>21</span></h2>
       <div class="on-pf">en Candy AI</div>
       <div class="chips"><span>Mujer</span><span>Realista</span><span>Caucásica</span></div>
       <a class="pchat" href="https://candy.ai/fr/ai-girlfriend/marta-doyle?via=ic3p7r" target="_blank" rel="sponsored nofollow noopener">💬 Habla con ella</a>
@@ -849,7 +873,7 @@ html:not([lang="hi"]) [lang="hi"]{font-family:Inter,system-ui,sans-serif}
     <a class="pcover" href="../../es/model/dina-khalil.html" aria-label="Dina Khalil"></a>
     <span class="new">NUEVA</span><span class="online"></span>
     <div class="shade"></div>
-    <div class="meta"><h2 class="pname"><a class="plink" href="../../es/model/dina-khalil.html">Dina Khalil</a><span>19</span></h2>
+    <div class="meta"><h2 class="pname"><a class="plink" href="../../es/model/dina-khalil.html">Dina</a><span>19</span></h2>
       <div class="on-pf">en Candy AI</div>
       <div class="chips"><span>Mujer</span><span>Realista</span><span>Árabe</span></div>
       <a class="pchat" href="https://candy.ai/fr/ai-girlfriend/dina-khalil?via=ic3p7r" target="_blank" rel="sponsored nofollow noopener">💬 Habla con ella</a>
@@ -860,7 +884,7 @@ html:not([lang="hi"]) [lang="hi"]{font-family:Inter,system-ui,sans-serif}
     <a class="pcover" href="../../es/model/gigi-navarro.html" aria-label="Gigi Navarro"></a>
     <span class="new">NUEVA</span><span class="online"></span>
     <div class="shade"></div>
-    <div class="meta"><h2 class="pname"><a class="plink" href="../../es/model/gigi-navarro.html">Gigi Navarro</a><span>23</span></h2>
+    <div class="meta"><h2 class="pname"><a class="plink" href="../../es/model/gigi-navarro.html">Gigi</a><span>23</span></h2>
       <div class="on-pf">en Candy AI</div>
       <div class="chips"><span>Mujer</span><span>Realista</span><span>Morena</span></div>
       <a class="pchat" href="https://candy.ai/fr/ai-girlfriend/gigi-navarro?via=ic3p7r" target="_blank" rel="sponsored nofollow noopener">💬 Habla con ella</a>
@@ -871,7 +895,7 @@ html:not([lang="hi"]) [lang="hi"]{font-family:Inter,system-ui,sans-serif}
     <a class="pcover" href="../../es/model/callie-quinlan.html" aria-label="Callie Quinlan"></a>
     <span class="new">NUEVA</span><span class="online"></span>
     <div class="shade"></div>
-    <div class="meta"><h2 class="pname"><a class="plink" href="../../es/model/callie-quinlan.html">Callie Quinlan</a><span>22</span></h2>
+    <div class="meta"><h2 class="pname"><a class="plink" href="../../es/model/callie-quinlan.html">Callie</a><span>22</span></h2>
       <div class="on-pf">en Candy AI</div>
       <div class="chips"><span>Mujer</span><span>Realista</span><span>Caucásica</span></div>
       <a class="pchat" href="https://candy.ai/fr/ai-girlfriend/callie-quinlan?via=ic3p7r" target="_blank" rel="sponsored nofollow noopener">💬 Habla con ella</a>
@@ -882,7 +906,7 @@ html:not([lang="hi"]) [lang="hi"]{font-family:Inter,system-ui,sans-serif}
     <a class="pcover" href="../../es/model/alondra-castillo.html" aria-label="Alondra Castillo"></a>
     <span class="new">NUEVA</span><span class="online"></span>
     <div class="shade"></div>
-    <div class="meta"><h2 class="pname"><a class="plink" href="../../es/model/alondra-castillo.html">Alondra Castillo</a><span>21</span></h2>
+    <div class="meta"><h2 class="pname"><a class="plink" href="../../es/model/alondra-castillo.html">Alondra</a><span>21</span></h2>
       <div class="on-pf">en Candy AI</div>
       <div class="chips"><span>Mujer</span><span>Realista</span><span>Morena</span></div>
       <a class="pchat" href="https://candy.ai/fr/ai-girlfriend/alondra-castillo?via=ic3p7r" target="_blank" rel="sponsored nofollow noopener">💬 Habla con ella</a>
@@ -893,7 +917,7 @@ html:not([lang="hi"]) [lang="hi"]{font-family:Inter,system-ui,sans-serif}
     <a class="pcover" href="../../es/model/lara-correia.html" aria-label="Lara Correia"></a>
     <span class="new">NUEVA</span><span class="online"></span>
     <div class="shade"></div>
-    <div class="meta"><h2 class="pname"><a class="plink" href="../../es/model/lara-correia.html">Lara Correia</a><span>22</span></h2>
+    <div class="meta"><h2 class="pname"><a class="plink" href="../../es/model/lara-correia.html">Lara</a><span>22</span></h2>
       <div class="on-pf">en Candy AI</div>
       <div class="chips"><span>Mujer</span><span>Realista</span><span>Morena</span></div>
       <a class="pchat" href="https://candy.ai/fr/ai-girlfriend/lara-correia?via=ic3p7r" target="_blank" rel="sponsored nofollow noopener">💬 Habla con ella</a>
@@ -904,7 +928,7 @@ html:not([lang="hi"]) [lang="hi"]{font-family:Inter,system-ui,sans-serif}
     <a class="pcover" href="../../es/model/dulce-pham.html" aria-label="Dulce Pham"></a>
     <span class="new">NUEVA</span><span class="online"></span>
     <div class="shade"></div>
-    <div class="meta"><h2 class="pname"><a class="plink" href="../../es/model/dulce-pham.html">Dulce Pham</a><span>23</span></h2>
+    <div class="meta"><h2 class="pname"><a class="plink" href="../../es/model/dulce-pham.html">Dulce</a><span>23</span></h2>
       <div class="on-pf">en Candy AI</div>
       <div class="chips"><span>Mujer</span><span>Realista</span><span>Asiática</span></div>
       <a class="pchat" href="https://candy.ai/fr/ai-girlfriend/dulce-pham?via=ic3p7r" target="_blank" rel="sponsored nofollow noopener">💬 Habla con ella</a>
@@ -915,7 +939,7 @@ html:not([lang="hi"]) [lang="hi"]{font-family:Inter,system-ui,sans-serif}
     <a class="pcover" href="../../es/model/sabina-morales.html" aria-label="Sabina Morales"></a>
     <span class="new">NUEVA</span><span class="online"></span>
     <div class="shade"></div>
-    <div class="meta"><h2 class="pname"><a class="plink" href="../../es/model/sabina-morales.html">Sabina Morales</a><span>21</span></h2>
+    <div class="meta"><h2 class="pname"><a class="plink" href="../../es/model/sabina-morales.html">Sabina</a><span>21</span></h2>
       <div class="on-pf">en Candy AI</div>
       <div class="chips"><span>Mujer</span><span>Realista</span><span>Latina</span></div>
       <a class="pchat" href="https://candy.ai/fr/ai-girlfriend/sabina-morales?via=ic3p7r" target="_blank" rel="sponsored nofollow noopener">💬 Habla con ella</a>
@@ -926,7 +950,7 @@ html:not([lang="hi"]) [lang="hi"]{font-family:Inter,system-ui,sans-serif}
     <a class="pcover" href="../../es/model/micaela-aguirre.html" aria-label="Micaela Aguirre"></a>
     <span class="new">NUEVA</span><span class="online"></span>
     <div class="shade"></div>
-    <div class="meta"><h2 class="pname"><a class="plink" href="../../es/model/micaela-aguirre.html">Micaela Aguirre</a><span>21</span></h2>
+    <div class="meta"><h2 class="pname"><a class="plink" href="../../es/model/micaela-aguirre.html">Micaela</a><span>21</span></h2>
       <div class="on-pf">en Candy AI</div>
       <div class="chips"><span>Mujer</span><span>Realista</span><span>Morena</span></div>
       <a class="pchat" href="https://candy.ai/fr/ai-girlfriend/micaela-aguirre?via=ic3p7r" target="_blank" rel="sponsored nofollow noopener">💬 Habla con ella</a>
@@ -937,7 +961,7 @@ html:not([lang="hi"]) [lang="hi"]{font-family:Inter,system-ui,sans-serif}
     <a class="pcover" href="../../es/model/raquel-carter.html" aria-label="Raquel Carter"></a>
     <span class="new">NUEVA</span><span class="vbadge">▶ Vídeo</span>
     <div class="shade"></div>
-    <div class="meta"><h2 class="pname"><a class="plink" href="../../es/model/raquel-carter.html">Raquel Carter</a><span>24</span></h2>
+    <div class="meta"><h2 class="pname"><a class="plink" href="../../es/model/raquel-carter.html">Raquel</a><span>24</span></h2>
       <div class="on-pf">en Candy AI</div>
       <div class="chips"><span>Mujer</span><span>Realista</span><span>Morena</span></div>
       <a class="pchat" href="https://candy.ai/fr/ai-girlfriend/raquel-carter?via=ic3p7r" target="_blank" rel="sponsored nofollow noopener">💬 Habla con ella</a>
@@ -948,7 +972,7 @@ html:not([lang="hi"]) [lang="hi"]{font-family:Inter,system-ui,sans-serif}
     <a class="pcover" href="../../es/model/juniper-sloane.html" aria-label="Juniper Sloane"></a>
     <span class="new">NUEVA</span><span class="online"></span>
     <div class="shade"></div>
-    <div class="meta"><h2 class="pname"><a class="plink" href="../../es/model/juniper-sloane.html">Juniper Sloane</a><span>23</span></h2>
+    <div class="meta"><h2 class="pname"><a class="plink" href="../../es/model/juniper-sloane.html">Juniper</a><span>23</span></h2>
       <div class="on-pf">en Candy AI</div>
       <div class="chips"><span>Mujer</span><span>Realista</span><span>Morena</span></div>
       <a class="pchat" href="https://candy.ai/fr/ai-girlfriend/juniper-sloane?via=ic3p7r" target="_blank" rel="sponsored nofollow noopener">💬 Habla con ella</a>
@@ -959,7 +983,7 @@ html:not([lang="hi"]) [lang="hi"]{font-family:Inter,system-ui,sans-serif}
     <a class="pcover" href="../../es/model/lina-sewo.html" aria-label="Lina Sewo"></a>
     <span class="new">NUEVA</span><span class="online"></span>
     <div class="shade"></div>
-    <div class="meta"><h2 class="pname"><a class="plink" href="../../es/model/lina-sewo.html">Lina Sewo</a><span>22</span></h2>
+    <div class="meta"><h2 class="pname"><a class="plink" href="../../es/model/lina-sewo.html">Lina</a><span>22</span></h2>
       <div class="on-pf">en Candy AI</div>
       <div class="chips"><span>Mujer</span><span>Realista</span><span>Asiática</span></div>
       <a class="pchat" href="https://candy.ai/fr/ai-girlfriend/lina-sewo?via=ic3p7r" target="_blank" rel="sponsored nofollow noopener">💬 Habla con ella</a>
@@ -1012,7 +1036,7 @@ html:not([lang="hi"]) [lang="hi"]{font-family:Inter,system-ui,sans-serif}
 </footer>
 
 <script>var PAGE_LANG="es",ROOT="../../",LROOT="../../es/";</script>
-<script defer src="../../assets/app-es.js?v=f158603f"></script>
+<script defer src="../../assets/app-es.js?v=b1073d0c"></script>
 <script>document.addEventListener("DOMContentLoaded",function(){boot("tag")});</script>
 </body>
 </html>

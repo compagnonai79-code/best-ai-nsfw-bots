@@ -538,6 +538,27 @@ html:not([lang="hi"]) [lang="hi"]{font-family:Inter,system-ui,sans-serif}
 .mpanel a:hover{border-color:var(--accent)}
 @media(max-width:1000px){header nav > a.hide-m,header nav > a.cur{display:none}.mmenu{display:block}}
 @media(max-width:420px){.mmenu summary span{display:none}.mmenu summary{padding:7px 9px}}
+
+/* Top 10: bigger cards + flame badge; Top 10 profiles marked in the grids */
+.t10{grid-auto-columns:minmax(200px,1fr)}
+.t10-hot{position:absolute;z-index:2;top:8px;right:8px;width:30px;height:30px;border-radius:999px;display:flex;align-items:center;justify-content:center;font-size:16px;background:rgba(11,10,18,.7);pointer-events:none}
+.rc-t b{font-size:15px}
+.pcard .hot{position:absolute;top:10px;left:10px;z-index:2;background:linear-gradient(135deg,#ff7a18,#ff3d8b);color:#fff;font:700 11px Inter,sans-serif;padding:3px 9px;border-radius:999px;pointer-events:none}
+.pcard .new + .hot{top:36px}
+@media(max-width:640px){.t10{grid-auto-columns:58%}.pcard .hot{top:8px;left:8px;font-size:10px}.pcard .new + .hot{top:32px}}
+/* Candy AI full-width banner */
+.cbanner{grid-column:1/-1;position:relative;display:flex;align-items:center;gap:24px;min-height:150px;padding:22px 28px;border-radius:18px;overflow:hidden;
+  background:linear-gradient(100deg,#3a1328 0%,#1d1220 45%,#121019 100%);border:1px solid rgba(255,61,139,.45)}
+.cbanner .ad-lbl{position:absolute;top:8px;right:12px;font:500 11px Inter,sans-serif;color:var(--muted)}
+.cb-txt{flex:1 1 auto;min-width:0}
+.cb-brand{font:700 15px "Space Grotesk",sans-serif;color:var(--accent);margin-bottom:4px}
+.cbanner h3{font:700 26px/1.15 "Space Grotesk",sans-serif;color:#fff;margin:0 0 6px}
+.cbanner p{color:#cfc8e6;font-size:14px;margin:0}
+.cb-faces{display:flex;flex:0 0 auto;align-self:stretch;margin:-22px 0}
+.cb-faces img{width:92px;height:100%;min-height:150px;object-fit:cover;object-position:top;-webkit-mask-image:linear-gradient(to bottom,#000 70%,transparent);mask-image:linear-gradient(to bottom,#000 70%,transparent)}
+.cb-btn{flex:0 0 auto;white-space:nowrap}
+@media(max-width:900px){.cb-faces img:nth-child(n+3){display:none}}
+@media(max-width:640px){.cbanner{flex-wrap:wrap;padding:18px;gap:14px}.cbanner h3{font-size:21px}.cb-faces{display:none}.cb-btn{width:100%;text-align:center}}
 </style>
 <link rel="preconnect" href="https://cdn.candy.ai">
 <link rel="preload" as="image" href="https://cdn.candy.ai/cdn-cgi/image/width=360,format=webp,quality=80/sfw-profile-724624759-5e2eb818-e93a-40b9-992c-12fcac2a9fe9-600x900-webp90" fetchpriority="high">
@@ -614,7 +635,7 @@ html:not([lang="hi"]) [lang="hi"]{font-family:Inter,system-ui,sans-serif}
     <a class="pcover" href="../../es/model/yama-gito.html" aria-label="Yama Gito"></a>
     <span class="new">NUEVA</span><span class="online"></span>
     <div class="shade"></div>
-    <div class="meta"><h2 class="pname"><a class="plink" href="../../es/model/yama-gito.html">Yama Gito</a><span>20</span></h2>
+    <div class="meta"><h2 class="pname"><a class="plink" href="../../es/model/yama-gito.html">Yama</a><span>20</span></h2>
       <div class="on-pf">en Candy AI</div>
       <div class="chips"><span>Mujer</span><span>Anime</span><span>Compañera de piso</span></div>
       <a class="pchat" href="https://candy.ai/fr/ai-anime/yama-gito?via=ic3p7r" target="_blank" rel="sponsored nofollow noopener">💬 Habla con ella</a>
@@ -625,7 +646,7 @@ html:not([lang="hi"]) [lang="hi"]{font-family:Inter,system-ui,sans-serif}
     <a class="pcover" href="../../es/model/mizuki-saeki.html" aria-label="Mizuki Saeki"></a>
     <span class="new">NUEVA</span><span class="online"></span>
     <div class="shade"></div>
-    <div class="meta"><h2 class="pname"><a class="plink" href="../../es/model/mizuki-saeki.html">Mizuki Saeki</a><span>21</span></h2>
+    <div class="meta"><h2 class="pname"><a class="plink" href="../../es/model/mizuki-saeki.html">Mizuki</a><span>21</span></h2>
       <div class="on-pf">en Candy AI</div>
       <div class="chips"><span>Mujer</span><span>Anime</span><span>Hermanastra</span></div>
       <a class="pchat" href="https://candy.ai/fr/ai-anime/mizuki-saeki?via=ic3p7r" target="_blank" rel="sponsored nofollow noopener">💬 Habla con ella</a>
@@ -647,7 +668,7 @@ html:not([lang="hi"]) [lang="hi"]{font-family:Inter,system-ui,sans-serif}
     <a class="pcover" href="../../es/model/aimi-amaki.html" aria-label="Aimi Amaki"></a>
     <span class="new">NUEVA</span><span class="online"></span>
     <div class="shade"></div>
-    <div class="meta"><h2 class="pname"><a class="plink" href="../../es/model/aimi-amaki.html">Aimi Amaki</a><span>1969</span></h2>
+    <div class="meta"><h2 class="pname"><a class="plink" href="../../es/model/aimi-amaki.html">Aimi</a><span>1969</span></h2>
       <div class="on-pf">en Candy AI</div>
       <div class="chips"><span>Mujer</span><span>Anime</span><span>Bruja</span></div>
       <a class="pchat" href="https://candy.ai/fr/ai-anime/aimi-amaki?via=ic3p7r" target="_blank" rel="sponsored nofollow noopener">💬 Habla con ella</a>
@@ -658,7 +679,7 @@ html:not([lang="hi"]) [lang="hi"]{font-family:Inter,system-ui,sans-serif}
     <a class="pcover" href="../../es/model/mimii-sakurai.html" aria-label="Mimii Sakurai"></a>
     <span class="new">NUEVA</span><span class="online"></span>
     <div class="shade"></div>
-    <div class="meta"><h2 class="pname"><a class="plink" href="../../es/model/mimii-sakurai.html">Mimii Sakurai</a><span>19</span></h2>
+    <div class="meta"><h2 class="pname"><a class="plink" href="../../es/model/mimii-sakurai.html">Mimii</a><span>19</span></h2>
       <div class="on-pf">en Candy AI</div>
       <div class="chips"><span>Mujer</span><span>Anime</span><span>Streamer</span></div>
       <a class="pchat" href="https://candy.ai/fr/ai-anime/mimii-sakurai?via=ic3p7r" target="_blank" rel="sponsored nofollow noopener">💬 Habla con ella</a>
@@ -671,7 +692,7 @@ html:not([lang="hi"]) [lang="hi"]{font-family:Inter,system-ui,sans-serif}
     <a class="pcover" href="../../es/model/hina-yoshida.html" aria-label="Hina Yoshida"></a>
     <span class="new">NUEVA</span><span class="online"></span>
     <div class="shade"></div>
-    <div class="meta"><h2 class="pname"><a class="plink" href="../../es/model/hina-yoshida.html">Hina Yoshida</a><span>21</span></h2>
+    <div class="meta"><h2 class="pname"><a class="plink" href="../../es/model/hina-yoshida.html">Hina</a><span>21</span></h2>
       <div class="on-pf">en Candy AI</div>
       <div class="chips"><span>Mujer</span><span>Anime</span><span>Vecina</span></div>
       <a class="pchat" href="https://candy.ai/fr/ai-anime/hina-yoshida?via=ic3p7r" target="_blank" rel="sponsored nofollow noopener">💬 Habla con ella</a>
@@ -682,7 +703,7 @@ html:not([lang="hi"]) [lang="hi"]{font-family:Inter,system-ui,sans-serif}
     <a class="pcover" href="../../es/model/nixie-nox.html" aria-label="Nixie Nox"></a>
     <span class="new">NUEVA</span><span class="online"></span>
     <div class="shade"></div>
-    <div class="meta"><h2 class="pname"><a class="plink" href="../../es/model/nixie-nox.html">Nixie Nox</a><span>19</span></h2>
+    <div class="meta"><h2 class="pname"><a class="plink" href="../../es/model/nixie-nox.html">Nixie</a><span>19</span></h2>
       <div class="on-pf">en Candy AI</div>
       <div class="chips"><span>Mujer</span><span>Anime</span><span>Delgada</span></div>
       <a class="pchat" href="https://candy.ai/fr/ai-anime/nixie-nox?via=ic3p7r" target="_blank" rel="sponsored nofollow noopener">💬 Habla con ella</a>
@@ -693,7 +714,7 @@ html:not([lang="hi"]) [lang="hi"]{font-family:Inter,system-ui,sans-serif}
     <a class="pcover" href="../../es/model/nova-hayashi.html" aria-label="Nova Hayashi"></a>
     <span class="new">NUEVA</span><span class="online"></span>
     <div class="shade"></div>
-    <div class="meta"><h2 class="pname"><a class="plink" href="../../es/model/nova-hayashi.html">Nova Hayashi</a><span>32</span></h2>
+    <div class="meta"><h2 class="pname"><a class="plink" href="../../es/model/nova-hayashi.html">Nova</a><span>32</span></h2>
       <div class="on-pf">en Candy AI</div>
       <div class="chips"><span>Mujer</span><span>Anime</span><span>Prohibido</span></div>
       <a class="pchat" href="https://candy.ai/fr/ai-anime/nova-hayashi?via=ic3p7r" target="_blank" rel="sponsored nofollow noopener">💬 Habla con ella</a>
@@ -704,7 +725,7 @@ html:not([lang="hi"]) [lang="hi"]{font-family:Inter,system-ui,sans-serif}
     <a class="pcover" href="../../es/model/tsukishiro-kobayashi.html" aria-label="Tsukishiro Kobayashi"></a>
     <span class="new">NUEVA</span><span class="online"></span>
     <div class="shade"></div>
-    <div class="meta"><h2 class="pname"><a class="plink" href="../../es/model/tsukishiro-kobayashi.html">Tsukishiro Kobayashi</a><span>27</span></h2>
+    <div class="meta"><h2 class="pname"><a class="plink" href="../../es/model/tsukishiro-kobayashi.html">Tsukishiro</a><span>27</span></h2>
       <div class="on-pf">en Candy AI</div>
       <div class="chips"><span>Mujer</span><span>Anime</span><span>Profesora</span></div>
       <a class="pchat" href="https://candy.ai/fr/ai-anime/tsukishiro-kobayashi?via=ic3p7r" target="_blank" rel="sponsored nofollow noopener">💬 Habla con ella</a>
@@ -715,7 +736,7 @@ html:not([lang="hi"]) [lang="hi"]{font-family:Inter,system-ui,sans-serif}
     <a class="pcover" href="../../es/model/mio-sasaki.html" aria-label="Mio Sasaki"></a>
     <span class="new">NUEVA</span><span class="vbadge">▶ Vídeo</span>
     <div class="shade"></div>
-    <div class="meta"><h2 class="pname"><a class="plink" href="../../es/model/mio-sasaki.html">Mio Sasaki</a><span>38</span></h2>
+    <div class="meta"><h2 class="pname"><a class="plink" href="../../es/model/mio-sasaki.html">Mio</a><span>38</span></h2>
       <div class="on-pf">en Candy AI</div>
       <div class="chips"><span>Mujer</span><span>Anime</span><span>Masajista</span></div>
       <a class="pchat" href="https://candy.ai/fr/ai-anime/mio-sasaki?via=ic3p7r" target="_blank" rel="sponsored nofollow noopener">💬 Habla con ella</a>
@@ -726,18 +747,21 @@ html:not([lang="hi"]) [lang="hi"]{font-family:Inter,system-ui,sans-serif}
     <a class="pcover" href="../../es/model/bianca-rose.html" aria-label="Bianca Rose"></a>
     <span class="new">NUEVA</span><span class="online"></span>
     <div class="shade"></div>
-    <div class="meta"><h2 class="pname"><a class="plink" href="../../es/model/bianca-rose.html">Bianca Rose</a><span>29</span></h2>
+    <div class="meta"><h2 class="pname"><a class="plink" href="../../es/model/bianca-rose.html">Bianca</a><span>29</span></h2>
       <div class="on-pf">en Candy AI</div>
       <div class="chips"><span>Mujer</span><span>Anime</span><span>Barista</span></div>
       <a class="pchat" href="https://candy.ai/fr/ai-anime/bianca-rose?via=ic3p7r" target="_blank" rel="sponsored nofollow noopener">💬 Habla con ella</a>
     </div>
-  </article><article class="pcard" data-i="55">
+  </article><aside class="cbanner"><span class="ad-lbl">Patrocinado</span>
+    <div class="cb-txt"><div class="cb-brand">Candy AI</div><h3>Crea tu propia novia IA</h3><p>Elige su aspecto, su personalidad y sus deseos.</p></div>
+    <div class="cb-faces" aria-hidden="true"><img src="https://cdn.candy.ai/cdn-cgi/image/width=360,format=webp,quality=80/sfw-profile-676319764-44ea6125-e1a9-4284-ad8f-0f959c1b41d2-600x900-webp90" alt="" loading="lazy" onerror="this.remove()"><img src="https://cdn.candy.ai/cdn-cgi/image/width=360,format=webp,quality=80/sfw-profile-359724132-2e8baad8-df67-431d-9901-37eea2e7189a-600x900-webp90" alt="" loading="lazy" onerror="this.remove()"><img src="https://cdn.candy.ai/cdn-cgi/image/width=360,format=webp,quality=80/sfw-profile-273386494-d7b6bed1-97e3-4963-a916-25bbf6caacb2-600x900-webp90" alt="" loading="lazy" onerror="this.remove()"><img src="https://cdn.candy.ai/cdn-cgi/image/width=360,format=webp,quality=80/sfw-profile-305669999-98528ad5-04e9-4409-bc39-233131fbf03e-600x900-webp90" alt="" loading="lazy" onerror="this.remove()"></div>
+    <a class="btn btn-main cb-btn" href="https://candy.ai/?via=ic3p7r" target="_blank" rel="sponsored nofollow noopener">Crear mi chica →</a></aside><article class="pcard" data-i="55">
     <div class="ph" style="background:linear-gradient(135deg,#ff3d8b,#ff8a5c)">A</div><img src="https://cdn.candy.ai/cdn-cgi/image/width=360,format=webp,quality=80/sfw-profile-366662038-029b25e8-a9a5-4458-9897-da45d1b4a287-600x900-webp90" alt="Akira Iron" loading="lazy" onerror="this.remove()">
     
     <a class="pcover" href="../../es/model/akira-iron.html" aria-label="Akira Iron"></a>
     <span class="new">NUEVA</span><span class="online"></span>
     <div class="shade"></div>
-    <div class="meta"><h2 class="pname"><a class="plink" href="../../es/model/akira-iron.html">Akira Iron</a><span>26</span></h2>
+    <div class="meta"><h2 class="pname"><a class="plink" href="../../es/model/akira-iron.html">Akira</a><span>26</span></h2>
       <div class="on-pf">en Candy AI</div>
       <div class="chips"><span>Mujer</span><span>Anime</span><span>Japonesa</span></div>
       <a class="pchat" href="https://candy.ai/fr/ai-anime/akira-iron?via=ic3p7r" target="_blank" rel="sponsored nofollow noopener">💬 Habla con ella</a>
@@ -748,7 +772,7 @@ html:not([lang="hi"]) [lang="hi"]{font-family:Inter,system-ui,sans-serif}
     <a class="pcover" href="../../es/model/haruka-kobayashi-2.html" aria-label="Haruka Kobayashi"></a>
     <span class="new">NUEVA</span><span class="online"></span>
     <div class="shade"></div>
-    <div class="meta"><h2 class="pname"><a class="plink" href="../../es/model/haruka-kobayashi-2.html">Haruka Kobayashi</a><span>30</span></h2>
+    <div class="meta"><h2 class="pname"><a class="plink" href="../../es/model/haruka-kobayashi-2.html">Haruka</a><span>30</span></h2>
       <div class="on-pf">en Candy AI</div>
       <div class="chips"><span>Mujer</span><span>Anime</span><span>Barista</span></div>
       <a class="pchat" href="https://candy.ai/fr/ai-anime/haruka-kobayashi-2?via=ic3p7r" target="_blank" rel="sponsored nofollow noopener">💬 Habla con ella</a>
@@ -759,7 +783,7 @@ html:not([lang="hi"]) [lang="hi"]{font-family:Inter,system-ui,sans-serif}
     <a class="pcover" href="../../es/model/sharon-worthington.html" aria-label="Sharon Worthington"></a>
     <span class="new">NUEVA</span><span class="online"></span>
     <div class="shade"></div>
-    <div class="meta"><h2 class="pname"><a class="plink" href="../../es/model/sharon-worthington.html">Sharon Worthington</a><span>26</span></h2>
+    <div class="meta"><h2 class="pname"><a class="plink" href="../../es/model/sharon-worthington.html">Sharon</a><span>26</span></h2>
       <div class="on-pf">en Candy AI</div>
       <div class="chips"><span>Mujer</span><span>Anime</span><span>Japonesa</span></div>
       <a class="pchat" href="https://candy.ai/fr/ai-anime/sharon-worthington?via=ic3p7r" target="_blank" rel="sponsored nofollow noopener">💬 Habla con ella</a>
@@ -770,7 +794,7 @@ html:not([lang="hi"]) [lang="hi"]{font-family:Inter,system-ui,sans-serif}
     <a class="pcover" href="../../es/model/mika-yoruha.html" aria-label="Mika Yoruha"></a>
     <span class="new">NUEVA</span><span class="online"></span>
     <div class="shade"></div>
-    <div class="meta"><h2 class="pname"><a class="plink" href="../../es/model/mika-yoruha.html">Mika Yoruha</a><span>18</span></h2>
+    <div class="meta"><h2 class="pname"><a class="plink" href="../../es/model/mika-yoruha.html">Mika</a><span>18</span></h2>
       <div class="on-pf">en Candy AI</div>
       <div class="chips"><span>Mujer</span><span>Anime</span><span>En forma</span></div>
       <a class="pchat" href="https://candy.ai/fr/ai-anime/mika-yoruha?via=ic3p7r" target="_blank" rel="sponsored nofollow noopener">💬 Habla con ella</a>
@@ -781,7 +805,7 @@ html:not([lang="hi"]) [lang="hi"]{font-family:Inter,system-ui,sans-serif}
     <a class="pcover" href="../../es/model/saki-fujimata.html" aria-label="Saki Fujimata"></a>
     <span class="new">NUEVA</span><span class="online"></span>
     <div class="shade"></div>
-    <div class="meta"><h2 class="pname"><a class="plink" href="../../es/model/saki-fujimata.html">Saki Fujimata</a><span>22</span></h2>
+    <div class="meta"><h2 class="pname"><a class="plink" href="../../es/model/saki-fujimata.html">Saki</a><span>22</span></h2>
       <div class="on-pf">en Candy AI</div>
       <div class="chips"><span>Mujer</span><span>Anime</span><span>Delgada</span></div>
       <a class="pchat" href="https://candy.ai/fr/ai-anime/saki-fujimata?via=ic3p7r" target="_blank" rel="sponsored nofollow noopener">💬 Habla con ella</a>
@@ -792,7 +816,7 @@ html:not([lang="hi"]) [lang="hi"]{font-family:Inter,system-ui,sans-serif}
     <a class="pcover" href="../../es/model/fuyuki-tamura.html" aria-label="Fuyuki Tamura"></a>
     <span class="new">NUEVA</span><span class="online"></span>
     <div class="shade"></div>
-    <div class="meta"><h2 class="pname"><a class="plink" href="../../es/model/fuyuki-tamura.html">Fuyuki Tamura</a><span>32</span></h2>
+    <div class="meta"><h2 class="pname"><a class="plink" href="../../es/model/fuyuki-tamura.html">Fuyuki</a><span>32</span></h2>
       <div class="on-pf">en Candy AI</div>
       <div class="chips"><span>Mujer</span><span>Anime</span><span>Curvilínea</span></div>
       <a class="pchat" href="https://candy.ai/fr/ai-anime/fuyuki-tamura?via=ic3p7r" target="_blank" rel="sponsored nofollow noopener">💬 Habla con ella</a>
@@ -805,7 +829,7 @@ html:not([lang="hi"]) [lang="hi"]{font-family:Inter,system-ui,sans-serif}
     <a class="pcover" href="../../es/model/asuka-klington.html" aria-label="Asuka Klington"></a>
     <span class="new">NUEVA</span><span class="online"></span>
     <div class="shade"></div>
-    <div class="meta"><h2 class="pname"><a class="plink" href="../../es/model/asuka-klington.html">Asuka Klington</a><span>25</span></h2>
+    <div class="meta"><h2 class="pname"><a class="plink" href="../../es/model/asuka-klington.html">Asuka</a><span>25</span></h2>
       <div class="on-pf">en Candy AI</div>
       <div class="chips"><span>Mujer</span><span>Anime</span><span>Camarera</span></div>
       <a class="pchat" href="https://candy.ai/fr/ai-anime/asuka-klington?via=ic3p7r" target="_blank" rel="sponsored nofollow noopener">💬 Habla con ella</a>
@@ -816,7 +840,7 @@ html:not([lang="hi"]) [lang="hi"]{font-family:Inter,system-ui,sans-serif}
     <a class="pcover" href="../../es/model/scarlett-langford.html" aria-label="Scarlett Langford"></a>
     <span class="new">NUEVA</span><span class="online"></span>
     <div class="shade"></div>
-    <div class="meta"><h2 class="pname"><a class="plink" href="../../es/model/scarlett-langford.html">Scarlett Langford</a><span>23</span></h2>
+    <div class="meta"><h2 class="pname"><a class="plink" href="../../es/model/scarlett-langford.html">Scarlett</a><span>23</span></h2>
       <div class="on-pf">en Candy AI</div>
       <div class="chips"><span>Mujer</span><span>Anime</span><span>Japonesa</span></div>
       <a class="pchat" href="https://candy.ai/fr/ai-anime/scarlett-langford?via=ic3p7r" target="_blank" rel="sponsored nofollow noopener">💬 Habla con ella</a>
@@ -827,7 +851,7 @@ html:not([lang="hi"]) [lang="hi"]{font-family:Inter,system-ui,sans-serif}
     <a class="pcover" href="../../es/model/reina-amamiya.html" aria-label="Reina Amamiya"></a>
     <span class="new">NUEVA</span><span class="online"></span>
     <div class="shade"></div>
-    <div class="meta"><h2 class="pname"><a class="plink" href="../../es/model/reina-amamiya.html">Reina Amamiya</a><span>22</span></h2>
+    <div class="meta"><h2 class="pname"><a class="plink" href="../../es/model/reina-amamiya.html">Reina</a><span>22</span></h2>
       <div class="on-pf">en Candy AI</div>
       <div class="chips"><span>Mujer</span><span>Anime</span><span>Cam Girl</span></div>
       <a class="pchat" href="https://candy.ai/fr/ai-anime/reina-amamiya?via=ic3p7r" target="_blank" rel="sponsored nofollow noopener">💬 Habla con ella</a>
@@ -838,7 +862,7 @@ html:not([lang="hi"]) [lang="hi"]{font-family:Inter,system-ui,sans-serif}
     <a class="pcover" href="../../es/model/kenji-sato.html" aria-label="Kenji Sato"></a>
     <span class="new">NUEVA</span><span class="online"></span>
     <div class="shade"></div>
-    <div class="meta"><h2 class="pname"><a class="plink" href="../../es/model/kenji-sato.html">Kenji Sato</a><span>33</span></h2>
+    <div class="meta"><h2 class="pname"><a class="plink" href="../../es/model/kenji-sato.html">Kenji</a><span>33</span></h2>
       <div class="on-pf">en Candy AI</div>
       <div class="chips"><span>Hombre</span><span>Realista</span><span>Novio</span></div>
       <a class="pchat" href="https://candy.ai/fr/ai-boyfriend/kenji-sato?via=ic3p7r" target="_blank" rel="sponsored nofollow noopener">💬 Habla con él</a>
@@ -849,7 +873,7 @@ html:not([lang="hi"]) [lang="hi"]{font-family:Inter,system-ui,sans-serif}
     <a class="pcover" href="../../es/model/suzu-amagi.html" aria-label="Suzu Amagi"></a>
     <span class="new">NUEVA</span><span class="online"></span>
     <div class="shade"></div>
-    <div class="meta"><h2 class="pname"><a class="plink" href="../../es/model/suzu-amagi.html">Suzu Amagi</a><span>21</span></h2>
+    <div class="meta"><h2 class="pname"><a class="plink" href="../../es/model/suzu-amagi.html">Suzu</a><span>21</span></h2>
       <div class="on-pf">en Candy AI</div>
       <div class="chips"><span>Mujer</span><span>Realista</span><span>Asiática</span></div>
       <a class="pchat" href="https://candy.ai/fr/ai-girlfriend/suzu-amagi?via=ic3p7r" target="_blank" rel="sponsored nofollow noopener">💬 Habla con ella</a>
@@ -860,7 +884,7 @@ html:not([lang="hi"]) [lang="hi"]{font-family:Inter,system-ui,sans-serif}
     <a class="pcover" href="../../es/model/rena-morikawa.html" aria-label="Rena Morikawa"></a>
     <span class="new">NUEVA</span><span class="online"></span>
     <div class="shade"></div>
-    <div class="meta"><h2 class="pname"><a class="plink" href="../../es/model/rena-morikawa.html">Rena Morikawa</a><span>22</span></h2>
+    <div class="meta"><h2 class="pname"><a class="plink" href="../../es/model/rena-morikawa.html">Rena</a><span>22</span></h2>
       <div class="on-pf">en Candy AI</div>
       <div class="chips"><span>Mujer</span><span>Realista</span><span>Asiática</span></div>
       <a class="pchat" href="https://candy.ai/fr/ai-girlfriend/rena-morikawa?via=ic3p7r" target="_blank" rel="sponsored nofollow noopener">💬 Habla con ella</a>
@@ -871,7 +895,7 @@ html:not([lang="hi"]) [lang="hi"]{font-family:Inter,system-ui,sans-serif}
     <a class="pcover" href="../../es/model/sanyae-hayashi.html" aria-label="Sanyae Hayashi"></a>
     <span class="new">NUEVA</span><span class="vbadge">▶ Vídeo</span>
     <div class="shade"></div>
-    <div class="meta"><h2 class="pname"><a class="plink" href="../../es/model/sanyae-hayashi.html">Sanyae Hayashi</a><span>29</span></h2>
+    <div class="meta"><h2 class="pname"><a class="plink" href="../../es/model/sanyae-hayashi.html">Sanyae</a><span>29</span></h2>
       <div class="on-pf">en Candy AI</div>
       <div class="chips"><span>Mujer</span><span>Realista</span><span>Asiática</span></div>
       <a class="pchat" href="https://candy.ai/fr/ai-girlfriend/sanyae-hayashi?via=ic3p7r" target="_blank" rel="sponsored nofollow noopener">💬 Habla con ella</a>
@@ -882,7 +906,7 @@ html:not([lang="hi"]) [lang="hi"]{font-family:Inter,system-ui,sans-serif}
     <a class="pcover" href="../../es/model/azura-mori.html" aria-label="Azura Mori"></a>
     <span class="new">NUEVA</span><span class="online"></span>
     <div class="shade"></div>
-    <div class="meta"><h2 class="pname"><a class="plink" href="../../es/model/azura-mori.html">Azura Mori</a><span>23</span></h2>
+    <div class="meta"><h2 class="pname"><a class="plink" href="../../es/model/azura-mori.html">Azura</a><span>23</span></h2>
       <div class="on-pf">en Candy AI</div>
       <div class="chips"><span>Mujer</span><span>Realista</span><span>Asiática</span></div>
       <a class="pchat" href="https://candy.ai/fr/ai-girlfriend/azura-mori?via=ic3p7r" target="_blank" rel="sponsored nofollow noopener">💬 Habla con ella</a>
@@ -935,7 +959,7 @@ html:not([lang="hi"]) [lang="hi"]{font-family:Inter,system-ui,sans-serif}
 </footer>
 
 <script>var PAGE_LANG="es",ROOT="../../",LROOT="../../es/";</script>
-<script defer src="../../assets/app-es.js?v=f158603f"></script>
+<script defer src="../../assets/app-es.js?v=b1073d0c"></script>
 <script>document.addEventListener("DOMContentLoaded",function(){boot("tag")});</script>
 </body>
 </html>

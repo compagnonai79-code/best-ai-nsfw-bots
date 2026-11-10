@@ -538,6 +538,27 @@ html:not([lang="hi"]) [lang="hi"]{font-family:Inter,system-ui,sans-serif}
 .mpanel a:hover{border-color:var(--accent)}
 @media(max-width:1000px){header nav > a.hide-m,header nav > a.cur{display:none}.mmenu{display:block}}
 @media(max-width:420px){.mmenu summary span{display:none}.mmenu summary{padding:7px 9px}}
+
+/* Top 10: bigger cards + flame badge; Top 10 profiles marked in the grids */
+.t10{grid-auto-columns:minmax(200px,1fr)}
+.t10-hot{position:absolute;z-index:2;top:8px;right:8px;width:30px;height:30px;border-radius:999px;display:flex;align-items:center;justify-content:center;font-size:16px;background:rgba(11,10,18,.7);pointer-events:none}
+.rc-t b{font-size:15px}
+.pcard .hot{position:absolute;top:10px;left:10px;z-index:2;background:linear-gradient(135deg,#ff7a18,#ff3d8b);color:#fff;font:700 11px Inter,sans-serif;padding:3px 9px;border-radius:999px;pointer-events:none}
+.pcard .new + .hot{top:36px}
+@media(max-width:640px){.t10{grid-auto-columns:58%}.pcard .hot{top:8px;left:8px;font-size:10px}.pcard .new + .hot{top:32px}}
+/* Candy AI full-width banner */
+.cbanner{grid-column:1/-1;position:relative;display:flex;align-items:center;gap:24px;min-height:150px;padding:22px 28px;border-radius:18px;overflow:hidden;
+  background:linear-gradient(100deg,#3a1328 0%,#1d1220 45%,#121019 100%);border:1px solid rgba(255,61,139,.45)}
+.cbanner .ad-lbl{position:absolute;top:8px;right:12px;font:500 11px Inter,sans-serif;color:var(--muted)}
+.cb-txt{flex:1 1 auto;min-width:0}
+.cb-brand{font:700 15px "Space Grotesk",sans-serif;color:var(--accent);margin-bottom:4px}
+.cbanner h3{font:700 26px/1.15 "Space Grotesk",sans-serif;color:#fff;margin:0 0 6px}
+.cbanner p{color:#cfc8e6;font-size:14px;margin:0}
+.cb-faces{display:flex;flex:0 0 auto;align-self:stretch;margin:-22px 0}
+.cb-faces img{width:92px;height:100%;min-height:150px;object-fit:cover;object-position:top;-webkit-mask-image:linear-gradient(to bottom,#000 70%,transparent);mask-image:linear-gradient(to bottom,#000 70%,transparent)}
+.cb-btn{flex:0 0 auto;white-space:nowrap}
+@media(max-width:900px){.cb-faces img:nth-child(n+3){display:none}}
+@media(max-width:640px){.cbanner{flex-wrap:wrap;padding:18px;gap:14px}.cbanner h3{font-size:21px}.cb-faces{display:none}.cb-btn{width:100%;text-align:center}}
 </style>
 <link rel="preconnect" href="https://best-ai-nsfw-bots.com">
 <link rel="preload" as="image" href="https://best-ai-nsfw-bots.com/cdn-cgi/image/width=360,format=auto,quality=80/https://cdn.nd-api.com/avatars/fe06c7cd-7dac-4b82-abc4-ff97f4e5f68d.jpg" fetchpriority="high">
@@ -642,7 +663,10 @@ html:not([lang="hi"]) [lang="hi"]{font-family:Inter,system-ui,sans-serif}
       <div class="chips"><span>Homme</span><span>Gay</span><span>Professeure</span></div>
       <a class="pchat" href="https://spicychat.ai/chat/3c19a936-27a8-4945-ae24-2cda0422b477?ref=mze1zjm" target="_blank" rel="sponsored nofollow noopener">💬 Parler avec lui</a>
     </div>
-  </article></div>
+  </article><aside class="cbanner"><span class="ad-lbl">Sponsorisé</span>
+    <div class="cb-txt"><div class="cb-brand">Candy AI</div><h3>Crée ton propre copain IA</h3><p>Choisis son look, sa personnalité et ses envies.</p></div>
+    <div class="cb-faces" aria-hidden="true"></div>
+    <a class="btn btn-main cb-btn" href="https://candy.ai/?via=ic3p7r" target="_blank" rel="sponsored nofollow noopener">Créer mon copain →</a></aside></div>
   <p class="hero-links"><a href="../muscular.html">Tous les personnages « Musclée » (8) →</a> · <a href="../../platform/spicychat.html">Notre avis sur SpicyChat AI →</a></p>
   <section class="info"><h2>FAQ</h2>
     <div class="mfaq"><div class="mq"><h3>SpicyChat AI propose-t-il des personnages « Musclée » ?</h3><p>Oui : 4 personnages « Musclée » de SpicyChat AI sont listés ici, chacun avec une fiche et un lien direct vers le chat.</p></div><div class="mq"><h3>SpicyChat AI est-il gratuit ?</h3><p>Oui, on peut commencer gratuitement sur SpicyChat AI, avec des limites. Les messages illimités et les médias (photos, voix, vidéo) demandent en général un abonnement ou des crédits.</p></div><div class="mq"><h3>Où trouver d'autres personnages « Musclée » ?</h3><p>Notre page « Musclée » regroupe 8 personnages de toutes les plateformes que nous référençons.</p></div></div></section>
@@ -676,7 +700,7 @@ html:not([lang="hi"]) [lang="hi"]{font-family:Inter,system-ui,sans-serif}
 </footer>
 
 <script>var PAGE_LANG="fr",ROOT="../../../",LROOT="../../../fr/";</script>
-<script defer src="../../../assets/app-fr.js?v=f158603f"></script>
+<script defer src="../../../assets/app-fr.js?v=b1073d0c"></script>
 <script>document.addEventListener("DOMContentLoaded",function(){boot("tag")});</script>
 </body>
 </html>

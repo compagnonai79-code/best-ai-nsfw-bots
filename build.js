@@ -227,7 +227,7 @@ for (const [file, base] of [["index.html",""],["women.html","women"],["men.html"
   const v = { site: SITE.domain, n: X.PROFILES.length, k: new Set(X.PROFILES.map(p => p.platform)).size, c: X.ALL_TAGS.length };
   const faq = base ? [] : [1,2,3,4,5,6].map(i => [u("hq" + i, v), u("ha" + i, v)]);
   const thumb = p => `<a class="rc" href="${X.girlUrl(p)}"><span class="rc-img">${X.visual(X.thumb(p.img), X.PLATFORMS[p.platform].color, p.name[0], p.name)}</span>
-      <span class="rc-t"><b>${e(p.name)}</b><small>${e(X.PLATFORMS[p.platform].name)}</small></span></a>`;
+      <span class="t10-hot" aria-hidden="true">🔥</span><span class="rc-t"><b>${e(p.short || p.name)}</b><small>${e(X.PLATFORMS[p.platform].name)}</small></span></a>`;
   return { page:"home", nav: base || "home", base, modal:true, title:u("meta_home_t" + k), desc:u("meta_home_d" + k), body: `
   <section class="hero">
     <h1>${u("hero_title" + k)}</h1>

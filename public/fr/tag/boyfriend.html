@@ -538,6 +538,27 @@ html:not([lang="hi"]) [lang="hi"]{font-family:Inter,system-ui,sans-serif}
 .mpanel a:hover{border-color:var(--accent)}
 @media(max-width:1000px){header nav > a.hide-m,header nav > a.cur{display:none}.mmenu{display:block}}
 @media(max-width:420px){.mmenu summary span{display:none}.mmenu summary{padding:7px 9px}}
+
+/* Top 10: bigger cards + flame badge; Top 10 profiles marked in the grids */
+.t10{grid-auto-columns:minmax(200px,1fr)}
+.t10-hot{position:absolute;z-index:2;top:8px;right:8px;width:30px;height:30px;border-radius:999px;display:flex;align-items:center;justify-content:center;font-size:16px;background:rgba(11,10,18,.7);pointer-events:none}
+.rc-t b{font-size:15px}
+.pcard .hot{position:absolute;top:10px;left:10px;z-index:2;background:linear-gradient(135deg,#ff7a18,#ff3d8b);color:#fff;font:700 11px Inter,sans-serif;padding:3px 9px;border-radius:999px;pointer-events:none}
+.pcard .new + .hot{top:36px}
+@media(max-width:640px){.t10{grid-auto-columns:58%}.pcard .hot{top:8px;left:8px;font-size:10px}.pcard .new + .hot{top:32px}}
+/* Candy AI full-width banner */
+.cbanner{grid-column:1/-1;position:relative;display:flex;align-items:center;gap:24px;min-height:150px;padding:22px 28px;border-radius:18px;overflow:hidden;
+  background:linear-gradient(100deg,#3a1328 0%,#1d1220 45%,#121019 100%);border:1px solid rgba(255,61,139,.45)}
+.cbanner .ad-lbl{position:absolute;top:8px;right:12px;font:500 11px Inter,sans-serif;color:var(--muted)}
+.cb-txt{flex:1 1 auto;min-width:0}
+.cb-brand{font:700 15px "Space Grotesk",sans-serif;color:var(--accent);margin-bottom:4px}
+.cbanner h3{font:700 26px/1.15 "Space Grotesk",sans-serif;color:#fff;margin:0 0 6px}
+.cbanner p{color:#cfc8e6;font-size:14px;margin:0}
+.cb-faces{display:flex;flex:0 0 auto;align-self:stretch;margin:-22px 0}
+.cb-faces img{width:92px;height:100%;min-height:150px;object-fit:cover;object-position:top;-webkit-mask-image:linear-gradient(to bottom,#000 70%,transparent);mask-image:linear-gradient(to bottom,#000 70%,transparent)}
+.cb-btn{flex:0 0 auto;white-space:nowrap}
+@media(max-width:900px){.cb-faces img:nth-child(n+3){display:none}}
+@media(max-width:640px){.cbanner{flex-wrap:wrap;padding:18px;gap:14px}.cbanner h3{font-size:21px}.cb-faces{display:none}.cb-btn{width:100%;text-align:center}}
 </style>
 <link rel="preconnect" href="https://best-ai-nsfw-bots.com">
 <link rel="preload" as="image" href="https://best-ai-nsfw-bots.com/cdn-cgi/image/width=360,format=auto,quality=80/https://cdn.nd-api.com/avatars/400a94b1-9b59-44e4-9aa5-09f42f4d4e13.jpg" fetchpriority="high">
@@ -625,7 +646,7 @@ html:not([lang="hi"]) [lang="hi"]{font-family:Inter,system-ui,sans-serif}
     <a class="pcover" href="../../fr/model/charles-weston.html" aria-label="Charles Weston"></a>
     <span class="new">NOUVEAU</span><span class="online"></span>
     <div class="shade"></div>
-    <div class="meta"><h2 class="pname"><a class="plink" href="../../fr/model/charles-weston.html">Charles Weston</a><span>49</span></h2>
+    <div class="meta"><h2 class="pname"><a class="plink" href="../../fr/model/charles-weston.html">Charles</a><span>49</span></h2>
       <div class="on-pf">sur Candy AI</div>
       <div class="chips"><span>Homme</span><span>Réaliste</span><span>Petit ami</span></div>
       <a class="pchat" href="https://candy.ai/fr/ai-boyfriend/charles-weston?via=ic3p7r" target="_blank" rel="sponsored nofollow noopener">💬 Parler avec lui</a>
@@ -636,7 +657,7 @@ html:not([lang="hi"]) [lang="hi"]{font-family:Inter,system-ui,sans-serif}
     <a class="pcover" href="../../fr/model/malik-washington.html" aria-label="Malik Washington"></a>
     <span class="new">NOUVEAU</span><span class="online"></span>
     <div class="shade"></div>
-    <div class="meta"><h2 class="pname"><a class="plink" href="../../fr/model/malik-washington.html">Malik Washington</a><span>30</span></h2>
+    <div class="meta"><h2 class="pname"><a class="plink" href="../../fr/model/malik-washington.html">Malik</a><span>30</span></h2>
       <div class="on-pf">sur Candy AI</div>
       <div class="chips"><span>Homme</span><span>Réaliste</span><span>Petit ami</span></div>
       <a class="pchat" href="https://candy.ai/fr/ai-boyfriend/malik-washington?via=ic3p7r" target="_blank" rel="sponsored nofollow noopener">💬 Parler avec lui</a>
@@ -647,7 +668,7 @@ html:not([lang="hi"]) [lang="hi"]{font-family:Inter,system-ui,sans-serif}
     <a class="pcover" href="../../fr/model/erik-johansson.html" aria-label="Erik Johansson"></a>
     <span class="new">NOUVEAU</span><span class="online"></span>
     <div class="shade"></div>
-    <div class="meta"><h2 class="pname"><a class="plink" href="../../fr/model/erik-johansson.html">Erik Johansson</a><span>27</span></h2>
+    <div class="meta"><h2 class="pname"><a class="plink" href="../../fr/model/erik-johansson.html">Erik</a><span>27</span></h2>
       <div class="on-pf">sur Candy AI</div>
       <div class="chips"><span>Homme</span><span>Réaliste</span><span>Petit ami</span></div>
       <a class="pchat" href="https://candy.ai/fr/ai-boyfriend/erik-johansson?via=ic3p7r" target="_blank" rel="sponsored nofollow noopener">💬 Parler avec lui</a>
@@ -658,7 +679,7 @@ html:not([lang="hi"]) [lang="hi"]{font-family:Inter,system-ui,sans-serif}
     <a class="pcover" href="../../fr/model/john-terry.html" aria-label="John Terry"></a>
     <span class="new">NOUVEAU</span><span class="online"></span>
     <div class="shade"></div>
-    <div class="meta"><h2 class="pname"><a class="plink" href="../../fr/model/john-terry.html">John Terry</a><span>50</span></h2>
+    <div class="meta"><h2 class="pname"><a class="plink" href="../../fr/model/john-terry.html">John</a><span>50</span></h2>
       <div class="on-pf">sur Candy AI</div>
       <div class="chips"><span>Homme</span><span>Réaliste</span><span>Petit ami</span></div>
       <a class="pchat" href="https://candy.ai/fr/ai-boyfriend/john-terry?via=ic3p7r" target="_blank" rel="sponsored nofollow noopener">💬 Parler avec lui</a>
@@ -671,7 +692,7 @@ html:not([lang="hi"]) [lang="hi"]{font-family:Inter,system-ui,sans-serif}
     <a class="pcover" href="../../fr/model/kenji-sato.html" aria-label="Kenji Sato"></a>
     <span class="new">NOUVEAU</span><span class="online"></span>
     <div class="shade"></div>
-    <div class="meta"><h2 class="pname"><a class="plink" href="../../fr/model/kenji-sato.html">Kenji Sato</a><span>33</span></h2>
+    <div class="meta"><h2 class="pname"><a class="plink" href="../../fr/model/kenji-sato.html">Kenji</a><span>33</span></h2>
       <div class="on-pf">sur Candy AI</div>
       <div class="chips"><span>Homme</span><span>Réaliste</span><span>Petit ami</span></div>
       <a class="pchat" href="https://candy.ai/fr/ai-boyfriend/kenji-sato?via=ic3p7r" target="_blank" rel="sponsored nofollow noopener">💬 Parler avec lui</a>
@@ -682,7 +703,7 @@ html:not([lang="hi"]) [lang="hi"]{font-family:Inter,system-ui,sans-serif}
     <a class="pcover" href="../../fr/model/marcus-musan.html" aria-label="Marcus Musan"></a>
     <span class="new">NOUVEAU</span><span class="online"></span>
     <div class="shade"></div>
-    <div class="meta"><h2 class="pname"><a class="plink" href="../../fr/model/marcus-musan.html">Marcus Musan</a><span>32</span></h2>
+    <div class="meta"><h2 class="pname"><a class="plink" href="../../fr/model/marcus-musan.html">Marcus</a><span>32</span></h2>
       <div class="on-pf">sur Candy AI</div>
       <div class="chips"><span>Homme</span><span>Réaliste</span><span>Petit ami</span></div>
       <a class="pchat" href="https://candy.ai/fr/ai-boyfriend/marcus-musan?via=ic3p7r" target="_blank" rel="sponsored nofollow noopener">💬 Parler avec lui</a>
@@ -693,7 +714,7 @@ html:not([lang="hi"]) [lang="hi"]{font-family:Inter,system-ui,sans-serif}
     <a class="pcover" href="../../fr/model/jaxon-reed.html" aria-label="Jaxon Reed"></a>
     <span class="new">NOUVEAU</span><span class="online"></span>
     <div class="shade"></div>
-    <div class="meta"><h2 class="pname"><a class="plink" href="../../fr/model/jaxon-reed.html">Jaxon Reed</a><span>32</span></h2>
+    <div class="meta"><h2 class="pname"><a class="plink" href="../../fr/model/jaxon-reed.html">Jaxon</a><span>32</span></h2>
       <div class="on-pf">sur Candy AI</div>
       <div class="chips"><span>Homme</span><span>Réaliste</span><span>Petit ami</span></div>
       <a class="pchat" href="https://candy.ai/fr/ai-boyfriend/jaxon-reed?via=ic3p7r" target="_blank" rel="sponsored nofollow noopener">💬 Parler avec lui</a>
@@ -704,7 +725,7 @@ html:not([lang="hi"]) [lang="hi"]{font-family:Inter,system-ui,sans-serif}
     <a class="pcover" href="../../fr/model/ethan-vale.html" aria-label="Ethan Vale"></a>
     <span class="new">NOUVEAU</span><span class="online"></span>
     <div class="shade"></div>
-    <div class="meta"><h2 class="pname"><a class="plink" href="../../fr/model/ethan-vale.html">Ethan Vale</a><span>25</span></h2>
+    <div class="meta"><h2 class="pname"><a class="plink" href="../../fr/model/ethan-vale.html">Ethan</a><span>25</span></h2>
       <div class="on-pf">sur Candy AI</div>
       <div class="chips"><span>Homme</span><span>Réaliste</span><span>Petit ami</span></div>
       <a class="pchat" href="https://candy.ai/fr/ai-boyfriend/ethan-vale?via=ic3p7r" target="_blank" rel="sponsored nofollow noopener">💬 Parler avec lui</a>
@@ -715,7 +736,7 @@ html:not([lang="hi"]) [lang="hi"]{font-family:Inter,system-ui,sans-serif}
     <a class="pcover" href="../../fr/model/jin-park.html" aria-label="Jin Park"></a>
     <span class="new">NOUVEAU</span><span class="online"></span>
     <div class="shade"></div>
-    <div class="meta"><h2 class="pname"><a class="plink" href="../../fr/model/jin-park.html">Jin Park</a><span>32</span></h2>
+    <div class="meta"><h2 class="pname"><a class="plink" href="../../fr/model/jin-park.html">Jin</a><span>32</span></h2>
       <div class="on-pf">sur Candy AI</div>
       <div class="chips"><span>Homme</span><span>Réaliste</span><span>Petit ami</span></div>
       <a class="pchat" href="https://candy.ai/fr/ai-boyfriend/jin-park?via=ic3p7r" target="_blank" rel="sponsored nofollow noopener">💬 Parler avec lui</a>
@@ -726,18 +747,21 @@ html:not([lang="hi"]) [lang="hi"]{font-family:Inter,system-ui,sans-serif}
     <a class="pcover" href="../../fr/model/rafael-mendoza.html" aria-label="Rafael Mendoza"></a>
     <span class="new">NOUVEAU</span><span class="online"></span>
     <div class="shade"></div>
-    <div class="meta"><h2 class="pname"><a class="plink" href="../../fr/model/rafael-mendoza.html">Rafael Mendoza</a><span>32</span></h2>
+    <div class="meta"><h2 class="pname"><a class="plink" href="../../fr/model/rafael-mendoza.html">Rafael</a><span>32</span></h2>
       <div class="on-pf">sur Candy AI</div>
       <div class="chips"><span>Homme</span><span>Réaliste</span><span>Petit ami</span></div>
       <a class="pchat" href="https://candy.ai/fr/ai-boyfriend/rafael-mendoza?via=ic3p7r" target="_blank" rel="sponsored nofollow noopener">💬 Parler avec lui</a>
     </div>
-  </article><article class="pcard" data-i="90">
+  </article><aside class="cbanner"><span class="ad-lbl">Sponsorisé</span>
+    <div class="cb-txt"><div class="cb-brand">Candy AI</div><h3>Crée ton propre copain IA</h3><p>Choisis son look, sa personnalité et ses envies.</p></div>
+    <div class="cb-faces" aria-hidden="true"></div>
+    <a class="btn btn-main cb-btn" href="https://candy.ai/?via=ic3p7r" target="_blank" rel="sponsored nofollow noopener">Créer mon copain →</a></aside><article class="pcard" data-i="90">
     <div class="ph" style="background:linear-gradient(135deg,#ff3d8b,#ff8a5c)">V</div><img src="https://cdn.candy.ai/cdn-cgi/image/width=360,format=webp,quality=80/20343571-4bcea640-b475-42b8-94f7-7340fd5602c1-600x900-webp90" alt="Victor Draven" loading="lazy" onerror="this.remove()">
     
     <a class="pcover" href="../../fr/model/victor-draven.html" aria-label="Victor Draven"></a>
     <span class="new">NOUVEAU</span><span class="online"></span>
     <div class="shade"></div>
-    <div class="meta"><h2 class="pname"><a class="plink" href="../../fr/model/victor-draven.html">Victor Draven</a><span>29</span></h2>
+    <div class="meta"><h2 class="pname"><a class="plink" href="../../fr/model/victor-draven.html">Victor</a><span>29</span></h2>
       <div class="on-pf">sur Candy AI</div>
       <div class="chips"><span>Homme</span><span>Réaliste</span><span>Petit ami</span></div>
       <a class="pchat" href="https://candy.ai/fr/ai-boyfriend/victor-draven?via=ic3p7r" target="_blank" rel="sponsored nofollow noopener">💬 Parler avec lui</a>
@@ -748,7 +772,7 @@ html:not([lang="hi"]) [lang="hi"]{font-family:Inter,system-ui,sans-serif}
     <a class="pcover" href="../../fr/model/jack-blackwood.html" aria-label="Jack Blackwood"></a>
     <span class="new">NOUVEAU</span><span class="online"></span>
     <div class="shade"></div>
-    <div class="meta"><h2 class="pname"><a class="plink" href="../../fr/model/jack-blackwood.html">Jack Blackwood</a><span>35</span></h2>
+    <div class="meta"><h2 class="pname"><a class="plink" href="../../fr/model/jack-blackwood.html">Jack</a><span>35</span></h2>
       <div class="on-pf">sur Candy AI</div>
       <div class="chips"><span>Homme</span><span>Réaliste</span><span>Petit ami</span></div>
       <a class="pchat" href="https://candy.ai/fr/ai-boyfriend/jack-blackwood?via=ic3p7r" target="_blank" rel="sponsored nofollow noopener">💬 Parler avec lui</a>
@@ -801,7 +825,7 @@ html:not([lang="hi"]) [lang="hi"]{font-family:Inter,system-ui,sans-serif}
 </footer>
 
 <script>var PAGE_LANG="fr",ROOT="../../",LROOT="../../fr/";</script>
-<script defer src="../../assets/app-fr.js?v=f158603f"></script>
+<script defer src="../../assets/app-fr.js?v=b1073d0c"></script>
 <script>document.addEventListener("DOMContentLoaded",function(){boot("tag")});</script>
 </body>
 </html>

@@ -538,6 +538,27 @@ html:not([lang="hi"]) [lang="hi"]{font-family:Inter,system-ui,sans-serif}
 .mpanel a:hover{border-color:var(--accent)}
 @media(max-width:1000px){header nav > a.hide-m,header nav > a.cur{display:none}.mmenu{display:block}}
 @media(max-width:420px){.mmenu summary span{display:none}.mmenu summary{padding:7px 9px}}
+
+/* Top 10: bigger cards + flame badge; Top 10 profiles marked in the grids */
+.t10{grid-auto-columns:minmax(200px,1fr)}
+.t10-hot{position:absolute;z-index:2;top:8px;right:8px;width:30px;height:30px;border-radius:999px;display:flex;align-items:center;justify-content:center;font-size:16px;background:rgba(11,10,18,.7);pointer-events:none}
+.rc-t b{font-size:15px}
+.pcard .hot{position:absolute;top:10px;left:10px;z-index:2;background:linear-gradient(135deg,#ff7a18,#ff3d8b);color:#fff;font:700 11px Inter,sans-serif;padding:3px 9px;border-radius:999px;pointer-events:none}
+.pcard .new + .hot{top:36px}
+@media(max-width:640px){.t10{grid-auto-columns:58%}.pcard .hot{top:8px;left:8px;font-size:10px}.pcard .new + .hot{top:32px}}
+/* Candy AI full-width banner */
+.cbanner{grid-column:1/-1;position:relative;display:flex;align-items:center;gap:24px;min-height:150px;padding:22px 28px;border-radius:18px;overflow:hidden;
+  background:linear-gradient(100deg,#3a1328 0%,#1d1220 45%,#121019 100%);border:1px solid rgba(255,61,139,.45)}
+.cbanner .ad-lbl{position:absolute;top:8px;right:12px;font:500 11px Inter,sans-serif;color:var(--muted)}
+.cb-txt{flex:1 1 auto;min-width:0}
+.cb-brand{font:700 15px "Space Grotesk",sans-serif;color:var(--accent);margin-bottom:4px}
+.cbanner h3{font:700 26px/1.15 "Space Grotesk",sans-serif;color:#fff;margin:0 0 6px}
+.cbanner p{color:#cfc8e6;font-size:14px;margin:0}
+.cb-faces{display:flex;flex:0 0 auto;align-self:stretch;margin:-22px 0}
+.cb-faces img{width:92px;height:100%;min-height:150px;object-fit:cover;object-position:top;-webkit-mask-image:linear-gradient(to bottom,#000 70%,transparent);mask-image:linear-gradient(to bottom,#000 70%,transparent)}
+.cb-btn{flex:0 0 auto;white-space:nowrap}
+@media(max-width:900px){.cb-faces img:nth-child(n+3){display:none}}
+@media(max-width:640px){.cbanner{flex-wrap:wrap;padding:18px;gap:14px}.cbanner h3{font-size:21px}.cb-faces{display:none}.cb-btn{width:100%;text-align:center}}
 </style>
 <link rel="preconnect" href="https://best-ai-nsfw-bots.com">
 <link rel="preload" as="image" href="https://best-ai-nsfw-bots.com/cdn-cgi/image/width=360,format=auto,quality=80/https://cdn.nd-api.com/avatars/d5e3f8e4fe9cb2859bb9c1e22f5e94fc.jpg" fetchpriority="high">
@@ -755,7 +776,10 @@ html:not([lang="hi"]) [lang="hi"]{font-family:Inter,system-ui,sans-serif}
       <div class="chips"><span>Weiblich</span><span>Muskeln</span><span>MILF</span></div>
       <a class="pchat" href="https://spicychat.ai/chat/65d1a2cb-7566-495b-86f3-85a00cdb76b7?ref=mze1zjm" target="_blank" rel="sponsored nofollow noopener">💬 Mit ihr chatten</a>
     </div>
-  </article><article class="pcard" data-i="358">
+  </article><aside class="cbanner"><span class="ad-lbl">Gesponsert</span>
+    <div class="cb-txt"><div class="cb-brand">Candy AI</div><h3>Erstelle deine eigene KI-Freundin</h3><p>Wähle ihr Aussehen, ihre Persönlichkeit und ihre Vorlieben.</p></div>
+    <div class="cb-faces" aria-hidden="true"><img src="https://cdn.candy.ai/cdn-cgi/image/width=360,format=webp,quality=80/sfw-profile-676319764-44ea6125-e1a9-4284-ad8f-0f959c1b41d2-600x900-webp90" alt="" loading="lazy" onerror="this.remove()"><img src="https://cdn.candy.ai/cdn-cgi/image/width=360,format=webp,quality=80/sfw-profile-359724132-2e8baad8-df67-431d-9901-37eea2e7189a-600x900-webp90" alt="" loading="lazy" onerror="this.remove()"><img src="https://cdn.candy.ai/cdn-cgi/image/width=360,format=webp,quality=80/sfw-profile-273386494-d7b6bed1-97e3-4963-a916-25bbf6caacb2-600x900-webp90" alt="" loading="lazy" onerror="this.remove()"><img src="https://cdn.candy.ai/cdn-cgi/image/width=360,format=webp,quality=80/sfw-profile-305669999-98528ad5-04e9-4409-bc39-233131fbf03e-600x900-webp90" alt="" loading="lazy" onerror="this.remove()"></div>
+    <a class="btn btn-main cb-btn" href="https://candy.ai/?via=ic3p7r" target="_blank" rel="sponsored nofollow noopener">Meine Freundin erstellen →</a></aside><article class="pcard" data-i="358">
     <div class="ph" style="background:linear-gradient(135deg,#ff5a36,#ffb03a)">V</div><img src="https://best-ai-nsfw-bots.com/cdn-cgi/image/width=360,format=auto,quality=80/https://cdn.nd-api.com/avatars/6ced30c6-8800-4fb1-b784-f99cc8659642.jpg" alt="Valerie Vance" loading="lazy" onerror="this.remove()">
     
     <a class="pcover" href="../de/model/valerie-vance.html" aria-label="Valerie Vance"></a>
@@ -983,7 +1007,7 @@ html:not([lang="hi"]) [lang="hi"]{font-family:Inter,system-ui,sans-serif}
     <a class="pcover" href="../de/model/yama-gito.html" aria-label="Yama Gito"></a>
     <span class="new">NEU</span><span class="online"></span>
     <div class="shade"></div>
-    <div class="meta"><h2 class="pname"><a class="plink" href="../de/model/yama-gito.html">Yama Gito</a><span>20</span></h2>
+    <div class="meta"><h2 class="pname"><a class="plink" href="../de/model/yama-gito.html">Yama</a><span>20</span></h2>
       <div class="on-pf">auf Candy AI</div>
       <div class="chips"><span>Weiblich</span><span>Anime</span><span>Mitbewohnerin</span></div>
       <a class="pchat" href="https://candy.ai/fr/ai-anime/yama-gito?via=ic3p7r" target="_blank" rel="sponsored nofollow noopener">💬 Mit ihr chatten</a>
@@ -994,7 +1018,7 @@ html:not([lang="hi"]) [lang="hi"]{font-family:Inter,system-ui,sans-serif}
     <a class="pcover" href="../de/model/mizuki-saeki.html" aria-label="Mizuki Saeki"></a>
     <span class="new">NEU</span><span class="online"></span>
     <div class="shade"></div>
-    <div class="meta"><h2 class="pname"><a class="plink" href="../de/model/mizuki-saeki.html">Mizuki Saeki</a><span>21</span></h2>
+    <div class="meta"><h2 class="pname"><a class="plink" href="../de/model/mizuki-saeki.html">Mizuki</a><span>21</span></h2>
       <div class="on-pf">auf Candy AI</div>
       <div class="chips"><span>Weiblich</span><span>Anime</span><span>Stiefschwester</span></div>
       <a class="pchat" href="https://candy.ai/fr/ai-anime/mizuki-saeki?via=ic3p7r" target="_blank" rel="sponsored nofollow noopener">💬 Mit ihr chatten</a>
@@ -1005,7 +1029,7 @@ html:not([lang="hi"]) [lang="hi"]{font-family:Inter,system-ui,sans-serif}
     <a class="pcover" href="../de/model/daisy-brannock.html" aria-label="Daisy Brannock"></a>
     <span class="new">NEU</span><span class="online"></span>
     <div class="shade"></div>
-    <div class="meta"><h2 class="pname"><a class="plink" href="../de/model/daisy-brannock.html">Daisy Brannock</a><span>22</span></h2>
+    <div class="meta"><h2 class="pname"><a class="plink" href="../de/model/daisy-brannock.html">Daisy</a><span>22</span></h2>
       <div class="on-pf">auf Candy AI</div>
       <div class="chips"><span>Weiblich</span><span>Anime</span><span>Kurvig</span></div>
       <a class="pchat" href="https://candy.ai/fr/ai-anime/daisy-brannock?via=ic3p7r" target="_blank" rel="sponsored nofollow noopener">💬 Mit ihr chatten</a>
@@ -1026,18 +1050,18 @@ html:not([lang="hi"]) [lang="hi"]{font-family:Inter,system-ui,sans-serif}
     <a href="#grid" data-p="2" class="pg-btn">Weiter →</a><span class="pg-info">Seite 1 von 3</span></nav>
   <section class="info"><h2>Neu hinzugefügt</h2>
     <div class="recent"><a class="rc" href="../de/model/sheila-glory-days.html"><span class="rc-img"><div class="ph" style="background:linear-gradient(135deg,#ff5a36,#ffb03a)">S</div><img src="https://best-ai-nsfw-bots.com/cdn-cgi/image/width=360,format=auto,quality=80/https://cdn.nd-api.com/avatars/d5e3f8e4fe9cb2859bb9c1e22f5e94fc.jpg" alt="Sheila" loading="lazy" onerror="this.remove()"></span>
-      <span class="rc-t"><b>Sheila</b><small>SpicyChat AI</small></span></a><a class="rc" href="../de/model/rebecca-jamenson.html"><span class="rc-img"><div class="ph" style="background:linear-gradient(135deg,#ff5a36,#ffb03a)">R</div><img src="https://best-ai-nsfw-bots.com/cdn-cgi/image/width=360,format=auto,quality=80/https://cdn.nd-api.com/avatars/16c07daaa14baadbd876517aa7f86dd8.jpg" alt="Rebecca Jamenson" loading="lazy" onerror="this.remove()"></span>
-      <span class="rc-t"><b>Rebecca Jamenson</b><small>SpicyChat AI</small></span></a><a class="rc" href="../de/model/emi-harchenson.html"><span class="rc-img"><div class="ph" style="background:linear-gradient(135deg,#ff5a36,#ffb03a)">E</div><img src="https://best-ai-nsfw-bots.com/cdn-cgi/image/width=360,format=auto,quality=80/https://cdn.nd-api.com/avatars/044401c5-60e5-4809-afba-afbd6f1d9af8.png" alt="Emi Harchenson" loading="lazy" onerror="this.remove()"></span>
-      <span class="rc-t"><b>Emi Harchenson</b><small>SpicyChat AI</small></span></a><a class="rc" href="../de/model/alice-westlynn.html"><span class="rc-img"><div class="ph" style="background:linear-gradient(135deg,#ff5a36,#ffb03a)">A</div><img src="https://best-ai-nsfw-bots.com/cdn-cgi/image/width=360,format=auto,quality=80/https://cdn.nd-api.com/avatars/2e3c0d714b011a9f26ec096dfb4aaadb.jpg" alt="Alice Westlynn" loading="lazy" onerror="this.remove()"></span>
-      <span class="rc-t"><b>Alice Westlynn</b><small>SpicyChat AI</small></span></a><a class="rc" href="../de/model/sybilla.html"><span class="rc-img"><div class="ph" style="background:linear-gradient(135deg,#ff5a36,#ffb03a)">S</div><img src="https://best-ai-nsfw-bots.com/cdn-cgi/image/width=360,format=auto,quality=80/https://cdn.nd-api.com/avatars/d6c02bd1e753a671c4070530182a52ae.jpg" alt="Sybilla" loading="lazy" onerror="this.remove()"></span>
-      <span class="rc-t"><b>Sybilla</b><small>SpicyChat AI</small></span></a><a class="rc" href="../de/model/odo-harkness.html"><span class="rc-img"><div class="ph" style="background:linear-gradient(135deg,#ff5a36,#ffb03a)">O</div><img src="https://best-ai-nsfw-bots.com/cdn-cgi/image/width=360,format=auto,quality=80/https://cdn.nd-api.com/avatars/f7a292c5-8c80-4ba1-a880-7de7f1136ffe.jpg" alt="Odo Harkness" loading="lazy" onerror="this.remove()"></span>
-      <span class="rc-t"><b>Odo Harkness</b><small>SpicyChat AI</small></span></a><a class="rc" href="../de/model/marlowe-senn.html"><span class="rc-img"><div class="ph" style="background:linear-gradient(135deg,#ff5a36,#ffb03a)">M</div><img src="https://best-ai-nsfw-bots.com/cdn-cgi/image/width=360,format=auto,quality=80/https://cdn.nd-api.com/avatars/f548d926-c29a-43d1-8ea8-31d58fe4c078.jpg" alt="Marlowe Senn" loading="lazy" onerror="this.remove()"></span>
-      <span class="rc-t"><b>Marlowe Senn</b><small>SpicyChat AI</small></span></a><a class="rc" href="../de/model/valen-droste.html"><span class="rc-img"><div class="ph" style="background:linear-gradient(135deg,#ff5a36,#ffb03a)">V</div><img src="https://best-ai-nsfw-bots.com/cdn-cgi/image/width=360,format=auto,quality=80/https://cdn.nd-api.com/avatars/08a0f9ea-cbfb-40a9-bb90-b872f352aaac.jpg" alt="Valen Droste" loading="lazy" onerror="this.remove()"></span>
-      <span class="rc-t"><b>Valen Droste</b><small>SpicyChat AI</small></span></a><a class="rc" href="../de/model/alaric-dain.html"><span class="rc-img"><div class="ph" style="background:linear-gradient(135deg,#ff5a36,#ffb03a)">A</div><img src="https://best-ai-nsfw-bots.com/cdn-cgi/image/width=360,format=auto,quality=80/https://cdn.nd-api.com/avatars/7dd19c29-761d-43e6-8fb9-080687c5c8d8.jpg" alt="Alaric Dain" loading="lazy" onerror="this.remove()"></span>
-      <span class="rc-t"><b>Alaric Dain</b><small>SpicyChat AI</small></span></a><a class="rc" href="../de/model/cynwulf-hargrave.html"><span class="rc-img"><div class="ph" style="background:linear-gradient(135deg,#ff5a36,#ffb03a)">C</div><img src="https://best-ai-nsfw-bots.com/cdn-cgi/image/width=360,format=auto,quality=80/https://cdn.nd-api.com/avatars/4c3b7430-15f5-4463-827e-b3481ff7ac66.jpg" alt="Cynwulf Hargrave" loading="lazy" onerror="this.remove()"></span>
-      <span class="rc-t"><b>Cynwulf Hargrave</b><small>SpicyChat AI</small></span></a><a class="rc" href="../de/model/mika-brandt.html"><span class="rc-img"><div class="ph" style="background:linear-gradient(135deg,#ff5a36,#ffb03a)">M</div><img src="https://best-ai-nsfw-bots.com/cdn-cgi/image/width=360,format=auto,quality=80/https://cdn.nd-api.com/avatars/419b7924-3105-4686-a68d-b09efc7dc821.jpg" alt="Mika Brandt" loading="lazy" onerror="this.remove()"></span>
-      <span class="rc-t"><b>Mika Brandt</b><small>SpicyChat AI</small></span></a><a class="rc" href="../de/model/freya-gym.html"><span class="rc-img"><div class="ph" style="background:linear-gradient(135deg,#ff5a36,#ffb03a)">F</div><img src="https://best-ai-nsfw-bots.com/cdn-cgi/image/width=360,format=auto,quality=80/https://cdn.nd-api.com/avatars/e80452adf1c1f55e6b7830fd4b558f11.webp" alt="Freya" loading="lazy" onerror="this.remove()"></span>
-      <span class="rc-t"><b>Freya</b><small>SpicyChat AI</small></span></a></div>
+      <span class="t10-hot" aria-hidden="true">🔥</span><span class="rc-t"><b>Sheila</b><small>SpicyChat AI</small></span></a><a class="rc" href="../de/model/rebecca-jamenson.html"><span class="rc-img"><div class="ph" style="background:linear-gradient(135deg,#ff5a36,#ffb03a)">R</div><img src="https://best-ai-nsfw-bots.com/cdn-cgi/image/width=360,format=auto,quality=80/https://cdn.nd-api.com/avatars/16c07daaa14baadbd876517aa7f86dd8.jpg" alt="Rebecca Jamenson" loading="lazy" onerror="this.remove()"></span>
+      <span class="t10-hot" aria-hidden="true">🔥</span><span class="rc-t"><b>Rebecca Jamenson</b><small>SpicyChat AI</small></span></a><a class="rc" href="../de/model/emi-harchenson.html"><span class="rc-img"><div class="ph" style="background:linear-gradient(135deg,#ff5a36,#ffb03a)">E</div><img src="https://best-ai-nsfw-bots.com/cdn-cgi/image/width=360,format=auto,quality=80/https://cdn.nd-api.com/avatars/044401c5-60e5-4809-afba-afbd6f1d9af8.png" alt="Emi Harchenson" loading="lazy" onerror="this.remove()"></span>
+      <span class="t10-hot" aria-hidden="true">🔥</span><span class="rc-t"><b>Emi Harchenson</b><small>SpicyChat AI</small></span></a><a class="rc" href="../de/model/alice-westlynn.html"><span class="rc-img"><div class="ph" style="background:linear-gradient(135deg,#ff5a36,#ffb03a)">A</div><img src="https://best-ai-nsfw-bots.com/cdn-cgi/image/width=360,format=auto,quality=80/https://cdn.nd-api.com/avatars/2e3c0d714b011a9f26ec096dfb4aaadb.jpg" alt="Alice Westlynn" loading="lazy" onerror="this.remove()"></span>
+      <span class="t10-hot" aria-hidden="true">🔥</span><span class="rc-t"><b>Alice Westlynn</b><small>SpicyChat AI</small></span></a><a class="rc" href="../de/model/sybilla.html"><span class="rc-img"><div class="ph" style="background:linear-gradient(135deg,#ff5a36,#ffb03a)">S</div><img src="https://best-ai-nsfw-bots.com/cdn-cgi/image/width=360,format=auto,quality=80/https://cdn.nd-api.com/avatars/d6c02bd1e753a671c4070530182a52ae.jpg" alt="Sybilla" loading="lazy" onerror="this.remove()"></span>
+      <span class="t10-hot" aria-hidden="true">🔥</span><span class="rc-t"><b>Sybilla</b><small>SpicyChat AI</small></span></a><a class="rc" href="../de/model/odo-harkness.html"><span class="rc-img"><div class="ph" style="background:linear-gradient(135deg,#ff5a36,#ffb03a)">O</div><img src="https://best-ai-nsfw-bots.com/cdn-cgi/image/width=360,format=auto,quality=80/https://cdn.nd-api.com/avatars/f7a292c5-8c80-4ba1-a880-7de7f1136ffe.jpg" alt="Odo Harkness" loading="lazy" onerror="this.remove()"></span>
+      <span class="t10-hot" aria-hidden="true">🔥</span><span class="rc-t"><b>Odo Harkness</b><small>SpicyChat AI</small></span></a><a class="rc" href="../de/model/marlowe-senn.html"><span class="rc-img"><div class="ph" style="background:linear-gradient(135deg,#ff5a36,#ffb03a)">M</div><img src="https://best-ai-nsfw-bots.com/cdn-cgi/image/width=360,format=auto,quality=80/https://cdn.nd-api.com/avatars/f548d926-c29a-43d1-8ea8-31d58fe4c078.jpg" alt="Marlowe Senn" loading="lazy" onerror="this.remove()"></span>
+      <span class="t10-hot" aria-hidden="true">🔥</span><span class="rc-t"><b>Marlowe Senn</b><small>SpicyChat AI</small></span></a><a class="rc" href="../de/model/valen-droste.html"><span class="rc-img"><div class="ph" style="background:linear-gradient(135deg,#ff5a36,#ffb03a)">V</div><img src="https://best-ai-nsfw-bots.com/cdn-cgi/image/width=360,format=auto,quality=80/https://cdn.nd-api.com/avatars/08a0f9ea-cbfb-40a9-bb90-b872f352aaac.jpg" alt="Valen Droste" loading="lazy" onerror="this.remove()"></span>
+      <span class="t10-hot" aria-hidden="true">🔥</span><span class="rc-t"><b>Valen Droste</b><small>SpicyChat AI</small></span></a><a class="rc" href="../de/model/alaric-dain.html"><span class="rc-img"><div class="ph" style="background:linear-gradient(135deg,#ff5a36,#ffb03a)">A</div><img src="https://best-ai-nsfw-bots.com/cdn-cgi/image/width=360,format=auto,quality=80/https://cdn.nd-api.com/avatars/7dd19c29-761d-43e6-8fb9-080687c5c8d8.jpg" alt="Alaric Dain" loading="lazy" onerror="this.remove()"></span>
+      <span class="t10-hot" aria-hidden="true">🔥</span><span class="rc-t"><b>Alaric Dain</b><small>SpicyChat AI</small></span></a><a class="rc" href="../de/model/cynwulf-hargrave.html"><span class="rc-img"><div class="ph" style="background:linear-gradient(135deg,#ff5a36,#ffb03a)">C</div><img src="https://best-ai-nsfw-bots.com/cdn-cgi/image/width=360,format=auto,quality=80/https://cdn.nd-api.com/avatars/4c3b7430-15f5-4463-827e-b3481ff7ac66.jpg" alt="Cynwulf Hargrave" loading="lazy" onerror="this.remove()"></span>
+      <span class="t10-hot" aria-hidden="true">🔥</span><span class="rc-t"><b>Cynwulf Hargrave</b><small>SpicyChat AI</small></span></a><a class="rc" href="../de/model/mika-brandt.html"><span class="rc-img"><div class="ph" style="background:linear-gradient(135deg,#ff5a36,#ffb03a)">M</div><img src="https://best-ai-nsfw-bots.com/cdn-cgi/image/width=360,format=auto,quality=80/https://cdn.nd-api.com/avatars/419b7924-3105-4686-a68d-b09efc7dc821.jpg" alt="Mika Brandt" loading="lazy" onerror="this.remove()"></span>
+      <span class="t10-hot" aria-hidden="true">🔥</span><span class="rc-t"><b>Mika Brandt</b><small>SpicyChat AI</small></span></a><a class="rc" href="../de/model/freya-gym.html"><span class="rc-img"><div class="ph" style="background:linear-gradient(135deg,#ff5a36,#ffb03a)">F</div><img src="https://best-ai-nsfw-bots.com/cdn-cgi/image/width=360,format=auto,quality=80/https://cdn.nd-api.com/avatars/e80452adf1c1f55e6b7830fd4b558f11.webp" alt="Freya" loading="lazy" onerror="this.remove()"></span>
+      <span class="t10-hot" aria-hidden="true">🔥</span><span class="rc-t"><b>Freya</b><small>SpicyChat AI</small></span></a></div>
     <p class="hero-links" style="text-align:left"><a href="index.html#new">Alle neuen Profile ansehen →</a></p></section>
   <section class="info"><h2>Beliebte Kategorien</h2>
     <div class="tags" style="justify-content:flex-start"><a class="tag" href="../de/tag/anime.html">Anime<small>86</small></a><a class="tag" href="../de/tag/waifu.html">Waifu<small>54</small></a><a class="tag" href="../de/tag/fantasy.html">Fantasy<small>25</small></a><a class="tag" href="../de/tag/dominant.html">Dominant<small>23</small></a><a class="tag" href="../de/tag/slim.html">Schlank<small>20</small></a><a class="tag" href="../de/tag/japanese.html">Japanisch<small>20</small></a><a class="tag" href="../de/tag/asian.html">Asiatisch<small>20</small></a><a class="tag" href="../de/tag/curvy.html">Kurvig<small>17</small></a><a class="tag" href="../de/tag/playful.html">Verspielt<small>15</small></a><a class="tag" href="../de/tag/athletic.html">Athletisch<small>13</small></a><a class="tag" href="../de/tag/roleplay.html">Rollenspiel<small>11</small></a><a class="tag" href="../de/tag/muscle.html">Muskeln<small>11</small></a><a class="tag" href="../de/tag/shy.html">Schüchtern<small>11</small></a><a class="tag" href="../de/tag/redhead.html">Rothaarig<small>11</small></a><a class="tag" href="../de/tag/flirty.html">Flirtend<small>10</small></a><a class="tag" href="../de/tag/teen-18.html">Teen (18+)<small>9</small></a><a class="tag" href="../de/tag/gay.html">Schwul<small>9</small></a><a class="tag" href="../de/tag/european.html">Europäisch<small>8</small></a><a class="tag" href="../de/tag/romantic.html">Romantisch<small>7</small></a><a class="tag" href="../de/tag/college-student.html">Studentin<small>7</small></a><a class="tag" href="../de/tag/milf.html">MILF<small>7</small></a><a class="tag" href="../de/tag/sweet.html">Süß<small>7</small></a><a class="tag" href="../de/tag/seductress.html">Verführerin<small>7</small></a><a class="tag" href="../de/tag/black-hair.html">Schwarze Haare<small>7</small></a></div>
@@ -1076,7 +1100,7 @@ html:not([lang="hi"]) [lang="hi"]{font-family:Inter,system-ui,sans-serif}
 </footer>
 
 <script>var PAGE_LANG="de",ROOT="../",LROOT="../de/",PAGE_BASE="anime";</script>
-<script defer src="../assets/app-de.js?v=f158603f"></script>
+<script defer src="../assets/app-de.js?v=b1073d0c"></script>
 <script>document.addEventListener("DOMContentLoaded",function(){boot("home")});</script>
 </body>
 </html>

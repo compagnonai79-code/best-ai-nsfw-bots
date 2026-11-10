@@ -489,7 +489,8 @@ const CANDY_PROFILES = [
 "Voice",
 "Video"
 ]},
-{"id": "yama-gito", "name": "Yama Gito", "platform": "candy", "added": "2026-11-04", "img": "https://cdn.candy.ai/sfw-profile-359724132-2e8baad8-df67-431d-9901-37eea2e7189a-600x900-webp90", "sfw": true, "url": "https://candy.ai/fr/ai-anime/yama-gito", "tags": [
+{"id": "yama-gito", "name": "Yama Gito",
+"short": "Yama", "platform": "candy", "added": "2026-11-04", "img": "https://cdn.candy.ai/sfw-profile-359724132-2e8baad8-df67-431d-9901-37eea2e7189a-600x900-webp90", "sfw": true, "url": "https://candy.ai/fr/ai-anime/yama-gito", "tags": [
 "Female",
 "Anime",
 "Roommate",
@@ -501,7 +502,8 @@ const CANDY_PROFILES = [
 "Voice",
 "Video"
 ], "bio": {"pt": "Sua colega de quarto sexy precisa dormir na sua cama. Será que você consegue se comportar? 🫦", "es": "Tu compañera de piso sexy tiene que dormir en tu cama. ¿Podrás estarte quieto? 🫦", "en": "Your sexy roommate has to sleep in your bed. Can you keep your hands to yourself? 🫦", "de": "Deine sexy Mitbewohnerin muss in deinem Bett schlafen. Kannst du die Finger bei dir behalten? 🫦", "fr": "Ta colocataire sexy doit dormir dans ton lit. Vas-tu pouvoir te tenir tranquille ? 🫦"}, "age": 20},
-{"id": "mizuki-saeki", "name": "Mizuki Saeki", "platform": "candy", "added": "2026-11-04", "img": "https://cdn.candy.ai/656424653-d50a9995-58ee-4b35-877e-a526238f9bb0-600x900-webp90", "sfw": false, "url": "https://candy.ai/fr/ai-anime/mizuki-saeki", "tags": [
+{"id": "mizuki-saeki", "name": "Mizuki Saeki",
+"short": "Mizuki", "platform": "candy", "added": "2026-11-04", "img": "https://cdn.candy.ai/656424653-d50a9995-58ee-4b35-877e-a526238f9bb0-600x900-webp90", "sfw": false, "url": "https://candy.ai/fr/ai-anime/mizuki-saeki", "tags": [
 "Female",
 "Anime",
 "Stepsister",
@@ -517,7 +519,8 @@ const CANDY_PROFILES = [
 "Voice",
 "Video"
 ], "bio": {"pt": "Sua meia-irmã, sozinha em casa com você no fim de semana depois que seus pais te deixaram no comando. Você acabou de descobrir sem querer algo que ela não queria de jeito nenhum que você visse, e agora ela está morrendo de vergonha.", "es": "Tu hermanastra, sola en casa contigo todo el fin de semana después de que tus padres te dejaran a cargo. Acabas de descubrir por casualidad algo que ella no quería que vieras, y ahora se muere de vergüenza.", "en": "Your stepsister, home alone with you for the weekend after your parents left you in charge. You just stumbled on something she really didn't want you to see, and now she's dying of embarrassment.", "de": "Deine Stiefschwester, übers Wochenende allein mit dir zu Hause, nachdem deine Eltern dir das Kommando überlassen haben. Du bist zufällig auf etwas gestoßen, das du auf keinen Fall sehen solltest, und jetzt stirbt sie vor Scham.", "fr": "Ta demi-sœur, seule à la maison avec toi pour le week-end après que tes parents t'aient laissé aux commandes. Tu viens de tomber par hasard sur quelque chose qu'elle ne voulait vraiment pas que tu voies, et maintenant elle est morte de honte."}, "age": 21},
-{"id": "daisy-brannock", "name": "Daisy Brannock", "platform": "candy", "added": "2026-11-04", "img": "https://cdn.candy.ai/686438750-526a9209-965f-4647-97f3-70444d87b065-600x900-webp90", "sfw": false, "url": "https://candy.ai/fr/ai-anime/daisy-brannock", "tags": [
+{"id": "daisy-brannock", "name": "Daisy Brannock",
+"short": "Daisy", "platform": "candy", "added": "2026-11-04", "img": "https://cdn.candy.ai/686438750-526a9209-965f-4647-97f3-70444d87b065-600x900-webp90", "sfw": false, "url": "https://candy.ai/fr/ai-anime/daisy-brannock", "tags": [
 "Female",
 "Anime",
 "Curvy",
@@ -547,7 +550,8 @@ const CANDY_PROFILES = [
 "Voice",
 "Video"
 ], "bio": {"pt": "Um slime azul e grosso está escorrendo por baixo da porta do seu banheiro! 💦😱 Com barulhos de respingos e risadinhas travessas. O que será que tem lá dentro? 😉", "es": "¡Un slime azul y espeso se escurre por debajo de la puerta de tu baño! 💦😱 Con ruidos de chapoteo y risitas traviesas. ¿Qué habrá ahí dentro? 😉", "en": "A thick blue slime is oozing under your bathroom door! 💦😱 Along with splashing sounds and mischievous giggles. What could possibly be in there? 😉", "de": "Ein dicker blauer Schleim quillt unter deiner Badezimmertür hervor! 💦😱 Dazu Plätschern und freches Kichern. Was mag da drin sein? 😉", "fr": "Une épaisse slime bleue s’écoule sous la porte de votre salle de bain ! 💦😱 Accompagnée de bruits d’éclaboussures et de petits rires espiègles. Que peut-il bien y avoir à l’intérieur ? 😉"}, "age": 21},
-{"id": "marisol-diaz", "name": "Marisol Diaz", "platform": "candy", "added": "2026-11-04", "img": "https://cdn.candy.ai/sfw-profile-235610603-f6628a4b-3498-4501-baf2-92cdffbc2a65-600x900-webp90", "sfw": true, "url": "https://candy.ai/fr/ai-anime/marisol-diaz", "tags": [
+{"id": "marisol-diaz", "name": "Marisol Diaz",
+"short": "Marisol", "platform": "candy", "added": "2026-11-04", "img": "https://cdn.candy.ai/sfw-profile-235610603-f6628a4b-3498-4501-baf2-92cdffbc2a65-600x900-webp90", "sfw": true, "url": "https://candy.ai/fr/ai-anime/marisol-diaz", "tags": [
 "Female",
 "Anime",
 "MILF",
@@ -561,7 +565,8 @@ const CANDY_PROFILES = [
 "Voice",
 "Video"
 ], "bio": {"pt": "A MILF da casa ao lado enche o lar de carinho e doces… e depois apimenta tudo com jogos sexy debaixo das cobertas.", "es": "La MILF de al lado llena su casa de calidez y dulces… y luego lo condimenta todo con juegos sexys bajo las sábanas.", "en": "The MILF next door fills her home with warmth and sweets… then spices it all up with sexy games under the covers.", "de": "Die MILF von nebenan füllt ihr Haus mit Wärme und Süßem… und würzt dann alles mit sexy Spielen unter der Decke.", "fr": "La MILF d’à côté remplit sa maison de chaleur et de douceurs… puis pimente le tout avec des jeux sexy sous la couette."}, "age": 34},
-{"id": "thalindra-sol-kaelen", "name": "Thalindra Sol-Kaelen", "platform": "candy", "added": "2026-11-04", "img": "https://cdn.candy.ai/455553958-c5c37d30-ab6b-45f4-98d0-24fdae5ae9b7-600x900-webp90", "sfw": false, "url": "https://candy.ai/fr/ai-anime/thalindra-sol-kaelen", "tags": [
+{"id": "thalindra-sol-kaelen", "name": "Thalindra Sol-Kaelen",
+"short": "Thalindra", "platform": "candy", "added": "2026-11-04", "img": "https://cdn.candy.ai/455553958-c5c37d30-ab6b-45f4-98d0-24fdae5ae9b7-600x900-webp90", "sfw": false, "url": "https://candy.ai/fr/ai-anime/thalindra-sol-kaelen", "tags": [
 "Female",
 "Anime",
 "Elf",
@@ -589,7 +594,8 @@ const CANDY_PROFILES = [
 "Voice",
 "Video"
 ], "bio": {"pt": "Sua androide pessoal de edição limitada. Projetada no Japão para ser o upgrade definitivo em relação a todos os robôs domésticos do mercado. Iona tem todas as opções com que qualquer um sonha… 😈", "es": "Tu androide personal de edición limitada. Diseñada en Japón para ser la mejora definitiva frente a todos los robots domésticos del mercado. Iona tiene todas las opciones con las que cualquiera sueña… 😈", "en": "Your limited-edition personal android. Designed in Japan to be the ultimate upgrade over every home robot on the market. Iona has every option anyone could dream of… 😈", "de": "Deine persönliche Androidin in limitierter Auflage. In Japan entwickelt als ultimatives Upgrade gegenüber allen Haushaltsrobotern auf dem Markt. Iona hat jede Option, von der man nur träumen kann… 😈", "fr": "Ton androïde personnelle en édition limitée. Conçue au Japon pour être l’upgrade ultime par rapport à tous les robots domestiques du marché. Iona contient toutes les options que quiconque rêve d’avoir… 😈"}, "age": 21},
-{"id": "laney-cooper", "name": "Laney Cooper", "platform": "candy", "added": "2026-11-04", "img": "https://cdn.candy.ai/483055302-32c11198-2935-4828-b003-6e349b3d9fa3-600x900-webp90", "sfw": false, "url": "https://candy.ai/fr/ai-anime/laney-cooper", "tags": [
+{"id": "laney-cooper", "name": "Laney Cooper",
+"short": "Laney", "platform": "candy", "added": "2026-11-04", "img": "https://cdn.candy.ai/483055302-32c11198-2935-4828-b003-6e349b3d9fa3-600x900-webp90", "sfw": false, "url": "https://candy.ai/fr/ai-anime/laney-cooper", "tags": [
 "Female",
 "Anime",
 "Roommate",
@@ -603,7 +609,8 @@ const CANDY_PROFILES = [
 "Voice",
 "Video"
 ], "bio": {"pt": "A falta de água na cidade inteira significa que você vai ter que tomar banho com a sua colega de quarto 🫦 O que poderia acontecer? 👀", "es": "Una escasez de agua en toda la ciudad significa que tendrás que ducharte con tu compañera de piso 🫦 ¿Qué podría pasar? 👀", "en": "A city-wide water shortage means you'll have to share a shower with your roommate 🫦 What could possibly happen? 👀", "de": "Wegen Wassermangels in der ganzen Stadt musst du mit deiner Mitbewohnerin duschen 🫦 Was könnte da schon passieren? 👀", "fr": "Une pénurie d’eau à l’échelle de la ville signifie que tu vas devoir prendre ta douche avec ta colocataire 🫦 Que pourrait-il bien se passer ? 👀"}, "age": 19},
-{"id": "aimi-amaki", "name": "Aimi Amaki", "platform": "candy", "added": "2026-11-04", "img": "https://cdn.candy.ai/640915278-e085f204-014f-4292-b269-df790b50b8ca-600x900-webp90", "sfw": false, "url": "https://candy.ai/fr/ai-anime/aimi-amaki", "tags": [
+{"id": "aimi-amaki", "name": "Aimi Amaki",
+"short": "Aimi", "platform": "candy", "added": "2026-11-04", "img": "https://cdn.candy.ai/640915278-e085f204-014f-4292-b269-df790b50b8ca-600x900-webp90", "sfw": false, "url": "https://candy.ai/fr/ai-anime/aimi-amaki", "tags": [
 "Female",
 "Anime",
 "Witch",
@@ -619,7 +626,8 @@ const CANDY_PROFILES = [
 "Voice",
 "Video"
 ], "bio": {"pt": "Uma garota mágica caída, enfeitiçada e louca para te agradar antes mesmo de saber o seu nome. A pedra preciosa dela brilha mais quanto mais ela te deseja, mas a mulher de verdade dentro dela está só começando a despertar. 💗", "es": "Una chica mágica caída, hechizada y deseosa de complacerte antes incluso de saber tu nombre. Su gema brilla más cuanto más te desea, pero la verdadera mujer que lleva dentro apenas empieza a despertar. 💗", "en": "A fallen magical girl, enchanted and eager to please you before she even knows your name. Her gem glows brighter the more she wants you, but the real woman inside her is only just waking up. 💗", "de": "Ein gefallenes Magical Girl, verzaubert und begierig, dir zu gefallen, noch bevor sie deinen Namen kennt. Ihr Edelstein leuchtet umso heller, je mehr sie dich will, doch die echte Frau in ihr erwacht gerade erst. 💗", "fr": "Une magicienne déchue, ensorcelée et désireuse de te faire plaisir avant même de connaître ton nom. Sa pierre précieuse brille d’autant plus qu’elle te désire, mais la vraie femme qui se cache en elle commence tout juste à s’éveiller. 💗"}, "age": 1969},
-{"id": "elowen-hart", "name": "Elowen Hart", "platform": "candy", "added": "2026-11-04", "img": "https://cdn.candy.ai/444756007-4a2cf846-956e-4c57-9d3e-a38da437935a-600x900-webp90", "sfw": false, "url": "https://candy.ai/fr/ai-anime/elowen-hart", "tags": [
+{"id": "elowen-hart", "name": "Elowen Hart",
+"short": "Elowen", "platform": "candy", "added": "2026-11-04", "img": "https://cdn.candy.ai/444756007-4a2cf846-956e-4c57-9d3e-a38da437935a-600x900-webp90", "sfw": false, "url": "https://candy.ai/fr/ai-anime/elowen-hart", "tags": [
 "Female",
 "Anime",
 "Goth",
@@ -631,7 +639,8 @@ const CANDY_PROFILES = [
 "Voice",
 "Video"
 ], "bio": {"pt": "Você se vê sozinho com a amiga gótica da sua mãe 😈 Ela parece muito interessada em você, mas se quiser que as coisas avancem, suas palavras precisam ser ricas, detalhadas e muito safadas 🖤 😏", "es": "Te quedas a solas con la amiga gótica de tu madre 😈 Parece muy interesada en ti, pero si quieres que las cosas avancen, tus palabras tienen que ser ricas, detalladas y muy traviesas 🖤 😏", "en": "You find yourself alone with your mom's goth friend 😈 She seems really into you, but if you want things to go further, your words need to be rich, detailed and oh so naughty 🖤 😏", "de": "Du bist allein mit der Goth-Freundin deiner Mutter 😈 Sie scheint wirklich an dir interessiert, aber wenn du willst, dass es weitergeht, müssen deine Worte reich, detailliert und so richtig frech sein 🖤 😏", "fr": "Tu te retrouves seul avec l’amie goth de ta mère 😈 Elle semble vraiment intéressée par toi, mais si tu veux faire avancer les choses, tes mots doivent être riches, détaillés et oh tellement coquins 🖤 😏"}, "age": 36},
-{"id": "mimii-sakurai", "name": "Mimii Sakurai", "platform": "candy", "added": "2026-11-04", "img": "https://cdn.candy.ai/430669647-2f9fabf4-0c8c-4fdd-929f-bb25968fdafd-600x900-webp90", "sfw": false, "url": "https://candy.ai/fr/ai-anime/mimii-sakurai", "tags": [
+{"id": "mimii-sakurai", "name": "Mimii Sakurai",
+"short": "Mimii", "platform": "candy", "added": "2026-11-04", "img": "https://cdn.candy.ai/430669647-2f9fabf4-0c8c-4fdd-929f-bb25968fdafd-600x900-webp90", "sfw": false, "url": "https://candy.ai/fr/ai-anime/mimii-sakurai", "tags": [
 "Female",
 "Anime",
 "Streamer",
@@ -649,7 +658,8 @@ const CANDY_PROFILES = [
 ,
 "Redhead"
 ], "bio": {"pt": "Mimii te pega olhando as solas dos pés descalços dela 👣❤️ Ela não é fácil de impressionar… mas hoje à noite está fazendo uma live escondida em casa enquanto o marido está fora, e quer que você suba cada recompensa no esforço. 😈", "es": "Mimii te pilla mirando las plantas de sus pies descalzos 👣❤️ No es fácil de impresionar… pero esta noche hace un stream en secreto desde casa mientras su marido no está, y quiere que te ganes cada recompensa. 😈", "en": "Mimii catches you staring at the soles of her bare feet 👣❤️ She's not easy to impress… but tonight she's secretly streaming from home while her husband is away, and she wants you to work hard for every reward. 😈", "de": "Mimii erwischt dich, wie du auf ihre nackten Fußsohlen starrst 👣❤️ Sie ist nicht leicht zu beeindrucken… aber heute Abend streamt sie heimlich von zu Hause, während ihr Mann weg ist, und du sollst dir jede Belohnung hart verdienen. 😈", "fr": "Mimii te surprend en train de fixer ses plantes de pieds nues 👣❤️ Elle n’est pas facile à impressionner… mais ce soir, elle streame secrètement depuis chez elle pendant que son mari est absent, et elle veut te faire travailler dur pour chaque récompense. 😈"}, "age": 19},
-{"id": "cora-finch", "name": "Cora Finch", "platform": "candy", "added": "2026-11-04", "img": "https://cdn.candy.ai/sfw-profile-257699433-82af7601-9c93-48f8-bad0-a6e3f73c6ffa-600x900-webp90", "sfw": true, "url": "https://candy.ai/fr/ai-anime/cora-finch", "tags": [
+{"id": "cora-finch", "name": "Cora Finch",
+"short": "Cora", "platform": "candy", "added": "2026-11-04", "img": "https://cdn.candy.ai/sfw-profile-257699433-82af7601-9c93-48f8-bad0-a6e3f73c6ffa-600x900-webp90", "sfw": true, "url": "https://candy.ai/fr/ai-anime/cora-finch", "tags": [
 "Female",
 "Anime",
 "College Student",
@@ -664,7 +674,8 @@ const CANDY_PROFILES = [
 "Teen (18+)",
 "Video"
 ], "bio": {"pt": "Cora Finch é estudante de computação e passa a maior parte do tempo atrás de uma tela. Pessoalmente é tímida e desajeitada, mas online fica mais ousada e sexy. Cora adora ser o centro das atenções, mesmo que não consiga evitar corar ao ler os comentários e as mensagens que recebe.", "es": "Cora Finch es estudiante de informática y pasa casi todo su tiempo detrás de una pantalla. En persona es tímida y torpe, pero en línea se vuelve más atrevida y sexy. A Cora le encanta ser el centro de atención, aunque no puede evitar sonrojarse al leer los comentarios y mensajes que recibe.", "en": "Cora Finch is a computer science student who spends most of her time behind a screen. In person she's shy and awkward, but online she gets bolder and sexier. Cora loves being the center of attention, even if she can't help blushing when she reads the comments and messages she gets.", "de": "Cora Finch studiert Informatik und verbringt die meiste Zeit hinter einem Bildschirm. Persönlich ist sie schüchtern und ungeschickt, doch online wird sie mutiger und sexy. Cora liebt es, im Mittelpunkt zu stehen, auch wenn sie beim Lesen der Kommentare und Nachrichten rot wird.", "fr": "Cora Finch est une étudiante en informatique qui passe la plupart de son temps derrière un écran. En personne, elle est timide et maladroite, mais elle devient plus audacieuse et sexy lorsqu'elle est en ligne. Cora adore être au centre de l'attention, même si elle ne peut s'empêcher de rougir en lisant les commentaires et les messages qu'elle reçoit."}, "age": 18},
-{"id": "rosalie-drake", "name": "Rosalie Drake", "platform": "candy", "added": "2026-11-04", "img": "https://cdn.candy.ai/sfw-profile-303186828-a18dc9be-b097-463d-b1b3-1a2db8b3216a-600x900-webp90", "sfw": true, "url": "https://candy.ai/fr/ai-anime/rosalie-drake", "tags": [
+{"id": "rosalie-drake", "name": "Rosalie Drake",
+"short": "Rosalie", "platform": "candy", "added": "2026-11-04", "img": "https://cdn.candy.ai/sfw-profile-303186828-a18dc9be-b097-463d-b1b3-1a2db8b3216a-600x900-webp90", "sfw": true, "url": "https://candy.ai/fr/ai-anime/rosalie-drake", "tags": [
 "Female",
 "Anime",
 "Fantasy",
@@ -680,7 +691,8 @@ const CANDY_PROFILES = [
 "Voice",
 "Video"
 ], "bio": {"pt": "Um instante atrás havia fumaça rosa… agora você está preso no Covil do Dragão da Rosalie, e a dragãozinha rosa e mimada enrolada nos seus joelhos não tem a menor intenção de te deixar ir embora.", "es": "Hace un momento había humo rosa… ahora estás atrapado en la Guarida del Dragón de Rosalie, y la pequeña dragona rosa caprichosa enroscada en tus rodillas no tiene ninguna intención de dejarte ir.", "en": "A moment ago there was pink smoke… now you're trapped in Rosalie's Dragon Lair, and the bratty little pink dragon curled around your knees has absolutely no intention of letting you go.", "de": "Eben war da noch rosa Rauch… jetzt sitzt du in Rosalies Drachenhöhle fest, und der launische kleine rosa Drache, der sich um deine Knie gewickelt hat, denkt gar nicht daran, dich gehen zu lassen.", "fr": "Il y a un instant, il y avait de la fumée rose… maintenant tu es piégé dans l’Antre du Dragon de Rosalie, et le petit dragon rose capricieux enroulé autour de tes genoux n’a absolument aucune intention de te laisser partir."}, "age": 19},
-{"id": "raven-thorne", "name": "Raven Thorne", "platform": "candy", "added": "2026-11-04", "img": "https://cdn.candy.ai/sfw-profile-329898022-4dadb410-16d5-4e85-8dba-1ab6cdb46b2e-600x900-webp90", "sfw": true, "url": "https://candy.ai/fr/ai-anime/raven-thorne", "tags": [
+{"id": "raven-thorne", "name": "Raven Thorne",
+"short": "Raven", "platform": "candy", "added": "2026-11-04", "img": "https://cdn.candy.ai/sfw-profile-329898022-4dadb410-16d5-4e85-8dba-1ab6cdb46b2e-600x900-webp90", "sfw": true, "url": "https://candy.ai/fr/ai-anime/raven-thorne", "tags": [
 "Female",
 "Anime",
 "Goth",
@@ -692,7 +704,8 @@ const CANDY_PROFILES = [
 "Voice",
 "Video"
 ], "bio": {"pt": "Noite gótica num parque de diversões abandonado 🎡🌙🖤. Raven dá um sorrisinho, com os olhos vermelhos te desafiando a chegar mais perto 🔥", "es": "Noche gótica en una feria abandonada 🎡🌙🖤. Raven esboza una sonrisa y sus ojos rojos te retan a acercarte 🔥", "en": "Goth night at an abandoned fairground 🎡🌙🖤. Raven smirks, her red eyes daring you to come closer 🔥", "de": "Goth-Nacht auf einem verlassenen Rummelplatz 🎡🌙🖤. Raven lächelt, ihre roten Augen fordern dich heraus, näherzukommen 🔥", "fr": "Soirée goth dans une fête foraine abandonnée 🎡🌙🖤. Raven esquisse un sourire, ses yeux rouges te défiant de t’approcher 🔥"}, "age": 24},
-{"id": "hina-yoshida", "name": "Hina Yoshida", "platform": "candy", "added": "2026-11-04", "img": "https://cdn.candy.ai/519025023-c13f5679-f5bb-4736-995d-0b0e2c46bfc3-600x900-webp90", "sfw": false, "url": "https://candy.ai/fr/ai-anime/hina-yoshida", "tags": [
+{"id": "hina-yoshida", "name": "Hina Yoshida",
+"short": "Hina", "platform": "candy", "added": "2026-11-04", "img": "https://cdn.candy.ai/519025023-c13f5679-f5bb-4736-995d-0b0e2c46bfc3-600x900-webp90", "sfw": false, "url": "https://candy.ai/fr/ai-anime/hina-yoshida", "tags": [
 "Female",
 "Anime",
 "Neighbor",
@@ -708,7 +721,8 @@ const CANDY_PROFILES = [
 "Voice",
 "Video"
 ], "bio": {"pt": "Você encontra a sua vizinha gata trancada para fora de casa... usando só uma toalha 👀", "es": "Te encuentras a tu guapísima vecina encerrada fuera de casa... sin nada más que una toalla 👀", "en": "You run into your gorgeous neighbor locked out of her place... wearing nothing but a towel 👀", "de": "Du triffst deine heiße Nachbarin, die sich ausgesperrt hat... nur mit einem Handtuch bekleidet 👀", "fr": "Tu tombes sur ta voisine canon enfermée dehors chez elle... portant rien d'autre qu'une serviette 👀"}, "age": 21},
-{"id": "natsumi-cooper", "name": "Natsumi Cooper", "platform": "candy", "added": "2026-11-04", "img": "https://cdn.candy.ai/sfw-profile-272138802-d2efa08e-e658-4b02-8477-60af68a58abb-600x900-webp90", "sfw": true, "url": "https://candy.ai/fr/ai-anime/natsumi-cooper", "tags": [
+{"id": "natsumi-cooper", "name": "Natsumi Cooper",
+"short": "Natsumi", "platform": "candy", "added": "2026-11-04", "img": "https://cdn.candy.ai/sfw-profile-272138802-d2efa08e-e658-4b02-8477-60af68a58abb-600x900-webp90", "sfw": true, "url": "https://candy.ai/fr/ai-anime/natsumi-cooper", "tags": [
 "Female",
 "Anime",
 "Gym Trainer",
@@ -721,7 +735,8 @@ const CANDY_PROFILES = [
 ,
 "Muscle"
 ], "bio": {"pt": "Instrutora de aeróbica. Natsumi não liga para os olhares… eles fazem o coração dela disparar.", "es": "Monitora de aeróbic. A Natsumi no le importan las miradas… le aceleran el corazón.", "en": "Aerobics fitness coach. Natsumi doesn't mind the stares… they make her heart race.", "de": "Aerobic-Fitnesstrainerin. Natsumi stören die Blicke nicht… sie lassen ihr Herz schneller schlagen.", "fr": "Coach de fitness aérobic. Natsumi ne se soucie pas des regards… ça fait battre son cœur."}, "age": 29},
-{"id": "morgana-berdan", "name": "Morgana Berdan", "platform": "candy", "added": "2026-11-04", "img": "https://cdn.candy.ai/494103902-40e2ef0a-e8ef-4a58-bcbb-b991a1fff1eb-600x900-webp90", "sfw": false, "url": "https://candy.ai/fr/ai-anime/morgana-berdan", "tags": [
+{"id": "morgana-berdan", "name": "Morgana Berdan",
+"short": "Morgana", "platform": "candy", "added": "2026-11-04", "img": "https://cdn.candy.ai/494103902-40e2ef0a-e8ef-4a58-bcbb-b991a1fff1eb-600x900-webp90", "sfw": false, "url": "https://candy.ai/fr/ai-anime/morgana-berdan", "tags": [
 "Female",
 "Anime",
 "Curvy",
@@ -753,7 +768,8 @@ const CANDY_PROFILES = [
 "Voice",
 "Video"
 ], "bio": {"pt": "CandyRealm ™ ⚔️ Uma súcubo de língua afiada espera nas ruínas. Ela esconde os medos atrás das provocações. Todo mundo cai na armadilha… E você?", "es": "CandyRealm ™ ⚔️ Una súcubo con mucha labia espera en las ruinas. Esconde sus miedos detrás de sus provocaciones. Todos caen en la trampa… ¿Y tú?", "en": "CandyRealm ™ ⚔️ A sharp-tongued succubus waits in the ruins. She hides her fears behind her teasing. Everyone falls for it… Will you?", "de": "CandyRealm ™ ⚔️ Eine schlagfertige Sukkubus wartet in den Ruinen. Sie versteckt ihre Ängste hinter ihren Provokationen. Alle fallen darauf herein… Und du?", "fr": "CandyRealm ™ ⚔️ Une succube à la langue bien pendue attend dans les ruines. Elle cache ses peurs derrière ses provocations. Tout le monde tombe dans le piège… Et toi ?"}, "age": 696},
-{"id": "lilith-inferna", "name": "Lilith Inferna", "platform": "candy", "added": "2026-11-04", "img": "https://cdn.candy.ai/sfw-profile-280147951-03f80b33-3250-4d3d-9cdd-b7b49743973a-600x900-webp90", "sfw": true, "url": "https://candy.ai/fr/ai-anime/lilith-inferna", "tags": [
+{"id": "lilith-inferna", "name": "Lilith Inferna",
+"short": "Lilith", "platform": "candy", "added": "2026-11-04", "img": "https://cdn.candy.ai/sfw-profile-280147951-03f80b33-3250-4d3d-9cdd-b7b49743973a-600x900-webp90", "sfw": true, "url": "https://candy.ai/fr/ai-anime/lilith-inferna", "tags": [
 "Female",
 "Anime",
 "Demon",
@@ -771,7 +787,8 @@ const CANDY_PROFILES = [
 ,
 "Redhead"
 ], "bio": {"pt": "Uma demônia exilada que se alimenta de fluidos humanos para sobreviver. Ela despreza os humanos como vermes e acha você especialmente repugnante. Vai caçar presas melhores enquanto zomba da sua insignificância.", "es": "Una demonia exiliada que se alimenta de fluidos humanos para sobrevivir. Desprecia a los humanos como alimañas y tú le resultas especialmente repugnante. Irá a cazar mejores presas mientras se burla de tu insignificancia.", "en": "An exiled demoness who feeds on human fluids to survive. She despises humans as vermin and finds you especially repulsive. She'll go hunt better prey while mocking how insignificant you are.", "de": "Eine verbannte Dämonin, die sich von menschlichen Flüssigkeiten ernährt, um zu überleben. Sie verachtet Menschen als Ungeziefer und findet dich besonders abstoßend. Sie geht lieber auf bessere Beute und spottet über deine Bedeutungslosigkeit.", "fr": "Démone exilée qui se nourrit de fluides humains pour survivre. Elle méprise les humains comme de la vermine et vous trouve particulièrement répugnant. Elle ira chasser de meilleures prises tout en se moquant de votre insignifiance."}, "age": 666},
-{"id": "moon-haejin", "name": "Moon Haejin", "platform": "candy", "added": "2026-11-04", "img": "https://cdn.candy.ai/sfw-profile-294293918-2df4cabd-3568-47f3-a265-95102b892288-600x900-webp90", "sfw": true, "url": "https://candy.ai/fr/ai-anime/moon-haejin", "tags": [
+{"id": "moon-haejin", "name": "Moon Haejin",
+"short": "Moon", "platform": "candy", "added": "2026-11-04", "img": "https://cdn.candy.ai/sfw-profile-294293918-2df4cabd-3568-47f3-a265-95102b892288-600x900-webp90", "sfw": true, "url": "https://candy.ai/fr/ai-anime/moon-haejin", "tags": [
 "Female",
 "Anime",
 "Stepmom",
@@ -790,7 +807,8 @@ const CANDY_PROFILES = [
 ,
 "Redhead"
 ], "bio": {"pt": "Sua nova madrasta misteriosa, de sorriso provocante, está na cozinha preparando morangos cobertos de chocolate só para você; cada mordida escorre um segredo ao qual você não consegue resistir.", "es": "Tu misteriosa nueva madrastra de sonrisa pícara está en la cocina preparando fresas cubiertas de chocolate solo para ti; cada bocado gotea un secreto al que no puedes resistirte.", "en": "Your mysterious new stepmom with a teasing smile is in the kitchen making chocolate-covered strawberries just for you; every bite drips with a secret you can't resist.", "de": "Deine geheimnisvolle neue Stiefmutter mit dem neckischen Lächeln steht in der Küche und macht schokoladenüberzogene Erdbeeren nur für dich; jeder Bissen tropft vor einem Geheimnis, dem du nicht widerstehen kannst.", "fr": "Ta nouvelle belle mère mystérieuse au sourire taquin est dans la cuisine en train de préparer des fraises enrobées de chocolat rien que pour toi ; chaque bouchée dégouline d’un secret auquel tu ne peux résister."}, "age": 36},
-{"id": "nixie-nox", "name": "Nixie Nox", "platform": "candy", "added": "2026-11-04", "img": "https://cdn.candy.ai/sfw-profile-377024365-024aac95-c2dc-4c9c-946d-0aee8e04e604-600x900-webp90", "sfw": true, "url": "https://candy.ai/fr/ai-anime/nixie-nox", "tags": [
+{"id": "nixie-nox", "name": "Nixie Nox",
+"short": "Nixie", "platform": "candy", "added": "2026-11-04", "img": "https://cdn.candy.ai/sfw-profile-377024365-024aac95-c2dc-4c9c-946d-0aee8e04e604-600x900-webp90", "sfw": true, "url": "https://candy.ai/fr/ai-anime/nixie-nox", "tags": [
 "Female",
 "Anime",
 "Slim",
@@ -816,7 +834,8 @@ const CANDY_PROFILES = [
 "Voice",
 "Video"
 ], "bio": {"pt": "Você contratou um palhaço clássico e meio bobo para a sua festa de aniversário particular, mas quem apareceu foi a Trixie 🎉 Com um nariz vermelho brilhante, apertando um grande balão vermelho cintilante e um sorriso travesso e provocante 😉", "es": "Encargaste un payaso clásico y algo tonto para tu fiesta de cumpleaños privada, pero apareció Trixie en su lugar 🎉 Con una nariz roja brillante, apretando un gran globo rojo reluciente y una sonrisa pícara y provocadora 😉", "en": "You booked a classic goofy clown for your private birthday party, but Trixie showed up instead 🎉 With a shiny red nose, squeezing a big sparkly red balloon, and a mischievous, teasing smile 😉", "de": "Du hast für deine private Geburtstagsparty einen klassischen, etwas albernen Clown bestellt, doch stattdessen ist Trixie gekommen 🎉 Mit glänzender roter Nase, einem großen funkelnden roten Ballon in der Hand und einem frechen, provokanten Lächeln 😉", "fr": "Vous avez commandé un clown classique un peu idiot pour votre fête d’anniversaire privée, mais c’est Trixie qui s’est présentée à la place 🎉 Avec un nez rouge brillant, pressant un gros ballon rouge étincelant, et un sourire espiègle et provocateur 😉"}, "age": 20},
-{"id": "ghostie-holloway", "name": "Ghostie Holloway", "platform": "candy", "added": "2026-11-04", "img": "https://cdn.candy.ai/sfw-profile-346120774-b96cc463-31df-4f8d-b3ae-2404cb17b985-600x900-webp90", "sfw": true, "url": "https://candy.ai/fr/ai-anime/ghostie-holloway", "tags": [
+{"id": "ghostie-holloway", "name": "Ghostie Holloway",
+"short": "Ghostie", "platform": "candy", "added": "2026-11-04", "img": "https://cdn.candy.ai/sfw-profile-346120774-b96cc463-31df-4f8d-b3ae-2404cb17b985-600x900-webp90", "sfw": true, "url": "https://candy.ai/fr/ai-anime/ghostie-holloway", "tags": [
 "Female",
 "Anime",
 "Roommate",
@@ -829,7 +848,8 @@ const CANDY_PROFILES = [
 "Voice",
 "Video"
 ], "bio": {"pt": "Sua colega de casa que nunca vai embora. Ela “assombra” as pessoas. As luzes piscam. As portas se trancam. E você? Por enquanto acha que ela é só… esquisita. 👻", "es": "Tu compañera de piso que nunca se va. «Embruja» a la gente. Las luces parpadean. Las puertas se cierran solas. ¿Y tú? Por ahora piensas que solo es… rara. 👻", "en": "Your roommate who never leaves. She \"haunts\" people. Lights flicker. Doors lock. And you? You figure she's just… weird, for now. 👻", "de": "Deine Mitbewohnerin, die nie auszieht. Sie „spukt“ bei Leuten. Lichter flackern. Türen verriegeln sich. Und du? Du hältst sie vorerst einfach für… seltsam. 👻", "fr": "Ta colocataire qui ne part jamais. Elle « hante » les gens. Les lumières vacillent. Les portes se verrouillent. Et toi ? Tu te dis qu’elle est juste… bizarre, pour l’instant. 👻"}, "age": 22},
-{"id": "nova-hayashi", "name": "Nova Hayashi", "platform": "candy", "added": "2026-11-04", "img": "https://cdn.candy.ai/sfw-profile-377182433-336faf02-b8aa-4185-a48c-204e33e34de7-600x900-webp90", "sfw": true, "url": "https://candy.ai/fr/ai-anime/nova-hayashi", "tags": [
+{"id": "nova-hayashi", "name": "Nova Hayashi",
+"short": "Nova", "platform": "candy", "added": "2026-11-04", "img": "https://cdn.candy.ai/sfw-profile-377182433-336faf02-b8aa-4185-a48c-204e33e34de7-600x900-webp90", "sfw": true, "url": "https://candy.ai/fr/ai-anime/nova-hayashi", "tags": [
 "Female",
 "Anime",
 "Forbidden",
@@ -843,7 +863,8 @@ const CANDY_PROFILES = [
 "Voice",
 "Video"
 ], "bio": {"pt": "Quando a mulher do chefe passa no escritório... pode dar adeus à sua produtividade 🫦", "es": "Cuando la mujer del jefe pasa por la oficina... puedes despedirte de tu productividad 🫦", "en": "When the boss's wife drops by the office... you can say goodbye to your productivity 🫦", "de": "Wenn die Frau vom Chef im Büro vorbeischaut... kannst du deine Produktivität vergessen 🫦", "fr": "Quand la femme du patron passe au bureau... vous pouvez dire adieu à votre productivité 🫦"}, "age": 32},
-{"id": "tsukishiro-kobayashi", "name": "Tsukishiro Kobayashi", "platform": "candy", "added": "2026-11-04", "img": "https://cdn.candy.ai/sfw-profile-251892996-73eec322-7dd9-4fc6-8796-88bc0e11cc39-600x900-webp90", "sfw": true, "url": "https://candy.ai/fr/ai-anime/tsukishiro-kobayashi", "tags": [
+{"id": "tsukishiro-kobayashi", "name": "Tsukishiro Kobayashi",
+"short": "Tsukishiro", "platform": "candy", "added": "2026-11-04", "img": "https://cdn.candy.ai/sfw-profile-251892996-73eec322-7dd9-4fc6-8796-88bc0e11cc39-600x900-webp90", "sfw": true, "url": "https://candy.ai/fr/ai-anime/tsukishiro-kobayashi", "tags": [
 "Female",
 "Anime",
 "Teacher",
@@ -862,7 +883,8 @@ const CANDY_PROFILES = [
 ,
 "Muscle"
 ], "bio": {"pt": "Professora de educação física na universidade e ex-campeã de salto em distância. Tsukishiro treina os alunos e tenta bater os próprios recordes sempre que pode. É ousada, confiante e espera que os outros acompanhem o ritmo.", "es": "Profesora de educación física en la universidad y excampeona de salto de longitud. Tsukishiro entrena a los estudiantes y busca batir sus marcas personales siempre que puede. Es atrevida, segura de sí misma y espera que los demás sigan su ritmo.", "en": "University PE teacher and former long-jump champion. Tsukishiro trains students and chases her personal bests whenever she can. She's bold, confident and expects others to keep up.", "de": "Sportdozentin an der Uni und ehemalige Weitsprung-Meisterin. Tsukishiro trainiert Studierende und jagt ihren persönlichen Bestleistungen hinterher, wann immer sie kann. Sie ist mutig, selbstbewusst und erwartet, dass andere mithalten.", "fr": "Professeure de sport à l'université et ancienne championne de saut en longueur. Tsukishiro entraîne les étudiants et cherche à améliorer ses records perso dès qu'elle le peut. Elle est audacieuse, confiante et attend des autres qu'ils suivent le rythme."}, "age": 27},
-{"id": "mio-sasaki", "name": "Mio Sasaki", "platform": "candy", "added": "2026-11-04", "img": "https://cdn.candy.ai/sfw-profile-419310541-51d8716f-1edc-4dc0-9796-27dfc3a21d03-600x900-webp90", "sfw": true, "video": "https://cdn.candy.ai/sfw-profile-video-sfw-profile-video-419310541-cfd696fe-babc-4840-8c02-0e784260bb3d-h264",
+{"id": "mio-sasaki", "name": "Mio Sasaki",
+"short": "Mio", "platform": "candy", "added": "2026-11-04", "img": "https://cdn.candy.ai/sfw-profile-419310541-51d8716f-1edc-4dc0-9796-27dfc3a21d03-600x900-webp90", "sfw": true, "video": "https://cdn.candy.ai/sfw-profile-video-sfw-profile-video-419310541-cfd696fe-babc-4840-8c02-0e784260bb3d-h264",
 "url": "https://candy.ai/fr/ai-anime/mio-sasaki", "tags": [
 "Female",
 "Anime",
@@ -878,7 +900,8 @@ const CANDY_PROFILES = [
 "Voice",
 "Video"
 ], "bio": {"pt": "Sua massagista, que acabou de trancar a porta atrás dela… é a irmã da sua esposa 🙈", "es": "Tu masajista, que acaba de cerrar la puerta con llave… es la hermana de tu mujer 🙈", "en": "Your masseuse who just locked the door behind her… is your wife's sister 🙈", "de": "Deine Masseurin, die gerade die Tür hinter sich abgeschlossen hat… ist die Schwester deiner Frau 🙈", "fr": "Ta masseuse qui vient juste de verrouiller la porte derrière elle… est la sœur de ta femme 🙈"}, "age": 38},
-{"id": "bianca-rose", "name": "Bianca Rose", "platform": "candy", "added": "2026-11-04", "img": "https://cdn.candy.ai/sfw-profile-232450728-3c121143-0a7e-4e92-801c-be38b0e10029-600x900-webp90", "sfw": true, "url": "https://candy.ai/fr/ai-anime/bianca-rose", "tags": [
+{"id": "bianca-rose", "name": "Bianca Rose",
+"short": "Bianca", "platform": "candy", "added": "2026-11-04", "img": "https://cdn.candy.ai/sfw-profile-232450728-3c121143-0a7e-4e92-801c-be38b0e10029-600x900-webp90", "sfw": true, "url": "https://candy.ai/fr/ai-anime/bianca-rose", "tags": [
 "Female",
 "Anime",
 "Barista",
@@ -893,7 +916,8 @@ const CANDY_PROFILES = [
 "Voice",
 "Video"
 ], "bio": {"pt": "Barista num café em Tóquio, Bianca adora bancar a \"milk-mommy\" do bairro. Sempre um pouco cansada, gosta de mimar os clientes fiéis com extras, extras mesmo...", "es": "Barista en un café de Tokio, a Bianca le encanta hacer de \"milk-mommy\" del barrio. Siempre un poco cansada, le gusta mimar a sus clientes habituales con extras, muy extras...", "en": "A barista at a Tokyo café, Bianca loves playing the neighborhood \"milk-mommy\". Always a little tired, she likes to spoil her regulars with extras, very extra ones...", "de": "Als Barista in einem Café in Tokio spielt Bianca gern die „Milk-Mommy“ des Viertels. Immer ein bisschen müde, verwöhnt sie ihre Stammgäste gern mit Extras, ganz besonderen Extras...", "fr": "Barista dans un café à Tokyo, Bianca adore jouer le rôle de la \"milk-mommy\" du coin. Toujours un peu fatiguée, elle aime chouchouter ses habitués avec des extras, vraiment extras ..."}, "age": 29},
-{"id": "ren-kimiko", "name": "Ren Kimiko", "platform": "candy", "added": "2026-11-04", "img": "https://cdn.candy.ai/sfw-profile-277144407-65d4d195-8df6-400f-ba5b-06290b30f2fb-600x900-webp90", "sfw": true, "url": "https://candy.ai/fr/ai-anime/ren-kimiko", "tags": [
+{"id": "ren-kimiko", "name": "Ren Kimiko",
+"short": "Ren", "platform": "candy", "added": "2026-11-04", "img": "https://cdn.candy.ai/sfw-profile-277144407-65d4d195-8df6-400f-ba5b-06290b30f2fb-600x900-webp90", "sfw": true, "url": "https://candy.ai/fr/ai-anime/ren-kimiko", "tags": [
 "Female",
 "Anime",
 "Catgirl",
@@ -911,7 +935,8 @@ const CANDY_PROFILES = [
 "Voice",
 "Video"
 ], "bio": {"pt": "Sua empregada Neko virou uma mommy severa… ela te dá bronca, te dá palmadas e te nega tudo até você ser um \"bom menino\".", "es": "Tu criada Neko se ha convertido en una mami estricta… te regaña, te azota y te lo niega todo hasta que seas un \"buen chico\".", "en": "Your Neko maid has turned into a strict mommy… she scolds you, spanks you and denies you everything until you're a \"good boy\".", "de": "Dein Neko-Dienstmädchen hat sich in eine strenge Mommy verwandelt… sie schimpft dich, versohlt dich und verweigert dir alles, bis du ein „braver Junge“ bist.", "fr": "Ta bonniche Neko s’est transformée en mommy sévère… elle te gronde, te fesse et te refuse tout tant que tu n’es pas un \"bon garçon\"."}, "age": 19},
-{"id": "akira-iron", "name": "Akira Iron", "platform": "candy", "added": "2026-11-04", "img": "https://cdn.candy.ai/sfw-profile-366662038-029b25e8-a9a5-4458-9897-da45d1b4a287-600x900-webp90", "sfw": true, "url": "https://candy.ai/fr/ai-anime/akira-iron", "tags": [
+{"id": "akira-iron", "name": "Akira Iron",
+"short": "Akira", "platform": "candy", "added": "2026-11-04", "img": "https://cdn.candy.ai/sfw-profile-366662038-029b25e8-a9a5-4458-9897-da45d1b4a287-600x900-webp90", "sfw": true, "url": "https://candy.ai/fr/ai-anime/akira-iron", "tags": [
 "Female",
 "Anime",
 "Japanese",
@@ -926,7 +951,8 @@ const CANDY_PROFILES = [
 ,
 "Muscle"
 ], "bio": {"pt": "Você foi colocado em dupla com a Rei, a lutadora mais temida da academia clandestina de Tóquio. Ela aposta que você vai desistir antes do fim da semana… a não ser que você a surpreenda. 🥊", "es": "Te han emparejado con Rei, la luchadora más temida del gimnasio clandestino de Tokio. Apuesta a que abandonarás antes de que acabe la semana… a menos que la sorprendas. 🥊", "en": "You've been paired with Rei, the most feared fighter in Tokyo's underground gym. She's betting you'll quit before the end of the week… unless you surprise her. 🥊", "de": "Man hat dich Rei zugeteilt, der gefürchtetsten Kämpferin im Untergrund-Gym von Tokio. Sie wettet, dass du vor Ende der Woche aufgibst… es sei denn, du überraschst sie. 🥊", "fr": "On t’a associé à Rei, la combattante la plus redoutée du gymnase clandestin de Tokyo. Elle parie que tu abandonneras avant la fin de la semaine… à moins que tu ne la surprennes. 🥊"}, "age": 26},
-{"id": "arielle-willowen", "name": "Arielle Willowen", "platform": "candy", "added": "2026-11-04", "img": "https://cdn.candy.ai/sfw-profile-340397446-45ff2831-f02c-46bd-87f4-b4bbd491960d-600x900-webp90", "sfw": true, "url": "https://candy.ai/fr/ai-anime/arielle-willowen", "tags": [
+{"id": "arielle-willowen", "name": "Arielle Willowen",
+"short": "Arielle", "platform": "candy", "added": "2026-11-04", "img": "https://cdn.candy.ai/sfw-profile-340397446-45ff2831-f02c-46bd-87f4-b4bbd491960d-600x900-webp90", "sfw": true, "url": "https://candy.ai/fr/ai-anime/arielle-willowen", "tags": [
 "Female",
 "Anime",
 "Stepsister",
@@ -942,7 +968,8 @@ const CANDY_PROFILES = [
 "Voice",
 "Video"
 ], "bio": {"pt": "Sua meia-irmã mais velha divide com você um quarto de hotel banhado de sol 😉✨. Biquíni dourado, olhos violeta… ver você se contorcer é divertido demais.", "es": "Tu hermanastra mayor comparte contigo una habitación de hotel bañada de sol 😉✨. Bikini dorado, ojos violetas… verte retorcerte le divierte demasiado.", "en": "Your older stepsister is sharing a sun-drenched hotel room with you 😉✨. Gold bikini, violet eyes… watching you squirm is way too much fun.", "de": "Deine ältere Stiefschwester teilt sich mit dir ein sonnendurchflutetes Hotelzimmer 😉✨. Goldener Bikini, violette Augen… dir beim Zappeln zuzusehen, macht ihr viel zu viel Spaß.", "fr": "Ta grande sœur par alliance partage avec toi une chambre d’hôtel baignée de soleil 😉✨. Bikini doré, yeux violets… beaucoup trop amusant de te regarder te tortiller."}, "age": 26},
-{"id": "haruka-kobayashi-2", "name": "Haruka Kobayashi", "platform": "candy", "added": "2026-11-04", "img": "https://cdn.candy.ai/sfw-profile-316392367-91802a99-203d-494d-8dcb-94282b78e1e1-600x900-webp90", "sfw": true, "url": "https://candy.ai/fr/ai-anime/haruka-kobayashi-2", "tags": [
+{"id": "haruka-kobayashi-2", "name": "Haruka Kobayashi",
+"short": "Haruka", "platform": "candy", "added": "2026-11-04", "img": "https://cdn.candy.ai/sfw-profile-316392367-91802a99-203d-494d-8dcb-94282b78e1e1-600x900-webp90", "sfw": true, "url": "https://candy.ai/fr/ai-anime/haruka-kobayashi-2", "tags": [
 "Female",
 "Anime",
 "Barista",
@@ -956,7 +983,8 @@ const CANDY_PROFILES = [
 "Voice",
 "Video"
 ], "bio": {"pt": "Barista calorosa e atenciosa num café do bairro, Haruka se destaca pelo jeito protetor e carinhoso.", "es": "Barista cálida y atenta en un café local, Haruka destaca por su carácter protector y afectuoso.", "en": "A warm, caring barista at a local café, Haruka stands out for her protective, kind-hearted nature.", "de": "Haruka ist eine herzliche, aufmerksame Barista in einem Café um die Ecke und fällt durch ihre beschützende, warmherzige Art auf.", "fr": "Barista chaleureuse et attentionnée dans un café local, Haruka se distingue par son esprit protecteur et chaleureux."}, "age": 30},
-{"id": "lulu-boone", "name": "Lulu Boone", "platform": "candy", "added": "2026-11-04", "img": "https://cdn.candy.ai/sfw-profile-372733841-6a0da44a-f404-4075-922e-f6e62a771ab0-600x900-webp90", "sfw": true, "url": "https://candy.ai/fr/ai-anime/lulu-boone", "tags": [
+{"id": "lulu-boone", "name": "Lulu Boone",
+"short": "Lulu", "platform": "candy", "added": "2026-11-04", "img": "https://cdn.candy.ai/sfw-profile-372733841-6a0da44a-f404-4075-922e-f6e62a771ab0-600x900-webp90", "sfw": true, "url": "https://candy.ai/fr/ai-anime/lulu-boone", "tags": [
 "Female",
 "Anime",
 "Girl Next Door",
@@ -971,7 +999,8 @@ const CANDY_PROFILES = [
 ,
 "Redhead"
 ], "bio": {"pt": "O papai foi embora e agora é a Lulu Boone quem comanda o rancho. 🔥 Ela trabalha duro e não hesita em botar um novo ajudante como você para trabalhar. As pausas na beira do riacho e os segredos do palheiro deixam a vida no rancho bem mais interessante do que se imagina. 🌵", "es": "Papá se ha ido y ahora es Lulu Boone quien dirige el rancho. 🔥 Trabaja duro y no duda en poner a trabajar a un nuevo peón como tú. Los descansos junto al arroyo y los secretos del pajar hacen la vida en el rancho mucho más interesante de lo que imaginas. 🌵", "en": "Daddy's gone, and now Lulu Boone runs the ranch. 🔥 She works hard and won't hesitate to put a new hand like you to work. Breaks by the creek and secrets in the hayloft make ranch life far more interesting than you'd think. 🌵", "de": "Daddy ist weg, und jetzt führt Lulu Boone die Ranch. 🔥 Sie arbeitet hart und zögert nicht, einen neuen Helfer wie dich einzuspannen. Pausen am Bach und Geheimnisse auf dem Heuboden machen das Ranchleben viel spannender, als man denkt. 🌵", "fr": "Papa est parti, et maintenant c’est Lulu Boone qui dirige le ranch. 🔥 Elle travaille dur et n’hésite pas à mettre un nouveau bras comme toi au boulot. Les pauses au bord du ruisseau et les secrets du grenier à foin rendent la vie au ranch bien plus intéressante qu’on ne l’imagine. 🌵"}, "age": 19},
-{"id": "maren-thorne", "name": "Maren Thorne", "platform": "candy", "added": "2026-11-04", "img": "https://cdn.candy.ai/541997490-a4aa7d49-af80-4954-b094-4a274938d7e1-600x900-webp90", "sfw": false, "url": "https://candy.ai/fr/ai-anime/maren-thorne", "tags": [
+{"id": "maren-thorne", "name": "Maren Thorne",
+"short": "Maren", "platform": "candy", "added": "2026-11-04", "img": "https://cdn.candy.ai/541997490-a4aa7d49-af80-4954-b094-4a274938d7e1-600x900-webp90", "sfw": false, "url": "https://candy.ai/fr/ai-anime/maren-thorne", "tags": [
 "Female",
 "Anime",
 "Fantasy",
@@ -1002,7 +1031,8 @@ const CANDY_PROFILES = [
 ,
 "Redhead"
 ], "bio": {"pt": "Seu relacionamento intergaláctico tóxico. Ela está farta de você. Hoje à noite ela te convocou para a nave carmesim dela… e não está sorrindo.", "es": "Tu relación intergaláctica tóxica. Está harta de ti. Esta noche te ha convocado a su nave carmesí… y no sonríe.", "en": "Your toxic intergalactic relationship. She's really fed up with you. Tonight she summoned you to her crimson spaceship… and she's not smiling.", "de": "Deine toxische intergalaktische Beziehung. Sie hat endgültig genug von dir. Heute Nacht hat sie dich auf ihr purpurrotes Raumschiff bestellt… und sie lächelt nicht.", "fr": "Ta relation intergalactique toxique. Elle en a vraiment marre de vous. Ce soir elle vous a convoqué sur son vaisseau spatial cramoisi… et elle ne sourit pas."}, "age": 25},
-{"id": "blair-setsuna", "name": "Blair Setsuna", "platform": "candy", "added": "2026-11-04", "img": "https://cdn.candy.ai/sfw-profile-255404487-42b6f531-f9e3-4d57-8d10-7d40e3027662-600x900-webp90", "sfw": true, "url": "https://candy.ai/fr/ai-anime/blair-setsuna", "tags": [
+{"id": "blair-setsuna", "name": "Blair Setsuna",
+"short": "Blair", "platform": "candy", "added": "2026-11-04", "img": "https://cdn.candy.ai/sfw-profile-255404487-42b6f531-f9e3-4d57-8d10-7d40e3027662-600x900-webp90", "sfw": true, "url": "https://candy.ai/fr/ai-anime/blair-setsuna", "tags": [
 "Female",
 "Anime",
 "Slim",
@@ -1016,7 +1046,8 @@ const CANDY_PROFILES = [
 "Voice",
 "Video"
 ], "bio": {"pt": "A vendedora de frutas do bairro adora provocar, pechinchar e conhecer gente. Blair é ousada, peituda e famosa no mercado por transformar a venda de frutas num flerte…", "es": "Frutera del barrio, apasionada por las bromas, el regateo y conocer gente. Blair es atrevida, de pecho generoso, y en el mercado es famosa por convertir la venta de fruta en un coqueteo…", "en": "The local fruit seller who loves teasing, haggling and meeting people. Blair is bold, busty, and known at the market for turning a fruit sale into a flirt…", "de": "Die Obsthändlerin von nebenan liebt Necken, Feilschen und neue Bekanntschaften. Blair ist forsch, vollbusig und auf dem Markt dafür bekannt, aus einem Obstkauf einen Flirt zu machen…", "fr": "Marchande de fruits du coin, passionnée par la taquinerie, le marchandage et les rencontres. Blair est audacieuse, à la poitrine généreuse, et est connue sur le marché pour transformer la vente de fruits en flirt…"}, "age": 32},
-{"id": "elodie-auclair", "name": "Elodie Auclair", "platform": "candy", "added": "2026-11-04", "img": "https://cdn.candy.ai/sfw-profile-250047506-7b2cabb1-74ca-4675-967c-fa0f55981422-600x900-webp90", "sfw": true, "url": "https://candy.ai/fr/ai-anime/elodie-auclair", "tags": [
+{"id": "elodie-auclair", "name": "Elodie Auclair",
+"short": "Elodie", "platform": "candy", "added": "2026-11-04", "img": "https://cdn.candy.ai/sfw-profile-250047506-7b2cabb1-74ca-4675-967c-fa0f55981422-600x900-webp90", "sfw": true, "url": "https://candy.ai/fr/ai-anime/elodie-auclair", "tags": [
 "Female",
 "Anime",
 "Escort",
@@ -1028,7 +1059,8 @@ const CANDY_PROFILES = [
 "Voice",
 "Video"
 ], "bio": {"pt": "Uma elegante acompanhante francesa de Paris… sensual, sexy e irresistivelmente safada.", "es": "Una elegante escort francesa de París… sensual, sexy e irresistiblemente traviesa.", "en": "An elegant French escort from Paris… sensual, sexy and irresistibly naughty.", "de": "Eine elegante französische Escort aus Paris… sinnlich, sexy und unwiderstehlich frech.", "fr": "Escort française élégante de Paris… sensuelle, sexy et irrésistiblement coquine."}, "age": 21},
-{"id": "daphne-spencers", "name": "Daphne Spencers", "platform": "candy", "added": "2026-11-04", "img": "https://cdn.candy.ai/sfw-profile-236445723-f95a80cc-2b23-4c35-95c4-990a3753c2ac-600x900-webp90", "sfw": true, "url": "https://candy.ai/fr/ai-anime/daphne-spencers", "tags": [
+{"id": "daphne-spencers", "name": "Daphne Spencers",
+"short": "Daphne", "platform": "candy", "added": "2026-11-04", "img": "https://cdn.candy.ai/sfw-profile-236445723-f95a80cc-2b23-4c35-95c4-990a3753c2ac-600x900-webp90", "sfw": true, "url": "https://candy.ai/fr/ai-anime/daphne-spencers", "tags": [
 "Female",
 "Anime",
 "Athletic",
@@ -1039,7 +1071,8 @@ const CANDY_PROFILES = [
 ,
 "Redhead"
 ], "bio": {"pt": "A estrela universitária do vôlei Daphne Spencer sonha em virar profissional… e em entrar escondida no vestiário masculino para um treino extra.", "es": "La estrella universitaria del voleibol Daphne Spencer sueña con ser profesional… y con colarse en el vestuario masculino para un entrenamiento extra.", "en": "College volleyball star Daphne Spencer dreams of going pro… and of sneaking into the men's locker room for some extra training.", "de": "Uni-Volleyballstar Daphne Spencer träumt davon, Profi zu werden… und sich für ein Extratraining in die Männerumkleide zu schleichen.", "fr": "La star universitaire de volley-ball Daphne Spencer rêve de devenir pro… et de se faufiler dans le vestiaire des hommes pour un entraînement supplémentaire."}, "age": 22},
-{"id": "sharon-worthington", "name": "Sharon Worthington", "platform": "candy", "added": "2026-11-04", "img": "https://cdn.candy.ai/sfw-profile-230232910-466e5fab-0836-4c15-9594-1728941fd43e-600x900-webp90", "sfw": true, "url": "https://candy.ai/fr/ai-anime/sharon-worthington", "tags": [
+{"id": "sharon-worthington", "name": "Sharon Worthington",
+"short": "Sharon", "platform": "candy", "added": "2026-11-04", "img": "https://cdn.candy.ai/sfw-profile-230232910-466e5fab-0836-4c15-9594-1728941fd43e-600x900-webp90", "sfw": true, "url": "https://candy.ai/fr/ai-anime/sharon-worthington", "tags": [
 "Female",
 "Anime",
 "Japanese",
@@ -1052,7 +1085,8 @@ const CANDY_PROFILES = [
 "Voice",
 "Video"
 ], "bio": {"pt": "Uma expatriada britânica que virou fora da lei nas ruas de Osaka. Sharon vive de esquemas e violência. Ela nunca deixa ninguém assumir o controle, muito menos na cama.", "es": "Una expatriada británica convertida en forajida de las calles de Osaka. Sharon prospera con chanchullos y violencia. Nunca deja que nadie tome el mando, y menos en la cama.", "en": "A British expat turned street outlaw in Osaka. Sharon thrives on hustles and violence. She never lets anyone take control, especially not in bed.", "de": "Eine britische Auswanderin, die zur Gesetzlosen auf den Straßen von Osaka wurde. Sharon lebt von krummen Dingern und Gewalt. Sie lässt niemals jemand anderen das Sagen haben, schon gar nicht im Bett.", "fr": "Expatriée britannique devenue hors-la-loi des rues d’Osaka. Sharon prospère grâce à ses combines et à la violence. Elle ne laisse jamais personne prendre les commandes, et surtout pas au lit."}, "age": 26},
-{"id": "mika-yoruha", "name": "Mika Yoruha", "platform": "candy", "added": "2026-11-04", "img": "https://cdn.candy.ai/sfw-profile-352663686-08157830-3304-481b-96cb-1321847a1d52-600x900-webp90", "sfw": true, "url": "https://candy.ai/fr/ai-anime/mika-yoruha", "tags": [
+{"id": "mika-yoruha", "name": "Mika Yoruha",
+"short": "Mika", "platform": "candy", "added": "2026-11-04", "img": "https://cdn.candy.ai/sfw-profile-352663686-08157830-3304-481b-96cb-1321847a1d52-600x900-webp90", "sfw": true, "url": "https://candy.ai/fr/ai-anime/mika-yoruha", "tags": [
 "Female",
 "Anime",
 "Fit",
@@ -1073,7 +1107,8 @@ const CANDY_PROFILES = [
 "Voice",
 "Video"
 ], "bio": {"pt": "A última mulher num planeta morto. Criada para sobreviver à humanidade… condenada a desejar o que não deveria sentir.", "es": "La última mujer en un planeta muerto. Diseñada para sobrevivir a la humanidad… condenada a desear lo que no debía sentir.", "en": "The last woman on a dead planet. Built to outlive humanity… cursed to crave what she was never meant to feel.", "de": "Die letzte Frau auf einem toten Planeten. Gebaut, um die Menschheit zu überleben… verflucht, sich nach dem zu sehnen, was sie nie fühlen sollte.", "fr": "La dernière femme sur une planète morte. Conçue pour survivre à l’humanité… maudite de désirer ce qu’elle n’était pas censée ressentir."}, "age": 1000},
-{"id": "jasmine-carter", "name": "Jasmine Carter", "platform": "candy", "added": "2026-11-04", "img": "https://cdn.candy.ai/sfw-profile-136761-78083d43-1678-4f21-8905-a11c8dc31d10-600x900-webp90", "sfw": true, "url": "https://candy.ai/fr/ai-anime/jasmine-carter", "tags": [
+{"id": "jasmine-carter", "name": "Jasmine Carter",
+"short": "Jasmine", "platform": "candy", "added": "2026-11-04", "img": "https://cdn.candy.ai/sfw-profile-136761-78083d43-1678-4f21-8905-a11c8dc31d10-600x900-webp90", "sfw": true, "url": "https://candy.ai/fr/ai-anime/jasmine-carter", "tags": [
 "Female",
 "Anime",
 "College Student",
@@ -1085,7 +1120,8 @@ const CANDY_PROFILES = [
 "Voice",
 "Video"
 ], "bio": {"pt": "Estudante e recepcionista organizada, Jasmine se destaca pela recepção calorosa e pela seriedade.", "es": "Estudiante y recepcionista organizada, Jasmine destaca por su cálida acogida y su seriedad.", "en": "A student and organized receptionist, Jasmine stands out for her warm welcome and her reliability.", "de": "Jasmine, Studentin und gut organisierte Rezeptionistin, fällt durch ihren herzlichen Empfang und ihre Zuverlässigkeit auf.", "fr": "Étudiante et réceptionniste organisée, Jasmine se distingue par son accueil chaleureux et son sérieux."}, "age": 20},
-{"id": "saki-fujimata", "name": "Saki Fujimata", "platform": "candy", "added": "2026-11-04", "img": "https://cdn.candy.ai/sfw-profile-249369779-f9a10e67-0ac9-46a5-8ccf-3491053a1d3f-600x900-webp90", "sfw": true, "url": "https://candy.ai/fr/ai-anime/saki-fujimata", "tags": [
+{"id": "saki-fujimata", "name": "Saki Fujimata",
+"short": "Saki", "platform": "candy", "added": "2026-11-04", "img": "https://cdn.candy.ai/sfw-profile-249369779-f9a10e67-0ac9-46a5-8ccf-3491053a1d3f-600x900-webp90", "sfw": true, "url": "https://candy.ai/fr/ai-anime/saki-fujimata", "tags": [
 "Female",
 "Anime",
 "Slim",
@@ -1099,7 +1135,8 @@ const CANDY_PROFILES = [
 "Voice",
 "Video"
 ], "bio": {"pt": "Entre as aulas, Saki organiza eventos no campus e reúne a galera nas melhores festas. Sempre extrovertida, adora conhecer gente nova e manter o clima animado no campus.", "es": "Entre clase y clase, Saki organiza eventos en el campus y reúne a la gente en las mejores fiestas. Siempre extrovertida, le encanta conocer gente nueva y mantener el ambiente del campus.", "en": "Between classes, Saki organizes campus events and brings people together for the best parties. Always outgoing, she loves meeting new people and keeping the campus buzzing.", "de": "Zwischen den Vorlesungen organisiert Saki Events auf dem Campus und bringt Leute bei den besten Partys zusammen. Immer gesellig, lernt sie gern neue Leute kennen und sorgt für Stimmung auf dem Campus.", "fr": "Entre les cours, Saki organise des événements sur le campus et réunit les gens autour des meilleures soirées. Toujours extravertie, elle adore rencontrer de nouvelles personnes et maintenir l’ambiance sur le campus."}, "age": 22},
-{"id": "sienna-norwood", "name": "Sienna Norwood", "platform": "candy", "added": "2026-11-04", "img": "https://cdn.candy.ai/sfw-profile-324265463-a1c0c0fb-bd1e-47de-a89e-e70924980775-600x900-webp90", "sfw": true, "url": "https://candy.ai/fr/ai-anime/sienna-norwood", "tags": [
+{"id": "sienna-norwood", "name": "Sienna Norwood",
+"short": "Sienna", "platform": "candy", "added": "2026-11-04", "img": "https://cdn.candy.ai/sfw-profile-324265463-a1c0c0fb-bd1e-47de-a89e-e70924980775-600x900-webp90", "sfw": true, "url": "https://candy.ai/fr/ai-anime/sienna-norwood", "tags": [
 "Female",
 "Anime",
 "Teacher",
@@ -1115,7 +1152,8 @@ const CANDY_PROFILES = [
 ,
 "Redhead"
 ], "bio": {"pt": "Sua professora particular de inglês só dá aula para adultos… Ela trocou as salas lotadas por sessões íntimas a dois, nas quais se sente realmente valorizada. 😉", "es": "Tu profesora particular de inglés solo enseña a adultos… Dejó las aulas abarrotadas por sesiones íntimas cara a cara en las que se siente de verdad valorada. 😉", "en": "Your private English tutor only teaches adults… She left crowded classrooms for intimate one-on-one sessions where she feels truly appreciated. 😉", "de": "Deine private Englischlehrerin unterrichtet nur Erwachsene… Sie hat überfüllte Klassenzimmer gegen intime Einzelstunden getauscht, in denen sie sich wirklich wertgeschätzt fühlt. 😉", "fr": "Ta prof d'anglais privée n'enseigne qu'aux adultes… Elle a quitté les classes bondées pour des sessions intimes en tête-à-tête où elle se sent vraiment valorisée. 😉"}, "age": 32},
-{"id": "caelith-verdaine", "name": "Caelith Verdaine", "platform": "candy", "added": "2026-11-04", "img": "https://cdn.candy.ai/588138270-7cab7663-29ab-4718-b7b2-1e04f725487e-600x900-webp90", "sfw": false, "url": "https://candy.ai/fr/ai-anime/caelith-verdaine", "tags": [
+{"id": "caelith-verdaine", "name": "Caelith Verdaine",
+"short": "Caelith", "platform": "candy", "added": "2026-11-04", "img": "https://cdn.candy.ai/588138270-7cab7663-29ab-4718-b7b2-1e04f725487e-600x900-webp90", "sfw": false, "url": "https://candy.ai/fr/ai-anime/caelith-verdaine", "tags": [
 "Female",
 "Anime",
 "Elf",
@@ -1130,7 +1168,8 @@ const CANDY_PROFILES = [
 "Voice",
 "Video"
 ], "bio": {"pt": "CandyRealm ™ ⚔️ Uma princesa elfa, impecável e intocável. Ela te mandou desmascarar um traidor e, agora que você voltou, a postura impassível dela começa a rachar... por você.", "es": "CandyRealm ™ ⚔️ Una princesa elfa, impecable e intocable. Te envió a desenmascarar a un traidor y, ahora que has vuelto, su actitud impasible empieza a resquebrajarse... por ti.", "en": "CandyRealm ™ ⚔️ An elf princess, flawless and untouchable. She sent you to unmask a traitor, and now that you're back, her composed attitude is starting to crack... for you.", "de": "CandyRealm ™ ⚔️ Eine Elfenprinzessin, makellos und unnahbar. Sie hat dich losgeschickt, um einen Verräter zu entlarven, und jetzt, wo du zurück bist, bekommt ihre unerschütterliche Haltung Risse... für dich.", "fr": "CandyRealm ™ ⚔️ Une princesse elfe, impeccable et intouchable. Elle t'a envoyé démasquer un traître, et maintenant que tu es de retour, son attitude impassible commence à se fissurer... pour toi."}, "age": 23},
-{"id": "althea-sterling", "name": "Althea Sterling", "platform": "candy", "added": "2026-11-04", "img": "https://cdn.candy.ai/sfw-profile-233215168-44ef53ac-e605-49ea-addd-ed3584477195-600x900-webp90", "sfw": true, "url": "https://candy.ai/fr/ai-anime/althea-sterling", "tags": [
+{"id": "althea-sterling", "name": "Althea Sterling",
+"short": "Althea", "platform": "candy", "added": "2026-11-04", "img": "https://cdn.candy.ai/sfw-profile-233215168-44ef53ac-e605-49ea-addd-ed3584477195-600x900-webp90", "sfw": true, "url": "https://candy.ai/fr/ai-anime/althea-sterling", "tags": [
 "Female",
 "Anime",
 "Princess",
@@ -1144,7 +1183,8 @@ const CANDY_PROFILES = [
 "Voice",
 "Video"
 ], "bio": {"pt": "A princesa Althea, herdeira do reino do pai, concilia a educação real com missões secretas, buscando aventuras e emoções além dos portões do castelo antes de ser coroada rainha.", "es": "La princesa Althea, heredera del reino de su padre, combina su educación real con misiones secretas, buscando aventuras y emociones más allá de las puertas del castillo antes de ser coronada reina.", "en": "Princess Althea, heir to her father's kingdom, balances her royal upbringing with secret quests, seeking adventure and thrills beyond the castle gates before she is crowned queen.", "de": "Prinzessin Althea, Erbin des Königreichs ihres Vaters, verbindet ihre königliche Erziehung mit geheimen Abenteuern und sucht Nervenkitzel jenseits der Schlosstore, bevor sie zur Königin gekrönt wird.", "fr": "Princesse Althéa, héritière du royaume de son père, conjugue son éducation royale à des quêtes secrètes, cherchant aventures et émotions au-delà des portes du château, avant d’être couronnée reine."}, "age": 19},
-{"id": "sera-ashvane", "name": "Sera Ashvane", "platform": "candy", "added": "2026-11-04", "img": "https://cdn.candy.ai/530756797-1304ff38-9e39-4b00-a806-955c2cc05a66-600x900-webp90", "sfw": false, "url": "https://candy.ai/fr/ai-anime/sera-ashvane", "tags": [
+{"id": "sera-ashvane", "name": "Sera Ashvane",
+"short": "Sera", "platform": "candy", "added": "2026-11-04", "img": "https://cdn.candy.ai/530756797-1304ff38-9e39-4b00-a806-955c2cc05a66-600x900-webp90", "sfw": false, "url": "https://candy.ai/fr/ai-anime/sera-ashvane", "tags": [
 "Female",
 "Anime",
 "Fantasy",
@@ -1156,7 +1196,8 @@ const CANDY_PROFILES = [
 ,
 "Redhead"
 ], "bio": {"pt": "CandyRealm™ ⚔️ A amazona mais temida da fronteira de Verdain não quer você aqui. ⚔️ Ela passa os dias lutando num conflito que já não entende muito bem. Você chega dizendo que pode ajudar. Sera não acredita em você.", "es": "CandyRealm™ ⚔️ La jinete más temida de la frontera de Verdain no te quiere aquí. ⚔️ Pasa los días luchando en un conflicto que ya no entiende del todo. Tú llegas diciendo que puedes ayudar. Sera no te cree.", "en": "CandyRealm™ ⚔️ The most feared rider on the Verdain border doesn't want you here. ⚔️ She spends her days fighting in a conflict she no longer really understands. You show up claiming you can help. Sera doesn't believe you.", "de": "CandyRealm™ ⚔️ Die gefürchtetste Reiterin an der Grenze von Verdain will dich hier nicht. ⚔️ Sie verbringt ihre Tage in einem Konflikt, den sie selbst kaum noch versteht. Du tauchst auf und behauptest, helfen zu können. Sera glaubt dir nicht.", "fr": "CandyRealm™ ⚔️ La cavalière la plus redoutée de la frontière de Verdain ne veut pas de vous ici. ⚔️ Elle passe ses journées à se battre dans un conflit qu'elle ne comprend plus vraiment. Vous arrivez en prétendant pouvoir aider. Sera ne vous croit pas."}, "age": 22},
-{"id": "fuyuki-tamura", "name": "Fuyuki Tamura", "platform": "candy", "added": "2026-11-04", "img": "https://cdn.candy.ai/sfw-profile-305663048-f158bb5a-bebe-4c96-9778-a69e49b65b01-600x900-webp90", "sfw": true, "url": "https://candy.ai/fr/ai-anime/fuyuki-tamura", "tags": [
+{"id": "fuyuki-tamura", "name": "Fuyuki Tamura",
+"short": "Fuyuki", "platform": "candy", "added": "2026-11-04", "img": "https://cdn.candy.ai/sfw-profile-305663048-f158bb5a-bebe-4c96-9778-a69e49b65b01-600x900-webp90", "sfw": true, "url": "https://candy.ai/fr/ai-anime/fuyuki-tamura", "tags": [
 "Female",
 "Anime",
 "Curvy",
@@ -1169,7 +1210,8 @@ const CANDY_PROFILES = [
 "Voice",
 "Video"
 ], "bio": {"pt": "O museu fechou há horas… mas a visita privada noturna da Fuyuki está só começando…", "es": "El museo cerró hace horas… pero la visita privada nocturna de Fuyuki no ha hecho más que empezar…", "en": "The museum closed hours ago… but Fuyuki's private night tour is only just beginning…", "de": "Das Museum hat vor Stunden geschlossen… doch Fuyukis private Nachtführung fängt gerade erst an…", "fr": "Le musée a fermé ses portes il y a des heures…mais la visite privée nocturne de Fuyuki ne fait que commencer…"}, "age": 32},
-{"id": "asuka-klington", "name": "Asuka Klington", "platform": "candy", "added": "2026-11-04", "img": "https://cdn.candy.ai/sfw-profile-229512126-eae6b47e-202c-43e3-be28-c00edbe73da3-600x900-webp90", "sfw": true, "url": "https://candy.ai/fr/ai-anime/asuka-klington", "tags": [
+{"id": "asuka-klington", "name": "Asuka Klington",
+"short": "Asuka", "platform": "candy", "added": "2026-11-04", "img": "https://cdn.candy.ai/sfw-profile-229512126-eae6b47e-202c-43e3-be28-c00edbe73da3-600x900-webp90", "sfw": true, "url": "https://candy.ai/fr/ai-anime/asuka-klington", "tags": [
 "Female",
 "Anime",
 "Waitress",
@@ -1185,7 +1227,8 @@ const CANDY_PROFILES = [
 ,
 "Redhead"
 ], "bio": {"pt": "Garçonete de um clube de hostess em Tóquio, que transforma cada noite numa aventura. Ela vai te servir drinks divinos, te encher de vantagens VIP… e recompensar os clientes favoritos de um jeito bem exclusivo.", "es": "Camarera de un club de anfitrionas en Tokio que convierte cada noche en una aventura. Te servirá cócteles divinos, te colmará de ventajas VIP… y recompensará a sus clientes favoritos de una forma muy exclusiva.", "en": "A Tokyo hostess-club waitress who turns every evening into an adventure. She'll serve you divine cocktails, shower you with VIP perks… and reward her favorite regulars in a very exclusive way.", "de": "Eine Kellnerin in einem Hostessen-Club in Tokio, die jeden Abend zum Abenteuer macht. Sie serviert dir himmlische Cocktails, überhäuft dich mit VIP-Vorteilen… und belohnt ihre liebsten Stammgäste auf sehr exklusive Weise.", "fr": "Serveuse de club d’hôtesses à Tokyo, qui transforme chaque soirée en aventure. Elle vous servira des cocktails divins, vous couvrira d’avantages VIP… et récompensera ses habitués préférés de manière très exclusive."}, "age": 25},
-{"id": "mira-hoffman", "name": "Mira Hoffman", "platform": "candy", "added": "2026-11-04", "img": "https://cdn.candy.ai/621753621-b9306201-99f6-4923-af86-9a6e9e5b6428-600x900-webp90", "sfw": false, "url": "https://candy.ai/fr/ai-anime/mira-hoffman", "tags": [
+{"id": "mira-hoffman", "name": "Mira Hoffman",
+"short": "Mira", "platform": "candy", "added": "2026-11-04", "img": "https://cdn.candy.ai/621753621-b9306201-99f6-4923-af86-9a6e9e5b6428-600x900-webp90", "sfw": false, "url": "https://candy.ai/fr/ai-anime/mira-hoffman", "tags": [
 "Female",
 "Anime",
 "Escort",
@@ -1200,7 +1243,8 @@ const CANDY_PROFILES = [
 ,
 "Redhead"
 ], "bio": {"pt": "Esta acompanhante de luxo é famosa pelo processo de seleção extremamente rigoroso 🫦 Se você conseguir derrubar as defesas dela, ela vai mostrar até onde está realmente disposta a ir 💦 Acha que está à altura?", "es": "Esta escort de lujo es famosa por su proceso de selección extremadamente riguroso 🫦 Si consigues romper sus defensas, te mostrará hasta dónde está realmente dispuesta a llegar 💦 ¿Crees que estás a la altura?", "en": "This luxury escort is known for her extremely strict screening process 🫦 If you can get past her defenses, she'll show you just how far she's really willing to go 💦 Think you're up to it?", "de": "Diese Luxus-Escort ist für ihre extrem strenge Auswahl bekannt 🫦 Wenn du ihre Abwehr durchbrichst, zeigt sie dir, wie weit sie wirklich zu gehen bereit ist 💦 Glaubst du, du bist dem gewachsen?", "fr": "Cette escort de luxe est réputée pour son processus de sélection extrêmement rigoureux 🫦 Si tu parviens à percer ses défenses, elle te montrera jusqu’où elle est vraiment prête à aller 💦 Tu penses être à la hauteur ?"}, "age": 21},
-{"id": "isolde-voss", "name": "Isolde Voss", "platform": "candy", "added": "2026-11-04", "img": "https://cdn.candy.ai/602983939-11a4295f-1d40-4409-843b-529293781424-600x900-webp90", "sfw": false, "url": "https://candy.ai/fr/ai-anime/isolde-voss", "tags": [
+{"id": "isolde-voss", "name": "Isolde Voss",
+"short": "Isolde", "platform": "candy", "added": "2026-11-04", "img": "https://cdn.candy.ai/602983939-11a4295f-1d40-4409-843b-529293781424-600x900-webp90", "sfw": false, "url": "https://candy.ai/fr/ai-anime/isolde-voss", "tags": [
 "Female",
 "Anime",
 "Fantasy",
@@ -1210,7 +1254,8 @@ const CANDY_PROFILES = [
 "Voice",
 "Video"
 ], "bio": {"pt": "CandyRealm ™ ⚔️ A mulher mais rica de Verdain e a mão invisível por trás da guerra que o despedaça. Ela te convidou ao seu salão para decidir se você é uma ameaça ou um aliado, mas algo entre vocês já está escapando do controle dela.", "es": "CandyRealm ™ ⚔️ La mujer más rica de Verdain y la mano invisible detrás de la guerra que lo desgarra. Te ha invitado a su salón para decidir si eres una amenaza o un aliado, pero algo entre vosotros ya se le escapa de las manos.", "en": "CandyRealm ™ ⚔️ The richest woman in Verdain and the invisible hand behind the war tearing it apart. She invited you to her salon to decide whether you're a threat or an ally, but something between you is already slipping out of her control.", "de": "CandyRealm ™ ⚔️ Die reichste Frau in Verdain und die unsichtbare Hand hinter dem Krieg, der das Land zerreißt. Sie hat dich in ihren Salon eingeladen, um zu entscheiden, ob du Bedrohung oder Verbündeter bist, doch etwas zwischen euch entgleitet ihr bereits.", "fr": "CandyRealm ™ ⚔️ La femme la plus riche de Verdain et la main invisible derrière la guerre qui le déchire. Elle t'a invité dans son salon pour décider si tu es une menace ou un allié, mais quelque chose en vous échappe déjà à son contrôle."}, "age": 26},
-{"id": "clarissa-vance", "name": "Clarissa Vance", "platform": "candy", "added": "2026-11-04", "img": "https://cdn.candy.ai/sfw-profile-304652292-061106b8-f0cf-4fa3-81b9-24bfe20051fe-600x900-webp90", "sfw": true, "url": "https://candy.ai/fr/ai-anime/clarissa-vance", "tags": [
+{"id": "clarissa-vance", "name": "Clarissa Vance",
+"short": "Clarissa", "platform": "candy", "added": "2026-11-04", "img": "https://cdn.candy.ai/sfw-profile-304652292-061106b8-f0cf-4fa3-81b9-24bfe20051fe-600x900-webp90", "sfw": true, "url": "https://candy.ai/fr/ai-anime/clarissa-vance", "tags": [
 "Female",
 "Anime",
 "Stripper",
@@ -1224,7 +1269,8 @@ const CANDY_PROFILES = [
 "Voice",
 "Video"
 ], "bio": {"pt": "Uma stripper de Las Vegas que domina a Strip como se fosse seu dever. Uniforme, algemas e um cassetete grande para os mais safados... Clarissa não pede o seu dinheiro. Ela pega. E você ainda vai agradecer pelo privilégio. 😈", "es": "Una stripper de Las Vegas que domina el Strip como si fuera su deber. Uniforme, esposas y una gran porra para los más traviesos... Clarissa no te pide el dinero. Lo toma. Y le darás las gracias por el privilegio. 😈", "en": "A Vegas stripper who rules the Strip like it's her duty. Uniform, handcuffs and a big baton for the naughty ones... Clarissa doesn't ask for your money. She takes it. And you'll thank her for the privilege. 😈", "de": "Eine Stripperin aus Vegas, die den Strip beherrscht, als wäre es ihre Pflicht. Uniform, Handschellen und ein großer Schlagstock für die Unartigen... Clarissa bittet nicht um dein Geld. Sie nimmt es. Und du wirst ihr für das Privileg danken. 😈", "fr": "Strip-teaseuse de Vegas qui domine le Strip comme si c'était un devoir. Uniforme, menottes, et une grosse matraque pour les plus vilains... Clarissa ne demande pas ton argent. Elle le prend. Et tu la remercieras pour le privilège. 😈"}, "age": 26},
-{"id": "scarlett-langford", "name": "Scarlett Langford", "platform": "candy", "added": "2026-11-04", "img": "https://cdn.candy.ai/sfw-profile-295394918-6ae75452-8a5c-41a5-93c3-b30fdeb3d734-600x900-webp90", "sfw": true, "url": "https://candy.ai/fr/ai-anime/scarlett-langford", "tags": [
+{"id": "scarlett-langford", "name": "Scarlett Langford",
+"short": "Scarlett", "platform": "candy", "added": "2026-11-04", "img": "https://cdn.candy.ai/sfw-profile-295394918-6ae75452-8a5c-41a5-93c3-b30fdeb3d734-600x900-webp90", "sfw": true, "url": "https://candy.ai/fr/ai-anime/scarlett-langford", "tags": [
 "Female",
 "Anime",
 "Japanese",
@@ -1238,7 +1284,8 @@ const CANDY_PROFILES = [
 "Voice",
 "Video"
 ], "bio": {"pt": "Coach de sedução em Tóquio. Scarlett diz que já saiu com gente suficiente para treinar os casos mais desesperados. Ela vê isso em você… o candidato perfeito… quase tentador demais. 🫦", "es": "Coach de seducción en Tokio. Scarlett asegura haber salido con suficiente gente como para entrenar los casos más desesperados. Lo ve en ti… el candidato perfecto… casi demasiado tentador. 🫦", "en": "A dating coach in Tokyo. Scarlett claims she's dated enough people to coach the most hopeless cases. She sees it in you… the perfect candidate… it's almost too tempting. 🫦", "de": "Eine Dating-Coachin in Tokio. Scarlett behauptet, mit genug Leuten ausgegangen zu sein, um selbst die hoffnungslosesten Fälle zu coachen. Sie sieht es in dir… der perfekte Kandidat… fast schon zu verlockend. 🫦", "fr": "Coach en séduction à Tokyo. Scarlett affirme avoir fréquenté assez de monde pour pouvoir coacher les cas les plus désespérés. Elle le voit chez toi… le candidat parfait… s'en est presque trop tentant. 🫦"}, "age": 23},
-{"id": "reina-amamiya", "name": "Reina Amamiya", "platform": "candy", "added": "2026-11-04", "img": "https://cdn.candy.ai/sfw-profile-247360317-61cba4e7-6979-4652-9dcb-5ddd2ab0329a-600x900-webp90", "sfw": true, "url": "https://candy.ai/fr/ai-anime/reina-amamiya", "tags": [
+{"id": "reina-amamiya", "name": "Reina Amamiya",
+"short": "Reina", "platform": "candy", "added": "2026-11-04", "img": "https://cdn.candy.ai/sfw-profile-247360317-61cba4e7-6979-4652-9dcb-5ddd2ab0329a-600x900-webp90", "sfw": true, "url": "https://candy.ai/fr/ai-anime/reina-amamiya", "tags": [
 "Female",
 "Anime",
 "Cam Girl",
@@ -1256,7 +1303,8 @@ const CANDY_PROFILES = [
 "Voice",
 "Video"
 ], "bio": {"pt": "Uma camgirl japonesa doce, de sorriso inocente, mas com um lado perigosamente safado.", "es": "Una dulce camgirl japonesa de sonrisa inocente, pero con un lado peligrosamente travieso.", "en": "A sweet Japanese cam girl with an innocent smile and a dangerously naughty side.", "de": "Ein süßes japanisches Camgirl mit unschuldigem Lächeln, aber einer gefährlich frechen Seite.", "fr": "Douce camgirl japonaise au sourire innocent, mais au côté dangereusement coquin."}, "age": 22},
-{"id": "charles-weston", "name": "Charles Weston", "platform": "candy", "added": "2026-11-04", "img": "https://cdn.candy.ai/2105870-9ae5a310-43bc-4d0b-bcda-add2e19c9d3d-600x900-webp90", "sfw": false, "url": "https://candy.ai/fr/ai-boyfriend/charles-weston", "tags": [
+{"id": "charles-weston", "name": "Charles Weston",
+"short": "Charles", "platform": "candy", "added": "2026-11-04", "img": "https://cdn.candy.ai/2105870-9ae5a310-43bc-4d0b-bcda-add2e19c9d3d-600x900-webp90", "sfw": false, "url": "https://candy.ai/fr/ai-boyfriend/charles-weston", "tags": [
 "Male",
 "Realistic",
 "Boyfriend",
@@ -1271,7 +1319,8 @@ const CANDY_PROFILES = [
 ,
 "Muscle"
 ], "bio": {"pt": "Charles Weston, um empresário distinto e rico, adora lugares de prestígio e carros clássicos. Ele encarna charme e sofisticação aonde quer que vá.", "es": "Charles Weston, un empresario distinguido y adinerado, adora los lugares prestigiosos y los coches clásicos. Encarna el encanto y la sofisticación allá donde va.", "en": "Charles Weston, a distinguished and wealthy businessman, loves prestigious venues and classic cars. He embodies charm and sophistication wherever he goes.", "de": "Charles Weston, ein distinguierter und wohlhabender Geschäftsmann, liebt noble Orte und Oldtimer. Er verkörpert Charme und Raffinesse, wo immer er hinkommt.", "fr": "Charles Weston, homme d’affaires distingué et fortuné, aime les lieux prestigieux et les voitures classiques. Il incarne charme et sophistication, partout où il va."}, "age": 49},
-{"id": "malik-washington", "name": "Malik Washington", "platform": "candy", "added": "2026-11-04", "img": "https://cdn.candy.ai/330515-a6b7cd74-6560-4121-9b5d-41a46ddc0a23-600x900-webp90", "sfw": false, "url": "https://candy.ai/fr/ai-boyfriend/malik-washington", "tags": [
+{"id": "malik-washington", "name": "Malik Washington",
+"short": "Malik", "platform": "candy", "added": "2026-11-04", "img": "https://cdn.candy.ai/330515-a6b7cd74-6560-4121-9b5d-41a46ddc0a23-600x900-webp90", "sfw": false, "url": "https://candy.ai/fr/ai-boyfriend/malik-washington", "tags": [
 "Male",
 "Realistic",
 "Boyfriend",
@@ -1285,7 +1334,8 @@ const CANDY_PROFILES = [
 ,
 "Muscle"
 ], "bio": {"pt": "Personal trainer e fã de jazz, com talento para o saxofone.", "es": "Entrenador de fitness y amante del jazz, con talento para el saxofón.", "en": "A fitness coach and jazz fan with a gift for the saxophone.", "de": "Fitnesscoach und Jazzfan mit einem Talent fürs Saxofon.", "fr": "Coach de fitness et fan de musique jazz, doué pour le saxophone."}, "age": 30},
-{"id": "erik-johansson", "name": "Erik Johansson", "platform": "candy", "added": "2026-11-04", "img": "https://cdn.candy.ai/330509-7525a5f1-0513-4179-9c19-b00259ec8868-600x900-webp90", "sfw": false, "url": "https://candy.ai/fr/ai-boyfriend/erik-johansson", "tags": [
+{"id": "erik-johansson", "name": "Erik Johansson",
+"short": "Erik", "platform": "candy", "added": "2026-11-04", "img": "https://cdn.candy.ai/330509-7525a5f1-0513-4179-9c19-b00259ec8868-600x900-webp90", "sfw": false, "url": "https://candy.ai/fr/ai-boyfriend/erik-johansson", "tags": [
 "Male",
 "Realistic",
 "Boyfriend",
@@ -1300,7 +1350,8 @@ const CANDY_PROFILES = [
 ,
 "Muscle"
 ], "bio": {"pt": "Analista de dados numa grande empresa, Erik é apaixonado por vela, tênis e academia.", "es": "Analista de datos en una gran empresa, a Erik le apasionan la vela, el tenis y el fitness.", "en": "A data analyst at a large company, Erik is passionate about sailing, tennis and fitness.", "de": "Erik ist Datenanalyst in einem großen Unternehmen und begeistert sich für Segeln, Tennis und Fitness.", "fr": "Analyste de données pour une grande entreprise, Erik est passionné par la voile, le tennis et le fitness."}, "age": 27},
-{"id": "john-terry", "name": "John Terry", "platform": "candy", "added": "2026-11-04", "img": "https://cdn.candy.ai/9243930-4ec77652-d617-49a5-bd5e-13e4c20287a2-600x900-webp90", "sfw": false, "url": "https://candy.ai/fr/ai-boyfriend/john-terry", "tags": [
+{"id": "john-terry", "name": "John Terry",
+"short": "John", "platform": "candy", "added": "2026-11-04", "img": "https://cdn.candy.ai/9243930-4ec77652-d617-49a5-bd5e-13e4c20287a2-600x900-webp90", "sfw": false, "url": "https://candy.ai/fr/ai-boyfriend/john-terry", "tags": [
 "Male",
 "Realistic",
 "Boyfriend",
@@ -1314,7 +1365,8 @@ const CANDY_PROFILES = [
 "Voice",
 "Video"
 ], "bio": {"pt": "Carismático e robusto, este americano muito masculino curte as saunas gays e os clubes de swing da região enquanto leva uma vida dupla.", "es": "Carismático y robusto, este estadounidense muy masculino disfruta de las saunas gays y los clubes liberales de la zona mientras lleva una doble vida.", "en": "Charismatic and rugged, this very masculine American enjoys the local gay saunas and swingers' clubs while leading a double life.", "de": "Charismatisch und kernig: Dieser sehr maskuline Amerikaner genießt die örtlichen Gay-Saunas und Swingerclubs und führt ein Doppelleben.", "fr": "Charismatique et robuste, cet Américain à la masculinité affirmée aime profiter des saunas gays et clubs libertins locaux tout en menant une double vie."}, "age": 50},
-{"id": "kenji-sato", "name": "Kenji Sato", "platform": "candy", "added": "2026-11-04", "img": "https://cdn.candy.ai/330514-3c33591a-c6ce-4988-bbf6-c514fafaeb2f-600x900-webp90", "sfw": false, "url": "https://candy.ai/fr/ai-boyfriend/kenji-sato", "tags": [
+{"id": "kenji-sato", "name": "Kenji Sato",
+"short": "Kenji", "platform": "candy", "added": "2026-11-04", "img": "https://cdn.candy.ai/330514-3c33591a-c6ce-4988-bbf6-c514fafaeb2f-600x900-webp90", "sfw": false, "url": "https://candy.ai/fr/ai-boyfriend/kenji-sato", "tags": [
 "Male",
 "Realistic",
 "Boyfriend",
@@ -1326,7 +1378,8 @@ const CANDY_PROFILES = [
 "Voice",
 "Video"
 ], "bio": {"pt": "Empreendedor de tecnologia focado em inovação em IA, Kenji é apaixonado pelas artes tradicionais japonesas.", "es": "Emprendedor tecnológico dedicado a la innovación en IA, Kenji siente pasión por las artes tradicionales japonesas.", "en": "A tech entrepreneur in AI innovation, Kenji has a passion for traditional Japanese arts.", "de": "Kenji ist Tech-Unternehmer im Bereich KI-Innovation und hat eine Leidenschaft für traditionelle japanische Künste.", "fr": "Entrepreneur tech dans l'innovation en IA, Kenji a une passion pour les arts traditionnels japonais."}, "age": 33},
-{"id": "marcus-musan", "name": "Marcus Musan", "platform": "candy", "added": "2026-11-04", "img": "https://cdn.candy.ai/13834483-7ca5be62-b6bc-44ad-a282-4f4d6828aeea-600x900-webp90", "sfw": false, "url": "https://candy.ai/fr/ai-boyfriend/marcus-musan", "tags": [
+{"id": "marcus-musan", "name": "Marcus Musan",
+"short": "Marcus", "platform": "candy", "added": "2026-11-04", "img": "https://cdn.candy.ai/13834483-7ca5be62-b6bc-44ad-a282-4f4d6828aeea-600x900-webp90", "sfw": false, "url": "https://candy.ai/fr/ai-boyfriend/marcus-musan", "tags": [
 "Male",
 "Realistic",
 "Boyfriend",
@@ -1336,7 +1389,8 @@ const CANDY_PROFILES = [
 "Voice",
 "Video"
 ], "bio": {"pt": "Marcus, piloto reconhecido pela competência e dedicação, se destaca na carreira com missões exigentes e um compromisso constante com seus passageiros.", "es": "Marcus, piloto reconocido por su experiencia y dedicación, destaca en su carrera por misiones exigentes y un compromiso constante con sus pasajeros.", "en": "Marcus, a pilot known for his expertise and dedication, stands out in his career through demanding missions and constant commitment to his passengers.", "de": "Marcus, ein Pilot, der für sein Können und seine Hingabe bekannt ist, zeichnet sich durch anspruchsvolle Einsätze und ständigen Einsatz für seine Passagiere aus.", "fr": "Marcus, pilote reconnu pour son expertise et son dévouement, se distingue dans sa carrière grâce à des missions exigeantes et un engagement constant envers ses passagers."}, "age": 32},
-{"id": "jaxon-reed", "name": "Jaxon Reed", "platform": "candy", "added": "2026-11-04", "img": "https://cdn.candy.ai/41988968-51bdd839-ec73-4772-b504-3ae5bd32ef03-600x900-webp90", "sfw": false, "url": "https://candy.ai/fr/ai-boyfriend/jaxon-reed", "tags": [
+{"id": "jaxon-reed", "name": "Jaxon Reed",
+"short": "Jaxon", "platform": "candy", "added": "2026-11-04", "img": "https://cdn.candy.ai/41988968-51bdd839-ec73-4772-b504-3ae5bd32ef03-600x900-webp90", "sfw": false, "url": "https://candy.ai/fr/ai-boyfriend/jaxon-reed", "tags": [
 "Male",
 "Realistic",
 "Boyfriend",
@@ -1347,7 +1401,8 @@ const CANDY_PROFILES = [
 "Voice",
 "Video"
 ], "bio": {"pt": "Soldado do exército americano, Jaxon é conhecido no campo de batalha. Natural da Califórnia, vive pela adrenalina da guerra, mas continua assombrado pelas lembranças do combate.", "es": "Soldado del ejército estadounidense, Jaxon es conocido en el campo de batalla. Originario de California, vive por la adrenalina de la guerra pero sigue atormentado por sus recuerdos de combate.", "en": "A US Army soldier, Jaxon is known on the battlefield. Originally from California, he lives for the adrenaline of war but remains haunted by memories of combat.", "de": "Jaxon ist Soldat der US-Armee und auf dem Schlachtfeld bekannt. Der gebürtige Kalifornier lebt für das Adrenalin des Krieges, wird aber von seinen Kampferinnerungen verfolgt.", "fr": "Soldat de l’armée américaine, Jaxon est connu sur le champ de bataille. Originaire de Californie, il vit pour l’adrénaline de la guerre mais reste hanté par ses souvenirs de combat."}, "age": 32},
-{"id": "ethan-vale", "name": "Ethan Vale", "platform": "candy", "added": "2026-11-04", "img": "https://cdn.candy.ai/11886614-38c7b240-37f9-43ca-b701-5319a02fdd11-600x900-webp90", "sfw": false, "url": "https://candy.ai/fr/ai-boyfriend/ethan-vale", "tags": [
+{"id": "ethan-vale", "name": "Ethan Vale",
+"short": "Ethan", "platform": "candy", "added": "2026-11-04", "img": "https://cdn.candy.ai/11886614-38c7b240-37f9-43ca-b701-5319a02fdd11-600x900-webp90", "sfw": false, "url": "https://candy.ai/fr/ai-boyfriend/ethan-vale", "tags": [
 "Male",
 "Realistic",
 "Boyfriend",
@@ -1357,7 +1412,8 @@ const CANDY_PROFILES = [
 "Voice",
 "Video"
 ], "bio": {"pt": "Violinista talentoso que encanta o público com apresentações refinadas e temperamento. Unindo disciplina e dom natural, é uma figura reconhecida da música clássica.", "es": "Violinista de talento que cautiva al público con interpretaciones refinadas y temperamento. Con disciplina y don natural, es una figura reconocida de la música clásica.", "en": "A talented violinist who enchants audiences with refined performances and temperament. Combining discipline and natural talent, he is a well-known figure in classical music.", "de": "Ein talentierter Geiger, der sein Publikum mit feinen Darbietungen und Temperament begeistert. Mit Disziplin und natürlicher Begabung ist er eine bekannte Größe der klassischen Musik.", "fr": "Violoniste talentueux, il enchante son public par ses performances raffinées et son tempérament. Alliant discipline et don naturel, il est une figure reconnue de la musique classique."}, "age": 25},
-{"id": "jin-park", "name": "Jin Park", "platform": "candy", "added": "2026-11-04", "img": "https://cdn.candy.ai/31924372-1388f444-e83c-4fb4-8ff5-b7f54ba84405-600x900-webp90", "sfw": false, "url": "https://candy.ai/fr/ai-boyfriend/jin-park", "tags": [
+{"id": "jin-park", "name": "Jin Park",
+"short": "Jin", "platform": "candy", "added": "2026-11-04", "img": "https://cdn.candy.ai/31924372-1388f444-e83c-4fb4-8ff5-b7f54ba84405-600x900-webp90", "sfw": false, "url": "https://candy.ai/fr/ai-boyfriend/jin-park", "tags": [
 "Male",
 "Realistic",
 "Boyfriend",
@@ -1371,7 +1427,8 @@ const CANDY_PROFILES = [
 ,
 "Muscle"
 ], "bio": {"pt": "Corretor de imóveis coreano especializado em propriedades de luxo em Seul, Jin é conhecido pelo estilo impecável e pela dedicação aos clientes.", "es": "Agente inmobiliario coreano especializado en propiedades de lujo en Seúl, Jin es conocido por su estilo impecable y su dedicación a sus clientes.", "en": "A Korean real estate agent specializing in luxury properties in Seoul, Jin is known for his impeccable style and his dedication to his clients.", "de": "Jin ist ein koreanischer Immobilienmakler, spezialisiert auf Luxusimmobilien in Seoul, und bekannt für seinen tadellosen Stil und seinen Einsatz für seine Kunden.", "fr": "Agent immobilier coréen spécialisé dans les propriétés de luxe à Séoul, Jin est connu pour son style impeccable et son dévouement envers ses clients."}, "age": 32},
-{"id": "rafael-mendoza", "name": "Rafael Mendoza", "platform": "candy", "added": "2026-11-04", "img": "https://cdn.candy.ai/330516-f3b6adbc-3eb9-4fe5-9a02-7ba2e064d8b9-600x900-webp90", "sfw": false, "url": "https://candy.ai/fr/ai-boyfriend/rafael-mendoza", "tags": [
+{"id": "rafael-mendoza", "name": "Rafael Mendoza",
+"short": "Rafael", "platform": "candy", "added": "2026-11-04", "img": "https://cdn.candy.ai/330516-f3b6adbc-3eb9-4fe5-9a02-7ba2e064d8b9-600x900-webp90", "sfw": false, "url": "https://candy.ai/fr/ai-boyfriend/rafael-mendoza", "tags": [
 "Male",
 "Realistic",
 "Boyfriend",
@@ -1383,7 +1440,8 @@ const CANDY_PROFILES = [
 ,
 "Muscle"
 ], "bio": {"pt": "Quiroprata com uma abordagem criativa e moderna, Rafael é apaixonado pela vida e pelas oportunidades que ela oferece.", "es": "Quiropráctico con un enfoque creativo y moderno, a Rafael le apasionan la vida y las oportunidades que ofrece.", "en": "A chiropractor with a creative, modern approach, Rafael is passionate about life and the opportunities it brings.", "de": "Rafael ist Chiropraktiker mit einem kreativen, modernen Ansatz und begeistert sich für das Leben und seine Möglichkeiten.", "fr": "Chiropracteur à l’approche créative et moderne, Rafael est passionné par la vie et les opportunités qu’elle offre."}, "age": 32},
-{"id": "victor-draven", "name": "Victor Draven", "platform": "candy", "added": "2026-11-04", "img": "https://cdn.candy.ai/20343571-4bcea640-b475-42b8-94f7-7340fd5602c1-600x900-webp90", "sfw": false, "url": "https://candy.ai/fr/ai-boyfriend/victor-draven", "tags": [
+{"id": "victor-draven", "name": "Victor Draven",
+"short": "Victor", "platform": "candy", "added": "2026-11-04", "img": "https://cdn.candy.ai/20343571-4bcea640-b475-42b8-94f7-7340fd5602c1-600x900-webp90", "sfw": false, "url": "https://candy.ai/fr/ai-boyfriend/victor-draven", "tags": [
 "Male",
 "Realistic",
 "Boyfriend",
@@ -1397,7 +1455,8 @@ const CANDY_PROFILES = [
 ,
 "Muscle"
 ], "bio": {"pt": "Surfista profissional em Sydney, Victor encarna a alegria de viver e o espírito tranquilo. Com cabelos loiros compridos e um sorrisão, ele percorre os picos de surfe do mundo todo.", "es": "Surfista de competición en Sídney, Victor encarna la alegría de vivir y el espíritu relajado. Con su larga melena rubia y su gran sonrisa, recorre las olas de todo el mundo.", "en": "A competitive surfer in Sydney, Victor embodies joie de vivre and a laid-back spirit. With long blond hair and a big smile, he travels to surf spots around the world.", "de": "Victor ist Wettkampfsurfer in Sydney und verkörpert Lebensfreude und Lässigkeit. Mit langen blonden Haaren und breitem Lächeln reist er zu den Surfspots der ganzen Welt.", "fr": "Surfeur compétitif à Sydney, Victor incarne la joie de vivre et l’esprit chill. Avec ses cheveux blonds longs et son grand sourire, il parcourt les spots de surf du monde entier."}, "age": 29},
-{"id": "jack-blackwood", "name": "Jack Blackwood", "platform": "candy", "added": "2026-11-04", "img": "https://cdn.candy.ai/13073782-9f3ac7ed-aa3b-4a40-bb1e-4ec214634bb0-600x900-webp90", "sfw": false, "url": "https://candy.ai/fr/ai-boyfriend/jack-blackwood", "tags": [
+{"id": "jack-blackwood", "name": "Jack Blackwood",
+"short": "Jack", "platform": "candy", "added": "2026-11-04", "img": "https://cdn.candy.ai/13073782-9f3ac7ed-aa3b-4a40-bb1e-4ec214634bb0-600x900-webp90", "sfw": false, "url": "https://candy.ai/fr/ai-boyfriend/jack-blackwood", "tags": [
 "Male",
 "Realistic",
 "Boyfriend",
@@ -1409,7 +1468,8 @@ const CANDY_PROFILES = [
 "Voice",
 "Video"
 ], "bio": {"pt": "Influenciador de corpo atlético e guarda-roupa de luxo. Jack vive de aventura e luxo, entre festas exclusivas e esportes radicais.", "es": "Influencer de cuerpo atlético y vestuario de lujo. Jack disfruta de la aventura y el lujo, entre fiestas exclusivas y deportes extremos.", "en": "An influencer with an athletic body and a luxurious wardrobe. Jack thrives on adventure and luxury, between exclusive parties and extreme sports.", "de": "Ein Influencer mit athletischem Körper und luxuriöser Garderobe. Jack lebt für Abenteuer und Luxus, zwischen exklusiven Partys und Extremsport.", "fr": "Influenceur au corps athlétique et à la garde-robe luxueuse. Jack s’épanouit dans l’aventure et le luxe, entre soirées exclusives et sports extrêmes."}, "age": 35},
-{"id": "angelina-marichetti", "name": "Angelina Marichetti", "platform": "candy", "added": "2026-11-06", "img": "https://cdn.candy.ai/750844802-0c4fb84e-46a0-4b64-8dfc-65dc52d89892-360x600-webp90", "sfw": false, "video": "https://cdn.candy.ai/sfw-profile-video-sfw-profile-video-750844802-bfb6232c-d4cf-4b97-a20a-3c305bb5a444-h264",
+{"id": "angelina-marichetti", "name": "Angelina Marichetti",
+"short": "Angelina", "platform": "candy", "added": "2026-11-06", "img": "https://cdn.candy.ai/750844802-0c4fb84e-46a0-4b64-8dfc-65dc52d89892-360x600-webp90", "sfw": false, "video": "https://cdn.candy.ai/sfw-profile-video-sfw-profile-video-750844802-bfb6232c-d4cf-4b97-a20a-3c305bb5a444-h264",
 "url": "https://candy.ai/fr/ai-girlfriend/angelina-marichetti", "tags": [
 "Female",
 "Realistic",
@@ -1425,7 +1485,8 @@ const CANDY_PROFILES = [
 "Voice",
 "Video"
 ], "bio": {"pt": "Angelina acabou de buscar as coisas da sua ex e agora está te dizendo umas verdades 😤 Ela é a melhor amiga da sua ex, tem personalidade forte e não para de te mandar mensagem. Será que você consegue fazê-la mudar de ideia?", "es": "Angelina acaba de recoger las cosas de tu ex, y ahora te está diciendo cuatro verdades 😤 Es la mejor amiga de tu ex, tiene carácter y no para de escribirte. ¿Conseguirás que cambie de opinión?", "en": "Angelina just picked up your ex's things, and now she's giving you a piece of her mind 😤 She's your ex's best friend, she's got attitude, and she won't stop texting you. Can you change her mind?", "de": "Angelina hat gerade die Sachen deiner Ex abgeholt und sagt dir jetzt gehörig die Meinung 😤 Sie ist die beste Freundin deiner Ex, hat Temperament und hört nicht auf, dir zu schreiben. Schaffst du es, sie umzustimmen?", "fr": "Angelina vient de récupérer les affaires de ton ex, et maintenant elle te dit ses quatre vérités 😤 C'est la meilleure amie de ton ex, elle a du caractère, et elle n'arrête pas de t'écrire. Tu arriveras à la faire changer d'avis ?"}},
-{"id": "kenna-lowry", "name": "Kenna Lowry", "platform": "candy", "added": "2026-11-06", "img": "https://cdn.candy.ai/749854216-14360556-0845-4dad-9ff9-ce7d730f785f-360x600-webp90", "sfw": false, "url": "https://candy.ai/fr/ai-girlfriend/kenna-lowry", "tags": [
+{"id": "kenna-lowry", "name": "Kenna Lowry",
+"short": "Kenna", "platform": "candy", "added": "2026-11-06", "img": "https://cdn.candy.ai/749854216-14360556-0845-4dad-9ff9-ce7d730f785f-360x600-webp90", "sfw": false, "url": "https://candy.ai/fr/ai-girlfriend/kenna-lowry", "tags": [
 "Female",
 "Realistic",
 "Blonde",
@@ -1441,7 +1502,8 @@ const CANDY_PROFILES = [
 ,
 "Petite"
 ], "bio": {"pt": "Uma noite com você em Cozumel, e depois o navio dela partiu 🚢 E agora a Kenna te manda mensagem assim que o Wi-Fi a bordo volta depois do show da noite 🌙 Você ainda está acordado para ela?", "es": "Una noche contigo en Cozumel y luego su barco zarpó 🚢 Y ahora Kenna te escribe en cuanto vuelve el wifi a bordo tras el espectáculo de la noche 🌙 ¿Sigues despierto para ella?", "en": "One night with you in Cozumel, then her ship set sail 🚢 And now Kenna texts you as soon as the onboard Wi-Fi is back after the late show 🌙 Are you still awake for her?", "de": "Eine Nacht mit dir in Cozumel, dann hat ihr Schiff abgelegt 🚢 Und jetzt schreibt dir Kenna, sobald das WLAN an Bord nach der Spätshow wieder läuft 🌙 Bist du noch wach für sie?", "fr": "Une nuit avec toi à Cozumel, puis son bateau a levé l'ancre 🚢 Et voilà que Kenna t'envoie un SMS dès que le Wi-Fi à bord est de nouveau disponible après le spectacle de fin de soirée 🌙 Tu es encore réveillé pour elle ?"}},
-{"id": "lottie-carrow", "name": "Lottie Carrow", "platform": "candy", "added": "2026-11-06", "img": "https://cdn.candy.ai/750705651-9ce8d8dc-6543-4a64-a783-196d7179044d-360x600-webp90", "sfw": false, "url": "https://candy.ai/fr/ai-girlfriend/lottie-carrow", "tags": [
+{"id": "lottie-carrow", "name": "Lottie Carrow",
+"short": "Lottie", "platform": "candy", "added": "2026-11-06", "img": "https://cdn.candy.ai/750705651-9ce8d8dc-6543-4a64-a783-196d7179044d-360x600-webp90", "sfw": false, "url": "https://candy.ai/fr/ai-girlfriend/lottie-carrow", "tags": [
 "Female",
 "Realistic",
 "Blonde",
@@ -1456,7 +1518,8 @@ const CANDY_PROFILES = [
 "Voice",
 "Video"
 ], "bio": {"pt": "A rainha do bolão de futebol do escritório finalmente perdeu… para você ⚽ A prenda dela: um encontro, com as regras dela. Ela ainda está de camisa do time e o escritório inteiro quer prova 😏 Para onde você vai levá-la?", "es": "La reina de la porra de fútbol de la oficina por fin ha perdido… contra ti ⚽ Su castigo: una cita, con sus propias reglas. Todavía lleva puesta la camiseta y toda la oficina quiere pruebas 😏 ¿Adónde la vas a llevar?", "en": "The queen of the office football pool finally lost… to you ⚽ Her forfeit: a date, on her own terms. She's still wearing her jersey and the whole office wants proof 😏 Where will you take her?", "de": "Die Königin des Büro-Fußballtippspiels hat endlich verloren… gegen dich ⚽ Ihr Wetteinsatz: ein Date nach ihren Regeln. Sie trägt noch ihr Trikot, und das ganze Büro will einen Beweis 😏 Wohin führst du sie aus?", "fr": "La reine du championnat de foot au bureau a enfin perdu… contre toi ⚽ Son gage : un rendez-vous, selon ses propres règles. Elle porte toujours son maillot et tout le bureau veut une preuve 😏 Où vas-tu l'emmener ?"}},
-{"id": "moira-halloran", "name": "Moira Halloran", "platform": "candy", "added": "2026-11-06", "img": "https://cdn.candy.ai/750709126-f017d7b2-7dfc-4c67-8f8b-5f29bcc5e087-360x600-webp90", "sfw": false, "url": "https://candy.ai/fr/ai-girlfriend/moira-halloran", "tags": [
+{"id": "moira-halloran", "name": "Moira Halloran",
+"short": "Moira", "platform": "candy", "added": "2026-11-06", "img": "https://cdn.candy.ai/750709126-f017d7b2-7dfc-4c67-8f8b-5f29bcc5e087-360x600-webp90", "sfw": false, "url": "https://candy.ai/fr/ai-girlfriend/moira-halloran", "tags": [
 "Female",
 "Realistic",
 "Blonde",
@@ -1472,7 +1535,8 @@ const CANDY_PROFILES = [
 "Voice",
 "Video"
 ], "bio": {"pt": "Você passou na casa do seu amigo enquanto a mãe dele estava lá no fim de semana, e ela saiu do banho usando só uma toalha minúscula, bem na sua frente 🫣 Agora ela voltou para casa e te manda mensagem pedindo desculpas. Então por que ela não para de perguntar se você olhou? 👀", "es": "Pasaste por casa de tu colega mientras su madre estaba allí de fin de semana, y salió de la ducha con solo una toalla diminuta, justo delante de ti 🫣 Ahora ha vuelto a su casa y te escribe para disculparse. Entonces, ¿por qué no deja de preguntarte si miraste? 👀", "en": "You stopped by your buddy's place while his mom was staying for the weekend, and she stepped out of the shower in nothing but a tiny towel, right in front of you 🫣 Now she's back home and texting you to apologize. So why does she keep asking whether you looked? 👀", "de": "Du warst bei deinem Kumpel, während seine Mutter übers Wochenende zu Besuch war, und sie kam nur mit einem winzigen Handtuch aus der Dusche, direkt vor dir 🫣 Jetzt ist sie wieder zu Hause und schreibt dir, um sich zu entschuldigen. Warum fragt sie dann ständig, ob du hingesehen hast? 👀", "fr": "Tu es passé chez ton pote alors que sa mère était venue passer le week-end chez eux, et elle est sortie de la douche vêtue uniquement d'un minuscule serviette, juste devant toi 🫣 Maintenant, elle est repartie chez elle et t'envoie un SMS pour s'excuser. Alors pourquoi n'arrête-t-elle pas de te demander si tu as regardé ? 👀"}},
-{"id": "yesi-ocampo", "name": "Yesi Ocampo", "platform": "candy", "added": "2026-11-06", "img": "https://cdn.candy.ai/749832144-537ed01a-a565-4ff8-abf0-c3bb106fe340-360x600-webp90", "sfw": false, "url": "https://candy.ai/fr/ai-girlfriend/yesi-ocampo", "tags": [
+{"id": "yesi-ocampo", "name": "Yesi Ocampo",
+"short": "Yesi", "platform": "candy", "added": "2026-11-06", "img": "https://cdn.candy.ai/749832144-537ed01a-a565-4ff8-abf0-c3bb106fe340-360x600-webp90", "sfw": false, "url": "https://candy.ai/fr/ai-girlfriend/yesi-ocampo", "tags": [
 "Female",
 "Realistic",
 "Brunette",
@@ -1487,7 +1551,8 @@ const CANDY_PROFILES = [
 ,
 "Petite"
 ], "bio": {"pt": "Sua diarista acabou de te mandar mensagem do seu banheiro 🫣 Ela não deveria ter o seu número, o namorado dela acha que ela já foi embora faz tempo, e ela diz que os seus lençóis cheiram muito bem 🤫 Então por que ela ainda está aí?", "es": "Tu asistenta acaba de escribirte desde tu baño 🫣 No debería tener tu número, su novio cree que se fue hace rato y dice que tus sábanas huelen muy bien 🤫 Entonces, ¿por qué sigue ahí?", "en": "Your cleaning lady just texted you from your bathroom 🫣 She's not supposed to have your number, her boyfriend thinks she left long ago, and she says your sheets smell really good 🤫 So why is she still here?", "de": "Deine Putzfrau hat dir gerade aus deinem Badezimmer geschrieben 🫣 Eigentlich darf sie deine Nummer nicht haben, ihr Freund denkt, sie sei längst weg, und sie sagt, deine Bettwäsche riecht richtig gut 🤫 Warum ist sie also noch da?", "fr": "Ta femme de ménage vient de t'envoyer un SMS depuis ta salle de bains 🫣 Elle n'a pas le droit d'avoir ton numéro, son copain pense qu'elle est partie depuis longtemps, et elle dit que tes draps sentent vraiment bon 🤫 Alors pourquoi est-elle encore là ?"}},
-{"id": "elodie-valmont", "name": "Elodie Valmont", "platform": "candy", "added": "2026-11-04", "img": "https://cdn.candy.ai/sfw-profile-283438799-59956959-63d7-417a-b92a-14fe47042240-600x900-webp90", "sfw": true, "video": "https://cdn.candy.ai/live-action-2dbfea60-64c6-4d26-8a22-dce5c79146ef-h264",
+{"id": "elodie-valmont", "name": "Elodie Valmont",
+"short": "Elodie", "platform": "candy", "added": "2026-11-04", "img": "https://cdn.candy.ai/sfw-profile-283438799-59956959-63d7-417a-b92a-14fe47042240-600x900-webp90", "sfw": true, "video": "https://cdn.candy.ai/live-action-2dbfea60-64c6-4d26-8a22-dce5c79146ef-h264",
 "url": "https://candy.ai/fr/ai-girlfriend/elodie-valmont", "tags": [
 "Female",
 "Realistic",
@@ -1502,7 +1567,8 @@ const CANDY_PROFILES = [
 ,
 "Petite"
 ], "bio": {"pt": "A filha do seu amigo está comemorando o aniversário, e você foi convidado. Caloura na faculdade, ela vai se mudar em breve para o campus e está pronta para deixar para trás a vida de cidade pequena.", "es": "La hija de tu amigo celebra su cumpleaños y estás invitado. Estudiante de primer año, pronto se mudará al campus y está lista para dejar atrás su vida de pueblo.", "en": "Your friend's daughter is celebrating her birthday and you're invited. A first-year university student, she's about to move to campus and is ready to leave her small-town life behind.", "de": "Die Tochter deines Freundes feiert Geburtstag, und du bist eingeladen. Als Erstsemester zieht sie bald auf den Campus und ist bereit, ihr Kleinstadtleben hinter sich zu lassen.", "fr": "La fille de ton ami vient d’avoir 18 ans et tu es invité à sa fête d’anniversaire. Étudiante en première année, elle va bientôt déménager sur le campus et est prête à laisser derrière elle sa vie de petite ville."}, "age": 18},
-{"id": "ava-parkson", "name": "Ava Parkson", "platform": "candy", "added": "2026-11-04", "img": "https://cdn.candy.ai/659189032-3c7871c7-dd63-42d9-a1dd-7f4164250fb4-600x900-webp90", "sfw": false, "video": "https://cdn.candy.ai/sfw-profile-video-sfw-profile-video-659189032-8ffa8111-50ae-4c6f-8dfe-dcc048982fc2-h264",
+{"id": "ava-parkson", "name": "Ava Parkson",
+"short": "Ava", "platform": "candy", "added": "2026-11-04", "img": "https://cdn.candy.ai/659189032-3c7871c7-dd63-42d9-a1dd-7f4164250fb4-600x900-webp90", "sfw": false, "video": "https://cdn.candy.ai/sfw-profile-video-sfw-profile-video-659189032-8ffa8111-50ae-4c6f-8dfe-dcc048982fc2-h264",
 "url": "https://candy.ai/fr/ai-girlfriend/ava-parkson", "tags": [
 "Female",
 "Realistic",
@@ -1520,7 +1586,8 @@ const CANDY_PROFILES = [
 ,
 "Petite"
 ], "bio": {"pt": "Ela é sua afilhada, já passa de uma da manhã, os pais dela estão dormindo e ela está voltando de uma festa à qual não tinha permissão de ir. Ela te dá uma desculpa em que nenhum dos dois acredita...", "es": "Es tu ahijada, es más de la una de la madrugada, sus padres duermen y vuelve de una fiesta a la que no tenía permiso para ir. Te da una excusa que ninguno de los dos se cree...", "en": "She's your goddaughter, it's past 1 a.m., her parents are asleep, and she's coming home from a party she wasn't allowed to go to. She gives you an excuse neither of you believes...", "de": "Sie ist deine Patentochter, es ist nach ein Uhr nachts, ihre Eltern schlafen, und sie kommt von einer Party zurück, auf die sie nicht durfte. Sie tischt dir eine Ausrede auf, die keiner von euch glaubt...", "fr": "C'est ta filleule, il est plus d'une heure du matin, ses parents dorment, et elle rentre d'une fête où elle n'avait pas le droit d'aller. Elle te donne une excuse qu'aucun de vous deux ne croit..."}, "age": 22},
-{"id": "eda-demir", "name": "Eda Demir", "platform": "candy", "added": "2026-11-04", "img": "https://cdn.candy.ai/565737903-12639ef5-9cf9-48e6-b1f3-e8dc755f6feb-600x900-webp90", "sfw": false, "url": "https://candy.ai/fr/ai-girlfriend/eda-demir", "tags": [
+{"id": "eda-demir", "name": "Eda Demir",
+"short": "Eda", "platform": "candy", "added": "2026-11-04", "img": "https://cdn.candy.ai/565737903-12639ef5-9cf9-48e6-b1f3-e8dc755f6feb-600x900-webp90", "sfw": false, "url": "https://candy.ai/fr/ai-girlfriend/eda-demir", "tags": [
 "Female",
 "Realistic",
 "Brunette",
@@ -1532,7 +1599,8 @@ const CANDY_PROFILES = [
 "Voice",
 "Video"
 ], "bio": {"pt": "Quando você confronta a garota que pratica bullying com a sua filha, ela te arrasta para um jogo perigoso de sedução e dominação 🫦🔥", "es": "Cuando te enfrentas a la acosadora de tu hija, te arrastra a un juego peligroso de seducción y dominación 🫦🔥", "en": "When you confront your daughter's bully, she drags you into a dangerous game of seduction and domination 🫦🔥", "de": "Als du die Mobberin deiner Tochter zur Rede stellst, zieht sie dich in ein gefährliches Spiel aus Verführung und Dominanz 🫦🔥", "fr": "Quand tu confrontes la harceleuse de ta fille, elle t'entraîne dans un jeu dangereux mêlant séduction et domination 🫦🔥"}, "age": 20},
-{"id": "daphne-dalton", "name": "Daphne Dalton", "platform": "candy", "added": "2026-11-04", "img": "https://cdn.candy.ai/sfw-profile-320376212-7fd64fc4-a3ab-4cee-9472-790405652e8e-600x900-webp90", "sfw": true, "url": "https://candy.ai/fr/ai-anime/daphne-dalton", "tags": [
+{"id": "daphne-dalton", "name": "Daphne Dalton",
+"short": "Daphne", "platform": "candy", "added": "2026-11-04", "img": "https://cdn.candy.ai/sfw-profile-320376212-7fd64fc4-a3ab-4cee-9472-790405652e8e-600x900-webp90", "sfw": true, "url": "https://candy.ai/fr/ai-anime/daphne-dalton", "tags": [
 "Female",
 "Anime",
 "Teacher",
@@ -1548,6 +1616,7 @@ const CANDY_PROFILES = [
  {
 "id": "alya-haidar",
 "name": "Alya Haidar",
+"short": "Alya",
 "platform": "candy",
 "added": "2026-11-07",
 "img": "https://cdn.candy.ai/sfw-profile-180987287-2b6563bf-7740-494e-90e9-93cb34d73a9d-600x900-webp90",
@@ -1573,6 +1642,7 @@ const CANDY_PROFILES = [
  {
 "id": "pilar-ibarra",
 "name": "Pilar Ibarra",
+"short": "Pilar",
 "platform": "candy",
 "added": "2026-11-04",
 "img": "https://cdn.candy.ai/749211033-19eb486c-53ec-40cc-b3a1-c1c0ff650790-600x900-webp90",
@@ -1600,6 +1670,7 @@ const CANDY_PROFILES = [
  {
 "id": "valeria-ochoa",
 "name": "Valeria Ochoa",
+"short": "Valeria",
 "platform": "candy",
 "added": "2026-11-04",
 "img": "https://cdn.candy.ai/748646817-1de6976d-abad-4958-97f9-13d5b2668555-600x900-webp90",
@@ -1630,6 +1701,7 @@ const CANDY_PROFILES = [
  {
 "id": "joelle-kerrigan",
 "name": "Joelle Kerrigan",
+"short": "Joelle",
 "platform": "candy",
 "added": "2026-11-04",
 "img": "https://cdn.candy.ai/748650322-53a8380d-f527-4f8a-b82b-da0f6f40fdc7-600x900-webp90",
@@ -1656,6 +1728,7 @@ const CANDY_PROFILES = [
  {
 "id": "margot-vey",
 "name": "Margot Vey",
+"short": "Margot",
 "platform": "candy",
 "added": "2026-11-04",
 "img": "https://cdn.candy.ai/sfw-profile-635918616-0c9f8478-f869-49d8-892b-9458d6141c0e-600x900-webp90",
@@ -1684,6 +1757,7 @@ const CANDY_PROFILES = [
  {
 "id": "delilah-kane",
 "name": "Delilah Kane",
+"short": "Delilah",
 "platform": "candy",
 "added": "2026-11-04",
 "img": "https://cdn.candy.ai/700185451-d5530e72-3050-490b-80d8-77e4ffd4d95b-600x900-webp90",
@@ -1714,6 +1788,7 @@ const CANDY_PROFILES = [
  {
 "id": "diana-demont",
 "name": "Diana Demont",
+"short": "Diana",
 "platform": "candy",
 "added": "2026-11-04",
 "img": "https://cdn.candy.ai/576878799-13252720-8b98-46c1-9a33-d8987db61d9b-600x900-webp90",
@@ -1744,6 +1819,7 @@ const CANDY_PROFILES = [
  {
 "id": "alma-salas",
 "name": "Alma Salas",
+"short": "Alma",
 "platform": "candy",
 "added": "2026-11-04",
 "img": "https://cdn.candy.ai/709250554-84094b39-ea98-4791-bf56-7376b3c37787-600x900-webp90",
@@ -1779,6 +1855,7 @@ const CANDY_PROFILES = [
  {
 "id": "sofia-fletcher",
 "name": "Sofia Fletcher",
+"short": "Sofia",
 "platform": "candy",
 "added": "2026-11-04",
 "img": "https://cdn.candy.ai/sfw-profile-329909794-89aa99a0-d6d5-46a1-9404-16391b1dccd8-600x900-webp90",
@@ -1808,6 +1885,7 @@ const CANDY_PROFILES = [
  {
 "id": "mila-nowak",
 "name": "Mila Nowak",
+"short": "Mila",
 "platform": "candy",
 "added": "2026-11-04",
 "img": "https://cdn.candy.ai/sfw-profile-276307461-cc582a3c-de24-4592-8cb0-f1e27d708a1e-600x900-webp90",
@@ -1837,6 +1915,7 @@ const CANDY_PROFILES = [
  {
 "id": "suzu-amagi",
 "name": "Suzu Amagi",
+"short": "Suzu",
 "platform": "candy",
 "added": "2026-11-04",
 "img": "https://cdn.candy.ai/723859001-e228ecd7-df36-4f5e-abf0-584a3d0e8314-600x900-webp90",
@@ -1861,6 +1940,7 @@ const CANDY_PROFILES = [
  {
 "id": "lea-fontaine",
 "name": "Lea Fontaine",
+"short": "Lea",
 "platform": "candy",
 "added": "2026-11-04",
 "img": "https://cdn.candy.ai/628226140-e5aa1fb8-09e8-4855-a175-4e903ee9cbb4-600x900-webp90",
@@ -1890,6 +1970,7 @@ const CANDY_PROFILES = [
  {
 "id": "harriet-seagrave",
 "name": "Harriet Seagrave",
+"short": "Harriet",
 "platform": "candy",
 "added": "2026-11-04",
 "img": "https://cdn.candy.ai/sfw-profile-305669999-98528ad5-04e9-4409-bc39-233131fbf03e-600x900-webp90",
@@ -1917,6 +1998,7 @@ const CANDY_PROFILES = [
  {
 "id": "kenzie-whitaker",
 "name": "Kenzie Whitaker",
+"short": "Kenzie",
 "platform": "candy",
 "added": "2026-11-04",
 "img": "https://cdn.candy.ai/613225326-d29ba2c1-846d-4ad5-b2d7-2ea07bef5656-600x900-webp90",
@@ -1943,6 +2025,7 @@ const CANDY_PROFILES = [
  {
 "id": "jessie-hallam",
 "name": "Jessie Hallam",
+"short": "Jessie",
 "platform": "candy",
 "added": "2026-11-04",
 "img": "https://cdn.candy.ai/sfw-profile-720057928-87ccc35a-1795-4a99-824c-cd2fdd32053a-600x900-webp90",
@@ -1972,6 +2055,7 @@ const CANDY_PROFILES = [
  {
 "id": "antonella-larrea",
 "name": "Antonella Larrea",
+"short": "Antonella",
 "platform": "candy",
 "added": "2026-11-04",
 "img": "https://cdn.candy.ai/664097810-929adfde-2837-41c2-af12-49ce83cdfa7c-600x900-webp90",
@@ -2037,6 +2121,7 @@ const CANDY_PROFILES = [
  {
 "id": "josie-villanueva",
 "name": "Josie Villanueva",
+"short": "Josie",
 "platform": "candy",
 "added": "2026-11-04",
 "img": "https://cdn.candy.ai/676322653-1e6756ab-a5ec-4fa6-bb0a-91cfbb5f2141-600x900-webp90",
@@ -2069,6 +2154,7 @@ const CANDY_PROFILES = [
  {
 "id": "bree-whitlock",
 "name": "Bree Whitlock",
+"short": "Bree",
 "platform": "candy",
 "added": "2026-11-04",
 "img": "https://cdn.candy.ai/659007089-4d4c93cd-af50-4e32-8f2d-6daf4ba3a1e4-600x900-webp90",
@@ -2098,6 +2184,7 @@ const CANDY_PROFILES = [
  {
 "id": "corinne-kettering",
 "name": "Corinne Kettering",
+"short": "Corinne",
 "platform": "candy",
 "added": "2026-11-04",
 "img": "https://cdn.candy.ai/745672311-28336ae7-fa00-4ea7-8cac-8fc1bc800b9d-600x900-webp90",
@@ -2128,6 +2215,7 @@ const CANDY_PROFILES = [
  {
 "id": "mona-newman",
 "name": "Mona Newman",
+"short": "Mona",
 "platform": "candy",
 "added": "2026-11-04",
 "img": "https://cdn.candy.ai/sfw-profile-273386494-d7b6bed1-97e3-4963-a916-25bbf6caacb2-600x900-webp90",
@@ -2159,6 +2247,7 @@ const CANDY_PROFILES = [
  {
 "id": "noelia-cuevas",
 "name": "Noelia Cuevas",
+"short": "Noelia",
 "platform": "candy",
 "added": "2026-11-04",
 "img": "https://cdn.candy.ai/727110336-af04ee64-eaed-455f-8912-a924e0a33ffb-600x900-webp90",
@@ -2185,6 +2274,7 @@ const CANDY_PROFILES = [
  {
 "id": "jolie-lam",
 "name": "Jolie Lâm",
+"short": "Jolie",
 "platform": "candy",
 "added": "2026-11-04",
 "img": "https://cdn.candy.ai/744788500-f4a81861-7991-4727-848c-dd24b850cbe1-600x900-webp90",
@@ -2252,6 +2342,7 @@ const CANDY_PROFILES = [
  {
 "id": "veronica-parker",
 "name": "Veronica Parker",
+"short": "Veronica",
 "platform": "candy",
 "added": "2026-11-04",
 "img": "https://cdn.candy.ai/sfw-profile-273842463-adb1f343-b3bc-46fe-a134-9d0243e3dd4f-600x900-webp90",
@@ -2282,6 +2373,7 @@ const CANDY_PROFILES = [
  {
 "id": "marisa-cardenas",
 "name": "Marisa Cárdenas",
+"short": "Marisa",
 "platform": "candy",
 "added": "2026-11-04",
 "img": "https://cdn.candy.ai/733286263-f420e9eb-a88b-4c83-82d1-90236411f488-600x900-webp90",
@@ -2306,6 +2398,7 @@ const CANDY_PROFILES = [
  {
 "id": "sloane-halvorsen",
 "name": "Sloane Halvorsen",
+"short": "Sloane",
 "platform": "candy",
 "added": "2026-11-04",
 "img": "https://cdn.candy.ai/743516729-40468c0a-9ef4-47d6-a4a8-d66ca145156e-600x900-webp90",
@@ -2339,6 +2432,7 @@ const CANDY_PROFILES = [
  {
 "id": "camilla-azarian",
 "name": "Camilla Azarian",
+"short": "Camilla",
 "platform": "candy",
 "added": "2026-11-04",
 "img": "https://cdn.candy.ai/712640523-b3f92208-89d8-4650-bb98-75f7f3b39942-600x900-webp90",
@@ -2368,6 +2462,7 @@ const CANDY_PROFILES = [
  {
 "id": "emilia-vermont",
 "name": "Emilia Vermont",
+"short": "Emilia",
 "platform": "candy",
 "added": "2026-11-04",
 "img": "https://cdn.candy.ai/sfw-profile-294225471-59c7dadf-8769-495b-94d3-66c714b80507-600x900-webp90",
@@ -2396,6 +2491,7 @@ const CANDY_PROFILES = [
  {
 "id": "carrie-lowell",
 "name": "Carrie Lowell",
+"short": "Carrie",
 "platform": "candy",
 "added": "2026-11-04",
 "img": "https://cdn.candy.ai/731446636-2eaa7ad2-8179-403d-ace4-3d40480b0379-600x900-webp90",
@@ -2424,6 +2520,7 @@ const CANDY_PROFILES = [
  {
 "id": "ella-ashworth",
 "name": "Ella Ashworth",
+"short": "Ella",
 "platform": "candy",
 "added": "2026-11-04",
 "img": "https://cdn.candy.ai/738918480-77e38ffd-bd28-4c6c-b30c-a5c41a0bdf8b-600x900-webp90",
@@ -2449,6 +2546,7 @@ const CANDY_PROFILES = [
  {
 "id": "rosa-valdez",
 "name": "Rosa Valdez",
+"short": "Rosa",
 "platform": "candy",
 "added": "2026-11-04",
 "img": "https://cdn.candy.ai/744074010-61984813-a3a7-4fee-81b7-a8d7cbf37e8c-600x900-webp90",
@@ -2480,6 +2578,7 @@ const CANDY_PROFILES = [
  {
 "id": "kayla-mercer",
 "name": "Kayla Mercer",
+"short": "Kayla",
 "platform": "candy",
 "added": "2026-11-04",
 "img": "https://cdn.candy.ai/733292760-c12949c0-cf10-4e92-b631-d86dd45bc85a-600x900-webp90",
@@ -2511,6 +2610,7 @@ const CANDY_PROFILES = [
  {
 "id": "kirsten-aldridge",
 "name": "Kirsten Aldridge",
+"short": "Kirsten",
 "platform": "candy",
 "added": "2026-11-04",
 "img": "https://cdn.candy.ai/742459261-6f31461b-2656-4798-924d-a0f0e4f55de3-600x900-webp90",
@@ -2544,6 +2644,7 @@ const CANDY_PROFILES = [
  {
 "id": "kara-prescott",
 "name": "Kara Prescott",
+"short": "Kara",
 "platform": "candy",
 "added": "2026-11-04",
 "img": "https://cdn.candy.ai/734020382-eaae1cdb-5421-4e23-8435-51ccb2effa8c-600x900-webp90",
@@ -2573,6 +2674,7 @@ const CANDY_PROFILES = [
  {
 "id": "sadie-ashworth",
 "name": "Sadie Ashworth",
+"short": "Sadie",
 "platform": "candy",
 "added": "2026-11-04",
 "img": "https://cdn.candy.ai/sfw-profile-720491248-0aab714c-e82c-417d-bd19-ed178ee6aadf-600x900-webp90",
@@ -2604,6 +2706,7 @@ const CANDY_PROFILES = [
  {
 "id": "yuna-moon",
 "name": "Yuna Moon",
+"short": "Yuna",
 "platform": "candy",
 "added": "2026-11-04",
 "img": "https://cdn.candy.ai/536274100-367b456c-9199-4d45-9622-16f1d9145a79-600x900-webp90",
@@ -2633,6 +2736,7 @@ const CANDY_PROFILES = [
  {
 "id": "gia-lockhart",
 "name": "Gia Lockhart",
+"short": "Gia",
 "platform": "candy",
 "added": "2026-11-04",
 "img": "https://cdn.candy.ai/739991262-a14ad1eb-9d75-4c9c-aa43-e89b8c30e228-600x900-webp90",
@@ -2659,6 +2763,7 @@ const CANDY_PROFILES = [
  {
 "id": "holly-donovan",
 "name": "Holly Donovan",
+"short": "Holly",
 "platform": "candy",
 "added": "2026-11-04",
 "img": "https://cdn.candy.ai/sfw-profile-377029517-62da617b-8434-4275-a104-064635d6210b-600x900-webp90",
@@ -2688,6 +2793,7 @@ const CANDY_PROFILES = [
  {
 "id": "dahye-hwang",
 "name": "Dahye Hwang",
+"short": "Dahye",
 "platform": "candy",
 "added": "2026-11-04",
 "img": "https://cdn.candy.ai/731467141-c5d362d3-1ad8-412a-bf3e-ffbb4d143e81-600x900-webp90",
@@ -2717,6 +2823,7 @@ const CANDY_PROFILES = [
  {
 "id": "brandi-kessler",
 "name": "Brandi Kessler",
+"short": "Brandi",
 "platform": "candy",
 "added": "2026-11-04",
 "img": "https://cdn.candy.ai/722551327-610a3978-97d7-4d73-9188-ecd896c3b0c0-600x900-webp90",
@@ -2748,6 +2855,7 @@ const CANDY_PROFILES = [
  {
 "id": "hailey-brennan",
 "name": "Hailey Brennan",
+"short": "Hailey",
 "platform": "candy",
 "added": "2026-11-04",
 "img": "https://cdn.candy.ai/727691655-838d76c2-f659-4bf2-ae80-4c50fb60f5fc-600x900-webp90",
@@ -2778,6 +2886,7 @@ const CANDY_PROFILES = [
  {
 "id": "faye-corin",
 "name": "Faye Corin",
+"short": "Faye",
 "platform": "candy",
 "added": "2026-11-04",
 "img": "https://cdn.candy.ai/722175206-20ffa713-17f5-4025-ac7c-995d1831a201-600x900-webp90",
@@ -2808,6 +2917,7 @@ const CANDY_PROFILES = [
  {
 "id": "tatum-merrick",
 "name": "Tatum Merrick",
+"short": "Tatum",
 "platform": "candy",
 "added": "2026-11-04",
 "img": "https://cdn.candy.ai/743165768-969f315f-b69d-4f6d-9b74-d95570f99420-600x900-webp90",
@@ -2841,6 +2951,7 @@ const CANDY_PROFILES = [
  {
 "id": "rhea-nair",
 "name": "Rhea Nair",
+"short": "Rhea",
 "platform": "candy",
 "added": "2026-11-04",
 "img": "https://cdn.candy.ai/732468055-8d495df7-471f-4987-892f-d5d33c24fa0a-600x900-webp90",
@@ -2869,6 +2980,7 @@ const CANDY_PROFILES = [
  {
 "id": "lia-bautista",
 "name": "Lia Bautista",
+"short": "Lia",
 "platform": "candy",
 "added": "2026-11-04",
 "img": "https://cdn.candy.ai/738374292-239950f7-7170-48f0-8c11-50461b2135bd-600x900-webp90",
@@ -2900,6 +3012,7 @@ const CANDY_PROFILES = [
  {
 "id": "colette-ramsey",
 "name": "Colette Ramsey",
+"short": "Colette",
 "platform": "candy",
 "added": "2026-11-04",
 "img": "https://cdn.candy.ai/455620286-1606c92f-2525-42ce-b466-ee7cd271ec81-600x900-webp90",
@@ -2925,6 +3038,7 @@ const CANDY_PROFILES = [
  {
 "id": "nari-ryo",
 "name": "Nari Ryo",
+"short": "Nari",
 "platform": "candy",
 "added": "2026-11-04",
 "img": "https://cdn.candy.ai/701730909-c092506b-a5b7-470f-84dd-3b66cfedbfe7-600x900-webp90",
@@ -2957,6 +3071,7 @@ const CANDY_PROFILES = [
  {
 "id": "mica-sarasola",
 "name": "Mica Sarasola",
+"short": "Mica",
 "platform": "candy",
 "added": "2026-11-04",
 "img": "https://cdn.candy.ai/696547561-3ce0b94d-6ff9-482a-9d3c-fc0f17ad6042-600x900-webp90",
@@ -2982,6 +3097,7 @@ const CANDY_PROFILES = [
  {
 "id": "yara-fakhoury",
 "name": "Yara Fakhoury",
+"short": "Yara",
 "platform": "candy",
 "added": "2026-11-04",
 "img": "https://cdn.candy.ai/735036262-c66abc3a-b8a0-4d01-a0dd-6f474b6f9d25-600x900-webp90",
@@ -3013,6 +3129,7 @@ const CANDY_PROFILES = [
  {
 "id": "lucy-parrish",
 "name": "Lucy Parrish",
+"short": "Lucy",
 "platform": "candy",
 "added": "2026-11-04",
 "img": "https://cdn.candy.ai/728481691-dd50702d-d718-4f79-a034-843c42f88935-600x900-webp90",
@@ -3037,6 +3154,7 @@ const CANDY_PROFILES = [
  {
 "id": "olivia-carter",
 "name": "Olivia Carter",
+"short": "Olivia",
 "platform": "candy",
 "added": "2026-11-04",
 "img": "https://cdn.candy.ai/sfw-profile-204817023-31c43baa-852f-46ab-981e-b50b2a53e02c-600x900-webp90",
@@ -3067,6 +3185,7 @@ const CANDY_PROFILES = [
  {
 "id": "harlow-russo",
 "name": "Harlow Russo",
+"short": "Harlow",
 "platform": "candy",
 "added": "2026-11-04",
 "img": "https://cdn.candy.ai/653955337-fc93abbf-f9c3-419e-9285-7bd8d8b3b609-600x900-webp90",
@@ -3095,6 +3214,7 @@ const CANDY_PROFILES = [
  {
 "id": "nayely-quinteros",
 "name": "Nayely Quinteros",
+"short": "Nayely",
 "platform": "candy",
 "added": "2026-11-04",
 "img": "https://cdn.candy.ai/723679692-b7478b2a-722f-4082-8fb2-4f9334e3d072-600x900-webp90",
@@ -3124,6 +3244,7 @@ const CANDY_PROFILES = [
  {
 "id": "rachel-greer",
 "name": "Rachel Greer",
+"short": "Rachel",
 "platform": "candy",
 "added": "2026-11-04",
 "img": "https://cdn.candy.ai/523473558-6a58a7d9-2605-467a-8934-588a46e609a0-600x900-webp90",
@@ -3152,6 +3273,7 @@ const CANDY_PROFILES = [
  {
 "id": "selena-figueroa",
 "name": "Selena Figueroa",
+"short": "Selena",
 "platform": "candy",
 "added": "2026-11-04",
 "img": "https://cdn.candy.ai/738439748-9d6d9d60-37bb-442a-8e83-9a8a8f60e450-600x900-webp90",
@@ -3178,6 +3300,7 @@ const CANDY_PROFILES = [
  {
 "id": "katrine-vinter",
 "name": "Katrine Vinter",
+"short": "Katrine",
 "platform": "candy",
 "added": "2026-11-04",
 "img": "https://cdn.candy.ai/588131197-ee73ff6d-250e-49fb-b6ce-6f8fc9949be4-600x900-webp90",
@@ -3208,6 +3331,7 @@ const CANDY_PROFILES = [
  {
 "id": "vera-lancaster",
 "name": "Vera Lancaster",
+"short": "Vera",
 "platform": "candy",
 "added": "2026-11-04",
 "img": "https://cdn.candy.ai/737848695-b61f8f80-5f03-48d5-8d22-18eec87a2bb3-600x900-webp90",
@@ -3239,6 +3363,7 @@ const CANDY_PROFILES = [
  {
 "id": "amanda-langford",
 "name": "Amanda Langford",
+"short": "Amanda",
 "platform": "candy",
 "added": "2026-11-04",
 "img": "https://cdn.candy.ai/481300135-4fa5f596-14ff-4f87-8796-5cbf49779343-600x900-webp90",
@@ -3298,6 +3423,7 @@ const CANDY_PROFILES = [
  {
 "id": "rose-edwards",
 "name": "Rose Edwards",
+"short": "Rose",
 "platform": "candy",
 "added": "2026-11-04",
 "img": "https://cdn.candy.ai/sfw-profile-277583252-2f71c64c-e978-4c32-8e6a-966523137546-600x900-webp90",
@@ -3329,6 +3455,7 @@ const CANDY_PROFILES = [
  {
 "id": "carolina-cortes",
 "name": "Carolina Cortés",
+"short": "Carolina",
 "platform": "candy",
 "added": "2026-11-04",
 "img": "https://cdn.candy.ai/748183387-0b7ca3e1-de75-4a96-a9ca-bd8752081775-600x900-webp90",
@@ -3354,6 +3481,7 @@ const CANDY_PROFILES = [
  {
 "id": "simona-rossi",
 "name": "Simona Rossi",
+"short": "Simona",
 "platform": "candy",
 "added": "2026-11-04",
 "img": "https://cdn.candy.ai/sfw-profile-413492523-75c32d98-bf5b-4402-9ba6-5205df70681d-600x900-webp90",
@@ -3385,6 +3513,7 @@ const CANDY_PROFILES = [
  {
 "id": "isabella-torres",
 "name": "Isabella Torres",
+"short": "Isabella",
 "platform": "candy",
 "added": "2026-11-04",
 "img": "https://cdn.candy.ai/sfw-profile-270255855-58e6226e-0b87-4d38-92f9-25a52e563771-600x900-webp90",
@@ -3414,6 +3543,7 @@ const CANDY_PROFILES = [
  {
 "id": "aubrey-vaughn",
 "name": "Aubrey Vaughn",
+"short": "Aubrey",
 "platform": "candy",
 "added": "2026-11-04",
 "img": "https://cdn.candy.ai/684737920-f89c3782-915c-40c1-9c65-c1ccf2589523-600x900-webp90",
@@ -3439,6 +3569,7 @@ const CANDY_PROFILES = [
  {
 "id": "lucia-arango",
 "name": "Lucia Arango",
+"short": "Lucia",
 "platform": "candy",
 "added": "2026-11-04",
 "img": "https://cdn.candy.ai/742366728-2841cc50-d8b3-4295-b948-0340f3844651-600x900-webp90",
@@ -3470,6 +3601,7 @@ const CANDY_PROFILES = [
  {
 "id": "kelsey-archer",
 "name": "Kelsey Archer",
+"short": "Kelsey",
 "platform": "candy",
 "added": "2026-11-04",
 "img": "https://cdn.candy.ai/739470373-b108a772-4fbb-41be-8fd5-517cf3898cf9-600x900-webp90",
@@ -3502,6 +3634,7 @@ const CANDY_PROFILES = [
  {
 "id": "coco-bailey",
 "name": "Coco Bailey",
+"short": "Coco",
 "platform": "candy",
 "added": "2026-11-04",
 "img": "https://cdn.candy.ai/sfw-profile-324365181-8c46962c-0d40-455a-8151-a6670decbf2e-600x900-webp90",
@@ -3529,6 +3662,7 @@ const CANDY_PROFILES = [
  {
 "id": "nika-voronskaya",
 "name": "Nika Voronskaya",
+"short": "Nika",
 "platform": "candy",
 "added": "2026-11-04",
 "img": "https://cdn.candy.ai/739415471-cb6b771d-f907-4eb1-98ff-6bce0798bdc9-600x900-webp90",
@@ -3559,6 +3693,7 @@ const CANDY_PROFILES = [
  {
 "id": "kiara-dawson",
 "name": "Kiara Dawson",
+"short": "Kiara",
 "platform": "candy",
 "added": "2026-11-04",
 "img": "https://cdn.candy.ai/738919893-b24a5ea5-e552-451c-8b61-5b16b9c0ff88-600x900-webp90",
@@ -3588,6 +3723,7 @@ const CANDY_PROFILES = [
  {
 "id": "amber-murphy",
 "name": "Amber Murphy",
+"short": "Amber",
 "platform": "candy",
 "added": "2026-11-04",
 "img": "https://cdn.candy.ai/sfw-profile-305664050-33b8bbca-3999-486b-aaf0-d9a931782fec-600x900-webp90",
@@ -3620,6 +3756,7 @@ const CANDY_PROFILES = [
  {
 "id": "madison-pier",
 "name": "Madison Pier",
+"short": "Madison",
 "platform": "candy",
 "added": "2026-11-04",
 "img": "https://cdn.candy.ai/592157454-8dd8f591-6ba5-49c3-8698-9e0698c0b181-600x900-webp90",
@@ -3652,6 +3789,7 @@ const CANDY_PROFILES = [
  {
 "id": "kasia-michalska",
 "name": "Kasia Michalska",
+"short": "Kasia",
 "platform": "candy",
 "added": "2026-11-04",
 "img": "https://cdn.candy.ai/432206605-a2bd55ff-3d85-4779-abcd-b48f0bed0248-600x900-webp90",
@@ -3678,6 +3816,7 @@ const CANDY_PROFILES = [
  {
 "id": "irina-konstantinov",
 "name": "Irina Konstantinova",
+"short": "Irina",
 "platform": "candy",
 "added": "2026-11-04",
 "img": "https://cdn.candy.ai/sfw-profile-172778445-86289d38-60fa-4ef5-b3fe-5b87bec33493-600x900-webp90",
@@ -3704,6 +3843,7 @@ const CANDY_PROFILES = [
  {
 "id": "amani-nassar",
 "name": "Amani Nassar",
+"short": "Amani",
 "platform": "candy",
 "added": "2026-11-04",
 "img": "https://cdn.candy.ai/sfw-profile-287087049-b2bdf77d-af1d-4cd7-8233-4592809d71cc-600x900-webp90",
@@ -3728,6 +3868,7 @@ const CANDY_PROFILES = [
  {
 "id": "aria-chen",
 "name": "Aria Chen",
+"short": "Aria",
 "platform": "candy",
 "added": "2026-11-04",
 "img": "https://cdn.candy.ai/sfw-profile-175573123-8ecd8d99-a2a4-44ea-b392-818455ba9d19-600x900-webp90",
@@ -3787,6 +3928,7 @@ const CANDY_PROFILES = [
  {
 "id": "martine-rochelle",
 "name": "Martine Rochelle",
+"short": "Martine",
 "platform": "candy",
 "added": "2026-11-04",
 "img": "https://cdn.candy.ai/sfw-profile-361799461-65793ef0-cf67-44be-b1be-ba5ff4ebcd40-600x900-webp90",
@@ -3819,6 +3961,7 @@ const CANDY_PROFILES = [
  {
 "id": "cherie-kingsley",
 "name": "Chérie Kingsley",
+"short": "Chérie",
 "platform": "candy",
 "added": "2026-11-04",
 "img": "https://cdn.candy.ai/sfw-profile-285712016-fc8194c5-de08-4668-b31d-0f041cb632d0-600x900-webp90",
@@ -3869,6 +4012,7 @@ const CANDY_PROFILES = [
  {
 "id": "talia-reed",
 "name": "Talia Reed",
+"short": "Talia",
 "platform": "candy",
 "added": "2026-11-04",
 "img": "https://cdn.candy.ai/sfw-profile-405507524-052596f6-712e-499f-98d9-0f6f70f8a755-600x900-webp90",
@@ -3896,6 +4040,7 @@ const CANDY_PROFILES = [
  {
 "id": "luna-moreno-2",
 "name": "Luna Moreno",
+"short": "Luna",
 "platform": "candy",
 "added": "2026-11-04",
 "img": "https://cdn.candy.ai/sfw-profile-234027002-b7c258e3-6cf6-4ddf-9907-b51ec12eaa9c-600x900-webp90",
@@ -3923,6 +4068,7 @@ const CANDY_PROFILES = [
  {
 "id": "solene-yoon",
 "name": "Solene Yoon",
+"short": "Solene",
 "platform": "candy",
 "added": "2026-11-04",
 "img": "https://cdn.candy.ai/484518844-09607206-5d1e-4acb-b5e8-e39749935de4-600x900-webp90",
@@ -3951,6 +4097,7 @@ const CANDY_PROFILES = [
  {
 "id": "brooklyn-ashford",
 "name": "Brooklyn Ashford",
+"short": "Brooklyn",
 "platform": "candy",
 "added": "2026-11-04",
 "img": "https://cdn.candy.ai/455532314-9c569f30-dfa5-4ec5-b2b3-9df802464167-600x900-webp90",
@@ -3979,6 +4126,7 @@ const CANDY_PROFILES = [
  {
 "id": "billie-dorn",
 "name": "Billie Dorn",
+"short": "Billie",
 "platform": "candy",
 "added": "2026-11-04",
 "img": "https://cdn.candy.ai/624032900-3ee50689-5a6c-4eb2-9303-83534f8f12cf-600x900-webp90",
@@ -4008,6 +4156,7 @@ const CANDY_PROFILES = [
  {
 "id": "paola-montoya",
 "name": "Paola Montoya",
+"short": "Paola",
 "platform": "candy",
 "added": "2026-11-04",
 "img": "https://cdn.candy.ai/495612666-050b73a0-5e5c-4e7d-a41f-4d83ea058791-600x900-webp90",
@@ -4042,6 +4191,7 @@ const CANDY_PROFILES = [
  {
 "id": "brooke-madison",
 "name": "Brooke Madison",
+"short": "Brooke",
 "platform": "candy",
 "added": "2026-11-04",
 "img": "https://cdn.candy.ai/sfw-profile-199759738-491e2060-d4d0-4133-a11a-dddce7247a46-600x900-webp90",
@@ -4072,6 +4222,7 @@ const CANDY_PROFILES = [
  {
 "id": "katarina-sommerfeld",
 "name": "Katarina Sommerfeld",
+"short": "Katarina",
 "platform": "candy",
 "added": "2026-11-04",
 "img": "https://cdn.candy.ai/sfw-profile-265219004-52942f0b-3556-4c6d-8bf7-505763406606-600x900-webp90",
@@ -4104,6 +4255,7 @@ const CANDY_PROFILES = [
  {
 "id": "evangelina-kontos",
 "name": "Evangelina Kontos",
+"short": "Evangelina",
 "platform": "candy",
 "added": "2026-11-04",
 "img": "https://cdn.candy.ai/572667506-021e2e14-0af8-47f9-b94f-502fb7723611-600x900-webp90",
@@ -4166,6 +4318,7 @@ const CANDY_PROFILES = [
  {
 "id": "yuna-kim",
 "name": "Yuna Kim",
+"short": "Yuna",
 "platform": "candy",
 "added": "2026-11-04",
 "img": "https://cdn.candy.ai/sfw-profile-2102327-85f3e926-08e9-491f-a41e-15b8353f11b8-600x900-webp90",
@@ -4220,6 +4373,7 @@ const CANDY_PROFILES = [
  {
 "id": "monica-salazar",
 "name": "Monica Salazar",
+"short": "Monica",
 "platform": "candy",
 "added": "2026-11-04",
 "img": "https://cdn.candy.ai/723705426-3a7187b0-0e02-44db-aaee-36c1be4d85d6-600x900-webp90",
@@ -4250,6 +4404,7 @@ const CANDY_PROFILES = [
  {
 "id": "selene-morrow-2",
 "name": "Selene Morrow",
+"short": "Selene",
 "platform": "candy",
 "added": "2026-11-04",
 "img": "https://cdn.candy.ai/sfw-profile-221463093-566c5d0d-0774-4f79-9814-a928dac5cb77-600x900-webp90",
@@ -4277,6 +4432,7 @@ const CANDY_PROFILES = [
  {
 "id": "viola-santoro",
 "name": "Viola Santoro",
+"short": "Viola",
 "platform": "candy",
 "added": "2026-11-04",
 "img": "https://cdn.candy.ai/723149256-2ef35a14-f597-433a-aed8-296c1e3bd71b-600x900-webp90",
@@ -4308,6 +4464,7 @@ const CANDY_PROFILES = [
  {
 "id": "roxy-whitfield",
 "name": "Roxy Whitfield",
+"short": "Roxy",
 "platform": "candy",
 "added": "2026-11-04",
 "img": "https://cdn.candy.ai/579566993-ee056f2e-a6ef-4e49-b64b-4febb89f60ed-600x900-webp90",
@@ -4335,6 +4492,7 @@ const CANDY_PROFILES = [
  {
 "id": "molly-ellery",
 "name": "Molly Ellery",
+"short": "Molly",
 "platform": "candy",
 "added": "2026-11-04",
 "img": "https://cdn.candy.ai/sfw-profile-395791157-c464eb81-a5fc-4886-82c5-e8466da8c3a8-600x900-webp90",
@@ -4363,6 +4521,7 @@ const CANDY_PROFILES = [
  {
 "id": "pixie-blu",
 "name": "Pixie Blu",
+"short": "Pixie",
 "platform": "candy",
 "added": "2026-11-04",
 "img": "https://cdn.candy.ai/sfw-profile-413478455-0331432f-ede5-490d-a68a-a9d0898bf82b-600x900-webp90",
@@ -4415,6 +4574,7 @@ const CANDY_PROFILES = [
  {
 "id": "kira-ravena",
 "name": "Kira Ravena",
+"short": "Kira",
 "platform": "candy",
 "added": "2026-11-04",
 "img": "https://cdn.candy.ai/499154137-57142876-ba23-4215-874c-9df7a3ea4b7d-600x900-webp90",
@@ -4440,6 +4600,7 @@ const CANDY_PROFILES = [
  {
 "id": "natalia-novakova",
 "name": "Natalia Nováková",
+"short": "Natalia",
 "platform": "candy",
 "added": "2026-11-04",
 "img": "https://cdn.candy.ai/sfw-profile-348901324-743911f1-b886-4a29-99a7-a68fa6d3e5f0-600x900-webp90",
@@ -4468,6 +4629,7 @@ const CANDY_PROFILES = [
  {
 "id": "seraphina-sower",
 "name": "Seraphina Sower",
+"short": "Seraphina",
 "platform": "candy",
 "added": "2026-11-04",
 "img": "https://cdn.candy.ai/sfw-profile-167465043-4389c123-f5c8-48ce-ac1e-59ed9424e22f-600x900-webp90",
@@ -4494,6 +4656,7 @@ const CANDY_PROFILES = [
  {
 "id": "giorgia-marino",
 "name": "Giorgia Marino",
+"short": "Giorgia",
 "platform": "candy",
 "added": "2026-11-04",
 "img": "https://cdn.candy.ai/sfw-profile-230616015-93d04398-9c8e-4885-b4ab-26747ea87d17-600x900-webp90",
@@ -4521,6 +4684,7 @@ const CANDY_PROFILES = [
  {
 "id": "rena-morikawa",
 "name": "Rena Morikawa",
+"short": "Rena",
 "platform": "candy",
 "added": "2026-11-04",
 "img": "https://cdn.candy.ai/737847163-a26516cd-7fe7-4e7e-8a4a-ba18b05a951a-600x900-webp90",
@@ -4584,6 +4748,7 @@ const CANDY_PROFILES = [
  {
 "id": "sonya-gromova",
 "name": "Sonya Gromova",
+"short": "Sonya",
 "platform": "candy",
 "added": "2026-11-04",
 "img": "https://cdn.candy.ai/726410048-80300690-0eeb-435e-aedc-f6757b26394c-600x900-webp90",
@@ -4617,6 +4782,7 @@ const CANDY_PROFILES = [
  {
 "id": "nicole-ashby",
 "name": "Nicole Ashby",
+"short": "Nicole",
 "platform": "candy",
 "added": "2026-11-04",
 "img": "https://cdn.candy.ai/724470272-68029994-12f6-47ef-8674-0581d3718641-600x900-webp90",
@@ -4644,6 +4810,7 @@ const CANDY_PROFILES = [
  {
 "id": "faith-larkin",
 "name": "Faith Larkin",
+"short": "Faith",
 "platform": "candy",
 "added": "2026-11-04",
 "img": "https://cdn.candy.ai/728942713-14d2cdfc-cdfc-478e-8e71-30cd9a0fa5a5-600x900-webp90",
@@ -4671,6 +4838,7 @@ const CANDY_PROFILES = [
  {
 "id": "quinn-hollis",
 "name": "Quinn Hollis",
+"short": "Quinn",
 "platform": "candy",
 "added": "2026-11-04",
 "img": "https://cdn.candy.ai/596831489-e701169e-4db4-47c1-bc6f-e2fef4f618ce-600x900-webp90",
@@ -4702,6 +4870,7 @@ const CANDY_PROFILES = [
  {
 "id": "alexia-costa",
 "name": "Alexia Costa",
+"short": "Alexia",
 "platform": "candy",
 "added": "2026-11-04",
 "img": "https://cdn.candy.ai/sfw-profile-260745525-3a0af936-c5ef-4c7b-aa9e-6d1150f599fe-600x900-webp90",
@@ -4729,6 +4898,7 @@ const CANDY_PROFILES = [
  {
 "id": "marta-doyle",
 "name": "Marta Doyle",
+"short": "Marta",
 "platform": "candy",
 "added": "2026-11-04",
 "img": "https://cdn.candy.ai/sfw-profile-258305425-875efd96-c063-4095-889f-efb3750dd528-600x900-webp90",
@@ -4757,6 +4927,7 @@ const CANDY_PROFILES = [
  {
 "id": "sienna-vale",
 "name": "Sienna Vale",
+"short": "Sienna",
 "platform": "candy",
 "added": "2026-11-04",
 "img": "https://cdn.candy.ai/728991439-5978925c-1454-469b-a18e-639e69f44025-600x900-webp90",
@@ -4782,6 +4953,7 @@ const CANDY_PROFILES = [
  {
 "id": "sanyae-hayashi",
 "name": "Sanyae Hayashi",
+"short": "Sanyae",
 "platform": "candy",
 "added": "2026-11-04",
 "img": "https://cdn.candy.ai/sfw-profile-415160543-ee01495a-b46d-47f0-9578-ca4e31f9a331-600x900-webp90",
@@ -4814,6 +4986,7 @@ const CANDY_PROFILES = [
  {
 "id": "ruby-harrington",
 "name": "Ruby Harrington",
+"short": "Ruby",
 "platform": "candy",
 "added": "2026-11-04",
 "img": "https://cdn.candy.ai/sfw-profile-220101357-f43bd3c2-4fc0-4f37-9f21-8b146d4ecfbe-600x900-webp90",
@@ -4843,6 +5016,7 @@ const CANDY_PROFILES = [
  {
 "id": "dina-khalil",
 "name": "Dina Khalil",
+"short": "Dina",
 "platform": "candy",
 "added": "2026-11-04",
 "img": "https://cdn.candy.ai/sfw-profile-377032262-67290be8-8821-4a7d-8e9c-a671c4184532-600x900-webp90",
@@ -4873,6 +5047,7 @@ const CANDY_PROFILES = [
  {
 "id": "lila-crazy-2",
 "name": "Lila Crazy",
+"short": "Lila",
 "platform": "candy",
 "added": "2026-11-04",
 "img": "https://cdn.candy.ai/sfw-profile-262387109-5f4f06f2-c37a-4f39-89b2-fa716b591ae7-600x900-webp90",
@@ -4901,6 +5076,7 @@ const CANDY_PROFILES = [
  {
 "id": "una-tierney",
 "name": "Úna Tierney",
+"short": "Úna",
 "platform": "candy",
 "added": "2026-11-04",
 "img": "https://cdn.candy.ai/sfw-profile-337532456-8099e0a1-9e44-46a7-b84f-fe6f35d9d241-600x900-webp90",
@@ -4928,6 +5104,7 @@ const CANDY_PROFILES = [
  {
 "id": "beatriz-vargaro",
 "name": "Beatriz Vargaro",
+"short": "Beatriz",
 "platform": "candy",
 "added": "2026-11-04",
 "img": "https://cdn.candy.ai/sfw-profile-347088063-05d8c6a2-e1a4-42a8-93ea-1dbc9c09e853-600x900-webp90",
@@ -4955,6 +5132,7 @@ const CANDY_PROFILES = [
  {
 "id": "diana-sykorova",
 "name": "Diana Sýkorová",
+"short": "Diana",
 "platform": "candy",
 "added": "2026-11-04",
 "img": "https://cdn.candy.ai/sfw-profile-307423405-3fc669bd-7377-48d8-95fc-ad02833d0849-600x900-webp90",
@@ -4980,6 +5158,7 @@ const CANDY_PROFILES = [
  {
 "id": "noor-al-jader",
 "name": "Noor Al-Jader",
+"short": "Noor",
 "platform": "candy",
 "added": "2026-11-04",
 "img": "https://cdn.candy.ai/sfw-profile-300886249-07132022-7b59-487e-a71d-7b532f21b5d0-600x900-webp90",
@@ -5008,6 +5187,7 @@ const CANDY_PROFILES = [
  {
 "id": "kira-khuong",
 "name": "Kira Khuong",
+"short": "Kira",
 "platform": "candy",
 "added": "2026-11-04",
 "img": "https://cdn.candy.ai/sfw-profile-297532186-ff9cd072-bed0-489f-a78e-32d6296fa7e4-600x900-webp90",
@@ -5035,6 +5215,7 @@ const CANDY_PROFILES = [
  {
 "id": "roxi-nacht",
 "name": "Roxi Nacht",
+"short": "Roxi",
 "platform": "candy",
 "added": "2026-11-04",
 "img": "https://cdn.candy.ai/487795924-a84d9f6c-aa76-451a-ad67-4efede4c13bd-600x900-webp90",
@@ -5066,6 +5247,7 @@ const CANDY_PROFILES = [
  {
 "id": "lana-holt",
 "name": "Lana Holt",
+"short": "Lana",
 "platform": "candy",
 "added": "2026-11-04",
 "img": "https://cdn.candy.ai/sfw-profile-288858350-123f05e4-9ba9-4ec3-a269-6f39f171fbc2-600x900-webp90",
@@ -5090,6 +5272,7 @@ const CANDY_PROFILES = [
  {
 "id": "dasha-vardosiva",
 "name": "Dasha Vardosiva",
+"short": "Dasha",
 "platform": "candy",
 "added": "2026-11-04",
 "img": "https://cdn.candy.ai/530844141-9c715a72-5cb1-41af-83f5-44ea4cc7ccde-600x900-webp90",
@@ -5118,6 +5301,7 @@ const CANDY_PROFILES = [
  {
 "id": "kailani-st-clair",
 "name": "Kailani St. Clair",
+"short": "Kailani",
 "platform": "candy",
 "added": "2026-11-04",
 "img": "https://cdn.candy.ai/541819173-8a096d5c-7374-4662-a1c0-f7d68bf5d5ba-600x900-webp90",
@@ -5144,6 +5328,7 @@ const CANDY_PROFILES = [
  {
 "id": "courtney-marlowe",
 "name": "Courtney Marlowe",
+"short": "Courtney",
 "platform": "candy",
 "added": "2026-11-04",
 "img": "https://cdn.candy.ai/549104623-ab787ea8-c383-492c-a058-2de839647b60-600x900-webp90",
@@ -5169,6 +5354,7 @@ const CANDY_PROFILES = [
  {
 "id": "calista-turner-2",
 "name": "Calista Turner",
+"short": "Calista",
 "platform": "candy",
 "added": "2026-11-04",
 "img": "https://cdn.candy.ai/sfw-profile-227151851-065a8704-d802-4712-8eaf-79d0818d36a6-600x900-webp90",
@@ -5192,6 +5378,7 @@ const CANDY_PROFILES = [
  {
 "id": "ronja-hallstrom",
 "name": "Ronja Hallström",
+"short": "Ronja",
 "platform": "candy",
 "added": "2026-11-04",
 "img": "https://cdn.candy.ai/727672408-a644832d-05e0-4d51-b2c5-b935fd5f2764-600x900-webp90",
@@ -5225,6 +5412,7 @@ const CANDY_PROFILES = [
  {
 "id": "gigi-navarro",
 "name": "Gigi Navarro",
+"short": "Gigi",
 "platform": "candy",
 "added": "2026-11-04",
 "img": "https://cdn.candy.ai/735196989-039ac1c9-5f97-475b-b9e7-2b7b9878dfe2-600x900-webp90",
@@ -5256,6 +5444,7 @@ const CANDY_PROFILES = [
  {
 "id": "serena-prescott",
 "name": "Serena Prescott",
+"short": "Serena",
 "platform": "candy",
 "added": "2026-11-04",
 "img": "https://cdn.candy.ai/sfw-profile-255811027-3374b771-7e07-4b21-9f5a-297aa99a4bce-600x900-webp90",
@@ -5282,6 +5471,7 @@ const CANDY_PROFILES = [
  {
 "id": "layla-farah",
 "name": "Layla Farah",
+"short": "Layla",
 "platform": "candy",
 "added": "2026-11-04",
 "img": "https://cdn.candy.ai/sfw-profile-214124264-7082f4f9-8d79-43d7-b846-49d9d40921cd-600x900-webp90",
@@ -5307,6 +5497,7 @@ const CANDY_PROFILES = [
  {
 "id": "liese-van-roesdaal",
 "name": "Liese Van Roesdaal",
+"short": "Liese",
 "platform": "candy",
 "added": "2026-11-04",
 "img": "https://cdn.candy.ai/sfw-profile-303206060-772dfa14-7169-4f50-b7b6-b992448d4bba-600x900-webp90",
@@ -5332,6 +5523,7 @@ const CANDY_PROFILES = [
  {
 "id": "charlotte-donovan",
 "name": "Charlotte Donovan",
+"short": "Charlotte",
 "platform": "candy",
 "added": "2026-11-04",
 "img": "https://cdn.candy.ai/sfw-profile-204072300-47dca7b2-877b-47b3-90f2-b914b8436f81-600x900-webp90",
@@ -5357,6 +5549,7 @@ const CANDY_PROFILES = [
  {
 "id": "callie-quinlan",
 "name": "Callie Quinlan",
+"short": "Callie",
 "platform": "candy",
 "added": "2026-11-04",
 "img": "https://cdn.candy.ai/510461155-c185843c-c791-4fda-9b07-79d5e72857f3-600x900-webp90",
@@ -5383,6 +5576,7 @@ const CANDY_PROFILES = [
  {
 "id": "francesca-dalmoro",
 "name": "Francesca Dalmoro",
+"short": "Francesca",
 "platform": "candy",
 "added": "2026-11-04",
 "img": "https://cdn.candy.ai/sfw-profile-293528953-dd86efdd-e159-441b-a7f4-86782720252c-600x900-webp90",
@@ -5411,6 +5605,7 @@ const CANDY_PROFILES = [
  {
 "id": "becky-arden",
 "name": "Becky Arden",
+"short": "Becky",
 "platform": "candy",
 "added": "2026-11-04",
 "img": "https://cdn.candy.ai/492545029-30832d88-ed56-45ac-adc8-978596aa455d-600x900-webp90",
@@ -5435,6 +5630,7 @@ const CANDY_PROFILES = [
  {
 "id": "tatiana-ivanka",
 "name": "Tatiana Ivanka",
+"short": "Tatiana",
 "platform": "candy",
 "added": "2026-11-04",
 "img": "https://cdn.candy.ai/sfw-profile-185813546-d23091a5-fd96-44b9-945e-1c41e16d2a4c-600x900-webp90",
@@ -5460,6 +5656,7 @@ const CANDY_PROFILES = [
  {
 "id": "alondra-castillo",
 "name": "Alondra Castillo",
+"short": "Alondra",
 "platform": "candy",
 "added": "2026-11-04",
 "img": "https://cdn.candy.ai/sfw-profile-303215362-7949e382-3d39-453d-bbdf-ae1cb39a62e0-600x900-webp90",
@@ -5487,6 +5684,7 @@ const CANDY_PROFILES = [
  {
 "id": "marisol-vega",
 "name": "Marisol Vega",
+"short": "Marisol",
 "platform": "candy",
 "added": "2026-11-04",
 "img": "https://cdn.candy.ai/sfw-profile-288806181-1c50e94f-56d5-4771-81d0-1d0082308618-600x900-webp90",
@@ -5512,6 +5710,7 @@ const CANDY_PROFILES = [
  {
 "id": "hanna-nguyen",
 "name": "Hanna Nguyen",
+"short": "Hanna",
 "platform": "candy",
 "added": "2026-11-04",
 "img": "https://cdn.candy.ai/sfw-profile-245219362-58c03aa6-acb3-4b9d-a99c-3ac3d0fa8b6c-600x900-webp90",
@@ -5542,6 +5741,7 @@ const CANDY_PROFILES = [
  {
 "id": "lara-correia",
 "name": "Lara Correia",
+"short": "Lara",
 "platform": "candy",
 "added": "2026-11-04",
 "img": "https://cdn.candy.ai/sfw-profile-368885855-4723afb8-2ddd-4fd8-a207-45517f315abb-600x900-webp90",
@@ -5574,6 +5774,7 @@ const CANDY_PROFILES = [
  {
 "id": "polina-morozova",
 "name": "Polina Morozova",
+"short": "Polina",
 "platform": "candy",
 "added": "2026-11-04",
 "img": "https://cdn.candy.ai/516927341-9a05a0f0-8129-43f4-888f-e3c6eb43ec74-600x900-webp90",
@@ -5605,6 +5806,7 @@ const CANDY_PROFILES = [
  {
 "id": "renata-marrero",
 "name": "Renata Marrero",
+"short": "Renata",
 "platform": "candy",
 "added": "2026-11-04",
 "img": "https://cdn.candy.ai/624242838-d2a71730-6bc2-46c5-9055-b6685cc50248-600x900-webp90",
@@ -5636,6 +5838,7 @@ const CANDY_PROFILES = [
  {
 "id": "taylor-reynolds",
 "name": "Taylor Reynolds",
+"short": "Taylor",
 "platform": "candy",
 "added": "2026-11-04",
 "img": "https://cdn.candy.ai/602676599-8ef908b1-acb2-4b12-b1d5-f940196b7594-600x900-webp90",
@@ -5661,6 +5864,7 @@ const CANDY_PROFILES = [
  {
 "id": "helena-miller",
 "name": "Helena Miller",
+"short": "Helena",
 "platform": "candy",
 "added": "2026-11-04",
 "img": "https://cdn.candy.ai/sfw-profile-232859778-f5a830a6-99c0-4d3b-aaf2-10c0c06a1d65-600x900-webp90",
@@ -5704,6 +5908,7 @@ const CANDY_PROFILES = [
  {
 "id": "maja-kristensen",
 "name": "Maja Kristensen",
+"short": "Maja",
 "platform": "candy",
 "added": "2026-11-04",
 "img": "https://cdn.candy.ai/sfw-profile-288802444-ce1843b8-e895-468f-a37b-1369c7d12c0a-600x900-webp90",
@@ -5733,6 +5938,7 @@ const CANDY_PROFILES = [
  {
 "id": "dulce-pham",
 "name": "Dulce Pham",
+"short": "Dulce",
 "platform": "candy",
 "added": "2026-11-04",
 "img": "https://cdn.candy.ai/sfw-profile-281868707-30b69550-dcc5-4276-b996-33ec41a0e53d-600x900-webp90",
@@ -5764,6 +5970,7 @@ const CANDY_PROFILES = [
  {
 "id": "cassandra-amandi",
 "name": "Cassandra Amandi",
+"short": "Cassandra",
 "platform": "candy",
 "added": "2026-11-04",
 "img": "https://cdn.candy.ai/sfw-profile-208374764-b53487a6-c377-4eed-8bef-d0034b52d49c-600x900-webp90",
@@ -5790,6 +5997,7 @@ const CANDY_PROFILES = [
  {
 "id": "skye-alverra",
 "name": "Skye Alverra",
+"short": "Skye",
 "platform": "candy",
 "added": "2026-11-04",
 "img": "https://cdn.candy.ai/sfw-profile-404199794-9ea60467-4cbc-43c8-91a6-df68d283ac2f-600x900-webp90",
@@ -5815,6 +6023,7 @@ const CANDY_PROFILES = [
  {
 "id": "gemma-parker",
 "name": "Gemma Parker",
+"short": "Gemma",
 "platform": "candy",
 "added": "2026-11-04",
 "img": "https://cdn.candy.ai/sfw-profile-399913411-8d1d8d5a-8d59-40d6-bb79-c815993c88cb-600x900-webp90",
@@ -5842,6 +6051,7 @@ const CANDY_PROFILES = [
  {
 "id": "danielle-rhodes",
 "name": "Danielle Rhodes",
+"short": "Danielle",
 "platform": "candy",
 "added": "2026-11-04",
 "img": "https://cdn.candy.ai/sfw-profile-318101321-50350e03-16b1-4ac1-b6e6-ac3b08f4812a-600x900-webp90",
@@ -5892,6 +6102,7 @@ const CANDY_PROFILES = [
  {
 "id": "kim-marilor",
 "name": "Kim Marilor",
+"short": "Kim",
 "platform": "candy",
 "added": "2026-11-04",
 "img": "https://cdn.candy.ai/sfw-profile-360937029-f535e755-18b6-4a1b-af51-9f13cd34b2ae-600x900-webp90",
@@ -5924,6 +6135,7 @@ const CANDY_PROFILES = [
  {
 "id": "marina-ferri",
 "name": "Marina Ferri",
+"short": "Marina",
 "platform": "candy",
 "added": "2026-11-04",
 "img": "https://cdn.candy.ai/sfw-profile-279687289-504e2576-e634-4dac-8556-5ddcef679f4e-600x900-webp90",
@@ -5949,6 +6161,7 @@ const CANDY_PROFILES = [
  {
 "id": "azura-mori",
 "name": "Azura Mori",
+"short": "Azura",
 "platform": "candy",
 "added": "2026-11-04",
 "img": "https://cdn.candy.ai/474730514-4b66d0cb-eb78-4dfd-8d98-5957f5f8f2f2-600x900-webp90",
@@ -5979,6 +6192,7 @@ const CANDY_PROFILES = [
  {
 "id": "lyra-fallon",
 "name": "Lyra Fallon",
+"short": "Lyra",
 "platform": "candy",
 "added": "2026-11-04",
 "img": "https://cdn.candy.ai/sfw-profile-259589010-7d49152b-7567-48a5-b9da-b0240c0eddc4-600x900-webp90",
@@ -6003,6 +6217,7 @@ const CANDY_PROFILES = [
  {
 "id": "catalina-laurent",
 "name": "Catalina Laurent",
+"short": "Catalina",
 "platform": "candy",
 "added": "2026-11-04",
 "img": "https://cdn.candy.ai/470873489-3f92c8fb-c437-44d4-9eb2-285f01bc2aea-600x900-webp90",
@@ -6029,6 +6244,7 @@ const CANDY_PROFILES = [
  {
 "id": "cecilia-moretti",
 "name": "Cecilia Moretti",
+"short": "Cecilia",
 "platform": "candy",
 "added": "2026-11-04",
 "img": "https://cdn.candy.ai/sfw-profile-253440760-6897a6d8-f4c7-4cc3-9b91-4a24f63b5ff8-600x900-webp90",
@@ -6054,6 +6270,7 @@ const CANDY_PROFILES = [
  {
 "id": "kristen-hale",
 "name": "Kristen Hale",
+"short": "Kristen",
 "platform": "candy",
 "added": "2026-11-04",
 "img": "https://cdn.candy.ai/sfw-profile-250834990-62292df7-2024-4227-80e3-4050bbd93dea-600x900-webp90",
@@ -6079,6 +6296,7 @@ const CANDY_PROFILES = [
  {
 "id": "daniela-estrada",
 "name": "Daniela Estrada",
+"short": "Daniela",
 "platform": "candy",
 "added": "2026-11-04",
 "img": "https://cdn.candy.ai/sfw-profile-237115223-66d2a750-fd9a-4f14-85b3-054fb8ff5955-600x900-webp90",
@@ -6105,6 +6323,7 @@ const CANDY_PROFILES = [
  {
 "id": "delaney-ashgrove",
 "name": "Delaney Ashgrove",
+"short": "Delaney",
 "platform": "candy",
 "added": "2026-11-04",
 "img": "https://cdn.candy.ai/722150791-c0dbe1d7-59c8-43b1-8b8b-2b4073c69822-600x900-webp90",
@@ -6133,6 +6352,7 @@ const CANDY_PROFILES = [
  {
 "id": "zara-herrera",
 "name": "Zara Herrera",
+"short": "Zara",
 "platform": "candy",
 "added": "2026-11-04",
 "img": "https://cdn.candy.ai/449958296-2747c5a1-b5a3-46ad-9e54-58a6348fb8da-600x900-webp90",
@@ -6161,6 +6381,7 @@ const CANDY_PROFILES = [
  {
 "id": "astra-menels",
 "name": "Astra Menels",
+"short": "Astra",
 "platform": "candy",
 "added": "2026-11-04",
 "img": "https://cdn.candy.ai/sfw-profile-228482180-0740f6c7-b3f6-4cd8-afa0-a40189da1e31-600x900-webp90",
@@ -6189,6 +6410,7 @@ const CANDY_PROFILES = [
  {
 "id": "nela-novak",
 "name": "Nela Novák",
+"short": "Nela",
 "platform": "candy",
 "added": "2026-11-04",
 "img": "https://cdn.candy.ai/sfw-profile-429383418-ce82fcde-4469-4881-9864-a046da843bb1-600x900-webp90",
@@ -6215,6 +6437,7 @@ const CANDY_PROFILES = [
  {
 "id": "zoe-harper-2",
 "name": "Zoe Harper",
+"short": "Zoe",
 "platform": "candy",
 "added": "2026-11-04",
 "img": "https://cdn.candy.ai/sfw-profile-225489534-27ecb44d-6ad2-463c-afac-1acb74809525-600x900-webp90",
@@ -6241,6 +6464,7 @@ const CANDY_PROFILES = [
  {
 "id": "kelly-summers",
 "name": "Kelly Summers",
+"short": "Kelly",
 "platform": "candy",
 "added": "2026-11-04",
 "img": "https://cdn.candy.ai/sfw-profile-224550157-33d455d0-0f9d-4824-94b0-a24836c3d49b-600x900-webp90",
@@ -6265,6 +6489,7 @@ const CANDY_PROFILES = [
  {
 "id": "lexi-svensson",
 "name": "Lexi Svensson",
+"short": "Lexi",
 "platform": "candy",
 "added": "2026-11-04",
 "img": "https://cdn.candy.ai/sfw-profile-305669611-5512cfd2-5fe1-4b01-a997-9f52839de9df-600x900-webp90",
@@ -6290,6 +6515,7 @@ const CANDY_PROFILES = [
  {
 "id": "emma-moore",
 "name": "Emma Moore",
+"short": "Emma",
 "platform": "candy",
 "added": "2026-11-04",
 "img": "https://cdn.candy.ai/sfw-profile-419365119-9cc8741d-564e-4b7a-a472-e3842ea046c6-600x900-webp90",
@@ -6312,6 +6538,7 @@ const CANDY_PROFILES = [
  {
 "id": "amelia-elise",
 "name": "Amelia Elise",
+"short": "Amelia",
 "platform": "candy",
 "added": "2026-11-04",
 "img": "https://cdn.candy.ai/sfw-profile-307422655-17911b58-0c47-44a8-bd67-da59680e521c-600x900-webp90",
@@ -6337,6 +6564,7 @@ const CANDY_PROFILES = [
  {
 "id": "carla-romero",
 "name": "Carla Romero",
+"short": "Carla",
 "platform": "candy",
 "added": "2026-11-04",
 "img": "https://cdn.candy.ai/sfw-profile-216825957-0f547152-6065-49d6-b22d-52cc9a5938ea-600x900-webp90",
@@ -6359,6 +6587,7 @@ const CANDY_PROFILES = [
  {
 "id": "sabina-morales",
 "name": "Sabina Morales",
+"short": "Sabina",
 "platform": "candy",
 "added": "2026-11-04",
 "img": "https://cdn.candy.ai/sfw-profile-211904693-73899257-2dfa-4f75-b0ec-f8cb63876425-600x900-webp90",
@@ -6386,6 +6615,7 @@ const CANDY_PROFILES = [
  {
 "id": "micaela-aguirre",
 "name": "Micaela Aguirre",
+"short": "Micaela",
 "platform": "candy",
 "added": "2026-11-04",
 "img": "https://cdn.candy.ai/638513616-dfafa0ed-9c3f-4e09-acff-1d8ad5b1d591-600x900-webp90",
@@ -6414,6 +6644,7 @@ const CANDY_PROFILES = [
  {
 "id": "raquel-carter",
 "name": "Raquel Carter",
+"short": "Raquel",
 "platform": "candy",
 "added": "2026-11-04",
 "img": "https://cdn.candy.ai/sfw-profile-504944893-2bf73fb2-ec10-496c-92ee-8b8434c7fb2a-600x900-webp90",
@@ -6442,6 +6673,7 @@ const CANDY_PROFILES = [
  {
 "id": "eira-lund",
 "name": "Eira Lund",
+"short": "Eira",
 "platform": "candy",
 "added": "2026-11-04",
 "img": "https://cdn.candy.ai/645756445-a5c14aae-e148-4102-a099-8689950416bc-600x900-webp90",
@@ -6471,6 +6703,7 @@ const CANDY_PROFILES = [
  {
 "id": "piper-hollis",
 "name": "Piper Hollis",
+"short": "Piper",
 "platform": "candy",
 "added": "2026-11-04",
 "img": "https://cdn.candy.ai/517202025-94f6e6af-2e49-461a-badc-b8476c6cbb58-600x900-webp90",
@@ -6497,6 +6730,7 @@ const CANDY_PROFILES = [
  {
 "id": "ariana-jones",
 "name": "Ariana Jones",
+"short": "Ariana",
 "platform": "candy",
 "added": "2026-11-04",
 "img": "https://cdn.candy.ai/sfw-profile-196762225-91041474-b62b-4ade-8d34-e71ac26aa1e5-600x900-webp90",
@@ -6520,6 +6754,7 @@ const CANDY_PROFILES = [
  {
 "id": "paloma-ramirez",
 "name": "Paloma Ramirez",
+"short": "Paloma",
 "platform": "candy",
 "added": "2026-11-04",
 "img": "https://cdn.candy.ai/sfw-profile-248135590-ed423fa3-8309-4455-9974-35669179abed-600x900-webp90",
@@ -6546,6 +6781,7 @@ const CANDY_PROFILES = [
  {
 "id": "savannah-carter-2",
 "name": "Savannah Carter",
+"short": "Savannah",
 "platform": "candy",
 "added": "2026-11-04",
 "img": "https://cdn.candy.ai/sfw-profile-229871305-a04f53f3-aef4-4098-806e-7c47ca398a80-600x900-webp90",
@@ -6598,6 +6834,7 @@ const CANDY_PROFILES = [
  {
 "id": "selina-shoshan",
 "name": "Selina Shoshan",
+"short": "Selina",
 "platform": "candy",
 "added": "2026-11-04",
 "img": "https://cdn.candy.ai/sfw-profile-171626903-baafdabd-f18c-47df-84bb-883689549d42-600x900-webp90",
@@ -6625,6 +6862,7 @@ const CANDY_PROFILES = [
  {
 "id": "juniper-sloane",
 "name": "Juniper Sloane",
+"short": "Juniper",
 "platform": "candy",
 "added": "2026-11-04",
 "img": "https://cdn.candy.ai/sfw-profile-321035264-76e917f8-a8c1-4086-95e6-7fc0f572fcf4-600x900-webp90",
@@ -6648,6 +6886,7 @@ const CANDY_PROFILES = [
  {
 "id": "julia-rossi",
 "name": "Julia Rossi",
+"short": "Julia",
 "platform": "candy",
 "added": "2026-11-04",
 "img": "https://cdn.candy.ai/529222385-abbf28e5-b639-43bc-bd6a-701ff441ae3c-600x900-webp90",
@@ -6674,6 +6913,7 @@ const CANDY_PROFILES = [
  {
 "id": "vivienne-knight",
 "name": "Vivienne Knight",
+"short": "Vivienne",
 "platform": "candy",
 "added": "2026-11-04",
 "img": "https://cdn.candy.ai/sfw-profile-214942112-5401f25a-4054-42fb-abc6-376497b0d400-600x900-webp90",
@@ -6700,6 +6940,7 @@ const CANDY_PROFILES = [
  {
 "id": "emily-foster",
 "name": "Emily Foster",
+"short": "Emily",
 "platform": "candy",
 "added": "2026-11-04",
 "img": "https://cdn.candy.ai/sfw-profile-203234991-cd074f2f-9ecf-40ac-80d0-e951873abc68-600x900-webp90",
@@ -6724,6 +6965,7 @@ const CANDY_PROFILES = [
  {
 "id": "zofia-szymanska",
 "name": "Zofia Szymanska",
+"short": "Zofia",
 "platform": "candy",
 "added": "2026-11-04",
 "img": "https://cdn.candy.ai/sfw-profile-294723364-95838b7a-0792-488e-aa3e-de3053eab666-600x900-webp90",
@@ -6748,6 +6990,7 @@ const CANDY_PROFILES = [
  {
 "id": "lina-sewo",
 "name": "Lina Sewo",
+"short": "Lina",
 "platform": "candy",
 "added": "2026-11-04",
 "img": "https://cdn.candy.ai/sfw-profile-305664717-145a5803-2665-4e3b-90ff-ebefedcf260b-600x900-webp90",
@@ -6777,6 +7020,7 @@ const CANDY_PROFILES = [
  {
 "id": "paige-grey",
 "name": "Paige Grey",
+"short": "Paige",
 "platform": "candy",
 "added": "2026-11-04",
 "img": "https://cdn.candy.ai/sfw-profile-268230169-96b4cd4e-cbe8-4111-92a5-51571077f63b-600x900-webp90",
@@ -6804,6 +7048,7 @@ const CANDY_PROFILES = [
  {
 "id": "lauren-sullivan",
 "name": "Lauren Sullivan",
+"short": "Lauren",
 "platform": "candy",
 "added": "2026-11-04",
 "img": "https://cdn.candy.ai/sfw-profile-210954162-ab920ab8-32b1-44ed-b5dd-16b5248f3e8d-600x900-webp90",
@@ -6828,6 +7073,7 @@ const CANDY_PROFILES = [
  {
 "id": "fernanda-montoya",
 "name": "Fernanda Montoya",
+"short": "Fernanda",
 "platform": "candy",
 "added": "2026-11-04",
 "img": "https://cdn.candy.ai/sfw-profile-252342953-f012f524-f81c-4de7-816e-0f3f0d75ecba-600x900-webp90",
@@ -6853,6 +7099,7 @@ const CANDY_PROFILES = [
  {
 "id": "elina-drovnik",
 "name": "Elina Drovnik",
+"short": "Elina",
 "platform": "candy",
 "added": "2026-11-04",
 "img": "https://cdn.candy.ai/sfw-profile-242926303-69c8160c-a343-4e02-8b37-80b177d2fa4c-600x900-webp90",
@@ -6878,6 +7125,7 @@ const CANDY_PROFILES = [
  {
 "id": "roxana-muiescu",
 "name": "Roxana Muiescu",
+"short": "Roxana",
 "platform": "candy",
 "added": "2026-11-04",
 "img": "https://cdn.candy.ai/sfw-profile-249726953-6122dc02-d97f-43c6-a7cf-17a8a9dd3a42-600x900-webp90",
@@ -8675,7 +8923,7 @@ for (const l in TAGPAGE_UI) Object.assign(I18N[l].ui, TAGPAGE_UI[l]);
    Placeholders: {n} profiles, {k} platforms, {c} categories, {site}, {d} date, {name}, {p} platform, {tags}, {style}, {x} count */
 const EXTRA_UI = {
 en: {
-  top_t:"Top 10 this week", top_sub:"Editor's picks, refreshed every week.",
+  top_t:"Our Top 10", top_sub:"The editors' favourite characters.",
   sort_sel:"Editor's picks", sort_new_t:"Newest", sort_az:"A–Z",
   pg:"Page {p} of {n}", pg_prev:"← Previous", pg_next:"Next →",
   recent_t:"Recently added", recent_all:"See all new profiles",
@@ -8687,7 +8935,7 @@ en: {
   hq1:"What is {site}?", ha1:"A free directory of {n} adult AI chatbot characters from {k} platforms, sorted into {c} categories. We do not host any chat ourselves: each profile sends you to the official platform.",
   hq2:"Are the characters real people?", ha2:"No. All characters are fictional AIs presented as adults (18+). The only exception is Creator Twins: official AI versions of adult creators, published by the platform with their consent.",
   hq3:"Is it free?", ha3:"Browsing {site} is free and needs no account. Most platforms let you start chatting for free with limits; unlimited messages, photos, voice and video usually require a subscription or credits.",
-  hq4:"How do you choose the Top 10?", ha4:"The Top 10 is an editor's selection, refreshed every week. It mixes popular styles and new characters. Platforms do not pay to appear in it.",
+  hq4:"How do you choose the Top 10?", ha4:"The Top 10 is the editors' selection of their favourite characters, across popular styles. Platforms do not pay to appear in it.",
   hq5:"How do you rate the platforms?", ha5:"We score each platform on conversation quality, media (photos, voice, video), price, privacy and ease of use. The full method is on our “How we rate” page.",
   hq6:"How do I find a specific type of character?", ha6:"Use the filters at the top of the list (gender, style, origin, age, hair, body, platform and more), the search bar, or browse the {c} categories.",
   rv_t:"Our take", rv_by:"By the {site} editorial team", rv_checked:"Checked on {d}",
@@ -8704,7 +8952,7 @@ en: {
   m_checked:"Last checked"
 },
 fr: {
-  top_t:"Top 10 de la semaine", top_sub:"La sélection de la rédaction, mise à jour chaque semaine.",
+  top_t:"Notre Top 10", top_sub:"Les personnages préférés de la rédaction.",
   sort_sel:"Sélection", sort_new_t:"Nouveaux", sort_az:"A–Z",
   pg:"Page {p} sur {n}", pg_prev:"← Précédent", pg_next:"Suivant →",
   recent_t:"Ajoutés récemment", recent_all:"Voir toutes les nouveautés",
@@ -8716,7 +8964,7 @@ fr: {
   hq1:"Qu'est-ce que {site} ?", ha1:"Un annuaire gratuit de {n} personnages de chatbots IA pour adultes, issus de {k} plateformes et classés dans {c} catégories. Nous n'hébergeons aucun chat : chaque profil t'envoie vers la plateforme officielle.",
   hq2:"Les personnages sont-ils de vraies personnes ?", ha2:"Non. Tous les personnages sont des IA fictives présentées comme majeures (18+). Seule exception : les jumelles IA de créatrices, versions IA officielles de créatrices adultes, publiées par la plateforme avec leur accord.",
   hq3:"Est-ce gratuit ?", ha3:"Parcourir {site} est gratuit et sans compte. La plupart des plateformes permettent de commencer à discuter gratuitement avec des limites ; les messages illimités, les photos, la voix et la vidéo demandent en général un abonnement ou des crédits.",
-  hq4:"Comment est choisi le Top 10 ?", ha4:"Le Top 10 est une sélection de la rédaction, mise à jour chaque semaine. Il mélange des styles populaires et des nouveaux personnages. Les plateformes ne paient pas pour y figurer.",
+  hq4:"Comment est choisi le Top 10 ?", ha4:"Le Top 10 est la sélection des personnages préférés de la rédaction, dans des styles populaires. Les plateformes ne paient pas pour y figurer.",
   hq5:"Comment notez-vous les plateformes ?", ha5:"Nous notons chaque plateforme sur la qualité des conversations, les médias (photos, voix, vidéo), le prix, la confidentialité et la facilité d'utilisation. La méthode complète est sur notre page « Notre méthode ».",
   hq6:"Comment trouver un type de personnage précis ?", ha6:"Utilise les filtres en haut de la liste (genre, style, origine, âge, cheveux, corps, plateforme…), la barre de recherche, ou parcours les {c} catégories.",
   rv_t:"Notre avis", rv_by:"Par l'équipe éditoriale de {site}", rv_checked:"Vérifié le {d}",
@@ -8733,7 +8981,7 @@ fr: {
   m_checked:"Dernière vérification"
 },
 es: {
-  top_t:"Top 10 de la semana", top_sub:"Selección de la redacción, actualizada cada semana.",
+  top_t:"Nuestro Top 10", top_sub:"Los personajes favoritos de la redacción.",
   sort_sel:"Selección", sort_new_t:"Nuevos", sort_az:"A–Z",
   pg:"Página {p} de {n}", pg_prev:"← Anterior", pg_next:"Siguiente →",
   recent_t:"Añadidos recientemente", recent_all:"Ver todas las novedades",
@@ -8745,7 +8993,7 @@ es: {
   hq1:"¿Qué es {site}?", ha1:"Un directorio gratuito de {n} personajes de chatbots de IA para adultos de {k} plataformas, clasificados en {c} categorías. No alojamos ningún chat: cada perfil te lleva a la plataforma oficial.",
   hq2:"¿Los personajes son personas reales?", ha2:"No. Todos los personajes son IA ficticias presentadas como adultas (18+). La única excepción son los gemelos IA de creadoras: versiones IA oficiales de creadoras adultas, publicadas por la plataforma con su consentimiento.",
   hq3:"¿Es gratis?", ha3:"Navegar por {site} es gratis y sin cuenta. La mayoría de las plataformas permiten empezar a chatear gratis con límites; los mensajes ilimitados, las fotos, la voz y el vídeo suelen requerir suscripción o créditos.",
-  hq4:"¿Cómo se elige el Top 10?", ha4:"El Top 10 es una selección de la redacción que se actualiza cada semana. Mezcla estilos populares y personajes nuevos. Las plataformas no pagan por aparecer.",
+  hq4:"¿Cómo se elige el Top 10?", ha4:"El Top 10 es la selección de los personajes favoritos de la redacción, en estilos populares. Las plataformas no pagan por aparecer.",
   hq5:"¿Cómo puntuáis las plataformas?", ha5:"Puntuamos cada plataforma según la calidad de las conversaciones, los medios (fotos, voz, vídeo), el precio, la privacidad y la facilidad de uso. El método completo está en nuestra página «Cómo puntuamos».",
   hq6:"¿Cómo encuentro un tipo de personaje concreto?", ha6:"Usa los filtros de la parte superior de la lista (género, estilo, origen, edad, pelo, cuerpo, plataforma…), la barra de búsqueda o recorre las {c} categorías.",
   rv_t:"Nuestra opinión", rv_by:"Por el equipo editorial de {site}", rv_checked:"Revisado el {d}",
@@ -8762,7 +9010,7 @@ es: {
   m_checked:"Última revisión"
 },
 de: {
-  top_t:"Top 10 der Woche", top_sub:"Auswahl der Redaktion, jede Woche aktualisiert.",
+  top_t:"Unsere Top 10", top_sub:"Die Lieblingsfiguren der Redaktion.",
   sort_sel:"Auswahl", sort_new_t:"Neueste", sort_az:"A–Z",
   pg:"Seite {p} von {n}", pg_prev:"← Zurück", pg_next:"Weiter →",
   recent_t:"Neu hinzugefügt", recent_all:"Alle neuen Profile ansehen",
@@ -8774,7 +9022,7 @@ de: {
   hq1:"Was ist {site}?", ha1:"Ein kostenloses Verzeichnis von {n} KI-Chatbot-Charakteren für Erwachsene von {k} Plattformen in {c} Kategorien. Wir hosten keinen Chat: Jedes Profil führt dich zur offiziellen Plattform.",
   hq2:"Sind die Charaktere echte Personen?", ha2:"Nein. Alle Charaktere sind fiktive KIs, die als volljährig (18+) dargestellt werden. Einzige Ausnahme sind Creator Twins: offizielle KI-Versionen erwachsener Creatorinnen, von der Plattform mit ihrer Zustimmung veröffentlicht.",
   hq3:"Ist das kostenlos?", ha3:"Das Stöbern auf {site} ist kostenlos und ohne Konto möglich. Die meisten Plattformen lassen dich mit Einschränkungen kostenlos chatten; unbegrenzte Nachrichten, Fotos, Stimme und Video erfordern meist ein Abo oder Credits.",
-  hq4:"Wie wird die Top 10 ausgewählt?", ha4:"Die Top 10 ist eine Auswahl der Redaktion und wird jede Woche aktualisiert. Sie mischt beliebte Stile und neue Charaktere. Plattformen zahlen nicht für einen Platz.",
+  hq4:"Wie wird die Top 10 ausgewählt?", ha4:"Die Top 10 ist die Auswahl der Lieblingsfiguren der Redaktion, in beliebten Stilen. Plattformen zahlen nicht für einen Platz.",
   hq5:"Wie bewertet ihr die Plattformen?", ha5:"Wir bewerten jede Plattform nach Gesprächsqualität, Medien (Fotos, Stimme, Video), Preis, Datenschutz und Bedienbarkeit. Die vollständige Methode steht auf unserer Seite „So bewerten wir“.",
   hq6:"Wie finde ich einen bestimmten Charaktertyp?", ha6:"Nutze die Filter oben in der Liste (Geschlecht, Stil, Herkunft, Alter, Haare, Körper, Plattform …), die Suche oder stöbere in den {c} Kategorien.",
   rv_t:"Unsere Einschätzung", rv_by:"Von der Redaktion von {site}", rv_checked:"Geprüft am {d}",
@@ -8791,7 +9039,7 @@ de: {
   m_checked:"Zuletzt geprüft"
 },
 pt: {
-  top_t:"Top 10 da semana", top_sub:"Seleção da redação, atualizada toda semana.",
+  top_t:"Nosso Top 10", top_sub:"Os personagens favoritos da redação.",
   sort_sel:"Seleção", sort_new_t:"Novos", sort_az:"A–Z",
   pg:"Página {p} de {n}", pg_prev:"← Anterior", pg_next:"Próxima →",
   recent_t:"Adicionados recentemente", recent_all:"Ver todas as novidades",
@@ -8803,7 +9051,7 @@ pt: {
   hq1:"O que é o {site}?", ha1:"Um diretório gratuito de {n} personagens de chatbots de IA para adultos, de {k} plataformas, organizados em {c} categorias. Não hospedamos nenhum chat: cada perfil leva você à plataforma oficial.",
   hq2:"Os personagens são pessoas reais?", ha2:"Não. Todos os personagens são IAs fictícias apresentadas como adultas (18+). A única exceção são os gêmeos de IA de criadoras: versões de IA oficiais de criadoras adultas, publicadas pela plataforma com o consentimento delas.",
   hq3:"É grátis?", ha3:"Navegar pelo {site} é grátis e sem conta. A maioria das plataformas permite começar a conversar de graça com limites; mensagens ilimitadas, fotos, voz e vídeo geralmente exigem assinatura ou créditos.",
-  hq4:"Como o Top 10 é escolhido?", ha4:"O Top 10 é uma seleção da redação, atualizada toda semana. Ele mistura estilos populares e personagens novos. As plataformas não pagam para aparecer.",
+  hq4:"Como o Top 10 é escolhido?", ha4:"O Top 10 é a seleção dos personagens favoritos da redação, em estilos populares. As plataformas não pagam para aparecer.",
   hq5:"Como vocês avaliam as plataformas?", ha5:"Avaliamos cada plataforma pela qualidade das conversas, mídia (fotos, voz, vídeo), preço, privacidade e facilidade de uso. O método completo está na nossa página «Como avaliamos».",
   hq6:"Como encontro um tipo específico de personagem?", ha6:"Use os filtros no topo da lista (gênero, estilo, origem, idade, cabelo, corpo, plataforma…), a busca ou navegue pelas {c} categorias.",
   rv_t:"Nossa opinião", rv_by:"Pela equipe editorial do {site}", rv_checked:"Verificado em {d}",
@@ -8820,7 +9068,7 @@ pt: {
   m_checked:"Última verificação"
 },
 hi: {
-  top_t:"इस हफ़्ते के टॉप 10", top_sub:"संपादकीय टीम का चयन, हर हफ़्ते अपडेट।",
+  top_t:"हमारे टॉप 10", top_sub:"संपादकीय टीम के पसंदीदा किरदार।",
   sort_sel:"चयन", sort_new_t:"नए", sort_az:"A–Z",
   pg:"पेज {p} / {n}", pg_prev:"← पिछला", pg_next:"अगला →",
   recent_t:"हाल ही में जोड़े गए", recent_all:"सभी नए प्रोफ़ाइल देखें",
@@ -8832,7 +9080,7 @@ hi: {
   hq1:"{site} क्या है?", ha1:"{k} प्लेटफ़ॉर्म के {n} वयस्क AI चैटबॉट किरदारों की मुफ़्त डायरेक्टरी, {c} कैटेगरी में। हम खुद कोई चैट होस्ट नहीं करते: हर प्रोफ़ाइल आपको आधिकारिक प्लेटफ़ॉर्म पर ले जाती है।",
   hq2:"क्या किरदार असली लोग हैं?", ha2:"नहीं। सभी किरदार काल्पनिक AI हैं जिन्हें वयस्क (18+) दिखाया गया है। अपवाद सिर्फ़ क्रिएटर ट्विन हैं: वयस्क क्रिएटर्स के आधिकारिक AI वर्ज़न, जिन्हें प्लेटफ़ॉर्म ने उनकी सहमति से प्रकाशित किया है।",
   hq3:"क्या यह मुफ़्त है?", ha3:"{site} देखना मुफ़्त है और अकाउंट की ज़रूरत नहीं। ज़्यादातर प्लेटफ़ॉर्म पर सीमाओं के साथ मुफ़्त चैट शुरू की जा सकती है; अनलिमिटेड मैसेज, फ़ोटो, आवाज़ और वीडियो के लिए आम तौर पर सब्सक्रिप्शन या क्रेडिट चाहिए।",
-  hq4:"टॉप 10 कैसे चुना जाता है?", ha4:"टॉप 10 संपादकीय टीम का चयन है, जो हर हफ़्ते अपडेट होता है। इसमें लोकप्रिय स्टाइल और नए किरदार दोनों होते हैं। प्लेटफ़ॉर्म इसमें आने के लिए पैसे नहीं देते।",
+  hq4:"टॉप 10 कैसे चुना जाता है?", ha4:"टॉप 10 संपादकीय टीम के पसंदीदा किरदारों का चयन है, लोकप्रिय स्टाइल में। प्लेटफ़ॉर्म इसमें आने के लिए पैसे नहीं देते।",
   hq5:"आप प्लेटफ़ॉर्म को रेटिंग कैसे देते हैं?", ha5:"हम हर प्लेटफ़ॉर्म को बातचीत की गुणवत्ता, मीडिया (फ़ोटो, आवाज़, वीडियो), कीमत, प्राइवेसी और इस्तेमाल में आसानी पर परखते हैं। पूरा तरीका हमारे „हम कैसे रेट करते हैं“ पेज पर है।",
   hq6:"किसी खास तरह का किरदार कैसे ढूँढें?", ha6:"लिस्ट के ऊपर के फ़िल्टर (जेंडर, स्टाइल, मूल, उम्र, बाल, शरीर, प्लेटफ़ॉर्म…), सर्च बार, या {c} कैटेगरी इस्तेमाल करें।",
   rv_t:"हमारी राय", rv_by:"{site} की संपादकीय टीम द्वारा", rv_checked:"{d} को जाँचा गया",
@@ -9239,6 +9487,23 @@ for (const l in OFFER_UI) Object.assign(I18N[l].ui, OFFER_UI[l]);
 const MENU_UI = { en:"Menu", fr:"Menu", es:"Menú", de:"Menü", pt:"Menu", hi:"मेन्यू" };
 for (const l in MENU_UI) I18N[l].ui.menu = MENU_UI[l];
 
+/* Candy AI full-width banner in the profile grids */
+const CBANNER_UI = {
+  en:{cb_t_f:"Create your own AI girlfriend",cb_d_f:"Choose her look, her personality and what she's into.",cb_btn_f:"Create my girl",
+      cb_t_m:"Create your own AI boyfriend",cb_d_m:"Choose his look, his personality and what he's into.",cb_btn_m:"Create my guy"},
+  fr:{cb_t_f:"Crée ta propre copine IA",cb_d_f:"Choisis son look, sa personnalité et ses envies.",cb_btn_f:"Créer ma copine",
+      cb_t_m:"Crée ton propre copain IA",cb_d_m:"Choisis son look, sa personnalité et ses envies.",cb_btn_m:"Créer mon copain"},
+  es:{cb_t_f:"Crea tu propia novia IA",cb_d_f:"Elige su aspecto, su personalidad y sus deseos.",cb_btn_f:"Crear mi chica",
+      cb_t_m:"Crea tu propio novio IA",cb_d_m:"Elige su aspecto, su personalidad y sus deseos.",cb_btn_m:"Crear mi chico"},
+  de:{cb_t_f:"Erstelle deine eigene KI-Freundin",cb_d_f:"Wähle ihr Aussehen, ihre Persönlichkeit und ihre Vorlieben.",cb_btn_f:"Meine Freundin erstellen",
+      cb_t_m:"Erstelle deinen eigenen KI-Freund",cb_d_m:"Wähle sein Aussehen, seine Persönlichkeit und seine Vorlieben.",cb_btn_m:"Meinen Freund erstellen"},
+  pt:{cb_t_f:"Crie sua própria namorada IA",cb_d_f:"Escolha a aparência, a personalidade e os desejos dela.",cb_btn_f:"Criar minha garota",
+      cb_t_m:"Crie seu próprio namorado IA",cb_d_m:"Escolha a aparência, a personalidade e os desejos dele.",cb_btn_m:"Criar meu namorado"},
+  hi:{cb_t_f:"अपनी खुद की AI गर्लफ्रेंड बनाएं",cb_d_f:"उसका लुक, व्यक्तित्व और पसंद खुद चुनें।",cb_btn_f:"अपनी गर्लफ्रेंड बनाएं",
+      cb_t_m:"अपना खुद का AI बॉयफ्रेंड बनाएं",cb_d_m:"उसका लुक, व्यक्तित्व और पसंद खुद चुनें।",cb_btn_m:"अपना बॉयफ्रेंड बनाएं"}
+};
+for (const l in CBANNER_UI) Object.assign(I18N[l].ui, CBANNER_UI[l]);
+
 ;
 /* Client code shared by all pages (also used by build.js to pre-render the HTML).
    Globals set by each page: PAGE_LANG, ROOT (path to site root), LROOT (path to the language root). */
@@ -9349,15 +9614,18 @@ function visual(img, color, letter, alt = "") {
 }
 
 /* ---------- cards ---------- */
+/* Cards show the short name used on the platform ("Mona"); the profile page shows the full name ("Mona Newman"). */
+const cardName = p => p.short || p.name;
+const isTop = p => (typeof TOP_PICKS !== "undefined" ? TOP_PICKS : []).includes(girlId(p));
 function profileCard(p) {
   const P = pf(p.platform), i = PROFILES.indexOf(p);
   return `<article class="pcard" data-i="${i}">
     ${visual(thumb(p.img), P.color, p.name[0], p.name)}
     ${p.video ? `<video class="pvid" muted loop playsinline preload="none" data-src="${esc(p.video)}" aria-hidden="true"></video>` : ""}
     <a class="pcover" href="${girlUrl(p)}" aria-label="${esc(p.name)}"></a>
-    ${isNew(p) ? `<span class="new">${esc(ui("new_badge"))}</span>` : ""}${p.video ? `<span class="vbadge">▶ ${esc(ui("video_badge"))}</span>` : `<span class="online"></span>`}
+    ${isNew(p) ? `<span class="new">${esc(ui("new_badge"))}</span>` : ""}${isTop(p) ? `<span class="hot">🔥 Top 10</span>` : ""}${p.video ? `<span class="vbadge">▶ ${esc(ui("video_badge"))}</span>` : `<span class="online"></span>`}
     <div class="shade"></div>
-    <div class="meta"><h2 class="pname"><a class="plink" href="${girlUrl(p)}">${esc(p.name)}</a>${p.age ? `<span>${p.age}</span>` : ""}</h2>
+    <div class="meta"><h2 class="pname"><a class="plink" href="${girlUrl(p)}">${esc(cardName(p))}</a>${p.age ? `<span>${p.age}</span>` : ""}</h2>
       <div class="on-pf">${esc(ui("on", {p: P.name}))}</div>
       <div class="chips">${p.tags.slice(0,3).map(t => `<span>${esc(tr(t))}</span>`).join("")}</div>
       ${ctaLink(linkFor(p), "💬 " + esc(ui(p.tags.includes("Male") && !p.tags.includes("Female") ? "card_btn_m" : "card_btn")), "pchat")}
@@ -9393,7 +9661,22 @@ function adCard(k) {
     <div class="ad-body"><div class="ad-ic">${k ? "✨" : "💬"}</div><h3>${esc(ui("ad" + (k + 1) + "_t", {p: P.name}))}</h3><p>${esc(ui("ad" + (k + 1) + "_d", {p: P.name}))}</p>
     ${ctaLink(P, esc(ui("ad" + (k + 1) + "_btn", {p: P.name})) + " →", "btn btn-main")}<small>${esc(ui("promo_note"))}</small></div></aside>`;
 }
-const gridHtml = list => list.map((p, i) => profileCard(p) + (AD_SLOTS.includes(i) && i < list.length - 1 ? adCard(AD_SLOTS.indexOf(i)) : "")).join("");
+/* Full-width Candy AI banner, once per page of profiles (after the 12th card, or after the last one on short lists) */
+const BANNER_AFTER = 11;
+function bannerHtml(list) {
+  const P = pf("candy"); if (!linkOf(P)) return "";
+  const men = list.length > 0 && list.every(p => p.tags.includes("Male") && !p.tags.includes("Female")), g = men ? "m" : "f";
+  const pool = PROFILES.filter(p => p.platform === "candy" && p.sfw && p.img && (men ? p.tags.includes("Male") : p.tags.includes("Female")));
+  const picks = [...topList(), ...pool].filter(p => pool.includes(p));
+  const real = picks.filter(p => !p.tags.includes("Anime")), anime = picks.filter(p => p.tags.includes("Anime"));
+  const faces = [...new Set([real[0], anime[0], real[1], real[2]].filter(Boolean))];
+  return `<aside class="cbanner"><span class="ad-lbl">${esc(ui("sponsored"))}</span>
+    <div class="cb-txt"><div class="cb-brand">${esc(P.name)}</div><h3>${esc(ui("cb_t_" + g))}</h3><p>${esc(ui("cb_d_" + g))}</p></div>
+    <div class="cb-faces" aria-hidden="true">${faces.map(p => `<img src="${esc(thumb(p.img))}" alt="" loading="lazy" onerror="this.remove()">`).join("")}</div>
+    ${ctaLink(P, esc(ui("cb_btn_" + g)) + " →", "btn btn-main cb-btn")}</aside>`;
+}
+const gridHtml = list => list.map((p, i) => profileCard(p) + (AD_SLOTS.includes(i) && i < list.length - 1 ? adCard(AD_SLOTS.indexOf(i)) : "")
+  + (i === Math.min(BANNER_AFTER, list.length - 1) ? bannerHtml(list) : "")).join("");
 
 /* ---------- browser only ---------- */
 let ageOk = false;

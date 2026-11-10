@@ -30,7 +30,7 @@ Strip `<template>` tags, parse with DOMParser, take `body.innerText`:
 - after it: `Âge`, `Morphologie`, `Ethnicité`, `Relation`, `Profession`, `Loisirs`, `Personnalité`.
 - Image: the `https://cdn.candy.ai/<key>-788x966-webp90` URL in the raw HTML → use `<key>-600x900-webp90`. Check it loads (new Image()). `sfw` = key starts with `sfw-profile`.
 - Video preview: in the same raw HTML, the first URL matching `https://cdn.candy.ai/…profile-video…-h264` → `"video"` field (leave it out if there is none). If there is no profile video, a `live-action-…-h264` preview from the "live" row of `/home/profiles` cards for the same character may be used. Never use `cams-show` clips.
-- The display name is the character's **full name (first name + last name)**, taken from the page `<title>` ("Chat avec **Mona Newman** - AI Girlfriend | Candy.AI"), with its accents; for duos written "A, B" use "A & B". If the title gives no last name (handles like "Sp00kybby"), keep the name as shown. Never use the first name alone when a last name exists. The page URL is `https://candy.ai/fr/ai-girlfriend/<slug>` (`ai-boyfriend` for men).
+- The display name is the character's **full name (first name + last name)**, taken from the page `<title>` ("Chat avec **Mona Newman** - AI Girlfriend | Candy.AI"), with its accents; for duos written "A, B" use "A & B". If the title gives no last name (handles like "Sp00kybby"), keep the name as shown. Never use the first name alone when a last name exists. Also store the first name shown on Candy's card as `"short"` (e.g. `"name": "Mona Newman", "short": "Mona"`): the cards show `short`, the profile page shows `name`. The page URL is `https://candy.ai/fr/ai-girlfriend/<slug>` (`ai-boyfriend` for men).
 
 ## 4. Content rules (mandatory)
 **Do not add**, and list in the report instead:
@@ -53,7 +53,7 @@ Hair colour only if the description says it (Blonde, Brunette, Redhead).
 
 ## 6. Add to `src/data-candy.js`
 Insert a JSON object at the top of the girlfriend block (before the first existing girlfriend), same shape as the others:
-`{"id","name","platform":"candy","added":"YYYY-MM-DD","img","sfw","url","tags":[…],"bio":{"fr":"…"},"age":N,"video":"…-h264"}`
+`{"id","name","short","platform":"candy","added":"YYYY-MM-DD","img","sfw","url","tags":[…],"bio":{"fr":"…"},"age":N,"video":"…-h264"}`
 (`creator: true` for creators.) `added` = today, so the profile shows as "New".
 Also write the description in English, Spanish, German and Portuguese: `"bio":{"fr":"…","en":"…","es":"…","de":"…","pt":"…"}` (Hindi pages use the English text). Keep the meaning, the emojis and the tone; do not add details.
 

@@ -538,6 +538,27 @@ html:not([lang="hi"]) [lang="hi"]{font-family:Inter,system-ui,sans-serif}
 .mpanel a:hover{border-color:var(--accent)}
 @media(max-width:1000px){header nav > a.hide-m,header nav > a.cur{display:none}.mmenu{display:block}}
 @media(max-width:420px){.mmenu summary span{display:none}.mmenu summary{padding:7px 9px}}
+
+/* Top 10: bigger cards + flame badge; Top 10 profiles marked in the grids */
+.t10{grid-auto-columns:minmax(200px,1fr)}
+.t10-hot{position:absolute;z-index:2;top:8px;right:8px;width:30px;height:30px;border-radius:999px;display:flex;align-items:center;justify-content:center;font-size:16px;background:rgba(11,10,18,.7);pointer-events:none}
+.rc-t b{font-size:15px}
+.pcard .hot{position:absolute;top:10px;left:10px;z-index:2;background:linear-gradient(135deg,#ff7a18,#ff3d8b);color:#fff;font:700 11px Inter,sans-serif;padding:3px 9px;border-radius:999px;pointer-events:none}
+.pcard .new + .hot{top:36px}
+@media(max-width:640px){.t10{grid-auto-columns:58%}.pcard .hot{top:8px;left:8px;font-size:10px}.pcard .new + .hot{top:32px}}
+/* Candy AI full-width banner */
+.cbanner{grid-column:1/-1;position:relative;display:flex;align-items:center;gap:24px;min-height:150px;padding:22px 28px;border-radius:18px;overflow:hidden;
+  background:linear-gradient(100deg,#3a1328 0%,#1d1220 45%,#121019 100%);border:1px solid rgba(255,61,139,.45)}
+.cbanner .ad-lbl{position:absolute;top:8px;right:12px;font:500 11px Inter,sans-serif;color:var(--muted)}
+.cb-txt{flex:1 1 auto;min-width:0}
+.cb-brand{font:700 15px "Space Grotesk",sans-serif;color:var(--accent);margin-bottom:4px}
+.cbanner h3{font:700 26px/1.15 "Space Grotesk",sans-serif;color:#fff;margin:0 0 6px}
+.cbanner p{color:#cfc8e6;font-size:14px;margin:0}
+.cb-faces{display:flex;flex:0 0 auto;align-self:stretch;margin:-22px 0}
+.cb-faces img{width:92px;height:100%;min-height:150px;object-fit:cover;object-position:top;-webkit-mask-image:linear-gradient(to bottom,#000 70%,transparent);mask-image:linear-gradient(to bottom,#000 70%,transparent)}
+.cb-btn{flex:0 0 auto;white-space:nowrap}
+@media(max-width:900px){.cb-faces img:nth-child(n+3){display:none}}
+@media(max-width:640px){.cbanner{flex-wrap:wrap;padding:18px;gap:14px}.cbanner h3{font-size:21px}.cb-faces{display:none}.cb-btn{width:100%;text-align:center}}
 </style>
 <link rel="preconnect" href="https://best-ai-nsfw-bots.com">
 <link rel="preload" as="image" href="https://best-ai-nsfw-bots.com/cdn-cgi/image/width=360,format=auto,quality=80/https://cdn.nd-api.com/avatars/f7a292c5-8c80-4ba1-a880-7de7f1136ffe.jpg" fetchpriority="high">
@@ -755,7 +776,10 @@ html:not([lang="hi"]) [lang="hi"]{font-family:Inter,system-ui,sans-serif}
       <div class="chips"><span>Hombre</span><span>Femboy</span><span>Gay</span></div>
       <a class="pchat" href="https://spicychat.ai/chat/ed161a36-e07d-443d-89d9-af965fd38a11?ref=mze1zjm" target="_blank" rel="sponsored nofollow noopener">💬 Habla con él</a>
     </div>
-  </article><article class="pcard" data-i="297">
+  </article><aside class="cbanner"><span class="ad-lbl">Patrocinado</span>
+    <div class="cb-txt"><div class="cb-brand">Candy AI</div><h3>Crea tu propio novio IA</h3><p>Elige su aspecto, su personalidad y sus deseos.</p></div>
+    <div class="cb-faces" aria-hidden="true"></div>
+    <a class="btn btn-main cb-btn" href="https://candy.ai/?via=ic3p7r" target="_blank" rel="sponsored nofollow noopener">Crear mi chico →</a></aside><article class="pcard" data-i="297">
     <div class="ph" style="background:linear-gradient(135deg,#ff5a36,#ffb03a)">E</div><img src="https://best-ai-nsfw-bots.com/cdn-cgi/image/width=360,format=auto,quality=80/https://cdn.nd-api.com/avatars/b249a2d8-a9e5-4751-8085-9984b813f67e.png" alt="Elijah" loading="lazy" onerror="this.remove()">
     
     <a class="pcover" href="../es/model/elijah-elf-prince.html" aria-label="Elijah"></a>
@@ -829,7 +853,7 @@ html:not([lang="hi"]) [lang="hi"]{font-family:Inter,system-ui,sans-serif}
     <a class="pcover" href="../es/model/charles-weston.html" aria-label="Charles Weston"></a>
     <span class="new">NUEVA</span><span class="online"></span>
     <div class="shade"></div>
-    <div class="meta"><h2 class="pname"><a class="plink" href="../es/model/charles-weston.html">Charles Weston</a><span>49</span></h2>
+    <div class="meta"><h2 class="pname"><a class="plink" href="../es/model/charles-weston.html">Charles</a><span>49</span></h2>
       <div class="on-pf">en Candy AI</div>
       <div class="chips"><span>Hombre</span><span>Realista</span><span>Novio</span></div>
       <a class="pchat" href="https://candy.ai/fr/ai-boyfriend/charles-weston?via=ic3p7r" target="_blank" rel="sponsored nofollow noopener">💬 Habla con él</a>
@@ -840,7 +864,7 @@ html:not([lang="hi"]) [lang="hi"]{font-family:Inter,system-ui,sans-serif}
     <a class="pcover" href="../es/model/malik-washington.html" aria-label="Malik Washington"></a>
     <span class="new">NUEVA</span><span class="online"></span>
     <div class="shade"></div>
-    <div class="meta"><h2 class="pname"><a class="plink" href="../es/model/malik-washington.html">Malik Washington</a><span>30</span></h2>
+    <div class="meta"><h2 class="pname"><a class="plink" href="../es/model/malik-washington.html">Malik</a><span>30</span></h2>
       <div class="on-pf">en Candy AI</div>
       <div class="chips"><span>Hombre</span><span>Realista</span><span>Novio</span></div>
       <a class="pchat" href="https://candy.ai/fr/ai-boyfriend/malik-washington?via=ic3p7r" target="_blank" rel="sponsored nofollow noopener">💬 Habla con él</a>
@@ -851,7 +875,7 @@ html:not([lang="hi"]) [lang="hi"]{font-family:Inter,system-ui,sans-serif}
     <a class="pcover" href="../es/model/erik-johansson.html" aria-label="Erik Johansson"></a>
     <span class="new">NUEVA</span><span class="online"></span>
     <div class="shade"></div>
-    <div class="meta"><h2 class="pname"><a class="plink" href="../es/model/erik-johansson.html">Erik Johansson</a><span>27</span></h2>
+    <div class="meta"><h2 class="pname"><a class="plink" href="../es/model/erik-johansson.html">Erik</a><span>27</span></h2>
       <div class="on-pf">en Candy AI</div>
       <div class="chips"><span>Hombre</span><span>Realista</span><span>Novio</span></div>
       <a class="pchat" href="https://candy.ai/fr/ai-boyfriend/erik-johansson?via=ic3p7r" target="_blank" rel="sponsored nofollow noopener">💬 Habla con él</a>
@@ -862,7 +886,7 @@ html:not([lang="hi"]) [lang="hi"]{font-family:Inter,system-ui,sans-serif}
     <a class="pcover" href="../es/model/john-terry.html" aria-label="John Terry"></a>
     <span class="new">NUEVA</span><span class="online"></span>
     <div class="shade"></div>
-    <div class="meta"><h2 class="pname"><a class="plink" href="../es/model/john-terry.html">John Terry</a><span>50</span></h2>
+    <div class="meta"><h2 class="pname"><a class="plink" href="../es/model/john-terry.html">John</a><span>50</span></h2>
       <div class="on-pf">en Candy AI</div>
       <div class="chips"><span>Hombre</span><span>Realista</span><span>Novio</span></div>
       <a class="pchat" href="https://candy.ai/fr/ai-boyfriend/john-terry?via=ic3p7r" target="_blank" rel="sponsored nofollow noopener">💬 Habla con él</a>
@@ -873,7 +897,7 @@ html:not([lang="hi"]) [lang="hi"]{font-family:Inter,system-ui,sans-serif}
     <a class="pcover" href="../es/model/kenji-sato.html" aria-label="Kenji Sato"></a>
     <span class="new">NUEVA</span><span class="online"></span>
     <div class="shade"></div>
-    <div class="meta"><h2 class="pname"><a class="plink" href="../es/model/kenji-sato.html">Kenji Sato</a><span>33</span></h2>
+    <div class="meta"><h2 class="pname"><a class="plink" href="../es/model/kenji-sato.html">Kenji</a><span>33</span></h2>
       <div class="on-pf">en Candy AI</div>
       <div class="chips"><span>Hombre</span><span>Realista</span><span>Novio</span></div>
       <a class="pchat" href="https://candy.ai/fr/ai-boyfriend/kenji-sato?via=ic3p7r" target="_blank" rel="sponsored nofollow noopener">💬 Habla con él</a>
@@ -884,7 +908,7 @@ html:not([lang="hi"]) [lang="hi"]{font-family:Inter,system-ui,sans-serif}
     <a class="pcover" href="../es/model/marcus-musan.html" aria-label="Marcus Musan"></a>
     <span class="new">NUEVA</span><span class="online"></span>
     <div class="shade"></div>
-    <div class="meta"><h2 class="pname"><a class="plink" href="../es/model/marcus-musan.html">Marcus Musan</a><span>32</span></h2>
+    <div class="meta"><h2 class="pname"><a class="plink" href="../es/model/marcus-musan.html">Marcus</a><span>32</span></h2>
       <div class="on-pf">en Candy AI</div>
       <div class="chips"><span>Hombre</span><span>Realista</span><span>Novio</span></div>
       <a class="pchat" href="https://candy.ai/fr/ai-boyfriend/marcus-musan?via=ic3p7r" target="_blank" rel="sponsored nofollow noopener">💬 Habla con él</a>
@@ -895,7 +919,7 @@ html:not([lang="hi"]) [lang="hi"]{font-family:Inter,system-ui,sans-serif}
     <a class="pcover" href="../es/model/jaxon-reed.html" aria-label="Jaxon Reed"></a>
     <span class="new">NUEVA</span><span class="online"></span>
     <div class="shade"></div>
-    <div class="meta"><h2 class="pname"><a class="plink" href="../es/model/jaxon-reed.html">Jaxon Reed</a><span>32</span></h2>
+    <div class="meta"><h2 class="pname"><a class="plink" href="../es/model/jaxon-reed.html">Jaxon</a><span>32</span></h2>
       <div class="on-pf">en Candy AI</div>
       <div class="chips"><span>Hombre</span><span>Realista</span><span>Novio</span></div>
       <a class="pchat" href="https://candy.ai/fr/ai-boyfriend/jaxon-reed?via=ic3p7r" target="_blank" rel="sponsored nofollow noopener">💬 Habla con él</a>
@@ -906,7 +930,7 @@ html:not([lang="hi"]) [lang="hi"]{font-family:Inter,system-ui,sans-serif}
     <a class="pcover" href="../es/model/ethan-vale.html" aria-label="Ethan Vale"></a>
     <span class="new">NUEVA</span><span class="online"></span>
     <div class="shade"></div>
-    <div class="meta"><h2 class="pname"><a class="plink" href="../es/model/ethan-vale.html">Ethan Vale</a><span>25</span></h2>
+    <div class="meta"><h2 class="pname"><a class="plink" href="../es/model/ethan-vale.html">Ethan</a><span>25</span></h2>
       <div class="on-pf">en Candy AI</div>
       <div class="chips"><span>Hombre</span><span>Realista</span><span>Novio</span></div>
       <a class="pchat" href="https://candy.ai/fr/ai-boyfriend/ethan-vale?via=ic3p7r" target="_blank" rel="sponsored nofollow noopener">💬 Habla con él</a>
@@ -917,7 +941,7 @@ html:not([lang="hi"]) [lang="hi"]{font-family:Inter,system-ui,sans-serif}
     <a class="pcover" href="../es/model/jin-park.html" aria-label="Jin Park"></a>
     <span class="new">NUEVA</span><span class="online"></span>
     <div class="shade"></div>
-    <div class="meta"><h2 class="pname"><a class="plink" href="../es/model/jin-park.html">Jin Park</a><span>32</span></h2>
+    <div class="meta"><h2 class="pname"><a class="plink" href="../es/model/jin-park.html">Jin</a><span>32</span></h2>
       <div class="on-pf">en Candy AI</div>
       <div class="chips"><span>Hombre</span><span>Realista</span><span>Novio</span></div>
       <a class="pchat" href="https://candy.ai/fr/ai-boyfriend/jin-park?via=ic3p7r" target="_blank" rel="sponsored nofollow noopener">💬 Habla con él</a>
@@ -928,7 +952,7 @@ html:not([lang="hi"]) [lang="hi"]{font-family:Inter,system-ui,sans-serif}
     <a class="pcover" href="../es/model/rafael-mendoza.html" aria-label="Rafael Mendoza"></a>
     <span class="new">NUEVA</span><span class="online"></span>
     <div class="shade"></div>
-    <div class="meta"><h2 class="pname"><a class="plink" href="../es/model/rafael-mendoza.html">Rafael Mendoza</a><span>32</span></h2>
+    <div class="meta"><h2 class="pname"><a class="plink" href="../es/model/rafael-mendoza.html">Rafael</a><span>32</span></h2>
       <div class="on-pf">en Candy AI</div>
       <div class="chips"><span>Hombre</span><span>Realista</span><span>Novio</span></div>
       <a class="pchat" href="https://candy.ai/fr/ai-boyfriend/rafael-mendoza?via=ic3p7r" target="_blank" rel="sponsored nofollow noopener">💬 Habla con él</a>
@@ -939,7 +963,7 @@ html:not([lang="hi"]) [lang="hi"]{font-family:Inter,system-ui,sans-serif}
     <a class="pcover" href="../es/model/victor-draven.html" aria-label="Victor Draven"></a>
     <span class="new">NUEVA</span><span class="online"></span>
     <div class="shade"></div>
-    <div class="meta"><h2 class="pname"><a class="plink" href="../es/model/victor-draven.html">Victor Draven</a><span>29</span></h2>
+    <div class="meta"><h2 class="pname"><a class="plink" href="../es/model/victor-draven.html">Victor</a><span>29</span></h2>
       <div class="on-pf">en Candy AI</div>
       <div class="chips"><span>Hombre</span><span>Realista</span><span>Novio</span></div>
       <a class="pchat" href="https://candy.ai/fr/ai-boyfriend/victor-draven?via=ic3p7r" target="_blank" rel="sponsored nofollow noopener">💬 Habla con él</a>
@@ -950,7 +974,7 @@ html:not([lang="hi"]) [lang="hi"]{font-family:Inter,system-ui,sans-serif}
     <a class="pcover" href="../es/model/jack-blackwood.html" aria-label="Jack Blackwood"></a>
     <span class="new">NUEVA</span><span class="online"></span>
     <div class="shade"></div>
-    <div class="meta"><h2 class="pname"><a class="plink" href="../es/model/jack-blackwood.html">Jack Blackwood</a><span>35</span></h2>
+    <div class="meta"><h2 class="pname"><a class="plink" href="../es/model/jack-blackwood.html">Jack</a><span>35</span></h2>
       <div class="on-pf">en Candy AI</div>
       <div class="chips"><span>Hombre</span><span>Realista</span><span>Novio</span></div>
       <a class="pchat" href="https://candy.ai/fr/ai-boyfriend/jack-blackwood?via=ic3p7r" target="_blank" rel="sponsored nofollow noopener">💬 Habla con él</a>
@@ -959,18 +983,18 @@ html:not([lang="hi"]) [lang="hi"]{font-family:Inter,system-ui,sans-serif}
   <nav class="pager" id="pager" aria-label="Pagination"></nav>
   <section class="info"><h2>Añadidos recientemente</h2>
     <div class="recent"><a class="rc" href="../es/model/odo-harkness.html"><span class="rc-img"><div class="ph" style="background:linear-gradient(135deg,#ff5a36,#ffb03a)">O</div><img src="https://best-ai-nsfw-bots.com/cdn-cgi/image/width=360,format=auto,quality=80/https://cdn.nd-api.com/avatars/f7a292c5-8c80-4ba1-a880-7de7f1136ffe.jpg" alt="Odo Harkness" loading="lazy" onerror="this.remove()"></span>
-      <span class="rc-t"><b>Odo Harkness</b><small>SpicyChat AI</small></span></a><a class="rc" href="../es/model/marlowe-senn.html"><span class="rc-img"><div class="ph" style="background:linear-gradient(135deg,#ff5a36,#ffb03a)">M</div><img src="https://best-ai-nsfw-bots.com/cdn-cgi/image/width=360,format=auto,quality=80/https://cdn.nd-api.com/avatars/f548d926-c29a-43d1-8ea8-31d58fe4c078.jpg" alt="Marlowe Senn" loading="lazy" onerror="this.remove()"></span>
-      <span class="rc-t"><b>Marlowe Senn</b><small>SpicyChat AI</small></span></a><a class="rc" href="../es/model/valen-droste.html"><span class="rc-img"><div class="ph" style="background:linear-gradient(135deg,#ff5a36,#ffb03a)">V</div><img src="https://best-ai-nsfw-bots.com/cdn-cgi/image/width=360,format=auto,quality=80/https://cdn.nd-api.com/avatars/08a0f9ea-cbfb-40a9-bb90-b872f352aaac.jpg" alt="Valen Droste" loading="lazy" onerror="this.remove()"></span>
-      <span class="rc-t"><b>Valen Droste</b><small>SpicyChat AI</small></span></a><a class="rc" href="../es/model/alaric-dain.html"><span class="rc-img"><div class="ph" style="background:linear-gradient(135deg,#ff5a36,#ffb03a)">A</div><img src="https://best-ai-nsfw-bots.com/cdn-cgi/image/width=360,format=auto,quality=80/https://cdn.nd-api.com/avatars/7dd19c29-761d-43e6-8fb9-080687c5c8d8.jpg" alt="Alaric Dain" loading="lazy" onerror="this.remove()"></span>
-      <span class="rc-t"><b>Alaric Dain</b><small>SpicyChat AI</small></span></a><a class="rc" href="../es/model/niles-varden.html"><span class="rc-img"><div class="ph" style="background:linear-gradient(135deg,#ff5a36,#ffb03a)">N</div><img src="https://best-ai-nsfw-bots.com/cdn-cgi/image/width=360,format=auto,quality=80/https://cdn.nd-api.com/avatars/94f06a7b-e309-43b0-9512-ad2a5f7185c0.jpg" alt="Niles Varden" loading="lazy" onerror="this.remove()"></span>
-      <span class="rc-t"><b>Niles Varden</b><small>SpicyChat AI</small></span></a><a class="rc" href="../es/model/cynwulf-hargrave.html"><span class="rc-img"><div class="ph" style="background:linear-gradient(135deg,#ff5a36,#ffb03a)">C</div><img src="https://best-ai-nsfw-bots.com/cdn-cgi/image/width=360,format=auto,quality=80/https://cdn.nd-api.com/avatars/4c3b7430-15f5-4463-827e-b3481ff7ac66.jpg" alt="Cynwulf Hargrave" loading="lazy" onerror="this.remove()"></span>
-      <span class="rc-t"><b>Cynwulf Hargrave</b><small>SpicyChat AI</small></span></a><a class="rc" href="../es/model/baxter-saltonstall.html"><span class="rc-img"><div class="ph" style="background:linear-gradient(135deg,#ff5a36,#ffb03a)">B</div><img src="https://best-ai-nsfw-bots.com/cdn-cgi/image/width=360,format=auto,quality=80/https://cdn.nd-api.com/avatars/44dc0c9a-08c7-4248-b8dd-bed53024c3b6.jpg" alt="Baxter Saltonstall" loading="lazy" onerror="this.remove()"></span>
-      <span class="rc-t"><b>Baxter Saltonstall</b><small>SpicyChat AI</small></span></a><a class="rc" href="../es/model/bruno-ferri.html"><span class="rc-img"><div class="ph" style="background:linear-gradient(135deg,#ff5a36,#ffb03a)">B</div><img src="https://best-ai-nsfw-bots.com/cdn-cgi/image/width=360,format=auto,quality=80/https://cdn.nd-api.com/avatars/551174cd-ca29-44c5-adaf-4ab0e65fd50e.jpg" alt="Bruno Ferri" loading="lazy" onerror="this.remove()"></span>
-      <span class="rc-t"><b>Bruno Ferri</b><small>SpicyChat AI</small></span></a><a class="rc" href="../es/model/valerio-neri.html"><span class="rc-img"><div class="ph" style="background:linear-gradient(135deg,#ff5a36,#ffb03a)">V</div><img src="https://best-ai-nsfw-bots.com/cdn-cgi/image/width=360,format=auto,quality=80/https://cdn.nd-api.com/avatars/b81c5600-57ec-42f1-b1c7-12609cdd2816.jpg" alt="Valerio Neri" loading="lazy" onerror="this.remove()"></span>
-      <span class="rc-t"><b>Valerio Neri</b><small>SpicyChat AI</small></span></a><a class="rc" href="../es/model/sayer-knox.html"><span class="rc-img"><div class="ph" style="background:linear-gradient(135deg,#ff5a36,#ffb03a)">S</div><img src="https://best-ai-nsfw-bots.com/cdn-cgi/image/width=360,format=auto,quality=80/https://cdn.nd-api.com/avatars/d83c3839-52dd-46ae-9501-ebadbbe0b6ad.jpg" alt="Sayer Knox" loading="lazy" onerror="this.remove()"></span>
-      <span class="rc-t"><b>Sayer Knox</b><small>SpicyChat AI</small></span></a><a class="rc" href="../es/model/nolan-riley.html"><span class="rc-img"><div class="ph" style="background:linear-gradient(135deg,#ff5a36,#ffb03a)">N</div><img src="https://best-ai-nsfw-bots.com/cdn-cgi/image/width=360,format=auto,quality=80/https://cdn.nd-api.com/avatars/fa6593b4-737c-45d0-9eb3-2362f8d4e6e7.png" alt="Nolan Riley" loading="lazy" onerror="this.remove()"></span>
-      <span class="rc-t"><b>Nolan Riley</b><small>SpicyChat AI</small></span></a><a class="rc" href="../es/model/ren-ellery.html"><span class="rc-img"><div class="ph" style="background:linear-gradient(135deg,#ff5a36,#ffb03a)">R</div><img src="https://best-ai-nsfw-bots.com/cdn-cgi/image/width=360,format=auto,quality=80/https://cdn.nd-api.com/avatars/400a94b1-9b59-44e4-9aa5-09f42f4d4e13.jpg" alt="Ren Ellery" loading="lazy" onerror="this.remove()"></span>
-      <span class="rc-t"><b>Ren Ellery</b><small>SpicyChat AI</small></span></a></div>
+      <span class="t10-hot" aria-hidden="true">🔥</span><span class="rc-t"><b>Odo Harkness</b><small>SpicyChat AI</small></span></a><a class="rc" href="../es/model/marlowe-senn.html"><span class="rc-img"><div class="ph" style="background:linear-gradient(135deg,#ff5a36,#ffb03a)">M</div><img src="https://best-ai-nsfw-bots.com/cdn-cgi/image/width=360,format=auto,quality=80/https://cdn.nd-api.com/avatars/f548d926-c29a-43d1-8ea8-31d58fe4c078.jpg" alt="Marlowe Senn" loading="lazy" onerror="this.remove()"></span>
+      <span class="t10-hot" aria-hidden="true">🔥</span><span class="rc-t"><b>Marlowe Senn</b><small>SpicyChat AI</small></span></a><a class="rc" href="../es/model/valen-droste.html"><span class="rc-img"><div class="ph" style="background:linear-gradient(135deg,#ff5a36,#ffb03a)">V</div><img src="https://best-ai-nsfw-bots.com/cdn-cgi/image/width=360,format=auto,quality=80/https://cdn.nd-api.com/avatars/08a0f9ea-cbfb-40a9-bb90-b872f352aaac.jpg" alt="Valen Droste" loading="lazy" onerror="this.remove()"></span>
+      <span class="t10-hot" aria-hidden="true">🔥</span><span class="rc-t"><b>Valen Droste</b><small>SpicyChat AI</small></span></a><a class="rc" href="../es/model/alaric-dain.html"><span class="rc-img"><div class="ph" style="background:linear-gradient(135deg,#ff5a36,#ffb03a)">A</div><img src="https://best-ai-nsfw-bots.com/cdn-cgi/image/width=360,format=auto,quality=80/https://cdn.nd-api.com/avatars/7dd19c29-761d-43e6-8fb9-080687c5c8d8.jpg" alt="Alaric Dain" loading="lazy" onerror="this.remove()"></span>
+      <span class="t10-hot" aria-hidden="true">🔥</span><span class="rc-t"><b>Alaric Dain</b><small>SpicyChat AI</small></span></a><a class="rc" href="../es/model/niles-varden.html"><span class="rc-img"><div class="ph" style="background:linear-gradient(135deg,#ff5a36,#ffb03a)">N</div><img src="https://best-ai-nsfw-bots.com/cdn-cgi/image/width=360,format=auto,quality=80/https://cdn.nd-api.com/avatars/94f06a7b-e309-43b0-9512-ad2a5f7185c0.jpg" alt="Niles Varden" loading="lazy" onerror="this.remove()"></span>
+      <span class="t10-hot" aria-hidden="true">🔥</span><span class="rc-t"><b>Niles Varden</b><small>SpicyChat AI</small></span></a><a class="rc" href="../es/model/cynwulf-hargrave.html"><span class="rc-img"><div class="ph" style="background:linear-gradient(135deg,#ff5a36,#ffb03a)">C</div><img src="https://best-ai-nsfw-bots.com/cdn-cgi/image/width=360,format=auto,quality=80/https://cdn.nd-api.com/avatars/4c3b7430-15f5-4463-827e-b3481ff7ac66.jpg" alt="Cynwulf Hargrave" loading="lazy" onerror="this.remove()"></span>
+      <span class="t10-hot" aria-hidden="true">🔥</span><span class="rc-t"><b>Cynwulf Hargrave</b><small>SpicyChat AI</small></span></a><a class="rc" href="../es/model/baxter-saltonstall.html"><span class="rc-img"><div class="ph" style="background:linear-gradient(135deg,#ff5a36,#ffb03a)">B</div><img src="https://best-ai-nsfw-bots.com/cdn-cgi/image/width=360,format=auto,quality=80/https://cdn.nd-api.com/avatars/44dc0c9a-08c7-4248-b8dd-bed53024c3b6.jpg" alt="Baxter Saltonstall" loading="lazy" onerror="this.remove()"></span>
+      <span class="t10-hot" aria-hidden="true">🔥</span><span class="rc-t"><b>Baxter Saltonstall</b><small>SpicyChat AI</small></span></a><a class="rc" href="../es/model/bruno-ferri.html"><span class="rc-img"><div class="ph" style="background:linear-gradient(135deg,#ff5a36,#ffb03a)">B</div><img src="https://best-ai-nsfw-bots.com/cdn-cgi/image/width=360,format=auto,quality=80/https://cdn.nd-api.com/avatars/551174cd-ca29-44c5-adaf-4ab0e65fd50e.jpg" alt="Bruno Ferri" loading="lazy" onerror="this.remove()"></span>
+      <span class="t10-hot" aria-hidden="true">🔥</span><span class="rc-t"><b>Bruno Ferri</b><small>SpicyChat AI</small></span></a><a class="rc" href="../es/model/valerio-neri.html"><span class="rc-img"><div class="ph" style="background:linear-gradient(135deg,#ff5a36,#ffb03a)">V</div><img src="https://best-ai-nsfw-bots.com/cdn-cgi/image/width=360,format=auto,quality=80/https://cdn.nd-api.com/avatars/b81c5600-57ec-42f1-b1c7-12609cdd2816.jpg" alt="Valerio Neri" loading="lazy" onerror="this.remove()"></span>
+      <span class="t10-hot" aria-hidden="true">🔥</span><span class="rc-t"><b>Valerio Neri</b><small>SpicyChat AI</small></span></a><a class="rc" href="../es/model/sayer-knox.html"><span class="rc-img"><div class="ph" style="background:linear-gradient(135deg,#ff5a36,#ffb03a)">S</div><img src="https://best-ai-nsfw-bots.com/cdn-cgi/image/width=360,format=auto,quality=80/https://cdn.nd-api.com/avatars/d83c3839-52dd-46ae-9501-ebadbbe0b6ad.jpg" alt="Sayer Knox" loading="lazy" onerror="this.remove()"></span>
+      <span class="t10-hot" aria-hidden="true">🔥</span><span class="rc-t"><b>Sayer Knox</b><small>SpicyChat AI</small></span></a><a class="rc" href="../es/model/nolan-riley.html"><span class="rc-img"><div class="ph" style="background:linear-gradient(135deg,#ff5a36,#ffb03a)">N</div><img src="https://best-ai-nsfw-bots.com/cdn-cgi/image/width=360,format=auto,quality=80/https://cdn.nd-api.com/avatars/fa6593b4-737c-45d0-9eb3-2362f8d4e6e7.png" alt="Nolan Riley" loading="lazy" onerror="this.remove()"></span>
+      <span class="t10-hot" aria-hidden="true">🔥</span><span class="rc-t"><b>Nolan Riley</b><small>SpicyChat AI</small></span></a><a class="rc" href="../es/model/ren-ellery.html"><span class="rc-img"><div class="ph" style="background:linear-gradient(135deg,#ff5a36,#ffb03a)">R</div><img src="https://best-ai-nsfw-bots.com/cdn-cgi/image/width=360,format=auto,quality=80/https://cdn.nd-api.com/avatars/400a94b1-9b59-44e4-9aa5-09f42f4d4e13.jpg" alt="Ren Ellery" loading="lazy" onerror="this.remove()"></span>
+      <span class="t10-hot" aria-hidden="true">🔥</span><span class="rc-t"><b>Ren Ellery</b><small>SpicyChat AI</small></span></a></div>
     <p class="hero-links" style="text-align:left"><a href="index.html#new">Ver todas las novedades →</a></p></section>
   <section class="info"><h2>Categorías populares</h2>
     <div class="tags" style="justify-content:flex-start"><a class="tag" href="../es/tag/gay.html">Gay<small>18</small></a><a class="tag" href="../es/tag/muscle.html">Músculos<small>16</small></a><a class="tag" href="../es/tag/boyfriend.html">Novio<small>14</small></a><a class="tag" href="../es/tag/romantic.html">Romántica<small>11</small></a><a class="tag" href="../es/tag/anime.html">Anime<small>9</small></a><a class="tag" href="../es/tag/muscular.html">Musculosa<small>8</small></a><a class="tag" href="../es/tag/dominant.html">Dominante<small>6</small></a><a class="tag" href="../es/tag/comedy.html">Comedia<small>5</small></a><a class="tag" href="../es/tag/athletic.html">Atlética<small>5</small></a><a class="tag" href="../es/tag/fantasy.html">Fantasía<small>5</small></a><a class="tag" href="../es/tag/fit.html">En forma<small>4</small></a><a class="tag" href="../es/tag/boss.html">Jefa<small>3</small></a><a class="tag" href="../es/tag/mature.html">Madura<small>3</small></a><a class="tag" href="../es/tag/fitness.html">Fitness<small>3</small></a><a class="tag" href="../es/tag/travel.html">Viajes<small>3</small></a><a class="tag" href="../es/tag/flirty.html">Coqueta<small>3</small></a><a class="tag" href="../es/tag/shy.html">Tímida<small>3</small></a><a class="tag" href="../es/tag/black-hair.html">Pelo negro<small>3</small></a></div>
@@ -1009,7 +1033,7 @@ html:not([lang="hi"]) [lang="hi"]{font-family:Inter,system-ui,sans-serif}
 </footer>
 
 <script>var PAGE_LANG="es",ROOT="../",LROOT="../es/",PAGE_BASE="men";</script>
-<script defer src="../assets/app-es.js?v=f158603f"></script>
+<script defer src="../assets/app-es.js?v=b1073d0c"></script>
 <script>document.addEventListener("DOMContentLoaded",function(){boot("home")});</script>
 </body>
 </html>

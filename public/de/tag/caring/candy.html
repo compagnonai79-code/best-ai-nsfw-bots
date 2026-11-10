@@ -538,6 +538,27 @@ html:not([lang="hi"]) [lang="hi"]{font-family:Inter,system-ui,sans-serif}
 .mpanel a:hover{border-color:var(--accent)}
 @media(max-width:1000px){header nav > a.hide-m,header nav > a.cur{display:none}.mmenu{display:block}}
 @media(max-width:420px){.mmenu summary span{display:none}.mmenu summary{padding:7px 9px}}
+
+/* Top 10: bigger cards + flame badge; Top 10 profiles marked in the grids */
+.t10{grid-auto-columns:minmax(200px,1fr)}
+.t10-hot{position:absolute;z-index:2;top:8px;right:8px;width:30px;height:30px;border-radius:999px;display:flex;align-items:center;justify-content:center;font-size:16px;background:rgba(11,10,18,.7);pointer-events:none}
+.rc-t b{font-size:15px}
+.pcard .hot{position:absolute;top:10px;left:10px;z-index:2;background:linear-gradient(135deg,#ff7a18,#ff3d8b);color:#fff;font:700 11px Inter,sans-serif;padding:3px 9px;border-radius:999px;pointer-events:none}
+.pcard .new + .hot{top:36px}
+@media(max-width:640px){.t10{grid-auto-columns:58%}.pcard .hot{top:8px;left:8px;font-size:10px}.pcard .new + .hot{top:32px}}
+/* Candy AI full-width banner */
+.cbanner{grid-column:1/-1;position:relative;display:flex;align-items:center;gap:24px;min-height:150px;padding:22px 28px;border-radius:18px;overflow:hidden;
+  background:linear-gradient(100deg,#3a1328 0%,#1d1220 45%,#121019 100%);border:1px solid rgba(255,61,139,.45)}
+.cbanner .ad-lbl{position:absolute;top:8px;right:12px;font:500 11px Inter,sans-serif;color:var(--muted)}
+.cb-txt{flex:1 1 auto;min-width:0}
+.cb-brand{font:700 15px "Space Grotesk",sans-serif;color:var(--accent);margin-bottom:4px}
+.cbanner h3{font:700 26px/1.15 "Space Grotesk",sans-serif;color:#fff;margin:0 0 6px}
+.cbanner p{color:#cfc8e6;font-size:14px;margin:0}
+.cb-faces{display:flex;flex:0 0 auto;align-self:stretch;margin:-22px 0}
+.cb-faces img{width:92px;height:100%;min-height:150px;object-fit:cover;object-position:top;-webkit-mask-image:linear-gradient(to bottom,#000 70%,transparent);mask-image:linear-gradient(to bottom,#000 70%,transparent)}
+.cb-btn{flex:0 0 auto;white-space:nowrap}
+@media(max-width:900px){.cb-faces img:nth-child(n+3){display:none}}
+@media(max-width:640px){.cbanner{flex-wrap:wrap;padding:18px;gap:14px}.cbanner h3{font-size:21px}.cb-faces{display:none}.cb-btn{width:100%;text-align:center}}
 </style>
 <link rel="preconnect" href="https://cdn.candy.ai">
 <link rel="preload" as="image" href="https://cdn.candy.ai/cdn-cgi/image/width=360,format=webp,quality=80/sfw-profile-235610603-f6628a4b-3498-4501-baf2-92cdffbc2a65-600x900-webp90" fetchpriority="high">
@@ -604,7 +625,7 @@ html:not([lang="hi"]) [lang="hi"]{font-family:Inter,system-ui,sans-serif}
     <a class="pcover" href="../../../de/model/marisol-diaz.html" aria-label="Marisol Diaz"></a>
     <span class="new">NEU</span><span class="online"></span>
     <div class="shade"></div>
-    <div class="meta"><h2 class="pname"><a class="plink" href="../../../de/model/marisol-diaz.html">Marisol Diaz</a><span>34</span></h2>
+    <div class="meta"><h2 class="pname"><a class="plink" href="../../../de/model/marisol-diaz.html">Marisol</a><span>34</span></h2>
       <div class="on-pf">auf Candy AI</div>
       <div class="chips"><span>Weiblich</span><span>Anime</span><span>MILF</span></div>
       <a class="pchat" href="https://candy.ai/fr/ai-anime/marisol-diaz?via=ic3p7r" target="_blank" rel="sponsored nofollow noopener">💬 Mit ihr chatten</a>
@@ -615,7 +636,7 @@ html:not([lang="hi"]) [lang="hi"]{font-family:Inter,system-ui,sans-serif}
     <a class="pcover" href="../../../de/model/bianca-rose.html" aria-label="Bianca Rose"></a>
     <span class="new">NEU</span><span class="online"></span>
     <div class="shade"></div>
-    <div class="meta"><h2 class="pname"><a class="plink" href="../../../de/model/bianca-rose.html">Bianca Rose</a><span>29</span></h2>
+    <div class="meta"><h2 class="pname"><a class="plink" href="../../../de/model/bianca-rose.html">Bianca</a><span>29</span></h2>
       <div class="on-pf">auf Candy AI</div>
       <div class="chips"><span>Weiblich</span><span>Anime</span><span>Barista</span></div>
       <a class="pchat" href="https://candy.ai/fr/ai-anime/bianca-rose?via=ic3p7r" target="_blank" rel="sponsored nofollow noopener">💬 Mit ihr chatten</a>
@@ -626,7 +647,7 @@ html:not([lang="hi"]) [lang="hi"]{font-family:Inter,system-ui,sans-serif}
     <a class="pcover" href="../../../de/model/ren-kimiko.html" aria-label="Ren Kimiko"></a>
     <span class="new">NEU</span><span class="online"></span>
     <div class="shade"></div>
-    <div class="meta"><h2 class="pname"><a class="plink" href="../../../de/model/ren-kimiko.html">Ren Kimiko</a><span>19</span></h2>
+    <div class="meta"><h2 class="pname"><a class="plink" href="../../../de/model/ren-kimiko.html">Ren</a><span>19</span></h2>
       <div class="on-pf">auf Candy AI</div>
       <div class="chips"><span>Weiblich</span><span>Anime</span><span>Katzenmädchen</span></div>
       <a class="pchat" href="https://candy.ai/fr/ai-anime/ren-kimiko?via=ic3p7r" target="_blank" rel="sponsored nofollow noopener">💬 Mit ihr chatten</a>
@@ -637,7 +658,7 @@ html:not([lang="hi"]) [lang="hi"]{font-family:Inter,system-ui,sans-serif}
     <a class="pcover" href="../../../de/model/arielle-willowen.html" aria-label="Arielle Willowen"></a>
     <span class="new">NEU</span><span class="online"></span>
     <div class="shade"></div>
-    <div class="meta"><h2 class="pname"><a class="plink" href="../../../de/model/arielle-willowen.html">Arielle Willowen</a><span>26</span></h2>
+    <div class="meta"><h2 class="pname"><a class="plink" href="../../../de/model/arielle-willowen.html">Arielle</a><span>26</span></h2>
       <div class="on-pf">auf Candy AI</div>
       <div class="chips"><span>Weiblich</span><span>Anime</span><span>Stiefschwester</span></div>
       <a class="pchat" href="https://candy.ai/fr/ai-anime/arielle-willowen?via=ic3p7r" target="_blank" rel="sponsored nofollow noopener">💬 Mit ihr chatten</a>
@@ -648,7 +669,7 @@ html:not([lang="hi"]) [lang="hi"]{font-family:Inter,system-ui,sans-serif}
     <a class="pcover" href="../../../de/model/haruka-kobayashi-2.html" aria-label="Haruka Kobayashi"></a>
     <span class="new">NEU</span><span class="online"></span>
     <div class="shade"></div>
-    <div class="meta"><h2 class="pname"><a class="plink" href="../../../de/model/haruka-kobayashi-2.html">Haruka Kobayashi</a><span>30</span></h2>
+    <div class="meta"><h2 class="pname"><a class="plink" href="../../../de/model/haruka-kobayashi-2.html">Haruka</a><span>30</span></h2>
       <div class="on-pf">auf Candy AI</div>
       <div class="chips"><span>Weiblich</span><span>Anime</span><span>Barista</span></div>
       <a class="pchat" href="https://candy.ai/fr/ai-anime/haruka-kobayashi-2?via=ic3p7r" target="_blank" rel="sponsored nofollow noopener">💬 Mit ihr chatten</a>
@@ -659,7 +680,7 @@ html:not([lang="hi"]) [lang="hi"]{font-family:Inter,system-ui,sans-serif}
     <a class="pcover" href="../../../de/model/daphne-dalton.html" aria-label="Daphne Dalton"></a>
     <span class="new">NEU</span><span class="online"></span>
     <div class="shade"></div>
-    <div class="meta"><h2 class="pname"><a class="plink" href="../../../de/model/daphne-dalton.html">Daphne Dalton</a><span>30</span></h2>
+    <div class="meta"><h2 class="pname"><a class="plink" href="../../../de/model/daphne-dalton.html">Daphne</a><span>30</span></h2>
       <div class="on-pf">auf Candy AI</div>
       <div class="chips"><span>Weiblich</span><span>Anime</span><span>Lehrerin</span></div>
       <a class="pchat" href="https://candy.ai/fr/ai-anime/daphne-dalton?via=ic3p7r" target="_blank" rel="sponsored nofollow noopener">💬 Mit ihr chatten</a>
@@ -672,7 +693,7 @@ html:not([lang="hi"]) [lang="hi"]{font-family:Inter,system-ui,sans-serif}
     <a class="pcover" href="../../../de/model/rachel-greer.html" aria-label="Rachel Greer"></a>
     <span class="new">NEU</span><span class="online"></span>
     <div class="shade"></div>
-    <div class="meta"><h2 class="pname"><a class="plink" href="../../../de/model/rachel-greer.html">Rachel Greer</a><span>34</span></h2>
+    <div class="meta"><h2 class="pname"><a class="plink" href="../../../de/model/rachel-greer.html">Rachel</a><span>34</span></h2>
       <div class="on-pf">auf Candy AI</div>
       <div class="chips"><span>Weiblich</span><span>Realistisch</span><span>Kaukasisch</span></div>
       <a class="pchat" href="https://candy.ai/fr/ai-girlfriend/rachel-greer?via=ic3p7r" target="_blank" rel="sponsored nofollow noopener">💬 Mit ihr chatten</a>
@@ -683,7 +704,7 @@ html:not([lang="hi"]) [lang="hi"]{font-family:Inter,system-ui,sans-serif}
     <a class="pcover" href="../../../de/model/amber-murphy.html" aria-label="Amber Murphy"></a>
     <span class="new">NEU</span><span class="online"></span>
     <div class="shade"></div>
-    <div class="meta"><h2 class="pname"><a class="plink" href="../../../de/model/amber-murphy.html">Amber Murphy</a><span>35</span></h2>
+    <div class="meta"><h2 class="pname"><a class="plink" href="../../../de/model/amber-murphy.html">Amber</a><span>35</span></h2>
       <div class="on-pf">auf Candy AI</div>
       <div class="chips"><span>Weiblich</span><span>Realistisch</span><span>Kaukasisch</span></div>
       <a class="pchat" href="https://candy.ai/fr/ai-girlfriend/amber-murphy?via=ic3p7r" target="_blank" rel="sponsored nofollow noopener">💬 Mit ihr chatten</a>
@@ -699,7 +720,10 @@ html:not([lang="hi"]) [lang="hi"]{font-family:Inter,system-ui,sans-serif}
       <div class="chips"><span>Weiblich</span><span>Realistisch</span><span>Kaukasisch</span></div>
       <a class="pchat" href="https://candy.ai/fr/ai-girlfriend/lola_munch?via=ic3p7r" target="_blank" rel="sponsored nofollow noopener">💬 Mit ihr chatten</a>
     </div>
-  </article></div>
+  </article><aside class="cbanner"><span class="ad-lbl">Gesponsert</span>
+    <div class="cb-txt"><div class="cb-brand">Candy AI</div><h3>Erstelle deine eigene KI-Freundin</h3><p>Wähle ihr Aussehen, ihre Persönlichkeit und ihre Vorlieben.</p></div>
+    <div class="cb-faces" aria-hidden="true"><img src="https://cdn.candy.ai/cdn-cgi/image/width=360,format=webp,quality=80/sfw-profile-676319764-44ea6125-e1a9-4284-ad8f-0f959c1b41d2-600x900-webp90" alt="" loading="lazy" onerror="this.remove()"><img src="https://cdn.candy.ai/cdn-cgi/image/width=360,format=webp,quality=80/sfw-profile-359724132-2e8baad8-df67-431d-9901-37eea2e7189a-600x900-webp90" alt="" loading="lazy" onerror="this.remove()"><img src="https://cdn.candy.ai/cdn-cgi/image/width=360,format=webp,quality=80/sfw-profile-273386494-d7b6bed1-97e3-4963-a916-25bbf6caacb2-600x900-webp90" alt="" loading="lazy" onerror="this.remove()"><img src="https://cdn.candy.ai/cdn-cgi/image/width=360,format=webp,quality=80/sfw-profile-305669999-98528ad5-04e9-4409-bc39-233131fbf03e-600x900-webp90" alt="" loading="lazy" onerror="this.remove()"></div>
+    <a class="btn btn-main cb-btn" href="https://candy.ai/?via=ic3p7r" target="_blank" rel="sponsored nofollow noopener">Meine Freundin erstellen →</a></aside></div>
   <p class="hero-links"><a href="../caring.html">Alle „Fürsorglich“-Charaktere (21) →</a> · <a href="../../platform/candy.html">Unser Test zu Candy AI →</a></p>
   <section class="info"><h2>FAQ</h2>
     <div class="mfaq"><div class="mq"><h3>Gibt es auf Candy AI „Fürsorglich“-Charaktere?</h3><p>Ja: Hier sind 9 „Fürsorglich“-Charaktere von Candy AI gelistet, jeweils mit Profilseite und direktem Chat-Link.</p></div><div class="mq"><h3>Ist Candy AI kostenlos?</h3><p>Ja, du kannst auf Candy AI kostenlos starten, mit Einschränkungen. Unbegrenzte Nachrichten und Medien (Fotos, Stimme, Video) erfordern meist ein Abo oder Credits.</p></div><div class="mq"><h3>Wo finde ich weitere „Fürsorglich“-Charaktere?</h3><p>Unsere Seite „Fürsorglich“ bündelt 21 Charaktere von allen Plattformen, die wir listen.</p></div></div></section>
@@ -733,7 +757,7 @@ html:not([lang="hi"]) [lang="hi"]{font-family:Inter,system-ui,sans-serif}
 </footer>
 
 <script>var PAGE_LANG="de",ROOT="../../../",LROOT="../../../de/";</script>
-<script defer src="../../../assets/app-de.js?v=f158603f"></script>
+<script defer src="../../../assets/app-de.js?v=b1073d0c"></script>
 <script>document.addEventListener("DOMContentLoaded",function(){boot("tag")});</script>
 </body>
 </html>
