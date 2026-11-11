@@ -441,7 +441,7 @@ for (const g0 of base.PROFILES) pages.push({ file: "model/" + (g0.id || base.slu
     {"@context":"https://schema.org","@type":"Article","headline":u("model_t", {name:g.name, p:P.name, agep: g.age ? u("age_sfx", {age: g.age}) : ""}),"description":X.bioOf(g).slice(0, 300),
      ...(g.img ? {"image": /^https?:/.test(g.img) ? g.img : SITE.url + "/" + g.img} : {}),"datePublished":g.added,"dateModified":g.added > SITE.updated ? g.added : SITE.updated,"inLanguage":lang,
      "author":{"@type":"Person","name":SITE.author,"url":absUrl(lang, "author.html")},"publisher":{"@type":"Organization","name":SITE.domain,"url":SITE.url}},
-    ...(g.video ? [{"@context":"https://schema.org","@type":"VideoObject","name":g.name + " – " + P.name,"description":X.bioOf(g).slice(0, 300),"thumbnailUrl":g.img || "","contentUrl":g.video,"uploadDate":g.added}] : [])])}
+    ...(g.video ? [{"@context":"https://schema.org","@type":"VideoObject","name":g.name + " – " + P.name,"description":X.bioOf(g).slice(0, 300),"thumbnailUrl":g.img || "","contentUrl":g.video,"uploadDate":g.added + "T12:00:00+01:00"}] : [])])}
   <script type="application/ld+json">${JSON.stringify({"@context":"https://schema.org","@type":"FAQPage","mainEntity":faq.map(([q,a]) => ({"@type":"Question","name":q,"acceptedAnswer":{"@type":"Answer","text":a}}))}).replace(/</g,"\\u003c")}</script>` };
 }});
 
