@@ -559,7 +559,7 @@ pages.push({ file: "how-we-rate.html", build: (X) => {
 }});
 
 /* Platform reviews (src/review-*.js), each linked from its platform page */
-const REVIEWS = { candy: require("./src/review-candy.js"), aiallure: require("./src/review-aiallure.js"), seduced: require("./src/review-seduced.js") };
+const REVIEWS = { candy: require("./src/review-candy.js"), aiallure: require("./src/review-aiallure.js"), seduced: require("./src/review-seduced.js"), spicychat: require("./src/review-spicychat.js") };
 for (const [rk, R] of Object.entries(REVIEWS)) pages.push({ file: R.file, build: (X, lang) => {
   const u = X.ui, e = X.esc, T = R[lang] || R.en, P = X.PLATFORMS[rk];
   const fig = name => { const [w, h] = R.img[name] || [800, 600];
