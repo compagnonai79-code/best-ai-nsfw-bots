@@ -99,6 +99,8 @@ const PLATFORM_DATA = {
 /* ---------- TOP 10 OF THE WEEK (editor's picks) ----------
    Profile ids, in order. Edit this list every week. Ids = the end of the /model/<id> URL. */
 const TOP_PICKS = ["riley-reid","sp00kybby","mona-newman","harriet-seagrave","mia-malkova","mila-nowak","holly-donovan","diana-demont","josie-villanueva","bonnie-blue"];   // chosen by the owner: do not change without asking
+/* Shown right after the Top 10 in the default "Selection" order (home page, categories), in this order. Not in the Top 10 row. */
+const HOME_FEATURED = ["valeria-ochoa"];
 
 /* ---------- CURRENT CANDY OFFER (banner) ----------
    Candy's public discount, copied from its own site (promotion window + subscription page).
@@ -9558,7 +9560,8 @@ const withAge = p => esc(p.name) + (p.age ? ", " + p.age : "");
 const byNew = (a,b) => (!!b.img - !!a.img) || b.added.localeCompare(a.added);   // profiles with a photo first
 const girlId = p => p.id || slug(p.name);
 /* editor's picks (TOP_PICKS in data.js) and the default "Selection" order: picks first, then newest */
-const pickRank = p => { const i = (typeof TOP_PICKS !== "undefined" ? TOP_PICKS : []).indexOf(girlId(p)); return i < 0 ? 1e9 : i; };
+const pickRank = p => { const i = (typeof TOP_PICKS !== "undefined" ? TOP_PICKS : []).indexOf(girlId(p)); if (i >= 0) return i;
+  const f = (typeof HOME_FEATURED !== "undefined" ? HOME_FEATURED : []).indexOf(girlId(p)); return f < 0 ? 1e9 : 1000 + f; };
 const topList = () => (typeof TOP_PICKS !== "undefined" ? TOP_PICKS : []).map(id => PROFILES.find(p => girlId(p) === id)).filter(Boolean);
 const bySel = (a, b) => (pickRank(a) - pickRank(b)) || byNew(a, b);
 const PER_PAGE = 36;

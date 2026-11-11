@@ -93,6 +93,9 @@ Dans son bloc : `bio` (description par langue), `tags`, `img` (photo), `age`, `n
 ## 7. Changer le Top 10
 `src/data.js` → `const TOP_PICKS = [ … ]` : 10 `id` dans l'ordre. La mise à jour du mercredi n'y touche plus : c'est toi qui le choisis.
 
+## 7b. Mettre un personnage en avant sur l'accueil (sans toucher au Top 10)
+`src/data.js` → `const HOME_FEATURED = [ … ]` : les `id` placés juste après le Top 10 dans l'ordre « Sélection » (accueil, catégories), dans l'ordre de la liste. Ex. `["valeria-ochoa","mona-newman"]`.
+
 ## 8. Offre Candy, pop-up
 `src/data.js` → `const OFFER = { … }` : `active: false` pour enlever le bandeau ; `pct`, `price`, `regular`, `checked` pour les chiffres. Le pop-up : `const PROMO`.
 

@@ -51,7 +51,8 @@ const withAge = p => esc(p.name) + (p.age ? ", " + p.age : "");
 const byNew = (a,b) => (!!b.img - !!a.img) || b.added.localeCompare(a.added);   // profiles with a photo first
 const girlId = p => p.id || slug(p.name);
 /* editor's picks (TOP_PICKS in data.js) and the default "Selection" order: picks first, then newest */
-const pickRank = p => { const i = (typeof TOP_PICKS !== "undefined" ? TOP_PICKS : []).indexOf(girlId(p)); return i < 0 ? 1e9 : i; };
+const pickRank = p => { const i = (typeof TOP_PICKS !== "undefined" ? TOP_PICKS : []).indexOf(girlId(p)); if (i >= 0) return i;
+  const f = (typeof HOME_FEATURED !== "undefined" ? HOME_FEATURED : []).indexOf(girlId(p)); return f < 0 ? 1e9 : 1000 + f; };
 const topList = () => (typeof TOP_PICKS !== "undefined" ? TOP_PICKS : []).map(id => PROFILES.find(p => girlId(p) === id)).filter(Boolean);
 const bySel = (a, b) => (pickRank(a) - pickRank(b)) || byNew(a, b);
 const PER_PAGE = 36;
