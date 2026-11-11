@@ -580,9 +580,9 @@ pages.push({ file: "review/candy-ai.html", build: (X, lang) => {
   return { page:"review", nav:"platforms", title:T.meta_t, desc:T.meta_d, lastmod:R.date, image: "images/avis-candy/candy-accueil.webp", body: `
   <nav class="crumb"><a href="../platforms.html">${e(u("nav_platforms"))}</a> › <a href="../platform/candy.html">${e(P.name)}</a> › <span>${e(T.crumb)}</span></nav>
   <article class="avis">
-    <header class="avis-head"><h1>${e(T.h1)}</h1>
+    <div class="avis-head"><h1>${e(T.h1)}</h1>
       <p class="tp-by">${byline(X, "../")} · ${e(fmtDate(R.date, lang))}</p>
-      <p class="avis-intro">${e(T.intro)}</p></header>
+      <p class="avis-intro">${e(T.intro)}</p></div>
     <section class="avis-box"><h2>${e(T.box_t)}</h2><p>${e(T.box)}</p>
       <div class="avis-scores">${T.scores.map(([k, v]) => `<div><span>${e(k)}</span><b>${e(v)}</b></div>`).join("")}
         <div class="avis-site"><span>${e(T.site_score)}</span><b>★ ${P.rating}/5</b> <a href="../how-we-rate.html">${e(u("nav_how"))}</a></div></div>
