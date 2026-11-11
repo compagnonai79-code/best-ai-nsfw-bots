@@ -471,7 +471,8 @@ for (const key of Object.keys(base.PLATFORMS).filter(k => base.PLATFORMS[k].url)
     <h1>${e(u("pl_h1", v))}</h1>
     <p class="tp-by">★ ${P.rating}/5 · ${byline(X, "../")} · ${e(u("rv_checked", v))}</p>
     <p class="tp-intro">${e(X.tr(P.desc))}</p>
-    <p>${cta("btn btn-main btn-xl")}</p></section>
+    <p>${cta("btn btn-main btn-xl")}</p>
+    ${key === "candy" ? `<p class="avis-link"><a href="../review/candy-ai.html">📝 ${e((REVIEW_CANDY[lang] || REVIEW_CANDY.en).pl_link)} →</a></p>` : ""}</section>
   ${X.OFFER.platform === key ? X.offerBox() : ""}
   <div class="mgrid">
     <section class="info review"><h2>${e(u("rv_t"))}</h2>
@@ -557,6 +558,46 @@ pages.push({ file: "how-we-rate.html", build: (X) => {
     <p>${u("how_report", {contact: `<a href="contact.html">${e(u("contact_link"))}</a>`})}</p></section>` };
 }});
 
+/* Candy AI hands-on review (src/review-candy.js), linked from the Candy platform page */
+const REVIEW_CANDY = require("./src/review-candy.js");
+pages.push({ file: "review/candy-ai.html", build: (X, lang) => {
+  const u = X.ui, e = X.esc, R = REVIEW_CANDY, T = R[lang] || R.en, P = X.PLATFORMS.candy;
+  const fig = name => { const [w, h] = R.img[name] || [800, 600];
+    return `<figure class="avis-fig"><img src="ROOT_PLACEHOLDERimages/avis-candy/${name}.webp" width="${w}" height="${h}" alt="${e(T.cap[name])}" loading="lazy">
+      <figcaption>${e(T.cap[name])}</figcaption></figure>`; };
+  const body = h => h.replace(/\[\[img:([\w-]+)\]\]/g, (m, n) => fig(n));
+  const cta = cls => X.ctaLink(P, e(T.cta) + " →", cls);
+  const url = absUrl(lang, "review/candy-ai.html");
+  const ld = [bcLd(X, lang, [[u("bc_home"), "index.html"], [P.name, "platform/candy.html"], [T.crumb, "review/candy-ai.html"]]),
+    {"@context":"https://schema.org","@type":"Review","name":T.h1,"url":url,"inLanguage":lang,"datePublished":R.date,"dateModified":R.date,
+     "author":{"@type":"Person","name":SITE.author,"url":absUrl(lang, "author.html")},"publisher":{"@type":"Organization","name":SITE.domain,"url":SITE.url},
+     "itemReviewed":{"@type":"SoftwareApplication","name":"Candy AI","applicationCategory":"EntertainmentApplication","operatingSystem":"Web, iOS, Android","url":"https://candy.ai"},
+     "reviewRating":{"@type":"Rating","ratingValue":P.rating,"bestRating":5,"worstRating":1},
+     "positiveNotes":{"@type":"ItemList","itemListElement":T.pros.map((x, i) => ({"@type":"ListItem","position":i + 1,"name":x}))},
+     "negativeNotes":{"@type":"ItemList","itemListElement":T.cons.map((x, i) => ({"@type":"ListItem","position":i + 1,"name":x}))},
+     "reviewBody":T.box},
+    {"@context":"https://schema.org","@type":"FAQPage","mainEntity":T.faq.map(([q, a]) => ({"@type":"Question","name":q,"acceptedAnswer":{"@type":"Answer","text":a}}))}];
+  return { page:"review", nav:"platforms", title:T.meta_t, desc:T.meta_d, lastmod:R.date, image: "images/avis-candy/candy-accueil.webp", body: `
+  <nav class="crumb"><a href="../platforms.html">${e(u("nav_platforms"))}</a> › <a href="../platform/candy.html">${e(P.name)}</a> › <span>${e(T.crumb)}</span></nav>
+  <article class="avis">
+    <header class="avis-head"><h1>${e(T.h1)}</h1>
+      <p class="tp-by">${byline(X, "../")} · ${e(fmtDate(R.date, lang))}</p>
+      <p class="avis-intro">${e(T.intro)}</p></header>
+    <section class="avis-box"><h2>${e(T.box_t)}</h2><p>${e(T.box)}</p>
+      <div class="avis-scores">${T.scores.map(([k, v]) => `<div><span>${e(k)}</span><b>${e(v)}</b></div>`).join("")}
+        <div class="avis-site"><span>${e(T.site_score)}</span><b>★ ${P.rating}/5</b> <a href="../how-we-rate.html">${e(u("nav_how"))}</a></div></div>
+      <div class="avis-pc"><div><h3 class="pro-h">${e(T.pros_t)}</h3><ul class="pros">${T.pros.map(x => `<li>${e(x)}</li>`).join("")}</ul></div>
+        <div><h3 class="con-h">${e(T.cons_t)}</h3><ul class="cons">${T.cons.map(x => `<li>${e(x)}</li>`).join("")}</ul></div></div>
+      <p class="avis-cta">${cta("btn btn-main")}<small>${e(T.cta_note)}</small></p></section>
+    <nav class="avis-toc" aria-label="${e(T.toc_t)}"><b>${e(T.toc_t)}</b><ol>${T.sections.map(s => `<li><a href="#${s.id}">${e(s.h2.replace(/^\d+\.\s*/, ""))}</a></li>`).join("")}<li><a href="#faq">${e(T.faq_t)}</a></li></ol></nav>
+    ${T.sections.map(s => `<section class="avis-sec" id="${s.id}"><h2>${e(s.h2)}</h2>${body(s.body)}</section>`).join("\n")}
+    <section class="avis-sec" id="faq"><h2>${e(T.faq_t)}</h2>${T.faq.map(([q, a]) => `<details class="avis-faq"><summary>${e(q)}</summary><p>${e(a)}</p></details>`).join("")}</section>
+    <section class="avis-end"><h2>${e(T.end_t)}</h2><p>${e(T.end)}</p><p class="avis-cta">${cta("btn btn-main")}<small>${e(T.cta_note)}</small></p></section>
+    <p class="avis-src">${e(T.src)}</p>
+  </article>
+  ${ld.map(ldTag).join("\n")}` };
+}});
+
 pages.push({ file: "data.html", build: (X) => {
   const u = X.ui, e = X.esc;
   const yn = v => v === true ? `<span class="yes">${e(u("yes"))}</span>` : v === false ? `<span class="no">${e(u("no"))}</span>` : `<span class="pend">${e(u("pending"))}</span>`;
@@ -599,6 +640,7 @@ pages.push({ file: "sitemap.html", build: (X) => {
       ${a("how-we-rate.html", u("nav_how"))}${a("author.html", SITE.author)}${a("data.html", u("nav_data"))}${a("contact.html", u("nav_contact"))}</section>
     <section><h2>${e(u("sm_tags"))}</h2>${tags.map(t => a("tag/" + X.slug(t) + ".html", X.tr(t))).join("")}</section>
     <section><h2>${e(u("sm_profiles"))}</h2>${girls.map(g => a("model/" + (g.id || X.slug(g.name)) + ".html", g.name)).join("")}</section>
+    <section><h2>${e(u("nav_platforms"))}</h2>${a("review/candy-ai.html", (REVIEW_CANDY[X.LANG] || REVIEW_CANDY.en).h1)}</section>
     <section><h2>${e(u("sm_legal"))}</h2>${LEGAL_PAGES.map(([f, k]) => a("legal/" + f + ".html", u(k))).join("")}</section>
   </div>` };
 }});
