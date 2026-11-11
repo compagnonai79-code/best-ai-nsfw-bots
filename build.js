@@ -472,7 +472,7 @@ for (const key of Object.keys(base.PLATFORMS).filter(k => base.PLATFORMS[k].url)
     <p class="tp-by">★ ${P.rating}/5 · ${byline(X, "../")} · ${e(u("rv_checked", v))}</p>
     <p class="tp-intro">${e(X.tr(P.desc))}</p>
     <p>${cta("btn btn-main btn-xl")}</p>
-    ${key === "candy" ? `<p class="avis-link"><a href="../review/candy-ai.html">📝 ${e((REVIEW_CANDY[lang] || REVIEW_CANDY.en).pl_link)} →</a></p>` : ""}</section>
+    ${REVIEWS[key] ? `<p class="avis-link"><a href="../${REVIEWS[key].file}">📝 ${e((REVIEWS[key][lang] || REVIEWS[key].en).pl_link)} →</a></p>` : ""}</section>
   ${X.OFFER.platform === key ? X.offerBox() : ""}
   <div class="mgrid">
     <section class="info review"><h2>${e(u("rv_t"))}</h2>
@@ -558,31 +558,31 @@ pages.push({ file: "how-we-rate.html", build: (X) => {
     <p>${u("how_report", {contact: `<a href="contact.html">${e(u("contact_link"))}</a>`})}</p></section>` };
 }});
 
-/* Candy AI hands-on review (src/review-candy.js), linked from the Candy platform page */
-const REVIEW_CANDY = require("./src/review-candy.js");
-pages.push({ file: "review/candy-ai.html", build: (X, lang) => {
-  const u = X.ui, e = X.esc, R = REVIEW_CANDY, T = R[lang] || R.en, P = X.PLATFORMS.candy;
+/* Platform reviews (src/review-*.js), each linked from its platform page */
+const REVIEWS = { candy: require("./src/review-candy.js"), aiallure: require("./src/review-aiallure.js"), seduced: require("./src/review-seduced.js") };
+for (const [rk, R] of Object.entries(REVIEWS)) pages.push({ file: R.file, build: (X, lang) => {
+  const u = X.ui, e = X.esc, T = R[lang] || R.en, P = X.PLATFORMS[rk];
   const fig = name => { const [w, h] = R.img[name] || [800, 600];
-    return `<figure class="avis-fig"><img src="ROOT_PLACEHOLDERimages/avis-candy/${name}.webp" width="${w}" height="${h}" alt="${e(T.cap[name])}" loading="lazy">
+    return `<figure class="avis-fig"><img src="ROOT_PLACEHOLDERimages/${R.dir}/${name}.webp" width="${w}" height="${h}" alt="${e(T.cap[name])}" loading="lazy">
       <figcaption>${e(T.cap[name])}</figcaption></figure>`; };
   const body = h => h.replace(/\[\[img:([\w-]+)\]\]/g, (m, n) => fig(n));
   const cta = cls => X.ctaLink(P, e(T.cta) + " →", cls);
-  const url = absUrl(lang, "review/candy-ai.html");
-  const ld = [bcLd(X, lang, [[u("bc_home"), "index.html"], [P.name, "platform/candy.html"], [T.crumb, "review/candy-ai.html"]]),
+  const url = absUrl(lang, R.file);
+  const ld = [bcLd(X, lang, [[u("bc_home"), "index.html"], [P.name, "platform/" + rk + ".html"], [T.crumb, R.file]]),
     {"@context":"https://schema.org","@type":"Review","name":T.h1,"url":url,"inLanguage":lang,"datePublished":R.date,"dateModified":R.date,
      "author":{"@type":"Person","name":SITE.author,"url":absUrl(lang, "author.html")},"publisher":{"@type":"Organization","name":SITE.domain,"url":SITE.url},
-     "itemReviewed":{"@type":"SoftwareApplication","name":"Candy AI","applicationCategory":"EntertainmentApplication","operatingSystem":"Web, iOS, Android","url":"https://candy.ai"},
+     "itemReviewed":{"@type":"SoftwareApplication","name":P.name,"applicationCategory":"EntertainmentApplication","operatingSystem":"Web","url":R.site},
      "reviewRating":{"@type":"Rating","ratingValue":P.rating,"bestRating":5,"worstRating":1},
      "positiveNotes":{"@type":"ItemList","itemListElement":T.pros.map((x, i) => ({"@type":"ListItem","position":i + 1,"name":x}))},
      "negativeNotes":{"@type":"ItemList","itemListElement":T.cons.map((x, i) => ({"@type":"ListItem","position":i + 1,"name":x}))},
      "reviewBody":T.box},
     {"@context":"https://schema.org","@type":"FAQPage","mainEntity":T.faq.map(([q, a]) => ({"@type":"Question","name":q,"acceptedAnswer":{"@type":"Answer","text":a}}))}];
-  return { page:"review", nav:"platforms", title:T.meta_t, desc:T.meta_d, lastmod:R.date, image: "images/avis-candy/candy-accueil.webp", body: `
-  <nav class="crumb"><a href="../platforms.html">${e(u("nav_platforms"))}</a> › <a href="../platform/candy.html">${e(P.name)}</a> › <span>${e(T.crumb)}</span></nav>
+  return { page:"review", nav:"platforms", title:T.meta_t, desc:T.meta_d, lastmod:R.date, image: "images/" + R.dir + "/" + R.cover + ".webp", body: `
+  <nav class="crumb"><a href="../platforms.html">${e(u("nav_platforms"))}</a> › <a href="../platform/${rk}.html">${e(P.name)}</a> › <span>${e(T.crumb)}</span></nav>
   <article class="avis">
     <div class="avis-head"><h1>${e(T.h1)}</h1>
       <p class="tp-by">${byline(X, "../")} · ${e(fmtDate(R.date, lang))}</p>
-      <p class="avis-intro">${e(T.intro)}</p></div>
+      <p class="avis-intro">${e(T.intro)}</p>${T.based ? `<p class="avis-note">${T.based}</p>` : ""}</div>
     <section class="avis-box"><h2>${e(T.box_t)}</h2><p>${e(T.box)}</p>
       <div class="avis-scores">${T.scores.map(([k, v]) => `<div><span>${e(k)}</span><b>${e(v)}</b></div>`).join("")}
         <div class="avis-site"><span>${e(T.site_score)}</span><b>★ ${P.rating}/5</b> <a href="../how-we-rate.html">${e(u("nav_how"))}</a></div></div>
@@ -640,7 +640,7 @@ pages.push({ file: "sitemap.html", build: (X) => {
       ${a("how-we-rate.html", u("nav_how"))}${a("author.html", SITE.author)}${a("data.html", u("nav_data"))}${a("contact.html", u("nav_contact"))}</section>
     <section><h2>${e(u("sm_tags"))}</h2>${tags.map(t => a("tag/" + X.slug(t) + ".html", X.tr(t))).join("")}</section>
     <section><h2>${e(u("sm_profiles"))}</h2>${girls.map(g => a("model/" + (g.id || X.slug(g.name)) + ".html", g.name)).join("")}</section>
-    <section><h2>${e(u("nav_platforms"))}</h2>${a("review/candy-ai.html", (REVIEW_CANDY[X.LANG] || REVIEW_CANDY.en).h1)}</section>
+    <section><h2>${e(u("nav_platforms"))}</h2>${Object.values(REVIEWS).map(R => a(R.file, (R[X.LANG] || R.en).h1)).join("")}</section>
     <section><h2>${e(u("sm_legal"))}</h2>${LEGAL_PAGES.map(([f, k]) => a("legal/" + f + ".html", u(k))).join("")}</section>
   </div>` };
 }});

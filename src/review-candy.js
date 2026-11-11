@@ -2,7 +2,7 @@
    Source: the owner's own hands-on test (video, November 2026). Prices checked on candy.ai/fr/subscriptions on 2026-11-11.
    In the section bodies, [[img:name]] is replaced by a figure (images/avis-candy/<name>.webp, caption from `cap`). */
 module.exports = {
-date: "2026-11-11",
+date: "2026-11-11", file: "review/candy-ai.html", dir: "avis-candy", cover: "candy-accueil", site: "https://candy.ai",
 img: { "candy-accueil": [785, 815], "creation-style": [785, 650], "creation-origine-age": [785, 738], "creation-cheveux": [785, 758],
        "creation-personnalite": [800, 428], "chat": [800, 374], "prix": [785, 698] },
 
