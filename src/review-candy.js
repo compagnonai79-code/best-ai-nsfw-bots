@@ -13,8 +13,8 @@ fr: {
   crumb: "Avis", h1: "Avis Candy AI : notre test complet",
   intro: "Candy AI se présente comme « l'expérience petite amie IA la plus réaliste du marché ». Le marketing est soigné, mais qu'y a-t-il derrière ? Nous avons testé l'appli avec un abonnement payant : création d'un personnage, conversation (cohérence, mémoire, humour), génération d'images, appels vocaux et coût réel des jetons. Voici ce que nous avons constaté, sans filtre.",
   box_t: "En bref",
-  box: "Une très belle vitrine : création de personnage soignée, images réalistes souvent bluffantes et conversations sans tabou. Mais la mémoire est inégale, l'IA repasse parfois à l'anglais et les jetons partent vite. À prendre en abonnement 12 mois, pas au mois.",
-  scores: [["Conversation", "7/10"], ["Images réalistes", "9/10 au mieux"], ["Appels vocaux", "3/5"], ["Prix", "3,99 €/mois (12 mois)"]],
+  box: "Une très belle vitrine : création de personnage soignée, images réalistes souvent bluffantes et conversations sans tabou. Mais la mémoire est inégale, l'IA repasse parfois à l'anglais et les jetons partent vite. À prendre en abonnement 12 mois, surtout pendant la promo Black Friday, pas au mois.",
+  scores: [["Conversation", "7/10"], ["Images réalistes", "9/10 au mieux"], ["Appels vocaux", "3/5"], ["Prix", "3,99 €/mois (12 mois, promo Black Friday)"]],
   site_score: "Note de la plateforme (notre méthode)",
   pros_t: "Points forts", cons_t: "Points faibles",
   pros: ["Création du personnage très complète (style, origine, âge, corps, personnalité, relation, voix)",
@@ -22,7 +22,7 @@ fr: {
     "Conversation sans filtre, qui comprend l'humour, le sarcasme et les références",
     "Appels vocaux qu'on peut interrompre",
     "Paiement discret (« EverAI » sur le relevé), crypto acceptée",
-    "3,99 €/mois avec l'offre 12 mois, l'un des meilleurs prix du marché"],
+    "3,99 €/mois sur 12 mois pendant la promo Black Friday, l'un des meilleurs prix du marché"],
   cons: ["Mémoire inégale : elle retient certains détails et en oublie d'autres",
     "Peut repasser à l'anglais en pleine conversation",
     "Version gratuite très limitée (quelques messages)",
@@ -81,10 +81,10 @@ fr: {
 </ul>
 <p><strong>Note appels : 3/5.</strong> Plutôt correct, mais encore des progrès à faire.</p>` },
   { id: "prix", h2: "5. Prix et jetons : ce que ça coûte vraiment", body: `
-<p>Sans abonnement, le test tourne court en quelques minutes : pour vraiment profiter de Candy AI, il faut le Premium. Prix relevés sur candy.ai le 11 novembre 2026 :</p>
+<p>Sans abonnement, le test tourne court en quelques minutes : pour vraiment profiter de Candy AI, il faut le Premium. Prix relevés sur candy.ai le 11 novembre 2026, pendant la promo <strong>Black Friday</strong> :</p>
 [[img:prix]]
 <div class="tablewrap"><table class="data avis-t"><thead><tr><th>Formule</th><th>Prix</th></tr></thead><tbody>
-<tr><td><strong>12 mois</strong></td><td><strong>3,99 €/mois</strong> au lieu de 13,99 € (-70 %)</td></tr>
+<tr><td><strong>12 mois</strong></td><td><strong>3,99 €/mois</strong> au lieu de 13,99 € (-70 %, promo Black Friday)</td></tr>
 <tr><td>3 mois</td><td>8,99 €/mois</td></tr>
 <tr><td>1 mois</td><td>9,99 € le premier mois, puis 13,99 €/mois</td></tr>
 </tbody></table></div>
@@ -96,7 +96,8 @@ fr: {
 </tbody></table></div>
 <p>Avec 100 jetons, une dizaine d'images et un appel peuvent vider le compteur en moins d'une heure. Les recharges sont chères : 9,99 € les 100 jetons pendant notre test, et jusqu'à environ 300 € le pack de 3 750 jetons.</p>
 <p>Paiement par carte, virement ou crypto. Le relevé bancaire affiche « EverAI », pas Candy, et l'abonnement se résilie à tout moment dans les paramètres.</p>
-<p><strong>Notre conseil :</strong> l'abonnement 12 mois à 3,99 €/mois est l'un des meilleurs prix du marché. Le mois seul, lui, est cher.</p>` },
+<p class="avis-note"><strong>Pourquoi 3,99 € ?</strong> Ce prix vient de la promo <strong>Black Friday</strong> : -70 % sur l'abonnement 12 mois, pour une durée limitée. Une fois la promo terminée, le prix remonte.</p>
+<p><strong>Notre conseil :</strong> pendant la promo, l'abonnement 12 mois à 3,99 €/mois est l'un des meilleurs prix du marché. Le mois seul, lui, est cher.</p>` },
   { id: "verdict", h2: "Verdict : une belle vitrine, une arrière-boutique à finir", body: `
 [[img:candy-accueil]]
 <p>Candy AI excelle pour créer un personnage à ton goût, générer de belles images réalistes et mener des conversations coquines sans jugement. Pour la mémoire à long terme et les échanges profonds, on repassera : c'est une artiste, pas une confidente. Et si tu comptes beaucoup utiliser les images, la voix et les appels, prévois un budget jetons.</p>
@@ -105,13 +106,13 @@ fr: {
   faq_t: "Questions fréquentes",
   faq: [
     ["Candy AI est-il gratuit ?", "Il existe une version gratuite, mais très limitée : au bout de quelques messages, l'appli demande de passer Premium, et la création d'un personnage aussi. Pour un vrai usage, il faut l'abonnement."],
-    ["Combien coûte Candy AI ?", "Le 11 novembre 2026 : 3,99 €/mois avec l'abonnement 12 mois, 8,99 €/mois sur 3 mois, ou 9,99 € le premier mois puis 13,99 €/mois. Chaque formule inclut 100 jetons par mois."],
+    ["Combien coûte Candy AI ?", "Le 11 novembre 2026, pendant la promo Black Friday : 3,99 €/mois avec l'abonnement 12 mois (-70 %, offre limitée), 8,99 €/mois sur 3 mois, ou 9,99 € le premier mois puis 13,99 €/mois. Chaque formule inclut 100 jetons par mois."],
     ["À quoi servent les jetons sur Candy AI ?", "Aux images (2 à 3 jetons chacune), aux appels vocaux (3 jetons par minute) et à la lecture audio des messages (0,2 jeton). Les messages texte, eux, sont illimités en Premium."],
     ["Candy AI se souvient-il de ce qu'on lui dit ?", "En partie. Pendant notre test, elle a retenu notre chien Max jusque dans l'appel vocal, mais a oublié notre semi-marathon. La mémoire à long terme reste son point faible."],
     ["Candy AI parle-t-il français ?", "Oui, mais il lui arrive de repasser à l'anglais en pleine conversation, même après lui avoir demandé de rester en français."],
     ["Candy AI est-il discret sur le relevé bancaire ?", "Oui : le paiement apparaît sous le nom « EverAI ». La crypto est aussi acceptée, et l'abonnement se résilie à tout moment dans les paramètres."]
   ],
-  end_t: "Envie de tester par toi-même ?", end: "Profite de l'offre en cours sur l'abonnement 12 mois et crée ta propre copine IA.",
+  end_t: "Envie de tester par toi-même ?", end: "Profite de la promo Black Friday sur l'abonnement 12 mois (-70 %, durée limitée) et crée ta propre copine IA.",
   pl_link: "Lire notre avis complet (test)",
   cap: { "creation-style": "Étape 1 : choisir entre le style réaliste et le style anime.",
     "creation-origine-age": "Étape 2 : l'origine et l'âge (de 18 à 55 ans et plus).",
@@ -130,8 +131,8 @@ en: {
   crumb: "Review", h1: "Candy AI Review: Our Full Hands-On Test",
   intro: "Candy AI calls itself “the most realistic AI girlfriend experience on the market”. The marketing is slick, but what is behind it? We tested the app on a paid plan: creating a character, conversation (consistency, memory, humour), image generation, voice calls and the real cost of tokens. Here is what we found, unfiltered.",
   box_t: "In short",
-  box: "A beautiful shop window: polished character creation, often stunning realistic images and taboo-free chats. But memory is patchy, the AI sometimes switches language mid-chat and tokens run out fast. Take the 12-month plan, not the monthly one.",
-  scores: [["Conversation", "7/10"], ["Realistic images", "9/10 at best"], ["Voice calls", "3/5"], ["Price", "€3.99/month (12 months)"]],
+  box: "A beautiful shop window: polished character creation, often stunning realistic images and taboo-free chats. But memory is patchy, the AI sometimes switches language mid-chat and tokens run out fast. Take the 12-month plan, ideally during the Black Friday deal, not the monthly one.",
+  scores: [["Conversation", "7/10"], ["Realistic images", "9/10 at best"], ["Voice calls", "3/5"], ["Price", "€3.99/month (12 months, Black Friday deal)"]],
   site_score: "Platform rating (our method)",
   pros_t: "Strengths", cons_t: "Weaknesses",
   pros: ["Very complete character creation (style, origin, age, body, personality, relationship, voice)",
@@ -139,7 +140,7 @@ en: {
     "Unfiltered conversation that gets humour, sarcasm and references",
     "Voice calls you can interrupt",
     "Discreet billing (“EverAI” on your statement), crypto accepted",
-    "€3.99/month on the 12-month plan, one of the best prices around"],
+    "€3.99/month on the 12-month plan during the Black Friday deal, one of the best prices around"],
   cons: ["Patchy memory: remembers some details, forgets others",
     "Can switch language in the middle of a conversation",
     "Very limited free version (a few messages)",
@@ -198,10 +199,10 @@ en: {
 </ul>
 <p><strong>Calls score: 3/5.</strong> Decent, but there is still room for improvement.</p>` },
   { id: "prix", h2: "5. Price and tokens: what it really costs", body: `
-<p>Without a subscription the test ends within minutes: to really use Candy AI you need Premium. Prices checked on candy.ai on 11 November 2026 (French site, in euros):</p>
+<p>Without a subscription the test ends within minutes: to really use Candy AI you need Premium. Prices checked on candy.ai on 11 November 2026 (French site, in euros), during the <strong>Black Friday</strong> deal:</p>
 [[img:prix]]
 <div class="tablewrap"><table class="data avis-t"><thead><tr><th>Plan</th><th>Price</th></tr></thead><tbody>
-<tr><td><strong>12 months</strong></td><td><strong>€3.99/month</strong> instead of €13.99 (-70%)</td></tr>
+<tr><td><strong>12 months</strong></td><td><strong>€3.99/month</strong> instead of €13.99 (-70%, Black Friday deal)</td></tr>
 <tr><td>3 months</td><td>€8.99/month</td></tr>
 <tr><td>1 month</td><td>€9.99 for the first month, then €13.99/month</td></tr>
 </tbody></table></div>
@@ -213,7 +214,8 @@ en: {
 </tbody></table></div>
 <p>With 100 tokens, a dozen images and one call can empty the counter in under an hour. Top-ups are expensive: €9.99 for 100 tokens during our test, and up to about €300 for the 3,750-token pack.</p>
 <p>Payment by card, bank transfer or crypto. Your bank statement shows “EverAI”, not Candy, and you can cancel at any time in the settings.</p>
-<p><strong>Our advice:</strong> the 12-month plan at €3.99/month is one of the best prices on the market. The single month is expensive.</p>` },
+<p class="avis-note"><strong>Why €3.99?</strong> This price comes from the <strong>Black Friday</strong> deal: -70% on the 12-month plan, for a limited time. Once the deal ends, the price goes back up.</p>
+<p><strong>Our advice:</strong> during the deal, the 12-month plan at €3.99/month is one of the best prices on the market. The single month is expensive.</p>` },
   { id: "verdict", h2: "Verdict: a beautiful shop window, an unfinished back room", body: `
 [[img:candy-accueil]]
 <p>Candy AI excels at building a character to your taste, generating beautiful realistic images and holding naughty, judgement-free conversations. For long-term memory and deep conversations, look elsewhere: she is an artist, not a confidante. And if you plan to use images, voice and calls a lot, budget for tokens.</p>
@@ -222,13 +224,13 @@ en: {
   faq_t: "Frequently asked questions",
   faq: [
     ["Is Candy AI free?", "There is a free version, but it is very limited: after a few messages the app asks you to go Premium, and creating a character does too. For real use, you need a subscription."],
-    ["How much does Candy AI cost?", "On 11 November 2026: €3.99/month on the 12-month plan, €8.99/month over 3 months, or €9.99 for the first month then €13.99/month. Every plan includes 100 tokens per month."],
+    ["How much does Candy AI cost?", "On 11 November 2026, during the Black Friday deal: €3.99/month on the 12-month plan (-70%, limited time), €8.99/month over 3 months, or €9.99 for the first month then €13.99/month. Every plan includes 100 tokens per month."],
     ["What are tokens used for on Candy AI?", "Images (2 to 3 tokens each), voice calls (3 tokens per minute) and audio playback of messages (0.2 token). Text messages are unlimited on Premium."],
     ["Does Candy AI remember what you tell it?", "Partly. In our test she remembered our dog Max, even during the voice call, but forgot our half-marathon. Long-term memory is still its weak point."],
     ["Does Candy AI speak other languages?", "Yes, we tested it in French. But it sometimes switches back to English mid-conversation, even after being asked to stay in French."],
     ["Is Candy AI discreet on bank statements?", "Yes: the charge appears as “EverAI”. Crypto is accepted too, and the subscription can be cancelled at any time in the settings."]
   ],
-  end_t: "Want to try it yourself?", end: "Grab the current offer on the 12-month plan and create your own AI girlfriend.",
+  end_t: "Want to try it yourself?", end: "Grab the Black Friday deal on the 12-month plan (-70%, limited time) and create your own AI girlfriend.",
   pl_link: "Read our full hands-on review",
   cap: { "creation-style": "Step 1: choose between the realistic and the anime style.",
     "creation-origine-age": "Step 2: origin and age (from 18 to 55+).",
@@ -247,8 +249,8 @@ es: {
   crumb: "Opinión", h1: "Opinión de Candy AI: nuestra prueba completa",
   intro: "Candy AI se presenta como «la experiencia de novia IA más realista del mercado». El marketing está muy cuidado, pero ¿qué hay detrás? Probamos la app con un plan de pago: creación de un personaje, conversación (coherencia, memoria, humor), generación de imágenes, llamadas de voz y coste real de los tokens. Esto es lo que encontramos, sin filtros.",
   box_t: "En resumen",
-  box: "Un escaparate precioso: creación de personaje cuidada, imágenes realistas a menudo impresionantes y conversaciones sin tabúes. Pero la memoria falla a ratos, la IA a veces cambia de idioma y los tokens se gastan rápido. Mejor el plan de 12 meses que el mensual.",
-  scores: [["Conversación", "7/10"], ["Imágenes realistas", "9/10 en el mejor caso"], ["Llamadas de voz", "3/5"], ["Precio", "3,99 €/mes (12 meses)"]],
+  box: "Un escaparate precioso: creación de personaje cuidada, imágenes realistas a menudo impresionantes y conversaciones sin tabúes. Pero la memoria falla a ratos, la IA a veces cambia de idioma y los tokens se gastan rápido. Mejor el plan de 12 meses, sobre todo durante la oferta Black Friday, que el mensual.",
+  scores: [["Conversación", "7/10"], ["Imágenes realistas", "9/10 en el mejor caso"], ["Llamadas de voz", "3/5"], ["Precio", "3,99 €/mes (12 meses, oferta Black Friday)"]],
   site_score: "Nota de la plataforma (nuestro método)",
   pros_t: "Puntos fuertes", cons_t: "Puntos débiles",
   pros: ["Creación del personaje muy completa (estilo, origen, edad, cuerpo, personalidad, relación, voz)",
@@ -256,7 +258,7 @@ es: {
     "Conversación sin filtros, que entiende el humor, el sarcasmo y las referencias",
     "Llamadas de voz que se pueden interrumpir",
     "Pago discreto («EverAI» en el extracto), acepta cripto",
-    "3,99 €/mes con el plan de 12 meses, uno de los mejores precios del mercado"],
+    "3,99 €/mes con el plan de 12 meses durante la oferta Black Friday, uno de los mejores precios del mercado"],
   cons: ["Memoria irregular: recuerda algunos detalles y olvida otros",
     "Puede cambiar de idioma en plena conversación",
     "Versión gratuita muy limitada (unos pocos mensajes)",
@@ -315,10 +317,10 @@ es: {
 </ul>
 <p><strong>Nota de las llamadas: 3/5.</strong> Correcto, pero aún tiene margen de mejora.</p>` },
   { id: "prix", h2: "5. Precio y tokens: lo que cuesta de verdad", body: `
-<p>Sin suscripción la prueba se acaba en pocos minutos: para disfrutar de verdad de Candy AI hace falta Premium. Precios consultados en candy.ai el 11 de noviembre de 2026:</p>
+<p>Sin suscripción la prueba se acaba en pocos minutos: para disfrutar de verdad de Candy AI hace falta Premium. Precios consultados en candy.ai el 11 de noviembre de 2026, durante la oferta <strong>Black Friday</strong>:</p>
 [[img:prix]]
 <div class="tablewrap"><table class="data avis-t"><thead><tr><th>Plan</th><th>Precio</th></tr></thead><tbody>
-<tr><td><strong>12 meses</strong></td><td><strong>3,99 €/mes</strong> en lugar de 13,99 € (-70 %)</td></tr>
+<tr><td><strong>12 meses</strong></td><td><strong>3,99 €/mes</strong> en lugar de 13,99 € (-70 %, oferta Black Friday)</td></tr>
 <tr><td>3 meses</td><td>8,99 €/mes</td></tr>
 <tr><td>1 mes</td><td>9,99 € el primer mes y luego 13,99 €/mes</td></tr>
 </tbody></table></div>
@@ -330,7 +332,8 @@ es: {
 </tbody></table></div>
 <p>Con 100 tokens, una docena de imágenes y una llamada pueden vaciar el contador en menos de una hora. Las recargas son caras: 9,99 € los 100 tokens durante nuestra prueba, y hasta unos 300 € el pack de 3750 tokens.</p>
 <p>Pago con tarjeta, transferencia o cripto. En el extracto bancario aparece «EverAI», no Candy, y la suscripción se cancela en cualquier momento desde los ajustes.</p>
-<p><strong>Nuestro consejo:</strong> el plan de 12 meses a 3,99 €/mes es uno de los mejores precios del mercado. El mes suelto es caro.</p>` },
+<p class="avis-note"><strong>¿Por qué 3,99 €?</strong> Este precio viene de la oferta <strong>Black Friday</strong>: -70 % en el plan de 12 meses, por tiempo limitado. Cuando termine la oferta, el precio vuelve a subir.</p>
+<p><strong>Nuestro consejo:</strong> durante la oferta, el plan de 12 meses a 3,99 €/mes es uno de los mejores precios del mercado. El mes suelto es caro.</p>` },
   { id: "verdict", h2: "Veredicto: un escaparate precioso, una trastienda por terminar", body: `
 [[img:candy-accueil]]
 <p>Candy AI destaca para crear un personaje a tu gusto, generar imágenes realistas preciosas y mantener conversaciones picantes sin juicios. Para la memoria a largo plazo y las charlas profundas, mejor buscar en otra parte: es una artista, no una confidente. Y si piensas usar mucho las imágenes, la voz y las llamadas, reserva presupuesto para tokens.</p>
@@ -339,13 +342,13 @@ es: {
   faq_t: "Preguntas frecuentes",
   faq: [
     ["¿Candy AI es gratis?", "Hay una versión gratuita, pero muy limitada: tras unos pocos mensajes la app pide pasar a Premium, y también para crear un personaje. Para usarla de verdad hace falta la suscripción."],
-    ["¿Cuánto cuesta Candy AI?", "El 11 de noviembre de 2026: 3,99 €/mes con el plan de 12 meses, 8,99 €/mes a 3 meses, o 9,99 € el primer mes y luego 13,99 €/mes. Todos los planes incluyen 100 tokens al mes."],
+    ["¿Cuánto cuesta Candy AI?", "El 11 de noviembre de 2026, durante la oferta Black Friday: 3,99 €/mes con el plan de 12 meses (-70 %, por tiempo limitado), 8,99 €/mes a 3 meses, o 9,99 € el primer mes y luego 13,99 €/mes. Todos los planes incluyen 100 tokens al mes."],
     ["¿Para qué sirven los tokens en Candy AI?", "Para las imágenes (2 o 3 tokens cada una), las llamadas de voz (3 tokens por minuto) y la lectura en audio de los mensajes (0,2 tokens). Los mensajes de texto son ilimitados en Premium."],
     ["¿Candy AI recuerda lo que le dices?", "En parte. En nuestra prueba recordó a nuestro perro Max, incluso en la llamada de voz, pero olvidó nuestra media maratón. La memoria a largo plazo sigue siendo su punto débil."],
     ["¿Candy AI habla otros idiomas?", "Sí, la probamos en francés. Pero a veces se pasa al inglés en plena conversación, incluso después de pedirle que no lo haga."],
     ["¿Candy AI es discreto en el extracto bancario?", "Sí: el cargo aparece como «EverAI». También acepta cripto, y la suscripción se cancela en cualquier momento desde los ajustes."]
   ],
-  end_t: "¿Quieres probarlo tú mismo?", end: "Aprovecha la oferta actual del plan de 12 meses y crea tu propia novia IA.",
+  end_t: "¿Quieres probarlo tú mismo?", end: "Aprovecha la oferta Black Friday del plan de 12 meses (-70 %, por tiempo limitado) y crea tu propia novia IA.",
   pl_link: "Leer nuestra opinión completa (prueba)",
   cap: { "creation-style": "Paso 1: elegir entre el estilo realista y el anime.",
     "creation-origine-age": "Paso 2: el origen y la edad (de 18 a más de 55 años).",
@@ -364,8 +367,8 @@ de: {
   crumb: "Test", h1: "Candy AI im Test: unser kompletter Praxistest",
   intro: "Candy AI bezeichnet sich als „das realistischste KI-Freundin-Erlebnis auf dem Markt“. Das Marketing ist schick, aber was steckt dahinter? Wir haben die App mit einem bezahlten Abo getestet: Erstellung eines Charakters, Unterhaltung (Stimmigkeit, Gedächtnis, Humor), Bildgenerierung, Sprachanrufe und die echten Kosten der Tokens. Hier ist, was wir festgestellt haben, ungefiltert.",
   box_t: "Kurz gesagt",
-  box: "Ein wunderschönes Schaufenster: durchdachte Charaktererstellung, oft verblüffend realistische Bilder und Gespräche ohne Tabus. Aber das Gedächtnis ist lückenhaft, die KI wechselt manchmal die Sprache und die Tokens sind schnell weg. Lieber das 12-Monats-Abo als das Monatsabo.",
-  scores: [["Unterhaltung", "7/10"], ["Realistische Bilder", "bestenfalls 9/10"], ["Sprachanrufe", "3/5"], ["Preis", "3,99 €/Monat (12 Monate)"]],
+  box: "Ein wunderschönes Schaufenster: durchdachte Charaktererstellung, oft verblüffend realistische Bilder und Gespräche ohne Tabus. Aber das Gedächtnis ist lückenhaft, die KI wechselt manchmal die Sprache und die Tokens sind schnell weg. Lieber das 12-Monats-Abo, am besten während des Black-Friday-Angebots, als das Monatsabo.",
+  scores: [["Unterhaltung", "7/10"], ["Realistische Bilder", "bestenfalls 9/10"], ["Sprachanrufe", "3/5"], ["Preis", "3,99 €/Monat (12 Monate, Black-Friday-Angebot)"]],
   site_score: "Bewertung der Plattform (unsere Methode)",
   pros_t: "Stärken", cons_t: "Schwächen",
   pros: ["Sehr umfangreiche Charaktererstellung (Stil, Herkunft, Alter, Körper, Persönlichkeit, Beziehung, Stimme)",
@@ -373,7 +376,7 @@ de: {
     "Ungefilterte Unterhaltung, die Humor, Sarkasmus und Anspielungen versteht",
     "Sprachanrufe, die man unterbrechen kann",
     "Diskrete Abrechnung („EverAI“ auf dem Kontoauszug), Krypto möglich",
-    "3,99 €/Monat im 12-Monats-Abo, einer der besten Preise auf dem Markt"],
+    "3,99 €/Monat im 12-Monats-Abo während des Black-Friday-Angebots, einer der besten Preise auf dem Markt"],
   cons: ["Lückenhaftes Gedächtnis: merkt sich manches, vergisst anderes",
     "Kann mitten im Gespräch die Sprache wechseln",
     "Sehr eingeschränkte Gratisversion (wenige Nachrichten)",
@@ -432,10 +435,10 @@ de: {
 </ul>
 <p><strong>Note Anrufe: 3/5.</strong> Ordentlich, aber mit Luft nach oben.</p>` },
   { id: "prix", h2: "5. Preis und Tokens: was es wirklich kostet", body: `
-<p>Ohne Abo ist der Test nach wenigen Minuten vorbei: Um Candy AI wirklich zu nutzen, braucht man Premium. Preise am 11. November 2026 auf candy.ai abgelesen:</p>
+<p>Ohne Abo ist der Test nach wenigen Minuten vorbei: Um Candy AI wirklich zu nutzen, braucht man Premium. Preise am 11. November 2026 auf candy.ai abgelesen, während des <strong>Black-Friday</strong>-Angebots:</p>
 [[img:prix]]
 <div class="tablewrap"><table class="data avis-t"><thead><tr><th>Abo</th><th>Preis</th></tr></thead><tbody>
-<tr><td><strong>12 Monate</strong></td><td><strong>3,99 €/Monat</strong> statt 13,99 € (-70 %)</td></tr>
+<tr><td><strong>12 Monate</strong></td><td><strong>3,99 €/Monat</strong> statt 13,99 € (-70 %, Black-Friday-Angebot)</td></tr>
 <tr><td>3 Monate</td><td>8,99 €/Monat</td></tr>
 <tr><td>1 Monat</td><td>9,99 € im ersten Monat, danach 13,99 €/Monat</td></tr>
 </tbody></table></div>
@@ -447,7 +450,8 @@ de: {
 </tbody></table></div>
 <p>Mit 100 Tokens können ein Dutzend Bilder und ein Anruf den Zähler in weniger als einer Stunde leeren. Aufladungen sind teuer: 9,99 € für 100 Tokens während unseres Tests und bis zu etwa 300 € für das Paket mit 3.750 Tokens.</p>
 <p>Zahlung per Karte, Überweisung oder Krypto. Auf dem Kontoauszug steht „EverAI“, nicht Candy, und das Abo lässt sich jederzeit in den Einstellungen kündigen.</p>
-<p><strong>Unser Tipp:</strong> Das 12-Monats-Abo für 3,99 €/Monat ist einer der besten Preise auf dem Markt. Der Einzelmonat ist teuer.</p>` },
+<p class="avis-note"><strong>Warum 3,99 €?</strong> Dieser Preis stammt aus dem <strong>Black-Friday</strong>-Angebot: -70 % auf das 12-Monats-Abo, für begrenzte Zeit. Nach dem Ende des Angebots steigt der Preis wieder.</p>
+<p><strong>Unser Tipp:</strong> Während des Angebots ist das 12-Monats-Abo für 3,99 €/Monat einer der besten Preise auf dem Markt. Der Einzelmonat ist teuer.</p>` },
   { id: "verdict", h2: "Fazit: ein schönes Schaufenster, ein unfertiges Hinterzimmer", body: `
 [[img:candy-accueil]]
 <p>Candy AI glänzt darin, einen Charakter nach deinem Geschmack zu erstellen, schöne realistische Bilder zu erzeugen und frivole Gespräche ohne Urteil zu führen. Für Langzeitgedächtnis und tiefe Gespräche ist sie weniger geeignet: eine Künstlerin, keine Vertraute. Und wer Bilder, Stimme und Anrufe viel nutzen will, sollte ein Token-Budget einplanen.</p>
@@ -456,13 +460,13 @@ de: {
   faq_t: "Häufige Fragen",
   faq: [
     ["Ist Candy AI kostenlos?", "Es gibt eine Gratisversion, aber sie ist sehr eingeschränkt: Nach wenigen Nachrichten verlangt die App Premium, ebenso für die Erstellung eines Charakters. Für die echte Nutzung braucht man ein Abo."],
-    ["Was kostet Candy AI?", "Am 11. November 2026: 3,99 €/Monat im 12-Monats-Abo, 8,99 €/Monat für 3 Monate oder 9,99 € im ersten Monat, danach 13,99 €/Monat. Jedes Abo enthält 100 Tokens pro Monat."],
+    ["Was kostet Candy AI?", "Am 11. November 2026, während des Black-Friday-Angebots: 3,99 €/Monat im 12-Monats-Abo (-70 %, zeitlich begrenzt), 8,99 €/Monat für 3 Monate oder 9,99 € im ersten Monat, danach 13,99 €/Monat. Jedes Abo enthält 100 Tokens pro Monat."],
     ["Wofür braucht man Tokens bei Candy AI?", "Für Bilder (je 2 bis 3 Tokens), Sprachanrufe (3 Tokens pro Minute) und die Audiowiedergabe von Nachrichten (0,2 Tokens). Textnachrichten sind mit Premium unbegrenzt."],
     ["Merkt sich Candy AI, was man ihr erzählt?", "Teilweise. In unserem Test erinnerte sie sich an unseren Hund Max, sogar im Sprachanruf, vergaß aber unseren Halbmarathon. Das Langzeitgedächtnis bleibt ihre Schwachstelle."],
     ["Spricht Candy AI andere Sprachen?", "Ja, wir haben sie auf Französisch getestet. Sie wechselt aber manchmal mitten im Gespräch ins Englische, selbst nach der Bitte, es nicht zu tun."],
     ["Ist Candy AI auf dem Kontoauszug diskret?", "Ja: Die Abbuchung erscheint als „EverAI“. Krypto wird ebenfalls akzeptiert, und das Abo lässt sich jederzeit in den Einstellungen kündigen."]
   ],
-  end_t: "Lust, es selbst auszuprobieren?", end: "Nutze das aktuelle Angebot für das 12-Monats-Abo und erstelle deine eigene KI-Freundin.",
+  end_t: "Lust, es selbst auszuprobieren?", end: "Nutze das Black-Friday-Angebot für das 12-Monats-Abo (-70 %, zeitlich begrenzt) und erstelle deine eigene KI-Freundin.",
   pl_link: "Unseren kompletten Praxistest lesen",
   cap: { "creation-style": "Schritt 1: zwischen realistischem Stil und Anime wählen.",
     "creation-origine-age": "Schritt 2: Herkunft und Alter (von 18 bis 55+).",
@@ -481,8 +485,8 @@ pt: {
   crumb: "Análise", h1: "Candy AI: nossa análise e teste completo",
   intro: "O Candy AI se apresenta como “a experiência de namorada IA mais realista do mercado”. O marketing é caprichado, mas o que há por trás? Testamos o app com um plano pago: criação de uma personagem, conversa (coerência, memória, humor), geração de imagens, chamadas de voz e o custo real dos tokens. Veja o que encontramos, sem filtro.",
   box_t: "Em resumo",
-  box: "Uma vitrine linda: criação de personagem caprichada, imagens realistas muitas vezes impressionantes e conversas sem tabu. Mas a memória falha, a IA às vezes troca de idioma e os tokens acabam rápido. Vale mais o plano de 12 meses do que o mensal.",
-  scores: [["Conversa", "7/10"], ["Imagens realistas", "9/10 no melhor caso"], ["Chamadas de voz", "3/5"], ["Preço", "3,99 €/mês (12 meses)"]],
+  box: "Uma vitrine linda: criação de personagem caprichada, imagens realistas muitas vezes impressionantes e conversas sem tabu. Mas a memória falha, a IA às vezes troca de idioma e os tokens acabam rápido. Vale mais o plano de 12 meses, de preferência na promoção Black Friday, do que o mensal.",
+  scores: [["Conversa", "7/10"], ["Imagens realistas", "9/10 no melhor caso"], ["Chamadas de voz", "3/5"], ["Preço", "3,99 €/mês (12 meses, promoção Black Friday)"]],
   site_score: "Nota da plataforma (nosso método)",
   pros_t: "Pontos fortes", cons_t: "Pontos fracos",
   pros: ["Criação de personagem muito completa (estilo, origem, idade, corpo, personalidade, relação, voz)",
@@ -490,7 +494,7 @@ pt: {
     "Conversa sem filtro, que entende humor, sarcasmo e referências",
     "Chamadas de voz que dá para interromper",
     "Cobrança discreta (“EverAI” na fatura), aceita cripto",
-    "3,99 €/mês no plano de 12 meses, um dos melhores preços do mercado"],
+    "3,99 €/mês no plano de 12 meses durante a promoção Black Friday, um dos melhores preços do mercado"],
   cons: ["Memória irregular: lembra de alguns detalhes e esquece outros",
     "Pode trocar de idioma no meio da conversa",
     "Versão gratuita muito limitada (poucas mensagens)",
@@ -549,10 +553,10 @@ pt: {
 </ul>
 <p><strong>Nota das chamadas: 3/5.</strong> Razoável, mas ainda há o que melhorar.</p>` },
   { id: "prix", h2: "5. Preço e tokens: quanto custa de verdade", body: `
-<p>Sem assinatura o teste acaba em poucos minutos: para aproveitar de verdade o Candy AI é preciso o Premium. Preços conferidos em candy.ai em 11 de novembro de 2026 (site francês, em euros):</p>
+<p>Sem assinatura o teste acaba em poucos minutos: para aproveitar de verdade o Candy AI é preciso o Premium. Preços conferidos em candy.ai em 11 de novembro de 2026 (site francês, em euros), durante a promoção <strong>Black Friday</strong>:</p>
 [[img:prix]]
 <div class="tablewrap"><table class="data avis-t"><thead><tr><th>Plano</th><th>Preço</th></tr></thead><tbody>
-<tr><td><strong>12 meses</strong></td><td><strong>3,99 €/mês</strong> em vez de 13,99 € (-70 %)</td></tr>
+<tr><td><strong>12 meses</strong></td><td><strong>3,99 €/mês</strong> em vez de 13,99 € (-70 %, promoção Black Friday)</td></tr>
 <tr><td>3 meses</td><td>8,99 €/mês</td></tr>
 <tr><td>1 mês</td><td>9,99 € no primeiro mês, depois 13,99 €/mês</td></tr>
 </tbody></table></div>
@@ -564,7 +568,8 @@ pt: {
 </tbody></table></div>
 <p>Com 100 tokens, uma dúzia de imagens e uma chamada podem zerar o contador em menos de uma hora. As recargas são caras: 9,99 € por 100 tokens durante o nosso teste, e até uns 300 € pelo pacote de 3.750 tokens.</p>
 <p>Pagamento por cartão, transferência ou cripto. Na fatura aparece “EverAI”, não Candy, e a assinatura pode ser cancelada a qualquer momento nas configurações.</p>
-<p><strong>Nosso conselho:</strong> o plano de 12 meses a 3,99 €/mês é um dos melhores preços do mercado. O mês avulso é caro.</p>` },
+<p class="avis-note"><strong>Por que 3,99 €?</strong> Esse preço vem da promoção <strong>Black Friday</strong>: -70 % no plano de 12 meses, por tempo limitado. Quando a promoção acabar, o preço volta a subir.</p>
+<p><strong>Nosso conselho:</strong> durante a promoção, o plano de 12 meses a 3,99 €/mês é um dos melhores preços do mercado. O mês avulso é caro.</p>` },
   { id: "verdict", h2: "Veredito: uma vitrine linda, um fundo de loja por terminar", body: `
 [[img:candy-accueil]]
 <p>O Candy AI brilha para criar uma personagem do seu jeito, gerar imagens realistas bonitas e manter conversas picantes sem julgamento. Para memória de longo prazo e conversas profundas, procure outra coisa: ela é uma artista, não uma confidente. E se você pretende usar muito as imagens, a voz e as chamadas, reserve um orçamento para tokens.</p>
@@ -573,13 +578,13 @@ pt: {
   faq_t: "Perguntas frequentes",
   faq: [
     ["O Candy AI é grátis?", "Existe uma versão gratuita, mas muito limitada: depois de poucas mensagens o app pede o Premium, e também para criar uma personagem. Para usar de verdade, é preciso a assinatura."],
-    ["Quanto custa o Candy AI?", "Em 11 de novembro de 2026: 3,99 €/mês no plano de 12 meses, 8,99 €/mês por 3 meses, ou 9,99 € no primeiro mês e depois 13,99 €/mês. Todos os planos incluem 100 tokens por mês."],
+    ["Quanto custa o Candy AI?", "Em 11 de novembro de 2026, durante a promoção Black Friday: 3,99 €/mês no plano de 12 meses (-70 %, por tempo limitado), 8,99 €/mês por 3 meses, ou 9,99 € no primeiro mês e depois 13,99 €/mês. Todos os planos incluem 100 tokens por mês."],
     ["Para que servem os tokens no Candy AI?", "Para imagens (2 a 3 tokens cada), chamadas de voz (3 tokens por minuto) e leitura em áudio das mensagens (0,2 token). As mensagens de texto são ilimitadas no Premium."],
     ["O Candy AI lembra do que você diz?", "Em parte. No nosso teste ela lembrou do nosso cachorro Max, até na chamada de voz, mas esqueceu a nossa meia maratona. A memória de longo prazo continua sendo o ponto fraco."],
     ["O Candy AI fala outros idiomas?", "Sim, testamos em francês. Mas às vezes ela volta para o inglês no meio da conversa, mesmo depois de pedirmos para não fazer isso."],
     ["O Candy AI é discreto na fatura do cartão?", "Sim: a cobrança aparece como “EverAI”. Também aceita cripto, e a assinatura pode ser cancelada a qualquer momento nas configurações."]
   ],
-  end_t: "Quer testar você mesmo?", end: "Aproveite a oferta atual do plano de 12 meses e crie sua própria namorada IA.",
+  end_t: "Quer testar você mesmo?", end: "Aproveite a promoção Black Friday do plano de 12 meses (-70 %, por tempo limitado) e crie sua própria namorada IA.",
   pl_link: "Ler nossa análise completa (teste)",
   cap: { "creation-style": "Etapa 1: escolher entre o estilo realista e o anime.",
     "creation-origine-age": "Etapa 2: a origem e a idade (de 18 a mais de 55 anos).",
@@ -598,8 +603,8 @@ hi: {
   crumb: "रिव्यू", h1: "Candy AI रिव्यू: हमारा पूरा टेस्ट",
   intro: "Candy AI ख़ुद को “बाज़ार का सबसे असली AI गर्लफ्रेंड अनुभव” कहता है। मार्केटिंग शानदार है, लेकिन इसके पीछे क्या है? हमने पेड प्लान के साथ ऐप को टेस्ट किया: कैरेक्टर बनाना, बातचीत (तालमेल, याददाश्त, हास्य), इमेज बनाना, वॉइस कॉल और टोकन की असली कीमत। यह रहा जो हमने पाया, बिना किसी फ़िल्टर के।",
   box_t: "संक्षेप में",
-  box: "एक सुंदर शोकेस: ध्यान से बनाया गया कैरेक्टर क्रिएशन, अक्सर कमाल की असली जैसी इमेज और बिना झिझक की बातचीत। लेकिन याददाश्त कमज़ोर है, AI कभी-कभी भाषा बदल देता है और टोकन जल्दी ख़त्म होते हैं। मासिक नहीं, 12 महीने वाला प्लान लें।",
-  scores: [["बातचीत", "7/10"], ["रियलिस्टिक इमेज", "सबसे अच्छे में 9/10"], ["वॉइस कॉल", "3/5"], ["कीमत", "€3.99/महीना (12 महीने)"]],
+  box: "एक सुंदर शोकेस: ध्यान से बनाया गया कैरेक्टर क्रिएशन, अक्सर कमाल की असली जैसी इमेज और बिना झिझक की बातचीत। लेकिन याददाश्त कमज़ोर है, AI कभी-कभी भाषा बदल देता है और टोकन जल्दी ख़त्म होते हैं। मासिक नहीं, 12 महीने वाला प्लान लें, ख़ासकर ब्लैक फ़्राइडे ऑफ़र में।",
+  scores: [["बातचीत", "7/10"], ["रियलिस्टिक इमेज", "सबसे अच्छे में 9/10"], ["वॉइस कॉल", "3/5"], ["कीमत", "€3.99/महीना (12 महीने, ब्लैक फ़्राइडे ऑफ़र)"]],
   site_score: "प्लेटफ़ॉर्म की रेटिंग (हमारा तरीका)",
   pros_t: "खूबियाँ", cons_t: "कमियाँ",
   pros: ["बहुत पूरा कैरेक्टर क्रिएशन (स्टाइल, मूल, उम्र, शरीर, व्यक्तित्व, रिश्ता, आवाज़)",
@@ -607,7 +612,7 @@ hi: {
     "बिना फ़िल्टर की बातचीत, जो हास्य, व्यंग्य और संदर्भ समझती है",
     "वॉइस कॉल जिन्हें बीच में रोका जा सकता है",
     "गोपनीय बिलिंग (स्टेटमेंट पर “EverAI”), क्रिप्टो भी चलता है",
-    "12 महीने वाले प्लान में €3.99/महीना, बाज़ार की सबसे अच्छी कीमतों में से एक"],
+    "ब्लैक फ़्राइडे ऑफ़र में 12 महीने वाले प्लान पर €3.99/महीना, बाज़ार की सबसे अच्छी कीमतों में से एक"],
   cons: ["कमज़ोर याददाश्त: कुछ बातें याद रखती है, कुछ भूल जाती है",
     "बातचीत के बीच में भाषा बदल सकती है",
     "फ़्री वर्ज़न बहुत सीमित (कुछ ही मैसेज)",
@@ -666,10 +671,10 @@ hi: {
 </ul>
 <p><strong>कॉल का स्कोर: 3/5.</strong> ठीक-ठाक, लेकिन सुधार की गुंजाइश है।</p>` },
   { id: "prix", h2: "5. कीमत और टोकन: असल में कितना ख़र्च", body: `
-<p>सब्सक्रिप्शन के बिना टेस्ट कुछ ही मिनट में ख़त्म हो जाता है: Candy AI का सही इस्तेमाल करने के लिए प्रीमियम चाहिए। 11 नवंबर 2026 को candy.ai पर देखी गई कीमतें (फ़्रेंच साइट, यूरो में):</p>
+<p>सब्सक्रिप्शन के बिना टेस्ट कुछ ही मिनट में ख़त्म हो जाता है: Candy AI का सही इस्तेमाल करने के लिए प्रीमियम चाहिए। 11 नवंबर 2026 को candy.ai पर देखी गई कीमतें (फ़्रेंच साइट, यूरो में), <strong>ब्लैक फ़्राइडे</strong> ऑफ़र के दौरान:</p>
 [[img:prix]]
 <div class="tablewrap"><table class="data avis-t"><thead><tr><th>प्लान</th><th>कीमत</th></tr></thead><tbody>
-<tr><td><strong>12 महीने</strong></td><td><strong>€3.99/महीना</strong>, €13.99 की जगह (-70%)</td></tr>
+<tr><td><strong>12 महीने</strong></td><td><strong>€3.99/महीना</strong>, €13.99 की जगह (-70%, ब्लैक फ़्राइडे ऑफ़र)</td></tr>
 <tr><td>3 महीने</td><td>€8.99/महीना</td></tr>
 <tr><td>1 महीना</td><td>पहला महीना €9.99, फिर €13.99/महीना</td></tr>
 </tbody></table></div>
@@ -681,7 +686,8 @@ hi: {
 </tbody></table></div>
 <p>100 टोकन में, दर्जन भर इमेज और एक कॉल एक घंटे से कम में काउंटर ख़ाली कर सकते हैं। रिचार्ज महँगे हैं: हमारे टेस्ट के दौरान 100 टोकन €9.99, और 3,750 टोकन का पैक लगभग €300 तक।</p>
 <p>कार्ड, बैंक ट्रांसफ़र या क्रिप्टो से भुगतान। बैंक स्टेटमेंट पर “EverAI” दिखता है, Candy नहीं, और सब्सक्रिप्शन सेटिंग्स में कभी भी रद्द किया जा सकता है।</p>
-<p><strong>हमारी सलाह:</strong> €3.99/महीना वाला 12 महीने का प्लान बाज़ार की सबसे अच्छी कीमतों में से एक है। अकेला एक महीना महँगा है।</p>` },
+<p class="avis-note"><strong>€3.99 क्यों?</strong> यह कीमत <strong>ब्लैक फ़्राइडे</strong> ऑफ़र की है: 12 महीने वाले प्लान पर -70%, सीमित समय के लिए। ऑफ़र ख़त्म होने के बाद कीमत फिर बढ़ जाती है।</p>
+<p><strong>हमारी सलाह:</strong> ऑफ़र के दौरान, €3.99/महीना वाला 12 महीने का प्लान बाज़ार की सबसे अच्छी कीमतों में से एक है। अकेला एक महीना महँगा है।</p>` },
   { id: "verdict", h2: "फ़ैसला: सुंदर शोकेस, अधूरा पिछला कमरा", body: `
 [[img:candy-accueil]]
 <p>Candy AI अपनी पसंद का कैरेक्टर बनाने, सुंदर रियलिस्टिक इमेज बनाने और बिना जजमेंट के शरारती बातचीत में बेहतरीन है। लंबी याददाश्त और गहरी बातचीत के लिए नहीं: वह एक कलाकार है, राज़दार नहीं। और अगर आप इमेज, आवाज़ और कॉल ज़्यादा इस्तेमाल करना चाहते हैं, तो टोकन का बजट रखें।</p>
@@ -690,13 +696,13 @@ hi: {
   faq_t: "अक्सर पूछे जाने वाले सवाल",
   faq: [
     ["क्या Candy AI फ़्री है?", "फ़्री वर्ज़न है, लेकिन बहुत सीमित: कुछ मैसेज के बाद ऐप प्रीमियम माँगता है, और कैरेक्टर बनाने के लिए भी। असली इस्तेमाल के लिए सब्सक्रिप्शन चाहिए।"],
-    ["Candy AI की कीमत क्या है?", "11 नवंबर 2026 को: 12 महीने वाले प्लान में €3.99/महीना, 3 महीने के लिए €8.99/महीना, या पहला महीना €9.99 फिर €13.99/महीना। हर प्लान में हर महीने 100 टोकन शामिल हैं।"],
+    ["Candy AI की कीमत क्या है?", "11 नवंबर 2026 को, ब्लैक फ़्राइडे ऑफ़र के दौरान: 12 महीने वाले प्लान में €3.99/महीना (-70%, सीमित समय), 3 महीने के लिए €8.99/महीना, या पहला महीना €9.99 फिर €13.99/महीना। हर प्लान में हर महीने 100 टोकन शामिल हैं।"],
     ["Candy AI में टोकन किस काम आते हैं?", "इमेज (हर एक 2 से 3 टोकन), वॉइस कॉल (3 टोकन प्रति मिनट) और मैसेज को ऑडियो में सुनने (0.2 टोकन) के लिए। प्रीमियम में टेक्स्ट मैसेज अनलिमिटेड हैं।"],
     ["क्या Candy AI आपकी बातें याद रखता है?", "कुछ हद तक। हमारे टेस्ट में उसे हमारा कुत्ता Max याद रहा, वॉइस कॉल में भी, लेकिन हमारी हाफ़-मैराथन भूल गई। लंबी याददाश्त अब भी उसकी कमज़ोरी है।"],
     ["क्या Candy AI दूसरी भाषाएँ बोलता है?", "हाँ, हमने इसे फ़्रेंच में टेस्ट किया। लेकिन कभी-कभी वह बातचीत के बीच अंग्रेज़ी में चली जाती है, मना करने के बाद भी।"],
     ["क्या Candy AI बैंक स्टेटमेंट पर गोपनीय है?", "हाँ: भुगतान “EverAI” के नाम से दिखता है। क्रिप्टो भी चलता है, और सब्सक्रिप्शन सेटिंग्स में कभी भी रद्द किया जा सकता है।"]
   ],
-  end_t: "ख़ुद आज़माना चाहते हैं?", end: "12 महीने वाले प्लान के मौजूदा ऑफ़र का फ़ायदा उठाएँ और अपनी AI गर्लफ्रेंड बनाएँ।",
+  end_t: "ख़ुद आज़माना चाहते हैं?", end: "12 महीने वाले प्लान पर ब्लैक फ़्राइडे ऑफ़र (-70%, सीमित समय) का फ़ायदा उठाएँ और अपनी AI गर्लफ्रेंड बनाएँ।",
   pl_link: "हमारा पूरा टेस्ट रिव्यू पढ़ें",
   cap: { "creation-style": "चरण 1: रियलिस्टिक और एनीमे स्टाइल में से चुनें।",
     "creation-origine-age": "चरण 2: मूल और उम्र (18 से 55+ तक)।",
