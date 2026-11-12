@@ -96,6 +96,9 @@ Dans son bloc : `bio` (description par langue), `tags`, `img` (photo), `age`, `n
 ## 7b. Mettre un personnage en avant sur l'accueil (sans toucher au Top 10)
 `src/data.js` → `const HOME_FEATURED = [ … ]` : les `id` placés juste après le Top 10 dans l'ordre « Sélection » (accueil, catégories), dans l'ordre de la liste. Ex. `["valeria-ochoa","mona-newman"]`.
 
+## 7c. Plateformes affichées sur l'accueil
+`src/data.js` → `const HOME_PLATFORMS = ["candy"];` : seules ces plateformes apparaissent sur l'accueil (toutes langues). Pour remettre SpicyChat : `["candy","spicychat"]`. Les autres pages (catégories, Femmes, Hommes, Anime, fiches) ne changent pas.
+
 ## 8. Offre Candy, pop-up
 `src/data.js` → `const OFFER = { … }` : `active: false` pour enlever le bandeau ; `pct`, `price`, `regular`, `checked` pour les chiffres. Le pop-up : `const PROMO`.
 

@@ -691,7 +691,7 @@ write("assets/bundle.js", CLIENT.map(read).join("\n;\n"));   /* one deferred req
    (bios, UI strings…), then the i18n engine and app.js. Same behaviour, about 3x lighter. */
 for (const l of LANG_LIST) {
   const ctx = { PAGE_LANG: l, console, Date, URLSearchParams }; vm.createContext(ctx);
-  const NAMES = ["PLATFORMS","PLATFORM_DATA","TOP_PICKS","HOME_FEATURED","OFFER","PROMO","TAG_GROUPS","ALL_TAGS","NEW_DAYS","PROFILES","LANGS","I18N"];
+  const NAMES = ["PLATFORMS","PLATFORM_DATA","TOP_PICKS","HOME_FEATURED","HOME_PLATFORMS","OFFER","PROMO","TAG_GROUPS","ALL_TAGS","NEW_DAYS","PROFILES","LANGS","I18N"];
   vm.runInContext(CLIENT.filter(f => f !== "app.js").map(read).join("\n;\n") + `\n;this.D={${NAMES}};`, ctx);
   /* {en,fr,…} objects keep only this language (or English if it is missing); I18N keeps English too (ui() falls back to it) */
   const prune = (v, both) => Array.isArray(v) ? v.map(x => prune(x))

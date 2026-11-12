@@ -100,6 +100,8 @@ const PLATFORM_DATA = {
    Profile ids, in order. Edit this list every week. Ids = the end of the /model/<id> URL. */
 const TOP_PICKS = ["riley-reid","sp00kybby","mona-newman","harriet-seagrave","mia-malkova","mila-nowak","holly-donovan","diana-demont","josie-villanueva","bonnie-blue"];   // chosen by the owner: do not change without asking
 /* Shown right after the Top 10 in the default "Selection" order (home page, categories), in this order. Not in the Top 10 row. */
+/* Platforms shown on the home page (all languages). Other platforms stay on the site: categories, Women/Men/Anime, platform and profile pages. */
+const HOME_PLATFORMS = ["candy"];
 const HOME_FEATURED = ["valeria-ochoa"];
 
 /* ---------- CURRENT CANDY OFFER (banner) ----------

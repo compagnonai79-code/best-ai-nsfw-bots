@@ -100,6 +100,8 @@ const PLATFORM_DATA = {
    Profile ids, in order. Edit this list every week. Ids = the end of the /model/<id> URL. */
 const TOP_PICKS = ["riley-reid","sp00kybby","mona-newman","harriet-seagrave","mia-malkova","mila-nowak","holly-donovan","diana-demont","josie-villanueva","bonnie-blue"];   // chosen by the owner: do not change without asking
 /* Shown right after the Top 10 in the default "Selection" order (home page, categories), in this order. Not in the Top 10 row. */
+/* Platforms shown on the home page (all languages). Other platforms stay on the site: categories, Women/Men/Anime, platform and profile pages. */
+const HOME_PLATFORMS = ["candy"];
 const HOME_FEATURED = ["valeria-ochoa"];
 
 /* ---------- CURRENT CANDY OFFER (banner) ----------
@@ -9523,7 +9525,7 @@ const grad = c => `linear-gradient(135deg,${c[0]},${c[1]})`;
 const slug = t => t.toLowerCase().replace(/[^a-z0-9]+/g, "-").replace(/^-|-$/g, "");
 const DAY = 864e5;
 const isNew = pr => (Date.now() - new Date(pr.added + "T00:00:00").getTime()) < NEW_DAYS * DAY;
-const newCount = () => PROFILES.filter(isNew).length;
+const newCount = () => PROFILES.filter(p => isNew(p) && inBase("", p)).length;   /* the "New" pill opens the home page, so it counts what the home page shows */
 /* ---------- SCORES: computed from PLATFORM_DATA only (method on the "How we rate" page) ----------
    Free access 20% · Price 25% · Features 35% · Privacy & payments 20%. Each part is out of 10, unverified facts count half.
    Final score out of 5 = weighted average / 2, rounded to one decimal. Platforms cannot pay to change it. */
@@ -9794,7 +9796,7 @@ function filterBarHtml(LIST) {
       <div class="fpanel"></div></div>`).join("")}
         <button class="fmore" type="button" id="fmore">${esc(ui("f_more"))}</button></div>`;
 }
-const inBase = (b, p) => !b || !BASES[b] || BASES[b](p);
+const inBase = (b, p) => !b ? (typeof HOME_PLATFORMS === "undefined" || HOME_PLATFORMS.includes(p.platform)) : !BASES[b] || BASES[b](p);
 function initHome() {
   const BASE_KEY = typeof PAGE_BASE !== "undefined" ? PAGE_BASE : "";
   const LIST = PROFILES.filter(p => inBase(BASE_KEY, p));
