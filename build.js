@@ -660,7 +660,12 @@ for (const [f, k] of LEGAL_PAGES) pages.push({ file: "legal/" + f + ".html", leg
 
 /* ---------- write everything ---------- */
 fs.rmSync(OUT, { recursive: true, force: true });
-const write = (rel, content) => { const p = path.join(OUT, rel); fs.mkdirSync(path.dirname(p), { recursive: true }); fs.writeFileSync(p, content); };
+/* Internal links point to the clean addresses that Cloudflare serves and that the canonical / hreflang / sitemap use:
+   "model/x.html" → "model/x", "../fr/index.html" → "../fr/", "index.html#new" → "./#new". No redirect hop for Google. */
+const cleanLinks = html => html.replace(/(\b(?:href|value)=")((?!https?:|mailto:|data:|\/\/)[^"#?]*?)\.html((?:[?#][^"]*)?")/g,
+  (m, a, u, rest) => a + (/(^|\/)index$/.test(u) ? (u.replace(/index$/, "") || "./") : u) + rest);
+const write = (rel, content) => { const p = path.join(OUT, rel); fs.mkdirSync(path.dirname(p), { recursive: true });
+  fs.writeFileSync(p, rel.endsWith(".html") ? cleanLinks(content) : content); };
 const urls = [];
 for (const lang of LANG_LIST) {
   const X = context(lang);

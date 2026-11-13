@@ -42,7 +42,7 @@ const ALL_PROFILE_TAGS = [...new Set(PROFILES.flatMap(p => p.tags))];
 const tagCount = t => PROFILES.filter(p => p.tags.includes(t)).length;
 const R = () => (typeof ROOT !== "undefined" ? ROOT : "");
 const LR = () => (typeof LROOT !== "undefined" ? LROOT : "");
-const tagUrl = t => LR() + "tag/" + slug(t) + ".html";
+const tagUrl = t => LR() + "tag/" + slug(t);
 const autoBio = p => p.creator ? ui("creator_bio", { name: p.name, p: pf(p.platform).name }) : ui("auto_bio", { name: p.name, age: p.age ? ", " + p.age : "", p: pf(p.platform).name,
   tags: p.tags.filter(t => t !== "Female" && t !== "Realistic").slice(0, 3).map(tr).join(", ") || tr("Realistic") });
 const bioOf = p => typeof p.bio === "string" ? tr(p.bio) : ((p.bio && (p.bio[LANG] || p.bio.en)) || autoBio(p));
@@ -56,7 +56,7 @@ const pickRank = p => { const i = (typeof TOP_PICKS !== "undefined" ? TOP_PICKS 
 const topList = () => (typeof TOP_PICKS !== "undefined" ? TOP_PICKS : []).map(id => PROFILES.find(p => girlId(p) === id)).filter(Boolean);
 const bySel = (a, b) => (pickRank(a) - pickRank(b)) || byNew(a, b);
 const PER_PAGE = 36;
-const girlUrl = p => LR() + "model/" + girlId(p) + ".html";
+const girlUrl = p => LR() + "model/" + girlId(p);
 
 function ctaLink(p, label, cls = "btn btn-main") {
   const href = linkOf(p);
@@ -134,7 +134,7 @@ function pickCard(p, i) {
     <p>${esc(tr(p.desc))}</p>${ctaLink(p, esc(ui("try", {p: p.name})) + " →")}</div>`;
 }
 const pfKey = p => Object.keys(PLATFORMS).find(k => PLATFORMS[k] === p);
-const plUrl = p => p.url ? LR() + "platform/" + pfKey(p) + ".html" : "";
+const plUrl = p => p.url ? LR() + "platform/" + pfKey(p) : "";
 function platformCard(p) {
   return `<article class="card">
     <div class="card-top">${mono(p)}<div><h3>${esc(p.name)}</h3><div class="stars">${stars(p.rating)}<b>${p.rating}</b></div></div></div>
