@@ -102,7 +102,7 @@ const TOP_PICKS = ["riley-reid","sp00kybby","mona-newman","harriet-seagrave","mi
 /* Shown right after the Top 10 in the default "Selection" order (home page, categories), in this order. Not in the Top 10 row. */
 /* Platforms shown on the home page (all languages). Other platforms stay on the site: categories, Women/Men/Anime, platform and profile pages. */
 const HOME_PLATFORMS = ["candy"];
-const HOME_FEATURED = ["valeria-ochoa"];
+const HOME_FEATURED = ["lana-rhoades","valeria-ochoa"];
 
 /* ---------- CURRENT CANDY OFFER (banner) ----------
    Candy's public discount, copied from its own site (promotion window + subscription page).
