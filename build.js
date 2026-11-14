@@ -368,7 +368,12 @@ for (const g0 of base.PROFILES) pages.push({ file: "model/" + (g0.id || base.slu
     + (["Anime","Realistic","Male","Female"].every(t => p.tags.includes(t) === g.tags.includes(t)) ? 3 : 0);
   const similar = X.PROFILES.filter(p => p !== g).map(p => [p, score(p)]).sort((a,b) => b[1] - a[1]).slice(0, 4).map(x => x[0]);
   const yn = val => val === true ? u("yes") : val === false ? u("no") : u("pending");
-  const cta = (cls) => X.ctaLink(X.linkFor(g), "💬 " + e(u("chat_with", {name: g.name})) + " →", cls);
+  const CTA_ON = { en:"Chat with {name} on {p}", fr:"Parler avec {name} sur {p}", es:"Habla con {name} en {p}", de:"Mit {name} auf {p} chatten", pt:"Converse com {name} no {p}", hi:"{p} पर {name} से बात करें" };
+  const MB_ON = { en:["Chat with her on {p}","Chat with him on {p}"], fr:["Parler avec elle sur {p}","Parler avec lui sur {p}"], es:["Habla con ella en {p}","Habla con él en {p}"], de:["Mit ihr auf {p} chatten","Mit ihm auf {p} chatten"], pt:["Converse com ela no {p}","Converse com ele no {p}"], hi:["{p} पर उससे बात करें","{p} पर उससे बात करें"] };
+  const fill = (s, v) => s.replace(/\{(\w+)\}/g, (m, k) => v[k] ?? m);
+  const ctaTxt = fill(CTA_ON[lang] || CTA_ON.en, {name: g.name, p: P.name});
+  const mbTxt = fill((MB_ON[lang] || MB_ON.en)[gen ? 1 : 0], {p: P.name});
+  const cta = (cls) => X.ctaLink(X.linkFor(g), "💬 " + e(ctaTxt) + " →", cls);
   const rows = [[u("m_platform"), `<a href="../${P.url ? "platform/" + g.platform : "platforms"}.html">${e(P.name)}</a> · ★ ${P.rating}`],
     [u("grp_age"), g.age ? e(String(g.age)) : e(u("m_not_set"))],
     ...GLANCE.map(k => [u("grp_" + k), g.tags.filter(t => groupOf(t) === k).map(t => `<a href="../tag/${X.slug(t)}.html">${e(X.tr(t))}</a>`).join(", ")]).filter(r => r[1]),
@@ -436,7 +441,7 @@ for (const g0 of base.PROFILES) pages.push({ file: "model/" + (g0.id || base.slu
   <p class="all-tags"><a href="../tag/${X.slug(main)}.html">${e(u("m_more_tag", {tag: X.tr(main)}))}</a></p>
 
   <div class="mbar"><span class="mb-img">${X.visual(X.thumb(g.img), P.color, g.name[0], g.name)}</span>
-    <span class="mb-txt"><b>${e(g.name)}</b><small>${e(P.name)}</small></span>${X.ctaLink(X.linkFor(g), "💬 " + e(u(g.tags.includes("Male") && !g.tags.includes("Female") ? "card_btn_m" : "card_btn")) + " →", "btn btn-main")}</div>
+    <span class="mb-txt"><b>${e(g.name)}</b><small>${e(P.name)}</small></span>${X.ctaLink(X.linkFor(g), "💬 " + e(mbTxt) + " →", "btn btn-main")}</div>
   ${ldTag([bcLd(X, lang, [[u("bc_home"), "index.html"], ...(P.url ? [[P.name, "platform/" + g.platform + ".html"]] : []), [X.tr(main), "tag/" + X.slug(main) + ".html"], [g.name, "model/" + X.girlId(g) + ".html"]]),
     {"@context":"https://schema.org","@type":"Article","headline":u("model_t", {name:g.name, p:P.name, agep: g.age ? u("age_sfx", {age: g.age}) : ""}),"description":X.bioOf(g).slice(0, 300),
      ...(g.img ? {"image": /^https?:/.test(g.img) ? g.img : SITE.url + "/" + g.img} : {}),"datePublished":g.added,"dateModified":g.added > SITE.updated ? g.added : SITE.updated,"inLanguage":lang,
