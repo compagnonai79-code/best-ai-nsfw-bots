@@ -9744,7 +9744,9 @@ function armPromo() {
   const onScroll = () => { if (window.scrollY > Math.min(600, innerHeight * 0.8)) { engaged = true; removeEventListener("scroll", onScroll); tryShow(); } };
   addEventListener("scroll", onScroll, {passive: true});
   setTimeout(() => { timeUp = true; tryShow(); }, PROMO.delaySeconds * 1000);
-  if (PROMO.showOnExit) document.addEventListener("mouseout", e => { if (!e.relatedTarget && e.clientY <= 0) showPromo(); });
+  /* exit intent: real mouse only (touch browsers fire synthetic mouse events on tap) */
+  if (PROMO.showOnExit && matchMedia("(hover: hover) and (pointer: fine)").matches)
+    document.addEventListener("mouseout", e => { if (!e.relatedTarget && e.clientY <= 0 && e.pointerType !== "touch") showPromo(); });
 }
 
 /* Profile modal */

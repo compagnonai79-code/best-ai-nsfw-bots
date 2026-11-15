@@ -177,7 +177,7 @@ ${o.page === "legal" ? "" : X.offerBar()}
 </header>
 
 <main class="wrap">
-${o.body.replace(' loading="lazy"', ' fetchpriority="high"')}
+${o.body.replace(' loading="lazy"', ' fetchpriority="high" width="600" height="900"')}
 </main>
 
 ${o.modal ? `<div class="overlay" id="profile">
