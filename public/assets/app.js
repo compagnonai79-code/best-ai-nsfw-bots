@@ -182,7 +182,7 @@ function passGate() {
   ageOk = true;
   try { localStorage.setItem("age_ok", Date.now()); } catch (e) {}
   $("#gate")?.remove();
-  armPromo();
+  setTimeout(armPromo, 0);
 }
 
 function buildPromo() {
@@ -203,7 +203,10 @@ function buildPromo() {
     </div>`;
   document.body.appendChild(el);
   el.addEventListener("click", e => {
-    if (e.target === el || e.target.classList.contains("x") || e.target.closest(".btn-main")) el.classList.remove("show");
+    if (e.target === el || e.target.classList.contains("x") || e.target.closest(".btn-main")) {
+      el.style.display = "none";                       // hide at once…
+      setTimeout(() => { el.classList.remove("show"); el.style.display = ""; }, 0);   // …tidy up after the click
+    }
   });
 }
 let promoArmed = false;
@@ -213,9 +216,16 @@ function showPromo() {
   if (document.querySelector(".overlay.show")) return;
   el.classList.add("show");
 }
+/* The pop-up never greets a visitor: it waits PROMO.delaySeconds AND for the
+   visitor to have scrolled into the page (Google penalises interstitials that
+   cover content on arrival, especially on mobile; the age gate is exempt). */
 function armPromo() {
   if (promoArmed || !$("#promo")) return; promoArmed = true;
-  setTimeout(showPromo, PROMO.delaySeconds * 1000);
+  let timeUp = false, engaged = false;
+  const tryShow = () => { if (timeUp && engaged) showPromo(); };
+  const onScroll = () => { if (window.scrollY > Math.min(600, innerHeight * 0.8)) { engaged = true; removeEventListener("scroll", onScroll); tryShow(); } };
+  addEventListener("scroll", onScroll, {passive: true});
+  setTimeout(() => { timeUp = true; tryShow(); }, PROMO.delaySeconds * 1000);
   if (PROMO.showOnExit) document.addEventListener("mouseout", e => { if (!e.relatedTarget && e.clientY <= 0) showPromo(); });
 }
 

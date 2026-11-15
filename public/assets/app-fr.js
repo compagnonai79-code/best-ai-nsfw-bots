@@ -4,7 +4,7 @@ const TOP_PICKS=["riley-reid","sp00kybby","mona-newman","harriet-seagrave","mia-
 const HOME_FEATURED=["lana-rhoades","valeria-ochoa"];
 const HOME_PLATFORMS=["candy"];
 const OFFER={"active":true,"platform":"candy","pct":70,"price":3.99,"regular":13.99,"checked":"2026-11-11","days":30};
-const PROMO={"platform":"candy","img":"images/promo-candy.jpg","delaySeconds":8,"showOnExit":true};
+const PROMO={"platform":"candy","img":"images/promo-candy.jpg","delaySeconds":20,"showOnExit":true};
 const TAG_GROUPS={"age":["Young","Teen (18+)"],"style":["2.5D","Anime","Cartoon","Hentai","Realistic"],"vibe":["Alt","Cosplay","E-girl","Emo","Goth","Gyaru","Kawaii","Punk","Tomboy","Waifu"],"personality":["Bad Girl","Brat","Caring","Clingy","Dandere","Dominant","Experienced","Flirty","Horny","Innocent","Jealous","Kuudere","Loyal","Mean","Mysterious","Nympho","Playful","Rebel","Romantic","Sadistic","Seductress","Shy","Submissive","Sweet","Temptress","Tsundere","Virgin","Yandere"],"body":["Athletic","BBW","Big Ass","Big Boobs","Chubby","Curvy","Fit","Flat Chested","Hourglass","Muscle","Muscular","Pawg","Petite","Pierced","Pregnant","Size Difference","Slim","Small Tits","Tall","Tattooed","Thicc"],"hair":["Black Hair","Blonde","Blue Hair","Brunette","Long Hair","Pigtails","Pink Hair","Purple Hair","Redhead","Short Hair","White Hair"],"origin":["Arab","Asian","Brazilian","British","Caucasian","Chinese","Colombian","Ebony","European","Filipina","French","German","Indian","Italian","Japanese","Korean","Latina","Mexican","Middle Eastern","Mixed Race","Russian","Thai","Ukrainian","Vietnamese"],"role":["Barista","Biker","Boss","Cam Girl","Caregiver","CEO","College Student","Coworker","Doctor","Escort","Fitness","Flight Attendant","Gamer","Gamer Girl","Gym Trainer","Influencer","Jester","K-pop","Lawyer","Librarian","Maid","Masseuse","Model","Nun","Nurse","OnlyFans","Police Officer","Professor","Secretary","Streamer","Stripper","Teacher","Travel","VTuber","Waitress","Yoga Instructor"],"relationship":["Best Friend","Boyfriend","Bully","Cheating","Cougar","Cousin","Daddy","DILF","Ex-Girlfriend","Forbidden","Friends w/ Benefits","Girl Next Door","Girlfriend","Granny","Husband","Mature","MILF","Neighbor","One Night Stand","Roommate","Slow Burn","Stepbrother","Stepdad","Stepmom","Stepsister","Stranger","Sugar Baby","Twins","Wife"],"fantasy":["Alien","Android","Angel","Bear","Bunny Girl","Catgirl","Demon","Elf","Fairy","Fantasy","Fox Girl","Furry","Goddess","Mermaid","Monster Girl","Princess","Queen","Robot","Sage","Succubus","Vampire","Witch"],"gender":["Female","Male","Bisexual","BL","Femboy","Futa","Gay","Lesbian","Sissy","Trans","Twink"],"kink":["BDSM","Bondage","Breast Expansion","Chastity","Cuckold","Exhibitionism","Feet","Femdom","Hypno","JOI","Netorare","Pet Play","POV","Public","Seduction","Threesome","Vore","Voyeur"],"features":["Creator Twin","Comedy","Game","Group Chat","Image generation","Roleplay","Sexting","Video","Voice","VR"]};
 const ALL_TAGS=["Young","Teen (18+)","2.5D","Anime","Cartoon","Hentai","Realistic","Alt","Cosplay","E-girl","Emo","Goth","Gyaru","Kawaii","Punk","Tomboy","Waifu","Bad Girl","Brat","Caring","Clingy","Dandere","Dominant","Experienced","Flirty","Horny","Innocent","Jealous","Kuudere","Loyal","Mean","Mysterious","Nympho","Playful","Rebel","Romantic","Sadistic","Seductress","Shy","Submissive","Sweet","Temptress","Tsundere","Virgin","Yandere","Athletic","BBW","Big Ass","Big Boobs","Chubby","Curvy","Fit","Flat Chested","Hourglass","Muscle","Muscular","Pawg","Petite","Pierced","Pregnant","Size Difference","Slim","Small Tits","Tall","Tattooed","Thicc","Black Hair","Blonde","Blue Hair","Brunette","Long Hair","Pigtails","Pink Hair","Purple Hair","Redhead","Short Hair","White Hair","Arab","Asian","Brazilian","British","Caucasian","Chinese","Colombian","Ebony","European","Filipina","French","German","Indian","Italian","Japanese","Korean","Latina","Mexican","Middle Eastern","Mixed Race","Russian","Thai","Ukrainian","Vietnamese","Barista","Biker","Boss","Cam Girl","Caregiver","CEO","College Student","Coworker","Doctor","Escort","Fitness","Flight Attendant","Gamer","Gamer Girl","Gym Trainer","Influencer","Jester","K-pop","Lawyer","Librarian","Maid","Masseuse","Model","Nun","Nurse","OnlyFans","Police Officer","Professor","Secretary","Streamer","Stripper","Teacher","Travel","VTuber","Waitress","Yoga Instructor","Best Friend","Boyfriend","Bully","Cheating","Cougar","Cousin","Daddy","DILF","Ex-Girlfriend","Forbidden","Friends w/ Benefits","Girl Next Door","Girlfriend","Granny","Husband","Mature","MILF","Neighbor","One Night Stand","Roommate","Slow Burn","Stepbrother","Stepdad","Stepmom","Stepsister","Stranger","Sugar Baby","Twins","Wife","Alien","Android","Angel","Bear","Bunny Girl","Catgirl","Demon","Elf","Fairy","Fantasy","Fox Girl","Furry","Goddess","Mermaid","Monster Girl","Princess","Queen","Robot","Sage","Succubus","Vampire","Witch","Female","Male","Bisexual","BL","Femboy","Futa","Gay","Lesbian","Sissy","Trans","Twink","BDSM","Bondage","Breast Expansion","Chastity","Cuckold","Exhibitionism","Feet","Femdom","Hypno","JOI","Netorare","Pet Play","POV","Public","Seduction","Threesome","Vore","Voyeur","Creator Twin","Comedy","Game","Group Chat","Image generation","Roleplay","Sexting","Video","Voice","VR"];
 const NEW_DAYS=14;
@@ -204,7 +204,7 @@ function passGate() {
   ageOk = true;
   try { localStorage.setItem("age_ok", Date.now()); } catch (e) {}
   $("#gate")?.remove();
-  armPromo();
+  setTimeout(armPromo, 0);
 }
 
 function buildPromo() {
@@ -225,7 +225,10 @@ function buildPromo() {
     </div>`;
   document.body.appendChild(el);
   el.addEventListener("click", e => {
-    if (e.target === el || e.target.classList.contains("x") || e.target.closest(".btn-main")) el.classList.remove("show");
+    if (e.target === el || e.target.classList.contains("x") || e.target.closest(".btn-main")) {
+      el.style.display = "none";                       // hide at once…
+      setTimeout(() => { el.classList.remove("show"); el.style.display = ""; }, 0);   // …tidy up after the click
+    }
   });
 }
 let promoArmed = false;
@@ -235,9 +238,16 @@ function showPromo() {
   if (document.querySelector(".overlay.show")) return;
   el.classList.add("show");
 }
+/* The pop-up never greets a visitor: it waits PROMO.delaySeconds AND for the
+   visitor to have scrolled into the page (Google penalises interstitials that
+   cover content on arrival, especially on mobile; the age gate is exempt). */
 function armPromo() {
   if (promoArmed || !$("#promo")) return; promoArmed = true;
-  setTimeout(showPromo, PROMO.delaySeconds * 1000);
+  let timeUp = false, engaged = false;
+  const tryShow = () => { if (timeUp && engaged) showPromo(); };
+  const onScroll = () => { if (window.scrollY > Math.min(600, innerHeight * 0.8)) { engaged = true; removeEventListener("scroll", onScroll); tryShow(); } };
+  addEventListener("scroll", onScroll, {passive: true});
+  setTimeout(() => { timeUp = true; tryShow(); }, PROMO.delaySeconds * 1000);
   if (PROMO.showOnExit) document.addEventListener("mouseout", e => { if (!e.relatedTarget && e.clientY <= 0) showPromo(); });
 }
 

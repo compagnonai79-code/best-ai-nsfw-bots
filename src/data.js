@@ -124,7 +124,7 @@ const OFFER = {
 const PROMO = {
   platform: "candy",                 // which platform the pop-up promotes
   img: "images/promo-candy.jpg",     // put your promo image here (portrait, ~600×800)
-  delaySeconds: 8,                   // shown after X seconds…
+  delaySeconds: 20,                  // shown after X seconds, once the visitor has scrolled…
   showOnExit: true                   // …or when the mouse leaves the page (desktop)
 };
 
