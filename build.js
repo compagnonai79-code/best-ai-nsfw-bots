@@ -15,9 +15,20 @@ const ASSET_V = require("crypto").createHash("md5").update(["fonts.css","style.c
 const CSS_INLINE = fs.readFileSync(path.join(__dirname, "src", "fonts.css"), "utf8") + "\n" + fs.readFileSync(path.join(__dirname, "src", "style.css"), "utf8");
 /* preconnect + preload the first image of the page (the LCP image) */
 function lcpHints(body) {
-  const m = body.match(/<img src="([^"]+)"/); if (!m) return "";
+  const tag = (body.match(/<img [^>]*>/) || [""])[0], m = tag.match(/ src="([^"]+)"/); if (!m) return "";
   const src = m[1].replace(/&amp;/g, "&"), origin = (src.match(/^https:\/\/[^/]+/) || [""])[0];
-  return (origin ? `<link rel="preconnect" href="${origin}">\n` : "") + `<link rel="preload" as="image" href="${m[1]}" fetchpriority="high">`;
+  const set = tag.match(/ srcset="([^"]+)"/), sizes = tag.match(/ sizes="([^"]+)"/);
+  /* a responsive image is preloaded with the SAME srcset/sizes, so the phone fetches one file, not two */
+  const pre = set && sizes ? `<link rel="preload" as="image" imagesrcset="${set[1]}" imagesizes="${sizes[1]}" fetchpriority="high">`
+    : `<link rel="preload" as="image" href="${m[1]}" fetchpriority="high">`;
+  return (origin ? `<link rel="preconnect" href="${origin}">\n` : "") + pre;
+}
+/* profile photo: Candy's resizer serves AVIF/WebP at quality 75 (≈40 KB instead of ≈115 KB), two widths */
+const HERO_SIZES = "(max-width: 640px) calc(100vw - 34px), 400px";
+const candySized = (img, w) => img.replace("https://cdn.candy.ai/", `https://cdn.candy.ai/cdn-cgi/image/width=${w},format=auto,quality=75/`);
+function heroVisual(X, img, color, letter, alt) {
+  if (typeof img !== "string" || !img.startsWith("https://cdn.candy.ai/") || img.includes("/cdn-cgi/")) return X.visual(img, color, letter, alt);
+  return X.visual("", color, letter) + `<img src="${X.esc(candySized(img, 600))}" srcset="${X.esc(candySized(img, 400))} 400w, ${X.esc(candySized(img, 600))} 600w" sizes="${HERO_SIZES}" alt="${X.esc(alt)}" loading="lazy" onerror="this.remove()">`;
 }
 const CLIENT = ["data.js", "data-candy.js", "data-spicy.js", "i18n.js", "i18n-pages.js", "i18n-tags.js", "i18n-tagpage.js", "i18n-extra.js", "app.js"];
 
@@ -395,7 +406,7 @@ for (const g0 of base.PROFILES) pages.push({ file: "model/" + (g0.id || base.slu
     desc:u("girl_meta_d", {name:g.name, age:g.age || "18+", p:P.name, bio:X.bioOf(g)}).slice(0, 300), body: `
   <nav class="crumb"><a href="../index.html">${e(u("nav_girls"))}</a> › ${P.url ? `<a href="../platform/${g.platform}.html">${e(P.name)}</a>` : e(P.name)} › <a href="../tag/${X.slug(main)}.html">${e(X.tr(main))}</a> › <span>${e(g.name)}</span></nav>
   <section class="girl">
-    <div class="g-visual">${X.visual(g.img, P.color, g.name[0], g.name)}${g.video ? `<video autoplay muted loop playsinline preload="metadata"${g.img ? ` poster="${e(g.img)}"` : ""} src="${e(g.video)}"></video>` : ""}${X.isNew(g) ? `<span class="new">${e(u("new_badge"))}</span>` : ""}</div>
+    <div class="g-visual">${heroVisual(X, g.img, P.color, g.name[0], g.name)}${g.video ? `<video autoplay muted loop playsinline preload="metadata"${g.img ? ` poster="${e(g.img.startsWith("https://cdn.candy.ai/") && !g.img.includes("/cdn-cgi/") ? candySized(g.img, 600) : g.img)}"` : ""} src="${e(g.video)}"></video>` : ""}${X.isNew(g) ? `<span class="new">${e(u("new_badge"))}</span>` : ""}</div>
     <div class="g-body">
       <div class="g-pf"><span class="mono-s" style="background:linear-gradient(135deg,${P.color[0]},${P.color[1]})">${e(P.name[0])}</span>${e(P.name)} <span class="stars">★ ${P.rating}</span></div>
       <h1>${X.withAge(g)}</h1>
