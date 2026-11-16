@@ -24,8 +24,7 @@ Compare with the `"id"` values in `src/data-candy.js`, and ignore:
 - aliases: a slug that is an existing id without its `-2`/`-3` suffix (e.g. `lila-crazy` = `lila-crazy-2`). Confirm by comparing descriptions.
 
 ## 3. Read each new character's official sheet
-`fetch('/conversations/<slug>/profile_panel', {headers:{Accept:'text/vnd.turbo-stream.html, text/html'}})`
-Strip `<template>` tags, parse with DOMParser, take `body.innerText`:
+Open `https://candy.ai/fr/ai-girlfriend/<slug>` in the tab, click the avatar at the top left of the chat (opens the profile panel), then read `document.body.innerText` (the old `profile_panel` URL now returns the whole page, not the panel):
 - the line just before `À propos de moi` = description (French) → `bio.fr`;
 - after it: `Âge`, `Morphologie`, `Ethnicité`, `Relation`, `Profession`, `Loisirs`, `Personnalité`.
 - Image: the `https://cdn.candy.ai/<key>-788x966-webp90` URL in the raw HTML → use `<key>-600x900-webp90`. Check it loads (new Image()). `sfw` = key starts with `sfw-profile`.
@@ -62,7 +61,7 @@ Also write the description in English, Spanish, German and Portuguese: `"bio":{"
 
 ## 6c. Re-check the current offer (every run)
 `OFFER` in `src/data.js` drives the "-70 %" banner and the offer box on the Candy page. From the candy.ai tab:
-- `fetch('/fr/promotions/modal')` → read the discount ("Jusqu'à 70% de réduction…"), and open `/fr/premium` (or the subscription page) for the 12-month price per month and the month-to-month price.
+- `fetch('/fr/promotions/modal')` → read the discount ("Jusqu'à 70% de réduction…"), and open `/fr/subscriptions` for the 12-month price per month and the month-to-month price.
 - Offer still there → update `pct`, `price`, `regular` if they changed, and set `checked` to today.
 - No offer any more → set `active: false`.
 Never invent a code or a discount. Without a fresh check the banner hides itself 30 days after `checked`.
