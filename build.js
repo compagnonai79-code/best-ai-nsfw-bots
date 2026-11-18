@@ -728,6 +728,8 @@ write("_headers", `/assets/*
   Cache-Control: public, max-age=604800
 /images/*
   Cache-Control: public, max-age=2592000
+/go/*
+  X-Robots-Tag: noindex, nofollow
 `);
 /* favicon & app icons (icons/) → site root */
 fs.cpSync(path.join(__dirname, "icons"), OUT, { recursive: true });
@@ -747,11 +749,11 @@ write("sitemap.xml", `<?xml version="1.0" encoding="UTF-8"?>
 ${LANG_LIST.map(l => `  <sitemap><loc>${SITE.url}/sitemaps/${l}.xml</loc><lastmod>${urls.filter(x => x.lang === l).map(x => x.lastmod).sort().pop()}</lastmod></sitemap>`).join("\n")}
 </sitemapindex>
 `);
-write("robots.txt", `User-agent: *\nAllow: /\nDisallow: /go/\n\n# X (Twitter) reads the /go/ pages to show the character's photo in posts\nUser-agent: Twitterbot\nAllow: /\n\nSitemap: ${SITE.url}/sitemap.xml\n`);
+write("robots.txt", `User-agent: *\nAllow: /\n\nSitemap: ${SITE.url}/sitemap.xml\n`);   /* /go/ stays crawlable so X can read its card; noindex keeps it out of Google */
 /* /go/<id>: short links for social posts (Twitter/X). Each one is a tiny page that X reads to build the
    post's card (the character's photo and name, not Candy's logo), and that sends a person straight on to
-   the character on Candy (meta refresh 0 + script), with the affiliate code. Never indexed (noindex +
-   robots.txt), but Twitterbot is allowed so it can read the card.
+   the character on Candy (meta refresh 0 + script), with the affiliate code. Never indexed (noindex meta +
+   X-Robots-Tag header), and left crawlable in robots.txt so X can read the card.
    Candy links carry no locale (/fr/), so Candy opens in the visitor's own language. */
 {
   const esc = base.esc;

@@ -8,3 +8,5 @@
   Cache-Control: public, max-age=604800
 /images/*
   Cache-Control: public, max-age=2592000
+/go/*
+  X-Robots-Tag: noindex, nofollow

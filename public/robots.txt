@@ -1,9 +1,4 @@
 User-agent: *
 Allow: /
-Disallow: /go/
-
-# X (Twitter) reads the /go/ pages to show the character's photo in posts
-User-agent: Twitterbot
-Allow: /
 
 Sitemap: https://best-ai-nsfw-bots.com/sitemap.xml
