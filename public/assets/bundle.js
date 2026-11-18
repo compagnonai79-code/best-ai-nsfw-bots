@@ -7168,7 +7168,8 @@ const CANDY_PROFILES = [
 "age": 32
 }
 ];
-for (const p of CANDY_PROFILES) { p.link = p.url + (CANDY_REF ? (p.url.includes("?") ? "&" : "?") + CANDY_REF : ""); PROFILES.push(p); }
+/* the button link carries no locale: Candy opens the character in the visitor's own language (keeps ?via=) */
+for (const p of CANDY_PROFILES) { const u = p.url.replace("://candy.ai/fr/", "://candy.ai/"); p.link = u + (CANDY_REF ? (u.includes("?") ? "&" : "?") + CANDY_REF : ""); PROFILES.push(p); }
 
 ;
 /* =====================================================================
