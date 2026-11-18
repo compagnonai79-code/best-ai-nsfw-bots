@@ -69,7 +69,7 @@ Never invent a code or a discount. Without a fresh check the banner hides itself
 ## 7. Build, check, publish
 ```
 node build.js
-node tools/check-links.js      # must say 0 broken
+node tools/check-links.js      # must say 0 broken AND 0 without affiliate code
 git add -A
 git -c user.name="compagnonai79-code" -c user.email="compagnonai79-code@users.noreply.github.com" commit -m "Weekly update: N new Candy characters"
 git push
