@@ -188,7 +188,7 @@ function bannerHtml(list) {
   const faces = [...new Set([real[0], anime[0], real[1], real[2]].filter(Boolean))];
   return `<aside class="cbanner"><span class="ad-lbl">${esc(ui("sponsored"))}</span>
     <div class="cb-txt"><div class="cb-brand">${esc(P.name)}</div><h3>${esc(ui("cb_t_" + g))}</h3><p>${esc(ui("cb_d_" + g))}</p></div>
-    <div class="cb-faces" aria-hidden="true">${faces.map(p => `<img src="${esc(thumb(p.img))}" alt="" loading="lazy" onerror="this.remove()">`).join("")}</div>
+    <div class="cb-faces" aria-hidden="true">${faces.map(p => `<img src="${esc(thumb(p.img))}" alt="${esc(cardName(p))}, ${esc(pf(p.platform).name)}" loading="lazy" onerror="this.remove()">`).join("")}</div>
     ${ctaLink(P, esc(ui("cb_btn_" + g)) + " →", "btn btn-main cb-btn")}</aside>`;
 }
 const gridHtml = list => list.map((p, i) => profileCard(p) + (AD_SLOTS.includes(i) && i < list.length - 1 ? adCard(AD_SLOTS.indexOf(i)) : "")

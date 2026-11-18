@@ -11,7 +11,7 @@ date: "2026-11-11", file: "review/seduced-ai.html", dir: "avis-seduced", cover: 
 img: { "formules": [760, 817] },
 
 fr: {
-  meta_t: "Avis Seduced AI 2026 : générateur d'images et vidéos X, crédits et prix",
+  meta_t: "Avis Seduced AI 2026 : images et vidéos X, crédits, prix",
   meta_d: "Notre avis sur Seduced AI (seduced.com) : ce que fait ce générateur d'images et vidéos pour adultes, qualité, limites, système de crédits, formules Pro, Platinum, Diamond et paiement.",
   crumb: "Avis", h1: "Avis Seduced AI : le générateur d'images et vidéos pour adultes",
   intro: "Seduced AI n'est pas une copine IA : c'est un générateur d'images et de vidéos pour adultes, sans chat. On choisit ses personnages, ses tenues, ses décors et ses « extensions », puis l'IA crée la scène. Voici ce qu'il vaut, et ce qu'il coûte vraiment.",
@@ -93,7 +93,7 @@ ${PLANS(["", "Pro", "Platinum", "Diamond"], [
 },
 
 en: {
-  meta_t: "Seduced AI Review 2026: Adult Image and Video Generator, Credits and Pricing",
+  meta_t: "Seduced AI Review 2026: Adult Image & Video Generator, Pricing",
   meta_d: "Our Seduced AI (seduced.com) review: what this adult image and video generator does, quality, limits, the credit system, the Pro, Platinum and Diamond plans, and payment.",
   crumb: "Review", h1: "Seduced AI Review: the Adult Image and Video Generator",
   intro: "Seduced AI is not an AI girlfriend: it is an adult image and video generator, with no chat. You pick your characters, outfits, settings and “extensions”, and the AI builds the scene. Here is what it is worth, and what it really costs.",
@@ -175,7 +175,7 @@ ${PLANS(["", "Pro", "Platinum", "Diamond"], [
 },
 
 es: {
-  meta_t: "Opinión de Seduced AI 2026: generador de imágenes y vídeos para adultos, créditos y precios",
+  meta_t: "Opinión de Seduced AI 2026: imágenes y vídeos, precios",
   meta_d: "Nuestra opinión sobre Seduced AI (seduced.com): qué hace este generador de imágenes y vídeos para adultos, calidad, límites, sistema de créditos, planes Pro, Platinum y Diamond, y pago.",
   crumb: "Opinión", h1: "Opinión de Seduced AI: el generador de imágenes y vídeos para adultos",
   intro: "Seduced AI no es una novia IA: es un generador de imágenes y vídeos para adultos, sin chat. Eliges los personajes, la ropa, los escenarios y las «extensiones», y la IA crea la escena. Esto es lo que vale y lo que cuesta de verdad.",
@@ -257,7 +257,7 @@ ${PLANS(["", "Pro", "Platinum", "Diamond"], [
 },
 
 de: {
-  meta_t: "Seduced AI Test 2026: Bild- und Videogenerator für Erwachsene, Credits und Preise",
+  meta_t: "Seduced AI Test 2026: Bild- & Videogenerator, Preise",
   meta_d: "Unsere Meinung zu Seduced AI (seduced.com): was dieser Bild- und Videogenerator für Erwachsene kann, Qualität, Grenzen, Credit-System, die Abos Pro, Platinum und Diamond sowie Zahlung.",
   crumb: "Test", h1: "Seduced AI im Test: der Bild- und Videogenerator für Erwachsene",
   intro: "Seduced AI ist keine KI-Freundin, sondern ein Bild- und Videogenerator für Erwachsene, ohne Chat. Man wählt Figuren, Outfits, Kulissen und „Erweiterungen“, und die KI erstellt die Szene. Hier steht, was es taugt und was es wirklich kostet.",
@@ -339,7 +339,7 @@ ${PLANS(["", "Pro", "Platinum", "Diamond"], [
 },
 
 pt: {
-  meta_t: "Seduced AI vale a pena? Análise 2026: gerador de imagens e vídeos adultos, créditos e preços",
+  meta_t: "Seduced AI vale a pena? Análise 2026: imagens, vídeos, preços",
   meta_d: "Nossa análise do Seduced AI (seduced.com): o que faz este gerador de imagens e vídeos adultos, qualidade, limites, sistema de créditos, planos Pro, Platinum e Diamond e pagamento.",
   crumb: "Análise", h1: "Seduced AI: análise do gerador de imagens e vídeos adultos",
   intro: "O Seduced AI não é uma namorada IA: é um gerador de imagens e vídeos adultos, sem chat. Você escolhe personagens, roupas, cenários e “extensões”, e a IA cria a cena. Veja quanto ele vale e quanto custa de verdade.",

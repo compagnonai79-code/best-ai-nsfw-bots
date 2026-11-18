@@ -7,7 +7,7 @@ date: "2026-11-11", file: "review/aiallure.html", dir: "avis-aiallure", cover: "
 img: { "accueil": [640, 560], "creation-style": [720, 790], "creation-apparence": [720, 660], "live-rooms": [720, 906], "prix": [720, 444] },
 
 fr: {
-  meta_t: "Avis AIAllure 2026 : Live Rooms, création, images, vidéos et prix",
+  meta_t: "Avis AIAllure 2026 : Live Rooms, images, vidéos et prix",
   meta_d: "Notre avis sur AIAllure : appels en Live Room, créateur de personnage très poussé, studio images et vidéos, vérification d'âge et tous les prix (essai 24 h, Starter, Pro, Power).",
   crumb: "Avis", h1: "Avis AIAllure : Live Rooms, images, vidéos et prix",
   intro: "AIAllure ne se contente pas d'un chat : la plateforme mise sur les appels en « Live Room », un créateur de personnage très détaillé et un studio d'images et de vidéos. Voici ce qu'il faut savoir avant de s'inscrire, avec tous les prix.",
@@ -91,7 +91,7 @@ fr: {
 },
 
 en: {
-  meta_t: "AIAllure Review 2026: Live Rooms, Character Builder, Images, Videos and Pricing",
+  meta_t: "AIAllure Review 2026: Live Rooms, Images, Videos, Pricing",
   meta_d: "Our AIAllure review: Live Room calls, a very deep character builder, an image and video studio, age verification and every price (24-hour trial, Starter, Pro, Power).",
   crumb: "Review", h1: "AIAllure Review: Live Rooms, Images, Videos and Pricing",
   intro: "AIAllure is more than a chat app: it bets on “Live Room” calls, a very detailed character builder and an image and video studio. Here is what you should know before signing up, with every price.",
@@ -175,7 +175,7 @@ en: {
 },
 
 es: {
-  meta_t: "Opinión de AIAllure 2026: Live Rooms, creación, imágenes, vídeos y precios",
+  meta_t: "Opinión de AIAllure 2026: Live Rooms, imágenes y precios",
   meta_d: "Nuestra opinión sobre AIAllure: llamadas en Live Room, creador de personajes muy completo, estudio de imágenes y vídeos, verificación de edad y todos los precios (prueba de 24 h, Starter, Pro, Power).",
   crumb: "Opinión", h1: "Opinión de AIAllure: Live Rooms, imágenes, vídeos y precios",
   intro: "AIAllure no se queda en un chat: apuesta por las llamadas en «Live Room», un creador de personajes muy detallado y un estudio de imágenes y vídeos. Esto es lo que debes saber antes de registrarte, con todos los precios.",
@@ -259,7 +259,7 @@ es: {
 },
 
 de: {
-  meta_t: "AIAllure Test 2026: Live Rooms, Charakter-Editor, Bilder, Videos und Preise",
+  meta_t: "AIAllure Test 2026: Live Rooms, Bilder, Videos, Preise",
   meta_d: "Unsere Meinung zu AIAllure: Live-Room-Anrufe, ein sehr umfangreicher Charakter-Editor, Bild- und Videostudio, Altersprüfung und alle Preise (24-Stunden-Test, Starter, Pro, Power).",
   crumb: "Test", h1: "AIAllure im Test: Live Rooms, Bilder, Videos und Preise",
   intro: "AIAllure ist mehr als ein Chat: Die Plattform setzt auf Anrufe im „Live Room“, einen sehr detaillierten Charakter-Editor und ein Studio für Bilder und Videos. Das solltest du vor der Anmeldung wissen, mit allen Preisen.",
@@ -343,7 +343,7 @@ de: {
 },
 
 pt: {
-  meta_t: "AIAllure vale a pena? Análise 2026: Live Rooms, criação, imagens, vídeos e preços",
+  meta_t: "AIAllure vale a pena? Análise 2026: Live Rooms e preços",
   meta_d: "Nossa análise do AIAllure: chamadas em Live Room, criador de personagens muito completo, estúdio de imagens e vídeos, verificação de idade e todos os preços (teste de 24 h, Starter, Pro, Power).",
   crumb: "Análise", h1: "AIAllure: análise de Live Rooms, imagens, vídeos e preços",
   intro: "O AIAllure vai além do chat: aposta em chamadas na “Live Room”, num criador de personagens muito detalhado e num estúdio de imagens e vídeos. Veja o que saber antes de se cadastrar, com todos os preços.",

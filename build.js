@@ -670,7 +670,10 @@ fs.rmSync(OUT, { recursive: true, force: true });
 const cleanLinks = html => html.replace(/(\b(?:href|value)=")((?!https?:|mailto:|data:|\/\/)[^"#?]*?)\.html((?:[?#][^"]*)?")/g,
   (m, a, u, rest) => a + (/(^|\/)index$/.test(u) ? (u.replace(/index$/, "") || "./") : u) + rest);
 const write = (rel, content) => { const p = path.join(OUT, rel); fs.mkdirSync(path.dirname(p), { recursive: true });
-  fs.writeFileSync(p, rel.endsWith(".html") ? cleanLinks(content) : content); };
+  fs.writeFileSync(p, rel.endsWith(".html") ? emailOff(cleanLinks(content)) : content); };
+/* Cloudflare's "email obfuscation" turns visible addresses into /cdn-cgi/l/email-protection links,
+   which crawlers report as 404s: these comments tell Cloudflare to leave the page's addresses alone. */
+const emailOff = html => html.includes("@") ? html.replace(/<body([^>]*)>/, "<body$1><!--email_off-->").replace("</body>", "<!--/email_off--></body>") : html;
 const urls = [];
 for (const lang of LANG_LIST) {
   const X = context(lang);

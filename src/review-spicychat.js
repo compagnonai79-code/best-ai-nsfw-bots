@@ -10,7 +10,7 @@ date: "2026-11-11", file: "review/spicychat-ai.html", dir: "avis-spicychat", cov
 img: { "accueil": [800, 800], "prix": [800, 710] },
 
 fr: {
-  meta_t: "Avis SpicyChat AI 2026 : jeu de rôle sans filtre, mémoire, version gratuite et prix",
+  meta_t: "Avis SpicyChat AI 2026 : roleplay sans filtre, gratuit, prix",
   meta_d: "Notre avis sur SpicyChat AI : jeux de rôle adultes sans refus automatiques, plus de 385 000 personnages, lorebooks et mémoire, images et voix, version gratuite et prix des offres (5,95 €, 19,95 €, 29,95 €).",
   crumb: "Avis", h1: "Avis SpicyChat AI : le roi du jeu de rôle sans filtre",
   intro: "Tu as déjà passé une heure à construire une histoire avec une IA pour tomber sur « Je ne peux pas répondre à cette demande » ? SpicyChat est conçu pour éviter ça : une plateforme de jeu de rôle pour adultes, avec une énorme bibliothèque de personnages créés par la communauté. Voici ce qu'elle vaut, gratuite comme payante.",
@@ -91,7 +91,7 @@ ${T3(["", "Get a Taste", "True Supporter", "I'm All In"], [
 },
 
 en: {
-  meta_t: "SpicyChat AI Review 2026: Unfiltered Roleplay, Memory, Free Tier and Pricing",
+  meta_t: "SpicyChat AI Review 2026: Unfiltered Roleplay, Free Tier, Price",
   meta_d: "Our SpicyChat AI review: adult roleplay without automatic refusals, 385,000+ characters, lorebooks and memory, images and voice, the free tier and plan prices (€5.95, €19.95, €29.95).",
   crumb: "Review", h1: "SpicyChat AI Review: the King of Unfiltered Roleplay",
   intro: "Ever spent an hour building a story with an AI only to hit “I can't fulfil this request”? SpicyChat is built to avoid that: an adult roleplay platform with a huge library of community-made characters. Here is what it is worth, free or paid.",
@@ -172,7 +172,7 @@ ${T3(["", "Get a Taste", "True Supporter", "I'm All In"], [
 },
 
 es: {
-  meta_t: "Opinión de SpicyChat AI 2026: rol sin filtros, memoria, versión gratis y precios",
+  meta_t: "Opinión de SpicyChat AI 2026: rol sin filtros y precios",
   meta_d: "Nuestra opinión sobre SpicyChat AI: rol para adultos sin rechazos automáticos, más de 385 000 personajes, lorebooks y memoria, imágenes y voz, versión gratis y precios (5,95 €, 19,95 €, 29,95 €).",
   crumb: "Opinión", h1: "Opinión de SpicyChat AI: el rey del rol sin filtros",
   intro: "¿Alguna vez has pasado una hora creando una historia con una IA para acabar leyendo «No puedo responder a esta solicitud»? SpicyChat está pensado para evitarlo: una plataforma de rol para adultos con una enorme biblioteca de personajes creados por la comunidad. Esto es lo que vale, gratis o de pago.",
@@ -253,7 +253,7 @@ ${T3(["", "Get a Taste", "True Supporter", "I'm All In"], [
 },
 
 de: {
-  meta_t: "SpicyChat AI Test 2026: Rollenspiel ohne Filter, Gedächtnis, Gratisversion und Preise",
+  meta_t: "SpicyChat AI Test 2026: Rollenspiel ohne Filter, Preise",
   meta_d: "Unsere Meinung zu SpicyChat AI: Rollenspiel für Erwachsene ohne automatische Ablehnungen, über 385.000 Charaktere, Lorebooks und Gedächtnis, Bilder und Stimme, Gratisversion und Preise (5,95 €, 19,95 €, 29,95 €).",
   crumb: "Test", h1: "SpicyChat AI im Test: der König des ungefilterten Rollenspiels",
   intro: "Schon mal eine Stunde an einer Geschichte mit einer KI gebaut und dann „Ich kann diese Anfrage nicht erfüllen“ gelesen? SpicyChat soll genau das verhindern: eine Rollenspiel-Plattform für Erwachsene mit einer riesigen Bibliothek von Community-Charakteren. Hier steht, was sie taugt, gratis wie bezahlt.",
@@ -334,7 +334,7 @@ ${T3(["", "Get a Taste", "True Supporter", "I'm All In"], [
 },
 
 pt: {
-  meta_t: "SpicyChat AI vale a pena? Análise 2026: roleplay sem filtro, memória, versão grátis e preços",
+  meta_t: "SpicyChat AI vale a pena? Análise 2026: roleplay e preços",
   meta_d: "Nossa análise do SpicyChat AI: roleplay adulto sem recusas automáticas, mais de 385.000 personagens, lorebooks e memória, imagens e voz, versão grátis e preços (5,95 €, 19,95 €, 29,95 €).",
   crumb: "Análise", h1: "SpicyChat AI: análise do rei do roleplay sem filtro",
   intro: "Já passou uma hora construindo uma história com uma IA só para ler “Não posso atender a este pedido”? O SpicyChat foi feito para evitar isso: uma plataforma de roleplay adulto com uma biblioteca enorme de personagens criados pela comunidade. Veja quanto ele vale, grátis ou pago.",
@@ -415,7 +415,7 @@ ${T3(["", "Get a Taste", "True Supporter", "I'm All In"], [
 },
 
 hi: {
-  meta_t: "SpicyChat AI रिव्यू 2026: बिना फ़िल्टर रोलप्ले, याददाश्त, फ़्री वर्ज़न और कीमतें",
+  meta_t: "SpicyChat AI रिव्यू 2026: बिना फ़िल्टर रोलप्ले और कीमतें",
   meta_d: "SpicyChat AI पर हमारी राय: बिना अपने-आप इनकार वाला वयस्क रोलप्ले, 3,85,000+ कैरेक्टर, लोरबुक और याददाश्त, इमेज और आवाज़, फ़्री वर्ज़न और प्लान की कीमतें (€5.95, €19.95, €29.95)।",
   crumb: "रिव्यू", h1: "SpicyChat AI रिव्यू: बिना फ़िल्टर रोलप्ले का राजा",
   intro: "क्या कभी AI के साथ एक घंटे तक कहानी बनाने के बाद “मैं यह अनुरोध पूरा नहीं कर सकता” पढ़ना पड़ा है? SpicyChat इसी से बचने के लिए बना है: वयस्कों के लिए रोलप्ले प्लेटफ़ॉर्म, कम्युनिटी के बनाए कैरेक्टर की विशाल लाइब्रेरी के साथ। फ़्री हो या पेड, यह कितना अच्छा है, यहाँ जानें।",
