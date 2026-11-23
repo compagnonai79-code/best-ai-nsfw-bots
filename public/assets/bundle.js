@@ -7758,7 +7758,9 @@ for (const p of SPICY_PROFILES_2) {
    (tags, bios, descriptions, features). Missing entry → English is shown.
    {p} = platform name, {name} = character name, {n} = number
    ===================================================================== */
-const LANGS = { en:"English", fr:"Français", es:"Español", de:"Deutsch", pt:"Português", hi:"हिन्दी" };
+/* Hindi removed on 2026-11-24 (no traffic, no sales): /hi/* is 301-redirected to the English pages (see _redirects in build.js).
+   The Hindi strings stay in I18N below, unused. */
+const LANGS = { en:"English", fr:"Français", es:"Español", de:"Deutsch", pt:"Português" };
 
 const I18N = {
 en: { ui: {

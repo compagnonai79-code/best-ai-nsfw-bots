@@ -85,7 +85,7 @@ const priceTxt = (X, d) => { if (!d || d.priceMo == null) return null;
 const absUrl = (l, file) => SITE.url + "/" + (prefix(l) + file).replace(/index\.html$/, "").replace(/\.html$/, "");
 const LEGAL_PAGES = [["terms","legal_terms"],["cookies","legal_cookies"],["dmca","legal_dmca"],["privacy","legal_privacy"],["ai-disclosure","legal_ai"],["legal-notice","legal_notice"]];
 const LEGAL_KEY = { "terms":"terms","cookies":"cookies","dmca":"dmca","privacy":"privacy","ai-disclosure":"ai","legal-notice":"notice" };
-const LEGAL_LANGS = ["en", "fr", "es", "de", "pt", "hi"];
+const LEGAL_LANGS = ["en", "fr", "es", "de", "pt"];
 
 /* ---------- layout ---------- */
 function layout(X, lang, file, o) {
@@ -799,6 +799,8 @@ ${LANG_LIST.map(l => `  <sitemap><loc>${SITE.url}/sitemaps/${l}.xml</loc><lastmo
 </sitemapindex>
 `);
 write("robots.txt", `User-agent: *\nAllow: /\n\nSitemap: ${SITE.url}/sitemap.xml\n`);   /* /go/ stays crawlable so X can read its card; noindex keeps it out of Google */
+/* Hindi pages removed (2026-11-24): every old /hi/ URL goes permanently to the same page in English */
+write("_redirects", "/hi /  301\n/hi/* /:splat 301\n");
 /* /go/<id>: short links for social posts (Twitter/X). Each one is a tiny page that X reads to build the
    post's card (the character's photo and name, not Candy's logo), and that sends a person straight on to
    the character on Candy (meta refresh 0 + script), with the affiliate code. Never indexed (noindex meta +
