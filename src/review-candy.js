@@ -126,7 +126,7 @@ fr: {
 
 /* ============================== ENGLISH ============================== */
 en: {
-  meta_t: "Candy AI Review 2026: Our Full Hands-On Test (Chat, Images, Calls, Price)",
+  meta_t: "Candy AI Review 2026: Our Full Test (Chat, Images, Price)",
   meta_d: "We tested Candy AI on a paid plan: character creation, conversation, memory, images, voice calls and the real cost of tokens. Strengths, flaws and our verdict.",
   crumb: "Review", h1: "Candy AI Review: Our Full Hands-On Test",
   intro: "Candy AI calls itself “the most realistic AI girlfriend experience on the market”. The marketing is slick, but what is behind it? We tested the app on a paid plan: creating a character, conversation (consistency, memory, humour), image generation, voice calls and the real cost of tokens. Here is what we found, unfiltered.",
@@ -244,7 +244,7 @@ en: {
 
 /* ============================== ESPAÑOL ============================== */
 es: {
-  meta_t: "Opinión de Candy AI 2026: nuestra prueba completa (chat, imágenes, llamadas, precio)",
+  meta_t: "Opinión de Candy AI 2026: prueba completa y precio",
   meta_d: "Probamos Candy AI con un plan de pago: creación del personaje, conversación, memoria, imágenes, llamadas de voz y el coste real de los tokens. Puntos fuertes, fallos y veredicto.",
   crumb: "Opinión", h1: "Opinión de Candy AI: nuestra prueba completa",
   intro: "Candy AI se presenta como «la experiencia de novia IA más realista del mercado». El marketing está muy cuidado, pero ¿qué hay detrás? Probamos la app con un plan de pago: creación de un personaje, conversación (coherencia, memoria, humor), generación de imágenes, llamadas de voz y coste real de los tokens. Esto es lo que encontramos, sin filtros.",
@@ -362,7 +362,7 @@ es: {
 
 /* ============================== DEUTSCH ============================== */
 de: {
-  meta_t: "Candy AI Test 2026: unser kompletter Praxistest (Chat, Bilder, Anrufe, Preis)",
+  meta_t: "Candy AI Test 2026: unser Praxistest (Chat, Bilder, Preis)",
   meta_d: "Wir haben Candy AI mit einem bezahlten Abo getestet: Charaktererstellung, Unterhaltung, Gedächtnis, Bilder, Sprachanrufe und die echten Kosten der Tokens. Stärken, Schwächen und Fazit.",
   crumb: "Test", h1: "Candy AI im Test: unser kompletter Praxistest",
   intro: "Candy AI bezeichnet sich als „das realistischste KI-Freundin-Erlebnis auf dem Markt“. Das Marketing ist schick, aber was steckt dahinter? Wir haben die App mit einem bezahlten Abo getestet: Erstellung eines Charakters, Unterhaltung (Stimmigkeit, Gedächtnis, Humor), Bildgenerierung, Sprachanrufe und die echten Kosten der Tokens. Hier ist, was wir festgestellt haben, ungefiltert.",
@@ -480,7 +480,7 @@ de: {
 
 /* ============================== PORTUGUÊS ============================== */
 pt: {
-  meta_t: "Candy AI vale a pena? Nosso teste completo 2026 (chat, imagens, chamadas, preço)",
+  meta_t: "Candy AI vale a pena? Nosso teste completo 2026 e preço",
   meta_d: "Testamos o Candy AI com um plano pago: criação da personagem, conversa, memória, imagens, chamadas de voz e o custo real dos tokens. Pontos fortes, defeitos e veredito.",
   crumb: "Análise", h1: "Candy AI: nossa análise e teste completo",
   intro: "O Candy AI se apresenta como “a experiência de namorada IA mais realista do mercado”. O marketing é caprichado, mas o que há por trás? Testamos o app com um plano pago: criação de uma personagem, conversa (coerência, memória, humor), geração de imagens, chamadas de voz e o custo real dos tokens. Veja o que encontramos, sem filtro.",

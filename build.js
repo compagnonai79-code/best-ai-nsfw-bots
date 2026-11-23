@@ -282,7 +282,7 @@ pages.push({ file: "platforms.html", build: (X) => {
   const u = X.ui, e = X.esc, LIST = Object.values(X.PLATFORMS);
   return { page:"platforms", nav:"platforms", title:u("meta_pl_t"), desc:u("meta_pl_d"), body: `
   <section class="hero"><h1>${u("pl_title")}</h1><p>${e(u("pl_sub"))}</p>
-    <p class="hero-links"><a href="how-we-rate.html">${e(u("nav_how"))} →</a> · <a href="data.html">${e(u("nav_data"))} →</a></p></section>
+    <p class="hero-links"><a href="how-we-rate.html">${e(u("nav_how"))} →</a> · <a href="data.html">${e(u("nav_data"))} →</a>${GUIDE_LANGS.includes(X.LANG) ? Object.values(GUIDES).map(G => ` · <a href="${G.file}">${e((G[X.LANG] || G.en).pl_link)} →</a>`).join("") : ""}</p></section>
   <h2 class="section-title">${e(u("top_picks"))}</h2>
   <div class="picks">${LIST.filter(p => p.top).sort((a,b) => b.rank - a.rank).map(X.pickCard).join("")}</div>
   <h2 class="section-title">${e(u("all_pl"))}</h2>
@@ -488,7 +488,8 @@ for (const key of Object.keys(base.PLATFORMS).filter(k => base.PLATFORMS[k].url)
     <p class="tp-by">★ ${P.rating}/5 · ${byline(X, "../")} · ${e(u("rv_checked", v))}</p>
     <p class="tp-intro">${e(X.tr(P.desc))}</p>
     <p>${cta("btn btn-main btn-xl")}</p>
-    ${REVIEWS[key] ? `<p class="avis-link"><a href="../${REVIEWS[key].file}">📝 ${e((REVIEWS[key][lang] || REVIEWS[key].en).pl_link)} →</a></p>` : ""}</section>
+    ${REVIEWS[key] ? `<p class="avis-link"><a href="../${REVIEWS[key].file}">📝 ${e((REVIEWS[key][lang] || REVIEWS[key].en).pl_link)} →</a></p>` : ""}
+    ${GUIDE_LANGS.includes(lang) ? guideLinks(key, lang, "../") : ""}</section>
   ${X.OFFER.platform === key ? X.offerBox() : ""}
   <div class="mgrid">
     <section class="info review"><h2>${e(u("rv_t"))}</h2>
@@ -614,6 +615,43 @@ for (const [rk, R] of Object.entries(REVIEWS)) pages.push({ file: R.file, build:
   ${ld.map(ldTag).join("\n")}` };
 }});
 
+/* Guides (src/guide-*.js): deals, comparisons, alternatives. Written in 5 languages; the Hindi URL shows the
+   English text with noindex and is left out of hreflang/sitemaps. Body placeholders:
+   [[btn:<platform>|label]] affiliate button · [[a:<platform>|text]] inline affiliate link · [[p:<path>|text]] internal link */
+const GUIDE_LANGS = ["en", "fr", "es", "de", "pt"];
+const GUIDES = { deals: require("./src/guide-deals.js"), vs: require("./src/guide-candy-vs-spicychat.js"), gfgpt: require("./src/guide-girlfriendgpt-alternatives.js") };
+for (const [gk, G] of Object.entries(GUIDES)) pages.push({ file: G.file, build: (X, lang) => {
+  const u = X.ui, e = X.esc, T = G[lang] || G.en, C = X.PLATFORMS.candy;
+  const body = h => h
+    .replace(/\[\[btn:(\w+)\|([^\]]+)\]\]/g, (m, k, t) => X.ctaLink(X.PLATFORMS[k], e(t) + " →", "btn btn-main"))
+    .replace(/\[\[a:(\w+)\|([^\]]+)\]\]/g, (m, k, t) => X.ctaLink(X.PLATFORMS[k], e(t) + " →", "inl-aff"))
+    .replace(/\[\[p:([\w\/.-]+)\|([^\]]+)\]\]/g, (m, f, t) => `<a href="../${f}">${e(t)}</a>`);
+  const cta = cls => X.ctaLink(C, e(T.cta) + " →", cls);
+  const url = absUrl(lang, G.file);
+  const ld = [bcLd(X, lang, [[u("bc_home"), "index.html"], [u("nav_platforms"), "platforms.html"], [T.crumb, G.file]]),
+    {"@context":"https://schema.org","@type":"Article","headline":T.h1,"description":T.meta_d,"url":url,"inLanguage":lang,"datePublished":G.date,"dateModified":G.date,
+     "author":{"@type":"Person","name":SITE.author,"url":absUrl(lang, "author.html")},"publisher":{"@type":"Organization","name":SITE.domain,"url":SITE.url}},
+    {"@context":"https://schema.org","@type":"FAQPage","mainEntity":T.faq.map(([q, a]) => ({"@type":"Question","name":q,"acceptedAnswer":{"@type":"Answer","text":a}}))}];
+  return { page:"review", nav:"platforms", title:T.meta_t, desc:T.meta_d, lastmod:G.date, altLangs: GUIDE_LANGS, noindex: !GUIDE_LANGS.includes(lang), body: `
+  <nav class="crumb"><a href="../platforms.html">${e(u("nav_platforms"))}</a> › <span>${e(T.crumb)}</span></nav>
+  <article class="avis guide">
+    <div class="avis-head"><h1>${e(T.h1)}</h1>
+      <p class="tp-by">${byline(X, "../")} · ${e(T.checked)}</p>
+      <p class="avis-intro">${e(T.intro)}</p></div>
+    <section class="avis-box"><h2>${e(T.box_t)}</h2><p>${e(T.box)}</p>
+      <p class="avis-cta">${cta("btn btn-main")}<small>${e(T.cta_note)}</small></p></section>
+    <nav class="avis-toc" aria-label="${e(T.toc_t)}"><b>${e(T.toc_t)}</b><ol>${T.sections.map(s => `<li><a href="#${s.id}">${e(s.h2.replace(/^\d+\.\s*/, ""))}</a></li>`).join("")}<li><a href="#faq">${e(T.faq_t)}</a></li></ol></nav>
+    ${T.sections.map(s => `<section class="avis-sec" id="${s.id}"><h2>${e(s.h2)}</h2>${body(s.body)}</section>`).join("\n")}
+    <section class="avis-sec" id="faq"><h2>${e(T.faq_t)}</h2>${T.faq.map(([q, a]) => `<details class="avis-faq"><summary>${e(q)}</summary><p>${e(a)}</p></details>`).join("")}</section>
+    <section class="avis-end"><h2>${e(T.end_t)}</h2><p>${e(T.end)}</p><p class="avis-cta">${cta("btn btn-main")}<small>${e(T.cta_note)}</small></p></section>
+    <p class="avis-src">${e(T.src)}</p>
+  </article>
+  ${ld.map(ldTag).join("\n")}` };
+}});
+/* guide links shown on the platform pages and in the HTML sitemap */
+const guideLinks = (key, lang, rel) => Object.values(GUIDES).filter(G => G.platforms.includes(key))
+  .map(G => `<p class="avis-link"><a href="${rel}${G.file}">📘 ${base.esc((G[lang] || G.en).pl_link)} →</a></p>`).join("");
+
 pages.push({ file: "data.html", build: (X) => {
   const u = X.ui, e = X.esc;
   const yn = v => v === true ? `<span class="yes">${e(u("yes"))}</span>` : v === false ? `<span class="no">${e(u("no"))}</span>` : `<span class="pend">${e(u("pending"))}</span>`;
@@ -656,7 +694,7 @@ pages.push({ file: "sitemap.html", build: (X) => {
       ${a("how-we-rate.html", u("nav_how"))}${a("author.html", SITE.author)}${a("data.html", u("nav_data"))}${a("contact.html", u("nav_contact"))}</section>
     <section><h2>${e(u("sm_tags"))}</h2>${tags.map(t => a("tag/" + X.slug(t) + ".html", X.tr(t))).join("")}</section>
     <section><h2>${e(u("sm_profiles"))}</h2>${girls.map(g => a("model/" + (g.id || X.slug(g.name)) + ".html", g.name)).join("")}</section>
-    <section><h2>${e(u("nav_platforms"))}</h2>${Object.values(REVIEWS).map(R => a(R.file, (R[X.LANG] || R.en).h1)).join("")}</section>
+    <section><h2>${e(u("nav_platforms"))}</h2>${Object.values(REVIEWS).map(R => a(R.file, (R[X.LANG] || R.en).h1)).join("")}${GUIDE_LANGS.includes(X.LANG) ? Object.values(GUIDES).map(G => a(G.file, (G[X.LANG] || G.en).h1)).join("") : ""}</section>
     <section><h2>${e(u("sm_legal"))}</h2>${LEGAL_PAGES.map(([f, k]) => a("legal/" + f + ".html", u(k))).join("")}</section>
   </div>` };
 }});
@@ -681,7 +719,10 @@ fs.rmSync(OUT, { recursive: true, force: true });
 const cleanLinks = html => html.replace(/(\b(?:href|value)=")((?!https?:|mailto:|data:|\/\/)[^"#?]*?)\.html((?:[?#][^"]*)?")/g,
   (m, a, u, rest) => a + (/(^|\/)index$/.test(u) ? (u.replace(/index$/, "") || "./") : u) + rest);
 const write = (rel, content) => { const p = path.join(OUT, rel); fs.mkdirSync(path.dirname(p), { recursive: true });
-  fs.writeFileSync(p, rel.endsWith(".html") ? cleanLinks(content) : content); };
+  fs.writeFileSync(p, rel.endsWith(".html") ? emailOff(cleanLinks(content)) : content); };
+/* Cloudflare's "email obfuscation" turns visible addresses into /cdn-cgi/l/email-protection links,
+   which crawlers report as 404s: these comments tell Cloudflare to leave the page's addresses alone. */
+const emailOff = html => html.includes("@") ? html.replace(/<body([^>]*)>/, "<body$1><!--email_off-->").replace("</body>", "<!--/email_off--></body>") : html;
 const urls = [];
 for (const lang of LANG_LIST) {
   const X = context(lang);
@@ -736,6 +777,8 @@ write("_headers", `/assets/*
   Cache-Control: public, max-age=604800
 /images/*
   Cache-Control: public, max-age=2592000
+/go/*
+  X-Robots-Tag: noindex, nofollow
 `);
 /* favicon & app icons (icons/) → site root */
 fs.cpSync(path.join(__dirname, "icons"), OUT, { recursive: true });
@@ -755,7 +798,38 @@ write("sitemap.xml", `<?xml version="1.0" encoding="UTF-8"?>
 ${LANG_LIST.map(l => `  <sitemap><loc>${SITE.url}/sitemaps/${l}.xml</loc><lastmod>${urls.filter(x => x.lang === l).map(x => x.lastmod).sort().pop()}</lastmod></sitemap>`).join("\n")}
 </sitemapindex>
 `);
-write("robots.txt", `User-agent: *\nAllow: /\n\nSitemap: ${SITE.url}/sitemap.xml\n`);
+write("robots.txt", `User-agent: *\nAllow: /\n\nSitemap: ${SITE.url}/sitemap.xml\n`);   /* /go/ stays crawlable so X can read its card; noindex keeps it out of Google */
+/* /go/<id>: short links for social posts (Twitter/X). Each one is a tiny page that X reads to build the
+   post's card (the character's photo and name, not Candy's logo), and that sends a person straight on to
+   the character on Candy (meta refresh 0 + script), with the affiliate code. Never indexed (noindex meta +
+   X-Robots-Tag header), and left crawlable in robots.txt so X can read the card.
+   Candy links carry no locale (/fr/), so Candy opens in the visitor's own language. */
+{
+  const esc = base.esc;
+  for (const p of base.PROFILES.filter(p => p.link && p.platform === "candy")) {
+    const to = p.link.replace("://candy.ai/fr/", "://candy.ai/"), P = base.PLATFORMS[p.platform];
+    const title = `${p.name}${p.age ? ", " + p.age : ""} – ${P.name}`;
+    const desc = ((p.bio && (p.bio.en || p.bio.fr)) || "").slice(0, 200);
+    const img = p.img && /^https?:/.test(p.img) ? p.img : SITE.url + "/" + p.img;
+    write(`go/${base.girlId(p)}.html`, `<!doctype html><html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>${esc(title)}</title>
+<meta name="robots" content="noindex, nofollow">
+<meta http-equiv="refresh" content="0;url=${esc(to)}">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="${esc(SITE.domain)}">
+<meta property="og:title" content="${esc(title)}">
+<meta property="og:description" content="${esc(desc)}">
+<meta property="og:image" content="${esc(img)}">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="${esc(title)}">
+<meta name="twitter:description" content="${esc(desc)}">
+<meta name="twitter:image" content="${esc(img)}">
+<script>location.replace(${JSON.stringify(to)})</script>
+<style>body{background:#0b0a12;color:#eee;font:16px system-ui,sans-serif;display:grid;place-items:center;min-height:100vh;margin:0}a{color:#ff6fa5}</style>
+</head><body><p><a href="${esc(to)}" rel="sponsored nofollow">${esc(p.name)} – ${esc(P.name)} →</a></p></body></html>\n`);
+  }
+}
 /* data.csv */
 const csvq = v => `"${String(v ?? "").replace(/"/g, '""')}"`;
 write("data.csv", ["platform,score,free_start,unlimited_free,price_month,price_best_month,currency,images,voice,calls,video,group_chat,mobile_app,discreet_billing,crypto,apple_google_pay,paypal,checked,source",
