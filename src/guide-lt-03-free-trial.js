@@ -25,14 +25,14 @@ ${T(["", "Free account", "Premium"], [
   ["Images", "1", "With tokens (2–3 each)"],
   ["Create your own character", "Asks for Premium when you finalise it", "<strong>Yes</strong>"],
   ["Voice calls, 18+ images and videos", "No", "<strong>Yes</strong> (tokens)"],
-  ["Candy Shorts", "Episodes 1 and 2 of each series", "All episodes (tokens)"],
+  ["Candy Shorts", "Episodes 1 and 2 of each series (episode 1 even without an account)", "All episodes (tokens)"],
   ["Tokens per month", "0", "<strong>100</strong>"]])}
 <p>In our own test, the free version ended within minutes. It is enough to see how a character talks and what the interface looks like, not to really use the app. Think of it as a demo, not a trial.</p>` },
   { id: "code", h2: "2. Is there a Candy AI free trial code?", body: `
 <p><strong>No.</strong> Candy AI has no field to enter a promo or trial code, so every \"code\" you find on coupon sites does nothing. What exists instead is an automatic new-member discount on the subscription page: <strong>-70% on 12 months (€3.99/month)</strong>, -35% on 3 months and -29% on the first month. No code to copy. We check it regularly on [[p:guide/ai-girlfriend-deals.html|our deals page]].</p>
 <p>[[btn:candy|See the -70% offer]]</p>` },
   { id: "nosignup", h2: "3. Can you use Candy AI with no sign-up or no sign-in?", body: `
-<p>You can <strong>browse</strong> without an account: character pages, the gallery and the first episodes of Candy Shorts are visible. But to <strong>chat</strong>, you need an account, because your messages, characters and photos are saved to it. Sign-up is free and takes a minute.</p>
+<p>You can <strong>browse</strong> without an account: character pages, the gallery and the first episode of every Candy Shorts series are visible. But to <strong>chat</strong>, you need an account, because your messages, characters and photos are saved to it. Sign-up is free and takes a minute.</p>
 <p>Tip if you care about privacy: use a separate email address, and know that a paid plan shows up as <strong>"EverAI"</strong> on your bank statement, not "Candy AI".</p>
 <p>Sites promising \"Candy AI no sign up\" usually send you to another app, or to a copy. If a site that is not candy.ai asks for your Candy login or card details, close it.</p>` },
   { id: "apk", h2: "4. Candy AI app, APK and \"free subscription APK\"", body: `

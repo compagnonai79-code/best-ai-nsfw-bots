@@ -1,5 +1,19 @@
 {
   "_note": "Candy characters deliberately NOT listed on the site (presented as minors or in a school setting in a sexual context). Do not add them.",
-  "ids": ["hana-lawson", "natsume-kureha", "kimmy-edisson", "ruri-koyama", "ruriko-aizuki"],
-  "not_characters": ["live-action"]
+  "ids": [
+    "hana-lawson",
+    "natsume-kureha",
+    "kimmy-edisson",
+    "ruri-koyama",
+    "ruriko-aizuki"
+  ],
+  "not_characters": [
+    "live-action"
+  ],
+  "_note_shorts": "Candy Shorts series NOT given a page: the official synopsis itself puts the story in a school setting or presents the character as a child to be looked after (no age given). Everything else is listed: Candy states all characters are 18+, and every cast member listed on the site shows an age of 18 or more.",
+  "shorts": {
+    "stepmom-fixes-my-grades": "synopsis: he is failing at school",
+    "my-bestie-betrayed-me": "synopsis: 'a school full of lies', no cast/age given",
+    "bella-my-step-daughter": "synopsis: a daughter left for her stepfather to look after, no age, no cast"
+  }
 }

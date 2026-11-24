@@ -20,7 +20,7 @@ en: {
   sections: [
   { id: "what", h2: "1. What is Candy AI?", body: `
 <p>Candy AI (candy.ai) is an 18+ AI companion app: you chat with a virtual girlfriend (or boyfriend), she answers in character, sends photos, can call you and appear in short videos. You can pick one of 300+ ready-made characters or create your own in a few minutes. It runs in the browser on computer and phone; the company behind it is <strong>EverAI Limited</strong> (Malta), which is also the name on your bank statement.</p>
-<p>Beyond the chat, Candy now has <strong>Candy Shorts</strong> (short vertical series with its characters — see [[p:guide/candy-ai-shorts.html|our Candy Shorts guide]]), live "Candy Cams" shows with creators and a "private content" section.</p>` },
+<p>Beyond the chat, Candy now has <strong>Candy Shorts</strong> (short vertical series with its characters — see [[p:shorts/index.html|all Candy Shorts series]]), live "Candy Cams" shows with creators and a "private content" section.</p>` },
   { id: "premium", h2: "2. What Premium includes, and what it costs", body: `
 ${T(["Plan", "Price", "Discount"], [
   ["<strong>12 months</strong>", "<strong>€3.99/month</strong> instead of €13.99", "<strong>-70%</strong>"],
@@ -33,7 +33,7 @@ ${T(["Action", "Cost"], [
   ["One image", "2 to 3 tokens"],
   ["Voice call", "3 tokens per minute"],
   ["Hearing a message as audio", "0.2 token"],
-  ["Candy Shorts episode (from ep. 3)", "12 tokens (30 on some newer series)"]])}
+  ["Candy Shorts episode (from ep. 3)", "12 tokens (30 to 50 on some series with well-known creators)"]])}
 <p>In practice, 100 tokens is about <strong>30 to 40 images</strong>, or <strong>half an hour of calls</strong>, or a mix of both. A dozen images and one long call can empty the counter in under an hour. If you mostly chat in text and ask for a few pictures, 100 tokens is plenty. If you want photos all day, budget for top-ups or look at a dedicated image tool.</p>` },
   { id: "good", h2: "4. What makes it worth it", body: `
 <ul><li><strong>Photos that look real</strong> on simple requests, with the same face from one image to the next.</li>

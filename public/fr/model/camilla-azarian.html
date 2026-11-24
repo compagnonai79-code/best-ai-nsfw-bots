@@ -605,6 +605,26 @@ table.data.avis-t td:first-child,table.data.avis-t th:first-child{overflow-wrap:
 .avis-link{margin-top:10px}
 .avis-link a{color:var(--accent);font-weight:600}
 @media(max-width:640px){.avis-head h1{font-size:28px}.avis-sec h2{font-size:22px}.avis-pc{grid-template-columns:1fr}.avis-box{padding:18px}.avis-cta .btn{width:100%;text-align:center}}
+/* Candy Shorts: series cards (hub, series pages, model pages) and series page header */
+.sgrid{display:grid;grid-template-columns:repeat(auto-fill,minmax(160px,1fr));gap:14px;margin:14px 0}
+.scard{position:relative;border-radius:14px;overflow:hidden;background:var(--card);border:1px solid var(--line);aspect-ratio:5/7;transition:.18s}
+.scard:hover{transform:translateY(-3px);border-color:var(--accent)}
+.scard>a{position:absolute;inset:0;color:#fff;text-decoration:none}
+.scard .sc-img{position:absolute;inset:0;background:linear-gradient(135deg,#ff3d8b,#ff8a5c)}
+.scard img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.scard>a::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,transparent 50%,rgba(8,6,14,.95))}
+.scard .sc-meta{position:absolute;left:0;right:0;bottom:0;padding:11px;z-index:1;display:flex;flex-direction:column;gap:3px}
+.scard .sc-meta b{font:700 15px/1.25 "Space Grotesk",Inter,sans-serif;overflow-wrap:anywhere}
+.scard .sc-meta small{font-size:12px;color:#d0c9ea;line-height:1.3}
+.scard .new{position:absolute;top:8px;left:8px;z-index:2;background:var(--green);color:#04140d;font:700 10px Inter,sans-serif;padding:3px 8px;border-radius:999px}
+.sh-cats{margin:10px 0}
+.sh-cats button.tag{font:inherit;font-size:13px}
+.sh-top{display:grid;grid-template-columns:260px 1fr;gap:26px;align-items:start;margin-bottom:10px}
+.sh-poster{border-radius:16px;overflow:hidden;aspect-ratio:5/7;background:linear-gradient(135deg,#ff3d8b,#ff8a5c);border:1px solid var(--line)}
+.sh-poster img{width:100%;height:100%;object-fit:cover;display:block}
+.sh-src{font-size:13px;color:var(--muted)}
+.m-shorts .sgrid{grid-template-columns:repeat(auto-fill,minmax(140px,1fr))}
+@media (max-width:640px){.sh-top{grid-template-columns:1fr;gap:16px}.sh-poster{width:60%;max-width:260px;margin:0 auto}.sgrid{grid-template-columns:repeat(2,1fr);gap:10px}.m-shorts .sgrid{grid-template-columns:repeat(2,1fr)}}
 </style>
 <link rel="preconnect" href="https://cdn.candy.ai">
 <link rel="preload" as="image" imagesrcset="https://cdn.candy.ai/cdn-cgi/image/width=400,format=auto,quality=75/712640523-b3f92208-89d8-4650-bb98-75f7f3b39942-600x900-webp90 400w, https://cdn.candy.ai/cdn-cgi/image/width=600,format=auto,quality=75/712640523-b3f92208-89d8-4650-bb98-75f7f3b39942-600x900-webp90 600w" imagesizes="(max-width: 640px) calc(100vw - 34px), 400px" fetchpriority="high">
@@ -652,6 +672,7 @@ table.data.avis-t td:first-child,table.data.avis-t th:first-child{overflow-wrap:
           <a href="../../fr/anime">Anime</a>
           <a href="../../fr/platforms">Top plateformes</a>
           <a href="../../fr/#new">Nouveaux</a>
+          <a href="../../shorts/">Candy Shorts</a>
           <a href="../../fr/how-we-rate">Notre méthode</a>
         </div>
       </details>
@@ -673,6 +694,15 @@ table.data.avis-t td:first-child,table.data.avis-t th:first-child{overflow-wrap:
       <div class="note">Personnage IA fictif · 18+ · Lien affilié</div>
     </div>
   </section>
+<section class="info m-shorts"><h2>Camilla Azarian dans les Candy Shorts</h2>
+    <div class="sgrid"><article class="scard"><a href="../../shorts/i-cant-believe-my-stepsister-is-a-stripper"><span class="sc-img"><img src="https://cdn.candy.ai/cdn-cgi/image/width=360,format=auto,quality=75/496-37efb138-a2d3-4a01-9b3f-113411ad4dd0" alt="I Can’t Believe My Stepsister Is A Stripper" loading="lazy" onerror="this.remove()"></span>
+    <span class="new">New episodes</span><span class="sc-meta"><b>I Can’t Believe My Stepsister Is A Stripper</b><small>5 episodes · Alma, Darkangel666, Bree, Camilla</small></span></a></article><article class="scard"><a href="../../shorts/my-girlfriend-paid-for-my-massage"><span class="sc-img"><img src="https://cdn.candy.ai/cdn-cgi/image/width=360,format=auto,quality=75/358-c02f995a-19bc-48e5-841b-c6947b7785e1" alt="My Girlfriend Paid for My Massage" loading="lazy" onerror="this.remove()"></span>
+    <span class="sc-meta"><b>My Girlfriend Paid for My Massage</b><small>5 episodes · Sofia, Camilla, Sadie</small></span></a></article><article class="scard"><a href="../../shorts/boys-not-allowed"><span class="sc-img"><img src="https://cdn.candy.ai/cdn-cgi/image/width=360,format=auto,quality=75/296-842e6c7b-b269-4a8c-bc84-5e4423e89b7e" alt="Boys Not Allowed" loading="lazy" onerror="this.remove()"></span>
+    <span class="sc-meta"><b>Boys Not Allowed</b><small>5 episodes · Camilla Azarian</small></span></a></article><article class="scard"><a href="../../shorts/my-sons-fiancee"><span class="sc-img"><img src="https://cdn.candy.ai/cdn-cgi/image/width=360,format=auto,quality=75/346-6af7fcd8-e819-4245-b044-a545ce6b7031" alt="My Son's Fiancée" loading="lazy" onerror="this.remove()"></span>
+    <span class="sc-meta"><b>My Son's Fiancée</b><small>5 episodes · Camilla Azarian</small></span></a></article><article class="scard"><a href="../../shorts/the-gods-gave-me-my-fathers-wife"><span class="sc-img"><img src="https://cdn.candy.ai/cdn-cgi/image/width=360,format=auto,quality=75/295-e028dc35-5fd8-4756-8f92-c204cda2f4fa" alt="The Gods Gave Me My Father's Wife" loading="lazy" onerror="this.remove()"></span>
+    <span class="sc-meta"><b>The Gods Gave Me My Father's Wife</b><small>5 episodes · Camilla Azarian</small></span></a></article><article class="scard"><a href="../../shorts/my-step-sisters-bachelorette-party"><span class="sc-img"><img src="https://cdn.candy.ai/cdn-cgi/image/width=360,format=auto,quality=75/298-8033a6e4-785a-4605-854e-060de21928c3" alt="My Step-Sister's Bachelorette Party!" loading="lazy" onerror="this.remove()"></span>
+    <span class="sc-meta"><b>My Step-Sister's Bachelorette Party!</b><small>5 episodes · Camilla Azarian</small></span></a></article></div>
+    <p><a href="../../shorts/">Toutes les séries Candy Shorts (en anglais) →</a></p></section>
 
   <div class="mgrid">
     <section class="info"><h2>En bref</h2>
@@ -778,7 +808,7 @@ table.data.avis-t td:first-child,table.data.avis-t th:first-child{overflow-wrap:
       <p class="fdesc">Réservé aux 18+ · Tous les personnages sont des adultes fictifs · Contient des liens affiliés</p></div>
     <div><h2 class="fh">Explorer</h2>
       <a href="../../fr/">Tous</a><a href="../../fr/women">Femmes</a><a href="../../fr/men">Hommes</a><a href="../../fr/anime">Anime</a><a href="../../fr/platforms">Top plateformes</a>
-      <a href="../../fr/tags">Catégories</a><a href="../../fr/#new">Nouveaux</a></div>
+      <a href="../../fr/tags">Catégories</a><a href="../../fr/#new">Nouveaux</a><a href="../../shorts/">Candy Shorts</a></div>
     <div><h2 class="fh">Le site</h2>
       <a href="../../fr/how-we-rate">Notre méthode</a><a href="../../fr/data">Données</a>
       <a href="../../fr/sitemap">Plan du site</a><a href="../../fr/contact">Contact</a></div>
@@ -789,7 +819,7 @@ table.data.avis-t td:first-child,table.data.avis-t th:first-child{overflow-wrap:
 </footer>
 
 <script>var PAGE_LANG="fr",ROOT="../../",LROOT="../../fr/";</script>
-<script defer src="../../assets/app-fr.js?v=0223bb35"></script>
+<script defer src="../../assets/app-fr.js?v=7b4723d9"></script>
 <script>document.addEventListener("DOMContentLoaded",function(){boot("model")});</script>
 <!--/email_off--></body>
 </html>
