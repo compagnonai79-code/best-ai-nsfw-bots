@@ -606,6 +606,26 @@ table.data.avis-t td:first-child,table.data.avis-t th:first-child{overflow-wrap:
 .avis-link{margin-top:10px}
 .avis-link a{color:var(--accent);font-weight:600}
 @media(max-width:640px){.avis-head h1{font-size:28px}.avis-sec h2{font-size:22px}.avis-pc{grid-template-columns:1fr}.avis-box{padding:18px}.avis-cta .btn{width:100%;text-align:center}}
+/* Candy Shorts: series cards (hub, series pages, model pages) and series page header */
+.sgrid{display:grid;grid-template-columns:repeat(auto-fill,minmax(160px,1fr));gap:14px;margin:14px 0}
+.scard{position:relative;border-radius:14px;overflow:hidden;background:var(--card);border:1px solid var(--line);aspect-ratio:5/7;transition:.18s}
+.scard:hover{transform:translateY(-3px);border-color:var(--accent)}
+.scard>a{position:absolute;inset:0;color:#fff;text-decoration:none}
+.scard .sc-img{position:absolute;inset:0;background:linear-gradient(135deg,#ff3d8b,#ff8a5c)}
+.scard img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.scard>a::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,transparent 50%,rgba(8,6,14,.95))}
+.scard .sc-meta{position:absolute;left:0;right:0;bottom:0;padding:11px;z-index:1;display:flex;flex-direction:column;gap:3px}
+.scard .sc-meta b{font:700 15px/1.25 "Space Grotesk",Inter,sans-serif;overflow-wrap:anywhere}
+.scard .sc-meta small{font-size:12px;color:#d0c9ea;line-height:1.3}
+.scard .new{position:absolute;top:8px;left:8px;z-index:2;background:var(--green);color:#04140d;font:700 10px Inter,sans-serif;padding:3px 8px;border-radius:999px}
+.sh-cats{margin:10px 0}
+.sh-cats button.tag{font:inherit;font-size:13px}
+.sh-top{display:grid;grid-template-columns:260px 1fr;gap:26px;align-items:start;margin-bottom:10px}
+.sh-poster{border-radius:16px;overflow:hidden;aspect-ratio:5/7;background:linear-gradient(135deg,#ff3d8b,#ff8a5c);border:1px solid var(--line)}
+.sh-poster img{width:100%;height:100%;object-fit:cover;display:block}
+.sh-src{font-size:13px;color:var(--muted)}
+.m-shorts .sgrid{grid-template-columns:repeat(auto-fill,minmax(140px,1fr))}
+@media (max-width:640px){.sh-top{grid-template-columns:1fr;gap:16px}.sh-poster{width:60%;max-width:260px;margin:0 auto}.sgrid{grid-template-columns:repeat(2,1fr);gap:10px}.m-shorts .sgrid{grid-template-columns:repeat(2,1fr)}}
 </style>
 
 </head>
@@ -652,6 +672,7 @@ table.data.avis-t td:first-child,table.data.avis-t th:first-child{overflow-wrap:
           <a href="../de/anime">Anime</a>
           <a href="../de/platforms">Top-Plattformen</a>
           <a href="../de/#new">Neu</a>
+          <a href="../shorts/">Candy Shorts</a>
           <a href="../de/how-we-rate">So bewerten wir</a>
         </div>
       </details>
@@ -662,7 +683,7 @@ table.data.avis-t td:first-child,table.data.avis-t th:first-child{overflow-wrap:
 <main class="wrap">
 
   <section class="hero"><h1>Die besten <span class="grad">KI-Companion</span>-Plattformen</h1><p>Wir testen und bewerten die besten KI-Chat- und Companion-Apps für Erwachsene. Vergleiche die Funktionen auf einen Blick und finde die passende.</p>
-    <p class="hero-links"><a href="how-we-rate">So bewerten wir →</a> · <a href="data">Daten →</a> · <a href="guide/ai-girlfriend-deals">Gutscheincodes und aktuelle Angebote →</a> · <a href="guide/candy-ai-vs-spicychat">Vergleich Candy AI vs SpicyChat →</a> · <a href="guide/girlfriendgpt-alternatives">Die besten GirlfriendGPT-Alternativen →</a></p></section>
+    <p class="hero-links"><a href="how-we-rate">So bewerten wir →</a> · <a href="data">Daten →</a> · <a href="../shorts/">Candy Shorts →</a> · <a href="guide/ai-girlfriend-deals">Gutscheincodes und aktuelle Angebote →</a> · <a href="guide/candy-ai-vs-spicychat">Vergleich Candy AI vs SpicyChat →</a> · <a href="guide/girlfriendgpt-alternatives">Die besten GirlfriendGPT-Alternativen →</a></p></section>
   <h2 class="section-title">🔥 Top-Empfehlungen des Monats</h2>
   <div class="picks"><div class="pick"><span class="rank">#1</span><div class="mono" style="background:linear-gradient(135deg,#ff5a36,#ffb03a)">S</div>
     <h3>SpicyChat AI</h3><div class="stars">★★★★☆<b>4.3</b></div>
@@ -737,6 +758,7 @@ table.data.avis-t td:first-child,table.data.avis-t th:first-child{overflow-wrap:
     <a class="btn btn-main" href="https://seduced.com/t/6ad79a3a3b31df9c339ed74b" target="_blank" rel="sponsored nofollow noopener">Zur Website →</a>
     <a class="pl-rev" href="../de/platform/seduced">Unseren Test lesen →</a>
   </article></div>
+  <section class="info" id="guides"><h2>Ratgeber und Vergleiche</h2><ul class="guide-list"><li><a href="guide/ai-girlfriend-deals">Gutscheincodes und beste Angebote der KI-Freundin-Apps</a></li><li><a href="guide/candy-ai-vs-spicychat">Candy AI oder SpicyChat: Welche App 2026?</a></li><li><a href="guide/girlfriendgpt-alternatives">Die besten GirlfriendGPT-Alternativen 2026</a></li></ul></section>
   <section class="info"><h2>So wählst du eine KI-Companion-App</h2><ul><li><strong>Charaktervielfalt:</strong> Manche Plattformen setzen auf wenige ausgefeilte Charaktere, andere bieten Tausende aus der Community.</li><li><strong>Medienfunktionen:</strong> Prüfe, ob du Bildgenerierung, Sprachnachrichten oder Anrufe möchtest.</li><li><strong>Gedächtnis:</strong> Ein besseres Langzeitgedächtnis sorgt für stimmigere Gespräche.</li><li><strong>Preise:</strong> Die meisten Apps sind Freemium — teste die Gratisversion, bevor du ein Abo abschließt.</li><li><strong>Datenschutz:</strong> Lies die Datenschutzerklärung und teile keine persönlichen Daten im Chat.</li></ul></section>
   <section class="info"><h2>FAQ</h2><details><summary>Sind diese Plattformen kostenlos?</summary><p>Die meisten bieten eine Gratisversion oder einen begrenzten Test. Bilder, Sprache oder unbegrenzte Nachrichten erfordern meist ein Abo oder Credits.</p></details><details><summary>Wie bewertet ihr die Plattformen?</summary><p>Gesprächsqualität, Funktionen, Bedienbarkeit, Preistransparenz und Datenschutz. Das Ranking wird regelmäßig aktualisiert.</p></details><details><summary>Verdient ihr Geld mit diesen Links?</summary><p>Ja. Einige Links sind Affiliate-Links: Wenn du dich registrierst oder ein Abo abschließt, erhalten wir eventuell eine Provision – ohne Mehrkosten für dich.</p></details></section>
   <section class="info" id="disclosure"><h2>Affiliate-Hinweis</h2><p>best-ai-nsfw-bots.com ist ein unabhängiges Verzeichnis. Einige Links sind Affiliate-Links: Wenn du darüber kaufst, erhalten wir eventuell eine Provision – ohne Mehrkosten für dich. Bewertungen geben unsere eigene Meinung wieder. Preise und Funktionen können sich ändern – prüfe immer die offizielle Website.</p></section>
@@ -750,7 +772,7 @@ table.data.avis-t td:first-child,table.data.avis-t th:first-child{overflow-wrap:
       <p class="fdesc">Nur ab 18 · Alle Charaktere sind fiktive Erwachsene · Enthält Affiliate-Links</p></div>
     <div><h2 class="fh">Entdecken</h2>
       <a href="../de/">Alle</a><a href="../de/women">Frauen</a><a href="../de/men">Männer</a><a href="../de/anime">Anime</a><a href="../de/platforms">Top-Plattformen</a>
-      <a href="../de/tags">Kategorien</a><a href="../de/#new">Neu</a></div>
+      <a href="../de/tags">Kategorien</a><a href="../de/#new">Neu</a><a href="../shorts/">Candy Shorts</a></div>
     <div><h2 class="fh">Die Website</h2>
       <a href="../de/how-we-rate">So bewerten wir</a><a href="../de/data">Daten</a>
       <a href="../de/sitemap">Sitemap</a><a href="../de/contact">Kontakt</a></div>
@@ -761,7 +783,7 @@ table.data.avis-t td:first-child,table.data.avis-t th:first-child{overflow-wrap:
 </footer>
 
 <script>var PAGE_LANG="de",ROOT="../",LROOT="../de/";</script>
-<script defer src="../assets/app-de.js?v=0223bb35"></script>
+<script defer src="../assets/app-de.js?v=7b4723d9"></script>
 <script>document.addEventListener("DOMContentLoaded",function(){boot("platforms")});</script>
 <!--/email_off--></body>
 </html>

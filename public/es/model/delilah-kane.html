@@ -605,6 +605,26 @@ table.data.avis-t td:first-child,table.data.avis-t th:first-child{overflow-wrap:
 .avis-link{margin-top:10px}
 .avis-link a{color:var(--accent);font-weight:600}
 @media(max-width:640px){.avis-head h1{font-size:28px}.avis-sec h2{font-size:22px}.avis-pc{grid-template-columns:1fr}.avis-box{padding:18px}.avis-cta .btn{width:100%;text-align:center}}
+/* Candy Shorts: series cards (hub, series pages, model pages) and series page header */
+.sgrid{display:grid;grid-template-columns:repeat(auto-fill,minmax(160px,1fr));gap:14px;margin:14px 0}
+.scard{position:relative;border-radius:14px;overflow:hidden;background:var(--card);border:1px solid var(--line);aspect-ratio:5/7;transition:.18s}
+.scard:hover{transform:translateY(-3px);border-color:var(--accent)}
+.scard>a{position:absolute;inset:0;color:#fff;text-decoration:none}
+.scard .sc-img{position:absolute;inset:0;background:linear-gradient(135deg,#ff3d8b,#ff8a5c)}
+.scard img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.scard>a::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,transparent 50%,rgba(8,6,14,.95))}
+.scard .sc-meta{position:absolute;left:0;right:0;bottom:0;padding:11px;z-index:1;display:flex;flex-direction:column;gap:3px}
+.scard .sc-meta b{font:700 15px/1.25 "Space Grotesk",Inter,sans-serif;overflow-wrap:anywhere}
+.scard .sc-meta small{font-size:12px;color:#d0c9ea;line-height:1.3}
+.scard .new{position:absolute;top:8px;left:8px;z-index:2;background:var(--green);color:#04140d;font:700 10px Inter,sans-serif;padding:3px 8px;border-radius:999px}
+.sh-cats{margin:10px 0}
+.sh-cats button.tag{font:inherit;font-size:13px}
+.sh-top{display:grid;grid-template-columns:260px 1fr;gap:26px;align-items:start;margin-bottom:10px}
+.sh-poster{border-radius:16px;overflow:hidden;aspect-ratio:5/7;background:linear-gradient(135deg,#ff3d8b,#ff8a5c);border:1px solid var(--line)}
+.sh-poster img{width:100%;height:100%;object-fit:cover;display:block}
+.sh-src{font-size:13px;color:var(--muted)}
+.m-shorts .sgrid{grid-template-columns:repeat(auto-fill,minmax(140px,1fr))}
+@media (max-width:640px){.sh-top{grid-template-columns:1fr;gap:16px}.sh-poster{width:60%;max-width:260px;margin:0 auto}.sgrid{grid-template-columns:repeat(2,1fr);gap:10px}.m-shorts .sgrid{grid-template-columns:repeat(2,1fr)}}
 </style>
 <link rel="preconnect" href="https://cdn.candy.ai">
 <link rel="preload" as="image" imagesrcset="https://cdn.candy.ai/cdn-cgi/image/width=400,format=auto,quality=75/700185451-d5530e72-3050-490b-80d8-77e4ffd4d95b-600x900-webp90 400w, https://cdn.candy.ai/cdn-cgi/image/width=600,format=auto,quality=75/700185451-d5530e72-3050-490b-80d8-77e4ffd4d95b-600x900-webp90 600w" imagesizes="(max-width: 640px) calc(100vw - 34px), 400px" fetchpriority="high">
@@ -652,6 +672,7 @@ table.data.avis-t td:first-child,table.data.avis-t th:first-child{overflow-wrap:
           <a href="../../es/anime">Anime</a>
           <a href="../../es/platforms">Mejores plataformas</a>
           <a href="../../es/#new">Nuevas</a>
+          <a href="../../shorts/">Candy Shorts</a>
           <a href="../../es/how-we-rate">Cómo puntuamos</a>
         </div>
       </details>
@@ -673,6 +694,16 @@ table.data.avis-t td:first-child,table.data.avis-t th:first-child{overflow-wrap:
       <div class="note">Personaje de IA ficticio · 18+ · Enlace de afiliado</div>
     </div>
   </section>
+<section class="info m-shorts"><h2>Delilah Kane en Candy Shorts</h2>
+    <div class="sgrid"><article class="scard"><a href="../../shorts/our-cabana-was-double-booked"><span class="sc-img"><img src="https://cdn.candy.ai/cdn-cgi/image/width=360,format=auto,quality=75/59dd0287-09d6-4859-824d-77eb089e5237" alt="Our Cabana Was Double Booked" loading="lazy" onerror="this.remove()"></span>
+    <span class="new">New episodes</span><span class="sc-meta"><b>Our Cabana Was Double Booked</b><small>5 episodes · Delilah, Jolie, Yara</small></span></a></article><article class="scard"><a href="../../shorts/truth-or-dare-with-my-stepsister"><span class="sc-img"><img src="https://cdn.candy.ai/cdn-cgi/image/width=360,format=auto,quality=75/357-16a2d72a-a90e-41bc-8034-85e77f816d46" alt="Truth or Dare With My Stepsister" loading="lazy" onerror="this.remove()"></span>
+    <span class="sc-meta"><b>Truth or Dare With My Stepsister</b><small>5 episodes · Delilah Kane</small></span></a></article><article class="scard"><a href="../../shorts/i-couldnt-say-no-to-my-stepsister"><span class="sc-img"><img src="https://cdn.candy.ai/cdn-cgi/image/width=360,format=auto,quality=75/2fc18164-2ccc-476c-83e1-607c5369ad8d" alt="I Couldn't Say No To My Stepsister" loading="lazy" onerror="this.remove()"></span>
+    <span class="sc-meta"><b>I Couldn't Say No To My Stepsister</b><small>5 episodes · Delilah Kane</small></span></a></article><article class="scard"><a href="../../shorts/my-fiancees-sister-was-my-wedding-present"><span class="sc-img"><img src="https://cdn.candy.ai/cdn-cgi/image/width=360,format=auto,quality=75/c64e1072-3df1-4df6-9353-f5b50d4dadae" alt="My Fiancée's Sister Was My Wedding Present" loading="lazy" onerror="this.remove()"></span>
+    <span class="sc-meta"><b>My Fiancée's Sister Was My Wedding Present</b><small>5 episodes · Lana, Delilah, Kara, Lea</small></span></a></article><article class="scard"><a href="../../shorts/lena-the-plug-stole-my-boyfriend"><span class="sc-img"><img src="https://cdn.candy.ai/cdn-cgi/image/width=360,format=auto,quality=75/cf19d6e6-e612-42f8-9dfe-5ca12af466de" alt="Lena The Plug Stole My Boyfriend" loading="lazy" onerror="this.remove()"></span>
+    <span class="sc-meta"><b>Lena The Plug Stole My Boyfriend</b><small>5 episodes · Lena, Delilah</small></span></a></article><article class="scard"><a href="../../shorts/lana-rhoades-loves-her-stepdaddy"><span class="sc-img"><img src="https://cdn.candy.ai/cdn-cgi/image/width=360,format=auto,quality=75/434-03615f7b-64ba-46f7-9bb0-1897c2cd4337" alt="Lana Rhoades Loves Her Stepdaddy" loading="lazy" onerror="this.remove()"></span>
+    <span class="sc-meta"><b>Lana Rhoades Loves Her Stepdaddy</b><small>15 episodes · Lana, Delilah</small></span></a></article><article class="scard"><a href="../../shorts/she-was-sent-to-kill-me"><span class="sc-img"><img src="https://cdn.candy.ai/cdn-cgi/image/width=360,format=auto,quality=75/85b9174d-5852-478b-8834-c5ba23234fbd" alt="She Was Sent to Kill Me" loading="lazy" onerror="this.remove()"></span>
+    <span class="sc-meta"><b>She Was Sent to Kill Me</b><small>5 episodes · Delilah Kane</small></span></a></article></div>
+    <p><a href="../../shorts/">Todas las series de Candy Shorts (en inglés) →</a></p></section>
 
   <div class="mgrid">
     <section class="info"><h2>En resumen</h2>
@@ -778,7 +809,7 @@ table.data.avis-t td:first-child,table.data.avis-t th:first-child{overflow-wrap:
       <p class="fdesc">Solo 18+ · Todos los personajes son adultos ficticios · Contiene enlaces de afiliado</p></div>
     <div><h2 class="fh">Explorar</h2>
       <a href="../../es/">Todos</a><a href="../../es/women">Mujeres</a><a href="../../es/men">Hombres</a><a href="../../es/anime">Anime</a><a href="../../es/platforms">Mejores plataformas</a>
-      <a href="../../es/tags">Categorías</a><a href="../../es/#new">Nuevas</a></div>
+      <a href="../../es/tags">Categorías</a><a href="../../es/#new">Nuevas</a><a href="../../shorts/">Candy Shorts</a></div>
     <div><h2 class="fh">El sitio</h2>
       <a href="../../es/how-we-rate">Cómo puntuamos</a><a href="../../es/data">Datos</a>
       <a href="../../es/sitemap">Mapa del sitio</a><a href="../../es/contact">Contacto</a></div>
@@ -789,7 +820,7 @@ table.data.avis-t td:first-child,table.data.avis-t th:first-child{overflow-wrap:
 </footer>
 
 <script>var PAGE_LANG="es",ROOT="../../",LROOT="../../es/";</script>
-<script defer src="../../assets/app-es.js?v=0223bb35"></script>
+<script defer src="../../assets/app-es.js?v=7b4723d9"></script>
 <script>document.addEventListener("DOMContentLoaded",function(){boot("model")});</script>
 <!--/email_off--></body>
 </html>

@@ -605,6 +605,26 @@ table.data.avis-t td:first-child,table.data.avis-t th:first-child{overflow-wrap:
 .avis-link{margin-top:10px}
 .avis-link a{color:var(--accent);font-weight:600}
 @media(max-width:640px){.avis-head h1{font-size:28px}.avis-sec h2{font-size:22px}.avis-pc{grid-template-columns:1fr}.avis-box{padding:18px}.avis-cta .btn{width:100%;text-align:center}}
+/* Candy Shorts: series cards (hub, series pages, model pages) and series page header */
+.sgrid{display:grid;grid-template-columns:repeat(auto-fill,minmax(160px,1fr));gap:14px;margin:14px 0}
+.scard{position:relative;border-radius:14px;overflow:hidden;background:var(--card);border:1px solid var(--line);aspect-ratio:5/7;transition:.18s}
+.scard:hover{transform:translateY(-3px);border-color:var(--accent)}
+.scard>a{position:absolute;inset:0;color:#fff;text-decoration:none}
+.scard .sc-img{position:absolute;inset:0;background:linear-gradient(135deg,#ff3d8b,#ff8a5c)}
+.scard img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.scard>a::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,transparent 50%,rgba(8,6,14,.95))}
+.scard .sc-meta{position:absolute;left:0;right:0;bottom:0;padding:11px;z-index:1;display:flex;flex-direction:column;gap:3px}
+.scard .sc-meta b{font:700 15px/1.25 "Space Grotesk",Inter,sans-serif;overflow-wrap:anywhere}
+.scard .sc-meta small{font-size:12px;color:#d0c9ea;line-height:1.3}
+.scard .new{position:absolute;top:8px;left:8px;z-index:2;background:var(--green);color:#04140d;font:700 10px Inter,sans-serif;padding:3px 8px;border-radius:999px}
+.sh-cats{margin:10px 0}
+.sh-cats button.tag{font:inherit;font-size:13px}
+.sh-top{display:grid;grid-template-columns:260px 1fr;gap:26px;align-items:start;margin-bottom:10px}
+.sh-poster{border-radius:16px;overflow:hidden;aspect-ratio:5/7;background:linear-gradient(135deg,#ff3d8b,#ff8a5c);border:1px solid var(--line)}
+.sh-poster img{width:100%;height:100%;object-fit:cover;display:block}
+.sh-src{font-size:13px;color:var(--muted)}
+.m-shorts .sgrid{grid-template-columns:repeat(auto-fill,minmax(140px,1fr))}
+@media (max-width:640px){.sh-top{grid-template-columns:1fr;gap:16px}.sh-poster{width:60%;max-width:260px;margin:0 auto}.sgrid{grid-template-columns:repeat(2,1fr);gap:10px}.m-shorts .sgrid{grid-template-columns:repeat(2,1fr)}}
 </style>
 <link rel="preconnect" href="https://cdn.candy.ai">
 <link rel="preload" as="image" imagesrcset="https://cdn.candy.ai/cdn-cgi/image/width=400,format=auto,quality=75/sfw-profile-273386494-d7b6bed1-97e3-4963-a916-25bbf6caacb2-600x900-webp90 400w, https://cdn.candy.ai/cdn-cgi/image/width=600,format=auto,quality=75/sfw-profile-273386494-d7b6bed1-97e3-4963-a916-25bbf6caacb2-600x900-webp90 600w" imagesizes="(max-width: 640px) calc(100vw - 34px), 400px" fetchpriority="high">
@@ -652,6 +672,7 @@ table.data.avis-t td:first-child,table.data.avis-t th:first-child{overflow-wrap:
           <a href="../../es/anime">Anime</a>
           <a href="../../es/platforms">Mejores plataformas</a>
           <a href="../../es/#new">Nuevas</a>
+          <a href="../../shorts/">Candy Shorts</a>
           <a href="../../es/how-we-rate">Cómo puntuamos</a>
         </div>
       </details>
@@ -673,6 +694,19 @@ table.data.avis-t td:first-child,table.data.avis-t th:first-child{overflow-wrap:
       <div class="note">Personaje de IA ficticio · 18+ · Enlace de afiliado</div>
     </div>
   </section>
+<section class="info m-shorts"><h2>Mona Newman en Candy Shorts</h2>
+    <div class="sgrid"><article class="scard"><a href="../../shorts/my-step-sisters-dormitory"><span class="sc-img"><img src="https://cdn.candy.ai/cdn-cgi/image/width=360,format=auto,quality=75/288fc591-da10-400e-bff7-0cc873cd6f08" alt="My Step-Sister's Dormitory" loading="lazy" onerror="this.remove()"></span>
+    <span class="sc-meta"><b>My Step-Sister's Dormitory</b><small>5 episodes · Riley, Holly, Mila, Mona</small></span></a></article><article class="scard"><a href="../../shorts/mona-my-wild-stepsister"><span class="sc-img"><img src="https://cdn.candy.ai/cdn-cgi/image/width=360,format=auto,quality=75/247-e05c53a3-78e5-4c22-89a1-a32ad67a7f6f" alt="Mona: My Wild Stepsister" loading="lazy" onerror="this.remove()"></span>
+    <span class="sc-meta"><b>Mona: My Wild Stepsister</b><small>5 episodes · Mona Newman</small></span></a></article><article class="scard"><a href="../../shorts/camp-rules"><span class="sc-img"><img src="https://cdn.candy.ai/cdn-cgi/image/width=360,format=auto,quality=75/fa4eabb3-4991-4319-8cbc-e231d5717031" alt="Camp Rules" loading="lazy" onerror="this.remove()"></span>
+    <span class="sc-meta"><b>Camp Rules</b><small>5 episodes · Mona, Diana</small></span></a></article><article class="scard"><a href="../../shorts/under-my-step-sisters-hood"><span class="sc-img"><img src="https://cdn.candy.ai/cdn-cgi/image/width=360,format=auto,quality=75/7e9da7ab-e78e-4df8-8600-4c4d8ea811de" alt="Under My Step-Sister's Hood" loading="lazy" onerror="this.remove()"></span>
+    <span class="sc-meta"><b>Under My Step-Sister's Hood</b><small>5 episodes · Mona Newman</small></span></a></article><article class="scard"><a href="../../shorts/every-wife-on-candy-lane"><span class="sc-img"><img src="https://cdn.candy.ai/cdn-cgi/image/width=360,format=auto,quality=75/70cab4df-2310-477c-a6b1-5038b1eb4791" alt="Every Wife on Candy Lane" loading="lazy" onerror="this.remove()"></span>
+    <span class="sc-meta"><b>Every Wife on Candy Lane</b><small>5 episodes · Harriet, Holly, Kenzie, Mona, Regina, Renata</small></span></a></article><article class="scard"><a href="../../shorts/monas-obsession"><span class="sc-img"><img src="https://cdn.candy.ai/cdn-cgi/image/width=360,format=auto,quality=75/edc34282-bbc3-4048-b079-3340d86fc41c" alt="Mona's Obsession" loading="lazy" onerror="this.remove()"></span>
+    <span class="sc-meta"><b>Mona's Obsession</b><small>5 episodes · Mona Newman</small></span></a></article><article class="scard"><a href="../../shorts/my-stepsister-thinks-im-pathetic"><span class="sc-img"><img src="https://cdn.candy.ai/cdn-cgi/image/width=360,format=auto,quality=75/844b3736-c58d-4d95-b128-d60f157c35eb" alt="My Stepsister Thinks I’m Pathetic" loading="lazy" onerror="this.remove()"></span>
+    <span class="sc-meta"><b>My Stepsister Thinks I’m Pathetic</b><small>5 episodes · Mona Newman</small></span></a></article><article class="scard"><a href="../../shorts/british-summer-with-my-stepbro"><span class="sc-img"><img src="https://cdn.candy.ai/cdn-cgi/image/width=360,format=auto,quality=75/fc442957-a232-44e4-9a32-575a86468ca4" alt="British Summer with my Stepbro" loading="lazy" onerror="this.remove()"></span>
+    <span class="sc-meta"><b>British Summer with my Stepbro</b><small>5 episodes · Mona Newman</small></span></a></article><article class="scard"><a href="../../shorts/my-roommates-are-thirsty"><span class="sc-img"><img src="https://cdn.candy.ai/cdn-cgi/image/width=360,format=auto,quality=75/da508932-dab0-49be-abe5-88b337bcd0c0" alt="My Roommates are Thirsty!" loading="lazy" onerror="this.remove()"></span>
+    <span class="sc-meta"><b>My Roommates are Thirsty!</b><small>5 episodes · Mona, Darkangel666</small></span></a></article><article class="scard"><a href="../../shorts/monas-worst-enemy"><span class="sc-img"><img src="https://cdn.candy.ai/cdn-cgi/image/width=360,format=auto,quality=75/bd0c4a54-88fc-4832-8cce-eb0a7add544b" alt="Mona's Worst Enemy" loading="lazy" onerror="this.remove()"></span>
+    <span class="sc-meta"><b>Mona's Worst Enemy</b><small>15 episodes · Mona Newman</small></span></a></article></div>
+    <p><a href="../../shorts/">Todas las series de Candy Shorts (en inglés) →</a></p></section>
 
   <div class="mgrid">
     <section class="info"><h2>En resumen</h2>
@@ -778,7 +812,7 @@ table.data.avis-t td:first-child,table.data.avis-t th:first-child{overflow-wrap:
       <p class="fdesc">Solo 18+ · Todos los personajes son adultos ficticios · Contiene enlaces de afiliado</p></div>
     <div><h2 class="fh">Explorar</h2>
       <a href="../../es/">Todos</a><a href="../../es/women">Mujeres</a><a href="../../es/men">Hombres</a><a href="../../es/anime">Anime</a><a href="../../es/platforms">Mejores plataformas</a>
-      <a href="../../es/tags">Categorías</a><a href="../../es/#new">Nuevas</a></div>
+      <a href="../../es/tags">Categorías</a><a href="../../es/#new">Nuevas</a><a href="../../shorts/">Candy Shorts</a></div>
     <div><h2 class="fh">El sitio</h2>
       <a href="../../es/how-we-rate">Cómo puntuamos</a><a href="../../es/data">Datos</a>
       <a href="../../es/sitemap">Mapa del sitio</a><a href="../../es/contact">Contacto</a></div>
@@ -789,7 +823,7 @@ table.data.avis-t td:first-child,table.data.avis-t th:first-child{overflow-wrap:
 </footer>
 
 <script>var PAGE_LANG="es",ROOT="../../",LROOT="../../es/";</script>
-<script defer src="../../assets/app-es.js?v=0223bb35"></script>
+<script defer src="../../assets/app-es.js?v=7b4723d9"></script>
 <script>document.addEventListener("DOMContentLoaded",function(){boot("model")});</script>
 <!--/email_off--></body>
 </html>

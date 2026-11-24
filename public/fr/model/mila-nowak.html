@@ -605,6 +605,26 @@ table.data.avis-t td:first-child,table.data.avis-t th:first-child{overflow-wrap:
 .avis-link{margin-top:10px}
 .avis-link a{color:var(--accent);font-weight:600}
 @media(max-width:640px){.avis-head h1{font-size:28px}.avis-sec h2{font-size:22px}.avis-pc{grid-template-columns:1fr}.avis-box{padding:18px}.avis-cta .btn{width:100%;text-align:center}}
+/* Candy Shorts: series cards (hub, series pages, model pages) and series page header */
+.sgrid{display:grid;grid-template-columns:repeat(auto-fill,minmax(160px,1fr));gap:14px;margin:14px 0}
+.scard{position:relative;border-radius:14px;overflow:hidden;background:var(--card);border:1px solid var(--line);aspect-ratio:5/7;transition:.18s}
+.scard:hover{transform:translateY(-3px);border-color:var(--accent)}
+.scard>a{position:absolute;inset:0;color:#fff;text-decoration:none}
+.scard .sc-img{position:absolute;inset:0;background:linear-gradient(135deg,#ff3d8b,#ff8a5c)}
+.scard img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.scard>a::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,transparent 50%,rgba(8,6,14,.95))}
+.scard .sc-meta{position:absolute;left:0;right:0;bottom:0;padding:11px;z-index:1;display:flex;flex-direction:column;gap:3px}
+.scard .sc-meta b{font:700 15px/1.25 "Space Grotesk",Inter,sans-serif;overflow-wrap:anywhere}
+.scard .sc-meta small{font-size:12px;color:#d0c9ea;line-height:1.3}
+.scard .new{position:absolute;top:8px;left:8px;z-index:2;background:var(--green);color:#04140d;font:700 10px Inter,sans-serif;padding:3px 8px;border-radius:999px}
+.sh-cats{margin:10px 0}
+.sh-cats button.tag{font:inherit;font-size:13px}
+.sh-top{display:grid;grid-template-columns:260px 1fr;gap:26px;align-items:start;margin-bottom:10px}
+.sh-poster{border-radius:16px;overflow:hidden;aspect-ratio:5/7;background:linear-gradient(135deg,#ff3d8b,#ff8a5c);border:1px solid var(--line)}
+.sh-poster img{width:100%;height:100%;object-fit:cover;display:block}
+.sh-src{font-size:13px;color:var(--muted)}
+.m-shorts .sgrid{grid-template-columns:repeat(auto-fill,minmax(140px,1fr))}
+@media (max-width:640px){.sh-top{grid-template-columns:1fr;gap:16px}.sh-poster{width:60%;max-width:260px;margin:0 auto}.sgrid{grid-template-columns:repeat(2,1fr);gap:10px}.m-shorts .sgrid{grid-template-columns:repeat(2,1fr)}}
 </style>
 <link rel="preconnect" href="https://cdn.candy.ai">
 <link rel="preload" as="image" imagesrcset="https://cdn.candy.ai/cdn-cgi/image/width=400,format=auto,quality=75/sfw-profile-276307461-cc582a3c-de24-4592-8cb0-f1e27d708a1e-600x900-webp90 400w, https://cdn.candy.ai/cdn-cgi/image/width=600,format=auto,quality=75/sfw-profile-276307461-cc582a3c-de24-4592-8cb0-f1e27d708a1e-600x900-webp90 600w" imagesizes="(max-width: 640px) calc(100vw - 34px), 400px" fetchpriority="high">
@@ -652,6 +672,7 @@ table.data.avis-t td:first-child,table.data.avis-t th:first-child{overflow-wrap:
           <a href="../../fr/anime">Anime</a>
           <a href="../../fr/platforms">Top plateformes</a>
           <a href="../../fr/#new">Nouveaux</a>
+          <a href="../../shorts/">Candy Shorts</a>
           <a href="../../fr/how-we-rate">Notre méthode</a>
         </div>
       </details>
@@ -673,6 +694,19 @@ table.data.avis-t td:first-child,table.data.avis-t th:first-child{overflow-wrap:
       <div class="note">Personnage IA fictif · 18+ · Lien affilié</div>
     </div>
   </section>
+<section class="info m-shorts"><h2>Mila Nowak dans les Candy Shorts</h2>
+    <div class="sgrid"><article class="scard"><a href="../../shorts/her-sisters-have-a-surprise"><span class="sc-img"><img src="https://cdn.candy.ai/cdn-cgi/image/width=360,format=auto,quality=75/3498851c-df75-441b-a2f1-a556dd422f26" alt="Her Sisters Have a Surprise" loading="lazy" onerror="this.remove()"></span>
+    <span class="new">New episodes</span><span class="sc-meta"><b>Her Sisters Have a Surprise</b><small>5 episodes · Alma, Mila</small></span></a></article><article class="scard"><a href="../../shorts/my-stepsisters-slumber-party"><span class="sc-img"><img src="https://cdn.candy.ai/cdn-cgi/image/width=360,format=auto,quality=75/0d87f376-99c6-476b-8da6-dc45848dc419" alt="My Stepsister's Slumber Party" loading="lazy" onerror="this.remove()"></span>
+    <span class="sc-meta"><b>My Stepsister's Slumber Party</b><small>5 episodes · Alma, Carrie, Dahye, Kayla, Mila</small></span></a></article><article class="scard"><a href="../../shorts/my-step-sisters-dormitory"><span class="sc-img"><img src="https://cdn.candy.ai/cdn-cgi/image/width=360,format=auto,quality=75/288fc591-da10-400e-bff7-0cc873cd6f08" alt="My Step-Sister's Dormitory" loading="lazy" onerror="this.remove()"></span>
+    <span class="sc-meta"><b>My Step-Sister's Dormitory</b><small>5 episodes · Riley, Holly, Mila, Mona</small></span></a></article><article class="scard"><a href="../../shorts/i-couldnt-say-no-to-our-babysitter"><span class="sc-img"><img src="https://cdn.candy.ai/cdn-cgi/image/width=360,format=auto,quality=75/6ad25327-527e-438d-827f-fe7b827b1aac" alt="I Couldn't Say No to Our Babysitter" loading="lazy" onerror="this.remove()"></span>
+    <span class="sc-meta"><b>I Couldn't Say No to Our Babysitter</b><small>5 episodes · Mila Nowak</small></span></a></article><article class="scard"><a href="../../shorts/the-maid-of-honor"><span class="sc-img"><img src="https://cdn.candy.ai/cdn-cgi/image/width=360,format=auto,quality=75/462809f3-fe44-4c00-905a-76ea6a9362a4" alt="The Maid of Honor" loading="lazy" onerror="this.remove()"></span>
+    <span class="sc-meta"><b>The Maid of Honor</b><small>5 episodes · Mila Nowak</small></span></a></article><article class="scard"><a href="../../shorts/my-wife-hired-my-nurse"><span class="sc-img"><img src="https://cdn.candy.ai/cdn-cgi/image/width=360,format=auto,quality=75/2d3391fc-eae5-4ef3-9602-0468e51ce21a" alt="My Wife Hired My Nurse" loading="lazy" onerror="this.remove()"></span>
+    <span class="sc-meta"><b>My Wife Hired My Nurse</b><small>5 episodes · Mila Nowak</small></span></a></article><article class="scard"><a href="../../shorts/under-the-captain"><span class="sc-img"><img src="https://cdn.candy.ai/cdn-cgi/image/width=360,format=auto,quality=75/51af96bb-d7aa-4fec-bec1-e6770eced1c1" alt="Under The Captain" loading="lazy" onerror="this.remove()"></span>
+    <span class="sc-meta"><b>Under The Captain</b><small>5 episodes · Mila, Vera</small></span></a></article><article class="scard"><a href="../../shorts/shes-not-real"><span class="sc-img"><img src="https://cdn.candy.ai/cdn-cgi/image/width=360,format=auto,quality=75/6e3d58f2-2b91-4497-bce1-bd053b3f624f" alt="She's not real" loading="lazy" onerror="this.remove()"></span>
+    <span class="sc-meta"><b>She's not real</b><small>5 episodes · Mila Nowak</small></span></a></article><article class="scard"><a href="../../shorts/your-girlfriends-younger-sister"><span class="sc-img"><img src="https://cdn.candy.ai/cdn-cgi/image/width=360,format=auto,quality=75/f92663ca-61b1-40ec-afca-eedf884e1f4f" alt="Your girlfriend's younger sister" loading="lazy" onerror="this.remove()"></span>
+    <span class="sc-meta"><b>Your girlfriend's younger sister</b><small>10 episodes · Mila Nowak</small></span></a></article><article class="scard"><a href="../../shorts/your-wish-is-my-command"><span class="sc-img"><img src="https://cdn.candy.ai/cdn-cgi/image/width=360,format=auto,quality=75/222f5428-e77b-4831-aa66-435c8781dea1" alt="Your Wish is my Command" loading="lazy" onerror="this.remove()"></span>
+    <span class="sc-meta"><b>Your Wish is my Command</b><small>5 episodes · Mila Nowak</small></span></a></article></div>
+    <p><a href="../../shorts/">Toutes les séries Candy Shorts (en anglais) →</a></p></section>
 
   <div class="mgrid">
     <section class="info"><h2>En bref</h2>
@@ -778,7 +812,7 @@ table.data.avis-t td:first-child,table.data.avis-t th:first-child{overflow-wrap:
       <p class="fdesc">Réservé aux 18+ · Tous les personnages sont des adultes fictifs · Contient des liens affiliés</p></div>
     <div><h2 class="fh">Explorer</h2>
       <a href="../../fr/">Tous</a><a href="../../fr/women">Femmes</a><a href="../../fr/men">Hommes</a><a href="../../fr/anime">Anime</a><a href="../../fr/platforms">Top plateformes</a>
-      <a href="../../fr/tags">Catégories</a><a href="../../fr/#new">Nouveaux</a></div>
+      <a href="../../fr/tags">Catégories</a><a href="../../fr/#new">Nouveaux</a><a href="../../shorts/">Candy Shorts</a></div>
     <div><h2 class="fh">Le site</h2>
       <a href="../../fr/how-we-rate">Notre méthode</a><a href="../../fr/data">Données</a>
       <a href="../../fr/sitemap">Plan du site</a><a href="../../fr/contact">Contact</a></div>
@@ -789,7 +823,7 @@ table.data.avis-t td:first-child,table.data.avis-t th:first-child{overflow-wrap:
 </footer>
 
 <script>var PAGE_LANG="fr",ROOT="../../",LROOT="../../fr/";</script>
-<script defer src="../../assets/app-fr.js?v=0223bb35"></script>
+<script defer src="../../assets/app-fr.js?v=7b4723d9"></script>
 <script>document.addEventListener("DOMContentLoaded",function(){boot("model")});</script>
 <!--/email_off--></body>
 </html>

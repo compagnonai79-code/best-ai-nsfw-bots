@@ -605,6 +605,26 @@ table.data.avis-t td:first-child,table.data.avis-t th:first-child{overflow-wrap:
 .avis-link{margin-top:10px}
 .avis-link a{color:var(--accent);font-weight:600}
 @media(max-width:640px){.avis-head h1{font-size:28px}.avis-sec h2{font-size:22px}.avis-pc{grid-template-columns:1fr}.avis-box{padding:18px}.avis-cta .btn{width:100%;text-align:center}}
+/* Candy Shorts: series cards (hub, series pages, model pages) and series page header */
+.sgrid{display:grid;grid-template-columns:repeat(auto-fill,minmax(160px,1fr));gap:14px;margin:14px 0}
+.scard{position:relative;border-radius:14px;overflow:hidden;background:var(--card);border:1px solid var(--line);aspect-ratio:5/7;transition:.18s}
+.scard:hover{transform:translateY(-3px);border-color:var(--accent)}
+.scard>a{position:absolute;inset:0;color:#fff;text-decoration:none}
+.scard .sc-img{position:absolute;inset:0;background:linear-gradient(135deg,#ff3d8b,#ff8a5c)}
+.scard img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.scard>a::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,transparent 50%,rgba(8,6,14,.95))}
+.scard .sc-meta{position:absolute;left:0;right:0;bottom:0;padding:11px;z-index:1;display:flex;flex-direction:column;gap:3px}
+.scard .sc-meta b{font:700 15px/1.25 "Space Grotesk",Inter,sans-serif;overflow-wrap:anywhere}
+.scard .sc-meta small{font-size:12px;color:#d0c9ea;line-height:1.3}
+.scard .new{position:absolute;top:8px;left:8px;z-index:2;background:var(--green);color:#04140d;font:700 10px Inter,sans-serif;padding:3px 8px;border-radius:999px}
+.sh-cats{margin:10px 0}
+.sh-cats button.tag{font:inherit;font-size:13px}
+.sh-top{display:grid;grid-template-columns:260px 1fr;gap:26px;align-items:start;margin-bottom:10px}
+.sh-poster{border-radius:16px;overflow:hidden;aspect-ratio:5/7;background:linear-gradient(135deg,#ff3d8b,#ff8a5c);border:1px solid var(--line)}
+.sh-poster img{width:100%;height:100%;object-fit:cover;display:block}
+.sh-src{font-size:13px;color:var(--muted)}
+.m-shorts .sgrid{grid-template-columns:repeat(auto-fill,minmax(140px,1fr))}
+@media (max-width:640px){.sh-top{grid-template-columns:1fr;gap:16px}.sh-poster{width:60%;max-width:260px;margin:0 auto}.sgrid{grid-template-columns:repeat(2,1fr);gap:10px}.m-shorts .sgrid{grid-template-columns:repeat(2,1fr)}}
 </style>
 <link rel="preconnect" href="https://cdn.candy.ai">
 <link rel="preload" as="image" imagesrcset="https://cdn.candy.ai/cdn-cgi/image/width=400,format=auto,quality=75/sfw-profile-720491248-0aab714c-e82c-417d-bd19-ed178ee6aadf-600x900-webp90 400w, https://cdn.candy.ai/cdn-cgi/image/width=600,format=auto,quality=75/sfw-profile-720491248-0aab714c-e82c-417d-bd19-ed178ee6aadf-600x900-webp90 600w" imagesizes="(max-width: 640px) calc(100vw - 34px), 400px" fetchpriority="high">
@@ -652,6 +672,7 @@ table.data.avis-t td:first-child,table.data.avis-t th:first-child{overflow-wrap:
           <a href="../../fr/anime">Anime</a>
           <a href="../../fr/platforms">Top plateformes</a>
           <a href="../../fr/#new">Nouveaux</a>
+          <a href="../../shorts/">Candy Shorts</a>
           <a href="../../fr/how-we-rate">Notre méthode</a>
         </div>
       </details>
@@ -673,6 +694,17 @@ table.data.avis-t td:first-child,table.data.avis-t th:first-child{overflow-wrap:
       <div class="note">Personnage IA fictif · 18+ · Lien affilié</div>
     </div>
   </section>
+<section class="info m-shorts"><h2>Sadie Ashworth dans les Candy Shorts</h2>
+    <div class="sgrid"><article class="scard"><a href="../../shorts/my-blind-date-was-my-best-friends-mom"><span class="sc-img"><img src="https://cdn.candy.ai/cdn-cgi/image/width=360,format=auto,quality=75/acc2c2b2-c9cb-420c-9234-2fef3cfc35cd" alt="My Blind Date Was My Best Friend’s Mom" loading="lazy" onerror="this.remove()"></span>
+    <span class="new">New episodes</span><span class="sc-meta"><b>My Blind Date Was My Best Friend’s Mom</b><small>5 episodes · Carrie, Sadie</small></span></a></article><article class="scard"><a href="../../shorts/lodge-69-was-double-booked"><span class="sc-img"><img src="https://cdn.candy.ai/cdn-cgi/image/width=360,format=auto,quality=75/0c407102-ebf7-4567-bcfe-e26fc78f74b4" alt="Lodge 69 Was Double Booked" loading="lazy" onerror="this.remove()"></span>
+    <span class="sc-meta"><b>Lodge 69 Was Double Booked</b><small>5 episodes · Antonella, Sadie</small></span></a></article><article class="scard"><a href="../../shorts/my-girlfriend-paid-for-my-massage"><span class="sc-img"><img src="https://cdn.candy.ai/cdn-cgi/image/width=360,format=auto,quality=75/63bc5930-569e-4bc6-af74-c31c14f80b5e" alt="My Girlfriend Paid for My Massage" loading="lazy" onerror="this.remove()"></span>
+    <span class="sc-meta"><b>My Girlfriend Paid for My Massage</b><small>5 episodes · Sofia, Camilla, Sadie</small></span></a></article><article class="scard"><a href="../../shorts/my-stepsister-still-calls-me-loser"><span class="sc-img"><img src="https://cdn.candy.ai/cdn-cgi/image/width=360,format=auto,quality=75/c55f95ae-918f-4c09-b922-f4ff057be3da" alt="My Stepsister Still Calls Me Loser" loading="lazy" onerror="this.remove()"></span>
+    <span class="sc-meta"><b>My Stepsister Still Calls Me Loser</b><small>5 episodes · Sadie Ashworth</small></span></a></article><article class="scard"><a href="../../shorts/my-roommates-girlfriend"><span class="sc-img"><img src="https://cdn.candy.ai/cdn-cgi/image/width=360,format=auto,quality=75/4470638a-bea6-4938-aa18-5fd8503c4e9c" alt="My Roommate's Girlfriend" loading="lazy" onerror="this.remove()"></span>
+    <span class="sc-meta"><b>My Roommate's Girlfriend</b><small>5 episodes · Sadie Ashworth</small></span></a></article><article class="scard"><a href="../../shorts/always-open-my-girlfriends-stepsister-caught-me-looking"><span class="sc-img"><img src="https://cdn.candy.ai/cdn-cgi/image/width=360,format=auto,quality=75/87f45701-9521-4051-8252-591b139d00c9" alt="Always Open: My Girlfriend's Stepsister Caught Me Looking" loading="lazy" onerror="this.remove()"></span>
+    <span class="sc-meta"><b>Always Open: My Girlfriend's Stepsister Caught Me Looking</b><small>5 episodes · Sadie, Aubrey</small></span></a></article><article class="scard"><a href="../../shorts/sadies-stepmom"><span class="sc-img"><img src="https://cdn.candy.ai/cdn-cgi/image/width=360,format=auto,quality=75/4150a07c-6d31-4901-bf21-a8a9d463385e" alt="Sadie's StepMom" loading="lazy" onerror="this.remove()"></span>
+    <span class="sc-meta"><b>Sadie's StepMom</b><small>5 episodes · Diana, Sadie</small></span></a></article><article class="scard"><a href="../../shorts/kissing-my-exs-mom"><span class="sc-img"><img src="https://cdn.candy.ai/cdn-cgi/image/width=360,format=auto,quality=75/63752b36-da89-4a48-9e75-d32d6b4cba27" alt="Kissing My Ex’s Mom" loading="lazy" onerror="this.remove()"></span>
+    <span class="sc-meta"><b>Kissing My Ex’s Mom</b><small>5 episodes · Carrie, Sadie</small></span></a></article></div>
+    <p><a href="../../shorts/">Toutes les séries Candy Shorts (en anglais) →</a></p></section>
 
   <div class="mgrid">
     <section class="info"><h2>En bref</h2>
@@ -778,7 +810,7 @@ table.data.avis-t td:first-child,table.data.avis-t th:first-child{overflow-wrap:
       <p class="fdesc">Réservé aux 18+ · Tous les personnages sont des adultes fictifs · Contient des liens affiliés</p></div>
     <div><h2 class="fh">Explorer</h2>
       <a href="../../fr/">Tous</a><a href="../../fr/women">Femmes</a><a href="../../fr/men">Hommes</a><a href="../../fr/anime">Anime</a><a href="../../fr/platforms">Top plateformes</a>
-      <a href="../../fr/tags">Catégories</a><a href="../../fr/#new">Nouveaux</a></div>
+      <a href="../../fr/tags">Catégories</a><a href="../../fr/#new">Nouveaux</a><a href="../../shorts/">Candy Shorts</a></div>
     <div><h2 class="fh">Le site</h2>
       <a href="../../fr/how-we-rate">Notre méthode</a><a href="../../fr/data">Données</a>
       <a href="../../fr/sitemap">Plan du site</a><a href="../../fr/contact">Contact</a></div>
@@ -789,7 +821,7 @@ table.data.avis-t td:first-child,table.data.avis-t th:first-child{overflow-wrap:
 </footer>
 
 <script>var PAGE_LANG="fr",ROOT="../../",LROOT="../../fr/";</script>
-<script defer src="../../assets/app-fr.js?v=0223bb35"></script>
+<script defer src="../../assets/app-fr.js?v=7b4723d9"></script>
 <script>document.addEventListener("DOMContentLoaded",function(){boot("model")});</script>
 <!--/email_off--></body>
 </html>

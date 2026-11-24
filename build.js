@@ -180,6 +180,7 @@ ${o.page === "legal" ? "" : X.offerBar()}
           <a href="${L("anime.html")}">${e(u("nav_anime"))}</a>
           <a href="${L("platforms.html")}">${e(u("nav_platforms"))}</a>
           <a href="${L("index.html#new")}">${e(u("nav_new"))}</a>
+          ${SH.length ? `<a href="${root}shorts/index.html">Candy Shorts</a>` : ""}
           <a href="${L("how-we-rate.html")}">${e(u("nav_how"))}</a>
         </div>
       </details>
@@ -205,7 +206,7 @@ ${o.modal ? `<div class="overlay" id="profile">
       <p class="fdesc">${e(u("footer"))}</p></div>
     <div><h2 class="fh">${e(u("ft_explore"))}</h2>
       <a href="${L("index.html")}">${e(u("nav_all"))}</a><a href="${L("women.html")}">${e(u("nav_women"))}</a><a href="${L("men.html")}">${e(u("nav_men"))}</a><a href="${L("anime.html")}">${e(u("nav_anime"))}</a><a href="${L("platforms.html")}">${e(u("nav_platforms"))}</a>
-      <a href="${L("tags.html")}">${e(u("nav_tags"))}</a><a href="${L("index.html#new")}">${e(u("nav_new"))}</a></div>
+      <a href="${L("tags.html")}">${e(u("nav_tags"))}</a><a href="${L("index.html#new")}">${e(u("nav_new"))}</a>${SH.length ? `<a href="${root}shorts/index.html">Candy Shorts</a>` : ""}</div>
     <div><h2 class="fh">${e(u("ft_site"))}</h2>
       <a href="${L("how-we-rate.html")}">${e(u("nav_how"))}</a><a href="${L("data.html")}">${e(u("nav_data"))}</a>
       <a href="${L("sitemap.html")}">${e(u("nav_sitemap"))}</a><a href="${L("contact.html")}">${e(u("nav_contact"))}</a></div>
@@ -282,12 +283,13 @@ pages.push({ file: "platforms.html", build: (X) => {
   const u = X.ui, e = X.esc, LIST = Object.values(X.PLATFORMS);
   return { page:"platforms", nav:"platforms", title:u("meta_pl_t"), desc:u("meta_pl_d"), body: `
   <section class="hero"><h1>${u("pl_title")}</h1><p>${e(u("pl_sub"))}</p>
-    <p class="hero-links"><a href="how-we-rate.html">${e(u("nav_how"))} →</a> · <a href="data.html">${e(u("nav_data"))} →</a>${GUIDE_LANGS.includes(X.LANG) ? Object.values(GUIDES).map(G => ` · <a href="${G.file}">${e((G[X.LANG] || G.en).pl_link)} →</a>`).join("") : ""}</p></section>
+    <p class="hero-links"><a href="how-we-rate.html">${e(u("nav_how"))} →</a> · <a href="data.html">${e(u("nav_data"))} →</a>${SH.length ? ` · <a href="ROOT_PLACEHOLDERshorts/index.html">Candy Shorts →</a>` : ""}${GUIDE_LANGS.includes(X.LANG) ? Object.values(GUIDES).filter(G => !G.langs).map(G => ` · <a href="${G.file}">${e((G[X.LANG] || G.en).pl_link)} →</a>`).join("") : ""}</p></section>
   <h2 class="section-title">${e(u("top_picks"))}</h2>
   <div class="picks">${LIST.filter(p => p.top).sort((a,b) => b.rank - a.rank).map(X.pickCard).join("")}</div>
   <h2 class="section-title">${e(u("all_pl"))}</h2>
   <div class="tags" id="ptags" style="justify-content:flex-start"></div>
   <div class="grid" id="pgrid">${[...LIST].sort((a,b) => b.rank - a.rank).map(X.platformCard).join("")}</div>
+  ${guidesFor(X.LANG).length ? `<section class="info" id="guides"><h2>${e(GUIDES_T[X.LANG] || GUIDES_T.en)}</h2><ul class="guide-list">${guidesFor(X.LANG).map(G => `<li><a href="${G.file}">${e((G[X.LANG] || G.en).h1)}</a></li>`).join("")}</ul></section>` : ""}
   <section class="info"><h2>${e(u("guide_title"))}</h2><ul>${[1,2,3,4,5].map(i => `<li>${u("g" + i)}</li>`).join("")}</ul></section>
   <section class="info"><h2>${e(u("faq_title"))}</h2>${[1,2,3].map(i => `<details><summary>${e(u("q" + i))}</summary><p>${e(u("a" + i))}</p></details>`).join("")}</section>
   <section class="info" id="disclosure"><h2>${e(u("disc_title"))}</h2><p>${e(u("disc_pl"))}</p></section>` };
@@ -368,6 +370,9 @@ for (const t of base.ALL_TAGS) pages.push({ file: "tag/" + base.slug(t) + ".html
 
 /* one page per model: /model/<id> */
 const GLANCE = ["gender","style","origin","hair","body","personality","role","relationship","fantasy"];
+/* "{name} in Candy Shorts" block on model pages (series pages themselves are English only) */
+const SH_IN = { en:"{name} in Candy Shorts", fr:"{name} dans les Candy Shorts", es:"{name} en Candy Shorts", de:"{name} in Candy Shorts", pt:"{name} nos Candy Shorts" };
+const SH_ALL = { en:"All Candy Shorts series", fr:"Toutes les séries Candy Shorts (en anglais)", es:"Todas las series de Candy Shorts (en inglés)", de:"Alle Candy-Shorts-Serien (auf Englisch)", pt:"Todas as séries Candy Shorts (em inglês)" };
 for (const g0 of base.PROFILES) pages.push({ file: "model/" + (g0.id || base.slug(g0.name)) + ".html", build: (X, lang) => {
   const g = X.PROFILES.find(p => (p.id || p.name) === (g0.id || g0.name));
   const u = X.ui, e = X.esc, P = X.PLATFORMS[g.platform], D = X.PLATFORM_DATA[g.platform] || {};
@@ -416,6 +421,9 @@ for (const g0 of base.PROFILES) pages.push({ file: "model/" + (g0.id || base.slu
       <div class="note">${e(u("m_fiction"))}</div>
     </div>
   </section>
+${shortsOfModel(X.girlId(g)).length ? `<section class="info m-shorts"><h2>${e(fill(SH_IN[lang] || SH_IN.en, {name: g.name}))}</h2>
+    <div class="sgrid">${shortsOfModel(X.girlId(g)).map(s => shortCard(X, s, "ROOT_PLACEHOLDER")).join("")}</div>
+    <p><a href="ROOT_PLACEHOLDERshorts/index.html">${e(SH_ALL[lang] || SH_ALL.en)} →</a></p></section>` : ""}
 
   <div class="mgrid">
     <section class="info"><h2>${e(u("m_glance"))}</h2>
@@ -489,7 +497,7 @@ for (const key of Object.keys(base.PLATFORMS).filter(k => base.PLATFORMS[k].url)
     <p class="tp-intro">${e(X.tr(P.desc))}</p>
     <p>${cta("btn btn-main btn-xl")}</p>
     ${REVIEWS[key] ? `<p class="avis-link"><a href="../${REVIEWS[key].file}">📝 ${e((REVIEWS[key][lang] || REVIEWS[key].en).pl_link)} →</a></p>` : ""}
-    ${GUIDE_LANGS.includes(lang) ? guideLinks(key, lang, "../") : ""}</section>
+    ${GUIDE_LANGS.includes(lang) ? guideLinks(key, lang, "../") : ""}${key === "candy" && SH.length ? `<p class="avis-link"><a href="ROOT_PLACEHOLDERshorts/index.html">🎬 Candy Shorts: all ${SH.length} series →</a></p>` : ""}</section>
   ${X.OFFER.platform === key ? X.offerBox() : ""}
   <div class="mgrid">
     <section class="info review"><h2>${e(u("rv_t"))}</h2>
@@ -615,12 +623,18 @@ for (const [rk, R] of Object.entries(REVIEWS)) pages.push({ file: R.file, build:
   ${ld.map(ldTag).join("\n")}` };
 }});
 
-/* Guides (src/guide-*.js): deals, comparisons, alternatives. Written in 5 languages; the Hindi URL shows the
-   English text with noindex and is left out of hreflang/sitemaps. Body placeholders:
+/* Guides (src/guide-*.js): deals, comparisons, alternatives. Written in the 5 site languages, unless the guide
+   sets `langs` (e.g. ["en"] for the English long-tail articles): then it is only built in those languages and the
+   other language switches point to their home page. Body placeholders:
    [[btn:<platform>|label]] affiliate button · [[a:<platform>|text]] inline affiliate link · [[p:<path>|text]] internal link */
 const GUIDE_LANGS = ["en", "fr", "es", "de", "pt"];
-const GUIDES = { deals: require("./src/guide-deals.js"), vs: require("./src/guide-candy-vs-spicychat.js"), gfgpt: require("./src/guide-girlfriendgpt-alternatives.js") };
-for (const [gk, G] of Object.entries(GUIDES)) pages.push({ file: G.file, build: (X, lang) => {
+const GUIDES = { deals: require("./src/guide-deals.js"), vs: require("./src/guide-candy-vs-spicychat.js"), gfgpt: require("./src/guide-girlfriendgpt-alternatives.js"),
+  ...Object.fromEntries(fs.readdirSync(path.join(__dirname, "src")).filter(f => /^guide-lt-.+\.js$/.test(f)).sort()
+    .map(f => [f.slice(9, -3), require("./src/" + f)])) };   /* English long-tail articles: src/guide-lt-*.js */
+const guideLangs = G => G.langs || GUIDE_LANGS;
+const guidesFor = lang => Object.values(GUIDES).filter(G => guideLangs(G).includes(lang));
+const GUIDES_T = { en:"Guides and comparisons", fr:"Guides et comparatifs", es:"Guías y comparativas", de:"Ratgeber und Vergleiche", pt:"Guias e comparativos" };
+for (const [gk, G] of Object.entries(GUIDES)) pages.push({ file: G.file, langs: G.langs, build: (X, lang) => {
   const u = X.ui, e = X.esc, T = G[lang] || G.en, C = X.PLATFORMS.candy;
   const body = h => h
     .replace(/\[\[btn:(\w+)\|([^\]]+)\]\]/g, (m, k, t) => X.ctaLink(X.PLATFORMS[k], e(t) + " →", "btn btn-main"))
@@ -632,7 +646,7 @@ for (const [gk, G] of Object.entries(GUIDES)) pages.push({ file: G.file, build: 
     {"@context":"https://schema.org","@type":"Article","headline":T.h1,"description":T.meta_d,"url":url,"inLanguage":lang,"datePublished":G.date,"dateModified":G.date,
      "author":{"@type":"Person","name":SITE.author,"url":absUrl(lang, "author.html")},"publisher":{"@type":"Organization","name":SITE.domain,"url":SITE.url}},
     {"@context":"https://schema.org","@type":"FAQPage","mainEntity":T.faq.map(([q, a]) => ({"@type":"Question","name":q,"acceptedAnswer":{"@type":"Answer","text":a}}))}];
-  return { page:"review", nav:"platforms", title:T.meta_t, desc:T.meta_d, lastmod:G.date, altLangs: GUIDE_LANGS, noindex: !GUIDE_LANGS.includes(lang), body: `
+  return { page:"review", nav:"platforms", title:T.meta_t, desc:T.meta_d, lastmod:G.date, altLangs: guideLangs(G), noindex: !guideLangs(G).includes(lang), body: `
   <nav class="crumb"><a href="../platforms.html">${e(u("nav_platforms"))}</a> › <span>${e(T.crumb)}</span></nav>
   <article class="avis guide">
     <div class="avis-head"><h1>${e(T.h1)}</h1>
@@ -649,8 +663,124 @@ for (const [gk, G] of Object.entries(GUIDES)) pages.push({ file: G.file, build: 
   ${ld.map(ldTag).join("\n")}` };
 }});
 /* guide links shown on the platform pages and in the HTML sitemap */
-const guideLinks = (key, lang, rel) => Object.values(GUIDES).filter(G => G.platforms.includes(key))
+const guideLinks = (key, lang, rel) => guidesFor(lang).filter(G => G.platforms.includes(key))
   .map(G => `<p class="avis-link"><a href="${rel}${G.file}">📘 ${base.esc((G[lang] || G.en).pl_link)} →</a></p>`).join("");
+
+/* ---------- Candy Shorts (English only): hub shorts/index.html + one page per series shorts/<slug>.html ----------
+   Data: src/data-shorts.js, scraped from candy.ai/candy-shorts (official titles, synopses, episodes, token prices, cast).
+   Each series links to the Candy characters of its cast (model pages), and each model page lists its series. */
+const SHORTS = fs.existsSync(path.join(__dirname, "src/data-shorts.js")) ? require("./src/data-shorts.js") : { series: [] };
+const SH = SHORTS.series;
+const shortUrl = s => "https://candy.ai/candy-shorts/series/" + s.candy + "?via=ic3p7r";
+const shortImg = (img, w) => img && img.startsWith("https://cdn.candy.ai/") ? img.replace(/https:\/\/cdn\.candy\.ai\/(cdn-cgi\/image\/[^/]+\/)?/, `https://cdn.candy.ai/cdn-cgi/image/width=${w},format=auto,quality=75/`) : img;
+const castOf = (X, s) => s.cast.map((c, i) => ({ id: c, name: s.castNames[i] || c, p: X.PROFILES.find(p => X.girlId(p) === c) }));
+const shortsOfModel = id => SH.filter(s => s.cast.includes(id));
+const epsTxt = n => n + (n === 1 ? " episode" : " episodes");
+const shortCost = s => { const locked = s.costs.filter(c => c > 0); return { free: s.costs.length - locked.length, locked: locked.length, per: locked.length ? Math.max(...locked) : 0, total: locked.reduce((a, b) => a + b, 0) }; };
+const shortCard = (X, s, rel) => { const c = castOf(X, s).map(x => x.name).join(", ");
+  return `<article class="scard"><a href="${rel}shorts/${s.slug}.html"><span class="sc-img">${s.poster ? `<img src="${X.esc(shortImg(s.poster, 360))}" alt="${X.esc(s.title)}" loading="lazy" onerror="this.remove()">` : ""}</span>
+    ${s.isNew ? `<span class="new">New episodes</span>` : ""}<span class="sc-meta"><b>${X.esc(s.title)}</b><small>${X.esc(epsTxt(s.costs.length))}${c ? " · " + X.esc(c) : ""}</small></span></a></article>`; };
+const SH_CATS = [...new Set(SH.flatMap(s => s.cats))].sort();
+if (SH.length) pages.push({ file: "shorts/index.html", langs: ["en"], build: (X, lang) => {
+  const e = X.esc, u = X.ui;
+  const order = [...SH].sort((a, b) => (b.rank || 0) - (a.rank || 0) || (b.isNew - a.isNew));
+  const n = SH.length, nEps = SH.reduce((a, s) => a + s.costs.length, 0);
+  const faq = [
+    ["What is Candy Shorts (CandyShorts)?", `Candy Shorts is the short-series section of Candy AI: ${n} vertical series (${nEps} episodes in total on ${fmtDate(SHORTS.checked, "en")}), each starring one or more Candy AI characters, with subtitles in several languages. After watching, you can chat with the characters on Candy AI.`],
+    ["Are Candy Shorts free?", "Partly. Episode 1 of every series plays without an account and episode 2 with a free account. From episode 3, episodes need Candy Premium and cost tokens (usually 12 tokens, 30 to 50 on some series with well-known creators)."],
+    ["Where can I watch Candy Shorts for free?", "Only on candy.ai: the first episode of each series without an account, the second with a free account. Full episodes on other sites (Dailymotion, \"leaks\") are unofficial reuploads; we don't link to them."],
+    ["Is there a Candy Shorts app?", "Candy Shorts is part of Candy AI, which runs in the browser on phone and computer and can be added to your home screen like an app. There is no separate official Candy Shorts app that we know of."],
+    ["How much does it cost to watch all episodes of a series?", "Premium includes 100 tokens a month (from €3.99/month on the 12-month plan). At 12 tokens per locked episode, a 5-episode series costs 36 tokens to finish; each series page shows the exact total."],
+    ["Are the characters in Candy Shorts adults?", "Yes. Candy AI states that all its characters are fictional adults (18+), and the ages shown on their profiles are 18 or older."]];
+  return { page:"review", nav:"platforms", title: `Candy Shorts (CandyShorts): All ${n} Series, Free Episodes & Guide`, altLangs:["en"], lastmod: SHORTS.checked,
+    desc: `Every Candy Shorts series in one place: ${n} series, cast, number of episodes, which ones are free and what full episodes cost. Plus how to watch Candy Shorts for free, legally.`,
+    image: order[0] && order[0].poster ? shortImg(order[0].poster, 600) : "", body: `
+  <nav class="crumb"><a href="../platform/candy.html">Candy AI</a> › <span>Candy Shorts</span></nav>
+  <article class="avis guide shorts-hub">
+    <div class="avis-head"><h1>Candy Shorts: All ${n} Series, Free Episodes and Guide</h1>
+      <p class="tp-by">${byline(X, "../")} · Checked on candy.ai on ${e(fmtDate(SHORTS.checked, "en"))}</p>
+      <p class="avis-intro">Candy Shorts (often searched as \"CandyShorts\") are short vertical series made with Candy AI's characters: episodes of one to two minutes, cliffhangers, and a button to chat with the character right after. Here is every series with its cast, its number of episodes and what it costs to watch to the end.</p></div>
+    <section class="avis-box"><h2>In short</h2><p>${n} series and ${nEps} episodes. Episode 1 of every series is free without an account, episode 2 with a free account. From episode 3 you need Candy Premium, and each episode costs tokens (usually 12). Premium includes 100 tokens a month, from €3.99/month on the 12-month plan.</p>
+      <p class="avis-cta">${X.ctaLink({url: "https://candy.ai/candy-shorts?via=ic3p7r"}, "Watch Candy Shorts →", "btn btn-main")}<small>Affiliate link · 18+</small></p></section>
+    <section class="avis-sec" id="free"><h2>What's free and what's paid</h2>
+      <div class="tablewrap"><table class="data avis-t"><thead><tr><th>Episode</th><th>Without account</th><th>Free account</th><th>Premium</th></tr></thead><tbody>
+      <tr><td>Episode 1</td><td><strong>Free</strong></td><td><strong>Free</strong></td><td><strong>Free</strong></td></tr>
+      <tr><td>Episode 2</td><td>Sign-up needed</td><td><strong>Free</strong></td><td><strong>Free</strong></td></tr>
+      <tr><td>Episode 3 onwards</td><td>Locked</td><td>Locked</td><td>Usually 12 tokens each (30 to 50 on some creator series)</td></tr></tbody></table></div>
+      <p>Full guide: [[p:guide/watch-candy-shorts-free.html|how to watch Candy Shorts for free (legally)]]. Not sure about Premium? Read [[p:guide/is-candy-ai-worth-it.html|is Candy AI worth it]].</p></section>
+    <section class="avis-sec" id="series"><h2>All Candy Shorts series</h2>
+      <div class="tags sh-cats" style="justify-content:flex-start"><button class="tag on" data-cat="">All</button>${SH_CATS.map(c => `<button class="tag" data-cat="${e(c)}">${e(c)}</button>`).join("")}</div>
+      <div class="sgrid" id="sgrid">${order.map(s => shortCard(X, s, "../").replace('<article class="scard">', `<article class="scard" data-cats="${e(s.cats.join("|"))}">`)).join("")}</div></section>
+    <section class="avis-sec" id="faq"><h2>FAQ</h2>${faq.map(([q, a]) => `<details class="avis-faq"><summary>${e(q)}</summary><p>${e(a)}</p></details>`).join("")}</section>
+    <section class="avis-end"><h2>Our advice</h2><p>Watch the free first episodes of a few series, then decide: finish the ones you love with your monthly tokens, or chat directly with the character you liked, which costs fewer tokens.</p>
+      <p class="avis-cta">${X.ctaLink({url: "https://candy.ai/candy-shorts?via=ic3p7r"}, "Watch Candy Shorts →", "btn btn-main")}<small>Affiliate link · 18+</small></p></section>
+    <p class="avis-src">Source: candy.ai/candy-shorts (official titles, synopses, episodes and token prices, checked on ${e(fmtDate(SHORTS.checked, "en"))}). Videos belong to Candy AI and are not hosted here.</p>
+  </article>
+  <script>document.querySelectorAll(".sh-cats button").forEach(b=>b.onclick=()=>{document.querySelectorAll(".sh-cats button").forEach(x=>x.classList.toggle("on",x===b));const c=b.dataset.cat;document.querySelectorAll("#sgrid .scard").forEach(s=>s.style.display=!c||s.dataset.cats.split("|").includes(c)?"":"none")})</script>
+  ${ldTag(bcLd(X, lang, [[u("bc_home"), "index.html"], ["Candy AI", "platform/candy.html"], ["Candy Shorts", "shorts/index.html"]]))}
+  ${ldTag({"@context":"https://schema.org","@type":"FAQPage","mainEntity":faq.map(([q, a]) => ({"@type":"Question","name":q,"acceptedAnswer":{"@type":"Answer","text":a}}))})}`
+    .replace(/\[\[p:([\w\/.-]+)\|([^\]]+)\]\]/g, (m, f, t) => `<a href="../${f}">${e(t)}</a>`) };
+}});
+for (const s0 of SH) pages.push({ file: "shorts/" + s0.slug + ".html", langs: ["en"], build: (X, lang) => {
+  const e = X.esc, u = X.ui, s = s0, k = shortCost(s), cast = castOf(X, s), names = cast.map(c => c.name);
+  const who = names.length ? names.join(" and ") : "Candy AI characters";
+  const btn = (t, cls = "btn btn-main") => X.ctaLink({url: shortUrl(s)}, e(t) + " →", cls);
+  const related = [...SH.filter(x => x !== s && x.cast.some(c => s.cast.includes(c))),
+    ...SH.filter(x => x !== s && !x.cast.some(c => s.cast.includes(c)) && x.cats.some(c => s.cats.includes(c))).sort((a, b) => (b.rank || 0) - (a.rank || 0))].slice(0, 8);
+  const faq = [
+    [`How many episodes does ${s.title} have?`, `${s.title} has ${epsTxt(s.costs.length)} on Candy Shorts (checked on ${fmtDate(SHORTS.checked, "en")})${s.isNew ? ", and new episodes were recently added" : ""}.`],
+    [`Is ${s.title} free to watch?`, k.locked ? `Episode 1 is free without an account and episode 2 with a free account. The other ${k.locked} episodes need Candy Premium and cost ${k.per} tokens each, ${k.total} tokens in total.` : `Yes, all its episodes were free when we checked.`],
+    [`Where can I watch ${s.title} in full?`, `On Candy Shorts (candy.ai). Copies on other sites are unofficial reuploads; we don't link to them.`],
+    ...(names.length ? [[`Who is in ${s.title}?`, `${who}. ${cast.length > 1 ? "They are" : "She is"} also a chat character on Candy AI: you can talk to ${cast.length > 1 ? "them" : names[0]} after watching.`]] : [])];
+  const castHtml = cast.map(c => c.p
+    ? `<li><a href="../model/${e(c.id)}.html"><strong>${e(c.name)}</strong></a>${c.p.age ? ` (${e(String(c.p.age))})` : ""} — ${e(X.bioOf(c.p).slice(0, 160))}</li>`
+    : `<li><strong>${e(c.name)}</strong> — ${X.ctaLink({url: "https://candy.ai/ai-girlfriend/" + c.id + "?via=ic3p7r"}, "chat on Candy AI →", "inl-aff")}</li>`).join("");
+  const title = `${s.title} (Candy Shorts): ${epsTxt(s.costs.length)}, Cast & Where to Watch`;
+  return { page:"review", nav:"platforms", title, altLangs:["en"], lastmod: SHORTS.checked, image: s.poster ? shortImg(s.poster, 600) : "",
+    desc: `${s.title} on Candy Shorts: ${epsTxt(s.costs.length)}${names.length ? " with " + who : ""}. Story, episode list, which episodes are free, what it costs to watch in full and where to watch.`.slice(0, 300), body: `
+  <nav class="crumb"><a href="../platform/candy.html">Candy AI</a> › <a href="index.html">Candy Shorts</a> › <span>${e(s.title)}</span></nav>
+  <article class="avis guide short-page">
+    <div class="sh-top">${s.poster ? `<div class="sh-poster"><img src="${e(shortImg(s.poster, 400))}" srcset="${e(shortImg(s.poster, 400))} 400w, ${e(shortImg(s.poster, 600))} 600w" sizes="(max-width: 640px) 60vw, 300px" alt="${e(s.title)} – Candy Shorts" loading="lazy" onerror="this.remove()"></div>` : ""}
+    <div class="avis-head"><h1>${e(s.title)}</h1>
+      <p class="tp-by">Candy Shorts series · ${e(epsTxt(s.costs.length))}${names.length ? " · with " + e(who) : ""}</p>
+      <p class="avis-intro">${e(s.desc)}</p>
+      <p class="sh-src">${s.tr ? "Synopsis translated by us from Candy's official description (French page)." : "Official synopsis from Candy Shorts."} Checked on ${e(fmtDate(SHORTS.checked, "en"))}.</p>
+      <p class="avis-cta">${btn(`Watch ${s.title} on Candy`)}<small>Affiliate link · 18+</small></p></div></div>
+    <section class="avis-sec" id="facts"><h2>The series at a glance</h2>
+      <div class="tablewrap"><table class="data avis-t"><tbody>
+      <tr><th>Episodes</th><td><strong>${s.costs.length}</strong>${s.isNew ? " (new episodes recently added)" : ""}</td></tr>
+      <tr><th>Free episodes</th><td>Episode 1 without an account${k.free > 1 ? ", episode 2 with a free account" : ""}</td></tr>
+      ${k.locked ? `<tr><th>Locked episodes</th><td>${k.locked} × ${k.per} tokens (Premium)</td></tr><tr><th>Tokens to finish</th><td><strong>${k.total} tokens</strong> (Premium includes 100/month)</td></tr>` : ""}
+      ${s.cats.length ? `<tr><th>Categories</th><td>${e(s.cats.join(", "))}</td></tr>` : ""}
+      ${names.length ? `<tr><th>Cast</th><td>${cast.map(c => c.p ? `<a href="../model/${e(c.id)}.html">${e(c.name)}</a>` : e(c.name)).join(", ")}</td></tr>` : ""}
+      ${s.subs.length ? `<tr><th>Subtitles</th><td>${e(s.subs.map(l => ({en:"English",fr:"French",de:"German",es:"Spanish",it:"Italian",pt:"Portuguese",ja:"Japanese"})[l] || l).join(", "))}</td></tr>` : ""}
+      </tbody></table></div></section>
+    <section class="avis-sec" id="episodes"><h2>All episodes</h2>
+      <div class="tablewrap"><table class="data avis-t"><thead><tr><th>Episode</th><th>Access</th></tr></thead><tbody>
+      ${s.costs.map((c, i) => `<tr><td>Episode ${i + 1}</td><td>${c ? `${c} tokens (Premium)` : i === 0 ? "<strong>Free</strong>, no account" : "<strong>Free</strong> with a free account"}</td></tr>`).join("")}
+      </tbody></table></div>
+      ${k.locked ? `<p>With the 100 tokens included in Premium each month, ${k.total <= 100 ? "you can finish this series in one month" : `you need about ${Math.ceil(k.total / 100)} months of included tokens to finish it (or a token top-up)`}. Candy shows the price on each episode before you unlock it.</p>` : ""}
+      <p>${btn("Watch the free episodes")}</p></section>
+    ${names.length ? `<section class="avis-sec" id="cast"><h2>The cast: chat with ${cast.length > 1 ? "them" : "her"}</h2>
+      <ul>${castHtml}</ul>
+      <p>Every character in Candy Shorts is also a chat character on Candy AI. With Premium, messages are unlimited, ${cast.length > 1 ? "they" : "she"} can send photos (2–3 tokens) and call you (3 tokens per minute): a way to continue the story yourself.</p></section>` : ""}
+    <section class="avis-sec" id="how"><h2>How to watch ${e(s.title)}</h2>
+      <ol><li>Open the series on Candy Shorts and watch episode 1 (no account needed).</li>
+      <li>Create a free account to watch episode 2.</li>
+      ${k.locked ? `<li>For episode 3 onwards, take Premium (from €3.99/month on the 12-month plan) and unlock each episode with tokens.</li>` : ""}</ol>
+      <p>Looking for a free full version? We didn't find any official one; copies on other sites are reuploads. More in [[p:guide/watch-candy-shorts-free.html|how to watch Candy Shorts for free]].</p></section>
+    <section class="avis-sec" id="faq"><h2>FAQ</h2>${faq.map(([q, a]) => `<details class="avis-faq"><summary>${e(q)}</summary><p>${e(a)}</p></details>`).join("")}</section>
+    ${related.length ? `<section class="avis-sec" id="more"><h2>More Candy Shorts</h2><div class="sgrid">${related.map(x => shortCard(X, x, "../")).join("")}</div>
+      <p><a href="index.html">All Candy Shorts series →</a></p></section>` : ""}
+    <p class="avis-src">Source: candy.ai/candy-shorts (official title, synopsis, episodes and token prices, checked on ${e(fmtDate(SHORTS.checked, "en"))}). The videos belong to Candy AI and are not hosted on this site. Characters are fictional adults (18+).</p>
+  </article>
+  ${ldTag(bcLd(X, lang, [[u("bc_home"), "index.html"], ["Candy Shorts", "shorts/index.html"], [s.title, "shorts/" + s.slug + ".html"]]))}
+  ${ldTag({"@context":"https://schema.org","@type":"TVSeries","name":s.title,"description":s.desc,"url":absUrl("en", "shorts/" + s.slug + ".html"),"numberOfEpisodes":s.costs.length,
+    ...(s.poster ? {"image": shortImg(s.poster, 600)} : {}),"inLanguage":"en","productionCompany":{"@type":"Organization","name":"Candy AI"},
+    ...(names.length ? {"character": names.map(n => ({"@type":"Person","name":n}))} : {})})}
+  ${ldTag({"@context":"https://schema.org","@type":"FAQPage","mainEntity":faq.map(([q, a]) => ({"@type":"Question","name":q,"acceptedAnswer":{"@type":"Answer","text":a}}))})}`
+    .replace(/\[\[p:([\w\/.-]+)\|([^\]]+)\]\]/g, (m, f, t) => `<a href="../${f}">${e(t)}</a>`) };
+}});
 
 pages.push({ file: "data.html", build: (X) => {
   const u = X.ui, e = X.esc;
@@ -694,7 +824,8 @@ pages.push({ file: "sitemap.html", build: (X) => {
       ${a("how-we-rate.html", u("nav_how"))}${a("author.html", SITE.author)}${a("data.html", u("nav_data"))}${a("contact.html", u("nav_contact"))}</section>
     <section><h2>${e(u("sm_tags"))}</h2>${tags.map(t => a("tag/" + X.slug(t) + ".html", X.tr(t))).join("")}</section>
     <section><h2>${e(u("sm_profiles"))}</h2>${girls.map(g => a("model/" + (g.id || X.slug(g.name)) + ".html", g.name)).join("")}</section>
-    <section><h2>${e(u("nav_platforms"))}</h2>${Object.values(REVIEWS).map(R => a(R.file, (R[X.LANG] || R.en).h1)).join("")}${GUIDE_LANGS.includes(X.LANG) ? Object.values(GUIDES).map(G => a(G.file, (G[X.LANG] || G.en).h1)).join("") : ""}</section>
+    <section><h2>${e(u("nav_platforms"))}</h2>${Object.values(REVIEWS).map(R => a(R.file, (R[X.LANG] || R.en).h1)).join("")}${guidesFor(X.LANG).map(G => a(G.file, (G[X.LANG] || G.en).h1)).join("")}</section>
+    ${SH.length ? `<section><h2>Candy Shorts</h2>${`<a href="ROOT_PLACEHOLDERshorts/index.html">Candy Shorts</a>`}${[...SH].sort((x, y) => x.title.localeCompare(y.title)).map(s => `<a href="ROOT_PLACEHOLDERshorts/${s.slug}.html">${e(s.title)}</a>`).join("")}</section>` : ""}
     <section><h2>${e(u("sm_legal"))}</h2>${LEGAL_PAGES.map(([f, k]) => a("legal/" + f + ".html", u(k))).join("")}</section>
   </div>` };
 }});
@@ -727,6 +858,7 @@ const urls = [];
 for (const lang of LANG_LIST) {
   const X = context(lang);
   for (const pg of pages) {
+    if (pg.langs && !pg.langs.includes(lang)) continue;   /* e.g. English-only guides */
     const depth = (prefix(lang) + pg.file).split("/").length - 1;
     X._ctx.ROOT = "../".repeat(depth); X._ctx.LROOT = "../".repeat(depth) + prefix(lang);
     const o = pg.build(X, lang);
@@ -831,6 +963,27 @@ write("_redirects", "/hi /  301\n/hi/* /:splat 301\n");
 <style>body{background:#0b0a12;color:#eee;font:16px system-ui,sans-serif;display:grid;place-items:center;min-height:100vh;margin:0}a{color:#ff6fa5}</style>
 </head><body><p><a href="${esc(to)}" rel="sponsored nofollow">${esc(p.name)} – ${esc(P.name)} →</a></p></body></html>\n`);
   }
+}
+/* /go/shorts/<slug>: same short links for Candy Shorts series (card = the series poster) */
+for (const sh of SH) {
+  const esc = base.esc, to = shortUrl(sh), title = `${sh.title} – Candy Shorts`, desc = sh.desc.slice(0, 200), img = sh.poster ? shortImg(sh.poster, 1200) : SITE.url + "/icon-512.png";
+  write(`go/shorts/${sh.slug}.html`, `<!doctype html><html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>${esc(title)}</title>
+<meta name="robots" content="noindex, nofollow">
+<meta http-equiv="refresh" content="0;url=${esc(to)}">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="${esc(SITE.domain)}">
+<meta property="og:title" content="${esc(title)}">
+<meta property="og:description" content="${esc(desc)}">
+<meta property="og:image" content="${esc(img)}">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="${esc(title)}">
+<meta name="twitter:description" content="${esc(desc)}">
+<meta name="twitter:image" content="${esc(img)}">
+<script>location.replace(${JSON.stringify(to)})</script>
+<style>body{background:#0b0a12;color:#eee;font:16px system-ui,sans-serif;display:grid;place-items:center;min-height:100vh;margin:0}a{color:#ff6fa5}</style>
+</head><body><p><a href="${esc(to)}" rel="sponsored nofollow">${esc(title)} →</a></p></body></html>\n`);
 }
 /* data.csv */
 const csvq = v => `"${String(v ?? "").replace(/"/g, '""')}"`;
