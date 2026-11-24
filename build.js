@@ -282,12 +282,13 @@ pages.push({ file: "platforms.html", build: (X) => {
   const u = X.ui, e = X.esc, LIST = Object.values(X.PLATFORMS);
   return { page:"platforms", nav:"platforms", title:u("meta_pl_t"), desc:u("meta_pl_d"), body: `
   <section class="hero"><h1>${u("pl_title")}</h1><p>${e(u("pl_sub"))}</p>
-    <p class="hero-links"><a href="how-we-rate.html">${e(u("nav_how"))} →</a> · <a href="data.html">${e(u("nav_data"))} →</a>${GUIDE_LANGS.includes(X.LANG) ? Object.values(GUIDES).map(G => ` · <a href="${G.file}">${e((G[X.LANG] || G.en).pl_link)} →</a>`).join("") : ""}</p></section>
+    <p class="hero-links"><a href="how-we-rate.html">${e(u("nav_how"))} →</a> · <a href="data.html">${e(u("nav_data"))} →</a>${GUIDE_LANGS.includes(X.LANG) ? Object.values(GUIDES).filter(G => !G.langs).map(G => ` · <a href="${G.file}">${e((G[X.LANG] || G.en).pl_link)} →</a>`).join("") : ""}</p></section>
   <h2 class="section-title">${e(u("top_picks"))}</h2>
   <div class="picks">${LIST.filter(p => p.top).sort((a,b) => b.rank - a.rank).map(X.pickCard).join("")}</div>
   <h2 class="section-title">${e(u("all_pl"))}</h2>
   <div class="tags" id="ptags" style="justify-content:flex-start"></div>
   <div class="grid" id="pgrid">${[...LIST].sort((a,b) => b.rank - a.rank).map(X.platformCard).join("")}</div>
+  ${guidesFor(X.LANG).length ? `<section class="info" id="guides"><h2>${e(GUIDES_T[X.LANG] || GUIDES_T.en)}</h2><ul class="guide-list">${guidesFor(X.LANG).map(G => `<li><a href="${G.file}">${e((G[X.LANG] || G.en).h1)}</a></li>`).join("")}</ul></section>` : ""}
   <section class="info"><h2>${e(u("guide_title"))}</h2><ul>${[1,2,3,4,5].map(i => `<li>${u("g" + i)}</li>`).join("")}</ul></section>
   <section class="info"><h2>${e(u("faq_title"))}</h2>${[1,2,3].map(i => `<details><summary>${e(u("q" + i))}</summary><p>${e(u("a" + i))}</p></details>`).join("")}</section>
   <section class="info" id="disclosure"><h2>${e(u("disc_title"))}</h2><p>${e(u("disc_pl"))}</p></section>` };
@@ -615,12 +616,18 @@ for (const [rk, R] of Object.entries(REVIEWS)) pages.push({ file: R.file, build:
   ${ld.map(ldTag).join("\n")}` };
 }});
 
-/* Guides (src/guide-*.js): deals, comparisons, alternatives. Written in 5 languages; the Hindi URL shows the
-   English text with noindex and is left out of hreflang/sitemaps. Body placeholders:
+/* Guides (src/guide-*.js): deals, comparisons, alternatives. Written in the 5 site languages, unless the guide
+   sets `langs` (e.g. ["en"] for the English long-tail articles): then it is only built in those languages and the
+   other language switches point to their home page. Body placeholders:
    [[btn:<platform>|label]] affiliate button · [[a:<platform>|text]] inline affiliate link · [[p:<path>|text]] internal link */
 const GUIDE_LANGS = ["en", "fr", "es", "de", "pt"];
-const GUIDES = { deals: require("./src/guide-deals.js"), vs: require("./src/guide-candy-vs-spicychat.js"), gfgpt: require("./src/guide-girlfriendgpt-alternatives.js") };
-for (const [gk, G] of Object.entries(GUIDES)) pages.push({ file: G.file, build: (X, lang) => {
+const GUIDES = { deals: require("./src/guide-deals.js"), vs: require("./src/guide-candy-vs-spicychat.js"), gfgpt: require("./src/guide-girlfriendgpt-alternatives.js"),
+  ...Object.fromEntries(fs.readdirSync(path.join(__dirname, "src")).filter(f => /^guide-lt-.+\.js$/.test(f)).sort()
+    .map(f => [f.slice(9, -3), require("./src/" + f)])) };   /* English long-tail articles: src/guide-lt-*.js */
+const guideLangs = G => G.langs || GUIDE_LANGS;
+const guidesFor = lang => Object.values(GUIDES).filter(G => guideLangs(G).includes(lang));
+const GUIDES_T = { en:"Guides and comparisons", fr:"Guides et comparatifs", es:"Guías y comparativas", de:"Ratgeber und Vergleiche", pt:"Guias e comparativos" };
+for (const [gk, G] of Object.entries(GUIDES)) pages.push({ file: G.file, langs: G.langs, build: (X, lang) => {
   const u = X.ui, e = X.esc, T = G[lang] || G.en, C = X.PLATFORMS.candy;
   const body = h => h
     .replace(/\[\[btn:(\w+)\|([^\]]+)\]\]/g, (m, k, t) => X.ctaLink(X.PLATFORMS[k], e(t) + " →", "btn btn-main"))
@@ -632,7 +639,7 @@ for (const [gk, G] of Object.entries(GUIDES)) pages.push({ file: G.file, build: 
     {"@context":"https://schema.org","@type":"Article","headline":T.h1,"description":T.meta_d,"url":url,"inLanguage":lang,"datePublished":G.date,"dateModified":G.date,
      "author":{"@type":"Person","name":SITE.author,"url":absUrl(lang, "author.html")},"publisher":{"@type":"Organization","name":SITE.domain,"url":SITE.url}},
     {"@context":"https://schema.org","@type":"FAQPage","mainEntity":T.faq.map(([q, a]) => ({"@type":"Question","name":q,"acceptedAnswer":{"@type":"Answer","text":a}}))}];
-  return { page:"review", nav:"platforms", title:T.meta_t, desc:T.meta_d, lastmod:G.date, altLangs: GUIDE_LANGS, noindex: !GUIDE_LANGS.includes(lang), body: `
+  return { page:"review", nav:"platforms", title:T.meta_t, desc:T.meta_d, lastmod:G.date, altLangs: guideLangs(G), noindex: !guideLangs(G).includes(lang), body: `
   <nav class="crumb"><a href="../platforms.html">${e(u("nav_platforms"))}</a> › <span>${e(T.crumb)}</span></nav>
   <article class="avis guide">
     <div class="avis-head"><h1>${e(T.h1)}</h1>
@@ -649,7 +656,7 @@ for (const [gk, G] of Object.entries(GUIDES)) pages.push({ file: G.file, build: 
   ${ld.map(ldTag).join("\n")}` };
 }});
 /* guide links shown on the platform pages and in the HTML sitemap */
-const guideLinks = (key, lang, rel) => Object.values(GUIDES).filter(G => G.platforms.includes(key))
+const guideLinks = (key, lang, rel) => guidesFor(lang).filter(G => G.platforms.includes(key))
   .map(G => `<p class="avis-link"><a href="${rel}${G.file}">📘 ${base.esc((G[lang] || G.en).pl_link)} →</a></p>`).join("");
 
 pages.push({ file: "data.html", build: (X) => {
@@ -694,7 +701,7 @@ pages.push({ file: "sitemap.html", build: (X) => {
       ${a("how-we-rate.html", u("nav_how"))}${a("author.html", SITE.author)}${a("data.html", u("nav_data"))}${a("contact.html", u("nav_contact"))}</section>
     <section><h2>${e(u("sm_tags"))}</h2>${tags.map(t => a("tag/" + X.slug(t) + ".html", X.tr(t))).join("")}</section>
     <section><h2>${e(u("sm_profiles"))}</h2>${girls.map(g => a("model/" + (g.id || X.slug(g.name)) + ".html", g.name)).join("")}</section>
-    <section><h2>${e(u("nav_platforms"))}</h2>${Object.values(REVIEWS).map(R => a(R.file, (R[X.LANG] || R.en).h1)).join("")}${GUIDE_LANGS.includes(X.LANG) ? Object.values(GUIDES).map(G => a(G.file, (G[X.LANG] || G.en).h1)).join("") : ""}</section>
+    <section><h2>${e(u("nav_platforms"))}</h2>${Object.values(REVIEWS).map(R => a(R.file, (R[X.LANG] || R.en).h1)).join("")}${guidesFor(X.LANG).map(G => a(G.file, (G[X.LANG] || G.en).h1)).join("")}</section>
     <section><h2>${e(u("sm_legal"))}</h2>${LEGAL_PAGES.map(([f, k]) => a("legal/" + f + ".html", u(k))).join("")}</section>
   </div>` };
 }});
@@ -727,6 +734,7 @@ const urls = [];
 for (const lang of LANG_LIST) {
   const X = context(lang);
   for (const pg of pages) {
+    if (pg.langs && !pg.langs.includes(lang)) continue;   /* e.g. English-only guides */
     const depth = (prefix(lang) + pg.file).split("/").length - 1;
     X._ctx.ROOT = "../".repeat(depth); X._ctx.LROOT = "../".repeat(depth) + prefix(lang);
     const o = pg.build(X, lang);
