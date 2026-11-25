@@ -115,7 +115,7 @@ const OFFER = {
   pct: 70,                 // "up to -70%"
   price: 3.99,              // € per month on the 12-month plan
   regular: 13.99,          // € month-to-month price
-  checked: "2026-11-24",
+  checked: "2026-11-25",
   days: 30
 };
 
