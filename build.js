@@ -390,6 +390,15 @@ for (const g0 of base.PROFILES) pages.push({ file: "model/" + (g0.id || base.slu
   const ctaTxt = fill(CTA_ON[lang] || CTA_ON.en, {name: g.name, p: P.name});
   const mbTxt = fill((MB_ON[lang] || MB_ON.en)[gen ? 1 : 0], {p: P.name});
   const cta = (cls) => X.ctaLink(X.linkFor(g), "💬 " + e(ctaTxt) + " →", cls);
+  /* extra Candy buttons: Live Action scenes and Candy Cams show (src/data-live.js) */
+  const LV = require("./src/data-live.js"), REF = "via=ic3p7r";
+  const LIVE_T = { en:"🎬 Play with {name} in Live Action", fr:"🎬 Jouer avec {name} en Live Action", es:"🎬 Juega con {name} en Live Action", de:"🎬 Mit {name} in Live Action spielen", pt:"🎬 Jogue com {name} no Live Action" };
+  const CAM_T = { en:"🔴 Watch {name} live on cam", fr:"🔴 Voir {name} en live cam", es:"🔴 Mira a {name} en directo por cam", de:"🔴 {name} live vor der Cam", pt:"🔴 Veja {name} ao vivo na cam" };
+  const gid = X.girlId(g), base0 = (g.url || "").replace("://candy.ai/fr/", "://candy.ai/").replace(/\?.*$/, "");
+  const extras = g.platform !== "candy" ? "" : [
+    LV.live.includes(gid) && base0 ? X.ctaLink({ url: base0 + "/live-actions?" + REF, fallback: base0 }, e(fill(LIVE_T[lang] || LIVE_T.en, {name: g.short || g.name})) + " →", "btn btn-ghost btn-xl") : "",
+    LV.cams[gid] ? X.ctaLink({ url: "https://candy.ai/cams/" + LV.cams[gid] + "?" + REF, fallback: "https://candy.ai/cams" }, e(fill(CAM_T[lang] || CAM_T.en, {name: g.short || g.name})) + " →", "btn btn-ghost btn-xl") : ""
+  ].filter(Boolean).join("\n      ");
   const rows = [[u("m_platform"), `<a href="../${P.url ? "platform/" + g.platform : "platforms"}.html">${e(P.name)}</a> · ★ ${P.rating}`],
     [u("grp_age"), g.age ? e(String(g.age)) : e(u("m_not_set"))],
     ...GLANCE.map(k => [u("grp_" + k), g.tags.filter(t => groupOf(t) === k).map(t => `<a href="../tag/${X.slug(t)}.html">${e(X.tr(t))}</a>`).join(", ")]).filter(r => r[1]),
@@ -418,6 +427,7 @@ for (const g0 of base.PROFILES) pages.push({ file: "model/" + (g0.id || base.slu
       <div class="tags" style="justify-content:flex-start">${g.tags.map(t => `<a class="tag" href="../tag/${X.slug(t)}.html">${e(X.tr(t))}</a>`).join("")}</div>
       <p class="g-bio">${e(X.bioOf(g))}</p>
       ${cta("btn btn-main btn-xl")}
+      ${extras ? `<p class="m-extras">${extras}</p>` : ""}
       <div class="note">${e(u("m_fiction"))}</div>
     </div>
   </section>
