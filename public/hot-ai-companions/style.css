@@ -60,3 +60,13 @@ a.chip:hover{background:var(--acc);color:#fff;text-decoration:none}
 
 /* Phone: smaller portrait so the name shows on the first screen */
 @media (max-width:760px){.m-img{max-width:240px;margin:0 auto}}
+/* 3-question quiz */
+.quiz{background:#fff;border:1px solid #f1d9cc;border-radius:18px;padding:20px;margin-top:14px}
+.quiz .q{margin-bottom:16px}.q-t{font-weight:700;margin:0 0 10px}
+.quiz .q button{font:inherit;border:1px solid #e9c9b8;background:#fff7f2;color:#4a2a1d;border-radius:999px;padding:8px 14px;margin:0 8px 8px 0;cursor:pointer}
+.quiz .q button.on{background:#c2410c;border-color:#c2410c;color:#fff}
+.q-cards{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin:8px 0 14px}
+.q-card{display:flex;flex-direction:column;gap:4px;color:inherit;text-decoration:none}
+.q-card img{width:100%;aspect-ratio:2/3;object-fit:cover;border-radius:12px;background:#f3e3da}
+.q-card span{color:#c2410c;font-size:.9rem}.q-again{font:inherit;background:none;border:0;color:#c2410c;text-decoration:underline;cursor:pointer}
+@media (max-width:600px){.q-cards{gap:8px}.q-card b{font-size:.9rem}}

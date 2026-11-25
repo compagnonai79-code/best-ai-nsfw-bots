@@ -57,3 +57,6 @@ a.chip:hover{border-color:var(--acc);color:var(--acc);text-decoration:none}
 
 /* Phone: smaller portrait so the name shows on the first screen */
 @media (max-width:760px){.m-img{max-width:240px;margin:0 auto}}
+/* Bot of the day */
+.fun-botd{margin:14px 0}.botd{display:flex;gap:16px;align-items:center;border:1px solid #233142;border-radius:10px;padding:12px;max-width:520px;color:inherit;text-decoration:none;background:#0f1720}
+.botd img{width:96px;height:144px;object-fit:cover;border-radius:8px;flex:none}.botd b{display:block;font-size:1.15rem;margin-bottom:6px}.botd-go{color:#a3e635;font-family:"IBM Plex Mono",monospace;font-size:.9rem}
